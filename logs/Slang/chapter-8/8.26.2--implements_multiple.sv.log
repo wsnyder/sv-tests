@@ -1,0 +1,24 @@
+name: implements_multiple
+description: class implementing multiple interfaces
+should_fail: 0
+tags: 8.26.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv:8:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv:12:2: error: language feature not yet supported
+	interface class itest;
+	^~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv:16:2: error: language feature not yet supported
+	class Hello implements ihello, itest;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv:25:2: error: use of undeclared identifier 'Hello'
+	Hello obj;
+	^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv:28:9: error: language feature not yet supported
+		obj = new;
+		      ^~~

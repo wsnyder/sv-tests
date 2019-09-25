@@ -1,0 +1,13 @@
+name: associative-arrays-assignment
+description: Test associative arrays assignment support
+should_fail: 0
+tags: 7.9.9 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv:9: syntax error, unexpected ']', expecting "'{"
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv:10: syntax error, unexpected ']', expecting "'{"
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv

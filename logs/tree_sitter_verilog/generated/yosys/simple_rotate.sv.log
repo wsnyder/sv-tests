@@ -1,0 +1,19 @@
+name: simple_rotate
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/rotate.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(1, 0) source_file
+(2, 0) module_declaration
+(11, 0) generate_region
+(27, 8) loop_generate_construct
+(28, 8) generate_block
+(29, 16) interface_or_generate_item
+(29, 16) continuous_assign
+(29, 22) list_of_variable_assignments
+(29, 22) variable_assignment
+(29, 34) ERROR

@@ -1,0 +1,22 @@
+name: static_methods
+description: static class methods test
+should_fail: 0
+tags: 8.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:9: Unsupported: Static in this context
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:10: Unsupported: Static in this context
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:10: syntax error, unexpected function, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:19: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:19: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv:20: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 10 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv

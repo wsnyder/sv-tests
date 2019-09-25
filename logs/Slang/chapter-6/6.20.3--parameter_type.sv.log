@@ -1,0 +1,15 @@
+name: parameter_type
+description: parameter type tests
+should_fail: 0
+tags: 6.20.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.3--parameter_type.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.3--parameter_type.sv:7:14: error: language feature not yet supported
+module top #(type T = real);
+             ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.3--parameter_type.sv:7:23: error: expected expression
+module top #(type T = real);
+                      ^~~~

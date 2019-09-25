@@ -1,0 +1,17 @@
+name: interface_instantiation
+description: instantiating an interface class
+should_fail: 1
+tags: 8.26.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8: syntax error, unexpected interface
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 6 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv

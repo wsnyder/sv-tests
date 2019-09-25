@@ -1,0 +1,10 @@
+name: jump_return
+description: A module testing return statement
+should_fail: 0
+tags: 12.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv:11:31: Parse error: unexpected token ';' (Sym_semi).

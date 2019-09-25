@@ -1,0 +1,24 @@
+name: implemented_class_handle
+description: it should be possible to assign object handle to a variable of an implemented class type
+should_fail: 0
+tags: 8.26.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--implemented_class_handle.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--implemented_class_handle.sv:8:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--implemented_class_handle.sv:12:2: error: language feature not yet supported
+	class Hello implements ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--implemented_class_handle.sv:18:2: error: use of undeclared identifier 'Hello'
+	Hello obj;
+	^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--implemented_class_handle.sv:19:2: error: use of undeclared identifier 'ihello'
+	ihello iobj;
+	^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--implemented_class_handle.sv:22:9: error: language feature not yet supported
+		obj = new;
+		      ^~~

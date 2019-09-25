@@ -1,0 +1,14 @@
+name: real-constants-illegal
+description: Examples of real literal constants
+should_fail: 1
+tags: 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11: syntax error, unexpected '.', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:12: syntax error, unexpected ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:14: syntax error, unexpected '.', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv

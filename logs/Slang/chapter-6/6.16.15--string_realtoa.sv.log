@@ -1,0 +1,12 @@
+name: string_realtoa
+description: string.realtoa()  tests
+should_fail: 0
+tags: 6.16.15
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv:9:2: error: expected member
+	a.realtoa(4.76);
+	^

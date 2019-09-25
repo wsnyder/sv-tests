@@ -1,0 +1,9 @@
+name: always_ff
+description: always_ff check
+should_fail: 0
+tags: 9.2.2.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.4--always_ff.sv
+incdirs: 
+top_module: 
+rc: 0
+

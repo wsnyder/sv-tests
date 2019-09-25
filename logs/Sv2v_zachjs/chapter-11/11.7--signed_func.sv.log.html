@@ -1,0 +1,16 @@
+<pre>name: signed_func
+description: $signed() test
+should_fail: 0
+tags: 11.7
+files: <a href="../../../tests/chapter-11/11.7--signed_func.sv" target="file-frame">tests/chapter-11/11.7--signed_func.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg signed [7:0] a;
+	initial begin
+		a = $signed(4'b1000);
+	end
+endmodule
+</pre>

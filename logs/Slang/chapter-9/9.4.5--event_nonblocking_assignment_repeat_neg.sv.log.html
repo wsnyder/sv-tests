@@ -1,0 +1,13 @@
+<pre>name: event_nonblocking_assignment_repeat
+description: event non blk assignment repeat
+should_fail: 0
+tags: 9.4.5
+files: <a href="../../../tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv" target="file-frame">tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv" target="file-frame">tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv</a>:13:7: error: language feature not yet supported
+		a = repeat(-3) @(posedge clk) b;
+		    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>

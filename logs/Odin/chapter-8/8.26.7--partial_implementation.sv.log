@@ -1,0 +1,30 @@
+name: partial_implementation
+description: virtual classes can implement their interfaces partially
+should_fail: 0
+tags: 8.26.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	interface class ihello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::9 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void hello();
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::10 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void world();
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::13 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	virtual class vhello implements ihello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::16 error in parsing: (syntax error, unexpected vENDFUNCTION)
+		endfunction
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::20 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	class helloworld extends vhello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv::23 error in parsing: (syntax error, unexpected vENDFUNCTION)
+		endfunction

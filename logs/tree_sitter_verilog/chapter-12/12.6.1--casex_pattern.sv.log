@@ -1,0 +1,9 @@
+name: casex_pattern
+description: A module testing pattern matching in casex statements
+should_fail: 0
+tags: 12.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casex_pattern.sv
+incdirs: 
+top_module: 
+rc: 0
+

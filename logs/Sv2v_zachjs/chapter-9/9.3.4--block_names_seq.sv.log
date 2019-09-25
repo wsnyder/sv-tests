@@ -1,0 +1,19 @@
+name: block_names_seq
+description: sequential block names check
+should_fail: 0
+tags: 9.3.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_seq.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module block_tb;
+	reg a = 0;
+	reg b = 0;
+	reg c = 0;
+	initial begin : name
+		a = 1;
+		b = a;
+		c = b;
+	end
+endmodule

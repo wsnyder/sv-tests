@@ -1,0 +1,14 @@
+name: simple_fiedler-cooley
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v:16: Operator SUB expects 10 bits on the RHS, but RHS's CONST '3'h5' generates 3 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v:17: Operator ADD expects 10 bits on the RHS, but RHS's CONST '2'h3' generates 2 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v:21: Operator ASSIGN expects 9 bits on the Assign RHS, but Assign RHS's VARREF 'cnt_dn' generates 10 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v:22: Operator ASSIGN expects 9 bits on the Assign RHS, but Assign RHS's VARREF 'cnt_up' generates 10 bits.

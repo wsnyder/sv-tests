@@ -1,0 +1,13 @@
+name: cast_fn
+description: $cast function
+should_fail: 0
+tags: 6.24.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.24.2--cast_fn.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.24.2--cast_fn.sv:10: Unsupported or unknown PLI call: $cast
+%Error: Exiting due to 1 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.24.2--cast_fn.sv

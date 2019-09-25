@@ -1,0 +1,14 @@
+name: real-constants-illegal
+description: Examples of real literal constants
+should_fail: 1
+tags: 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11: syntax error, unexpected '.'

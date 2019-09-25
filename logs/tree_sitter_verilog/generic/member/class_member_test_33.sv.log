@@ -1,0 +1,22 @@
+name: class_member_test_33
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_33.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) package_item
+(6, 0) class_declaration
+(7, 0) class_item
+(7, 0) class_method
+(7, 0) function_declaration
+(7, 9) function_body_declaration
+(7, 22) function_statement_or_null
+(7, 22) function_statement
+(7, 22) statement
+(7, 22) statement_item
+(7, 22) loop_statement
+(9, 29) ERROR

@@ -1,0 +1,51 @@
+name: sva_counter
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:11:2: error: language feature not yet supported
+	default clocking @(posedge clk); endclocking
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:11:18: error: expected identifier
+	default clocking @(posedge clk); endclocking
+	                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:12:2: error: expected member
+	default disable iff (reset);
+	^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:14:2: error: language feature not yet supported
+	assert property (up |=> cnt == $past(cnt) + 8'd 1);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:15:2: error: language feature not yet supported
+	assert property (up [*2] |=> cnt == $past(cnt, 2) + 8'd 2);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:15:23: error: expected expression
+	assert property (up [*2] |=> cnt == $past(cnt, 2) + 8'd 2);
+	                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:16:2: error: language feature not yet supported
+	assert property (up ##1 up |=> cnt == $past(cnt, 2) + 8'd 2);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:19:2: error: language feature not yet supported
+	assume property (down |-> !up);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:21:2: error: language feature not yet supported
+	assert property (up ##1 down |=> cnt == $past(cnt, 2));
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:22:2: error: language feature not yet supported
+	assert property (down |=> cnt == $past(cnt) - 8'd 1);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:24:2: error: language feature not yet supported
+	property down_n(n);
+	^~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:25:9: error: expected expression
+		down [*n] |=> cnt == $past(cnt, n) - n;
+		      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:28:2: error: language feature not yet supported
+	assert property (down_n(8'd 3));
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:29:2: error: language feature not yet supported
+	assert property (down_n(8'd 5));
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

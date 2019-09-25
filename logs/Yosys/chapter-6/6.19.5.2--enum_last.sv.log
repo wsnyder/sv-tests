@@ -1,0 +1,14 @@
+name: enum_last
+description: enum last method tests
+should_fail: 0
+tags: 6.19.5.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.2--enum_last.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.2--enum_last.sv:8: syntax error, unexpected '{', expecting '(' or '['

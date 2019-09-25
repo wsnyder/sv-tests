@@ -1,0 +1,18 @@
+name: integer_unsigned_longint
+description: longint unsigned net test
+should_fail: 0
+tags: 6.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_unsigned_longint.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_unsigned_longint.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_unsigned_longint.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_unsigned_longint.sv::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+longint unsigned v;

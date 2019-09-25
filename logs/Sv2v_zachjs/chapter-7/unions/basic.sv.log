@@ -1,0 +1,20 @@
+name: basic-union
+description: Test basic union support
+should_fail: 0
+tags: 7.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/basic.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	union {
+		logic [7:0] v1;
+		logic [3:0] v2;
+	} un;
+	initial begin
+		un.v1 = 8'd140;
+		$display(":assert: (%d == 140)", un.v1);
+		$display(":assert: (%d == 12)", un.v2);
+	end
+endmodule

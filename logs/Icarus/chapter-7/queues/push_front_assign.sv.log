@@ -1,0 +1,12 @@
+name: push_front_assign
+description: Update queue by assignment (push_front)
+should_fail: 0
+tags: 7.10.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front_assign.sv
+incdirs: 
+top_module: 
+rc: 0
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front_assign.sv:12: internal error: I don't know how to elaborate(ivl_type_t) this expression: {'sd2, q}
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front_assign.sv:13: internal error: I don't know how to elaborate(ivl_type_t) this expression: {'sd3, q}
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front_assign.sv:14: internal error: I don't know how to elaborate(ivl_type_t) this expression: {'sd4, q}

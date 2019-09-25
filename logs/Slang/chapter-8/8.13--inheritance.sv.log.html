@@ -1,0 +1,40 @@
+<pre>name: inheritance
+description: class inheritance test
+should_fail: 0
+tags: 8.13
+files: <a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:8:2: error: language feature not yet supported
+	class super_cls;
+	^~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:13:11: error: expected identifier
+		function new(int def = 3);
+		        ^
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:13:12: error: expected statement
+		function new(int def = 3);
+		         ^~~
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:13:27: error: expected declarator
+		function new(int def = 3);
+		                        ^
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:18:2: error: language feature not yet supported
+	class test_cls extends super_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:20:11: error: expected identifier
+		function new(int def = 42);
+		        ^
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:20:12: error: expected statement
+		function new(int def = 42);
+		         ^~~
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:20:28: error: expected declarator
+		function new(int def = 42);
+		                         ^
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:26:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.13--inheritance.sv" target="file-frame">tests/chapter-8/8.13--inheritance.sv</a>:29:14: error: language feature not yet supported
+		test_obj = new(37);
+		           ^~~~~~~
+</pre>

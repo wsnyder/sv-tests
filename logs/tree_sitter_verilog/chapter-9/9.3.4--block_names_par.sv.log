@@ -1,0 +1,9 @@
+name: block_names_par
+description: parallel block names check
+should_fail: 0
+tags: 9.3.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv
+incdirs: 
+top_module: 
+rc: 0
+

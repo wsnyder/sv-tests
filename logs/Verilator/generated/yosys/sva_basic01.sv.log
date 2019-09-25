@@ -1,0 +1,13 @@
+name: sva_basic01
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv:10: syntax error, unexpected assert, expecting cover
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv:14: syntax error, unexpected assert, expecting cover
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv

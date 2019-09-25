@@ -1,0 +1,12 @@
+name: define-directive
+description: Define and undef checks
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-define.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module d;
+	
+endmodule

@@ -1,0 +1,12 @@
+name: svinterfaces_svinterface1
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+zachjs-sv2v: interface instantiations with parameter bindings are not yet supported: ("MyInterface",[("WIDTH",Right 4)],"MyInterfaceInstance")
+CallStack (from HasCallStack):
+  error, called at src/Convert/Interface.hs:90:26 in main:Convert.Interface

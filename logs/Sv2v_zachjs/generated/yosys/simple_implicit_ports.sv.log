@@ -1,0 +1,43 @@
+name: simple_implicit_ports
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/implicit_ports.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module alu (
+	a,
+	b,
+	cin,
+	cout,
+	result
+);
+	input [2:0] a;
+	input [2:0] b;
+	input cin;
+	output cout;
+	output [2:0] result;
+	assign cout = cin;
+	assign result = (a + b);
+endmodule
+module named_ports (
+	a,
+	b,
+	alu_result,
+	cout
+);
+	input [2:0] a;
+	input [2:0] b;
+	output [2:0] alu_result;
+	output cout;
+	wire cin = 1;
+	alu alu(
+		.a(a),
+		.b(b),
+		.cin(),
+		.cout(cout),
+		.result(alu_result)
+	);
+endmodule

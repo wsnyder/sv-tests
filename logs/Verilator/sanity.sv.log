@@ -1,0 +1,12 @@
+name: sanity
+description: A simple module that should fail during parsing
+should_fail: 1
+tags: sanity
+files: /home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv:14: syntax error, unexpected wire, expecting IDENTIFIER
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv

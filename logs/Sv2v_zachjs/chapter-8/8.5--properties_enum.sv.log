@@ -1,0 +1,10 @@
+name: properties_enum
+description: enum defined inside class
+should_fail: 0
+tags: 8.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties_enum.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties_enum.sv:8:9: Parse error: unexpected token 'class' (KW_class).

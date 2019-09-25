@@ -1,0 +1,15 @@
+<pre>name: simple_memory
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:39: syntax error, unexpected ',', expecting IDENTIFIER or do or final
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:45: syntax error, unexpected output
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:52: syntax error, unexpected always
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v
+</pre>

@@ -1,0 +1,14 @@
+name: associative-arrays-class
+description: Test associative arrays support
+should_fail: 0
+tags: 7.8.3 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/class.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/class.sv:9: syntax error, unexpected ';', expecting '(' or '['

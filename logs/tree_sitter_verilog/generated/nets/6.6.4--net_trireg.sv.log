@@ -1,0 +1,9 @@
+name: net_trireg
+description: trireg net test
+should_fail: 0
+tags: 6.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets/6.6.4--net_trireg.sv
+incdirs: 
+top_module: 
+rc: 0
+

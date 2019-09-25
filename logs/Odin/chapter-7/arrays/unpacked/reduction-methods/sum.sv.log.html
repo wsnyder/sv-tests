@@ -1,0 +1,21 @@
+<pre>name: unpacked-array-reduction-method-sum
+description: Test support of unpacked arrays reduction method sum
+should_fail: 0
+tags: 7.12.3 7.4.2
+files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>::1 File <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>::9 error in parsing: (syntax error, unexpected '[', expecting '(')
+byte b[] = { 1, 2, 3, 4 };
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>::10 error in parsing: (syntax error, unexpected ';', expecting '(')
+int y;
+</pre>

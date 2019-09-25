@@ -1,0 +1,21 @@
+name: array-unpacked-assignments
+description: Test unpacked arrays assignments
+should_fail: 0
+tags: 7.6 7.4.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/assignments.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg signed [127:0] A;
+	reg signed [127:0] B;
+	initial begin
+		A[0+:32] = 0;
+		A[32+:32] = 1;
+		A[64+:32] = 2;
+		A[96+:32] = 3;
+		B = A;
+		$display(":assert: ((%d == 0) and (%d == 1) and (%d == 2) and (%d == 3))", B[0+:32], B[32+:32], B[64+:32], B[96+:32]);
+	end
+endmodule

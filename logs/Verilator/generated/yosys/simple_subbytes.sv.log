@@ -1,0 +1,11 @@
+name: simple_subbytes
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/subbytes.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/subbytes.v:67: Logical Operator IF expects 1 bit on the If, but If's VARREF 'state' generates 2 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.

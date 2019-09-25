@@ -1,0 +1,101 @@
+<pre>name: ibex
+description: Full ibex core test
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/examples/sim/rtl/prim_clock_gating.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_pkg.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_alu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_compressed_decoder.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_cs_registers.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_decoder.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_id_stage.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_load_store_unit.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_slow.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_prefetch_buffer.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_fetch_fifo.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_pmp.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_register_file_ff.sv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl
+should_fail: 0
+tags: ibex
+top_module: 
+rc: 0
+
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv:93: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.if_stage_i.if_id_pipe_reg_we
+%Warning-UNOPTFLAT: Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv:93:  ibex_core.if_stage_i.if_id_pipe_reg_we
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv:171:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv:75:  ibex_core.if_stage_i.have_instr
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv:227:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_if_stage.sv:93:  ibex_core.if_stage_i.if_id_pipe_reg_we
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:167: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.id_in_ready
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:167:  ibex_core.id_in_ready
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:191:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:106:  ibex_core.id_stage_i.controller_i.halt_if
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:558:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:167:  ibex_core.id_in_ready
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:54: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.sign_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:54:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.sign_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:114:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:47:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mac_res_signed
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:248:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:54:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.sign_a
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:51: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mult_op_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:51:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mult_op_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:114:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:47:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mac_res_signed
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:248:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:51:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mult_op_a
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:54: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.sign_b
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:54:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.sign_b
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:114:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:47:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mac_res_signed
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:248:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:54:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.sign_b
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:52: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mult_op_b
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:52:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mult_op_b
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:114:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:47:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mac_res_signed
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:248:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:52:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mult_op_b
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:53: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.accum
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:53:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.accum
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:114:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:47:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.mac_res_signed
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:248:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:53:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.accum
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:45: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.multdiv_alu_operand_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:45:  ibex_core.ex_block_i.multdiv_alu_operand_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_alu.sv:72:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:46:  ibex_core.ex_block_i.alu_adder_result_ext
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:130:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:57:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.is_greater_equal
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:121:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:66:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.next_remainder
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:144:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:45:  ibex_core.ex_block_i.multdiv_alu_operand_a
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:45: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.ex_block_i.multdiv_alu_operand_b
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:45:  ibex_core.ex_block_i.multdiv_alu_operand_b
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_alu.sv:72:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:46:  ibex_core.ex_block_i.alu_adder_result_ext
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:130:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:57:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.is_greater_equal
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:121:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:66:  ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.next_remainder
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_multdiv_fast.sv:144:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:45:  ibex_core.ex_block_i.multdiv_alu_operand_b
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:118: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.lsu_addr_incr_req
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:118:  ibex_core.lsu_addr_incr_req
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_id_stage.sv:213:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_id_stage.sv:183:  ibex_core.id_stage_i.alu_op_a_mux_sel
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_id_stage.sv:225:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_id_stage.sv:205:  ibex_core.id_stage_i.alu_operand_a
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_alu.sv:72:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_ex_block.sv:46:  ibex_core.ex_block_i.alu_adder_result_ext
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_load_store_unit.sv:313:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_load_store_unit.sv:76:  ibex_core.load_store_unit_i.split_misaligned_access
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_load_store_unit.sv:318:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:118:  ibex_core.lsu_addr_incr_req
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:130: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.core_ctrl_firstfetch
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:130:  ibex_core.core_ctrl_firstfetch
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:276:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:258:  ibex_core.clock_en
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/examples/sim/rtl/prim_clock_gating.sv:16:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/examples/sim/rtl/prim_clock_gating.sv:14:  ibex_core.core_clock_gate_i.clk_en
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/examples/sim/rtl/prim_clock_gating.sv:22:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:256:  ibex_core.clk
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:573:  ACTIVE
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:573:  ASSIGNPRE
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:98:  __Vdly__ibex_core.id_stage_i.controller_i.ctrl_fsm_cs
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:565:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:98:  ibex_core.id_stage_i.controller_i.ctrl_fsm_ns
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_controller.sv:191:  ALWAYS
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_core.sv:130:  ibex_core.core_ctrl_firstfetch
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl/ibex_cs_registers.sv:149: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.cs_registers_i.mie_q
+</pre>

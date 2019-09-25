@@ -1,0 +1,11 @@
+name: implicit_continuous_assignment
+description: implicit declaration in continuous assignment tests
+should_fail: 0
+tags: 6.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_continuous_assignment.sv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_continuous_assignment.sv:11: Signal definition not found, creating implicitly: c
+%Warning-IMPLICIT: Use "/* verilator lint_off IMPLICIT */" and lint_on around source to disable this message.

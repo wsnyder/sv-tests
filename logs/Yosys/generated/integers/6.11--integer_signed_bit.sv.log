@@ -1,0 +1,16 @@
+name: integer_signed_bit
+description: bit signed net test
+should_fail: 0
+tags: 6.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_signed_bit.sv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_signed_bit.sv' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.

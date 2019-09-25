@@ -1,0 +1,20 @@
+name: simple_dff_init
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:11: Unsupported: Multiple top level modules: dff1_test and dff0_test
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:11: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:22: Unsupported: Multiple top level modules: dff0a_test and dff1_test
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:22: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:33: Unsupported: Multiple top level modules: dff1a_test and dff0a_test
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:33: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:44: Unsupported: Multiple top level modules: dff_test_997 and dff1a_test
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v:44: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 8 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_init.v

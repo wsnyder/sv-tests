@@ -1,0 +1,12 @@
+name: event_conditional
+description: event conditional
+should_fail: 0
+tags: 9.4.2.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.3--event_conditional.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.3--event_conditional.sv:12: syntax error, unexpected iff, expecting ')' or ',' or or
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.3--event_conditional.sv

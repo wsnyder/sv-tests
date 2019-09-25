@@ -1,0 +1,12 @@
+name: typedef_test_14
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_14.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_14.sv:7:9: error: unknown class or package 'some_package'
+typedef some_package::some_type myalias;
+        ^~~~~~~~~~~~

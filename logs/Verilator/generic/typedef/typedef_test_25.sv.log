@@ -1,0 +1,15 @@
+name: typedef_test_25
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv:8: Can't find definition of variable: A
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv:9: Can't find definition of variable: D
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv:11: Can't find definition of variable: E
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv:13: Can't find definition of variable: M
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv

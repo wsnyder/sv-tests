@@ -1,0 +1,13 @@
+name: unique_if
+description: A module testing unique-if statement
+should_fail: 0
+tags: 12.4.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv:11: Syntax in assignment statement l-value.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv:12: Syntax in assignment statement l-value.

@@ -1,0 +1,22 @@
+name: event_order
+description: event order test
+should_fail: 0
+tags: 9.3.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(9, 1) module_or_generate_item
+(9, 1) initial_construct
+(9, 8) statement_or_null
+(9, 8) statement
+(9, 8) statement_item
+(9, 8) par_block
+(14, 5) statement_or_null
+(14, 5) statement
+(14, 5) statement_item
+(14, 5) seq_block
+(15, 7) ERROR

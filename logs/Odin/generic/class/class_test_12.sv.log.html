@@ -1,0 +1,22 @@
+<pre>name: class_test_12
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+files: <a href="../../../../tests/generic/class/class_test_12.sv" target="file-frame">tests/generic/class/class_test_12.sv</a>
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../../tests/generic/class/class_test_12.sv" target="file-frame">tests/generic/class/class_test_12.sv</a>::1 File <a href="../../../../tests/generic/class/class_test_12.sv" target="file-frame">tests/generic/class/class_test_12.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../../tests/generic/class/class_test_12.sv" target="file-frame">tests/generic/class/class_test_12.sv</a>::7 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting vMODULE or preDEFAULT_NETTYPE)
+class Foo #(int N=1, int P=2) extends Bar #(x,y,z);
+ERROR (4)::NETLIST_ERROR Could not find a top level module
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 
+</pre>

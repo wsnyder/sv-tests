@@ -1,0 +1,14 @@
+name: operations-on-arrays-variable-slice-zero-rw
+description: Test packed arrays operations support (Variable slice)
+should_fail: 1
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/variable-slice-zero.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: System task `$display' called with invalid/unsupported format specifier at /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/variable-slice-zero.sv:25.

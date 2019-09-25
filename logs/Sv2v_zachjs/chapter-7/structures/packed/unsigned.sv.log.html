@@ -1,0 +1,18 @@
+<pre>name: packed-and-unsigned-structures
+description: Test packed and unsigned structures support
+should_fail: 0
+tags: 7.2.1 7.2
+files: <a href="../../../../../tests/chapter-7/structures/packed/unsigned.sv" target="file-frame">tests/chapter-7/structures/packed/unsigned.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg unsigned [7:0] p1;
+	initial begin
+		p1 = 8'd200;
+		$display(":assert: ('%h' == 'c8')", p1);
+		$display(":assert: (%d == 200)", p1);
+	end
+endmodule
+</pre>

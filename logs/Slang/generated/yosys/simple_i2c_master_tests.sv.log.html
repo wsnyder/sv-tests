@@ -1,0 +1,46 @@
+<pre>name: simple_i2c_master_tests
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:14:18: error: language feature not yet supported
+	    cmd_stop <= #1 1'b0;
+	                ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:16:18: error: language feature not yet supported
+	    cmd_stop <= #1 1'b0;
+	                ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:20:12: error: language feature not yet supported
+	    al <= #1 1'b0;
+	          ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:22:12: error: language feature not yet supported
+	    al <= #1 1'b0;
+	          ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:24:12: error: language feature not yet supported
+	    al <= #1 ~cmd_stop;
+	          ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:43:22: error: language feature not yet supported
+	          cnt    <= #1 clk_cnt;
+	                    ^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:44:22: error: language feature not yet supported
+	          clk_en <= #1 1'b1;
+	                    ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:48:22: error: language feature not yet supported
+	          cnt    <= #1 cnt;
+	                    ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:49:22: error: language feature not yet supported
+	          clk_en <= #1 1'b0;
+	                    ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:53:27: error: language feature not yet supported
+                cnt    <= #1 cnt - 16'h1;
+                          ^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:54:20: error: language feature not yet supported
+	        clk_en <= #1 1'b0;
+	                  ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:59:18: error: language feature not yet supported
+	    cmd_stop <= #1 cmd;
+	                ^~~~~~
+</pre>

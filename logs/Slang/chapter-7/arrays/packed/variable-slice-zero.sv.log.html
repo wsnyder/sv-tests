@@ -1,0 +1,16 @@
+<pre>name: operations-on-arrays-variable-slice-zero-rw
+description: Test packed arrays operations support (Variable slice)
+should_fail: 1
+tags: 7.4.3
+files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>:27:11: error: value must be positive
+	arr_b[4+:c] = arr_a[1+:c];
+	         ^
+<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>:27:25: error: value must be positive
+	arr_b[4+:c] = arr_a[1+:c];
+	                       ^
+</pre>

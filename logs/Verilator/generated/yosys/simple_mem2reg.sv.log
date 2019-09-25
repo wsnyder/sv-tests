@@ -1,0 +1,22 @@
+name: simple_mem2reg
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:22: Unsupported: Multiple top level modules: mem2reg_test2 and mem2reg_test1
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:22: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:53: Unsupported: Multiple top level modules: mem2reg_test3 and mem2reg_test2
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:53: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:64: Unsupported: Multiple top level modules: mem2reg_test4 and mem2reg_test3
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:64: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:86: Unsupported: Multiple top level modules: mem2reg_test5 and mem2reg_test4
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:86: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:97: Unsupported: Multiple top level modules: mem2reg_test6 and mem2reg_test5
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:97: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 10 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v

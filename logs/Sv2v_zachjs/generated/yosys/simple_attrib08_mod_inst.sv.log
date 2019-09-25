@@ -1,0 +1,39 @@
+name: simple_attrib08_mod_inst
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib08_mod_inst.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module bar (
+	clk,
+	rst,
+	inp,
+	out
+);
+	input wire clk;
+	input wire rst;
+	input wire inp;
+	output reg out;
+	always @(posedge clk) if (rst) out <= 1'd0;
+	else out <= (~ inp);
+endmodule
+module foo (
+	clk,
+	rst,
+	inp,
+	out
+);
+	input wire clk;
+	input wire rst;
+	input wire inp;
+	output wire out;
+	(* my_module_instance = 99 *) bar bar_instance(
+		clk,
+		rst,
+		inp,
+		out
+	);
+endmodule

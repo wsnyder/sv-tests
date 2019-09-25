@@ -1,0 +1,16 @@
+name: errors_syntax_err12
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err12.v
+should_fail: 1
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(0, 0) ERROR
+(1, 0) package_item
+(1, 0) net_declaration
+(3, 0) ERROR
+(5, 0) ERROR
+(6, 0) ERROR

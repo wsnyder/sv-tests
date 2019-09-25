@@ -1,0 +1,15 @@
+name: constructor_param
+description: class constructor with arguments test
+should_fail: 0
+tags: 8.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_param.sv
+incdirs: 
+top_module: 
+rc: 6
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_param.sv:16: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_param.sv:16: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_param.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_param.sv:18: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_param.sv:19: syntax error
+I give up.

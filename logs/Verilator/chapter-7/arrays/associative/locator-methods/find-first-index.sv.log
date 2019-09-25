@@ -1,0 +1,14 @@
+name: array-locator-methods-find-first-index
+description: Test support of array locator methods
+should_fail: 0
+tags: 7.12.1 7.12 7.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:9: syntax error, unexpected ']', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:10: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: with
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv

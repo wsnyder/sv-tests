@@ -1,0 +1,14 @@
+name: dynamic-arrays-op-new
+description: Test dynamic arrays operator new support
+should_fail: 0
+tags: 7.5.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-new.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-new.sv:9: syntax error, unexpected ']', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-new.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-new.sv:12: syntax error, unexpected '[', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-new.sv

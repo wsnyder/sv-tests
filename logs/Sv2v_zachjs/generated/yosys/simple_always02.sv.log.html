@@ -1,0 +1,24 @@
+<pre>name: simple_always02
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/always02.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module uut_always02 (
+	clock,
+	reset,
+	count
+);
+	input clock;
+	input reset;
+	output [3:0] count;
+	reg [3:0] count;
+	always @(posedge clock) begin
+		count <= (count + 1);
+		if (reset) count <= 0;
+	end
+endmodule
+</pre>

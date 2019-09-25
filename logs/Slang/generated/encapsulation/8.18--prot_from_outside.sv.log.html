@@ -1,0 +1,22 @@
+<pre>name: prot_from_outside
+description: encapsulation test
+should_fail: 1
+tags: 8.18
+files: <a href="../../../../tests/generated/encapsulation/8.18--prot_from_outside.sv" target="file-frame">tests/generated/encapsulation/8.18--prot_from_outside.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../tests/generated/encapsulation/8.18--prot_from_outside.sv" target="file-frame">tests/generated/encapsulation/8.18--prot_from_outside.sv</a>:8:1: error: language feature not yet supported
+class a_cls;
+^~~~~~~~~~~~
+<a href="../../../../tests/generated/encapsulation/8.18--prot_from_outside.sv" target="file-frame">tests/generated/encapsulation/8.18--prot_from_outside.sv</a>:13:1: error: language feature not yet supported
+class b_cls extends a_cls;
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../../tests/generated/encapsulation/8.18--prot_from_outside.sv" target="file-frame">tests/generated/encapsulation/8.18--prot_from_outside.sv</a>:21:1: error: use of undeclared identifier 'b_cls'
+b_cls b_obj;
+^~~~~
+<a href="../../../../tests/generated/encapsulation/8.18--prot_from_outside.sv" target="file-frame">tests/generated/encapsulation/8.18--prot_from_outside.sv</a>:23:13: error: language feature not yet supported
+    b_obj = new;
+            ^~~
+</pre>

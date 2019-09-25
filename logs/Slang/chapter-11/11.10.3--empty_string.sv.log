@@ -1,0 +1,12 @@
+name: empty_string
+description: empty string test
+should_fail: 0
+tags: 11.10.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.3--empty_string.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.3--empty_string.sv:13:2: error: use of undeclared identifier '$assert'
+	$assert(a == 0);
+	^~~~~~~

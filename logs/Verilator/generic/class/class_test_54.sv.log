@@ -1,0 +1,18 @@
+name: class_test_54
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv:7: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv:7: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv:8: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv:9: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv:10: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv:11: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 6 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_54.sv

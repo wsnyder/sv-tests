@@ -1,0 +1,17 @@
+name: implicit_continuous_assignment
+description: implicit declaration in continuous assignment tests
+should_fail: 0
+tags: 6.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_continuous_assignment.sv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_continuous_assignment.sv' to AST representation.
+Generating RTLIL representation for module `\top'.
+Warning: Identifier `\c' is implicitly declared at /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_continuous_assignment.sv:11.
+Successfully finished Verilog frontend.

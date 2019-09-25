@@ -1,0 +1,20 @@
+<pre>name: sva_counter
+description: Tests imported from yosys
+files: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:12: syntax error, unexpected disable, expecting clocking
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:14: Unsupported or unknown PLI call: $past
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:15: Unsupported or unknown PLI call: $past
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:16: Unsupported or unknown PLI call: $past
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:19: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:21: Unsupported or unknown PLI call: $past
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:22: Unsupported or unknown PLI call: $past
+%Error: <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>:25: Unsupported or unknown PLI call: $past
+%Error: Exiting due to 8 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/sva/counter.sv" target="file-frame">tests/sva/counter.sv</a>
+</pre>

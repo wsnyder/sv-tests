@@ -1,0 +1,27 @@
+name: static_properties
+description: static class properties test
+should_fail: 0
+tags: 8.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.9--static_properties.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(14, 1) module_or_generate_item
+(14, 1) initial_construct
+(14, 8) statement_or_null
+(14, 8) statement
+(14, 8) statement_item
+(14, 8) seq_block
+(16, 18) statement_or_null
+(16, 18) statement
+(16, 18) statement_item
+(16, 18) subroutine_call_statement
+(18, 14) ERROR
+(19, 24) statement_or_null
+(19, 24) statement
+(19, 24) statement_item
+(19, 24) subroutine_call_statement
+(20, 14) ERROR

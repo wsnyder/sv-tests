@@ -1,0 +1,17 @@
+name: cond_op
+description: ?: operator test
+should_fail: 0
+tags: 11.4.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.11--cond_op.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire signed [31:0] a = 12;
+	wire signed [31:0] b = 5;
+	reg signed [31:0] c;
+	initial begin
+		c = ((a > b) ? 11 : 13);
+	end
+endmodule

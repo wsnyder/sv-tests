@@ -1,0 +1,12 @@
+name: casez
+description: A module testing casez statement
+should_fail: 0
+tags: 12.5.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.1--casez.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.1--casez.sv:10: error: always statement does not have any delay.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.1--casez.sv:10:      : A runtime infinite loop will occur.
+Elaboration failed

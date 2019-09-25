@@ -1,0 +1,15 @@
+<pre>name: svinterfaces_svinterface_at_top
+description: Tests imported from yosys
+files: <a href="../../../../tests/svinterfaces/svinterface_at_top.sv" target="file-frame">tests/svinterfaces/svinterface_at_top.sv</a>
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../../tests/svinterfaces/svinterface_at_top.sv" target="file-frame">tests/svinterfaces/svinterface_at_top.sv</a>:10: Unsupported: Interfaced port on top level module
+%Error: <a href="../../../../tests/svinterfaces/svinterface_at_top.sv" target="file-frame">tests/svinterfaces/svinterface_at_top.sv</a>:109: Can't find definition of scope/variable: u_MyInterfaceFromTop
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/svinterfaces/svinterface_at_top.sv" target="file-frame">tests/svinterfaces/svinterface_at_top.sv</a>
+</pre>

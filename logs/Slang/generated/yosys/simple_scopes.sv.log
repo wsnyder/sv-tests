@@ -1,0 +1,48 @@
+name: simple_scopes
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:3:3: error: language feature not yet supported
+		input [15:0] x, y;
+		^~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:16:3: error: language feature not yet supported
+		input [15:0] x, y;
+		^~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:27:3: error: language feature not yet supported
+		input [3:0] a;
+		^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:30:8: error: use of undeclared identifier 'a'
+			y = a * 23;
+			    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:36:3: error: language feature not yet supported
+		input [3:0] a;
+		^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:42:14: error: use of undeclared identifier 'a'
+				x = 77 + a;
+				         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:49:9: error: language feature not yet supported
+	always @* begin
+	       ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:50:7: error: too many arguments to subroutine call; expected 0 but 2 were provided
+		x = func_01(11, 22);
+		    ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:51:7: error: too many arguments to subroutine call; expected 0 but 2 were provided
+		y = func_02(33, 44);
+		    ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:52:3: error: too many arguments to subroutine call; expected 0 but 1 were provided
+		task_01(k);
+		^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:53:3: error: too many arguments to subroutine call; expected 0 but 1 were provided
+		task_02(k);
+		^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:60:7: error: too many arguments to subroutine call; expected 0 but 2 were provided
+		x = func_01(y, x);
+		    ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:61:7: error: too many arguments to subroutine call; expected 0 but 2 were provided
+		y = func_02(y, x);
+		    ^~~~~~~

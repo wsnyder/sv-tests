@@ -1,0 +1,22 @@
+<pre>name: illegal_implements_parameter
+description: implementing parameter that resolves to an interface class is not allowed
+should_fail: 1
+tags: 8.26.4
+files: <a href="../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_implements_parameter.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_implements_parameter.sv</a>:8:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_implements_parameter.sv</a>:13:2: error: language feature not yet supported
+	class Hello #(type T = ihello) implements T;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_implements_parameter.sv</a>:19:2: error: use of undeclared identifier 'Hello'
+	Hello obj;
+	^~~~~
+<a href="../../../tests/chapter-8/8.26.4--illegal_implements_parameter.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_implements_parameter.sv</a>:22:9: error: language feature not yet supported
+		obj = new;
+		      ^~~
+</pre>

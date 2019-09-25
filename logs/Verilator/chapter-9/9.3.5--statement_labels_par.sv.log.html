@@ -1,0 +1,16 @@
+<pre>name: statement_labels_par
+description: parallel block labels check
+should_fail: 0
+tags: 9.3.5
+files: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>:12: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Error: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>:13: syntax error, unexpected IDENTIFIER, expecting assert or cover
+%Error: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>:16: Unsupported: Verilog 1995 reserved word not implemented: join
+%Error: Cannot continue
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>
+</pre>

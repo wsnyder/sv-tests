@@ -1,0 +1,40 @@
+name: asicworld_code_hdl_models_d_ff_gates
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_d_ff_gates.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module d_ff_gates (
+	d,
+	clk,
+	q,
+	q_bar
+);
+	input d;
+	input clk;
+	output q;
+	output q_bar;
+	wire n1;
+	wire n2;
+	wire n3;
+	wire q_bar_n;
+	wire cn;
+	wire dn;
+	wire n4;
+	wire n5;
+	wire n6;
+	not (n1, d);
+	nand (n2, d, clk);
+	nand (n3, n1, clk);
+	nand (dn, q_bar_n, n2);
+	nand (q_bar_n, dn, n3);
+	not (cn, clk);
+	not (n4, dn);
+	nand (n5, dn, cn);
+	nand (n6, n4, cn);
+	nand (q, q_bar, n5);
+	nand (q_bar, q, n6);
+endmodule

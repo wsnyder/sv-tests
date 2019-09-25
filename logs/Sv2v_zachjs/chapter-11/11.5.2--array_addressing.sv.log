@@ -1,0 +1,16 @@
+name: array_addressing
+description: array addressing test
+should_fail: 0
+tags: 11.5.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.2--array_addressing.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire [8191:0] mem;
+	reg [7:0] a;
+	initial begin
+		a = mem[7200+:8];
+	end
+endmodule

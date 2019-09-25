@@ -1,0 +1,14 @@
+name: implements_multiple
+description: class implementing multiple interfaces
+should_fail: 0
+tags: 8.26.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_multiple.sv:8: syntax error, unexpected TOK_ID, expecting '(' or '['

@@ -1,0 +1,18 @@
+name: class_member_test_13
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:7:1: error: language feature not yet supported
+class protected_stuff;
+^~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:9:34: error: unknown macro or compiler directive '`SSS'
+  protected const int countess = `SSS;
+                                 ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:9:38: error: expected expression
+  protected const int countess = `SSS;
+                                     ^

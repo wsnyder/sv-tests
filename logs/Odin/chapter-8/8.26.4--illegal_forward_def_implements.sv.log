@@ -1,0 +1,28 @@
+name: illegal_forward_def_implements
+description: implementing forward typedef for an interface class should fail
+should_fail: 1
+tags: 8.26.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	typedef interface class ihello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::10 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	class Hello implements ihello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::13 error in parsing: (syntax error, unexpected vENDFUNCTION)
+		endfunction
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::17 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+		typedef int int_t;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::18 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void hello(int_t val);
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv::21 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	Hello obj;

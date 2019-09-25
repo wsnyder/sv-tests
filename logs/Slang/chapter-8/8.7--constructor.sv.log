@@ -1,0 +1,24 @@
+name: constructor
+description: class constructor test
+should_fail: 0
+tags: 8.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:10:11: error: expected identifier
+		function new();
+		        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:10:12: error: expected statement
+		function new();
+		         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:16:3: error: use of undeclared identifier 'test_cls'
+		test_cls test_obj = new;
+		^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:16:23: error: language feature not yet supported
+		test_cls test_obj = new;
+		                    ^~~

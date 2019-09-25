@@ -1,0 +1,9 @@
+name: illegal_implements_parameter
+description: implementing parameter that resolves to an interface class is not allowed
+should_fail: 1
+tags: 8.26.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv
+incdirs: 
+top_module: 
+rc: 0
+

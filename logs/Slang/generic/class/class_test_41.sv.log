@@ -1,0 +1,24 @@
+name: class_test_41
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_41.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_41.sv:7:1: error: language feature not yet supported
+class macros_as_class_item;
+^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_41.sv:8:2: error: unknown macro or compiler directive '`uvm_object_utils'
+ `uvm_object_utils(stress_seq)
+ ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_41.sv:9:2: error: unknown macro or compiler directive '`uvm_object_registry'
+ `uvm_object_registry(myclass, "class_name")
+ ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_41.sv:10:2: error: unknown macro or compiler directive '`uvm_sweets'
+ `uvm_sweets(dessert)
+ ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_41.sv:11:2: error: unknown macro or compiler directive '`non_uvm_macro'
+ `non_uvm_macro(apple, `banana, "cherry")
+ ^

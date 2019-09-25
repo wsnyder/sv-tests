@@ -1,0 +1,17 @@
+<pre>name: simple_wandwor
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v:3: Unsupported: Verilog 1995 reserved word not implemented: wor
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v:4: Unsupported: Verilog 1995 reserved word not implemented: wand
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v:15: Unsupported: Verilog 1995 reserved word not implemented: wor
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v:16: Unsupported: Verilog 1995 reserved word not implemented: wand
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v
+</pre>

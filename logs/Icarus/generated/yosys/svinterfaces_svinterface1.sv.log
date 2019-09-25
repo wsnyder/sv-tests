@@ -1,0 +1,31 @@
+name: svinterfaces_svinterface1
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 22
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:62: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:1: Errors in port declarations.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:68: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:70: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:71: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:73: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:74: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:75: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:76: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:78: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:98: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:1: Errors in port declarations.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:103: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:105: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:106: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:107: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:108: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:110: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:112: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:114: error: invalid module item.

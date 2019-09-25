@@ -1,0 +1,43 @@
+<pre>name: override_member
+description: class member override test
+should_fail: 0
+tags: 8.14
+files: <a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:8:2: error: language feature not yet supported
+	class super_cls;
+	^~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:13:11: error: expected identifier
+		function new(int def = 3);
+		        ^
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:13:12: error: expected statement
+		function new(int def = 3);
+		         ^~~
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:13:27: error: expected declarator
+		function new(int def = 3);
+		                        ^
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:18:2: error: language feature not yet supported
+	class test_cls extends super_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:24:11: error: expected identifier
+		function new(int def = 42);
+		        ^
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:24:12: error: expected statement
+		function new(int def = 42);
+		         ^~~
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:24:28: error: expected declarator
+		function new(int def = 42);
+		                         ^
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:30:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:31:2: error: use of undeclared identifier 'super_cls'
+	super_cls super_obj;
+	^~~~~~~~~
+<a href="../../../tests/chapter-8/8.14--override_member.sv" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>:34:14: error: language feature not yet supported
+		test_obj = new(37);
+		           ^~~~~~~
+</pre>

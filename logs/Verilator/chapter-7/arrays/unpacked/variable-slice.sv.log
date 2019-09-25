@@ -1,0 +1,12 @@
+name: operations-on-arrays-variable-slice-rw
+description: Test packed arrays operations support (Variable slice)
+should_fail: 0
+tags: 7.4.3 7.4.6
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv:22: Illegal +: or -: select; type already selected, or bad dimension: type is UNPACKARRAYDTYPE
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv

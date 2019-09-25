@@ -1,0 +1,33 @@
+<pre>name: memories_implicit_en
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/implicit_en.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module test (
+	clk,
+	rd_addr,
+	rd_data,
+	wr_addr,
+	wr_en,
+	wr_data
+);
+	input clk;
+	input [3:0] rd_addr;
+	output reg [31:0] rd_data;
+	input [3:0] wr_addr;
+	input [3:0] wr_en;
+	input [31:0] wr_data;
+	reg [511:0] mem;
+	always @(posedge clk) begin
+		mem[((15 - wr_addr) * 32)+:8] <= (wr_en[0] ? wr_data[7:0] : mem[((15 - wr_addr) * 32)+:8]);
+		mem[(((15 - wr_addr) * 32) + 8)+:8] <= (wr_en[1] ? wr_data[15:8] : mem[(((15 - wr_addr) * 32) + 8)+:8]);
+		mem[(((15 - wr_addr) * 32) + 16)+:8] <= (wr_en[2] ? wr_data[23:16] : mem[(((15 - wr_addr) * 32) + 16)+:8]);
+		mem[(((15 - wr_addr) * 32) + 24)+:8] <= (wr_en[3] ? wr_data[31:24] : mem[(((15 - wr_addr) * 32) + 24)+:8]);
+		rd_data <= mem[((15 - rd_addr) * 32)+:32];
+	end
+endmodule
+</pre>

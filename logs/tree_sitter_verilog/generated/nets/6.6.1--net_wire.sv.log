@@ -1,0 +1,9 @@
+name: net_wire
+description: wire net test
+should_fail: 0
+tags: 6.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets/6.6.1--net_wire.sv
+incdirs: 
+top_module: 
+rc: 0
+

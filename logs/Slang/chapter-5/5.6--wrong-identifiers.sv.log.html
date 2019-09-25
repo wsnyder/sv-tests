@@ -1,0 +1,22 @@
+<pre>name: wrong-identifiers
+description: Identifiers that should not be accepted
+should_fail: 1
+tags: 5.6
+files: <a href="../../../tests/chapter-5/5.6--wrong-identifiers.sv" target="file-frame">tests/chapter-5/5.6--wrong-identifiers.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-5/5.6--wrong-identifiers.sv" target="file-frame">tests/chapter-5/5.6--wrong-identifiers.sv</a>:8:6: error: expected declarator
+  reg $dollar;
+     ^
+<a href="../../../tests/chapter-5/5.6--wrong-identifiers.sv" target="file-frame">tests/chapter-5/5.6--wrong-identifiers.sv</a>:8:7: error: expected member
+  reg $dollar;
+      ^~~~~~~
+<a href="../../../tests/chapter-5/5.6--wrong-identifiers.sv" target="file-frame">tests/chapter-5/5.6--wrong-identifiers.sv</a>:9:6: error: expected declarator
+  reg 0number;
+     ^
+<a href="../../../tests/chapter-5/5.6--wrong-identifiers.sv" target="file-frame">tests/chapter-5/5.6--wrong-identifiers.sv</a>:9:7: error: expected member
+  reg 0number;
+      ^
+</pre>

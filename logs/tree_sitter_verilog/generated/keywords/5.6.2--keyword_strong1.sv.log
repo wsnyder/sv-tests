@@ -1,0 +1,9 @@
+name: strong1
+description: The 'strong1' keyword should be reserved
+should_fail: 1
+tags: 5.6.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_strong1.sv
+incdirs: 
+top_module: 
+rc: 0
+

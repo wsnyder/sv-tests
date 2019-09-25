@@ -1,0 +1,16 @@
+<pre>name: basic-tagged-packed-union
+description: Test tagged packed union support
+should_fail: 0
+tags: 7.3.2
+files: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>:9: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>:15: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>:16: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: Exiting due to 3 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>
+</pre>

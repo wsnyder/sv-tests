@@ -1,0 +1,19 @@
+<pre>name: sva_basic03
+description: Tests imported from yosys
+files: <a href="../../../../tests/sva/basic03.sv" target="file-frame">tests/sva/basic03.sv</a>
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../tests/sva/basic03.sv" target="file-frame">tests/sva/basic03.sv</a>:7:2: error: language feature not yet supported
+	check_selA: assert property ( @(posedge clk) selA |=> Q == $past(QA) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../../tests/sva/basic03.sv" target="file-frame">tests/sva/basic03.sv</a>:8:2: error: language feature not yet supported
+	check_selB: assert property ( @(posedge clk) selB |=> Q == $past(QB) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../../tests/sva/basic03.sv" target="file-frame">tests/sva/basic03.sv</a>:10:2: error: language feature not yet supported
+	assume_not_11: assume property ( @(posedge clk) !(selA & selB) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>

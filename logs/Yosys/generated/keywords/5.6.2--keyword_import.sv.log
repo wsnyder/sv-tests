@@ -1,0 +1,16 @@
+name: import
+description: The 'import' keyword should be reserved
+should_fail: 1
+tags: 5.6.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_import.sv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_import.sv' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.

@@ -1,0 +1,23 @@
+name: integers-sized
+description: Integer literal constants
+should_fail: 0
+tags: 5.7.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-sized.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [3:0] a;
+	reg [4:0] b;
+	reg [2:0] c;
+	reg [11:0] d;
+	reg [15:0] e;
+	initial begin
+		a = 4'b1001;
+		b = 5'D3;
+		c = 3'b01x;
+		d = 12'hx;
+		e = 16'hz;
+	end
+endmodule

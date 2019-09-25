@@ -1,0 +1,23 @@
+<pre>name: type_access_implements_invalid
+description: access types from implemented class
+should_fail: 1
+tags: 8.26.3
+files: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:8: syntax error, unexpected interface
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:10: syntax error, unexpected pure
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:10: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:11: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:13: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:13: Unsupported: SystemVerilog 2012 reserved word not implemented: implements
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:14: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:17: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:22: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>:22: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 11 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>
+</pre>

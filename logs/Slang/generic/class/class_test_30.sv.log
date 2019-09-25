@@ -1,0 +1,21 @@
+name: class_test_30
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_30.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_30.sv:7:1: error: language feature not yet supported
+class Foo;
+^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_30.sv:9:9: error: expected identifier
+function new (integer size);
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_30.sv:9:10: error: expected statement
+function new (integer size);
+         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_30.sv:9:27: error: expected declarator
+function new (integer size);
+                          ^

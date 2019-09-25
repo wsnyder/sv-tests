@@ -1,0 +1,12 @@
+name: typedef_test_21
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_21.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_21.sv:7:14: error: invalid enum base type 'bit[3:0][7:0]' (must be a single dimensional integer type)
+typedef enum bit[3:0][7:0] {
+             ^

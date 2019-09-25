@@ -1,0 +1,10 @@
+name: number_test_58
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_58.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_58.sv:7:27: Lexical error: Undefined macro: WIDTH

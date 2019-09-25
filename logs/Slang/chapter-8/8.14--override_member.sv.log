@@ -1,0 +1,42 @@
+name: override_member
+description: class member override test
+should_fail: 0
+tags: 8.14
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:8:2: error: language feature not yet supported
+	class super_cls;
+	^~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:13:11: error: expected identifier
+		function new(int def = 3);
+		        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:13:12: error: expected statement
+		function new(int def = 3);
+		         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:13:27: error: expected declarator
+		function new(int def = 3);
+		                        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:18:2: error: language feature not yet supported
+	class test_cls extends super_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:24:11: error: expected identifier
+		function new(int def = 42);
+		        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:24:12: error: expected statement
+		function new(int def = 42);
+		         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:24:28: error: expected declarator
+		function new(int def = 42);
+		                         ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:30:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj;
+	^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:31:2: error: use of undeclared identifier 'super_cls'
+	super_cls super_obj;
+	^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv:34:14: error: language feature not yet supported
+		test_obj = new(37);
+		           ^~~~~~~

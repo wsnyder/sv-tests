@@ -1,0 +1,10 @@
+name: sync_reject_on
+description: The 'sync_reject_on' keyword should be reserved
+should_fail: 1
+tags: 5.6.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_sync_reject_on.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_sync_reject_on.sv:8:9: Parse error: unexpected token 'sync_reject_on' (KW_sync_reject_on).

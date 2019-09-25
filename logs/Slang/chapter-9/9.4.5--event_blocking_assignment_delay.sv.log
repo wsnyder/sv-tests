@@ -1,0 +1,12 @@
+name: event_blocking_assignment_delay
+description: event blk assignment delay
+should_fail: 0
+tags: 9.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_blocking_assignment_delay.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_blocking_assignment_delay.sv:12:7: error: language feature not yet supported
+		a = #10 b;
+		    ^~~~~

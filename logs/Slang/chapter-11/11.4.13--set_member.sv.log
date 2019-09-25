@@ -1,0 +1,12 @@
+name: set_member
+description: inside operator test
+should_fail: 0
+tags: 11.4.13
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv:15:6: error: language feature not yet supported
+	a = b inside {c, d};
+	    ^~~~~~~~~~~~~~~

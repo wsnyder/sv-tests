@@ -1,0 +1,24 @@
+name: asicworld_code_verilog_tutorial_simple_function
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_function.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_function.v:4:1: error: language feature not yet supported
+input a, b, c, d;
+^~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_function.v:6:18: error: use of undeclared identifier 'a'
+  myfunction = ((a+b) + (c-d));
+                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_function.v:6:20: error: use of undeclared identifier 'b'
+  myfunction = ((a+b) + (c-d));
+                   ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_function.v:6:26: error: use of undeclared identifier 'c'
+  myfunction = ((a+b) + (c-d));
+                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_function.v:6:28: error: use of undeclared identifier 'd'
+  myfunction = ((a+b) + (c-d));
+                           ^

@@ -1,0 +1,14 @@
+name: always_comb
+description: always_comb check
+should_fail: 0
+tags: 9.2.2.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.2--always_comb.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module always_tb;
+	wire a = 0;
+	reg b = 0;
+	always @(*) b = (~ a);
+endmodule

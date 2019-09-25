@@ -1,0 +1,30 @@
+<pre>name: static_methods
+description: static class methods test
+should_fail: 0
+tags: 8.10
+files: <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>::1 File <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>::8 error in parsing: (syntax error, unexpected ';', expecting '(')
+	class test_cls;
+PARSE_ERROR <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>::9 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+		static int id = 0;
+PARSE_ERROR <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>::16 error in parsing: (syntax error, unexpected ';', expecting '(')
+	test_cls test_obj1;
+PARSE_ERROR <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>::22 error in parsing: (syntax error, unexpected ')')
+		$display(test_obj0.next_id());
+PARSE_ERROR <a href="../../../tests/chapter-8/8.10--static_methods.sv" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>::23 error in parsing: (syntax error, unexpected ')')
+		$display(test_obj1.next_id());
+ERROR (8)::NETLIST_ERROR Could not find a top level module
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 
+</pre>

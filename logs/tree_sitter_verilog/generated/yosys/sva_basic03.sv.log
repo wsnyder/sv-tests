@@ -1,0 +1,29 @@
+name: sva_basic03
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(0, 0) module_declaration
+(6, 1) module_or_generate_item
+(6, 1) concurrent_assertion_item
+(6, 13) assert_property_statement
+(6, 30) ERROR
+(6, 32) primary
+(6, 41) ERROR
+(7, 1) module_or_generate_item
+(7, 1) concurrent_assertion_item
+(7, 13) assert_property_statement
+(7, 30) ERROR
+(7, 32) primary
+(7, 41) ERROR
+(9, 1) module_or_generate_item
+(9, 1) concurrent_assertion_item
+(9, 16) assume_property_statement
+(9, 33) ERROR
+(9, 35) primary
+(9, 44) ERROR

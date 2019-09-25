@@ -1,0 +1,19 @@
+name: memories_issue00710
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/issue00710.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/issue00710.v::8 error in parsing: (syntax error, unexpected '(')
+(* keep *) reg dummy;
+ERROR (3)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/issue00710.v::12 Missing declaration of this symbol dummy
+		dummy <= 1'b0;
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/ast_util.cpp]get_size_of_variable::884 

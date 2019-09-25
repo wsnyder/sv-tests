@@ -1,0 +1,22 @@
+<pre>name: simple_attrib03_parameter
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib03_parameter.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib03_parameter.v:11:16: error: identifier 'WIDTH' used before its declaration
+  input  wire [WIDTH-1:0] inp;
+               ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib03_parameter.v:4:13: note: declared here
+  parameter WIDTH = 2;
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib03_parameter.v:12:16: error: identifier 'WIDTH' used before its declaration
+  output reg  [WIDTH-1:0] out;
+               ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib03_parameter.v:4:13: note: declared here
+  parameter WIDTH = 2;
+            ^
+</pre>

@@ -1,0 +1,28 @@
+name: shallow_copy
+description: object shallow copy
+should_fail: 0
+tags: 8.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.12--shallow_copy.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(18, 1) module_or_generate_item
+(18, 1) initial_construct
+(18, 8) statement_or_null
+(18, 8) statement
+(18, 8) statement_item
+(18, 8) seq_block
+(19, 18) statement_or_null
+(19, 18) statement
+(19, 18) statement_item
+(19, 18) subroutine_call_statement
+(21, 14) ERROR
+(23, 24) statement_or_null
+(23, 24) statement
+(23, 24) statement_item
+(23, 24) blocking_assignment
+(23, 24) operator_assignment
+(25, 13) ERROR

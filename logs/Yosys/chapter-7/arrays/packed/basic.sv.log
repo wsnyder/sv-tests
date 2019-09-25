@@ -1,0 +1,16 @@
+name: basic-packed
+description: Test packed arrays support
+should_fail: 0
+tags: 7.4.1 7.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/basic.sv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/basic.sv' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.

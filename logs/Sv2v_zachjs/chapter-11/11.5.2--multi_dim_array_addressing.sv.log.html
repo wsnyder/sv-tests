@@ -1,0 +1,17 @@
+<pre>name: array_addressing
+description: array addressing test
+should_fail: 0
+tags: 11.5.2
+files: <a href="../../../tests/chapter-11/11.5.2--multi_dim_array_addressing.sv" target="file-frame">tests/chapter-11/11.5.2--multi_dim_array_addressing.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire [32767:0] mem;
+	reg [7:0] a;
+	initial begin
+		a = mem[28808+:8];
+	end
+endmodule
+</pre>

@@ -1,0 +1,45 @@
+name: asicworld_code_tidbits_fsm_using_always
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:57:14: error: language feature not yet supported
+    state <= #1 IDLE;
+             ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:59:14: error: language feature not yet supported
+    state <= #1 next_state;
+             ^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:66:12: error: language feature not yet supported
+  gnt_0 <= #1 1'b0;
+           ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:67:12: error: language feature not yet supported
+  gnt_1 <= #1 1'b0;
+           ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:72:28: error: language feature not yet supported
+                  gnt_0 <= #1 1'b0;
+                           ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:73:28: error: language feature not yet supported
+                  gnt_1 <= #1 1'b0;
+                           ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:76:29: error: language feature not yet supported
+                   gnt_0 <= #1 1'b1;
+                            ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:77:29: error: language feature not yet supported
+                   gnt_1 <= #1 1'b0;
+                            ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:80:29: error: language feature not yet supported
+                   gnt_0 <= #1 1'b0;
+                            ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:81:29: error: language feature not yet supported
+                   gnt_1 <= #1 1'b1;
+                            ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:84:30: error: language feature not yet supported
+                    gnt_0 <= #1 1'b0;
+                             ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v:85:30: error: language feature not yet supported
+                    gnt_1 <= #1 1'b0;
+                             ^~~~~~~

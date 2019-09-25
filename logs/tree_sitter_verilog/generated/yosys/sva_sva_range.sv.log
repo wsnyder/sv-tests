@@ -1,0 +1,29 @@
+name: sva_sva_range
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(0, 0) module_declaration
+(4, 1) module_or_generate_item
+(4, 1) program_instantiation
+(4, 9) hierarchical_instance
+(4, 18) ERROR
+(4, 28) ERROR
+(4, 34) module_or_generate_item
+(4, 34) concurrent_assertion_item
+(4, 34) checker_instantiation
+(6, 8) ERROR
+(6, 18) property_actual_arg
+(6, 18) property_expr
+(6, 18) sequence_expr
+(7, 4) ERROR
+(7, 10) ERROR
+(11, 1) module_or_generate_item
+(11, 1) concurrent_assertion_item
+(11, 1) assume_property_statement
+(12, 12) ERROR

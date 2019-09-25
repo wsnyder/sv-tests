@@ -1,0 +1,39 @@
+name: case_pattern
+description: A module testing pattern matching in case statements
+should_fail: 0
+tags: 12.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:9:10: error: language feature not yet supported
+	typedef union tagged {
+	        ^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:23:19: error: language feature not yet supported
+	initial case (v) matches
+	                 ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:24:11: error: expected ':'
+		tagged a '{.v, 0} : $display("a %d", v);
+		        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:24:14: error: expected identifier
+		tagged a '{.v, 0} : $display("a %d", v);
+		           ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:24:20: error: expected ';'
+		tagged a '{.v, 0} : $display("a %d", v);
+		                 ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:24:21: error: expected member
+		tagged a '{.v, 0} : $display("a %d", v);
+		                  ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:25:3: error: expected member
+		tagged a '{.v1, .v2} : $display("a %d %d", v1, v2);
+		^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:26:3: error: expected member
+		tagged b '{.v1, .v2} : $display("b %d %d", v1, v2);
+		^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:27:3: error: expected member
+		tagged c '{0, .v} : $display("c %d", v);
+		^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv:28:2: error: expected member
+	endcase
+	^~~~~~~

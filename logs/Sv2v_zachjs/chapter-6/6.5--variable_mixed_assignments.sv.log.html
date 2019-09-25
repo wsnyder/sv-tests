@@ -1,0 +1,16 @@
+<pre>name: variable_mixed_assignments
+description: Variable mixed assignments tests
+should_fail: 1
+tags: 6.5
+files: <a href="../../../tests/chapter-6/6.5--variable_mixed_assignments.sv" target="file-frame">tests/chapter-6/6.5--variable_mixed_assignments.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire clk = 0;
+	reg signed [31:0] v;
+	always @(*) v = 12;
+	always @(posedge clk) v <= (~ v);
+endmodule
+</pre>

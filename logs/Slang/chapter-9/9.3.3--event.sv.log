@@ -1,0 +1,12 @@
+name: event_order
+description: event order test
+should_fail: 0
+tags: 9.3.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:10:10: error: language feature not yet supported
+	initial fork
+	        ^~~~

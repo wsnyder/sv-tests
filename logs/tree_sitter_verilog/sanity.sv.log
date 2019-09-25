@@ -1,0 +1,14 @@
+name: sanity
+description: A simple module that should fail during parsing
+should_fail: 1
+tags: sanity
+files: /home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(12, 0) module_or_generate_item
+(12, 0) net_declaration
+(13, 6) ERROR

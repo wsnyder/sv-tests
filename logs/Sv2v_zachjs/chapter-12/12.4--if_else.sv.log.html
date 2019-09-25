@@ -1,0 +1,18 @@
+<pre>name: if
+description: A module testing if-else statement
+should_fail: 0
+tags: 12.4
+files: <a href="../../../tests/chapter-12/12.4--if_else.sv" target="file-frame">tests/chapter-12/12.4--if_else.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module if_tb;
+	wire a = 0;
+	reg b = 0;
+	always begin
+		if (a) b = 1;
+		else b = 0;
+	end
+endmodule
+</pre>

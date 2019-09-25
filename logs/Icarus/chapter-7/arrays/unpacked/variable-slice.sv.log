@@ -1,0 +1,14 @@
+name: operations-on-arrays-variable-slice-rw
+description: Test packed arrays operations support (Variable slice)
+should_fail: 0
+tags: 7.4.3 7.4.6
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv:15: error: Cannot assign to array arr_a. Did you forget a word index?
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv:16: error: Cannot assign to array arr_b. Did you forget a word index?
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv:22: error: Array cannot be indexed by a range.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv:22: error: Array cannot be indexed by a range.
+4 error(s) during elaboration.

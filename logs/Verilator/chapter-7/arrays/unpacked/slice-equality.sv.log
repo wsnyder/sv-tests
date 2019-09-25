@@ -1,0 +1,12 @@
+name: operations-on-arrays-slice-equality
+description: Test unpacked arrays operations support (slice equality)
+should_fail: 0
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice-equality.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice-equality.sv:20: ../V3EmitC.cpp:758: Unknown node type reached emitter: SLICESEL
+%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice-equality.sv

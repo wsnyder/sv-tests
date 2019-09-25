@@ -1,0 +1,15 @@
+name: memories_issue00335
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/issue00335.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/issue00335.v:8:21: error: identifier 'SIZE' used before its declaration
+             input [SIZE-1:0]  adr, 
+                    ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/issue00335.v:11:15: note: declared here
+   parameter  SIZE = 5; // Address size
+              ^

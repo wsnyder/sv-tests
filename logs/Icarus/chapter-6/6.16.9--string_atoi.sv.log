@@ -1,0 +1,11 @@
+name: string_atoi
+description: string.atoi()  tests
+should_fail: 0
+tags: 6.16.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.9--string_atoi.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.9--string_atoi.sv:9: error: No function named `a.atoi' found in this context (top).
+Elaboration failed

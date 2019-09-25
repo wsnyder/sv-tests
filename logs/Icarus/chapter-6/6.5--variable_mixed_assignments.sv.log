@@ -1,0 +1,11 @@
+name: variable_mixed_assignments
+description: Variable mixed assignments tests
+should_fail: 1
+tags: 6.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_mixed_assignments.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_mixed_assignments.sv:12: error: v Unable to assign to unresolved wires.
+Elaboration failed

@@ -1,0 +1,9 @@
+name: unique0_casex
+description: casex statement with unique0
+should_fail: 0
+tags: 12.5.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique0_casex.sv
+incdirs: 
+top_module: 
+rc: 0
+

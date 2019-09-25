@@ -1,0 +1,30 @@
+name: simple_hierdefparam
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierdefparam.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) ERROR
+(3, 11) concurrent_assertion_item
+(3, 11) checker_instantiation
+(3, 16) ERROR
+(5, 2) interface_or_generate_item
+(5, 2) net_declaration
+(5, 17) ;
+(8, 0) interface_or_generate_item
+(8, 0) program_instantiation
+(10, 0) ERROR
+(10, 7) hierarchical_instance
+(10, 22) list_of_port_connections
+(10, 34) ERROR
+(10, 50) ERROR
+(19, 0) interface_or_generate_item
+(19, 0) program_instantiation
+(21, 0) ERROR
+(21, 7) hierarchical_instance
+(21, 22) list_of_port_connections
+(21, 34) ERROR
+(21, 50) ERROR

@@ -1,0 +1,27 @@
+name: diamond_relationship_parametrized
+description: different specializations of an interface class are treated as unique interface class types
+should_fail: 1
+tags: 8.26.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv
+incdirs: 
+top_module: 
+rc: 18
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:13: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:16: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:17: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:17: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:20: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:21: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:21: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:22: syntax error
+I give up.

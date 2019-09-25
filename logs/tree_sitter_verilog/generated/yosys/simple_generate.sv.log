@@ -1,0 +1,58 @@
+name: simple_generate
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(1, 0) source_file
+(117, 0) module_declaration
+(126, 0) generate_region
+(127, 1) interface_or_generate_item
+(127, 1) loop_generate_construct
+(127, 52) generate_block
+(130, 2) loop_generate_construct
+(130, 34) generate_block
+(132, 3) loop_generate_construct
+(132, 37) generate_block
+(134, 4) if_generate_construct
+(136, 9) generate_block
+(136, 9) if_generate_construct
+(137, 5) generate_block
+(137, 5) continuous_assign
+(137, 36) ;
+(137, 36) ERROR
+(138, 4) interface_or_generate_item
+(138, 4) net_declaration
+(139, 5) list_of_net_decl_assignments
+(139, 5) net_decl_assignment
+(139, 12) ERROR
+(140, 25) ;
+(140, 25) interface_or_generate_item
+(140, 25) data_declaration
+(140, 25) data_type_or_implicit1
+(140, 25) implicit_data_type1
+(140, 25) packed_dimension
+(140, 25) unsized_dimension
+(140, 26) ERROR
+(140, 29) constant_expression
+(141, 7) constant_expression
+(141, 7) constant_expression
+(141, 7) constant_primary
+(141, 7) constant_function_call
+(141, 7) function_subroutine_call
+(141, 7) subroutine_call
+(141, 7) method_call
+(141, 20) ERROR
+(141, 41) ERROR
+(144, 3) continuous_assign
+(144, 33) ;
+(144, 33) ERROR
+(144, 34) ERROR
+(148, 0) module_or_generate_item
+(148, 0) continuous_assign
+(148, 31) ;
+(148, 31) ERROR
+(148, 32) ERROR

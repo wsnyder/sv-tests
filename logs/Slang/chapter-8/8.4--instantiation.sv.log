@@ -1,0 +1,15 @@
+name: instantiation
+description: simple class instantiation test
+should_fail: 0
+tags: 8.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.4--instantiation.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.4--instantiation.sv:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.4--instantiation.sv:12:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj;
+	^~~~~~~~

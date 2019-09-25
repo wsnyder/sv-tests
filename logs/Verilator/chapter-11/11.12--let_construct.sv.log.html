@@ -1,0 +1,15 @@
+<pre>name: let_construct
+description: let construct test
+should_fail: 0
+tags: 11.12
+files: <a href="../../../tests/chapter-11/11.12--let_construct.sv" target="file-frame">tests/chapter-11/11.12--let_construct.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../tests/chapter-11/11.12--let_construct.sv" target="file-frame">tests/chapter-11/11.12--let_construct.sv</a>:14: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: <a href="../../../tests/chapter-11/11.12--let_construct.sv" target="file-frame">tests/chapter-11/11.12--let_construct.sv</a>:14: syntax error, unexpected '(', expecting IDENTIFIER
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-11/11.12--let_construct.sv" target="file-frame">tests/chapter-11/11.12--let_construct.sv</a>
+</pre>

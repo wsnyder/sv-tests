@@ -1,0 +1,23 @@
+name: constructor_const_arg
+description: class inheritance with a constant constructor argument
+should_fail: 0
+tags: 8.17
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:10: syntax error, unexpected '(', expecting '['
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:16: syntax error, unexpected '(', expecting '['
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:19: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv:24: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: Exiting due to 11 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.17--constructor_const_arg.sv

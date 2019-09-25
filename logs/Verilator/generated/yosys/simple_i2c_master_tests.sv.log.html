@@ -1,0 +1,15 @@
+<pre>name: simple_i2c_master_tests
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:29: Unsupported: Multiple top level modules: i2c_test02 and i2c_test01
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v:29: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/i2c_master_tests.v
+</pre>

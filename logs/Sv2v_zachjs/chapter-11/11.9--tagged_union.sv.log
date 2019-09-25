@@ -1,0 +1,10 @@
+name: tagged_union
+description: tagged union test
+should_fail: 0
+tags: 11.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv:9:15: Parse error: unexpected token 'tagged' (KW_tagged).

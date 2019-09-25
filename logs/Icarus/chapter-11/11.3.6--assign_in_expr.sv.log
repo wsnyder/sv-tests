@@ -1,0 +1,12 @@
+name: assign_in_expr
+description: assignment in expression test
+should_fail: 0
+tags: 11.3.6
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr.sv
+incdirs: 
+top_module: 
+rc: 3
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr.sv:14: error: malformed statement

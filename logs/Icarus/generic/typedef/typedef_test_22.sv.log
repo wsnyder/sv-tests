@@ -1,0 +1,11 @@
+name: typedef_test_22
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_22.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_22.sv:7: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_22.sv:7: error: Syntax error in typedef clause.

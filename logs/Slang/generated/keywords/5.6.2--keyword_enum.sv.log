@@ -1,0 +1,21 @@
+name: enum
+description: The 'enum' keyword should be reserved
+should_fail: 1
+tags: 5.6.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_enum.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_enum.sv:8:8: error: expected declarator
+    bit enum;
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_enum.sv:8:13: error: expected '{'
+    bit enum;
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_enum.sv:8:13: error: expected data type (implicit type name not allowed)
+    bit enum;
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_enum.sv:8:13: error: expected declarator
+    bit enum;
+            ^

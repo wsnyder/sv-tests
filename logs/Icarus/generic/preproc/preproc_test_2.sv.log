@@ -1,0 +1,11 @@
+name: preproc_test_2
+description: Test
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv:8: Include file foo.svh not found
+No top level modules, and no -s option.

@@ -1,0 +1,31 @@
+<pre>name: asicworld_code_tidbits_reg_seq_example
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_reg_seq_example.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module reg_seq_example (
+	clk,
+	reset,
+	d,
+	q
+);
+	input clk;
+	input reset;
+	input d;
+	output q;
+	reg q;
+	wire clk;
+	wire reset;
+	wire d;
+	always @(posedge clk or posedge reset) if (reset) begin
+		q <= 1'b0;
+	end
+	else begin
+		q <= d;
+	end
+endmodule
+</pre>

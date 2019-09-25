@@ -1,0 +1,21 @@
+name: class_test_46
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:7: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:7: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:8: Define or directive not defined: `uvm_component_utils
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:9: Define or directive not defined: `uvm_component_utils_begin
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:10: Define or directive not defined: `uvm_field_object
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:11: Define or directive not defined: `uvm_field_event
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:12: Define or directive not defined: `uvm_field_string
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:13: Define or directive not defined: `uvm_component_utils_end
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 9 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_46.sv

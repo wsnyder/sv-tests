@@ -1,0 +1,19 @@
+<pre>name: preproc_test_2
+description: Test
+should_fail: 0
+tags: 5.6.4
+files: <a href="../../../../tests/generic/preproc/preproc_test_2.sv" target="file-frame">tests/generic/preproc/preproc_test_2.sv</a>
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../../tests/generic/preproc/preproc_test_2.sv" target="file-frame">tests/generic/preproc/preproc_test_2.sv</a>::1 File <a href="../../../../tests/generic/preproc/preproc_test_2.sv" target="file-frame">tests/generic/preproc/preproc_test_2.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+ERROR (3)::ARG_ERROR cannot open file: foo.svh
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/odin_util.cpp]open_file::121 
+</pre>

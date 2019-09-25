@@ -1,0 +1,14 @@
+name: properties
+description: class properties test
+should_fail: 0
+tags: 8.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties.sv:8: syntax error, unexpected ';', expecting '(' or '['

@@ -1,0 +1,54 @@
+name: asicworld_code_verilog_tutorial_counter_tb
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:23:1: error: unknown module 'counter'
+counter U0 (
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:34:9: error: use of undeclared identifier '$fopen'
+ file = $fopen(`outfile);
+        ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:34:16: error: unknown macro or compiler directive '`outfile'
+ file = $fopen(`outfile);
+               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:41:2: error: use of undeclared identifier '$fdisplay'
+ $fdisplay (file, "Terminating simulation");
+ ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:43:4: error: use of undeclared identifier '$fdisplay'
+   $fdisplay (file, "Simulation Result : PASSED");
+   ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:46:4: error: use of undeclared identifier '$fdisplay'
+   $fdisplay (file, "Simulation Result : FAILED");
+   ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:48:2: error: use of undeclared identifier '$fdisplay'
+ $fdisplay (file, "###################################################");
+ ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:60:2: error: use of undeclared identifier '$fdisplay'
+ $fdisplay (file, "Applying reset");
+ ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:64:2: error: use of undeclared identifier '$fdisplay'
+ $fdisplay (file, "Came out of Reset");
+ ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:65:2: error: language feature not yet supported
+ -> reset_done;
+ ^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:69:7: error: language feature not yet supported
+  #10 -> reset_enable;
+      ^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:78:6: error: language feature not yet supported
+  #5 -> terminate_sim;
+     ^~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:94:3: error: use of undeclared identifier '$fdisplay'
+  $fdisplay (file, "DUT ERROR AT TIME%d",$time);
+  ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:95:3: error: use of undeclared identifier '$fdisplay'
+  $fdisplay (file, "Expected value %d, Got Value %d", count_compare, count);
+  ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:97:6: error: language feature not yet supported
+  #5 -> terminate_sim;
+     ^~~~~~~~~~~~~~~~

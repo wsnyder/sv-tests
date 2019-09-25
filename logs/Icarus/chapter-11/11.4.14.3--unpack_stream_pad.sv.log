@@ -1,0 +1,12 @@
+name: unpack_stream_pad
+description: padded stream unpack test
+should_fail: 0
+tags: 11.4.14.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_pad.sv
+incdirs: 
+top_module: 
+rc: 3
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_pad.sv:14: sorry: Streaming concatenation not supported.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_pad.sv:15: syntax error
+I give up.

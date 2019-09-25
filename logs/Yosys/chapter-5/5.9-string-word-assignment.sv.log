@@ -1,0 +1,14 @@
+name: string-word-assignment
+description: String assignment tests
+should_fail: 0
+tags: 5.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-word-assignment.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-word-assignment.sv:9: syntax error, unexpected '=', expecting '('

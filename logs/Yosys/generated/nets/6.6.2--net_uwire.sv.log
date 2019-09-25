@@ -1,0 +1,14 @@
+name: net_uwire
+description: uwire net test
+should_fail: 0
+tags: 6.6.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets/6.6.2--net_uwire.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets/6.6.2--net_uwire.sv:8: syntax error, unexpected ';', expecting '(' or '['

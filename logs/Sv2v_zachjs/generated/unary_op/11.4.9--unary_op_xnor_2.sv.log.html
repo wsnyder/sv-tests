@@ -1,0 +1,17 @@
+<pre>name: unary_op_xnor_2
+description: ^~ operator test
+should_fail: 0
+tags: 11.4.9
+files: <a href="../../../../tests/generated/unary_op/11.4.9--unary_op_xnor_2.sv" target="file-frame">tests/generated/unary_op/11.4.9--unary_op_xnor_2.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg signed [31:0] a = 12;
+	wire signed [31:0] b = 5;
+	initial begin
+		a = (~^ b);
+	end
+endmodule
+</pre>

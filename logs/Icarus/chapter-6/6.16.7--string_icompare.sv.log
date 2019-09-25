@@ -1,0 +1,11 @@
+name: string_icompare
+description: string.icompare()  tests
+should_fail: 0
+tags: 6.16.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.7--string_icompare.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.7--string_icompare.sv:10: error: No function named `a.icompare' found in this context (top).
+Elaboration failed

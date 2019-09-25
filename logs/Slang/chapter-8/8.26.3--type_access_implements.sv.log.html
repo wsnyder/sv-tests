@@ -1,0 +1,22 @@
+<pre>name: type_access_implements
+description: access interface class type with scope resolution operator
+should_fail: 0
+tags: 8.26.3
+files: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>:8:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>:13:2: error: language feature not yet supported
+	class Hello implements ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>:19:2: error: use of undeclared identifier 'Hello'
+	Hello obj;
+	^~~~~
+<a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>:22:9: error: language feature not yet supported
+		obj = new;
+		      ^~~
+</pre>

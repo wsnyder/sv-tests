@@ -1,0 +1,15 @@
+<pre>name: always
+description: always check
+should_fail: 0
+tags: 9.2.2.1
+files: <a href="../../../tests/chapter-9/9.2.2.1--always.sv" target="file-frame">tests/chapter-9/9.2.2.1--always.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module always_tb;
+	wire a = 0;
+	reg b = 0;
+	always b = (~ a);
+endmodule
+</pre>

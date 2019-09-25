@@ -1,0 +1,17 @@
+name: const
+description: const test
+should_fail: 0
+tags: 6.20.6
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv:16: syntax error, unexpected IDENTIFIER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: Exiting due to 5 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.6--const.sv

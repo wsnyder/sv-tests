@@ -1,0 +1,19 @@
+name: out_of_block_methods
+description: out-of-body method declaration
+should_fail: 0
+tags: 8.24
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:11: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:13: syntax error, unexpected function
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:21: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:21: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 7 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv

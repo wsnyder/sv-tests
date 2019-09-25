@@ -1,0 +1,14 @@
+name: enum_sequence
+description: enum sequence tests
+should_fail: 0
+tags: 6.19.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.2--enum_sequence.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.2--enum_sequence.sv:8: syntax error, unexpected '{', expecting TOK_ID or '#'

@@ -1,0 +1,24 @@
+<pre>name: wait_fork
+description: wait fork test
+should_fail: 0
+tags: 9.6.1
+files: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:11: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:13: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:14: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:15: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:18: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:19: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:20: Unsupported: Ignoring delay on this delayed statement.
+%Error: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:22: Unsupported: SystemVerilog 2005 reserved word not implemented: join_none
+%Error: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:23: Unsupported: Verilog 1995 reserved word not implemented: wait
+%Error: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>:23: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>
+</pre>

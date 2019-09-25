@@ -1,0 +1,30 @@
+name: delete
+description: Update queue by assignment (delete)
+should_fail: 0
+tags: 7.10.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/delete_assign.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(11, 0) module_or_generate_item
+(11, 0) initial_construct
+(11, 7) statement_or_null
+(11, 7) statement
+(11, 7) statement_item
+(11, 7) seq_block
+(15, 40) statement_or_null
+(15, 40) statement
+(15, 40) statement_item
+(15, 40) blocking_assignment
+(15, 40) operator_assignment
+(16, 4) expression
+(16, 4) primary
+(16, 6) select1
+(16, 7) part_select_range
+(16, 7) constant_range
+(16, 9) ERROR
+(16, 10) ERROR
+(17, 39) ]

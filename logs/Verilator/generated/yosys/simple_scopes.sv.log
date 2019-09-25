@@ -1,0 +1,12 @@
+name: simple_scopes
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:42: Operator ADD expects 32 or 16 bits on the RHS, but RHS's VARREF 'a' generates 4 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/scopes.v:57: Operator ADD expects 16 bits on the RHS, but RHS's VARREF 'k' generates 4 bits.

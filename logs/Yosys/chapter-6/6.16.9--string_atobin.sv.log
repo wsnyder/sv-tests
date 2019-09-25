@@ -1,0 +1,14 @@
+name: string_atobin
+description: string.atobin()  tests
+should_fail: 0
+tags: 6.16.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.9--string_atobin.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.9--string_atobin.sv:8: syntax error, unexpected '=', expecting '(' or '['

@@ -1,0 +1,16 @@
+<pre>name: unary_op_inc
+description: ++ operator test
+should_fail: 0
+tags: 11.4.2
+files: <a href="../../../tests/chapter-11/11.4.2--unary_op_inc.sv" target="file-frame">tests/chapter-11/11.4.2--unary_op_inc.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg signed [31:0] a = 12;
+	initial begin
+		a = (a + 1);
+	end
+endmodule
+</pre>

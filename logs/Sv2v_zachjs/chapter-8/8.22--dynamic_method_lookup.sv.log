@@ -1,0 +1,10 @@
+name: dynamic_method_lookup
+description: dynamic method selection with abstract base class
+should_fail: 0
+tags: 8.22
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:8:9: Parse error: unexpected token 'virtual' (KW_virtual).

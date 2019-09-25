@@ -1,0 +1,12 @@
+name: sva_basic05
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 3
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:13: sorry: concurrent_assertion_item not supported. Try -gno-assertion to turn this message off.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:17: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:17: error: Error in property_spec of concurrent assertion item.

@@ -1,0 +1,13 @@
+name: cast_task
+description: $cast task test
+should_fail: 0
+tags: 8.16
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.16--cast_task.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.16--cast_task.sv:11: Unsupported or unknown PLI call: $cast
+%Error: Exiting due to 1 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.16--cast_task.sv

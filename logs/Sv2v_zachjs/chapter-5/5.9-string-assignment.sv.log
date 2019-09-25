@@ -1,0 +1,20 @@
+name: string-assignment
+description: String assignment tests
+should_fail: 0
+tags: 5.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-assignment.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [7:0] a;
+	reg [7:0] b;
+	reg [7:0] c;
+	initial begin
+		;
+		a = "a";
+		b = "b";
+		c = "c";
+	end
+endmodule

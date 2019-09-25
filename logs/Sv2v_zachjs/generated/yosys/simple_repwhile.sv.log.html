@@ -1,0 +1,48 @@
+<pre>name: simple_repwhile
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module repwhile_test001 (
+	a,
+	y,
+	x
+);
+	input [5:0] a;
+	output [7:0] y;
+	output [31:0] x;
+	function [7:0] mylog2;
+		input reg [31:0] value;
+		begin
+			mylog2 = 0;
+			while ((value > 0)) begin
+				value = (value >> 1);
+				mylog2 = (mylog2 + 1);
+			end
+		end
+	endfunction
+	function [31:0] myexp2;
+		input reg [7:0] value;
+		begin
+			myexp2 = 1;
+			repeat (value) myexp2 = (myexp2 << 1);
+		end
+	endfunction
+	reg [511:0] y_table;
+	reg [2047:0] x_table;
+	integer i;
+	initial begin
+		for (i = 0; (i < 64); i = (i + 1))
+			begin
+				y_table[(i * 8)+:8] <= mylog2(i);
+				x_table[(i * 32)+:32] <= myexp2(i);
+			end
+	end
+	assign y = y_table[(a * 8)+:8];
+	assign x = x_table[(a * 32)+:32];
+endmodule
+</pre>

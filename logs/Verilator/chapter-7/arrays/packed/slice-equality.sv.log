@@ -1,0 +1,9 @@
+name: operations-on-arrays-slice-equality
+description: Test packed arrays operations support (slice equality)
+should_fail: 0
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/slice-equality.sv
+incdirs: 
+top_module: 
+rc: 0
+

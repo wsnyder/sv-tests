@@ -1,0 +1,19 @@
+<pre>name: simple_forloops
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forloops.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+ERROR (2)::NETLIST_ERROR Found multiple top level modules
+	forloops01	forloops02
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::299 
+</pre>

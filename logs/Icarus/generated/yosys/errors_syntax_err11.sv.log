@@ -1,0 +1,11 @@
+name: errors_syntax_err11
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err11.v
+should_fail: 1
+tags: yosys
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err11.v:2: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err11.v:2: error: syntax error in parameter list.

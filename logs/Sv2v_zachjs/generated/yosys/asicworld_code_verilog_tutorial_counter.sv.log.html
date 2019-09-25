@@ -1,0 +1,28 @@
+<pre>name: asicworld_code_verilog_tutorial_counter
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module counter (
+	clk,
+	reset,
+	enable,
+	count
+);
+	input clk;
+	input reset;
+	input enable;
+	output [3:0] count;
+	reg [3:0] count;
+	always @(posedge clk) if ((reset == 1'b1)) begin
+		count <= 0;
+	end
+	else if ((enable == 1'b1)) begin
+		count <= (count + 1);
+	end
+endmodule
+</pre>

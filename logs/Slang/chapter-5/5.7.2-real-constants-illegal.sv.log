@@ -1,0 +1,33 @@
+name: real-constants-illegal
+description: Examples of real literal constants
+should_fail: 1
+tags: 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11:8: error: expected identifier
+    a = .12;
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11:10: error: expected identifier
+    a = .12;
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11:10: error: expected statement
+    a = .12;
+         ^~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:12:11: error: expected fractional digits after decimal
+    a = 9.;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:13:11: error: expected fractional digits after decimal
+    a = 4.E3;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:14:8: error: expected identifier
+    a = .2e-7;
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:14:10: error: expected identifier
+    a = .2e-7;
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:14:10: error: expected statement
+    a = .2e-7;
+         ^~~~

@@ -1,0 +1,35 @@
+name: diamond_relationship
+description: interface class inherited from multiple sources shouldn't create symbol conflicts
+should_fail: 0
+tags: 8.26.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	interface class ibase;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::9 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void fn();
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::12 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	interface class ic1 extends ibase;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::13 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void fn1();
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::16 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	interface class ic2 extends ibase;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::17 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void fn2();
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::20 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	interface class ic3 extends ic1, ic2;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship.sv::21 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void fn3();
+ERROR (11)::NETLIST_ERROR Could not find a top level module
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

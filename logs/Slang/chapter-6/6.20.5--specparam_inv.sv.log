@@ -1,0 +1,15 @@
+name: specparam_inv
+description: specparam assignment to param should be invalid
+should_fail: 1
+tags: 6.20.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv:8:2: error: expected member
+	specparam delay = 50;
+	^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv:9:16: error: use of undeclared identifier 'delay'
+	parameter p = delay + 2;
+	              ^~~~~

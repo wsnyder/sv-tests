@@ -1,0 +1,14 @@
+name: diamond_relationship_parametrized
+description: different specializations of an interface class are treated as unique interface class types
+should_fail: 1
+tags: 8.26.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8: syntax error, unexpected TOK_ID, expecting '(' or '['

@@ -1,0 +1,16 @@
+name: number_test_57
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_57.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) package_item
+(6, 0) any_parameter_declaration
+(6, 0) parameter_declaration
+(6, 14) list_of_param_assignments
+(6, 14) param_assignment
+(6, 19) ERROR

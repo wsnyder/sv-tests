@@ -1,0 +1,12 @@
+name: min_max_avg_delay
+description: minimum, typical and maximum delay expressions test
+should_fail: 0
+tags: 11.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.11--min_max_avg_delay.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.11--min_max_avg_delay.sv:10:4: error: language feature not yet supported
+	#(100:200:300) $display("Done");
+	  ^~~~~~~~~~~

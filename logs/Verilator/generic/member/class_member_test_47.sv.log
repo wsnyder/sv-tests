@@ -1,0 +1,23 @@
+name: class_member_test_47
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:7: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:7: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:8: syntax error, unexpected IDENTIFIER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:10: syntax error, unexpected IDENTIFIER, expecting ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:11: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:12: syntax error, unexpected '#', expecting ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:13: syntax error, unexpected '#', expecting ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 11 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_47.sv

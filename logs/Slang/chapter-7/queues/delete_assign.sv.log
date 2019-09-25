@@ -1,0 +1,15 @@
+name: delete
+description: Update queue by assignment (delete)
+should_fail: 0
+tags: 7.10.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/delete_assign.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/delete_assign.sv:9:6: error: dimension requires a constant range
+int q[$];
+     ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/delete_assign.sv:19:6: error: language feature not yet supported
+	q = {}; // q.delete
+	    ^~

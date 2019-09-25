@@ -1,0 +1,11 @@
+name: stream_concat
+description: stream concatenation test
+should_fail: 0
+tags: 11.4.14.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.1--stream_concat.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.1--stream_concat.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.1--stream_concat.sv:14: error: malformed statement

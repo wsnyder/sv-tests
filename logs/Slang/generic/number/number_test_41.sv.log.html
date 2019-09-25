@@ -1,0 +1,19 @@
+<pre>name: number_test_41
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: <a href="../../../../tests/generic/number/number_test_41.sv" target="file-frame">tests/generic/number/number_test_41.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../tests/generic/number/number_test_41.sv" target="file-frame">tests/generic/number/number_test_41.sv</a>:7:21: error: unknown macro or compiler directive '`WIDTH'
+parameter int foo = `WIDTH'd`DIGITS;
+                    ^
+<a href="../../../../tests/generic/number/number_test_41.sv" target="file-frame">tests/generic/number/number_test_41.sv</a>:7:29: error: unknown macro or compiler directive '`DIGITS'
+parameter int foo = `WIDTH'd`DIGITS;
+                            ^
+<a href="../../../../tests/generic/number/number_test_41.sv" target="file-frame">tests/generic/number/number_test_41.sv</a>:7:36: error: expected vector literal digits
+parameter int foo = `WIDTH'd`DIGITS;
+                                   ^
+</pre>

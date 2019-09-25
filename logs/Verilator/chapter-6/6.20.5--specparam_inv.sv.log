@@ -1,0 +1,12 @@
+name: specparam_inv
+description: specparam assignment to param should be invalid
+should_fail: 1
+tags: 6.20.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv:9: Can't find definition of variable: delay
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv

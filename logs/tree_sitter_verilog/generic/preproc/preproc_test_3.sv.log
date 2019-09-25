@@ -1,0 +1,12 @@
+name: preproc_test_3
+description: Test
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_3.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) ERROR
+(7, 0) ERROR

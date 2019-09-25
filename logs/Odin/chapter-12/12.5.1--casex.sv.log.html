@@ -1,0 +1,24 @@
+<pre>name: casex
+description: A module testing casex statement
+should_fail: 0
+tags: 12.5.1
+files: <a href="../../../tests/chapter-12/12.5.1--casex.sv" target="file-frame">tests/chapter-12/12.5.1--casex.sv</a>
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-12/12.5.1--casex.sv" target="file-frame">tests/chapter-12/12.5.1--casex.sv</a>::1 File <a href="../../../tests/chapter-12/12.5.1--casex.sv" target="file-frame">tests/chapter-12/12.5.1--casex.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../tests/chapter-12/12.5.1--casex.sv" target="file-frame">tests/chapter-12/12.5.1--casex.sv</a>::11 Unsuported token
+		casex(a)
+		^~~~
+PARSE_ERROR <a href="../../../tests/chapter-12/12.5.1--casex.sv" target="file-frame">tests/chapter-12/12.5.1--casex.sv</a>::11 error in parsing: (syntax error, unexpected '(')
+		casex(a)
+ERROR (5)::PARSE_ERROR Parser found (1) errors in your syntax, exiting
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/odin_error.cpp]verify_delayed_error::30 
+</pre>

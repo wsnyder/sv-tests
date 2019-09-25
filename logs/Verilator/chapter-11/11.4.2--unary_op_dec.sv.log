@@ -1,0 +1,9 @@
+name: unary_op_dec
+description: -- operator test
+should_fail: 0
+tags: 11.4.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.2--unary_op_dec.sv
+incdirs: 
+top_module: 
+rc: 0
+

@@ -1,0 +1,14 @@
+name: dynamic_array_unpack_stream
+description: stream unpack test with dynamic array
+should_fail: 0
+tags: 11.4.14.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.4--dynamic_array_stream.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:9: syntax error, unexpected ';', expecting '(' or '['

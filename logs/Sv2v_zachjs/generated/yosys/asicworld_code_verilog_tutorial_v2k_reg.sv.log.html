@@ -1,0 +1,26 @@
+<pre>name: asicworld_code_verilog_tutorial_v2k_reg
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module v2k_reg;
+	wire a = 0;
+	wire b;
+	wire c;
+	wire d = 0;
+	wire signed [7:0] data = 8'shF0;
+	function signed [7:0] adder;
+		input reg a_in;
+		input reg b_in;
+		input reg c_in;
+		input reg signed [7:0] data_in;
+		begin
+			adder = (((a_in + b_in) + c_in) + data_in);
+		end
+	endfunction
+endmodule
+</pre>

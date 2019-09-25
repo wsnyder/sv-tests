@@ -1,0 +1,14 @@
+name: simple_hierarchy
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierarchy.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierarchy.v:19: Operator VAR 'd' expects 8 bits on the Initial value, but Initial value's CONST '3'h7' generates 3 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierarchy.v:22: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'a' generates 4 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierarchy.v:23: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'b' generates 4 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierarchy.v:24: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'c' generates 3 bits.

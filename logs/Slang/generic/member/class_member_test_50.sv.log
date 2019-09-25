@@ -1,0 +1,24 @@
+name: class_member_test_50
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_50.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_50.sv:7:1: error: language feature not yet supported
+class myclass;
+^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_50.sv:8:1: error: unexpected qualifiers on class member
+virtual hinterface.some_mod_port winterface;
+^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_50.sv:8:9: error: expected member
+virtual hinterface.some_mod_port winterface;
+        ^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_50.sv:10:1: error: unexpected qualifiers on class member
+virtual disinterface#(.N(N)).some_mod_port blinterface;
+^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_50.sv:10:9: error: expected member
+virtual disinterface#(.N(N)).some_mod_port blinterface;
+        ^~~~~~~~~~~~

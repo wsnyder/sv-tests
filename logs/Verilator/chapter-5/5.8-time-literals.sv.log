@@ -1,0 +1,18 @@
+name: time-literals
+description: Examples of time literals
+should_fail: 0
+tags: 5.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:14: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:15: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:16: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:17: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:18: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:19: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv:22: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+%Error: Exiting due to 7 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv

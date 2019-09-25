@@ -1,0 +1,17 @@
+name: typedef_test_26
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_26.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) ERROR
+(8, 2) package_item
+(8, 2) data_declaration
+(8, 2) list_of_variable_decl_assignments
+(9, 0) ERROR
+(11, 0) ERROR
+(13, 0) ERROR

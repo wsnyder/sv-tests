@@ -1,0 +1,19 @@
+name: copy
+description: Test multidimensional word copy
+should_fail: 0
+tags: 7.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/copy.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [351:32] arr_a;
+	reg [351:32] arr_b;
+	initial begin
+		arr_a[320+:32] = 32'hdeadbeef;
+		$display(":assert: ('%h' == 'deadbeef')", arr_a[320+:32]);
+		arr_b[288+:32] = arr_a[320+:32];
+		$display(":assert: ('%h' == 'deadbeef')", arr_b[288+:32]);
+	end
+endmodule

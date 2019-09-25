@@ -1,0 +1,30 @@
+<pre>name: asicworld_code_hdl_models_clk_div
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_clk_div.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module clk_div (
+	clk_in,
+	enable,
+	reset,
+	clk_out
+);
+	input clk_in;
+	input reset;
+	input enable;
+	output clk_out;
+	wire clk_in;
+	wire enable;
+	reg clk_out;
+	always @(posedge clk_in) if (reset) begin
+		clk_out <= 1'b0;
+	end
+	else if (enable) begin
+		clk_out <= (! clk_out);
+	end
+endmodule
+</pre>

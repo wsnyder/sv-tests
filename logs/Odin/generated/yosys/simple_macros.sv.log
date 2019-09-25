@@ -1,0 +1,29 @@
+name: simple_macros
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v::57 A is redefined, overwritting its value
+		`define A
+WARNING (3)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v::94 A is redefined, overwritting its value
+		`define A
+WARNING (4)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v::160 A is redefined, overwritting its value
+		`define A
+WARNING (5)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v::197 A is redefined, overwritting its value
+		`define A
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v::243 error in parsing: (syntax error, unexpected vNUMBER, expecting ';' or ',')
+assign dout_a = din_a | `SIZE'ha;
+ERROR (7)::NETLIST_ERROR Found multiple top level modules
+	test_def	test_ifdef
+	test_comment_in_macro
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::299 

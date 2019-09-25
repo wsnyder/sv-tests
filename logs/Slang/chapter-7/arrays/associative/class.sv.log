@@ -1,0 +1,15 @@
+name: associative-arrays-class
+description: Test associative arrays support
+should_fail: 0
+tags: 7.8.3 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/class.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/class.sv:9:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/class.sv:13:11: error: use of undeclared identifier 'C'
+int arr [ C ];
+          ^

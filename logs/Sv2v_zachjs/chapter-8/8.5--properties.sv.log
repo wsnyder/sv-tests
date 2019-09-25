@@ -1,0 +1,10 @@
+name: properties
+description: class properties test
+should_fail: 0
+tags: 8.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties.sv:8:9: Parse error: unexpected token 'class' (KW_class).

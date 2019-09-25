@@ -1,0 +1,16 @@
+name: always
+description: always check
+should_fail: 0
+tags: 9.2.2.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.1--always.sv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.1--always.sv' to AST representation.
+Generating RTLIL representation for module `\always_tb'.
+Successfully finished Verilog frontend.

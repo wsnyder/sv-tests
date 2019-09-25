@@ -1,0 +1,28 @@
+<pre>name: integers-left-padding
+description: Automatic left padding of literal constant numbers
+should_fail: 0
+tags: 5.7.1
+files: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [11:0] a;
+	reg [11:0] b;
+	reg [11:0] c;
+	reg [11:0] d;
+	reg [84:0] e;
+	reg [84:0] f;
+	reg [84:0] g;
+	initial begin
+		a = 'h x;
+		b = 'h 3x;
+		c = 'h z3;
+		d = 'h 0z3;
+		e = 'h5;
+		f = 'hx;
+		g = 'hz;
+	end
+endmodule
+</pre>

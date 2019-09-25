@@ -1,0 +1,28 @@
+<pre>name: constructor_param
+description: class constructor with arguments test
+should_fail: 0
+tags: 8.7
+files: <a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>:10:11: error: expected identifier
+		function new(int def = 42);
+		        ^
+<a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>:10:12: error: expected statement
+		function new(int def = 42);
+		         ^~~
+<a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>:10:28: error: expected declarator
+		function new(int def = 42);
+		                         ^
+<a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>:16:3: error: use of undeclared identifier 'test_cls'
+		test_cls test_obj = new(37);
+		^~~~~~~~
+<a href="../../../tests/chapter-8/8.7--constructor_param.sv" target="file-frame">tests/chapter-8/8.7--constructor_param.sv</a>:16:23: error: language feature not yet supported
+		test_cls test_obj = new(37);
+		                    ^~~~~~~
+</pre>

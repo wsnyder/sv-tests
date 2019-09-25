@@ -1,0 +1,10 @@
+name: string_atobin
+description: string.atobin()  tests
+should_fail: 0
+tags: 6.16.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.9--string_atobin.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.9--string_atobin.sv:8:9: Parse error: unexpected token 'string' (KW_string).

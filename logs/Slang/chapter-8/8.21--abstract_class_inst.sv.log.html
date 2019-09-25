@@ -1,0 +1,22 @@
+<pre>name: abstract_class_inst
+description: instantiating abstract class
+should_fail: 1
+tags: 8.21
+files: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>:8:2: error: language feature not yet supported
+	virtual class base_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>:12:2: error: language feature not yet supported
+	class test_cls extends base_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>:19:2: error: use of undeclared identifier 'base_cls'
+	base_cls test_obj;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>:22:14: error: language feature not yet supported
+		test_obj = new;
+		           ^~~
+</pre>

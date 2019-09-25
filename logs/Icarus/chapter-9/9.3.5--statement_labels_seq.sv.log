@@ -1,0 +1,15 @@
+name: statement_labels_seq
+description: sequential block labels check
+should_fail: 0
+tags: 9.3.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv
+incdirs: 
+top_module: 
+rc: 6
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv:13: Syntax in assignment statement l-value.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv:14: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv:15: error: Invalid module instantiation
+I give up.

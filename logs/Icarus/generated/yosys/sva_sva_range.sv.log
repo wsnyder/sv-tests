@@ -1,0 +1,17 @@
+name: sva_sva_range
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 8
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:5: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:5: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:5: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:14: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:15: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_range.sv:17: error: invalid module item.

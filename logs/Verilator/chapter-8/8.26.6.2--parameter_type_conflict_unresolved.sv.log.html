@@ -1,0 +1,22 @@
+<pre>name: parameter_type_conflict_unresolved
+description: superclass type declaration conflicts must be resolved in subclass
+should_fail: 1
+tags: 8.26.6.2
+files: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:8: syntax error, unexpected interface
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:9: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:12: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:13: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:16: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:16: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>:17: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 10 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>
+</pre>

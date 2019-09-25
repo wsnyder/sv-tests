@@ -1,0 +1,10 @@
+name: wait_fork
+description: wait fork test
+should_fail: 0
+tags: 9.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.6.1--wait_fork.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.6.1--wait_fork.sv:11:17: Parse error: unexpected token 'fork' (KW_fork).

@@ -1,0 +1,11 @@
+name: pop_front
+description: Update queue by assignment (pop_front)
+should_fail: 0
+tags: 7.10.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front_assign.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front_assign.sv:17: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front_assign.sv:17: error: malformed statement

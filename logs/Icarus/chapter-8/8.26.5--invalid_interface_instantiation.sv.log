@@ -1,0 +1,15 @@
+name: interface_instantiation
+description: instantiating an interface class
+should_fail: 1
+tags: 8.26.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv
+incdirs: 
+top_module: 
+rc: 6
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:12: error: invalid module item.

@@ -1,0 +1,12 @@
+name: this
+description: this keyword test
+should_fail: 0
+tags: 8.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.11--this.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.11--this.sv:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~

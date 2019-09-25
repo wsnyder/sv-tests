@@ -1,0 +1,11 @@
+name: typed_constructor
+description: class typed constructor test
+should_fail: 0
+tags: 8.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor.sv:26: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor.sv:26: error: malformed statement

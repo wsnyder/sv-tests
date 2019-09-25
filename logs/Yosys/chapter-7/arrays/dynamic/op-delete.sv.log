@@ -1,0 +1,14 @@
+name: dynamic-arrays-op-delete
+description: Test dynamic arrays operator delete support
+should_fail: 0
+tags: 7.5.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-delete.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-delete.sv:9: syntax error, unexpected ']'

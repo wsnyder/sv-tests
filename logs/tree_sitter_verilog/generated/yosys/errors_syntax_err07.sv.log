@@ -1,0 +1,14 @@
+name: errors_syntax_err07
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err07.v
+should_fail: 1
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(0, 0) module_declaration
+(3, 0) module_or_generate_item
+(3, 0) continuous_assign
+(3, 14) ERROR

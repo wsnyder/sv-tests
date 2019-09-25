@@ -1,0 +1,18 @@
+name: queues-elements-persistence
+description: Test status of persistence of references to elements of queue
+should_fail: 0
+tags: 7.10.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:9: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:11: Unsupported: SystemVerilog 2005 reserved word not implemented: ref
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:13: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:26: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:28: syntax error, unexpected '}', expecting TYPE-IDENTIFIER
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:29: Unsupported: Ignoring delay on this delayed statement.
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv

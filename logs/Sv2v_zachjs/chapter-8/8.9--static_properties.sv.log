@@ -1,0 +1,10 @@
+name: static_properties
+description: static class properties test
+should_fail: 0
+tags: 8.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.9--static_properties.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.9--static_properties.sv:8:9: Parse error: unexpected token 'class' (KW_class).

@@ -1,0 +1,17 @@
+<pre>name: repl_op
+description: replication operator test
+should_fail: 0
+tags: 11.4.12.1
+files: <a href="../../../tests/chapter-11/11.4.12.1--repl_op.sv" target="file-frame">tests/chapter-11/11.4.12.1--repl_op.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [15:0] a;
+	wire [1:0] b = 2'b10;
+	initial begin
+		a = {8 {b}};
+	end
+endmodule
+</pre>

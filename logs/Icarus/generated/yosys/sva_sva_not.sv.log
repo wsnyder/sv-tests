@@ -1,0 +1,14 @@
+name: sva_sva_not
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 5
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv:25: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv:26: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv:22: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv:29: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv:32: error: invalid module item.

@@ -1,0 +1,18 @@
+name: methods
+description: class method test
+should_fail: 0
+tags: 8.6
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.6--methods.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.6--methods.sv:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.6--methods.sv:16:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj;
+	^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.6--methods.sv:19:14: error: language feature not yet supported
+		test_obj = new;
+		           ^~~

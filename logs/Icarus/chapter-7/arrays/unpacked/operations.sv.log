@@ -1,0 +1,13 @@
+name: operations-on-arrays-rw
+description: Test unpacked arrays operations support (R & W)
+should_fail: 0
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/operations.sv
+incdirs: 
+top_module: 
+rc: 3
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/operations.sv:12: error: Cannot assign to array arr. Did you forget a word index?
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/operations.sv:16: error: Cannot assign to array arr. Did you forget a word index?
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/operations.sv:20: error: Cannot assign to array arr. Did you forget a word index?
+3 error(s) during elaboration.

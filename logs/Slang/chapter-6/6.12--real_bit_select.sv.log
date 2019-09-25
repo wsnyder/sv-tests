@@ -1,0 +1,12 @@
+name: real_idx
+description: real indexing tests
+should_fail: 1
+tags: 6.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select.sv:11:15: error: value of type 'real' cannot be indexed
+	assign b = a[2];
+	           ~~^~

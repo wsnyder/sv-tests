@@ -1,0 +1,15 @@
+name: associative-arrays-as-arguments
+description: Test passing associative array as arugments support
+should_fail: 0
+tags: 7.9.10 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:9:15: error: expected expression
+string arraya[int];
+              ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:11:25: error: expected expression
+task fun (string arrayb[int]);
+                        ^~~

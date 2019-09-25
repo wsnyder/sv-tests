@@ -1,0 +1,16 @@
+name: begin-keywords
+description: Begin keywords check
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-begin-keywords.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-begin-keywords.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-begin-keywords.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+

@@ -1,0 +1,15 @@
+name: operations-on-arrays-equality
+description: Test unpacked arrays operations support (equality)
+should_fail: 0
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/equality.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/equality.sv:13:10: error: language feature not yet supported
+	arr_a = '{1, 1, 1, 0, 0, 1, 1, 1};
+	        ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/equality.sv:14:10: error: language feature not yet supported
+	arr_b = '{1, 1, 1, 0, 0, 1, 1, 1};
+	        ^~~~~~~~~~~~~~~~~~~~~~~~~

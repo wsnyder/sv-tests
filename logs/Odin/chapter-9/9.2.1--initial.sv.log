@@ -1,0 +1,16 @@
+name: initial
+description: initial check
+should_fail: 0
+tags: 9.2.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.1--initial.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.1--initial.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.1--initial.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+

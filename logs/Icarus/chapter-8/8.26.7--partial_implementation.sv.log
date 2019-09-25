@@ -1,0 +1,31 @@
+name: partial_implementation
+description: virtual classes can implement their interfaces partially
+should_fail: 0
+tags: 8.26.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv
+incdirs: 
+top_module: 
+rc: 22
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:10: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:13: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:14: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:15: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:15: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:16: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:17: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:20: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:21: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:21: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:22: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:22: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:23: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv:26: error: invalid module item.

@@ -1,0 +1,14 @@
+name: inherited_prot_from_inside
+description: encapsulation test
+should_fail: 0
+tags: 8.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation/8.18--inherited_prot_from_inside.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation/8.18--inherited_prot_from_inside.sv:8: syntax error, unexpected ';', expecting '(' or '['

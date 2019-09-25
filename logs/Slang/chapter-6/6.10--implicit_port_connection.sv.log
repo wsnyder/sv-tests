@@ -1,0 +1,12 @@
+name: implicit_port_connection
+description: implicit port connection tests
+should_fail: 0
+tags: 6.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_port_connection.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.10--implicit_port_connection.sv:14:13: error: use of undeclared identifier 'c'
+	assign d = c;
+	           ^

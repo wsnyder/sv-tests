@@ -1,0 +1,18 @@
+name: simple_forloops
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forloops.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forloops.v:8:9: error: language feature not yet supported
+	always @* begin
+	       ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forloops.v:17:9: error: language feature not yet supported
+	always @* begin
+	       ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forloops.v:21:9: error: language feature not yet supported
+	always @* begin
+	       ^~

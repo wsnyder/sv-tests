@@ -1,0 +1,21 @@
+name: diamond_relationship_parametrized
+description: different specializations of an interface class are treated as unique interface class types
+should_fail: 1
+tags: 8.26.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8:2: error: language feature not yet supported
+	interface class ibase#(type T = logic);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:12:2: error: language feature not yet supported
+	interface class ic1 extends ibase#(bit);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:16:2: error: language feature not yet supported
+	interface class ic2 extends ibase#(string);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:20:2: error: language feature not yet supported
+	interface class ic3 extends ic1, ic2;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

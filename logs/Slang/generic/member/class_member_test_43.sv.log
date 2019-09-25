@@ -1,0 +1,63 @@
+name: class_member_test_43
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:7:1: error: language feature not yet supported
+class constructible;
+^~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:8:9: error: expected identifier
+function new (foo::bar name,
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:8:10: error: expected statement
+function new (foo::bar name,
+         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:8:29: error: expected identifier
+function new (foo::bar name,
+                            ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:9:5: error: expected declarator
+    virtual interface time_if vif,
+    ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:9:22: error: expected ','
+    virtual interface time_if vif,
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:9:30: error: expected ','
+    virtual interface time_if vif,
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:8: error: expected declarator
+    baz#(M,N)::foo bar, bit [K:0] b);
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:10: error: expected ','
+    baz#(M,N)::foo bar, bit [K:0] b);
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:13: error: expected declarator
+    baz#(M,N)::foo bar, bit [K:0] b);
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:16: error: expected ','
+    baz#(M,N)::foo bar, bit [K:0] b);
+               ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:19: error: expected ','
+    baz#(M,N)::foo bar, bit [K:0] b);
+                  ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:24: error: expected identifier
+    baz#(M,N)::foo bar, bit [K:0] b);
+                       ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:25: error: expected declarator
+    baz#(M,N)::foo bar, bit [K:0] b);
+                        ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:30: error: expected ','
+    baz#(M,N)::foo bar, bit [K:0] b);
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:31: error: expected declarator
+    baz#(M,N)::foo bar, bit [K:0] b);
+                              ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:34: error: expected ','
+    baz#(M,N)::foo bar, bit [K:0] b);
+                                 ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10:36: error: expected declarator
+    baz#(M,N)::foo bar, bit [K:0] b);
+                                   ^

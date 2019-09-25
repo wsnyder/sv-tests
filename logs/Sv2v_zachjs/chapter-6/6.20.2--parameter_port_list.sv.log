@@ -1,0 +1,12 @@
+name: parameter_port_list
+description: parameter port list tests
+should_fail: 0
+tags: 6.20.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_port_list.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	parameter p = 12;
+endmodule

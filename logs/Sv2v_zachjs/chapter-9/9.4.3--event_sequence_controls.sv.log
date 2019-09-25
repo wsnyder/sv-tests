@@ -1,0 +1,10 @@
+name: event_sequence
+description: event sequence
+should_fail: 0
+tags: 9.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv:17:17: Parse error: unexpected token 'wait' (KW_wait).

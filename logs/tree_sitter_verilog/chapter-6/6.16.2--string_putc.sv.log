@@ -1,0 +1,15 @@
+name: string_putc
+description: string.putc()  tests
+should_fail: 0
+tags: 6.16.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.2--string_putc.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(8, 1) port_declaration
+(8, 1) interface_port_declaration
+(8, 7) ERROR
+(8, 13) ERROR

@@ -1,0 +1,35 @@
+name: event_sequence
+description: sequence event test
+should_fail: 0
+tags: 9.4.2.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv
+incdirs: 
+top_module: 
+rc: 26
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:14: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:15: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:15: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:16: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:21: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:22: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:22: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:23: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:25: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:26: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:26: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:27: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:27: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:28: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:28: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:29: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:30: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:30: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:31: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:31: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:32: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:33: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:33: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:34: syntax error
+I give up.

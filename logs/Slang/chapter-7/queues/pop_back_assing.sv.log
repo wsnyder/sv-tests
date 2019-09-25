@@ -1,0 +1,12 @@
+name: pop_back
+description: Update queue by assignment (pop_back)
+should_fail: 0
+tags: 7.10.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_back_assing.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_back_assing.sv:9:6: error: dimension requires a constant range
+int q[$];
+     ^~~

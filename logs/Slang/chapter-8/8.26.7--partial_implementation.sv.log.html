@@ -1,0 +1,25 @@
+<pre>name: partial_implementation
+description: virtual classes can implement their interfaces partially
+should_fail: 0
+tags: 8.26.7
+files: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>:8:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>:13:2: error: language feature not yet supported
+	virtual class vhello implements ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>:20:2: error: language feature not yet supported
+	class helloworld extends vhello;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>:26:2: error: use of undeclared identifier 'helloworld'
+	helloworld obj;
+	^~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>:29:9: error: language feature not yet supported
+		obj = new;
+		      ^~~
+</pre>

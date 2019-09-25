@@ -1,0 +1,19 @@
+name: unpacked-structures-members-default-value
+description: Test unpacked structures members default value support
+should_fail: 0
+tags: 7.2.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked/default-value.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) module_declaration
+(15, 0) module_or_generate_item
+(15, 0) initial_construct
+(15, 7) statement_or_null
+(15, 7) statement
+(15, 7) statement_item
+(15, 7) seq_block
+(15, 13) ERROR
+(16, 7) ERROR

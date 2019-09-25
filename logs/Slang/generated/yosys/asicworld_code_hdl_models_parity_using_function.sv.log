@@ -1,0 +1,15 @@
+name: asicworld_code_hdl_models_parity_using_function
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_parity_using_function.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_parity_using_function.v:17:3: error: language feature not yet supported
+  input [31:0] data; 
+  ^~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_parity_using_function.v:27:21: error: too many arguments to subroutine call; expected 0 but 1 were provided
+assign parity_out = parity(data_in);
+                    ^~~~~~

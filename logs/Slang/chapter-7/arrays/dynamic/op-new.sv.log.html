@@ -1,0 +1,16 @@
+<pre>name: dynamic-arrays-op-new
+description: Test dynamic arrays operator new support
+should_fail: 0
+tags: 7.5.1
+files: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>:9:14: error: dimension requires a constant range
+bit [7:0] arr[];
+             ^~
+<a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>:12:11: error: language feature not yet supported
+    arr = new [ 4 ];
+          ^~~~~~~~~
+</pre>

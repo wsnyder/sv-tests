@@ -1,0 +1,18 @@
+name: dynamic-arrays-op-size
+description: Test dynamic arrays operator size support
+should_fail: 0
+tags: 7.5.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:9:14: error: dimension requires a constant range
+bit [7:0] arr[];
+             ^~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:12:11: error: language feature not yet supported
+    arr = new [ 16 ];
+          ^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:14:11: error: language feature not yet supported
+    arr = new [ 8 ];
+          ^~~~~~~~~

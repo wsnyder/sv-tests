@@ -1,0 +1,14 @@
+name: var_protected
+description: class with protected variable
+should_fail: 0
+tags: 8.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_protected.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_protected.sv:8: syntax error, unexpected ';', expecting '(' or '['

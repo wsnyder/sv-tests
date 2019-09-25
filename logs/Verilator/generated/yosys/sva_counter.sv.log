@@ -1,0 +1,19 @@
+name: sva_counter
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:12: syntax error, unexpected disable, expecting clocking
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:14: Unsupported or unknown PLI call: $past
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:15: Unsupported or unknown PLI call: $past
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:16: Unsupported or unknown PLI call: $past
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:19: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:21: Unsupported or unknown PLI call: $past
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:22: Unsupported or unknown PLI call: $past
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:25: Unsupported or unknown PLI call: $past
+%Error: Exiting due to 8 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv

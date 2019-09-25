@@ -1,0 +1,9 @@
+name: override_member
+description: class member override test
+should_fail: 0
+tags: 8.14
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.14--override_member.sv
+incdirs: 
+top_module: 
+rc: 0
+

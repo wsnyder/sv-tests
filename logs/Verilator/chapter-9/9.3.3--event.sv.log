@@ -1,0 +1,19 @@
+name: event_order
+description: event order test
+should_fail: 0
+tags: 9.3.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:8: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:10: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:13: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:14: syntax error, unexpected ->
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv:20: Unsupported: Verilog 1995 reserved word not implemented: join
+%Error: Cannot continue
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv

@@ -1,0 +1,16 @@
+name: cast_func
+description: $cast function test
+should_fail: 0
+tags: 8.16
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.16--cast_func.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module class_tb;
+	initial begin : sv2v_autoblock_0
+		reg [31:0] val;
+		if ((! $cast(val, 5))) $display("$cast failed");
+		$display(val);
+	end
+endmodule

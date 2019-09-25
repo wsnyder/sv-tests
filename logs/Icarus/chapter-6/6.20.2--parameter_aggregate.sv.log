@@ -1,0 +1,11 @@
+name: parameter_aggregate
+description: parameter aggregate type tests
+should_fail: 0
+tags: 6.20.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_aggregate.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_aggregate.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_aggregate.sv:8: error: syntax error in parameter list.

@@ -1,0 +1,39 @@
+<pre>name: hana_test_parse2synthtrans
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parse2synthtrans.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parse2synthtrans.v' to AST representation.
+Generating RTLIL representation for module `\f1_test'.
+Note: Assuming pure combinatorial block at /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parse2synthtrans.v:13 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\f2_demultiplexer1_to_4'.
+Note: Assuming pure combinatorial block at /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parse2synthtrans.v:34 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parse2synthtrans.v:46 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\f3_test'.
+Generating RTLIL representation for module `\f4_test'.
+Generating RTLIL representation for module `\f5_test'.
+Generating RTLIL representation for module `\f6_test'.
+Generating RTLIL representation for module `\f7_test'.
+Generating RTLIL representation for module `\f8_test'.
+Generating RTLIL representation for module `\f9_test'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v' to AST representation.
+Warning: Yosys has only limited support for tri-state logic at the moment. (/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v:27)
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v:1097: syntax error, unexpected TOK_SUPPLY1
+</pre>

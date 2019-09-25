@@ -1,0 +1,15 @@
+name: sva_sva_throughout
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv:7: syntax error, unexpected assert
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: throughout
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv:15: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv

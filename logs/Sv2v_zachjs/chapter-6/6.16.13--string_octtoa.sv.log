@@ -1,0 +1,10 @@
+name: string_octtoa
+description: string.octtoa()  tests
+should_fail: 0
+tags: 6.16.13
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.13--string_octtoa.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.13--string_octtoa.sv:8:9: Parse error: unexpected token 'string' (KW_string).

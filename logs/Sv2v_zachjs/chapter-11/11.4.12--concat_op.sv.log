@@ -1,0 +1,17 @@
+name: concat_op
+description: concatenation operator test
+should_fail: 0
+tags: 11.4.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12--concat_op.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [15:0] a;
+	wire [7:0] b = 8'b10101100;
+	wire [7:0] c = 8'b01010011;
+	initial begin
+		a = {b, c};
+	end
+endmodule

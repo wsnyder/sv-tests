@@ -1,0 +1,13 @@
+name: binary_op_log_imp
+description: -> operator test
+should_fail: 0
+tags: 11.4.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_imp.sv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_imp.sv:12: Logical Operator LOGIF expects 1 bit on the LHS, but LHS's VARREF 'a' generates 32 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_imp.sv:12: Logical Operator LOGIF expects 1 bit on the RHS, but RHS's VARREF 'b' generates 32 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_imp.sv:12: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS's LOGIF generates 1 bits.

@@ -1,0 +1,24 @@
+name: process_cls_self
+description: process class self method
+should_fail: 0
+tags: 9.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:9:3: error: use of undeclared identifier 'process'
+		process job[] = new [N];
+		^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:9:19: error: language feature not yet supported
+		process job[] = new [N];
+		                ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:11:3: error: language feature not yet supported
+		foreach(job[i])
+		^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:13:23: error: use of undeclared identifier 'j'
+				automatic int k = j;
+				                  ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:15:15: error: unknown class or package 'process'
+					job[k] = process::self();
+					         ^~~~~~~

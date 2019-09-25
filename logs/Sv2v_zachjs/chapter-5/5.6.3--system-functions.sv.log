@@ -1,0 +1,12 @@
+name: system-functions
+description: Calling system functions
+should_fail: 0
+tags: 5.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.3--system-functions.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module systemfn;
+	initial $display("hello world");
+endmodule

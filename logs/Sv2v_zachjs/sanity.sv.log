@@ -1,0 +1,12 @@
+name: sanity
+description: A simple module that should fail during parsing
+should_fail: 1
+tags: sanity
+files: /home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv
+incdirs: 
+top_module: 
+rc: 1
+
+zachjs-sv2v: takeIdent didn't find identifier: [DTType wire,DTIdent "clk"]
+CallStack (from HasCallStack):
+  error, called at src/Language/SystemVerilog/Parser/ParseDecl.hs:398:20 in main:Language.SystemVerilog.Parser.ParseDecl

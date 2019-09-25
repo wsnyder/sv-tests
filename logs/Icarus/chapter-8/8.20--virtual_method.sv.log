@@ -1,0 +1,14 @@
+name: virtual_method
+description: class with virtual methods
+should_fail: 0
+tags: 8.20
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.20--virtual_method.sv
+incdirs: 
+top_module: 
+rc: 134
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.20--virtual_method.sv:32: internal_error: net type doesn't match context type.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.20--virtual_method.sv:32:               : net type=class test_cls{bool signed[31:0] a}
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.20--virtual_method.sv:32:               : context type=class super_cls{bool signed[31:0] a}
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.20--virtual_method.sv:32: assert: elab_expr.cc:3470: failed assertion ntype->type_compatible(net->net_type())
+Aborted (core dumped)

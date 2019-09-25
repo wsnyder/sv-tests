@@ -1,0 +1,9 @@
+name: chandle
+description: chandle type tests
+should_fail: 0
+tags: 6.14
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.14--chandle.sv
+incdirs: 
+top_module: 
+rc: 0
+

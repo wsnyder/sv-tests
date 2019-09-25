@@ -1,0 +1,16 @@
+<pre>name: number_test_17
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: <a href="../../../../tests/generic/number/number_test_17.sv" target="file-frame">tests/generic/number/number_test_17.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../tests/generic/number/number_test_17.sv" target="file-frame">tests/generic/number/number_test_17.sv</a>:7:25: error: unknown macro or compiler directive '`DIGITS'
+parameter int foo = 16'b`DIGITS;
+                        ^
+<a href="../../../../tests/generic/number/number_test_17.sv" target="file-frame">tests/generic/number/number_test_17.sv</a>:7:32: error: expected vector literal digits
+parameter int foo = 16'b`DIGITS;
+                               ^
+</pre>

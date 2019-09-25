@@ -1,0 +1,25 @@
+<pre>name: shallow_copy
+description: object shallow copy
+should_fail: 0
+tags: 8.12
+files: <a href="../../../tests/chapter-8/8.12--shallow_copy.sv" target="file-frame">tests/chapter-8/8.12--shallow_copy.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.12--shallow_copy.sv" target="file-frame">tests/chapter-8/8.12--shallow_copy.sv</a>:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.12--shallow_copy.sv" target="file-frame">tests/chapter-8/8.12--shallow_copy.sv</a>:16:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj0;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.12--shallow_copy.sv" target="file-frame">tests/chapter-8/8.12--shallow_copy.sv</a>:17:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj1;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.12--shallow_copy.sv" target="file-frame">tests/chapter-8/8.12--shallow_copy.sv</a>:20:15: error: language feature not yet supported
+		test_obj0 = new;
+		            ^~~
+<a href="../../../tests/chapter-8/8.12--shallow_copy.sv" target="file-frame">tests/chapter-8/8.12--shallow_copy.sv</a>:26:15: error: language feature not yet supported
+		test_obj1 = new test_obj0;
+		            ^~~~~~~~~~~~~
+</pre>

@@ -1,0 +1,16 @@
+name: conditional_pattern
+description: A module testing pattern matching in conditional expressions
+should_fail: 0
+tags: 12.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv:26: Unsupported: SystemVerilog 2005 reserved word not implemented: matches
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv:26: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv:26: syntax error, unexpected IDENTIFIER
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv

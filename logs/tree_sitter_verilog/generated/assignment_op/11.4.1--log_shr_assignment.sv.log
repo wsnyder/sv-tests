@@ -1,0 +1,9 @@
+name: log_shr_assignment
+description: >>= assignment test
+should_fail: 0
+tags: 11.4.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--log_shr_assignment.sv
+incdirs: 
+top_module: 
+rc: 0
+

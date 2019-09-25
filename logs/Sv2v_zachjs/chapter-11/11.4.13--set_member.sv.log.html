@@ -1,0 +1,19 @@
+<pre>name: set_member
+description: inside operator test
+should_fail: 0
+tags: 11.4.13
+files: <a href="../../../tests/chapter-11/11.4.13--set_member.sv" target="file-frame">tests/chapter-11/11.4.13--set_member.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg signed [31:0] a;
+	wire signed [31:0] b = 12;
+	wire signed [31:0] c = 5;
+	wire signed [31:0] d = 7;
+	initial begin
+		a = ((b == c) || (b == d));
+	end
+endmodule
+</pre>

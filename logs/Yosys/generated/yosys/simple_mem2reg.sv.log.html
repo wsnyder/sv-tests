@@ -1,0 +1,25 @@
+<pre>name: simple_mem2reg
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v' to AST representation.
+Generating RTLIL representation for module `\mem2reg_test1'.
+Warning: Replacing memory \array with list of registers. See /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:15, /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:11
+Generating RTLIL representation for module `\mem2reg_test2'.
+Generating RTLIL representation for module `\mem2reg_test3'.
+Generating RTLIL representation for module `\mem2reg_test4'.
+Generating RTLIL representation for module `\mem2reg_test5'.
+Generating RTLIL representation for module `\mem2reg_test6'.
+Warning: Replacing memory \dout_array with list of registers. See /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:111, /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:108
+Warning: Replacing memory \din_array with list of registers. See /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:108, /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v:105
+Successfully finished Verilog frontend.
+</pre>

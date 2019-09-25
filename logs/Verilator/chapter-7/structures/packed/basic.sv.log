@@ -1,0 +1,9 @@
+name: basic-packed-structures
+description: Test packed structures support
+should_fail: 0
+tags: 7.2.1 7.2 7.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/basic.sv
+incdirs: 
+top_module: 
+rc: 0
+

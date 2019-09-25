@@ -1,0 +1,36 @@
+name: sva_counter
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 27
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:11: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:14: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:14: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:15: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:15: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:15: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:16: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:16: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:16: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:19: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:21: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:21: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:21: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:22: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:22: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:22: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:24: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:24: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:25: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:25: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:28: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv:29: sorry: concurrent_assertion_item not supported. Try -gno-assertion to turn this message off.

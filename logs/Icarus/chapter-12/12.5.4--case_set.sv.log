@@ -1,0 +1,14 @@
+name: case_set
+description: A module testing case set membership
+should_fail: 0
+tags: 12.5.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv
+incdirs: 
+top_module: 
+rc: 5
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv:12: error: Incomprehensible case expression.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv:13: Syntax in assignment statement l-value.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv:13: error: Incomprehensible case expression.

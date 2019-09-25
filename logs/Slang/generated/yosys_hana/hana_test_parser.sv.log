@@ -1,0 +1,18 @@
+name: hana_test_parser
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:33:11: error: expected ';'
+module f4_`parvez();
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:33:11: error: expected member
+module f4_`parvez();
+          ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:29:16: note: expanded from macro 'parvez'
+`define parvez ahmad
+               ^~~~~

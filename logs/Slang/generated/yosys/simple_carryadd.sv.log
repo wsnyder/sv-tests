@@ -1,0 +1,21 @@
+name: simple_carryadd
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v:5:8: error: identifier 'WIDTH' used before its declaration
+input [WIDTH-1:0] a, b;
+       ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v:3:11: note: declared here
+parameter WIDTH = 8;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v:6:9: error: identifier 'WIDTH' used before its declaration
+output [WIDTH-1:0] y;
+        ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v:3:11: note: declared here
+parameter WIDTH = 8;
+          ^

@@ -1,0 +1,15 @@
+name: number_test_20
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_20.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_20.sv:7:25: error: unknown macro or compiler directive '`DIGITS'
+parameter int foo = 16'b`DIGITS(bar, baz);
+                        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_20.sv:7:42: error: expected vector literal digits
+parameter int foo = 16'b`DIGITS(bar, baz);
+                                         ^

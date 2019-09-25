@@ -1,0 +1,14 @@
+name: integers-left-padding
+description: Automatic left padding of literal constant numbers
+should_fail: 0
+tags: 5.7.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv:12: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS's CONST '?32?bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' generates 32 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv:14: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS's CONST '?32?bzzzzzzzzzzzzzzzzzzzzzzzzzzzz0011' generates 32 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv:17: Operator ASSIGN expects 85 bits on the Assign RHS, but Assign RHS's CONST '?32?bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' generates 32 bits.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv:18: Operator ASSIGN expects 85 bits on the Assign RHS, but Assign RHS's CONST '?32?bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz' generates 32 bits.

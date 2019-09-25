@@ -1,0 +1,25 @@
+name: name_conflict_resolved
+description: resolved interface class method name conflict
+should_fail: 0
+tags: 8.26.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv
+incdirs: 
+top_module: 
+rc: 16
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:13: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:16: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:17: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:17: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:18: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv:22: error: invalid module item.

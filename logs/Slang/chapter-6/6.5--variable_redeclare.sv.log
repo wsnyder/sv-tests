@@ -1,0 +1,15 @@
+name: variable_redeclare
+description: Variable redeclaration tests
+should_fail: 1
+tags: 6.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_redeclare.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_redeclare.sv:9:7: error: redefinition of 'v'
+	wire v;
+	     ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_redeclare.sv:8:6: note: previous definition here
+	reg v;
+	    ^

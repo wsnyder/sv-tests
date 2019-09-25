@@ -1,0 +1,16 @@
+<pre>name: structure-arrays-illegal
+description: Structure array assignment tests
+should_fail: 1
+tags: 5.10
+files: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Warning-UNPACKED: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>:8: Unsupported: Unpacked struct/union
+%Warning-UNPACKED: Use "/* verilator lint_off UNPACKED */" and lint_on around source to disable this message.
+%Error: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>:14: Assignment pattern with too many elements
+%Error: Exiting due to 1 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>
+</pre>

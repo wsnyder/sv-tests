@@ -1,0 +1,23 @@
+<pre>name: asicworld_code_verilog_tutorial_always_example
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_always_example.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module always_example;
+	wire clk;
+	wire reset;
+	wire enable;
+	wire q_in;
+	reg data;
+	always @(posedge clk) if (reset) begin
+		data <= 0;
+	end
+	else if (enable) begin
+		data <= q_in;
+	end
+endmodule
+</pre>

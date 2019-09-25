@@ -1,0 +1,9 @@
+name: binary_op_gt
+description: > operator test
+should_fail: 0
+tags: 11.4.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.4--binary_op_gt.sv
+incdirs: 
+top_module: 
+rc: 0
+

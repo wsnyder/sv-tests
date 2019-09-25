@@ -1,0 +1,14 @@
+name: copy
+description: Test multidimensional word copy
+should_fail: 0
+tags: 7.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/copy.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/copy.sv:10: syntax error, unexpected '[', expecting TOK_ID

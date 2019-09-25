@@ -1,0 +1,18 @@
+name: class_member_test_13
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv
+incdirs: 
+top_module: 
+rc: 8
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:9: warning: macro SSS undefined (and assumed null) at this point.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:9: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:10: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:11: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv:12: error: invalid class item.

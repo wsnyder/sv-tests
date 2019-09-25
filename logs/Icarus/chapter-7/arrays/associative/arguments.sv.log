@@ -1,0 +1,23 @@
+name: associative-arrays-as-arguments
+description: Test passing associative array as arugments support
+should_fail: 0
+tags: 7.9.10 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv
+incdirs: 
+top_module: 
+rc: 9
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:11: error: Error in task/function port item after port name arrayb.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:14: internal error: How can there be an unpacked range here?
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:13: error: Syntax error in task/function port declaration.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:14: internal error: How can there be an unpacked range here?
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:14: error: Array ``arrayb'' has already been declared.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:14: internal error: How can there be an unpacked range here?
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv:14: error: Array ``arrayb'' has already been declared.

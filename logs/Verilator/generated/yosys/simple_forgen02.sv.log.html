@@ -1,0 +1,17 @@
+<pre>name: simple_forgen02
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v:12: Signal unoptimizable: Feedback to clock or circular logic: uut_forgen02.carry
+%Warning-UNOPTFLAT: Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v:12:  uut_forgen02.carry
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v:21:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v:16:  uut_forgen02.adder[1].D
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v:24:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v:12:  uut_forgen02.carry
+</pre>

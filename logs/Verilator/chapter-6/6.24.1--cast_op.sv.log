@@ -1,0 +1,9 @@
+name: cast_op
+description: cast operator
+should_fail: 0
+tags: 6.24.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.24.1--cast_op.sv
+incdirs: 
+top_module: 
+rc: 0
+

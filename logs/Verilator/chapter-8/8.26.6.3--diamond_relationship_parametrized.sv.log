@@ -1,0 +1,27 @@
+name: diamond_relationship_parametrized
+description: different specializations of an interface class are treated as unique interface class types
+should_fail: 1
+tags: 8.26.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8: syntax error, unexpected interface
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:17: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:18: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:21: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:22: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 16 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv

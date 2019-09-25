@@ -1,0 +1,19 @@
+name: class_test_53
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv
+incdirs: 
+top_module: 
+rc: 10
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:8: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:9: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:10: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:11: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_53.sv:12: error: invalid class item.

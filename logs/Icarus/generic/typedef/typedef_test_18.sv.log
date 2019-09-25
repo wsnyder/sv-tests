@@ -1,0 +1,14 @@
+name: typedef_test_18
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv
+incdirs: 
+top_module: 
+rc: 5
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv:8: Error in struct/union member.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv:9: Error in struct/union member.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv:7: sorry: Unpacked structs not supported.

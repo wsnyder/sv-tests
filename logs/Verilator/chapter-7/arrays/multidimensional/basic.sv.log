@@ -1,0 +1,12 @@
+name: basic
+description: Test multidimensional arrays
+should_fail: 0
+tags: 7.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/basic.sv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-LITENDIAN: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/basic.sv:23: Little bit endian vector: MSB < LSB of bit range: 1:6
+%Warning-LITENDIAN: Use "/* verilator lint_off LITENDIAN */" and lint_on around source to disable this message.
+%Warning-LITENDIAN: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/basic.sv:23: Little bit endian vector: MSB < LSB of bit range: 1:5

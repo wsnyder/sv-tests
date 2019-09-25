@@ -1,0 +1,13 @@
+name: typedef
+description: user types tests
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv:8: error: Syntax error in typedef clause.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv:10: error: Invalid module instantiation

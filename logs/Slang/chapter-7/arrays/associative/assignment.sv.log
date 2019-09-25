@@ -1,0 +1,15 @@
+name: associative-arrays-assignment
+description: Test associative arrays assignment support
+should_fail: 0
+tags: 7.9.9 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv:9:16: error: expected expression
+string words [ int ];
+               ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/assignment.sv:10:12: error: expected expression
+string w [ int ];
+           ^~~

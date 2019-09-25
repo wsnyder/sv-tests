@@ -1,0 +1,16 @@
+<pre>name: structure-arrays
+description: Structure array assignment tests
+should_fail: 0
+tags: 5.10
+files: <a href="../../../tests/chapter-5/5.10-structure-arrays.sv" target="file-frame">tests/chapter-5/5.10-structure-arrays.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	struct {
+		reg signed [31:0] a;
+		reg signed [31:0] b;
+	} ms [1:0] = {{0, 0}, {1, 1}};
+endmodule
+</pre>

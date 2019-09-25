@@ -1,0 +1,28 @@
+name: asicworld_code_verilog_tutorial_d_ff
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_d_ff.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module d_ff (
+	d,
+	clk,
+	q,
+	q_bar
+);
+	input d;
+	input clk;
+	output q;
+	output q_bar;
+	wire d;
+	wire clk;
+	reg q;
+	reg q_bar;
+	always @(posedge clk) begin
+		q <= d;
+		q_bar <= (! d);
+	end
+endmodule

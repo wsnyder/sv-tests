@@ -1,0 +1,13 @@
+name: packed-and-unsigned-structures
+description: Test packed and unsigned structures support
+should_fail: 0
+tags: 7.2.1 7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv:10: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv:12: error: invalid module item.

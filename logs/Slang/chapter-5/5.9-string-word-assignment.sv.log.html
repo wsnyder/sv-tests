@@ -1,0 +1,16 @@
+<pre>name: string-word-assignment
+description: String assignment tests
+should_fail: 0
+tags: 5.9
+files: <a href="../../../tests/chapter-5/5.9-string-word-assignment.sv" target="file-frame">tests/chapter-5/5.9-string-word-assignment.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-5/5.9-string-word-assignment.sv" target="file-frame">tests/chapter-5/5.9-string-word-assignment.sv</a>:8:22: error: value of type 'bit[23:0]' cannot be assigned to type 'unpacked array [24:0] of 'bit''
+  bit   a[8 * 3 : 0] = "hi0";
+                     ^ ~~~~~
+<a href="../../../tests/chapter-5/5.9-string-word-assignment.sv" target="file-frame">tests/chapter-5/5.9-string-word-assignment.sv</a>:9:22: error: value of type 'bit[23:0]' cannot be assigned to type 'unpacked array [3:0] of 'byte''
+  byte      b[3 : 0] = "hi2";
+                     ^ ~~~~~
+</pre>

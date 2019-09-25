@@ -1,0 +1,18 @@
+name: simple_param_attr
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/param_attr.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module uut_param_attr (
+	I,
+	O
+);
+	(* PARAMETER_ATTRIBUTE = "attribute_content" *) parameter WIDTH = 1;
+	input wire [(WIDTH - 1):0] I;
+	output wire [(WIDTH - 1):0] O;
+	assign O = I;
+endmodule

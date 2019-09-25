@@ -1,0 +1,16 @@
+name: event_sequence
+description: event sequence
+should_fail: 0
+tags: 9.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv:13: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv:17: Unsupported: Verilog 1995 reserved word not implemented: wait
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv:17: syntax error, unexpected '#'
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv

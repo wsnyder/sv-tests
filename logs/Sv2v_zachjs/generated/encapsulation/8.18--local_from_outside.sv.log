@@ -1,0 +1,10 @@
+name: local_from_outside
+description: encapsulation test
+should_fail: 1
+tags: 8.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation/8.18--local_from_outside.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation/8.18--local_from_outside.sv:8:1: Parse error: unexpected token 'class' (KW_class).

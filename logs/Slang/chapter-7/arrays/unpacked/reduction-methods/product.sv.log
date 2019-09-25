@@ -1,0 +1,12 @@
+name: unpacked-array-reduction-method-product
+description: Test support of unpacked arrays reduction method product
+should_fail: 0
+tags: 7.12.3 7.4.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/product.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/product.sv:9:7: error: dimension requires a constant range
+byte b[] = { 1, 2, 3, 4 };
+      ^~

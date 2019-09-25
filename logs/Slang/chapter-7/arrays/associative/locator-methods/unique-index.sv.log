@@ -1,0 +1,15 @@
+name: array-locator-methods-unique-index
+description: Test support of array locator methods
+should_fail: 0
+tags: 7.12.1 7.12 7.10 7.12.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/unique-index.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/unique-index.sv:9:6: error: dimension requires a constant range
+int s[] = { 10, 10, 3, 20, 20, 10 };
+     ^~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/unique-index.sv:10:7: error: dimension requires a constant range
+int qi[$];
+      ^~~

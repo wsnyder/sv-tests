@@ -1,0 +1,12 @@
+name: real_edge
+description: real edge event tests
+should_fail: 1
+tags: 6.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_edge.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_edge.sv:9:19: error: expression must be integral
+	always @(posedge a)
+	                 ^

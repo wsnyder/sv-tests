@@ -1,0 +1,27 @@
+name: asicworld_code_verilog_tutorial_comment
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_comment.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module addbit (
+	a,
+	b,
+	ci,
+	sum,
+	co
+);
+	input a;
+	input b;
+	input ci;
+	output sum;
+	output co;
+	wire a;
+	wire b;
+	wire ci;
+	wire sum;
+	wire co;
+endmodule

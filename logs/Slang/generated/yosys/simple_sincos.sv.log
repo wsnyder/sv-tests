@@ -1,0 +1,15 @@
+name: simple_sincos
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/sincos.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/sincos.v:77:22: error: use of undeclared identifier '$signed'
+                dx = $signed(y >>> $signed({1'b0, i}));
+                     ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/sincos.v:78:22: error: use of undeclared identifier '$signed'
+                dy = $signed(x >>> $signed({1'b0, i}));
+                     ^~~~~~~

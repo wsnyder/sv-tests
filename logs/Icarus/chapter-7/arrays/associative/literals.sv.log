@@ -1,0 +1,11 @@
+name: associative-arrays-literals
+description: Test associative arrays literals support
+should_fail: 0
+tags: 7.9.11 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/literals.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/literals.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/literals.sv:9: error: invalid module item.

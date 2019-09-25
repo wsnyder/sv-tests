@@ -1,0 +1,12 @@
+name: unary_op_not_log
+description: ! operator test
+should_fail: 0
+tags: 11.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op/11.3--unary_op_not_log.sv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op/11.3--unary_op_not_log.sv:11: Logical Operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'b' generates 32 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op/11.3--unary_op_not_log.sv:11: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS's LOGNOT generates 1 bits.

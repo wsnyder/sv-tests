@@ -1,0 +1,16 @@
+<pre>name: simple_mem_arst
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem_arst.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem_arst.v:10:26: error: redefinition of 'Data_o'
+  output [DataWidth-1:0] Data_o,
+                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem_arst.v:13:23: note: previous definition here
+  reg [DataWidth-1:0] Data_o;
+                      ^
+</pre>

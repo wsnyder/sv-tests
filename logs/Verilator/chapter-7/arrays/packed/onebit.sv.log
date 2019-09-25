@@ -1,0 +1,9 @@
+name: operations-on-arrays-one-bit
+description: Test packed arrays operations support (one bit)
+should_fail: 0
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/onebit.sv
+incdirs: 
+top_module: 
+rc: 0
+

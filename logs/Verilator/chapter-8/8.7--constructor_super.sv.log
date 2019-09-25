@@ -1,0 +1,25 @@
+name: constructor_super
+description: class constructor super test
+should_fail: 0
+tags: 8.7 8.17
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:10: syntax error, unexpected '(', expecting '['
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:16: syntax error, unexpected '(', expecting '['
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:17: Unsupported: SystemVerilog 2005 reserved word not implemented: super
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:17: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv:25: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: Exiting due to 13 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor_super.sv

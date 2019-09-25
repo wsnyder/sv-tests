@@ -1,0 +1,10 @@
+name: number_test_35
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_35.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_35.sv:7: sorry: parameter declarations in the $root scope are not yet supported.

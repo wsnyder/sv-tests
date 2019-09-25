@@ -1,0 +1,16 @@
+<pre>name: always_ff
+description: always_ff check
+should_fail: 0
+tags: 9.2.2.4
+files: <a href="../../../tests/chapter-9/9.2.2.4--always_ff.sv" target="file-frame">tests/chapter-9/9.2.2.4--always_ff.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module always_tb;
+	wire a = 0;
+	wire b = 0;
+	reg q = 0;
+	always @(posedge a) q <= b;
+endmodule
+</pre>

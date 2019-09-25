@@ -1,0 +1,13 @@
+<pre>name: string_substr
+description: string.substr()  tests
+should_fail: 0
+tags: 6.16.8
+files: <a href="../../../tests/chapter-6/6.16.8--string_substr.sv" target="file-frame">tests/chapter-6/6.16.8--string_substr.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-6/6.16.8--string_substr.sv" target="file-frame">tests/chapter-6/6.16.8--string_substr.sv</a>:9: error: The RHS expression must be constant.
+<a href="../../../tests/chapter-6/6.16.8--string_substr.sv" target="file-frame">tests/chapter-6/6.16.8--string_substr.sv</a>:9       : This expression violates the rule: $ivl_string_method$substr(a, 32'sd1, 32'sd2)
+Elaboration failed
+</pre>

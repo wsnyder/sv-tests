@@ -1,0 +1,9 @@
+name: binary_op_minus
+description: - operator test
+should_fail: 0
+tags: 11.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.3--binary_op_minus.sv
+incdirs: 
+top_module: 
+rc: 0
+

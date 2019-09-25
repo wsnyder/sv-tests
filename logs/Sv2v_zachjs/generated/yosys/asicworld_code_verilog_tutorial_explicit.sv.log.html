@@ -1,0 +1,51 @@
+<pre>name: asicworld_code_verilog_tutorial_explicit
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_explicit.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module explicit;
+	wire clk;
+	wire d;
+	wire rst;
+	wire pre;
+	wire q;
+	dff u0(
+		.q(q),
+		.d(d),
+		.clk(clk),
+		.q_bar(),
+		.rst(rst),
+		.pre(pre)
+	);
+endmodule
+module dff (
+	q,
+	q_bar,
+	clk,
+	d,
+	rst,
+	pre
+);
+	input clk;
+	input d;
+	input rst;
+	input pre;
+	output q;
+	output q_bar;
+	reg q;
+	assign q_bar = (~ q);
+	always @(posedge clk) if ((rst == 1'b1)) begin
+		q <= 0;
+	end
+	else if ((pre == 1'b1)) begin
+		q <= 1;
+	end
+	else begin
+		q <= d;
+	end
+endmodule
+</pre>

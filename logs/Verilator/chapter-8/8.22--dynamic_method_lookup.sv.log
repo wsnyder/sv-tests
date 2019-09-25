@@ -1,0 +1,35 @@
+name: dynamic_method_lookup
+description: dynamic method selection with abstract base class
+should_fail: 0
+tags: 8.22
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:18: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:18: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:19: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:22: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:24: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:24: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:25: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:28: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:36: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:36: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:37: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:37: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:38: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:38: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 23 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv

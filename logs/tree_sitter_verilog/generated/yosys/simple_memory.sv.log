@@ -1,0 +1,45 @@
+name: simple_memory
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+(1, 0) source_file
+(38, 0) module_declaration
+(51, 0) module_or_generate_item
+(51, 0) always_construct
+(51, 6) statement
+(51, 6) statement_item
+(51, 6) procedural_timing_control_statement
+(51, 21) statement_or_null
+(51, 21) statement
+(51, 21) statement_item
+(51, 21) seq_block
+(67, 4) statement_or_null
+(67, 4) statement
+(67, 4) statement_item
+(67, 4) nonblocking_assignment
+(68, 6) expression
+(68, 6) primary
+(68, 11) select1
+(68, 18) ERROR
+(69, 11) ERROR
+(72, 0) module_or_generate_item
+(72, 0) continuous_assign
+(72, 6) list_of_net_assignments
+(72, 6) net_assignment
+(72, 11) expression
+(72, 11) primary
+(72, 16) select1
+(72, 23) ERROR
+(73, 16) ERROR
+(268, 0) module_declaration
+(275, 3) module_or_generate_item
+(275, 3) always_construct
+(275, 9) statement
+(275, 9) statement_item
+(275, 9) procedural_timing_control_statement
+(275, 23) ERROR

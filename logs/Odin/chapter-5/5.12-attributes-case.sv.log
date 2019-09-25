@@ -1,0 +1,23 @@
+name: attributes-case
+description: Assing attributes to a case statement
+should_fail: 0
+tags: 5.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-case.sv
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-case.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-case.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-case.sv::11 error in parsing: (syntax error, unexpected ';', expecting '(')
+  bit b;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-case.sv::15 error in parsing: (syntax error, unexpected '(')
+    (* full_case, parallel_case *)
+ERROR (5)::NETLIST_ERROR Could not find a top level module
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

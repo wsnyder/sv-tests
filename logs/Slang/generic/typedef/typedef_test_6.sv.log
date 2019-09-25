@@ -1,0 +1,9 @@
+name: typedef_test_6
+description: Test
+should_fail: 0
+tags: 6.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_6.sv
+incdirs: 
+top_module: 
+rc: 0
+

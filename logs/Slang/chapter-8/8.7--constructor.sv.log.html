@@ -1,0 +1,25 @@
+<pre>name: constructor
+description: class constructor test
+should_fail: 0
+tags: 8.7
+files: <a href="../../../tests/chapter-8/8.7--constructor.sv" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.7--constructor.sv" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.7--constructor.sv" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>:10:11: error: expected identifier
+		function new();
+		        ^
+<a href="../../../tests/chapter-8/8.7--constructor.sv" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>:10:12: error: expected statement
+		function new();
+		         ^~~
+<a href="../../../tests/chapter-8/8.7--constructor.sv" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>:16:3: error: use of undeclared identifier 'test_cls'
+		test_cls test_obj = new;
+		^~~~~~~~
+<a href="../../../tests/chapter-8/8.7--constructor.sv" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>:16:23: error: language feature not yet supported
+		test_cls test_obj = new;
+		                    ^~~
+</pre>

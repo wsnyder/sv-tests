@@ -1,0 +1,15 @@
+name: block_names_par
+description: parallel block names check
+should_fail: 0
+tags: 9.3.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv:12: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv:12: syntax error, unexpected ':'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv:16: Unsupported: Verilog 1995 reserved word not implemented: join
+%Error: Cannot continue
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv

@@ -1,0 +1,18 @@
+<pre>name: asicworld_code_verilog_tutorial_v2k_reg
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+ERROR (2)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v::10 Odin does not handle signed regs (data)
+reg signed [7:0] data = 8'shF0;
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/parse_making_ast.cpp]markAndProcessSymbolListWith::792 
+</pre>

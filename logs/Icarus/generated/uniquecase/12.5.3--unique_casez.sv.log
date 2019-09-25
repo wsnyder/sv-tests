@@ -1,0 +1,17 @@
+name: unique_casez
+description: casez statement with unique
+should_fail: 0
+tags: 12.5.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv
+incdirs: 
+top_module: 
+rc: 8
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:12: Syntax in assignment statement l-value.
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:13: Syntax in assignment statement l-value.
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:14: Syntax in assignment statement l-value.
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_casez.sv:15: syntax error
+I give up.

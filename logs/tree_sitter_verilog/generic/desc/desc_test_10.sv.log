@@ -1,0 +1,14 @@
+name: desc_test_10
+description: Test
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/desc/desc_test_10.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(8, 0) ERROR
+(9, 0) package_item
+(9, 0) data_declaration
+(9, 12) ;

@@ -1,0 +1,12 @@
+name: event_nonblocking_assignment_repeat
+description: event non blk assignment repeat
+should_fail: 0
+tags: 9.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_int.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_int.sv:15: syntax error, unexpected repeat, expecting TYPE-IDENTIFIER
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_int.sv

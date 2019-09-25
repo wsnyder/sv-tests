@@ -1,0 +1,33 @@
+name: cast_between_interface_classes
+description: it should be possible to cast between implemented interface classes
+should_fail: 0
+tags: 8.26.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv
+incdirs: 
+top_module: 
+rc: 24
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:13: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:16: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:17: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:17: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:18: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:20: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:21: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:21: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:22: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:25: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:26: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:26: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:27: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:27: error: Invalid module instantiation

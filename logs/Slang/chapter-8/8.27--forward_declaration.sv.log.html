@@ -1,0 +1,19 @@
+<pre>name: forward_declaration
+description: class forward declaration test
+should_fail: 0
+tags: 8.27
+files: <a href="../../../tests/chapter-8/8.27--forward_declaration.sv" target="file-frame">tests/chapter-8/8.27--forward_declaration.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.27--forward_declaration.sv" target="file-frame">tests/chapter-8/8.27--forward_declaration.sv</a>:8:16: error: forward typedef 'C2' does not resolve to a data type
+	typedef class C2;
+	              ^
+<a href="../../../tests/chapter-8/8.27--forward_declaration.sv" target="file-frame">tests/chapter-8/8.27--forward_declaration.sv</a>:10:2: error: language feature not yet supported
+	class C1;
+	^~~~~~~~~
+<a href="../../../tests/chapter-8/8.27--forward_declaration.sv" target="file-frame">tests/chapter-8/8.27--forward_declaration.sv</a>:14:2: error: language feature not yet supported
+	class C2;
+	^~~~~~~~~
+</pre>

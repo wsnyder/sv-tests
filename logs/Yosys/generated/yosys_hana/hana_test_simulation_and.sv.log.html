@@ -1,0 +1,28 @@
+<pre>name: hana_test_simulation_and
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_simulation_and.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_simulation_and.v' to AST representation.
+Generating RTLIL representation for module `\f1_test'.
+Generating RTLIL representation for module `\f2_test'.
+Generating RTLIL representation for module `\f3_test'.
+Generating RTLIL representation for module `\f4_test'.
+Generating RTLIL representation for module `\f5_test'.
+Generating RTLIL representation for module `\f6_test'.
+Generating RTLIL representation for module `\f7_test'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v' to AST representation.
+Warning: Yosys has only limited support for tri-state logic at the moment. (/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v:27)
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v:1097: syntax error, unexpected TOK_SUPPLY1
+</pre>

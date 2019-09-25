@@ -1,0 +1,10 @@
+name: associative-arrays-prev
+description: Test support of associative arrays methods (prev)
+should_fail: 0
+tags: 7.9.7 7.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods/prev.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods/prev.sv:9:11: Parse error: unexpected token 'string' (KW_string).

@@ -1,0 +1,13 @@
+name: real_edge
+description: real edge event tests
+should_fail: 1
+tags: 6.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_edge.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	real a = 0.5;
+	always @(posedge a) $display("posedge");
+endmodule

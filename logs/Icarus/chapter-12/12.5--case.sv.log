@@ -1,0 +1,12 @@
+name: case
+description: A module testing case statement
+should_fail: 0
+tags: 12.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5--case.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5--case.sv:10: error: always statement does not have any delay.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5--case.sv:10:      : A runtime infinite loop will occur.
+Elaboration failed

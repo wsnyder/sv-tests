@@ -1,0 +1,21 @@
+name: parameters
+description: parametrized class test
+should_fail: 0
+tags: 8.5 8.25
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--parameters.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--parameters.sv:8:2: error: language feature not yet supported
+	class test_cls #(parameter a = 12);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--parameters.sv:11:2: error: language feature not yet supported
+	test_cls #(34) test_obj;
+	^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--parameters.sv:14:14: error: language feature not yet supported
+		test_obj = new;
+		           ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--parameters.sv:15:12: error: use of undeclared identifier 'test_cls'
+		$display(test_cls.a);
+		         ^~~~~~~~

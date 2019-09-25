@@ -1,0 +1,12 @@
+name: ordering-methods-shuffle
+description: Test support of shuffle method on unpacked arrays
+should_fail: 0
+tags: 7.12.2 7.4.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:9: syntax error, unexpected ']', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv

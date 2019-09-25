@@ -1,0 +1,194 @@
+<pre>name: swerv
+description: Full swerv core test
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/common_defines.vh /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/build.h /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/swerv_types.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_wrapper.v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/axi4_to_ahb.sv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default
+should_fail: 0
+tags: swerv
+top_module: swerv_wrapper
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/axi4_to_ahb.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/axi4_to_ahb.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (3)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (4)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (5)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (6)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (7)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (8)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (9)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+--------------------------------------------------------------------
+Welcome to ODIN II version 0.1 - the better High level synthesis tools++ targetting FPGAs (mainly VPR)
+Email: jamieson.peter@gmail.com and ken@unb.ca for support issues
+
+--------------------------------------------------------------------
+High-level synthesis Begin
+Parser starting - we'll create an abstract syntax tree. Note this tree can be viewed using Grap Viz (see documentation)
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/axi4_to_ahb.sv to parse list
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_wrapper.v to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_wrapper.v, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_wrapper.v
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/desWARNING (10)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (11)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (12)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (13)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (14)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (15)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (16)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (17)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (18)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (19)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+ign/lsu/lsu_dccm_mem.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/coreWARNING (20)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (21)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (22)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (23)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (24)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (25)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (26)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (27)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (28)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (29)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (30)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+s/swerv/design/exu/exu_div_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/tWARNING (31)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (32)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (33)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (34)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (35)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (36)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (37)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (38)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (39)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (40)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (41)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+hird_party/cores/swerv/design/ifu/ifu_mem_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design//home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv, trying /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/swerv_types.sv to parse list
+Unable to open /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design//home/travWARNING (42)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/swerv_types.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/swerv_types.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+WARNING (43)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h) has an unsupported extension (.h), Odin only supports {  .v .vh }
+
+WARNING (44)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/build.h::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/build.h) has an unsupported extension (.h), Odin only supports {  .v .vh }
+
+ERROR (45)::ARG_ERROR cannot open file: --top_module swerv_wrapper
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/odin_util.cpp]open_file::121 
+</pre>

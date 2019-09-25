@@ -1,0 +1,19 @@
+<pre>name: parameter_type_conflict
+description: superclass type declaration conflicts must be resolved in subclass
+should_fail: 0
+tags: 8.26.6.2
+files: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>:8:2: error: language feature not yet supported
+	interface class ic1#(type T = logic);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>:12:2: error: language feature not yet supported
+	interface class ic2#(type T = logic);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>:16:2: error: language feature not yet supported
+	interface class ic3#(type TYPE = logic) extends ic1#(TYPE), ic2#(TYPE);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>

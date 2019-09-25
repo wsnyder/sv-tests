@@ -1,0 +1,19 @@
+name: casez_pattern
+description: A module testing pattern matching in casez statements
+should_fail: 0
+tags: 12.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:23: Unsupported: SystemVerilog 2005 reserved word not implemented: matches
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:24: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:24: syntax error, unexpected "'{", expecting ',' or ':'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:25: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:26: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:27: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: Cannot continue
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv

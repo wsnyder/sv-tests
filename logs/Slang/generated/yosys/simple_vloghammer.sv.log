@@ -1,0 +1,12 @@
+name: simple_vloghammer
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/vloghammer.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/vloghammer.v:57:20: error: use of undeclared identifier '$signed'
+  assign y = a == ($signed(b) >>> 1);
+                   ^~~~~~~

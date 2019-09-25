@@ -1,0 +1,12 @@
+name: set_member
+description: inside operator test
+should_fail: 0
+tags: 11.4.13
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv:15: ../V3Width.cpp:3316: Node needs sign change, but bad case: EQWILD 0x55af12d78670 <e145#> {d15} @dt=0x55af12d7cf10@(G/nw1)
+%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv

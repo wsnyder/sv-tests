@@ -1,0 +1,24 @@
+name: name_conflict_unresolved
+description: unresolved interface class method name conflict
+should_fail: 1
+tags: 8.26.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:8: syntax error, unexpected interface
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:16: Unsupported: SystemVerilog 2012 reserved word not implemented: implements
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:17: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:25: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:25: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 13 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv

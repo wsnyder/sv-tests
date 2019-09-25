@@ -1,0 +1,39 @@
+name: inheritance
+description: class inheritance test
+should_fail: 0
+tags: 8.13
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:8:2: error: language feature not yet supported
+	class super_cls;
+	^~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:13:11: error: expected identifier
+		function new(int def = 3);
+		        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:13:12: error: expected statement
+		function new(int def = 3);
+		         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:13:27: error: expected declarator
+		function new(int def = 3);
+		                        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:18:2: error: language feature not yet supported
+	class test_cls extends super_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:20:11: error: expected identifier
+		function new(int def = 42);
+		        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:20:12: error: expected statement
+		function new(int def = 42);
+		         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:20:28: error: expected declarator
+		function new(int def = 42);
+		                         ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:26:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj;
+	^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv:29:14: error: language feature not yet supported
+		test_obj = new(37);
+		           ^~~~~~~

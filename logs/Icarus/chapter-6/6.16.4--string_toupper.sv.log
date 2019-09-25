@@ -1,0 +1,11 @@
+name: string_toupper
+description: string.toupper()  tests
+should_fail: 0
+tags: 6.16.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.4--string_toupper.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.4--string_toupper.sv:9: error: No function named `a.toupper' found in this context (top).
+Elaboration failed

@@ -1,0 +1,13 @@
+name: class_member_test_26
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_26.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_26.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_26.sv:8: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_26.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_26.sv:9: error: invalid class item.

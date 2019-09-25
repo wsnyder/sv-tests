@@ -1,0 +1,17 @@
+<pre>name: attributes-module
+description: Assing attributes to a module
+should_fail: 0
+tags: 5.12
+files: <a href="../../../tests/chapter-5/5.12-attributes-module.sv" target="file-frame">tests/chapter-5/5.12-attributes-module.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error-MULTITOP: <a href="../../../tests/chapter-5/5.12-attributes-module.sv" target="file-frame">tests/chapter-5/5.12-attributes-module.sv</a>:13: Unsupported: Multiple top level modules: topb and topa
+%Error-MULTITOP: <a href="../../../tests/chapter-5/5.12-attributes-module.sv" target="file-frame">tests/chapter-5/5.12-attributes-module.sv</a>:13: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../tests/chapter-5/5.12-attributes-module.sv" target="file-frame">tests/chapter-5/5.12-attributes-module.sv</a>:17: Unsupported: Multiple top level modules: topc and topb
+%Error-MULTITOP: <a href="../../../tests/chapter-5/5.12-attributes-module.sv" target="file-frame">tests/chapter-5/5.12-attributes-module.sv</a>:17: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-5/5.12-attributes-module.sv" target="file-frame">tests/chapter-5/5.12-attributes-module.sv</a>
+</pre>

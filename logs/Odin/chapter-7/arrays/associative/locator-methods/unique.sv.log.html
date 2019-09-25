@@ -1,0 +1,28 @@
+<pre>name: array-locator-methods-unique
+description: Test support of array locator methods
+should_fail: 0
+tags: 7.12.1 7.12 7.10 7.12.2
+files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>::1 File <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>::9 error in parsing: (syntax error, unexpected '[', expecting '(')
+int s[] = { 10, 10, 3, 20, 20, 10 };
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>::10 error in parsing: (syntax error, unexpected '[', expecting '(')
+int qi[$];
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>::15 error in parsing: (syntax error, unexpected ';', expecting voLTE or '=')
+	qi.sort;
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>::18 error in parsing: (syntax error, unexpected vEND)
+end
+ERROR (7)::NETLIST_ERROR Could not find a top level module
+
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 
+</pre>

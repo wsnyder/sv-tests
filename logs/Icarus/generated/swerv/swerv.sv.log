@@ -1,0 +1,1264 @@
+name: swerv
+description: Full swerv core test
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/common_defines.vh /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/build.h /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/swerv_types.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_wrapper.v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/axi4_to_ahb.sv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default
+should_fail: 0
+tags: swerv
+top_module: swerv_wrapper
+rc: 231
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:16: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:18: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:19: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:20: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:21: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:22: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:23: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:24: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:26: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:27: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:28: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:29: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:31: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:33: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:34: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:35: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:36: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:37: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:38: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:40: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:41: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:42: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:43: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:45: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:46: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:47: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h:49: sorry: localparam declarations in the $root scope are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:68: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:68: error: syntax error localparam list.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:183: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:186: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:217: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:218: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:232: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:235: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:239: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:242: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:94: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:96: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:98: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:107: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:109: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:112: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:114: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:116: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:118: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:127: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:129: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:132: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:134: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:136: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:138: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:147: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:149: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:152: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:154: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:156: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:158: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:167: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:169: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_ctrl_verilator_unroll.sv:171: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:415: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:416: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:417: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:420: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:421: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:421: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:421: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:421: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:421: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:427: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:428: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:428: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:429: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:430: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:430: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:430: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:430: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:430: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:435: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:436: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:438: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:439: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:452: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:2: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:4: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:5: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:5: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:6: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:6: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:7: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:7: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:9: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:10: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:11: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:13: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:14: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:15: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:15: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:16: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:16: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:17: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:17: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:18: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:19: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:20: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:20: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:21: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:21: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:22: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:22: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:23: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:23: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:24: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:24: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:25: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:25: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:26: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:26: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:27: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:27: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:28: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:28: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:29: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:29: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/pic_map_auto.h:30: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv:478: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:244: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:244: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:244: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:244: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:244: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:285: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:288: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:315: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:316: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:317: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:317: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:317: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:317: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:317: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv:321: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:858: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:858: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:858: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:858: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:858: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:870: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1000: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1002: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1004: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1004: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1006: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1010: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1013: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1019: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1021: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1024: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1027: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1029: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1031: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1033: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1035: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1037: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1040: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1043: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1047: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1050: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1052: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1055: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1061: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1066: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1078: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1085: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1090: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1095: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1100: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1102: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1104: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1106: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1110: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1117: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1124: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1131: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:1139: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1074: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1077: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1078: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1078: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1081: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1082: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1082: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1085: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1086: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1086: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1089: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1090: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1090: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1093: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1094: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1094: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1097: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1098: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1098: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1101: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1102: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1102: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1105: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1106: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1106: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1109: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1110: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1110: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1117: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1199: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1208: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1211: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1220: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1223: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1224: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1226: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1362: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1442: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1447: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1506: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1511: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1570: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1571: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1572: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1572: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1573: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1574: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1576: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1577: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1578: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1579: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1587: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1587: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1587: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1587: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1587: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1591: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1592: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1593: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1595: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1596: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1597: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1598: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1617: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1625: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1626: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1626: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1626: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1626: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1633: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1636: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1649: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1654: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1655: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1655: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1656: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1657: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1658: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1659: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1660: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1661: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1662: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1662: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1662: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1662: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1662: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1665: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1666: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1667: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1668: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1669: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1670: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1671: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:1696: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:226: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:226: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:226: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:226: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:226: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:230: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:230: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:230: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:230: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:230: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:254: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:445: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:445: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:445: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:445: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:445: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:534: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:547: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:413: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:414: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:415: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:415: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:418: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:418: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:419: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:422: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:422: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:427: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:430: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:430: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:431: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:434: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:434: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:435: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:438: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:438: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:439: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:442: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:442: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:443: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:446: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:446: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:447: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:450: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:451: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:585: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:593: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:596: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:598: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:730: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:730: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:821: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:822: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:823: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:823: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:824: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:825: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:830: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:830: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:831: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:832: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:835: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:835: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:836: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:837: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:840: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:840: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:841: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:844: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:844: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:845: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:848: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:848: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:849: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:852: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:852: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:853: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:854: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:855: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:859: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:860: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1031: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1031: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1229: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1230: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1233: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1238: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1239: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1243: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1244: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1244: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1244: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1244: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1244: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1253: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1283: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1285: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1298: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1304: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1325: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1327: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1328: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1329: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1330: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1330: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1330: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1330: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1330: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:1343: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:72: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:72: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:72: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:72: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:72: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:127: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:131: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:594: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:595: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:597: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:597: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:598: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:599: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:600: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:601: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:602: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:603: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:606: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:606: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:608: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:608: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:609: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:610: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:611: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:612: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:613: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:614: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:619: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:726: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:727: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:728: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:728: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:729: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:729: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:729: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:729: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:729: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:733: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:739: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:770: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:770: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:770: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:770: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:770: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:777: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:778: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:781: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:781: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:782: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:783: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:784: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:790: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:790: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:792: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:792: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:796: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:796: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:799: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:807: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:811: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:824: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:825: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:826: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:826: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:827: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:829: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:829: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:829: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:829: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:829: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:832: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:833: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:835: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:836: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:842: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:915: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:916: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:917: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:917: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:920: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:920: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:921: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:921: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:922: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:922: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:923: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:923: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:924: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:924: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:925: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:925: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:926: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:926: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:927: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:927: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:928: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:928: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:929: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:929: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:930: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:930: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:931: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:931: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:932: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:932: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:933: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:933: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:937: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:937: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:938: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:938: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:939: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:939: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:940: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:940: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:941: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:941: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:942: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:942: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:954: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1930: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1931: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1932: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1932: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1933: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1936: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1938: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1939: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1940: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1940: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1941: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1944: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1947: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1948: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1950: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1950: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1951: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1953: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1955: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1955: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1959: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1977: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1980: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1981: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1982: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1984: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1984: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1985: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1987: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1990: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1990: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1991: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:1996: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2114: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2115: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2117: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2117: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2118: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2119: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2120: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2121: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2122: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2125: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2130: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2131: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2133: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2133: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2134: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2135: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2136: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2137: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2138: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2141: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2143: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2144: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2146: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2146: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2147: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2149: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2151: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2152: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2154: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2156: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2156: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2161: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2169: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2172: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2173: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2174: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2177: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2177: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2179: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2180: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2182: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2183: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2184: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2186: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2187: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2188: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv:2193: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:68: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:68: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:68: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:68: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:68: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:70: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:70: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:70: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:70: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:70: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:77: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:78: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:78: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:79: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:80: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:81: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:82: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:83: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:84: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:87: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:87: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:87: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:87: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:87: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:88: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:88: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:90: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:91: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:92: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:97: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:97: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:97: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:97: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:99: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:100: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv:101: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv:17: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv:107: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:160: sorry: Given type 13parray_type_t not supported here (pform.cc:2370).
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:1896: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:1896: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:1896: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:1896: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:1896: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:1957: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:31: sorry: Given type 13parray_type_t not supported here (pform.cc:2370).
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:44: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:44: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:44: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:44: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:44: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv:54: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv:31: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv:32: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv:397: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv:487: error: duplicate declaration for net or variable 'dec_i0_trigger_match_d' in 'dec_trigger'.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv:488: error: duplicate declaration for net or variable 'dec_i1_trigger_match_d' in 'dec_trigger'.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:263: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:264: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:266: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:266: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:267: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:268: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv:269: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv:18: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv:38: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:374: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:375: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:376: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:376: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:378: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:379: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:381: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:382: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:384: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:385: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv:390: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv:90: sorry: Given type 13parray_type_t not supported here (pform.cc:2370).
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:231: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:232: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:233: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:233: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:234: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:235: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:236: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:238: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:239: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:240: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:241: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:242: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:246: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:202: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:202: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:202: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:202: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:202: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:227: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:230: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:261: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:263: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:264: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:264: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:264: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:264: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:264: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:269: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:295: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:295: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:295: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:295: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:295: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:305: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:309: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:310: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:310: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:311: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:311: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:311: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:311: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:311: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:314: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:317: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:317: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:317: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:317: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:317: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:319: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:321: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:322: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:327: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:327: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:327: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:327: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:328: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:328: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:331: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:335: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:336: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:336: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:337: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:337: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:337: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:337: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:337: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:343: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:344: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:348: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:349: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:351: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:352: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:356: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:357: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:359: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:360: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:364: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:365: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:367: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:368: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:372: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:372: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:372: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:372: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:382: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv:385: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:28: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:27: error: Syntax error defining function.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:198: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:198: error: syntax error localparam list.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:248: Compound type is not PACKED in this context.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:266: Compound type is not PACKED in this context.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:375: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:375: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:375: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:375: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:375: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:379: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:381: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:381: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:381: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:381: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:384: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:384: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:384: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:384: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:384: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:390: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:394: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:397: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:397: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:397: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:397: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:397: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:400: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:403: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:404: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:404: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:405: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:405: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:405: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:405: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:405: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:407: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:408: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:409: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:411: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:412: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:413: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:414: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:423: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:451: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:451: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:451: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:451: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:451: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:455: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:461: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:461: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:461: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:461: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:461: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:465: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:467: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:507: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:507: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:508: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:508: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:519: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:519: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:519: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:519: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:519: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:522: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:526: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:548: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:549: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:550: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:550: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:551: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:552: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:555: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:555: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:555: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:555: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:555: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:558: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:566: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:566: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:566: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:566: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:569: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:579: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:579: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:579: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:579: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:583: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:585: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:591: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:591: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:591: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:591: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:591: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:592: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:592: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:601: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:601: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:602: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:609: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:609: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:609: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:609: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:627: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:628: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:629: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:629: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:630: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:631: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:632: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:633: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:634: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:635: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:636: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:637: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:641: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:641: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:642: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:644: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:645: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:646: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:649: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:649: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:650: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:653: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:653: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:654: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:655: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:656: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:659: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:659: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:660: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:662: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:663: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:664: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:666: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:668: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:671: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:671: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:672: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:673: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:676: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:676: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:677: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:678: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:679: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:680: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:681: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:682: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:683: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:684: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:685: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:688: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:690: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:708: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:717: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:718: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:718: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:719: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:720: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:721: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:721: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:721: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:721: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:721: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:723: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:724: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:725: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:729: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:736: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:737: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:738: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:738: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:738: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:738: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:738: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:744: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:754: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:755: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:756: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:756: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:757: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:758: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:759: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:760: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:761: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:762: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:762: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:762: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:762: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:762: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:765: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:766: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:767: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:768: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:769: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:770: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:774: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:789: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:790: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:791: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:791: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:791: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:791: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:791: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:798: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:802: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:803: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:804: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:804: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:804: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:804: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:804: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:810: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:811: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:812: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:813: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:813: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:814: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:814: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:814: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:814: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:814: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:816: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:819: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:837: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:837: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:854: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:854: error: syntax error in continuous assignment
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:305: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:305: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:305: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:305: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:305: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:365: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:368: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:369: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:369: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:370: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:370: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:370: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:370: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:370: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:372: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:377: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:119: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:119: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:119: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:119: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:119: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:124: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:140: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:164: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:165: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:173: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv:175: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:88: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:88: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:88: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:88: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:88: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:119: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:122: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:136: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:136: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:136: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:136: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:136: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:141: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:147: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:32: sorry: Given type 13parray_type_t not supported here (pform.cc:2370).
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:48: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:48: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:48: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:48: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:48: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv:58: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:115: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:399: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:400: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:401: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:401: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:402: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:403: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:404: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:405: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:409: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:409: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:410: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:411: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:415: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:415: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:416: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:420: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:420: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:423: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:424: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:425: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:426: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:429: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:429: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:430: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:433: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:433: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:434: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:437: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:437: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:438: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:439: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:440: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:443: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:443: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:444: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:447: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:447: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:448: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:449: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:450: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:451: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:452: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:455: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:467: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:487: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:488: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:489: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:489: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:490: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:491: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:492: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:493: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:494: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:497: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:497: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:498: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:499: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:500: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:501: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:502: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:505: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:505: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:506: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:507: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:508: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:511: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:511: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:512: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:513: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:514: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:517: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:517: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:518: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:521: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:521: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:522: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:525: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:525: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:526: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:529: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:529: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:530: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:533: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:533: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:534: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:535: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:536: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:539: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:539: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:540: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:541: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:542: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:545: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:545: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:546: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:547: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:548: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:549: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:552: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:552: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:553: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:554: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:555: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:556: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:557: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:558: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:561: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv:563: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:93: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:94: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:96: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:96: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:97: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:97: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:98: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:98: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:99: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:99: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:100: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:100: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:101: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:101: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:102: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:102: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:103: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:103: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:104: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:104: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:105: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:105: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:106: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:106: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:107: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:107: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:108: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:108: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:109: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:109: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:110: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:110: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:111: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:111: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:112: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:112: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:117: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:118: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:118: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:119: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:121: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:163: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:164: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:168: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:168: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:171: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:171: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:172: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:172: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:177: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:177: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:178: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:178: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:179: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:179: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:182: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:182: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:183: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:183: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv:188: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:34: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:36: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:37: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:38: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:39: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:52: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:160: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:160: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:254: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:255: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:256: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:258: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:271: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:272: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:273: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:273: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:275: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:275: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:275: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:275: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:275: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:277: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:287: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:288: error: duplicate declaration for net or variable 'done' in 'rvfindfirst1'.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:290: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:291: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:292: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:292: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:293: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:293: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:293: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:293: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:293: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:295: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:308: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:318: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:319: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:320: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:322: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv:375: syntax error
+I give up.

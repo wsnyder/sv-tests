@@ -1,0 +1,23 @@
+name: illegal_forward_def_implements
+description: implementing forward typedef for an interface class should fail
+should_fail: 1
+tags: 8.26.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv
+incdirs: 
+top_module: 
+rc: 14
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:8: error: Syntax error in typedef clause.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:10: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:11: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:11: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:16: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:18: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:18: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:21: error: invalid module item.

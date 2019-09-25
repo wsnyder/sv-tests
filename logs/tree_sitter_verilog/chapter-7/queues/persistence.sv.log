@@ -1,0 +1,9 @@
+name: queues-elements-persistence
+description: Test status of persistence of references to elements of queue
+should_fail: 0
+tags: 7.10.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv
+incdirs: 
+top_module: 
+rc: 0
+

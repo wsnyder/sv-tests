@@ -1,0 +1,11 @@
+name: assign_in_expr_inv
+description: invalid assignment in expression test
+should_fail: 1
+tags: 11.3.6
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr_inv.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr_inv.sv:14: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr_inv.sv:14: Syntax in assignment statement l-value.

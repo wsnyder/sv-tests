@@ -1,0 +1,24 @@
+name: tagged_union
+description: tagged union test
+should_fail: 0
+tags: 11.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv:9:9: error: language feature not yet supported
+typedef union tagged {
+        ^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv:17:6: error: language feature not yet supported
+	a = tagged Invalid;
+	    ^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv:18:6: error: language feature not yet supported
+	b = tagged Valid(42);
+	    ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv:18:18: error: expected ';'
+	b = tagged Valid(42);
+	                ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv:18:18: error: expected statement
+	b = tagged Valid(42);
+	                ^

@@ -1,0 +1,11 @@
+name: string_hextoa
+description: string.hextoa()  tests
+should_fail: 0
+tags: 6.16.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.12--string_hextoa.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.12--string_hextoa.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.12--string_hextoa.sv:9: error: Invalid module instantiation

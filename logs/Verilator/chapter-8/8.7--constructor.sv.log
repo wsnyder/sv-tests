@@ -1,0 +1,18 @@
+name: constructor
+description: class constructor test
+should_fail: 0
+tags: 8.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:10: syntax error, unexpected '(', expecting '['
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: Cannot continue
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv

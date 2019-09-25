@@ -1,0 +1,13 @@
+name: class_member_test_4
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_4.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_4.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_4.sv:8: error: Error in task/function port item after port name arg_type.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_4.sv:8: syntax error
+I give up.

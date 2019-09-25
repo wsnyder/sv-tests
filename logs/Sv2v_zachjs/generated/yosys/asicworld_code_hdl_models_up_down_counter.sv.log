@@ -1,0 +1,30 @@
+name: asicworld_code_hdl_models_up_down_counter
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_up_down_counter.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module up_down_counter (
+	out,
+	up_down,
+	clk,
+	reset
+);
+	output [7:0] out;
+	input up_down;
+	input clk;
+	input reset;
+	reg [7:0] out;
+	always @(posedge clk) if (reset) begin
+		out <= 8'b0;
+	end
+	else if (up_down) begin
+		out <= (out + 1);
+	end
+	else begin
+		out <= (out - 1);
+	end
+endmodule

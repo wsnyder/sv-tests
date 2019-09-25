@@ -1,0 +1,14 @@
+name: sva_basic04
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:2: syntax error, unexpected ':', expecting TOK_ID or '#'

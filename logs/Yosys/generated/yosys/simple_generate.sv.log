@@ -1,0 +1,14 @@
+name: simple_generate
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Index in generate block prefix syntax at /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:110 is not constant!

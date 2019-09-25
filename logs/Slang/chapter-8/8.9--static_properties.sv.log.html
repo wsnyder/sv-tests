@@ -1,0 +1,25 @@
+<pre>name: static_properties
+description: static class properties test
+should_fail: 0
+tags: 8.9
+files: <a href="../../../tests/chapter-8/8.9--static_properties.sv" target="file-frame">tests/chapter-8/8.9--static_properties.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.9--static_properties.sv" target="file-frame">tests/chapter-8/8.9--static_properties.sv</a>:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.9--static_properties.sv" target="file-frame">tests/chapter-8/8.9--static_properties.sv</a>:12:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj0;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.9--static_properties.sv" target="file-frame">tests/chapter-8/8.9--static_properties.sv</a>:13:2: error: use of undeclared identifier 'test_cls'
+	test_cls test_obj1;
+	^~~~~~~~
+<a href="../../../tests/chapter-8/8.9--static_properties.sv" target="file-frame">tests/chapter-8/8.9--static_properties.sv</a>:16:15: error: language feature not yet supported
+		test_obj0 = new;
+		            ^~~
+<a href="../../../tests/chapter-8/8.9--static_properties.sv" target="file-frame">tests/chapter-8/8.9--static_properties.sv</a>:17:15: error: language feature not yet supported
+		test_obj1 = new;
+		            ^~~
+</pre>

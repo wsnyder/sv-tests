@@ -1,0 +1,14 @@
+name: operations-on-arrays-treat-as-integer
+description: Test packed arrays operations support (treat array as integer)
+should_fail: 0
+tags: 7.4.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/treat-as-integer.sv
+incdirs: 
+top_module: 
+rc: 1
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+ERROR: Failed to evaluate system task `$display' with non-constant argument at /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/treat-as-integer.sv:15.

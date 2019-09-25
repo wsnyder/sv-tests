@@ -1,0 +1,15 @@
+name: global_constant
+description: class with global constant variable
+should_fail: 0
+tags: 8.19
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.19--global_constant.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.19--global_constant.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.19--global_constant.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.19--global_constant.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 3 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.19--global_constant.sv

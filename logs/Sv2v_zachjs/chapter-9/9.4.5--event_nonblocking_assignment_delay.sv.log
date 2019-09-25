@@ -1,0 +1,16 @@
+name: event_nonblocking_assignment_delay
+description: event non blk assignment delay
+should_fail: 0
+tags: 9.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_delay.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module block_tb;
+	reg a = 0;
+	wire b = 1;
+	initial begin
+		a <= #(10) b;
+	end
+endmodule

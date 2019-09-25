@@ -1,0 +1,15 @@
+name: structure-arrays-illegal
+description: Structure array assignment tests
+should_fail: 1
+tags: 5.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-arrays-illegal.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	struct {
+		reg signed [31:0] a;
+		reg signed [31:0] b;
+	} ms [1:0] = {0, 0, 1, 1};
+endmodule

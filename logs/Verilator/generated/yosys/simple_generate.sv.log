@@ -1,0 +1,22 @@
+name: simple_generate
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:43: Unsupported: Multiple top level modules: gen_test2 and gen_test1
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:43: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:70: Unsupported: Multiple top level modules: gen_test3 and gen_test2
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:70: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:97: Unsupported: Multiple top level modules: gen_test4 and gen_test3
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:97: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:118: Unsupported: Multiple top level modules: gen_test5 and gen_test4
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:118: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:154: Unsupported: Multiple top level modules: gen_test6 and gen_test5
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:154: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 10 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v

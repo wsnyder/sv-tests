@@ -1,0 +1,26 @@
+name: simple_dff_different_styles
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:9: Unsupported: Multiple top level modules: dffa and dff
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:9: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:20: Unsupported: Multiple top level modules: dffa1 and dffa
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:20: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:31: Unsupported: Multiple top level modules: dffa2 and dffa1
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:31: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:42: Unsupported: Multiple top level modules: dffa3 and dffa2
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:42: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:53: Unsupported: Multiple top level modules: dffa4 and dffa3
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:53: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:72: Unsupported: Multiple top level modules: dffsr1 and dffa4
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:72: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:83: Unsupported: Multiple top level modules: dffsr2 and dffsr1
+%Error-MULTITOP: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v:83: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 14 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v

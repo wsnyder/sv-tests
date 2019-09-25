@@ -1,0 +1,18 @@
+name: forward_declaration
+description: class forward declaration test
+should_fail: 0
+tags: 8.27
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.27--forward_declaration.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.27--forward_declaration.sv:8:16: error: forward typedef 'C2' does not resolve to a data type
+	typedef class C2;
+	              ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.27--forward_declaration.sv:10:2: error: language feature not yet supported
+	class C1;
+	^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.27--forward_declaration.sv:14:2: error: language feature not yet supported
+	class C2;
+	^~~~~~~~~

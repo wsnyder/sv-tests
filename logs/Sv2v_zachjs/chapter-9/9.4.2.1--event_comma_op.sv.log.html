@@ -1,0 +1,18 @@
+<pre>name: event_comma_op
+description: event comma operator
+should_fail: 0
+tags: 9.4.2.1
+files: <a href="../../../tests/chapter-9/9.4.2.1--event_comma_op.sv" target="file-frame">tests/chapter-9/9.4.2.1--event_comma_op.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module block_tb;
+	wire a = 0;
+	wire b = 0;
+	wire c = 0;
+	wire d = 0;
+	wire out = 0;
+	always @(a or b or c or d) out = ((a | b) & (c | d));
+endmodule
+</pre>

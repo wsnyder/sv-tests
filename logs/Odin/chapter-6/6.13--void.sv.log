@@ -1,0 +1,20 @@
+name: void
+description: void type tests
+should_fail: 0
+tags: 6.13
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(' or ';')
+	function void fun();
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv::10 error in parsing: (syntax error, unexpected vENDFUNCTION)
+	endfunction

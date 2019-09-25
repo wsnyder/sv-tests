@@ -1,0 +1,16 @@
+name: dynamic-arrays-op-size
+description: Test dynamic arrays operator size support
+should_fail: 0
+tags: 7.5.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:9: syntax error, unexpected ']', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:12: syntax error, unexpected '[', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv:14: syntax error, unexpected '[', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 5 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv

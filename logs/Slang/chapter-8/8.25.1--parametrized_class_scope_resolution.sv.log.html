@@ -1,0 +1,22 @@
+<pre>name: parametrized_class_scope_resolution
+description: parametrized class scope resolution
+should_fail: 0
+tags: 8.25.1
+files: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv</a>:9:2: error: language feature not yet supported
+	class par_cls #(int a = 25);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv</a>:13:2: error: language feature not yet supported
+	par_cls #(15) inst;
+	^~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv</a>:16:10: error: language feature not yet supported
+		inst = new;
+		       ^~~
+<a href="../../../tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_scope_resolution.sv</a>:18:12: error: language feature not yet supported
+		$display(par_cls#()::b);
+		         ^~~~~~~~~~~~~
+</pre>

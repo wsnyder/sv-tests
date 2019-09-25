@@ -1,0 +1,39 @@
+<pre>name: simple_arraycells
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/arraycells.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module array_test001 (
+	a,
+	b,
+	c,
+	y
+);
+	input a;
+	input [31:0] b;
+	input [31:0] c;
+	output [31:0] y;
+	aoi12 p [31:0] (
+		a,
+		b,
+		c,
+		y
+	);
+endmodule
+module aoi12 (
+	a,
+	b,
+	c,
+	y
+);
+	input a;
+	input b;
+	input c;
+	output y;
+	assign y = (~ ((a & b) | c));
+endmodule
+</pre>

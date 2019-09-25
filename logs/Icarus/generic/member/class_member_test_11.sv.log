@@ -1,0 +1,10 @@
+name: class_member_test_11
+description: Test
+should_fail: 0
+tags: 8.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_11.sv
+incdirs: 
+top_module: 
+rc: 1
+
+No top level modules, and no -s option.

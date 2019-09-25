@@ -1,0 +1,9 @@
+name: case_set
+description: A module testing case set membership
+should_fail: 0
+tags: 12.5.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv
+incdirs: 
+top_module: 
+rc: 0
+

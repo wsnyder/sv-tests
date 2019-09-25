@@ -1,0 +1,12 @@
+name: associative-arrays-other-types
+description: Test associative arrays support
+should_fail: 0
+tags: 7.8.5 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/other.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/other.sv:14:11: error: 'Unpkt' does not refer to a value
+int arr [ Unpkt ];
+          ^~~~~

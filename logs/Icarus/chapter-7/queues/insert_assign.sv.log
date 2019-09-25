@@ -1,0 +1,11 @@
+name: insert
+description: Update queue by assignment (insert)
+should_fail: 0
+tags: 7.10.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/insert_assign.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/insert_assign.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/insert_assign.sv:13: error: malformed statement

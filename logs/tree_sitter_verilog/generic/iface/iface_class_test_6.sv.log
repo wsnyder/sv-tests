@@ -1,0 +1,17 @@
+name: iface_class_test_6
+description: Test
+should_fail: 0
+tags: 8.3 8.26
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_6.sv
+incdirs: 
+top_module: 
+rc: 1
+
+(0, 0) source_file
+(6, 0) package_item
+(6, 0) interface_class_declaration
+(7, 0) interface_class_item
+(7, 0) type_declaration
+(7, 11) type_identifier
+(7, 11) simple_identifier
+(7, 17) ERROR

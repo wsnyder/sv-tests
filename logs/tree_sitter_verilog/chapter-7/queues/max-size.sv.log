@@ -1,0 +1,9 @@
+name: max-size
+description: Test queues size support
+should_fail: 0
+tags: 7.10.1 7.10.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/max-size.sv
+incdirs: 
+top_module: 
+rc: 0
+

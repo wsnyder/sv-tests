@@ -1,0 +1,26 @@
+name: type_access_implements_invalid
+description: access types from implemented class
+should_fail: 1
+tags: 8.26.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	interface class ihello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv::9 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+		typedef int int_t;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv::10 error in parsing: (syntax error, unexpected vFUNCTION, expecting '(')
+		pure virtual function void hello(int_t val);
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv::13 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+	class Hello implements ihello;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv::16 error in parsing: (syntax error, unexpected vENDFUNCTION)
+		endfunction

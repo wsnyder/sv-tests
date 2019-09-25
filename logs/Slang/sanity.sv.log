@@ -1,0 +1,12 @@
+name: sanity
+description: A simple module that should fail during parsing
+should_fail: 1
+tags: sanity
+files: /home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/sanity.sv:13:1: error: expected member
+syntaxerror
+^~~~~~~~~~~

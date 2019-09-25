@@ -1,0 +1,31 @@
+<pre>name: unpack_stream_pad
+description: padded stream unpack test
+should_fail: 0
+tags: 11.4.14.3
+files: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_pad.sv" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_pad.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire signed [31:0] a = 1;
+	wire signed [31:0] b = 2;
+	wire signed [31:0] c = 3;
+	initial begin : sv2v_autoblock_0
+		reg [127:0] d;
+		begin : sv2v_autoblock_1
+			reg [127:0] _sv2v_strm_C56E6_inp;
+			reg [127:0] _sv2v_strm_C56E6_out;
+			integer _sv2v_strm_C56E6_idx;
+			integer _sv2v_strm_C56E6_bas;
+			_sv2v_strm_C56E6_inp = {{32 {1'b0}}, a, b, c};
+			for (_sv2v_strm_C56E6_idx = 0; (_sv2v_strm_C56E6_idx <= 126); _sv2v_strm_C56E6_idx = (_sv2v_strm_C56E6_idx + 1))
+				_sv2v_strm_C56E6_out[(127 - _sv2v_strm_C56E6_idx)-:1] = _sv2v_strm_C56E6_inp[_sv2v_strm_C56E6_idx+:1];
+			_sv2v_strm_C56E6_bas = _sv2v_strm_C56E6_idx;
+			for (_sv2v_strm_C56E6_idx = 0; (_sv2v_strm_C56E6_idx < (128 - _sv2v_strm_C56E6_bas)); _sv2v_strm_C56E6_idx = (_sv2v_strm_C56E6_idx + 1))
+				_sv2v_strm_C56E6_out[_sv2v_strm_C56E6_idx] = _sv2v_strm_C56E6_inp[(_sv2v_strm_C56E6_idx + _sv2v_strm_C56E6_bas)];
+			d = _sv2v_strm_C56E6_out;
+		end
+	end
+endmodule
+</pre>

@@ -1,0 +1,15 @@
+name: asicworld_code_verilog_tutorial_first_counter_tb
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_first_counter_tb.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_first_counter_tb.v:9: warning: macro outfile undefined (and assumed null) at this point.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_first_counter_tb.v:30: error: Unknown module type: first_counter
+2 error(s) during elaboration.
+*** These modules were missing:
+        first_counter referenced 1 times.
+***

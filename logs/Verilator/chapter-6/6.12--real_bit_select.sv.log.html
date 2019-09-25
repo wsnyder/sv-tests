@@ -1,0 +1,16 @@
+<pre>name: real_idx
+description: real indexing tests
+should_fail: 1
+tags: 6.12
+files: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>:11: Illegal bit or array select; type does not have a bit range, or bad dimension: type is real
+%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>:11: Expected integral (non-real) input to SEL
+%Warning-REALCVT: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>:11: Implicit conversion of real to integer
+%Warning-REALCVT: Use "/* verilator lint_off REALCVT */" and lint_on around source to disable this message.
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-6/6.12--real_bit_select.sv" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
+</pre>

@@ -1,0 +1,40 @@
+<pre>name: typed_constructor
+description: class typed constructor test
+should_fail: 0
+tags: 8.8
+files: <a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:8:2: error: language feature not yet supported
+	class super_cls;
+	^~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:10:11: error: expected identifier
+		function new(int def = 3);
+		        ^
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:10:12: error: expected statement
+		function new(int def = 3);
+		         ^~~
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:10:27: error: expected declarator
+		function new(int def = 3);
+		                        ^
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:15:2: error: language feature not yet supported
+	class test_cls extends super_cls;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:17:11: error: expected identifier
+		function new(int def = 42);
+		        ^
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:17:12: error: expected statement
+		function new(int def = 42);
+		         ^~~
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:17:28: error: expected declarator
+		function new(int def = 42);
+		                         ^
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:23:2: error: use of undeclared identifier 'super_cls'
+	super_cls super_obj;
+	^~~~~~~~~
+<a href="../../../tests/chapter-8/8.8--typed_constructor.sv" target="file-frame">tests/chapter-8/8.8--typed_constructor.sv</a>:26:15: error: language feature not yet supported
+		super_obj = test_cls::new;
+		            ^~~~~~~~~~~~~
+</pre>

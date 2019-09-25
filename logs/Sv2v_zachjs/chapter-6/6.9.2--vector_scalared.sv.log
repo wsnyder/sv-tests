@@ -1,0 +1,10 @@
+name: vector_scalared
+description: scalared vector tests
+should_fail: 0
+tags: 6.9.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv:8:15: Parse error: unexpected token 'scalared' (KW_scalared).

@@ -1,0 +1,16 @@
+<pre>name: always_latch
+description: always_latch check
+should_fail: 0
+tags: 9.2.2.3
+files: <a href="../../../tests/chapter-9/9.2.2.3--always_latch.sv" target="file-frame">tests/chapter-9/9.2.2.3--always_latch.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module always_tb;
+	wire a = 0;
+	wire b = 0;
+	reg q = 0;
+	always_latch if (a) q <= b;
+endmodule
+</pre>

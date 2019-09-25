@@ -1,0 +1,135 @@
+name: asicworld_code_specman_switch_fabric
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::22 error in parsing: (syntax error, unexpected '(')
+(* gentb_clock *)
+WARNING (3)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~0) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (4)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~1) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (5)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~2) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (6)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~3) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (7)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~4) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (8)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~5) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (9)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~6) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (10)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack3~7) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (11)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~0) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (12)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~1) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (13)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~2) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (14)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~3) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (15)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~4) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (16)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~5) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (17)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~6) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (18)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack4~7) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (19)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~0) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (20)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~1) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (21)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~2) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (22)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~3) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (23)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~4) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (24)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~5) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (25)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~6) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (26)::NETLIST_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v::20 This output is undriven (switch_fabric^data_out_ack5~7) and will be removed
+output [7:0]    data_out_ack3, data_out_ack4, data_out_ack5;
+WARNING (27)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~106 is itself undriven.
+WARNING (28)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~107 is itself undriven.
+WARNING (29)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~108 is itself undriven.
+WARNING (30)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~109 is itself undriven.
+WARNING (31)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~110 is itself undriven.
+WARNING (32)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~111 is itself undriven.
+WARNING (33)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~112 is itself undriven.
+WARNING (34)::NETLIST_ERROR Net (null) driving node switch_fabric.port_3^nMUX~14^MUX_2~113 is itself undriven.
+WARNING (35)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~115 is itself undriven.
+WARNING (36)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~116 is itself undriven.
+WARNING (37)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~117 is itself undriven.
+WARNING (38)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~118 is itself undriven.
+WARNING (39)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~119 is itself undriven.
+WARNING (40)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~120 is itself undriven.
+WARNING (41)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~121 is itself undriven.
+WARNING (42)::NETLIST_ERROR Net (null) driving node switch_fabric.port_4^nMUX~18^MUX_2~122 is itself undriven.
+WARNING (43)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~124 is itself undriven.
+WARNING (44)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~125 is itself undriven.
+WARNING (45)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~126 is itself undriven.
+WARNING (46)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~127 is itself undriven.
+WARNING (47)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~128 is itself undriven.
+WARNING (48)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~129 is itself undriven.
+WARNING (49)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~130 is itself undriven.
+WARNING (50)::NETLIST_ERROR Net (null) driving node switch_fabric.port_5^nMUX~22^MUX_2~131 is itself undriven.
+WARNING (51)::NETLIST_ERROR Net switch_fabric^data_out_ack3~0 driving node switch_fabric^data_out_ack3~0 is itself undriven.
+WARNING (52)::NETLIST_ERROR Net switch_fabric^data_out_ack3~1 driving node switch_fabric^data_out_ack3~1 is itself undriven.
+WARNING (53)::NETLIST_ERROR Net switch_fabric^data_out_ack3~2 driving node switch_fabric^data_out_ack3~2 is itself undriven.
+WARNING (54)::NETLIST_ERROR Net switch_fabric^data_out_ack3~3 driving node switch_fabric^data_out_ack3~3 is itself undriven.
+WARNING (55)::NETLIST_ERROR Net switch_fabric^data_out_ack3~4 driving node switch_fabric^data_out_ack3~4 is itself undriven.
+WARNING (56)::NETLIST_ERROR Net switch_fabric^data_out_ack3~5 driving node switch_fabric^data_out_ack3~5 is itself undriven.
+WARNING (57)::NETLIST_ERROR Net switch_fabric^data_out_ack3~6 driving node switch_fabric^data_out_ack3~6 is itself undriven.
+WARNING (58)::NETLIST_ERROR Net switch_fabric^data_out_ack3~7 driving node switch_fabric^data_out_ack3~7 is itself undriven.
+WARNING (59)::NETLIST_ERROR Net switch_fabric^data_out_ack4~0 driving node switch_fabric^data_out_ack4~0 is itself undriven.
+WARNING (60)::NETLIST_ERROR Net switch_fabric^data_out_ack4~1 driving node switch_fabric^data_out_ack4~1 is itself undriven.
+WARNING (61)::NETLIST_ERROR Net switch_fabric^data_out_ack4~2 driving node switch_fabric^data_out_ack4~2 is itself undriven.
+WARNING (62)::NETLIST_ERROR Net switch_fabric^data_out_ack4~3 driving node switch_fabric^data_out_ack4~3 is itself undriven.
+WARNING (63)::NETLIST_ERROR Net switch_fabric^data_out_ack4~4 driving node switch_fabric^data_out_ack4~4 is itself undriven.
+WARNING (64)::NETLIST_ERROR Net switch_fabric^data_out_ack4~5 driving node switch_fabric^data_out_ack4~5 is itself undriven.
+WARNING (65)::NETLIST_ERROR Net switch_fabric^data_out_ack4~6 driving node switch_fabric^data_out_ack4~6 is itself undriven.
+WARNING (66)::NETLIST_ERROR Net switch_fabric^data_out_ack4~7 driving node switch_fabric^data_out_ack4~7 is itself undriven.
+WARNING (67)::NETLIST_ERROR Net switch_fabric^data_out_ack5~0 driving node switch_fabric^data_out_ack5~0 is itself undriven.
+WARNING (68)::NETLIST_ERROR Net switch_fabric^data_out_ack5~1 driving node switch_fabric^data_out_ack5~1 is itself undriven.
+WARNING (69)::NETLIST_ERROR Net switch_fabric^data_out_ack5~2 driving node switch_fabric^data_out_ack5~2 is itself undriven.
+WARNING (70)::NETLIST_ERROR Net switch_fabric^data_out_ack5~3 driving node switch_fabric^data_out_ack5~3 is itself undriven.
+WARNING (71)::NETLIST_ERROR Net switch_fabric^data_out_ack5~4 driving node switch_fabric^data_out_ack5~4 is itself undriven.
+WARNING (72)::NETLIST_ERROR Net switch_fabric^data_out_ack5~5 driving node switch_fabric^data_out_ack5~5 is itself undriven.
+WARNING (73)::NETLIST_ERROR Net switch_fabric^data_out_ack5~6 driving node switch_fabric^data_out_ack5~6 is itself undriven.
+WARNING (74)::NETLIST_ERROR Net switch_fabric^data_out_ack5~7 driving node switch_fabric^data_out_ack5~7 is itself undriven.
+--------------------------------------------------------------------
+Welcome to ODIN II version 0.1 - the better High level synthesis tools++ targetting FPGAs (mainly VPR)
+Email: jamieson.peter@gmail.com and ken@unb.ca for support issues
+
+--------------------------------------------------------------------
+High-level synthesis Begin
+Parser starting - we'll create an abstract syntax tree. Note this tree can be viewed using Grap Viz (see documentation)
+Adding file /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_specman_switch_fabric.v to parse list
+Optimizing module by AST based optimizations
+Converting AST into a Netlist. Note this netlist can be viewed using GraphViz (see documentation)
+==========================
+Detected Top Level Module: 	switch_fabric
+==========================
+Performing Optimizations of the Netlist
+Performing Partial Map to target device
+Outputting the netlist to the specified output format
+Successful High-level synthesis by Odin
+	Blif file available at  odin.blif
+	Ran in 9.5ms
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+Odin ran with exit status: 0
+Odin II took 0.01 seconds (max_rss 6.9 MiB)

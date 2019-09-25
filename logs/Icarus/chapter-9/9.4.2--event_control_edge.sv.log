@@ -1,0 +1,12 @@
+name: event_control_edge
+description: event control
+should_fail: 0
+tags: 9.4.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_edge.sv
+incdirs: 
+top_module: 
+rc: 3
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_edge.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_edge.sv:10: error: Malformed event control expression.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_edge.sv:10: error: Invalid event control.

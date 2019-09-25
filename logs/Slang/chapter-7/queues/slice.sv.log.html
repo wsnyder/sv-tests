@@ -1,0 +1,16 @@
+<pre>name: slice
+description: Test queues slice support
+should_fail: 0
+tags: 7.10.1 7.10.2
+files: <a href="../../../../tests/chapter-7/queues/slice.sv" target="file-frame">tests/chapter-7/queues/slice.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../../tests/chapter-7/queues/slice.sv" target="file-frame">tests/chapter-7/queues/slice.sv</a>:9:6: error: dimension requires a constant range
+int q[$:5];
+     ^~~~~
+<a href="../../../../tests/chapter-7/queues/slice.sv" target="file-frame">tests/chapter-7/queues/slice.sv</a>:10:6: error: dimension requires a constant range
+int r[$];
+     ^~~
+</pre>

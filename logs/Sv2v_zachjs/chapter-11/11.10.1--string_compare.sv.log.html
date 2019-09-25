@@ -1,0 +1,19 @@
+<pre>name: string_compare
+description: string comparison test
+should_fail: 0
+tags: 11.10.1
+files: <a href="../../../tests/chapter-11/11.10.1--string_compare.sv" target="file-frame">tests/chapter-11/11.10.1--string_compare.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	reg [112:1] a;
+	reg [112:1] b;
+	initial begin
+		a = "Test";
+		b = "Test";
+		$display((a == b));
+	end
+endmodule
+</pre>

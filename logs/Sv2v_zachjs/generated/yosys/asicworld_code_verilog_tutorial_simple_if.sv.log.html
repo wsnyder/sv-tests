@@ -1,0 +1,18 @@
+<pre>name: asicworld_code_verilog_tutorial_simple_if
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_if.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module simple_if;
+	reg latch;
+	wire enable;
+	wire din;
+	always @(enable or din) if (enable) begin
+		latch <= din;
+	end
+endmodule
+</pre>

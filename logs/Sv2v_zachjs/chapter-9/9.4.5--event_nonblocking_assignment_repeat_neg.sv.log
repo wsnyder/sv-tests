@@ -1,0 +1,10 @@
+name: event_nonblocking_assignment_repeat
+description: event non blk assignment repeat
+should_fail: 0
+tags: 9.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv:13:21: Parse error: unexpected token 'repeat' (KW_repeat).

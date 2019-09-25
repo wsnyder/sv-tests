@@ -1,0 +1,14 @@
+name: real_bit_select
+description: real bit select tests
+should_fail: 1
+tags: 6.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select_idx.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select_idx.sv:12: Bit extraction of var[3:0] requires 2 bit index, not 64 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select_idx.sv:12: Operator SEL expected non-complex non-double Extract Range in width check
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select_idx.sv

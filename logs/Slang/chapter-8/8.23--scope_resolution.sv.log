@@ -1,0 +1,18 @@
+name: scope_resolution
+description: access static method using scope resolution operator
+should_fail: 0
+tags: 8.23
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:16:12: error: unknown class or package 'test_cls'
+		$display(test_cls::next_id());
+		         ^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:17:12: error: unknown class or package 'test_cls'
+		$display(test_cls::next_id());
+		         ^~~~~~~~

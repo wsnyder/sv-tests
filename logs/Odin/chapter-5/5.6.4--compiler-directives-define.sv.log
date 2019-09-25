@@ -1,0 +1,19 @@
+name: define-directive
+description: Define and undef checks
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-define.sv
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-define.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-define.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+ERROR (3)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-define.sv::22 undefineall define cannot be found
+`undefineall
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/verilog_flex.l]load_define::736 

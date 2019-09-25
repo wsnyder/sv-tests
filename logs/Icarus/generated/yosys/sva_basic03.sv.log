@@ -1,0 +1,17 @@
+name: sva_basic03
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 8
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:7: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:7: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:7: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:8: error: malformed statement
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:8: error: Error in property_spec of concurrent assertion item.
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic03.sv:10: error: invalid module item.

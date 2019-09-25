@@ -1,0 +1,14 @@
+name: attributes-variable
+description: Assing attributes to a variable
+should_fail: 0
+tags: 5.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-variable.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	(* fsm_state *) wire [7:0] a;
+	(* fsm_state = 1 *) wire [7:0] b;
+	(* fsm_state = 0 *) wire [7:0] c;
+endmodule

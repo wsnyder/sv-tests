@@ -1,0 +1,13 @@
+name: asicworld_code_hdl_models_mux_2to1_gates
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:13: Signal definition not found, creating implicitly: inv_sel
+%Warning-IMPLICIT: Use "/* verilator lint_off IMPLICIT */" and lint_on around source to disable this message.
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:14: Signal definition not found, creating implicitly: asel
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:15: Signal definition not found, creating implicitly: bsel

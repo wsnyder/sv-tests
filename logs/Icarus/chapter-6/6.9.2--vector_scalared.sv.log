@@ -1,0 +1,13 @@
+name: vector_scalared
+description: scalared vector tests
+should_fail: 0
+tags: 6.9.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv
+incdirs: 
+top_module: 
+rc: 4
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv:8: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv:8: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv:10: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv:10: error: Invalid module instantiation

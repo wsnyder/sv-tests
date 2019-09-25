@@ -1,0 +1,19 @@
+<pre>name: vector_vectored_inv
+description: vectored vector invalid access tests
+should_fail: 1
+tags: 6.9.2
+files: <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>:8:7: error: expected declarator
+	logic vectored [15:0] a = 0;
+	     ^
+<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>:8:8: error: expected member
+	logic vectored [15:0] a = 0;
+	      ^~~~~~~~
+<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>:10:9: error: use of undeclared identifier 'a'
+	assign a[1] = 1;
+	       ^
+</pre>

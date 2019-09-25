@@ -1,0 +1,27 @@
+name: asicworld_code_hdl_models_mux_using_case
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_case.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module mux_using_case (
+	din_0,
+	din_1,
+	sel,
+	mux_out
+);
+	input din_0;
+	input din_1;
+	input sel;
+	output mux_out;
+	reg mux_out;
+	always @(sel or din_0 or din_1) begin : MUX
+		case (sel)
+			1'b0: mux_out = din_0;
+			1'b1: mux_out = din_1;
+		endcase
+	end
+endmodule

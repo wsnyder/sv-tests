@@ -1,0 +1,24 @@
+name: simple_dff_different_styles
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v' to AST representation.
+Generating RTLIL representation for module `\dff'.
+Generating RTLIL representation for module `\dffa'.
+Generating RTLIL representation for module `\dffa1'.
+Generating RTLIL representation for module `\dffa2'.
+Generating RTLIL representation for module `\dffa3'.
+Generating RTLIL representation for module `\dffa4'.
+Generating RTLIL representation for module `\dffsr1'.
+Generating RTLIL representation for module `\dffsr2'.
+Generating RTLIL representation for module `\dffsr2_sub'.
+Successfully finished Verilog frontend.

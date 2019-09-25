@@ -1,0 +1,9 @@
+name: this
+description: this keyword test
+should_fail: 0
+tags: 8.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.11--this.sv
+incdirs: 
+top_module: 
+rc: 0
+

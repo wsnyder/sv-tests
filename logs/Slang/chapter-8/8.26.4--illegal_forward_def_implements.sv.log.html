@@ -1,0 +1,25 @@
+<pre>name: illegal_forward_def_implements
+description: implementing forward typedef for an interface class should fail
+should_fail: 1
+tags: 8.26.4
+files: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>
+incdirs: 
+top_module: 
+rc: 1
+
+<a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>:8:26: error: forward typedef 'ihello' does not resolve to a data type
+	typedef interface class ihello;
+	                        ^
+<a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>:10:2: error: language feature not yet supported
+	class Hello implements ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>:16:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+<a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>:21:2: error: use of undeclared identifier 'Hello'
+	Hello obj;
+	^~~~~
+<a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>:24:9: error: language feature not yet supported
+		obj = new;
+		      ^~~
+</pre>

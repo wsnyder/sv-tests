@@ -1,0 +1,11 @@
+name: subarrays
+description: Test multidimensional subarrays assignments
+should_fail: 0
+tags: 7.4.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/subarrays.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/subarrays.sv:18: error: Cannot assign to array B['sd1]['sd1]. Did you forget a word index?
+1 error(s) during elaboration.

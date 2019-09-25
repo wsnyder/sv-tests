@@ -1,0 +1,15 @@
+name: dynamic-arrays-op-delete
+description: Test dynamic arrays operator delete support
+should_fail: 0
+tags: 7.5.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-delete.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-delete.sv:9:14: error: dimension requires a constant range
+bit [7:0] arr[];
+             ^~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-delete.sv:12:11: error: language feature not yet supported
+    arr = new [ 16 ];
+          ^~~~~~~~~~

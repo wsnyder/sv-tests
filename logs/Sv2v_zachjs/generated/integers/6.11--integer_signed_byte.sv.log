@@ -1,0 +1,12 @@
+name: integer_signed_byte
+description: byte signed net test
+should_fail: 0
+tags: 6.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_signed_byte.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire signed [7:0] v;
+endmodule

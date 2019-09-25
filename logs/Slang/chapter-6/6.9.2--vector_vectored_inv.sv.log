@@ -1,0 +1,18 @@
+name: vector_vectored_inv
+description: vectored vector invalid access tests
+should_fail: 1
+tags: 6.9.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored_inv.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored_inv.sv:8:7: error: expected declarator
+	logic vectored [15:0] a = 0;
+	     ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored_inv.sv:8:8: error: expected member
+	logic vectored [15:0] a = 0;
+	      ^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored_inv.sv:10:9: error: use of undeclared identifier 'a'
+	assign a[1] = 1;
+	       ^

@@ -1,0 +1,19 @@
+name: debug-directives
+description: Debugging compiler directives
+should_fail: 0
+tags: 5.6.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-debug.sv
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-debug.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-debug.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+ERROR (3)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-debug.sv::9 __FILE__ define cannot be found
+  initial $display("At %s @ %d\n", `__FILE__, `__LINE__);
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/verilog_flex.l]load_define::736 

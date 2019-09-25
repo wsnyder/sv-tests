@@ -1,0 +1,25 @@
+name: block_start_finish
+description: block start finish check
+should_fail: 0
+tags: 9.3.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:10: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:11: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:12: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:13: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:14: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:15: Unsupported: Verilog 1995 reserved word not implemented: join
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:17: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:18: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:19: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:20: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:21: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv:22: Unsupported: Verilog 1995 reserved word not implemented: join
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv

@@ -1,0 +1,15 @@
+<pre>name: simple_repwhile
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v:18: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'value' generates 8 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v:30: Operator FUNCREF 'myexp2' expects 8 bits on the Function Argument, but Function Argument's VARREF 'i' generates 32 bits.
+%Warning-INITIALDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v:29: Delayed assignments (<=) in initial or final block; suggest blocking assignments (=).
+%Warning-INITIALDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v:30: Delayed assignments (<=) in initial or final block; suggest blocking assignments (=).
+</pre>

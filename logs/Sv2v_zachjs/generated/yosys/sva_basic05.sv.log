@@ -1,0 +1,26 @@
+name: sva_basic05
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module top (
+	clock,
+	ctrl
+);
+	input wire clock;
+	input wire ctrl;
+	wire read;
+	wire write;
+	wire ready;
+	demo uut(
+		.clock(clock),
+		.ctrl(ctrl)
+	);
+	assign read = uut.read;
+	assign write = uut.write;
+	assign ready = uut.ready;
+endmodule

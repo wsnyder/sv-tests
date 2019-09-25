@@ -1,0 +1,27 @@
+name: sva_basic05
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:4:2: error: unknown module 'demo'
+	demo uut (
+	^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:9:16: error: use of undeclared identifier 'uut'
+	assign read = uut.read;
+	              ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:10:17: error: use of undeclared identifier 'uut'
+	assign write = uut.write;
+	               ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:11:17: error: use of undeclared identifier 'uut'
+	assign ready = uut.ready;
+	               ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:13:2: error: language feature not yet supported
+	a_rw: assert property ( @(posedge clock) !(read && write) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv:17:2: error: language feature not yet supported
+	a_wr: assert property ( @(posedge clock) write |=> ready );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

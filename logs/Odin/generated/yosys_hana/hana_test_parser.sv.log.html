@@ -1,0 +1,20 @@
+<pre>name: hana_test_parser
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v::4 error in parsing: (syntax error, unexpected vENDMODULE)
+
+ERROR (3)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v::11 Odin does not handle inouts (io)
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/parse_making_ast.cpp]markAndProcessPortWith::652 
+</pre>

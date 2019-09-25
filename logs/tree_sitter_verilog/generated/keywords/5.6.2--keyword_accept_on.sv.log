@@ -1,0 +1,9 @@
+name: accept_on
+description: The 'accept_on' keyword should be reserved
+should_fail: 1
+tags: 5.6.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_accept_on.sv
+incdirs: 
+top_module: 
+rc: 0
+

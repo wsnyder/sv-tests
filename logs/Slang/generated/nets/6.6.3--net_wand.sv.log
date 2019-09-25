@@ -1,0 +1,9 @@
+name: net_wand
+description: wand net test
+should_fail: 0
+tags: 6.6.3
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets/6.6.3--net_wand.sv
+incdirs: 
+top_module: 
+rc: 0
+

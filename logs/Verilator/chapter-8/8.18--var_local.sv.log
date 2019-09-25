@@ -1,0 +1,16 @@
+name: var_local
+description: class with local variable
+should_fail: 0
+tags: 8.18
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_local.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_local.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_local.sv:8: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_local.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: local
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_local.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_local.sv

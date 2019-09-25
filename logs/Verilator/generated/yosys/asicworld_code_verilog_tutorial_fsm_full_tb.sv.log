@@ -1,0 +1,27 @@
+name: asicworld_code_verilog_tutorial_fsm_full_tb
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:10: Define or directive not defined: `outfile
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:10: syntax error, unexpected ')', expecting TYPE-IDENTIFIER
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:18: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:19: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:20: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:21: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:22: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:23: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:24: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:25: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:26: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:27: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:28: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:36: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v:38: Unsupported: Ignoring delay on this delayed statement.
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v

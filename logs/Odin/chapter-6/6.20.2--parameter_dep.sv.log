@@ -1,0 +1,16 @@
+name: parameter_dep
+description: parameter depending on another parameter tests
+should_fail: 0
+tags: 6.20.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_dep.sv
+incdirs: 
+top_module: 
+rc: -11
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_dep.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_dep.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+

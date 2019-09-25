@@ -1,0 +1,12 @@
+name: associative-arrays-other-types
+description: Test associative arrays support
+should_fail: 0
+tags: 7.8.5 7.8
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/other.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/other.sv:11: syntax error, unexpected [*, expecting ',' or ';'
+%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/other.sv:7: ../V3ParseSym.h:112: Symbols suggest ending STRUCTDTYPE but parser thinks ending MODULE 'top'
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/other.sv

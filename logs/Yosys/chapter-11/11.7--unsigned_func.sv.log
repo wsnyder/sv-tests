@@ -1,0 +1,16 @@
+name: unsigned_func
+description: $unsigned() test
+should_fail: 0
+tags: 11.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--unsigned_func.sv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--unsigned_func.sv' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.

@@ -1,0 +1,15 @@
+name: simple_generate
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:123:8: error: identifier 'WIDTH' used before its declaration
+input [WIDTH-1:0] input_bits;
+       ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v:120:11: note: declared here
+parameter WIDTH = 256;
+          ^

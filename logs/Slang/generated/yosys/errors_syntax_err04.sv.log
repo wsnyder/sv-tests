@@ -1,0 +1,12 @@
+name: errors_syntax_err04
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err04.v
+should_fail: 1
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err04.v:2:6: error: packed dimensions require a full range specification
+wire [3]x;
+     ^~~

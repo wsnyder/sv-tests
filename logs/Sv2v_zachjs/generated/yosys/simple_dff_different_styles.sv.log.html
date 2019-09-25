@@ -1,0 +1,158 @@
+<pre>name: simple_dff_different_styles
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module dff (
+	clk,
+	d,
+	q
+);
+	input clk;
+	input d;
+	output reg q;
+	always @(posedge clk) q <= d;
+endmodule
+module dffa (
+	clk,
+	arst,
+	d,
+	q
+);
+	input clk;
+	input arst;
+	input d;
+	output reg q;
+	always @(posedge clk or posedge arst) begin
+		if (arst) q <= 1;
+		else q <= d;
+	end
+endmodule
+module dffa1 (
+	clk,
+	arst,
+	d,
+	q
+);
+	input clk;
+	input arst;
+	input d;
+	output reg q;
+	always @(posedge clk or negedge arst) begin
+		if ((~ arst)) q <= 0;
+		else q <= d;
+	end
+endmodule
+module dffa2 (
+	clk,
+	arst,
+	d,
+	q
+);
+	input clk;
+	input arst;
+	input d;
+	output reg q;
+	always @(posedge clk or negedge arst) begin
+		if ((! arst)) q <= 0;
+		else q <= d;
+	end
+endmodule
+module dffa3 (
+	clk,
+	arst,
+	d,
+	q
+);
+	input clk;
+	input arst;
+	input d;
+	output reg q;
+	always @(posedge clk or negedge arst) begin
+		if ((~ (! arst))) q <= d;
+		else q <= 1;
+	end
+endmodule
+module dffa4 (
+	clk,
+	arst1,
+	arst2,
+	arst3,
+	d,
+	q
+);
+	input clk;
+	input arst1;
+	input arst2;
+	input arst3;
+	input d;
+	output reg q;
+	always @(posedge clk or posedge arst1 or posedge arst2 or negedge arst3) begin
+		if (arst1) q <= 0;
+		else if (arst2) q <= 0;
+		else if ((! arst3)) q <= 0;
+		else q <= d;
+	end
+endmodule
+module dffsr1 (
+	clk,
+	arst,
+	d,
+	q
+);
+	input clk;
+	input arst;
+	input d;
+	output reg q;
+	always @(posedge clk or posedge arst) begin
+		if (arst) q <= (d ^ d);
+		else q <= d;
+	end
+endmodule
+module dffsr2 (
+	clk,
+	preset,
+	clear,
+	d,
+	q
+);
+	input clk;
+	input preset;
+	input clear;
+	input d;
+	output q;
+	(* gentb_clock *) wire clk;
+	(* gentb_clock *) wire preset;
+	(* gentb_clock *) wire clear;
+	(* gentb_clock *) wire d;
+	dffsr2_sub uut(
+		clk,
+		(preset && (! clear)),
+		((! preset) && clear),
+		d,
+		q
+	);
+endmodule
+(* gentb_skip *) module dffsr2_sub (
+	clk,
+	preset,
+	clear,
+	d,
+	q
+);
+	input clk;
+	input preset;
+	input clear;
+	input d;
+	output reg q;
+	always @(posedge clk or posedge preset or posedge clear) begin
+		if (preset) q <= 1;
+		else if (clear) q <= 0;
+		else q <= d;
+	end
+endmodule
+</pre>

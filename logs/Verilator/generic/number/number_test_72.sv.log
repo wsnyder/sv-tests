@@ -1,0 +1,13 @@
+name: number_test_72
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_72.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: Duplicate declaration of cell: $unit
+%Error: ... Location of original declaration
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_72.sv

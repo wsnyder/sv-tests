@@ -1,0 +1,26 @@
+name: cast_between_interface_classes
+description: it should be possible to cast between implemented interface classes
+should_fail: 0
+tags: 8.26.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:8: syntax error, unexpected interface
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:10: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:12: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:13: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:16: Unsupported: SystemVerilog 2012 reserved word not implemented: implements
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:17: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:23: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:30: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:30: syntax error, unexpected ';', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv:32: Unsupported or unknown PLI call: $cast
+%Error: Exiting due to 15 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--cast_between_interface_classes.sv

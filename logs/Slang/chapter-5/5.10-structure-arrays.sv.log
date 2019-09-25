@@ -1,0 +1,12 @@
+name: structure-arrays
+description: Structure array assignment tests
+should_fail: 0
+tags: 5.10
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-arrays.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-arrays.sv:13:18: error: language feature not yet supported
+  ms_t ms[1:0] = '{'{0, 0}, '{1, 1}};
+                 ^~~~~~~~~~~~~~~~~~~

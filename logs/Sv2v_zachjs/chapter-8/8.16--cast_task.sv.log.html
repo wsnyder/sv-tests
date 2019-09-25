@@ -1,0 +1,17 @@
+<pre>name: cast_task
+description: $cast task test
+should_fail: 0
+tags: 8.16
+files: <a href="../../../tests/chapter-8/8.16--cast_task.sv" target="file-frame">tests/chapter-8/8.16--cast_task.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module class_tb;
+	initial begin : sv2v_autoblock_0
+		reg [31:0] val;
+		$cast(val, 3);
+		$display(val);
+	end
+endmodule
+</pre>

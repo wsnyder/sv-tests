@@ -1,0 +1,27 @@
+name: sva_basic04
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:2:2: error: language feature not yet supported
+	a_rw: assert property ( @(posedge clock) !(read && write) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:6:2: error: language feature not yet supported
+	a_wr: assert property ( @(posedge clock) write |=> ready );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:10:1: error: expected member
+bind top top_properties properties_inst (.*);
+^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:10:6: error: use of undeclared identifier 'top'
+bind top top_properties properties_inst (.*);
+     ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:10:24: error: expected ','
+bind top top_properties properties_inst (.*);
+                       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:10:41: error: expected declarator
+bind top top_properties properties_inst (.*);
+                                        ^

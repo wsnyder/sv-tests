@@ -1,0 +1,12 @@
+name: out_of_block_methods
+description: out-of-body method declaration
+should_fail: 0
+tags: 8.24
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv
+incdirs: 
+top_module: 
+rc: 3
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:10: sorry: External methods are not yet supported.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:13: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:13: error: I give up on this function definition.

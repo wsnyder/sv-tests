@@ -1,0 +1,23 @@
+name: simple_vloghammer
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/vloghammer.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/vloghammer.v' to AST representation.
+Generating RTLIL representation for module `\test01'.
+Generating RTLIL representation for module `\test02'.
+Generating RTLIL representation for module `\test03'.
+Generating RTLIL representation for module `\test04'.
+Generating RTLIL representation for module `\test07'.
+Generating RTLIL representation for module `\test08'.
+Generating RTLIL representation for module `\test09'.
+Generating RTLIL representation for module `\test10'.
+Successfully finished Verilog frontend.

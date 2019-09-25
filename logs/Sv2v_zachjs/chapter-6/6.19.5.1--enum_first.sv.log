@@ -1,0 +1,10 @@
+name: enum_first
+description: enum first method tests
+should_fail: 0
+tags: 6.19.5.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.1--enum_first.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.1--enum_first.sv:12:32: Parse error: unexpected token '(' (Sym_paren_l).

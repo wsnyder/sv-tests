@@ -1,0 +1,10 @@
+name: slice
+description: Test queues slice support
+should_fail: 0
+tags: 7.10.1 7.10.2
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/slice.sv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/slice.sv:9:7: Parse error: unexpected token '$' (Sym_dollar).

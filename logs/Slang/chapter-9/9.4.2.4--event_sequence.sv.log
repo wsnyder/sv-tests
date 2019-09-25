@@ -1,0 +1,15 @@
+name: event_sequence
+description: sequence event test
+should_fail: 0
+tags: 9.4.2.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:14:2: error: language feature not yet supported
+	sequence seq;
+	^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv:19:3: error: language feature not yet supported
+		fork
+		^~~~

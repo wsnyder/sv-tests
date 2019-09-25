@@ -1,0 +1,28 @@
+name: casez_pattern
+description: A module testing pattern matching in casez statements
+should_fail: 0
+tags: 12.6.1
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv
+incdirs: 
+top_module: 
+rc: 18
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:9: error: Syntax error in typedef clause.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:12: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:12: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:13: sorry: Unpacked structs not supported.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:16: sorry: Unpacked structs not supported.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:19: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:19: error: invalid module item.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:21: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:21: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:23: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:24: error: Incomprehensible case expression.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:25: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:25: error: Incomprehensible case expression.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:26: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:26: error: Incomprehensible case expression.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:27: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:27: warning: extra digits given for sized hex constant.
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casez_pattern.sv:27: error: Incomprehensible case expression.

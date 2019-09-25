@@ -1,0 +1,11 @@
+name: string_itoa
+description: string.itoa()  tests
+should_fail: 0
+tags: 6.16.11
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.11--string_itoa.sv
+incdirs: 
+top_module: 
+rc: 2
+
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.11--string_itoa.sv:9: syntax error
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.11--string_itoa.sv:9: error: Invalid module instantiation

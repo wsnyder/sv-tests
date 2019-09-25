@@ -1,0 +1,18 @@
+name: interface_instantiation
+description: instantiating an interface class
+should_fail: 1
+tags: 8.26.5
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:12:2: error: use of undeclared identifier 'ihello'
+	ihello obj;
+	^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15:9: error: language feature not yet supported
+		obj = new;
+		      ^~~

@@ -1,0 +1,9 @@
+name: attributes-operator
+description: Assing attributes to an operator
+should_fail: 0
+tags: 5.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-operator.sv
+incdirs: 
+top_module: 
+rc: 0
+

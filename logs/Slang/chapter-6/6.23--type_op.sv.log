@@ -1,0 +1,15 @@
+name: type_op
+description: type operator tests
+should_fail: 0
+tags: 6.23
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.23--type_op.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.23--type_op.sv:10:10: error: expected member
+	var type(a+b) c;
+	        ^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.23--type_op.sv:10:10: error: expected declarator
+	var type(a+b) c;
+	        ^

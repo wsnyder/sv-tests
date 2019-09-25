@@ -1,0 +1,23 @@
+<pre>name: asicworld_code_hdl_models_half_adder_gates
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_half_adder_gates.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module half_adder_gates (
+	x,
+	y,
+	sum,
+	carry
+);
+	input x;
+	input y;
+	output sum;
+	output carry;
+	and U_carry (carry, x, y);
+	xor U_sum (sum, x, y);
+endmodule
+</pre>

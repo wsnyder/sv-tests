@@ -1,0 +1,24 @@
+name: simple_values
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v:8:8: error: language feature not yet supported
+always @* begin
+       ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v:22:8: error: language feature not yet supported
+always @*
+       ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v:33:20: warning: vector literal too large for the given number of bits [-Wliteral-overflow]
+		4'b1001: y = 16'h123abc;
+		                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v:34:20: warning: vector literal too large for the given number of bits [-Wliteral-overflow]
+		4'b1010: y = 16'o1234567;
+		                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v:35:20: warning: vector literal too large for the given number of bits [-Wliteral-overflow]
+		4'b1011: y = 16'd3456789;
+		                 ^

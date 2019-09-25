@@ -1,0 +1,17 @@
+name: tagged_union_member_access
+description: tagged union member access test
+should_fail: 0
+tags: 11.9
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv:10: syntax error, unexpected void, expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv:12: syntax error, unexpected '}'
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv:19: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv:7: ../V3ParseSym.h:112: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE 'top'
+%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv

@@ -1,0 +1,12 @@
+name: real
+description: real type tests
+should_fail: 0
+tags: 6.12
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	real a = 0.5;
+endmodule

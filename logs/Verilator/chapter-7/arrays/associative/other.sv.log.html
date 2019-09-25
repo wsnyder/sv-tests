@@ -1,0 +1,13 @@
+<pre>name: associative-arrays-other-types
+description: Test associative arrays support
+should_fail: 0
+tags: 7.8.5 7.8
+files: <a href="../../../../../tests/chapter-7/arrays/associative/other.sv" target="file-frame">tests/chapter-7/arrays/associative/other.sv</a>
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: <a href="../../../../../tests/chapter-7/arrays/associative/other.sv" target="file-frame">tests/chapter-7/arrays/associative/other.sv</a>:11: syntax error, unexpected [*, expecting ',' or ';'
+%Error: Internal Error: <a href="../../../../../tests/chapter-7/arrays/associative/other.sv" target="file-frame">tests/chapter-7/arrays/associative/other.sv</a>:7: ../V3ParseSym.h:112: Symbols suggest ending STRUCTDTYPE but parser thinks ending MODULE 'top'
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/arrays/associative/other.sv" target="file-frame">tests/chapter-7/arrays/associative/other.sv</a>
+</pre>

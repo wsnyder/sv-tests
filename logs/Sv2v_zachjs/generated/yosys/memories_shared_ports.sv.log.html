@@ -1,0 +1,40 @@
+<pre>name: memories_shared_ports
+description: Tests imported from yosys
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/shared_ports.v
+should_fail: 0
+tags: yosys
+incdirs: 
+top_module: 
+rc: 0
+
+module test (
+	clk,
+	wr_en1,
+	wr_en2,
+	wr_en3,
+	wr_addr1,
+	wr_addr2,
+	wr_addr3,
+	wr_data,
+	rd_addr,
+	rd_data
+);
+	input clk;
+	input wr_en1;
+	input wr_en2;
+	input wr_en3;
+	input [3:0] wr_addr1;
+	input [3:0] wr_addr2;
+	input [3:0] wr_addr3;
+	input [15:0] wr_data;
+	input [3:0] rd_addr;
+	output reg [31:0] rd_data;
+	reg [511:0] mem;
+	always @(posedge clk) begin
+		if (wr_en1) mem[((15 - wr_addr1) * 32)+:16] <= wr_data;
+		else if (wr_en2) mem[(((15 - wr_addr2) * 32) + 8)+:16] <= wr_data;
+		else if (wr_en3) mem[(((15 - wr_addr3) * 32) + 16)+:16] <= wr_data;
+		rd_data <= mem[((15 - rd_addr) * 32)+:32];
+	end
+endmodule
+</pre>

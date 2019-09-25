@@ -1,0 +1,14 @@
+<pre>name: cast_fn
+description: $cast function
+should_fail: 0
+tags: 6.24.2
+files: <a href="../../../tests/chapter-6/6.24.2--cast_fn.sv" target="file-frame">tests/chapter-6/6.24.2--cast_fn.sv</a>
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire signed [31:0] a;
+	initial if ((! $cast(a, (2.1 * 3.7)))) $display("cast failed");
+endmodule
+</pre>

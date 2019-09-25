@@ -1,0 +1,11 @@
+name: unsigned_func
+description: $unsigned() test
+should_fail: 0
+tags: 11.7
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--unsigned_func.sv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--unsigned_func.sv:12: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's UNSIGNED generates 32 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.

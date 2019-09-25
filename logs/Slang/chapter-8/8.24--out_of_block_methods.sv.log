@@ -1,0 +1,21 @@
+name: out_of_block_methods
+description: out-of-body method declaration
+should_fail: 0
+tags: 8.24
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:8:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:15:3: error: use of undeclared identifier 'a'
+		a += val;
+		^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:18:2: error: 'test_cls' is not a type
+	test_cls test_obj;
+	^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:21:14: error: language feature not yet supported
+		test_obj = new;
+		           ^~~

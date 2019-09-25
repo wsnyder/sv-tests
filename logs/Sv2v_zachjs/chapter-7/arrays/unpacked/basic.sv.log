@@ -1,0 +1,14 @@
+name: basic-unpacked
+description: Test unpacked arrays support
+should_fail: 0
+tags: 7.4.2 7.4
+files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/basic.sv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire _bit [7:0];
+	wire _logic [7:0];
+	wire _reg [7:0];
+endmodule
