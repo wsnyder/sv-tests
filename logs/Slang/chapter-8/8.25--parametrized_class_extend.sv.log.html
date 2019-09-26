@@ -2,21 +2,21 @@
 description: parametrized class extending another parametrized class
 should_fail: 0
 tags: 8.25
-files: <a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>
+files: <a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>
 incdirs: 
 top_module: 
 rc: 1
 
-<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:8:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:8:2: error: language feature not yet supported
 	class base_cls #(int b = 20);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:12:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:12:2: error: language feature not yet supported
 	class ext_cls #(int e = 25) extends base_cls(5);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:16:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:16:2: error: language feature not yet supported
 	ext_cls #(15) inst;
 	^~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:19:10: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>:19:10: error: language feature not yet supported
 		inst = new;
 		       ^~~
 </pre>

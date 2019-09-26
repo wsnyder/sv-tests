@@ -2,24 +2,24 @@
 description: process class self method
 should_fail: 0
 tags: 9.7
-files: <a href="../../../tests/chapter-9/9.7--process_cls_self.sv" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>
+files: <a href="../../../tests/chapter-9/9.7--process_cls_self.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>
 incdirs: 
 top_module: 
 rc: 1
 
-<a href="../../../tests/chapter-9/9.7--process_cls_self.sv" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:9:3: error: use of undeclared identifier 'process'
+<a href="../../../tests/chapter-9/9.7--process_cls_self.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:9:3: error: use of undeclared identifier 'process'
 		process job[] = new [N];
 		^~~~~~~
-<a href="../../../tests/chapter-9/9.7--process_cls_self.sv" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:9:19: error: language feature not yet supported
+<a href="../../../tests/chapter-9/9.7--process_cls_self.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:9:19: error: language feature not yet supported
 		process job[] = new [N];
 		                ^~~~~~~
-<a href="../../../tests/chapter-9/9.7--process_cls_self.sv" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:11:3: error: language feature not yet supported
+<a href="../../../tests/chapter-9/9.7--process_cls_self.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:11:3: error: language feature not yet supported
 		foreach(job[i])
 		^~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-9/9.7--process_cls_self.sv" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:13:23: error: use of undeclared identifier 'j'
+<a href="../../../tests/chapter-9/9.7--process_cls_self.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:13:23: error: use of undeclared identifier 'j'
 				automatic int k = j;
 				                  ^
-<a href="../../../tests/chapter-9/9.7--process_cls_self.sv" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:15:15: error: unknown class or package 'process'
+<a href="../../../tests/chapter-9/9.7--process_cls_self.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_self.sv</a>:15:15: error: unknown class or package 'process'
 					job[k] = process::self();
 					         ^~~~~~~
 </pre>

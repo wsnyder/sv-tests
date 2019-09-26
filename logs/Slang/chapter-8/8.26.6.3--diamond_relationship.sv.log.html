@@ -2,21 +2,21 @@
 description: interface class inherited from multiple sources shouldn't create symbol conflicts
 should_fail: 0
 tags: 8.26.6.3
-files: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>
+files: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>
 incdirs: 
 top_module: 
 rc: 1
 
-<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:8:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:8:2: error: language feature not yet supported
 	interface class ibase;
 	^~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:12:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:12:2: error: language feature not yet supported
 	interface class ic1 extends ibase;
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:16:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:16:2: error: language feature not yet supported
 	interface class ic2 extends ibase;
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:20:2: error: language feature not yet supported
+<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>:20:2: error: language feature not yet supported
 	interface class ic3 extends ic1, ic2;
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </pre>

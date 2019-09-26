@@ -1,9 +1,0 @@
-/*
-:name: ref
-:description: The 'ref' keyword should be reserved
-:should_fail: 1
-:tags: 5.6.2
-*/
-module top();
-    bit ref;
-endmodule

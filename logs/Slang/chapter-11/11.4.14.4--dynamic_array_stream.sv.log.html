@@ -2,27 +2,27 @@
 description: stream unpack test with dynamic array
 should_fail: 0
 tags: 11.4.14.4
-files: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
+files: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
 incdirs: 
 top_module: 
 rc: 1
 
-<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:11:12: error: dimension requires a constant range
+<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:11:12: error: dimension requires a constant range
 byte i_data[];
            ^~
-<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:16:12: error: dimension requires a constant range
+<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:16:12: error: dimension requires a constant range
 byte o_data[];
            ^~
-<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:20:10: error: dimension requires a constant range
+<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:20:10: error: dimension requires a constant range
 	byte pkt[$];
 	        ^~~
-<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:24:11: error: language feature not yet supported
+<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:24:11: error: language feature not yet supported
 	i_data = new[5];
 	         ^~~~~~
-<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:27:8: error: language feature not yet supported
+<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:27:8: error: language feature not yet supported
 	pkt = {<< byte{i_header, i_len, i_data, i_crc}};
 	      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:29:2: error: language feature not yet supported
+<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>:29:2: error: language feature not yet supported
 	{<< byte{o_header, o_len, o_data with [0 +: o_len], o_crc}} = pkt;
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </pre>
