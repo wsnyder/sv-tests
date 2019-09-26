@@ -8,5 +8,5 @@ top_module:
 rc: 1
 
 /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_3.sv:7: warning: macro EXPAND_TO_STRING undefined (and assumed null) at this point.
-Segmentation fault (core dumped)
 No top level modules, and no -s option.
+Segmentation fault (core dumped)
