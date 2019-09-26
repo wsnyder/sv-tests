@@ -1,0 +1,9 @@
+/*
+:name: pulsestyle_onevent
+:description: The 'pulsestyle_onevent' keyword should be reserved
+:should_fail: 1
+:tags: 5.6.2
+*/
+module top();
+    bit pulsestyle_onevent;
+endmodule
