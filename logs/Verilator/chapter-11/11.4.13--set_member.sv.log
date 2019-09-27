@@ -7,6 +7,6 @@ incdirs:
 top_module: 
 rc: 10
 
-%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv:15: ../V3Width.cpp:3316: Node needs sign change, but bad case: EQWILD 0x5628e5311670 <e145#> {d15} @dt=0x5628e5315f10@(G/nw1)
+%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv:15: ../V3Width.cpp:3316: Node needs sign change, but bad case: EQWILD 0x564d69cd0670 <e145#> {d15} @dt=0x564d69cd4f10@(G/nw1)
 %Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv
