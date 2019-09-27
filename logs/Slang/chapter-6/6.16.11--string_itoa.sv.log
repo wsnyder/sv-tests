@@ -7,6 +7,6 @@ incdirs:
 top_module: 
 rc: 1
 
-../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.11--string_itoa.sv:9:2: error: expected member
-	a.itoa(12);
-	^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.11--string_itoa.sv:10:4: error: invalid member access for type 'string'
+		a.itoa(12);
+		~^~~~~

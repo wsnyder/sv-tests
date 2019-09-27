@@ -5,10 +5,5 @@ tags: 6.16.14
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.14--string_bintoa.sv
 incdirs: 
 top_module: 
-rc: 1
+rc: 0
 
-(0, 0) source_file
-(6, 0) module_declaration
-(8, 1) module_or_generate_item
-(8, 1) data_declaration
-(8, 2) ERROR

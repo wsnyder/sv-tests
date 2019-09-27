@@ -5,7 +5,7 @@ tags: 6.16.15
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv:9: error: Invalid module instantiation
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv:10: error: Enable of unknown task ``a.realtoa''.
+Elaboration failed

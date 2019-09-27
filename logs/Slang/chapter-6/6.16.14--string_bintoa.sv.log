@@ -7,6 +7,6 @@ incdirs:
 top_module: 
 rc: 1
 
-../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.14--string_bintoa.sv:9:2: error: expected member
-	a.bintoa(12);
-	^
+../../home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.14--string_bintoa.sv:10:4: error: invalid member access for type 'string'
+		a.bintoa(12);
+		~^~~~~~~
