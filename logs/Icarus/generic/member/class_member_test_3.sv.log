@@ -5,7 +5,9 @@ tags: 8.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_3.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 4
 
 /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_3.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_3.sv:8: error: invalid class item.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_3.sv:8: error: Error in task/function port item after port name arg_type.
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_3.sv:8: syntax error
+I give up.

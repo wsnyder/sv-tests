@@ -11,7 +11,7 @@ rc: 10
 %Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_35.sv:7: syntax error, unexpected IDENTIFIER
 %Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_35.sv:8: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
 %Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_35.sv:9: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_35.sv:10: syntax error, unexpected $end
+%Error: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_35.sv:11: syntax error, unexpected $end
 %Error: Cannot continue
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_35.sv
