@@ -15,7 +15,5 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
 PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv::8 Unsuported token
-	logic scalared [15:0] a = 0;
+	tri1 scalared [15:0] a = 0;
 	^~~~
-PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_scalared.sv::8 error in parsing: (syntax error, unexpected '[', expecting vSYMBOL_ID or '#')
-	logic scalared [15:0] a = 0;

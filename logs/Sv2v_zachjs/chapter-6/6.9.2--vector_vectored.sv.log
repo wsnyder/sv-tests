@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored.sv:8:15: Parse error: unexpected token 'vectored' (KW_vectored).
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored.sv:8:14: Parse error: unexpected token 'vectored' (KW_vectored).
