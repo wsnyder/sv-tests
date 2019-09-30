@@ -2,13 +2,12 @@
 description: Test queues slice support
 should_fail: 0
 tags: 7.10.1 7.10.2
-files: <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
 incdirs: 
 top_module: 
-rc: 10
+files: <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
 
-%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>:9: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>:10: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-9" target="file-frame">tests/chapter-7/queues/slice.sv:9</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-10" target="file-frame">tests/chapter-7/queues/slice.sv:10</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
 %Error: Exiting due to 2 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
 </pre>

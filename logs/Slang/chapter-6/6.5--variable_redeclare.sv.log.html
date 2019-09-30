@@ -2,15 +2,14 @@
 description: Variable redeclaration tests
 should_fail: 1
 tags: 6.5
-files: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
 incdirs: 
 top_module: 
-rc: 1
+files: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
 
-<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>:9:7: error: redefinition of 'v'
+../..<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>:7: error: redefinition of 'v'
 	wire v;
 	     ^
-<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>:8:6: note: previous definition here
+../..<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-8" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:8</a>:6: note: previous definition here
 	reg v;
 	    ^
 </pre>

@@ -1,13 +1,12 @@
 <pre>name: svinterfaces_svinterface_at_top
 description: Tests imported from yosys
-files: <a href="../../../../tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">tests/svinterfaces/svinterface_at_top.sv</a>
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
-rc: 1
+files: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
 
-<a href="../../../../tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">tests/svinterfaces/svinterface_at_top.sv</a>:109:47: error: use of undeclared identifier 'u_MyInterfaceFromTop'
+../..<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:109</a>:47: error: use of undeclared identifier 'u_MyInterfaceFromTop'
   assign u_MyInterfaceFromTopDown.mysig_out = u_MyInterfaceFromTop.setting ? 10 :  20;
                                               ^~~~~~~~~~~~~~~~~~~~
 </pre>

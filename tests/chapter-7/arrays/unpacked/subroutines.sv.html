@@ -93,53 +93,53 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">:name: unpacked-arrays-as-arguments-to-subroutines</span>
-<span class="cm">:description: Test support of arrays as arugments to subroutines</span>
-<span class="cm">:should_fail: 0</span>
-<span class="cm">:tags: 7.7 7.4.2</span>
-<span class="cm">*/</span>
-<span class="k">module</span> <span class="n">top</span> <span class="p">();</span>
-
-<span class="k">task</span> <span class="n">fun</span><span class="p">(</span><span class="k">int</span> <span class="n">a</span> <span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]);</span>
-	<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;:assert: ((%d == 0) and (%d == 1) and (%d == 2))&quot;</span><span class="p">,</span>
-		<span class="n">a</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mh">2</span><span class="p">]);</span>
-<span class="k">endtask</span><span class="p">;</span>
-
-<span class="k">initial</span> <span class="k">begin</span>
-	<span class="k">int</span> <span class="n">b</span> <span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
-	<span class="n">b</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span>
-	<span class="n">b</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span> <span class="o">=</span> <span class="mh">1</span><span class="p">;</span>
-	<span class="n">b</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">2</span><span class="p">;</span>
-	<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;:assert: ((%d == 0) and (%d == 1) and (%d == 2))&quot;</span><span class="p">,</span>
-		<span class="n">b</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mh">2</span><span class="p">]);</span>
-	<span class="n">fun</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
-<span class="k">end</span>
-
-<span class="k">endmodule</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1"> 1</a>
+<a href="#l-2"> 2</a>
+<a href="#l-3"> 3</a>
+<a href="#l-4"> 4</a>
+<a href="#l-5"> 5</a>
+<a href="#l-6"> 6</a>
+<a href="#l-7"> 7</a>
+<a href="#l-8"> 8</a>
+<a href="#l-9"> 9</a>
+<a href="#l-10">10</a>
+<a href="#l-11">11</a>
+<a href="#l-12">12</a>
+<a href="#l-13">13</a>
+<a href="#l-14">14</a>
+<a href="#l-15">15</a>
+<a href="#l-16">16</a>
+<a href="#l-17">17</a>
+<a href="#l-18">18</a>
+<a href="#l-19">19</a>
+<a href="#l-20">20</a>
+<a href="#l-21">21</a>
+<a href="#l-22">22</a>
+<a href="#l-23">23</a>
+<a href="#l-24">24</a></pre></div></td><td class="code"><div class="highlight"><span class="filename">tests/chapter-7/arrays/unpacked/subroutines.sv</span><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a name="l-2"></a><span class="cm">:name: unpacked-arrays-as-arguments-to-subroutines</span>
+<a name="l-3"></a><span class="cm">:description: Test support of arrays as arugments to subroutines</span>
+<a name="l-4"></a><span class="cm">:should_fail: 0</span>
+<a name="l-5"></a><span class="cm">:tags: 7.7 7.4.2</span>
+<a name="l-6"></a><span class="cm">*/</span>
+<a name="l-7"></a><span class="k">module</span> <span class="n">top</span> <span class="p">();</span>
+<a name="l-8"></a>
+<a name="l-9"></a><span class="k">task</span> <span class="n">fun</span><span class="p">(</span><span class="k">int</span> <span class="n">a</span> <span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]);</span>
+<a name="l-10"></a>	<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;:assert: ((%d == 0) and (%d == 1) and (%d == 2))&quot;</span><span class="p">,</span>
+<a name="l-11"></a>		<span class="n">a</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mh">2</span><span class="p">]);</span>
+<a name="l-12"></a><span class="k">endtask</span><span class="p">;</span>
+<a name="l-13"></a>
+<a name="l-14"></a><span class="k">initial</span> <span class="k">begin</span>
+<a name="l-15"></a>	<span class="k">int</span> <span class="n">b</span> <span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span>
+<a name="l-16"></a>	<span class="n">b</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span>
+<a name="l-17"></a>	<span class="n">b</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span> <span class="o">=</span> <span class="mh">1</span><span class="p">;</span>
+<a name="l-18"></a>	<span class="n">b</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">2</span><span class="p">;</span>
+<a name="l-19"></a>	<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;:assert: ((%d == 0) and (%d == 1) and (%d == 2))&quot;</span><span class="p">,</span>
+<a name="l-20"></a>		<span class="n">b</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mh">2</span><span class="p">]);</span>
+<a name="l-21"></a>	<span class="n">fun</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<a name="l-22"></a><span class="k">end</span>
+<a name="l-23"></a>
+<a name="l-24"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table></body>
 </html>

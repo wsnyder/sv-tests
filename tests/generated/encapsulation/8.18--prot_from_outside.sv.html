@@ -93,59 +93,59 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">:name: prot_from_outside</span>
-<span class="cm">:description: encapsulation test</span>
-<span class="cm">:should_fail: 1</span>
-<span class="cm">:tags: 8.18</span>
-<span class="cm">*/</span>
-<span class="k">module</span> <span class="n">top</span><span class="p">();</span>
-<span class="k">class</span> <span class="n">a_cls</span><span class="p">;</span>
-    <span class="k">local</span> <span class="k">int</span> <span class="n">a_loc</span> <span class="o">=</span> <span class="mh">21</span><span class="p">;</span>
-    <span class="k">protected</span> <span class="k">int</span> <span class="n">a_prot</span> <span class="o">=</span> <span class="mh">22</span><span class="p">;</span>
-    <span class="k">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mh">23</span><span class="p">;</span>
-<span class="k">endclass</span>
-<span class="k">class</span> <span class="n">b_cls</span> <span class="k">extends</span> <span class="n">a_cls</span><span class="p">;</span>
-    <span class="k">local</span> <span class="k">int</span> <span class="n">b_loc</span> <span class="o">=</span> <span class="mh">31</span><span class="p">;</span>
-    <span class="k">protected</span> <span class="k">int</span> <span class="n">b_prot</span> <span class="o">=</span> <span class="mh">32</span><span class="p">;</span>
-    <span class="k">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mh">33</span><span class="p">;</span>
-    <span class="k">function</span> <span class="k">void</span> <span class="n">fun</span><span class="p">();</span>
-        <span class="nb">$display</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
-    <span class="k">endfunction</span>
-<span class="k">endclass</span>
-<span class="n">b_cls</span> <span class="n">b_obj</span><span class="p">;</span>
-<span class="k">initial</span> <span class="k">begin</span>
-    <span class="n">b_obj</span> <span class="o">=</span> <span class="k">new</span><span class="p">;</span>
-    <span class="nb">$display</span><span class="p">(</span><span class="n">b_obj</span><span class="p">.</span><span class="n">b_prot</span><span class="p">);</span>
-    <span class="n">b_obj</span><span class="p">.</span><span class="n">fun</span><span class="p">();</span>
-<span class="k">end</span>
-<span class="k">endmodule</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1"> 1</a>
+<a href="#l-2"> 2</a>
+<a href="#l-3"> 3</a>
+<a href="#l-4"> 4</a>
+<a href="#l-5"> 5</a>
+<a href="#l-6"> 6</a>
+<a href="#l-7"> 7</a>
+<a href="#l-8"> 8</a>
+<a href="#l-9"> 9</a>
+<a href="#l-10">10</a>
+<a href="#l-11">11</a>
+<a href="#l-12">12</a>
+<a href="#l-13">13</a>
+<a href="#l-14">14</a>
+<a href="#l-15">15</a>
+<a href="#l-16">16</a>
+<a href="#l-17">17</a>
+<a href="#l-18">18</a>
+<a href="#l-19">19</a>
+<a href="#l-20">20</a>
+<a href="#l-21">21</a>
+<a href="#l-22">22</a>
+<a href="#l-23">23</a>
+<a href="#l-24">24</a>
+<a href="#l-25">25</a>
+<a href="#l-26">26</a>
+<a href="#l-27">27</a></pre></div></td><td class="code"><div class="highlight"><span class="filename">tests/generated/encapsulation/8.18--prot_from_outside.sv</span><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a name="l-2"></a><span class="cm">:name: prot_from_outside</span>
+<a name="l-3"></a><span class="cm">:description: encapsulation test</span>
+<a name="l-4"></a><span class="cm">:should_fail: 1</span>
+<a name="l-5"></a><span class="cm">:tags: 8.18</span>
+<a name="l-6"></a><span class="cm">*/</span>
+<a name="l-7"></a><span class="k">module</span> <span class="n">top</span><span class="p">();</span>
+<a name="l-8"></a><span class="k">class</span> <span class="n">a_cls</span><span class="p">;</span>
+<a name="l-9"></a>    <span class="k">local</span> <span class="k">int</span> <span class="n">a_loc</span> <span class="o">=</span> <span class="mh">21</span><span class="p">;</span>
+<a name="l-10"></a>    <span class="k">protected</span> <span class="k">int</span> <span class="n">a_prot</span> <span class="o">=</span> <span class="mh">22</span><span class="p">;</span>
+<a name="l-11"></a>    <span class="k">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mh">23</span><span class="p">;</span>
+<a name="l-12"></a><span class="k">endclass</span>
+<a name="l-13"></a><span class="k">class</span> <span class="n">b_cls</span> <span class="k">extends</span> <span class="n">a_cls</span><span class="p">;</span>
+<a name="l-14"></a>    <span class="k">local</span> <span class="k">int</span> <span class="n">b_loc</span> <span class="o">=</span> <span class="mh">31</span><span class="p">;</span>
+<a name="l-15"></a>    <span class="k">protected</span> <span class="k">int</span> <span class="n">b_prot</span> <span class="o">=</span> <span class="mh">32</span><span class="p">;</span>
+<a name="l-16"></a>    <span class="k">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mh">33</span><span class="p">;</span>
+<a name="l-17"></a>    <span class="k">function</span> <span class="k">void</span> <span class="n">fun</span><span class="p">();</span>
+<a name="l-18"></a>        <span class="nb">$display</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<a name="l-19"></a>    <span class="k">endfunction</span>
+<a name="l-20"></a><span class="k">endclass</span>
+<a name="l-21"></a><span class="n">b_cls</span> <span class="n">b_obj</span><span class="p">;</span>
+<a name="l-22"></a><span class="k">initial</span> <span class="k">begin</span>
+<a name="l-23"></a>    <span class="n">b_obj</span> <span class="o">=</span> <span class="k">new</span><span class="p">;</span>
+<a name="l-24"></a>    <span class="nb">$display</span><span class="p">(</span><span class="n">b_obj</span><span class="p">.</span><span class="n">b_prot</span><span class="p">);</span>
+<a name="l-25"></a>    <span class="n">b_obj</span><span class="p">.</span><span class="n">fun</span><span class="p">();</span>
+<a name="l-26"></a><span class="k">end</span>
+<a name="l-27"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table></body>
 </html>

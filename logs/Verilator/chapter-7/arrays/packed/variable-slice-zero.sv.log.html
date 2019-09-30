@@ -2,13 +2,12 @@
 description: Test packed arrays operations support (Variable slice)
 should_fail: 1
 tags: 7.4.3
-files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
 incdirs: 
 top_module: 
-rc: 10
+files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>:27: Unsupported: MSB < LSB of bit extract: 3<4
-%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>:27: Unsupported: MSB < LSB of bit extract: 0<1
+%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>: Unsupported: MSB < LSB of bit extract: 3<4
+%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>: Unsupported: MSB < LSB of bit extract: 0<1
 %Error: Exiting due to 2 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>

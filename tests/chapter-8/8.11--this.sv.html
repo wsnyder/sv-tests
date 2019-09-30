@@ -93,35 +93,35 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">:name: this</span>
-<span class="cm">:description: this keyword test</span>
-<span class="cm">:should_fail: 0</span>
-<span class="cm">:tags: 8.11</span>
-<span class="cm">*/</span>
-<span class="k">module</span> <span class="n">class_tb</span> <span class="p">();</span>
-	<span class="k">class</span> <span class="n">test_cls</span><span class="p">;</span>
-		<span class="k">int</span> <span class="n">a</span><span class="p">;</span>
-		<span class="k">task</span> <span class="n">test_method</span><span class="p">(</span><span class="k">int</span> <span class="n">a</span><span class="p">);</span>
-			<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;test_method&quot;</span><span class="p">);</span>
-			<span class="k">this</span><span class="p">.</span><span class="n">a</span> <span class="o">+=</span> <span class="n">a</span><span class="p">;</span>
-		<span class="k">endtask</span>
-	<span class="k">endclass</span>
-<span class="k">endmodule</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1"> 1</a>
+<a href="#l-2"> 2</a>
+<a href="#l-3"> 3</a>
+<a href="#l-4"> 4</a>
+<a href="#l-5"> 5</a>
+<a href="#l-6"> 6</a>
+<a href="#l-7"> 7</a>
+<a href="#l-8"> 8</a>
+<a href="#l-9"> 9</a>
+<a href="#l-10">10</a>
+<a href="#l-11">11</a>
+<a href="#l-12">12</a>
+<a href="#l-13">13</a>
+<a href="#l-14">14</a>
+<a href="#l-15">15</a></pre></div></td><td class="code"><div class="highlight"><span class="filename">tests/chapter-8/8.11--this.sv</span><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a name="l-2"></a><span class="cm">:name: this</span>
+<a name="l-3"></a><span class="cm">:description: this keyword test</span>
+<a name="l-4"></a><span class="cm">:should_fail: 0</span>
+<a name="l-5"></a><span class="cm">:tags: 8.11</span>
+<a name="l-6"></a><span class="cm">*/</span>
+<a name="l-7"></a><span class="k">module</span> <span class="n">class_tb</span> <span class="p">();</span>
+<a name="l-8"></a>	<span class="k">class</span> <span class="n">test_cls</span><span class="p">;</span>
+<a name="l-9"></a>		<span class="k">int</span> <span class="n">a</span><span class="p">;</span>
+<a name="l-10"></a>		<span class="k">task</span> <span class="n">test_method</span><span class="p">(</span><span class="k">int</span> <span class="n">a</span><span class="p">);</span>
+<a name="l-11"></a>			<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;test_method&quot;</span><span class="p">);</span>
+<a name="l-12"></a>			<span class="k">this</span><span class="p">.</span><span class="n">a</span> <span class="o">+=</span> <span class="n">a</span><span class="p">;</span>
+<a name="l-13"></a>		<span class="k">endtask</span>
+<a name="l-14"></a>	<span class="k">endclass</span>
+<a name="l-15"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table></body>
 </html>

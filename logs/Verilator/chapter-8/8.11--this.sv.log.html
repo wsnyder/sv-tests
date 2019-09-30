@@ -2,16 +2,15 @@
 description: this keyword test
 should_fail: 0
 tags: 8.11
-files: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>
 incdirs: 
 top_module: 
-rc: 10
+files: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>
 
-%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>:8: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>:8: syntax error, unexpected ';', expecting IDENTIFIER
-%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>:12: Unsupported: SystemVerilog 2005 reserved word not implemented: this
-%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>:12: syntax error, unexpected '.'
-%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>:14: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html#l-8" target="file-frame">tests/chapter-8/8.11--this.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html#l-8" target="file-frame">tests/chapter-8/8.11--this.sv:8</a>: syntax error, unexpected ';', expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html#l-12" target="file-frame">tests/chapter-8/8.11--this.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: this
+%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html#l-12" target="file-frame">tests/chapter-8/8.11--this.sv:12</a>: syntax error, unexpected '.'
+%Error: <a href="../../../tests/chapter-8/8.11--this.sv.html#l-14" target="file-frame">tests/chapter-8/8.11--this.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
 %Error: Exiting due to 5 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.11--this.sv.html" target="file-frame">tests/chapter-8/8.11--this.sv</a>

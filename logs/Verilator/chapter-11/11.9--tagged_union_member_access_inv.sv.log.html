@@ -2,17 +2,16 @@
 description: invalid tagged union member access test
 should_fail: 1
 tags: 11.9
-files: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>
 incdirs: 
 top_module: 
-rc: 10
+files: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>
 
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>:9: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>:10: syntax error, unexpected void, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>:12: syntax error, unexpected '}'
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>:19: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>:20: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: Internal Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>:7: ../V3ParseSym.h:112: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE 'top'
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-9" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-10" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:10</a>: syntax error, unexpected void, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-12" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:12</a>: syntax error, unexpected '}'
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-19" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-20" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: Internal Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-7" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:7</a>: ../V3ParseSym.h:112: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE 'top'
 %Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>
 </pre>

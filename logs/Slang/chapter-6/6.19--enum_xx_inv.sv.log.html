@@ -2,15 +2,14 @@
 description: invalid enum with x tests
 should_fail: 1
 tags: 6.19
-files: <a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv</a>
 incdirs: 
 top_module: 
-rc: 1
+files: <a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv</a>
 
-<a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv</a>:8:25: error: redefinition of enum value 2'b0
+../..<a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv:8</a>:25: error: redefinition of enum value 2'b0
 	enum bit [1:0] {a=0, b=2'bxx, c=1} val;
 	                       ^
-<a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv</a>:8:20: note: previous definition here
+../..<a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv:8</a>:20: note: previous definition here
 	enum bit [1:0] {a=0, b=2'bxx, c=1} val;
 	                  ^
 </pre>

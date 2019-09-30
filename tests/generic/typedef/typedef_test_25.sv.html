@@ -93,35 +93,35 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">:name: typedef_test_25</span>
-<span class="cm">:description: Test</span>
-<span class="cm">:should_fail: 0</span>
-<span class="cm">:tags: 6.18</span>
-<span class="cm">*/</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="k">packed</span> <span class="p">{</span>
-  <span class="k">reg</span>  <span class="p">[</span><span class="no">A</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">addr</span><span class="p">;</span>
-  <span class="k">reg</span> <span class="p">[</span><span class="no">D</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">data</span><span class="p">;</span>
-<span class="no">`ifndef</span> <span class="no">FOO</span>
-  <span class="k">reg</span>  <span class="p">[</span><span class="no">E</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ecc</span><span class="p">;</span>
-<span class="no">`endif</span> <span class="c1">//  `ifndef FOO</span>
-  <span class="k">reg</span>   <span class="p">[</span><span class="no">M</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">mask</span><span class="p">;</span>
-  <span class="k">reg</span>         <span class="n">parity</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">req_t</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1"> 1</a>
+<a href="#l-2"> 2</a>
+<a href="#l-3"> 3</a>
+<a href="#l-4"> 4</a>
+<a href="#l-5"> 5</a>
+<a href="#l-6"> 6</a>
+<a href="#l-7"> 7</a>
+<a href="#l-8"> 8</a>
+<a href="#l-9"> 9</a>
+<a href="#l-10">10</a>
+<a href="#l-11">11</a>
+<a href="#l-12">12</a>
+<a href="#l-13">13</a>
+<a href="#l-14">14</a>
+<a href="#l-15">15</a></pre></div></td><td class="code"><div class="highlight"><span class="filename">tests/generic/typedef/typedef_test_25.sv</span><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a name="l-2"></a><span class="cm">:name: typedef_test_25</span>
+<a name="l-3"></a><span class="cm">:description: Test</span>
+<a name="l-4"></a><span class="cm">:should_fail: 0</span>
+<a name="l-5"></a><span class="cm">:tags: 6.18</span>
+<a name="l-6"></a><span class="cm">*/</span>
+<a name="l-7"></a><span class="k">typedef</span> <span class="k">struct</span> <span class="k">packed</span> <span class="p">{</span>
+<a name="l-8"></a>  <span class="k">reg</span>  <span class="p">[</span><span class="no">A</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">addr</span><span class="p">;</span>
+<a name="l-9"></a>  <span class="k">reg</span> <span class="p">[</span><span class="no">D</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">data</span><span class="p">;</span>
+<a name="l-10"></a><span class="no">`ifndef</span> <span class="no">FOO</span>
+<a name="l-11"></a>  <span class="k">reg</span>  <span class="p">[</span><span class="no">E</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ecc</span><span class="p">;</span>
+<a name="l-12"></a><span class="no">`endif</span> <span class="c1">//  `ifndef FOO</span>
+<a name="l-13"></a>  <span class="k">reg</span>   <span class="p">[</span><span class="no">M</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">mask</span><span class="p">;</span>
+<a name="l-14"></a>  <span class="k">reg</span>         <span class="n">parity</span><span class="p">;</span>
+<a name="l-15"></a><span class="p">}</span> <span class="n">req_t</span><span class="p">;</span>
 </pre></div>
 </td></tr></table></body>
 </html>

@@ -2,15 +2,14 @@
 description: illegal return from fork
 should_fail: 1
 tags: 9.3.3
-files: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv</a>
 incdirs: 
 top_module: 
-rc: 10
+files: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv</a>
 
-%Error: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv</a>:9: Unsupported: Verilog 1995 reserved word not implemented: fork
-%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv</a>:10: Unsupported: Ignoring delay on this delayed statement.
+%Error: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html#l-9" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv:9</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html#l-10" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv:10</a>: Unsupported: Ignoring delay on this delayed statement.
 %Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
-%Error: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv</a>:12: Unsupported: SystemVerilog 2005 reserved word not implemented: join_none
+%Error: <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: join_none
 %Error: Exiting due to 2 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.3.3--fork_return.sv.html" target="file-frame">tests/chapter-9/9.3.3--fork_return.sv</a>

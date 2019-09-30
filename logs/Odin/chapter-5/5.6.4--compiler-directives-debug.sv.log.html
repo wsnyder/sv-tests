@@ -2,17 +2,16 @@
 description: Debugging compiler directives
 should_fail: 0
 tags: 5.6.4
-files: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>
 incdirs: 
 top_module: 
-rc: -6
+files: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>
 
 --------------
 Odin has decided you MAY fail ... :
 
 WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
-WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>::1 File <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>::1 File (<a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
 ERROR (3)::PARSE_ERROR <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>::9 __FILE__ define cannot be found
   initial $display("At %s @ %d\n", `__FILE__, `__LINE__);

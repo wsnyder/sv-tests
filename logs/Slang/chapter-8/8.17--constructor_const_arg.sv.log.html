@@ -2,39 +2,38 @@
 description: class inheritance with a constant constructor argument
 should_fail: 0
 tags: 8.17
-files: <a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>
 incdirs: 
 top_module: 
-rc: 1
+files: <a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>
 
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:8:2: error: language feature not yet supported
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-8" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:8</a>:2: error: language feature not yet supported
 	class super_cls;
 	^~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:10:11: error: expected identifier
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-10" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:10</a>:11: error: expected identifier
 		function new(int def = 3);
 		        ^
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:10:12: error: expected statement
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-10" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:10</a>:12: error: expected statement
 		function new(int def = 3);
 		         ^~~
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:10:27: error: expected declarator
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-10" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:10</a>:27: error: expected declarator
 		function new(int def = 3);
 		                        ^
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:14:2: error: language feature not yet supported
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-14" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:14</a>:2: error: language feature not yet supported
 	class test_cls extends super_cls(5);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:16:11: error: expected identifier
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-16" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:16</a>:11: error: expected identifier
 		function new(int def = 42);
 		        ^
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:16:12: error: expected statement
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-16" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:16</a>:12: error: expected statement
 		function new(int def = 42);
 		         ^~~
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:16:28: error: expected declarator
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-16" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:16</a>:28: error: expected declarator
 		function new(int def = 42);
 		                         ^
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:21:2: error: use of undeclared identifier 'test_cls'
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-21" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:21</a>:2: error: use of undeclared identifier 'test_cls'
 	test_cls test_obj;
 	^~~~~~~~
-<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv</a>:24:14: error: language feature not yet supported
+../..<a href="../../../tests/chapter-8/8.17--constructor_const_arg.sv.html#l-24" target="file-frame">tests/chapter-8/8.17--constructor_const_arg.sv:24</a>:14: error: language feature not yet supported
 		test_obj = new(37);
 		           ^~~~~~~
 </pre>

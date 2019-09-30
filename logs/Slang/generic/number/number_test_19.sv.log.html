@@ -2,15 +2,14 @@
 description: Test
 should_fail: 0
 tags: 5.6.4 5.7.1 5.7.2
-files: <a href="../../../../tests/generic/number/number_test_19.sv.html" target="file-frame">tests/generic/number/number_test_19.sv</a>
 incdirs: 
 top_module: 
-rc: 1
+files: <a href="../../../../tests/generic/number/number_test_19.sv.html" target="file-frame">tests/generic/number/number_test_19.sv</a>
 
-<a href="../../../../tests/generic/number/number_test_19.sv.html" target="file-frame">tests/generic/number/number_test_19.sv</a>:7:25: error: unknown macro or compiler directive '`DIGITS'
+../..<a href="../../../../tests/generic/number/number_test_19.sv.html#l-7" target="file-frame">tests/generic/number/number_test_19.sv:7</a>:25: error: unknown macro or compiler directive '`DIGITS'
 parameter int foo = 16'b`DIGITS(bar);
                         ^
-<a href="../../../../tests/generic/number/number_test_19.sv.html" target="file-frame">tests/generic/number/number_test_19.sv</a>:7:37: error: expected vector literal digits
+../..<a href="../../../../tests/generic/number/number_test_19.sv.html#l-7" target="file-frame">tests/generic/number/number_test_19.sv:7</a>:37: error: expected vector literal digits
 parameter int foo = 16'b`DIGITS(bar);
                                     ^
 </pre>

@@ -2,15 +2,14 @@
 description: Structure replication assignment tests
 should_fail: 0
 tags: 5.10
-files: <a href="../../../tests/chapter-5/5.10-structure-replication.sv.html" target="file-frame">tests/chapter-5/5.10-structure-replication.sv</a>
 incdirs: 
 top_module: 
-rc: 1
+files: <a href="../../../tests/chapter-5/5.10-structure-replication.sv.html" target="file-frame">tests/chapter-5/5.10-structure-replication.sv</a>
 
-<a href="../../../tests/chapter-5/5.10-structure-replication.sv.html" target="file-frame">tests/chapter-5/5.10-structure-replication.sv</a>:8:29: error: language feature not yet supported
+../..<a href="../../../tests/chapter-5/5.10-structure-replication.sv.html#l-8" target="file-frame">tests/chapter-5/5.10-structure-replication.sv:8</a>:29: error: language feature not yet supported
   struct {int X,Y,Z;} XYZ = '{3{1}};
                             ^~~~~~~
-<a href="../../../tests/chapter-5/5.10-structure-replication.sv.html" target="file-frame">tests/chapter-5/5.10-structure-replication.sv</a>:14:10: error: language feature not yet supported
+../..<a href="../../../tests/chapter-5/5.10-structure-replication.sv.html#l-14" target="file-frame">tests/chapter-5/5.10-structure-replication.sv:14</a>:10: error: language feature not yet supported
     v1 = '{2{'{3{'{a,'{2{b,c}}}}}}};
          ^~~~~~~~~~~~~~~~~~~~~~~~~~
 </pre>
