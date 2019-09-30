@@ -1,4 +1,4 @@
-name: always
+name: keyword_always
 description: The 'always' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

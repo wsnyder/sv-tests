@@ -1,4 +1,4 @@
-name: join_any
+name: keyword_join_any
 description: The 'join_any' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

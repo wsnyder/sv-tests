@@ -1,8 +1,8 @@
-<pre>name: binary_op_log_eq
+name: binary_op_log_equiv
 description: <-> operator test
 should_fail: 0
 tags: 11.4.7
-files: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_eq.sv.html" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_eq.sv</a>
+files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv
 incdirs: 
 top_module: 
 rc: 0
@@ -15,4 +15,3 @@ module top;
 		c = ((! a) == (! b));
 	end
 endmodule
-</pre>

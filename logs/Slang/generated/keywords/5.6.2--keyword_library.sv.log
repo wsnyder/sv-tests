@@ -1,4 +1,4 @@
-name: library
+name: keyword_library
 description: The 'library' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

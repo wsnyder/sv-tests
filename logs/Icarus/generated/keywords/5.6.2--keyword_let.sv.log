@@ -1,4 +1,4 @@
-name: let
+name: keyword_let
 description: The 'let' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

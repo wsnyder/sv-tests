@@ -1,4 +1,4 @@
-name: always_ff
+name: keyword_always_ff
 description: The 'always_ff' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

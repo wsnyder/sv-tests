@@ -1,4 +1,4 @@
-name: edge
+name: keyword_edge
 description: The 'edge' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

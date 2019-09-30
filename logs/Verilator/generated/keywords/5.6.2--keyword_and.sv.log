@@ -1,4 +1,4 @@
-name: and
+name: keyword_and
 description: The 'and' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

@@ -1,4 +1,4 @@
-name: ignore_bins
+name: keyword_ignore_bins
 description: The 'ignore_bins' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

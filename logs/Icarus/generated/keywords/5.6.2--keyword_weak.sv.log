@@ -1,4 +1,4 @@
-name: weak
+name: keyword_weak
 description: The 'weak' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

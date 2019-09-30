@@ -1,4 +1,4 @@
-name: within
+name: keyword_within
 description: The 'within' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

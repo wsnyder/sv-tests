@@ -1,4 +1,4 @@
-name: time
+name: keyword_time
 description: The 'time' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

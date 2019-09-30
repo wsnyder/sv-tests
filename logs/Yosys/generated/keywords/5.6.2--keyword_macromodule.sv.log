@@ -1,4 +1,4 @@
-name: macromodule
+name: keyword_macromodule
 description: The 'macromodule' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

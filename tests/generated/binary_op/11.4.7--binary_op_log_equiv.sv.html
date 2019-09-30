@@ -107,18 +107,18 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 12
 13
 14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">:name: cast_task</span>
-<span class="cm">:description: $cast task test</span>
+<span class="cm">:name: binary_op_log_equiv</span>
+<span class="cm">:description: &lt;-&gt; operator test</span>
 <span class="cm">:should_fail: 0</span>
-<span class="cm">:tags: 8.16</span>
+<span class="cm">:tags: 11.4.7</span>
 <span class="cm">*/</span>
-<span class="k">module</span> <span class="n">class_tb</span> <span class="p">();</span>
-	<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span> <span class="n">aaa</span><span class="p">,</span> <span class="n">bbb</span><span class="p">,</span> <span class="n">ccc</span><span class="p">,</span> <span class="n">ddd</span><span class="p">,</span> <span class="n">eee</span> <span class="p">}</span> <span class="n">values</span><span class="p">;</span>
-	<span class="k">initial</span> <span class="k">begin</span>
-		<span class="n">values</span> <span class="n">val</span><span class="p">;</span>
-		<span class="n">$cast</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mh">3</span><span class="p">);</span>
-		<span class="nb">$display</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
-	<span class="k">end</span>
+<span class="k">module</span> <span class="n">top</span><span class="p">();</span>
+<span class="k">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mh">12</span><span class="p">;</span>
+<span class="k">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mh">5</span><span class="p">;</span>
+<span class="k">int</span> <span class="n">c</span><span class="p">;</span>
+<span class="k">initial</span> <span class="k">begin</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;-&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="k">end</span>
 <span class="k">endmodule</span>
 </pre></div>
 </td></tr></table></body>

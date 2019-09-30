@@ -5,6 +5,5 @@ tags: 7.12.4 7.4.2 7.10 7.12.1
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/index.sv
 incdirs: 
 top_module: 
-rc: 3
+rc: -11
 
-internal compiler error: std::bad_alloc

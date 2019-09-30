@@ -1,4 +1,4 @@
-name: until_with
+name: keyword_until_with
 description: The 'until_with' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

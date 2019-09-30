@@ -1,4 +1,4 @@
-name: local
+name: keyword_local
 description: The 'local' keyword should be reserved
 should_fail: 1
 tags: 5.6.2

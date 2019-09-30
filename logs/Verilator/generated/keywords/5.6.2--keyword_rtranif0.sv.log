@@ -1,4 +1,4 @@
-name: rtranif0
+name: keyword_rtranif0
 description: The 'rtranif0' keyword should be reserved
 should_fail: 1
 tags: 5.6.2
