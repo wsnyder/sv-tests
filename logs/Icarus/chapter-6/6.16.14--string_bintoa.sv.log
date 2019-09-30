@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.14--string_bintoa.sv:10: error: Enable of unknown task ``a.bintoa''.
-Elaboration failed
+iverilog: invalid option -- 'i'

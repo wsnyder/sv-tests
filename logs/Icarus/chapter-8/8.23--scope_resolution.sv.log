@@ -5,9 +5,6 @@ tags: 8.23
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv
 incdirs: 
 top_module: 
-rc: 4
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:16: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:16: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:17: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--scope_resolution.sv:17: error: malformed statement
+iverilog: invalid option -- 'i'

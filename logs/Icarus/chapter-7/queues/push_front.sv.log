@@ -5,5 +5,6 @@ tags: 7.10.2.6 7.10.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+iverilog: invalid option -- 'i'

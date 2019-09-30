@@ -5,5 +5,6 @@ tags: 6.11
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_signed_reg.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+iverilog: invalid option -- 'i'

@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/nets/6.6.4--net_trireg.sv:8: sorry: trireg nets not supported.
+iverilog: invalid option -- 'i'

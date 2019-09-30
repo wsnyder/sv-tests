@@ -5,7 +5,6 @@ tags: 8.22
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.22--dynamic_method_lookup.sv:9: error: invalid class item.
+iverilog: invalid option -- 'i'

@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv:8: Include file foo.svh not found
-No top level modules, and no -s option.
+iverilog: invalid option -- 'i'

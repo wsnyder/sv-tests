@@ -5,5 +5,6 @@ tags: 9.4.1
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.1--delay_control.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+iverilog: invalid option -- 'i'

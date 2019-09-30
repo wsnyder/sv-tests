@@ -5,13 +5,6 @@ tags: 5.7.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv
 incdirs: 
 top_module: 
-rc: 8
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:11: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:12: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:12: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:13: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:13: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-constants-illegal.sv:14: error: malformed statement
+iverilog: invalid option -- 'i'

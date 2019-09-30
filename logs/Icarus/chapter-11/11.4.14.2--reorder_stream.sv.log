@@ -5,7 +5,6 @@ tags: 11.4.14.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.2--reorder_stream.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.2--reorder_stream.sv:13: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.2--reorder_stream.sv:13: error: malformed statement
+iverilog: invalid option -- 'i'

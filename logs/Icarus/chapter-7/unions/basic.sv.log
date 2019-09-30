@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/basic.sv:9: sorry: Unpacked structs not supported.
+iverilog: invalid option -- 'i'

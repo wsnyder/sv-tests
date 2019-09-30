@@ -5,7 +5,6 @@ tags: 8.27
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.27--forward_declaration.sv
 incdirs: 
 top_module: 
-rc: 134
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.27--forward_declaration.sv:8: assert: elab_type.cc:138: failed assertion save_elaborated_type
-Aborted (core dumped)
+iverilog: invalid option -- 'i'

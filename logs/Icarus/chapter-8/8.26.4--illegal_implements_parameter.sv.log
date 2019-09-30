@@ -5,17 +5,6 @@ tags: 8.26.4
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv
 incdirs: 
 top_module: 
-rc: 12
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:8: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:10: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:11: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:13: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:14: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:15: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:15: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:16: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.4--illegal_implements_parameter.sv:19: error: invalid module item.
+iverilog: invalid option -- 'i'

@@ -7,7 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_47.sv:8: warning: macro uvm_new_func undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_47.sv:9: warning: macro uvm_new_func2 undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_47.sv:10: warning: macro uvm_new_func3 undefined (and assumed null) at this point.
-No top level modules, and no -s option.
+iverilog: invalid option -- 'i'

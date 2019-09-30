@@ -7,6 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:11: sorry: Reference ports not supported yet.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/persistence.sv:19: internal error: I don't know how to elaborate(ivl_type_t) this expression: {'sd1, 'sd2, 'sd3}
-1 error(s) during elaboration.
+iverilog: invalid option -- 'i'

@@ -5,27 +5,6 @@ tags: 8.26.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv
 incdirs: 
 top_module: 
-rc: 22
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:8: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:9: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:12: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:13: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:13: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:16: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:20: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:22: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:23: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:23: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:24: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:24: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:25: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:26: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:27: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:27: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:28: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.2--implements_extends.sv:31: error: invalid module item.
+iverilog: invalid option -- 'i'

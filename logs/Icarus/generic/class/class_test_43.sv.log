@@ -5,16 +5,6 @@ tags: 6.15 8.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv
 incdirs: 
 top_module: 
-rc: 6
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:8: warning: macro uvm_object_utils_begin undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:9: warning: macro uvm_field_int undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:10: warning: macro uvm_field_int undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:11: warning: macro uvm_field_enum undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:12: warning: macro uvm_object_utils_end undefined (and assumed null) at this point.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:9: error: invalid class item.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:10: error: invalid class item.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_43.sv:11: syntax error
-I give up.
+iverilog: invalid option -- 'i'

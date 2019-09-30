@@ -5,11 +5,6 @@ tags: 9.7
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv
 incdirs: 
 top_module: 
-rc: 6
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:9: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:13: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:13: Syntax in assignment statement l-value.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:15: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_self.sv:15: error: malformed statement
+iverilog: invalid option -- 'i'

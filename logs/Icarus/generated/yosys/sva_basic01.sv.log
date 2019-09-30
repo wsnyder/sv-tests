@@ -5,8 +5,6 @@ should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
-rc: 3
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv:10: sorry: concurrent_assertion_item not supported. Try -gno-assertion to turn this message off.
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic01.sv:14: error: Error in property_spec of concurrent assertion item.
+iverilog: invalid option -- 'i'

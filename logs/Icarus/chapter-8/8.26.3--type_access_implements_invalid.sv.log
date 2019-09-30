@@ -5,17 +5,6 @@ tags: 8.26.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv
 incdirs: 
 top_module: 
-rc: 12
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:8: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:10: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:11: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:13: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:14: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:15: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:15: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:16: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.3--type_access_implements_invalid.sv:19: error: invalid module item.
+iverilog: invalid option -- 'i'

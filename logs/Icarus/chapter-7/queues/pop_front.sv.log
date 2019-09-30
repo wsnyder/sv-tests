@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front.sv:16: error: Unable to bind wire/reg/memory `q.pop_front' in `top'
-1 error(s) during elaboration.
+iverilog: invalid option -- 'i'

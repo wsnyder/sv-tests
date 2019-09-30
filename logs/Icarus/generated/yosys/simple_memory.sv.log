@@ -5,17 +5,6 @@ should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
-rc: 12
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:39: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:39: Errors in port declarations.
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:43: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:43: error: Invalid variable list in port declaration.
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:69: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:69: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:70: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:70: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:73: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:73: error: syntax error in continuous assignment
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:74: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/memory.v:74: error: syntax error in continuous assignment
+iverilog: invalid option -- 'i'

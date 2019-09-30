@@ -5,7 +5,6 @@ should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/extnets.sv:6: syntax error
-/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/extnets.sv:6: error: malformed statement
+iverilog: invalid option -- 'i'

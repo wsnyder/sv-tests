@@ -5,7 +5,6 @@ tags: 6.20.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_port_list.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_port_list.sv:7: syntax error
-I give up.
+iverilog: invalid option -- 'i'

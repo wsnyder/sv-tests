@@ -5,7 +5,6 @@ tags: 7.12.3 7.4.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/or.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/or.sv:15: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/or.sv:15: error: malformed statement
+iverilog: invalid option -- 'i'

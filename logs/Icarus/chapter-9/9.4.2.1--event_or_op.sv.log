@@ -7,6 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.1--event_or_op.sv:14: error: out is not a valid l-value in block_tb.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.1--event_or_op.sv:12:      : out is declared here as wire.
-Elaboration failed
+iverilog: invalid option -- 'i'

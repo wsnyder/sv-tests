@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/assignments.sv:18: error: Cannot assign to array B. Did you forget a word index?
-1 error(s) during elaboration.
+iverilog: invalid option -- 'i'

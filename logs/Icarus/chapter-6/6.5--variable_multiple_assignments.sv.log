@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_multiple_assignments.sv:11: error: Unresolved net/uwire v cannot have multiple drivers.
-1 error(s) during elaboration.
+iverilog: invalid option -- 'i'

@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--fork_return.sv:11: error: Cannot "return" from tasks.
-1 error(s) during elaboration.
+iverilog: invalid option -- 'i'

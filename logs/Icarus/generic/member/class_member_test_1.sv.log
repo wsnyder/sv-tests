@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_1.sv:8: syntax error
+iverilog: invalid option -- 'i'

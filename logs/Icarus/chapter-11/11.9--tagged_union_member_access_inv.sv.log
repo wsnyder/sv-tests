@@ -5,15 +5,6 @@ tags: 11.9
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv
 incdirs: 
 top_module: 
-rc: 10
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:9: error: Syntax error in typedef clause.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:12: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:12: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:14: error: Invalid module instantiation
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:19: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:19: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:20: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv:20: error: malformed statement
+iverilog: invalid option -- 'i'

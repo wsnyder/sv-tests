@@ -5,7 +5,6 @@ tags: 6.18
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv
 incdirs: 
 top_module: 
-rc: 134
+rc: 1
 
-ivl: pform.cc:333: LexicalScope* pform_peek_scope(): Assertion `lexical_scope' failed.
-Aborted (core dumped)
+iverilog: invalid option -- 'i'

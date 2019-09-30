@@ -5,10 +5,6 @@ tags: 5.10
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv
 incdirs: 
 top_module: 
-rc: 5
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv:8: sorry: Unpacked structs not supported.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv:18: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv:18: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv:20: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv:20: error: malformed statement
+iverilog: invalid option -- 'i'

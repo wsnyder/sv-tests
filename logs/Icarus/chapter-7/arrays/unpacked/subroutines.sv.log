@@ -5,7 +5,6 @@ tags: 7.7 7.4.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/subroutines.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/subroutines.sv:12: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/subroutines.sv:12: error: invalid module item.
+iverilog: invalid option -- 'i'

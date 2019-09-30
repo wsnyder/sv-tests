@@ -5,7 +5,6 @@ tags: 5.11
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.11-arrays-key-index.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.11-arrays-key-index.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.11-arrays-key-index.sv:9: error: invalid module item.
+iverilog: invalid option -- 'i'

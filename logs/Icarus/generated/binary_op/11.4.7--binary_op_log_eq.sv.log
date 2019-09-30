@@ -5,7 +5,6 @@ tags: 11.4.7
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_eq.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_eq.sv:12: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.7--binary_op_log_eq.sv:12: error: malformed statement
+iverilog: invalid option -- 'i'

@@ -5,5 +5,6 @@ tags: 8.5
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.5--properties.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+iverilog: invalid option -- 'i'

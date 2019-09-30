@@ -7,6 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.1--casez.sv:10: error: always statement does not have any delay.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.1--casez.sv:10:      : A runtime infinite loop will occur.
-Elaboration failed
+iverilog: invalid option -- 'i'

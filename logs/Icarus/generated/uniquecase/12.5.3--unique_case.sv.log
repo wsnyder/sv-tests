@@ -5,13 +5,6 @@ tags: 12.5.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv
 incdirs: 
 top_module: 
-rc: 8
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:11: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:12: Syntax in assignment statement l-value.
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:13: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:13: Syntax in assignment statement l-value.
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:14: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:14: Syntax in assignment statement l-value.
-/home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--unique_case.sv:15: syntax error
-I give up.
+iverilog: invalid option -- 'i'

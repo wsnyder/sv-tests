@@ -5,10 +5,6 @@ tags: 12.8
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv
 incdirs: 
 top_module: 
-rc: 134
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv:11: error: Return from jump_tb.fun requires a return value expression.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv:13: error: Return from jump_tb.fun requires a return value expression.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv:17: warning: User function 'fun' is being called as a task.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv:17: assert: elab_expr.cc:1264: failed assertion 0
-Aborted (core dumped)
+iverilog: invalid option -- 'i'

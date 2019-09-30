@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/struct/struct_test_0.sv:7: sorry: Struct forward declarations not supported yet.
+iverilog: invalid option -- 'i'

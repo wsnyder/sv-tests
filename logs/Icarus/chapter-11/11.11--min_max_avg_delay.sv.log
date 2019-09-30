@@ -5,6 +5,6 @@ tags: 11.11
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.11--min_max_avg_delay.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.11--min_max_avg_delay.sv:10: warning: choosing typ expression.
+iverilog: invalid option -- 'i'

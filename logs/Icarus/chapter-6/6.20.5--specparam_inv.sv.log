@@ -5,7 +5,6 @@ tags: 6.20.5
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv:9: warning: specparam 'delay' is being used in a constant expression.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam_inv.sv:9:        : This will prevent it being annotated at run time.
+iverilog: invalid option -- 'i'

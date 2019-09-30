@@ -5,9 +5,6 @@ tags: 8.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv
 incdirs: 
 top_module: 
-rc: 4
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv:8: error: invalid class item.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv:9: error: invalid class item.
+iverilog: invalid option -- 'i'

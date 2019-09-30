@@ -7,6 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.8--string_substr.sv:9: error: The RHS expression must be constant.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.8--string_substr.sv:9       : This expression violates the rule: $ivl_string_method$substr(a, 32'sd1, 32'sd2)
-Elaboration failed
+iverilog: invalid option -- 'i'

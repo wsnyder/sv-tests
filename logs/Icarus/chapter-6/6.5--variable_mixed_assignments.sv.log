@@ -7,5 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_mixed_assignments.sv:12: error: v Unable to assign to unresolved wires.
-Elaboration failed
+iverilog: invalid option -- 'i'

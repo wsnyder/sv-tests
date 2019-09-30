@@ -5,13 +5,6 @@ tags: 8.8
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv
 incdirs: 
 top_module: 
-rc: 8
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:15: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:15: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:17: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:17: error: I give up on this function definition.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:21: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:23: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:26: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.8--typed_constructor_param.sv:26: error: malformed statement
+iverilog: invalid option -- 'i'

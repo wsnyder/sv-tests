@@ -5,7 +5,6 @@ tags: 6.19
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19--enum_xx_inv.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19--enum_xx_inv.sv:8: error: Enumeration name b can not have an undefined value.
-2 error(s) during elaboration.
+iverilog: invalid option -- 'i'

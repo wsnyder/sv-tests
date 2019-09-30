@@ -5,8 +5,6 @@ tags: 7.12.1 7.12 7.10
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/max.sv
 incdirs: 
 top_module: 
-rc: 134
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/max.sv:9: internal error: I don't know how to elaborate(ivl_type_t) this expression: {'sd10, 'sd20, 'sd2, 'sd11, 'sd5}
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/max.sv:9: assert: elaborate.cc:2321: failed assertion !is_constant_
-Aborted (core dumped)
+iverilog: invalid option -- 'i'

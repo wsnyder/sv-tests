@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_redeclare.sv:9: error: duplicate declaration for net or variable 'v' in 'top'.
+iverilog: invalid option -- 'i'

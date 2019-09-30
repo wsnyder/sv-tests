@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_16.sv:8: sorry: External methods are not yet supported.
+iverilog: invalid option -- 'i'

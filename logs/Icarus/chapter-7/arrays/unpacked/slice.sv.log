@@ -5,9 +5,6 @@ tags: 7.4.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice.sv
 incdirs: 
 top_module: 
-rc: 3
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice.sv:13: error: Cannot assign to array arr_a. Did you forget a word index?
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice.sv:14: error: Cannot assign to array arr_b. Did you forget a word index?
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice.sv:20: error: cannot perform a part select on array arr_b.
-3 error(s) during elaboration.
+iverilog: invalid option -- 'i'

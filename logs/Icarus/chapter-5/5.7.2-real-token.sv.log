@@ -5,5 +5,6 @@ tags: 5.7.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-token.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+iverilog: invalid option -- 'i'

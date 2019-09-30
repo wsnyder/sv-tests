@@ -5,7 +5,6 @@ tags: 7.12.1 7.12 7.10
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first.sv:13: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-first.sv:13: error: malformed statement
+iverilog: invalid option -- 'i'

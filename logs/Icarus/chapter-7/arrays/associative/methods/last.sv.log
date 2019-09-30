@@ -5,7 +5,6 @@ tags: 7.9.5 7.9
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods/last.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods/last.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods/last.sv:9: error: invalid module item.
+iverilog: invalid option -- 'i'

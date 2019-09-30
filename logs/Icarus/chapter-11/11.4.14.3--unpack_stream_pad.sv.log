@@ -5,8 +5,6 @@ tags: 11.4.14.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_pad.sv
 incdirs: 
 top_module: 
-rc: 3
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_pad.sv:14: sorry: Streaming concatenation not supported.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_pad.sv:15: syntax error
-I give up.
+iverilog: invalid option -- 'i'

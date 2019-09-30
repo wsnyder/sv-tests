@@ -5,6 +5,6 @@ tags: 6.19.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.3--enum_type_checking_inv.sv
 incdirs: 
 top_module: 
-rc: 139
+rc: 1
 
-Segmentation fault (core dumped)
+iverilog: invalid option -- 'i'

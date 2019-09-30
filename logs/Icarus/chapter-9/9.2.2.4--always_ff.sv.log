@@ -5,7 +5,6 @@ tags: 9.2.2.4
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.4--always_ff.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.4--always_ff.sv:11: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.4--always_ff.sv:12: error: invalid module item.
+iverilog: invalid option -- 'i'

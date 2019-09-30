@@ -5,7 +5,6 @@ tags: 8.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_39.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_39.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_39.sv:1: error: I give up on this class constructor declaration.
+iverilog: invalid option -- 'i'

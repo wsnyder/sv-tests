@@ -7,6 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.1--string_len.sv:9: error: The RHS expression must be constant.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.1--string_len.sv:9       : This expression violates the rule: $ivl_string_method$len(a)
-Elaboration failed
+iverilog: invalid option -- 'i'

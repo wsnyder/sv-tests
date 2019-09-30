@@ -5,14 +5,6 @@ tags: 8.3
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv
 incdirs: 
 top_module: 
-rc: 9
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:8: error: Error in task/function port item after port name foo.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:8: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10: error: Error in task/function port item after port name baz.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:9: error: Syntax error in task/function port declaration.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10: error: Syntax error in task/function port declaration.
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_43.sv:10: error: Syntax error in task/function port declaration.
+iverilog: invalid option -- 'i'

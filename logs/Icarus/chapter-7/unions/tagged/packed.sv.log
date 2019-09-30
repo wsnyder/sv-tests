@@ -5,13 +5,6 @@ tags: 7.3.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv
 incdirs: 
 top_module: 
-rc: 8
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:9: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:10: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:12: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:12: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:15: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:15: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:16: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv:16: error: malformed statement
+iverilog: invalid option -- 'i'

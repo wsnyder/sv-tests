@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv:15: sorry: "inside" expressions not supported yet.
+iverilog: invalid option -- 'i'

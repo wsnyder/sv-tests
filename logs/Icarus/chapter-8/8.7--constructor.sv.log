@@ -5,11 +5,6 @@ tags: 8.7
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv
 incdirs: 
 top_module: 
-rc: 6
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:16: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:16: error: malformed statement
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:18: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:18: error: invalid module item.
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.7--constructor.sv:19: syntax error
-I give up.
+iverilog: invalid option -- 'i'

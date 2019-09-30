@@ -5,5 +5,6 @@ tags: 8.19
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.19--global_constant.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+iverilog: invalid option -- 'i'

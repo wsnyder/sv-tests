@@ -5,7 +5,6 @@ tags: 9.2.2.2
 files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.2--always_comb.sv
 incdirs: 
 top_module: 
-rc: 2
+rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.2--always_comb.sv:10: syntax error
-/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.2--always_comb.sv:11: error: invalid module item.
+iverilog: invalid option -- 'i'

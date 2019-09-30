@@ -7,4 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_45.sv:7: sorry: parameter declarations in the $root scope are not yet supported.
+iverilog: invalid option -- 'i'
