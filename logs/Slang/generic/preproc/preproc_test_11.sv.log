@@ -5,5 +5,8 @@ tags: 5.6.4
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_11.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
+../../home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_11.sv:7:20: error: expected identifier
+`define LONG_MACRO(\
+                   ^

@@ -5,6 +5,6 @@ tags: 5.6.4
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_10.sv
 incdirs: 
 top_module: 
-rc: 0
+rc: 1
 
-
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_10.sv:9:25: Lexical error: invalid macro arg name: ""

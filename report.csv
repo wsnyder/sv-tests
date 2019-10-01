@@ -1092,8 +1092,8 @@ class_member_test_41,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/
 class_member_test_30,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_30.sv,8.3,False,True,False,False,False,False,False
 class_member_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv,8.3,False,True,False,False,False,False,False
 preproc_test_8,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_8.sv,5.6.4,True,True,False,True,False,False,True
-preproc_test_10,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_10.sv,5.6.4,True,True,False,True,False,False,True
-preproc_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_11.sv,5.6.4,True,True,False,True,False,False,True
+preproc_test_10,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_10.sv,5.6.4,False,True,False,True,False,False,False
+preproc_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_11.sv,5.6.4,False,True,False,True,False,False,False
 preproc_test_7,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_7.sv,5.6.4,True,True,False,True,False,False,True
 preproc_test_3,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_3.sv,5.6.4,False,False,False,False,False,False,False
 preproc_test_4,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_4.sv,5.6.4,True,True,False,True,False,False,True
@@ -1102,9 +1102,9 @@ preproc_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/prepr
 preproc_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv,5.6.4,False,True,False,False,False,False,False
 preproc_test_6,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_6.sv,5.6.4,True,True,False,True,False,False,True
 preproc_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_5.sv,5.6.4,True,True,False,True,False,False,True
-preproc_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_13.sv,5.6.4,True,False,False,True,False,False,True
-preproc_test_12,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_12.sv,5.6.4,True,True,False,True,False,False,True
-preproc_test_9,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_9.sv,5.6.4,True,True,False,True,False,False,True
+preproc_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_13.sv,5.6.4,False,True,False,True,False,False,False
+preproc_test_12,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_12.sv,5.6.4,False,True,False,True,False,False,False
+preproc_test_9,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_9.sv,5.6.4,False,True,False,True,False,False,False
 iface_class_test_3,/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_3.sv,8.3 8.26,False,True,False,False,False,False,False
 iface_class_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_1.sv,8.3 8.26,False,True,False,False,False,False,False
 iface_class_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_11.sv,8.3 8.26,False,True,False,False,False,False,False
