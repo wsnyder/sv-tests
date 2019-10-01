@@ -7,20 +7,5 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(6, 0) module_declaration
-(12, 1) module_or_generate_item
-(12, 1) function_declaration
-(12, 10) function_body_declaration
-(12, 23) ERROR
-(19, 1) module_or_generate_item
-(19, 1) initial_construct
-(19, 8) statement_or_null
-(19, 8) statement
-(19, 8) statement_item
-(19, 8) seq_block
-(20, 17) statement_or_null
-(20, 17) statement
-(20, 17) statement_item
-(20, 17) subroutine_call_statement
-(22, 13) ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:12:23: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.24--out_of_block_methods.sv:22:13: error: node type: ERROR

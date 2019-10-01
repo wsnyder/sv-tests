@@ -7,12 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(0, 0) module_declaration
-(1, 0) module_or_generate_item
-(1, 0) net_declaration
-(1, 4) data_type_or_implicit1
-(1, 4) implicit_data_type1
-(1, 4) packed_dimension
-(1, 4) unsized_dimension
-(1, 6) ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err04.v:1:6: error: node type: ERROR

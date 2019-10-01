@@ -7,10 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(6, 0) module_declaration
-(7, 1) module_or_generate_item
-(7, 1) data_declaration
-(7, 7) list_of_variable_decl_assignments
-(7, 7) variable_decl_assignment
-(7, 23) ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored_inv.sv:7:23: error: node type: ERROR

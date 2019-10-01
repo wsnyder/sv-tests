@@ -7,8 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(0, 0) module_declaration
-(3, 0) module_or_generate_item
-(3, 0) continuous_assign
-(3, 13) ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err08.v:3:13: error: node type: ERROR

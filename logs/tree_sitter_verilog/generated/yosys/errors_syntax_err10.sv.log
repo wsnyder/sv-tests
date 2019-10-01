@@ -7,9 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(0, 0) module_declaration
-(1, 0) module_or_generate_item
-(1, 0) any_parameter_declaration
-(1, 0) parameter_declaration
-(1, 10) ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err10.v:1:10: error: node type: ERROR

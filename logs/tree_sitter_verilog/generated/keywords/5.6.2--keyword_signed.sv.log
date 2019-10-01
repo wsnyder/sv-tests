@@ -7,6 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(6, 0) module_declaration
-(7, 4) ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords/5.6.2--keyword_signed.sv:7:4: error: node type: ERROR

@@ -7,8 +7,5 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(8, 0) ERROR
-(9, 0) package_item
-(9, 0) data_declaration
-(9, 12) ;
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/desc/desc_test_10.sv:8:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/desc/desc_test_10.sv:9:12: error: node type: ;

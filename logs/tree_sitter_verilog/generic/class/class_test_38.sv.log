@@ -7,30 +7,6 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(6, 0) package_item
-(6, 0) class_declaration
-(7, 1) class_item
-(7, 1) text_macro_usage
-(7, 9) list_of_actual_arguments
-(7, 9) actual_argument
-(7, 9) expression
-(7, 9) primary
-(7, 9) identifier
-(7, 9) simple_identifier
-(8, 1) class_item
-(8, 1) text_macro_usage
-(8, 9) list_of_actual_arguments
-(8, 9) actual_argument
-(8, 9) expression
-(8, 9) primary
-(8, 9) identifier
-(8, 9) simple_identifier
-(9, 1) class_item
-(9, 1) text_macro_usage
-(9, 9) list_of_actual_arguments
-(9, 9) actual_argument
-(9, 9) expression
-(9, 9) primary
-(9, 9) identifier
-(9, 9) simple_identifier
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_38.sv:7:9: error: node type: simple_identifier
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_38.sv:8:9: error: node type: simple_identifier
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_38.sv:9:9: error: node type: simple_identifier

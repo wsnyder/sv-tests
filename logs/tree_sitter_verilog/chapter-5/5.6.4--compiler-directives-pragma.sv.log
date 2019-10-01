@@ -7,9 +7,5 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(7, 0) module_declaration
-(8, 8) module_or_generate_item
-(8, 8) net_declaration
-(9, 2) ERROR
-(10, 19) ;
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-pragma.sv:9:2: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-pragma.sv:10:19: error: node type: ;

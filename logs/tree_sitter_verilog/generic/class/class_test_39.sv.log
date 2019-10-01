@@ -7,11 +7,5 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(6, 0) package_item
-(6, 0) class_declaration
-(7, 8) ERROR
-(7, 9) ERROR
-(8, 11) ERROR
-(9, 8) primary
-(9, 11) ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_39.sv:7:9: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/class/class_test_39.sv:9:11: error: node type: ERROR

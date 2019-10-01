@@ -7,10 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(6, 0) package_item
-(6, 0) any_parameter_declaration
-(6, 0) parameter_declaration
-(6, 14) list_of_param_assignments
-(6, 14) param_assignment
-(6, 19) ERROR
+/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_21.sv:6:19: error: node type: ERROR

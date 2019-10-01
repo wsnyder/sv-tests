@@ -7,62 +7,26 @@ incdirs:
 top_module: 
 rc: 1
 
-(1, 0) source_file
-(32, 0) ERROR
-(32, 10) text_macro_usage
-(32, 18) list_of_actual_arguments
-(32, 18) actual_argument
-(32, 18) expression
-(32, 18) primary
-(32, 18) identifier
-(32, 18) simple_identifier
-(36, 0) package_item
-(36, 0) net_declaration
-(39, 0) ERROR
-(39, 42) ERROR
-(49, 0) package_item
-(49, 0) net_declaration
-(51, 0) ERROR
-(51, 47) ERROR
-(58, 0) package_item
-(58, 0) net_declaration
-(60, 0) ERROR
-(60, 41) ERROR
-(66, 0) package_item
-(66, 0) net_declaration
-(66, 7) ERROR
-(66, 8) list_of_net_decl_assignments
-(66, 15) net_decl_assignment
-(66, 18) ERROR
-(67, 0) package_item
-(67, 0) net_declaration
-(70, 0) ERROR
-(70, 34) ERROR
-(71, 0) package_item
-(71, 0) net_declaration
-(71, 19) ERROR
-(72, 0) package_item
-(72, 0) net_declaration
-(72, 14) ERROR
-(73, 0) package_item
-(73, 0) net_declaration
-(73, 6) list_of_net_decl_assignments
-(73, 18) ERROR
-(74, 0) package_item
-(74, 0) net_declaration
-(74, 14) ERROR
-(75, 0) package_item
-(75, 0) net_declaration
-(78, 0) ERROR
-(78, 31) ERROR
-(79, 0) package_item
-(79, 0) net_declaration
-(79, 11) ERROR
-(82, 0) package_item
-(82, 0) net_declaration
-(82, 7) ERROR
-(82, 31) ERROR
-(84, 1) package_item
-(84, 1) net_declaration
-(84, 8) ERROR
-(86, 0) ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:32:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:32:18: error: node type: simple_identifier
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:39:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:39:42: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:51:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:51:47: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:60:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:60:41: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:66:7: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:66:18: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:70:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:70:34: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:71:19: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:72:14: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:73:18: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:74:14: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:78:0: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:78:31: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:79:11: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:82:7: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:82:31: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:84:8: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v:86:0: error: node type: ERROR

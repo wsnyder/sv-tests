@@ -7,7 +7,4 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(0, 0) module_declaration
-(7, 0) specify_block
-(9, 0) ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/specify.v:9:0: error: node type: ERROR

@@ -7,16 +7,5 @@ incdirs:
 top_module: 
 rc: 1
 
-(1, 0) source_file
-(3, 0) module_declaration
-(15, 0) module_or_generate_item
-(15, 0) always_construct
-(15, 6) statement
-(15, 6) statement_item
-(15, 6) procedural_timing_control_statement
-(15, 36) ERROR
-(17, 6) statement_or_null
-(17, 6) statement
-(17, 6) statement_item
-(17, 6) procedural_timing_control_statement
-(17, 21) ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fsm.v:15:36: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fsm.v:17:21: error: node type: ERROR

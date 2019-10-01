@@ -7,25 +7,7 @@ incdirs:
 top_module: 
 rc: 1
 
-(0, 0) source_file
-(0, 0) module_declaration
-(1, 1) module_or_generate_item
-(1, 1) concurrent_assertion_item
-(1, 7) assert_property_statement
-(1, 24) ERROR
-(1, 26) primary
-(1, 35) ERROR
-(3, 1) module_or_generate_item
-(3, 1) concurrent_assertion_item
-(3, 7) assert_property_statement
-(3, 24) ERROR
-(3, 26) primary
-(3, 35) ERROR
-(5, 1) module_or_generate_item
-(5, 1) concurrent_assertion_item
-(5, 7) assert_property_statement
-(5, 24) ERROR
-(5, 26) primary
-(5, 35) ERROR
-(9, 0) bind_directive
-(9, 45) ;
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:1:35: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:3:35: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:5:35: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv:9:45: error: node type: ;
