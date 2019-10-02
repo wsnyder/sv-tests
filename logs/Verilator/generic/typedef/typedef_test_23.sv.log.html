@@ -6,8 +6,8 @@ incdirs:
 top_module: 
 files: <a href="../../../../tests/generic/typedef/typedef_test_23.sv.html" target="file-frame">tests/generic/typedef/typedef_test_23.sv</a>
 
-%Error: <a href="../../../../tests/generic/typedef/typedef_test_23.sv.html#l-7" target="file-frame">tests/generic/typedef/typedef_test_23.sv:7</a>: syntax error, unexpected ::, expecting '{'
-%Error: <a href="../../../../tests/generic/typedef/typedef_test_23.sv.html#l-7" target="file-frame">tests/generic/typedef/typedef_test_23.sv:7</a>: Perhaps 'yourpkg' is a package which needs to be predeclared? (IEEE 2012 26.3)
-%Error: Exiting due to 2 error(s)
+%Error: Duplicate declaration of cell: $unit
+%Error: ... Location of original declaration
+%Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/generic/typedef/typedef_test_23.sv.html" target="file-frame">tests/generic/typedef/typedef_test_23.sv</a>
 </pre>

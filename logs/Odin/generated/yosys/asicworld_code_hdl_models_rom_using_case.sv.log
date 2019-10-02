@@ -30,8 +30,8 @@ Performing Partial Map to target device
 Outputting the netlist to the specified output format
 Successful High-level synthesis by Odin
 	Blif file available at  odin.blif
-	Ran in 4.2ms
+	Ran in 4.0ms
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 Odin ran with exit status: 0
-Odin II took 0.00 seconds (max_rss 7.0 MiB)
+Odin II took 0.00 seconds (max_rss 6.9 MiB)

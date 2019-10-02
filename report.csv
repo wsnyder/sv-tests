@@ -922,7 +922,7 @@ typedef_test_12,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/type
 typedef_test_26,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_26.sv,6.18,False,False,False,False,False,False,True
 typedef_test_27,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_27.sv,6.18,False,False,False,False,False,False,True
 typedef_test_6,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_6.sv,6.18,True,True,False,False,False,False,True
-typedef_test_23,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_23.sv,6.18,False,False,False,False,False,False,True
+typedef_test_23,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_23.sv,6.18,True,True,False,False,False,False,True
 typedef_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_1.sv,6.18,True,True,False,False,False,False,True
 typedef_test_18,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_18.sv,6.18,True,True,False,False,False,False,False
 typedef_test_25,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_25.sv,6.18,False,False,False,False,False,False,True
@@ -933,7 +933,7 @@ typedef_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typed
 typedef_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_11.sv,6.18,False,True,False,False,False,False,False
 typedef_test_7,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_7.sv,6.18,True,True,False,False,False,False,True
 typedef_test_22,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_22.sv,6.18,False,True,False,False,False,False,True
-typedef_test_21,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_21.sv,6.18,False,False,False,False,False,False,True
+typedef_test_21,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_21.sv,6.18,True,True,False,False,False,False,True
 typedef_test_10,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_10.sv,6.18,False,True,False,False,False,False,False
 typedef_test_14,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_14.sv,6.18,False,True,False,False,False,False,True
 typedef_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_13.sv,6.18,False,True,False,False,False,False,False

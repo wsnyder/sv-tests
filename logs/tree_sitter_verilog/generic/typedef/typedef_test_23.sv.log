@@ -5,6 +5,5 @@ tags: 6.18
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_23.sv
 incdirs: 
 top_module: 
-rc: 1
+rc: 0
 
-/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_23.sv:6:20: error: node type: ERROR

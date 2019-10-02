@@ -5,8 +5,5 @@ tags: 6.18
 files: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_23.sv
 incdirs: 
 top_module: 
-rc: 1
+rc: 0
 
-../../home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_23.sv:7:14: error: unknown class or package 'yourpkg'
-typedef enum yourpkg::num_t {
-             ^~~~~~~
