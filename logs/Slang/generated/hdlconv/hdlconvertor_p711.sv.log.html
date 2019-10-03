@@ -1,0 +1,27 @@
+<pre>name: hdlconvertor_p711
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:7</a>:1: error: unknown module 'alu'
+alu alu (alu_out, , ain, bin, opcode); // zero output is unconnected
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:8</a>:1: error: unknown module 'accum'
+accum accum (dataout[7:0], alu_out, clk, rst_n);
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:9</a>:1: error: unknown module 'xtend'
+xtend xtend (dataout[15:8], alu_out[7], clk);
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:19</a>:1: error: unknown module 'alu'
+alu
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:24</a>:1: error: unknown module 'accum'
+accum accum (.dataout(dataout[7:0]), .datain(alu_out),
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:27</a>:1: error: unknown module 'xtend'
+xtend xtend (.dout(dataout[15:8]), .din(alu_out[7]),
+^~~~~
+</pre>

@@ -1,0 +1,28 @@
+<pre>name: hdlconvertor_p240
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv</a>
+
+module multiple2;
+	reg a;
+	initial a = 1;
+	initial a <= #(4) 0;
+	initial a <= #(4) 1;
+endmodule
+module multiple3;
+	reg a;
+	initial #(8) a <= #(8) 1;
+	initial #(12) a <= #(4) 0;
+endmodule
+module multiple4;
+	reg r1;
+	reg [2:0] i;
+	initial begin
+		for (i = 0; (i <= 5); i = (i + 1))
+			r1 <= #((i * 10)) i[0];
+	end
+endmodule
+</pre>

@@ -1,0 +1,11 @@
+name: hdlconvertor_p289
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv:6: Operator ASSIGN expects 112 bits on the Assign RHS, but Assign RHS's REPLICATE generates 136 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.

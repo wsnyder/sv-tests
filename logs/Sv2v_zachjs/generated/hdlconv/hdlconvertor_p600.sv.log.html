@@ -1,0 +1,19 @@
+<pre>name: hdlconvertor_p600
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
+
+module top;
+	wire [31:0] X;
+	localparam [31:0] A = 32'd0;
+	localparam [31:0] B = 32'd1;
+	localparam [31:0] C = 32'd99;
+	struct {
+		logic A;
+		logic B;
+	} AB [0:9];
+endmodule
+</pre>

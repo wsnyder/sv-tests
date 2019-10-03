@@ -1,0 +1,12 @@
+name: hdlconvertor_mem_base_object
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/others/mem_base_object.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/others/mem_base_object.sv:3:1: error: language feature not yet supported
+class mem_base_object;
+^~~~~~~~~~~~~~~~~~~~~~

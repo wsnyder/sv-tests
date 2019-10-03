@@ -1,0 +1,12 @@
+name: hdlconvertor_p338
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p338.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p338.sv:2:2: error: language feature not yet supported
+	clocking bus @(posedge clock1);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

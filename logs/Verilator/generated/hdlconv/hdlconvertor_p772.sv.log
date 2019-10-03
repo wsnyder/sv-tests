@@ -1,0 +1,16 @@
+name: hdlconvertor_p772
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:6: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:8: Unsupported or unknown PLI call: $urandom_range
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:16: syntax error, unexpected clocking
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:20: syntax error, unexpected property
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:25: Unsupported: Modport clocking
+%Error: Exiting due to 5 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv

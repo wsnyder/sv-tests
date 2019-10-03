@@ -1,0 +1,27 @@
+name: hdlconvertor_p700
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:17:23: error: language feature not yet supported
+module complex_ports( {c,d}, .e(f) );
+                      ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:17:30: error: language feature not yet supported
+module complex_ports( {c,d}, .e(f) );
+                             ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:20:21: error: port 'a' has no I/O member declaration
+module split_ports (a[7:4], a[3:0]);
+                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:20:29: error: port 'a' has no I/O member declaration
+module split_ports (a[7:4], a[3:0]);
+                            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:23:19: error: language feature not yet supported
+module same_port (.a(i), .b(i));
+                  ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:23:26: error: language feature not yet supported
+module same_port (.a(i), .b(i));
+                         ^~~~~

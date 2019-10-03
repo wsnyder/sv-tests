@@ -1,0 +1,16 @@
+name: hdlconvertor_p791
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-UNOPTFLAT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10: Signal unoptimizable: Feedback to clock or circular logic: addergen1.c
+%Warning-UNOPTFLAT: Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10:  addergen1.c
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:19:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:15:  addergen1.bitnum[0].t3
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:20:  ASSIGNW
+%Warning-UNOPTFLAT:      Example path: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10:  addergen1.c

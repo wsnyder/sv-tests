@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../code.css">
+  </head>
+  <body>
+    third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1"> 1</a>
+<a href="#l-2"> 2</a>
+<a href="#l-3"> 3</a>
+<a href="#l-4"> 4</a>
+<a href="#l-5"> 5</a>
+<a href="#l-6"> 6</a>
+<a href="#l-7"> 7</a>
+<a href="#l-8"> 8</a>
+<a href="#l-9"> 9</a>
+<a href="#l-10">10</a>
+<a href="#l-11">11</a>
+<a href="#l-12">12</a>
+<a href="#l-13">13</a>
+<a href="#l-14">14</a>
+<a href="#l-15">15</a>
+<a href="#l-16">16</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="k">module</span> <span class="no">ALU</span> <span class="p">(</span><span class="n">o1</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">opcode</span><span class="p">);</span>
+<a name="l-2"></a><span class="k">input</span> <span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">;</span>
+<a name="l-3"></a><span class="k">input</span> <span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">1</span><span class="p">]</span> <span class="n">opcode</span><span class="p">;</span>
+<a name="l-4"></a><span class="k">output</span> <span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">o1</span><span class="p">;</span>
+<a name="l-5"></a><span class="c1">//functional description omitted</span>
+<a name="l-6"></a><span class="k">specify</span>
+<a name="l-7"></a><span class="c1">// add operation</span>
+<a name="l-8"></a><span class="k">if</span> <span class="p">(</span><span class="n">opcode</span> <span class="o">==</span> <span class="mh">2</span><span class="mb">&#39;b00</span><span class="p">)</span> <span class="p">(</span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span> <span class="o">*&gt;</span> <span class="n">o1</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mf">25.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">);</span>
+<a name="l-9"></a><span class="c1">// pass-through i1 operation</span>
+<a name="l-10"></a><span class="k">if</span> <span class="p">(</span><span class="n">opcode</span> <span class="o">==</span> <span class="mh">2</span><span class="mb">&#39;b01</span><span class="p">)</span> <span class="p">(</span><span class="n">i1</span> <span class="o">=&gt;</span> <span class="n">o1</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">);</span>
+<a name="l-11"></a><span class="c1">// pass-through i2 operation</span>
+<a name="l-12"></a><span class="k">if</span> <span class="p">(</span><span class="n">opcode</span> <span class="o">==</span> <span class="mh">2</span><span class="mb">&#39;b10</span><span class="p">)</span> <span class="p">(</span><span class="n">i2</span> <span class="o">=&gt;</span> <span class="n">o1</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">);</span>
+<a name="l-13"></a><span class="c1">// delays on opcode changes</span>
+<a name="l-14"></a><span class="p">(</span><span class="n">opcode</span> <span class="o">*&gt;</span> <span class="n">o1</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mf">6.1</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">);</span>
+<a name="l-15"></a><span class="k">endspecify</span>
+<a name="l-16"></a><span class="k">endmodule</span>
+</pre></div>
+</td></tr></table>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+name: hdlconvertor_p488
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1: Unsupported: SystemVerilog 2009 reserved word not implemented: checker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1: syntax error, unexpected output, expecting IDENTIFIER or do or final
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:4: Unsupported: SystemVerilog 2009 reserved word not implemented: endchecker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:8: syntax error, unexpected posedge, expecting ')'
+%Error: Exiting due to 6 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv

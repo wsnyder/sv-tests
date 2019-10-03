@@ -1,0 +1,21 @@
+name: hdlconvertor_p234
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:15:10: error: identifier 'n' used before its declaration
+input [1:n] bus0, bus1, bus2, bus3;
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:12:11: note: declared here
+parameter n = 16;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:21:8: error: identifier 'n' used before its declaration
+tri [1:n] busout = enable ? data : Zee;
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:12:11: note: declared here
+parameter n = 16;
+          ^

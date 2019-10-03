@@ -1,0 +1,15 @@
+name: hdlconvertor_p577
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv:2:15: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv:5:5: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv:17:1: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv:24:21: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv:24:53: error: node type: ERROR
+/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p577.sv:25:1: error: node type: ERROR

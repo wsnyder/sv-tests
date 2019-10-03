@@ -1,0 +1,99 @@
+name: hdlconvertor_p884
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:1:1: error: expected member
+primitive posdff_udp(q, clock, data, preset, clear, notifier);
+^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:4:2: error: expected member
+	table
+	^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:8:2: error: expected member
+	r  1  1 1  ? : ? : 1 ;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:10:2: error: expected member
+	p  1  ? 1  ? : 1 : 1;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:11:2: error: expected member
+	p  0  1 ?  ? : 0 : 0;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:13:2: error: expected member
+	n  ?  ? ?  ? : ? : -;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:14:2: error: expected member
+	?  *  ? ?  ? : ? : -;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:16:2: error: expected member
+	?  ?  0 1  ? : ? : 1;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:17:2: error: expected member
+	?  ?  * 1  ? : 1 : 1;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:19:2: error: expected member
+	?  ?  1 0  ? : ? : 0;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:20:2: error: expected member
+	?  ?  1 *  ? : 0 : 0;
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:21:2: error: expected member
+	?  ?  ? ?  * : ? : x;// At any notifier event
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:24:2: error: expected member
+	endtable
+	^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:32:2: error: expected member
+	and (enable, preset, clear);
+	^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:33:2: error: expected member
+	not (qbar, ffout);
+	^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:34:2: error: expected member
+	buf (q, ffout);
+	^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:35:2: error: expected member
+	posdff_udp (ffout, clock, data, preset, clear, notifier);
+	^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:36:2: error: expected member
+	specify
+	^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:40:3: error: expected member
+		specparam tPLHc = 4:6:9 , tPHLc = 5:8:11;
+		^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:41:3: error: expected member
+		specparam tPLHpc = 3:5:6 , tPHLpc = 4:7:9;
+		^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:44:3: error: expected member
+		(clock *> q,qbar) = (tPLHc, tPHLc);
+		^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:45:3: error: expected member
+		(preset,clear *> q,qbar) = (tPLHpc, tPHLpc);
+		^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:47:3: error: expected member
+		$setup(data, posedge clock &&& enable, tSU, notifier);
+		^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:49:3: error: expected member
+		$hold(posedge clock, data &&& enable, tHD, notifier);
+		^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:51:3: error: expected member
+		$period(posedge clock, tPW, notifier);
+		^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:53:3: error: expected member
+		$width(negedge preset, tWPC, 0, notifier);
+		^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:54:3: error: expected member
+		$width(negedge clear, tWPC, 0, notifier);
+		^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:56:3: error: expected member
+		$recovery(posedge preset, posedge clock, tREC, notifier);
+		^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:57:3: error: expected member
+		$recovery(posedge clear, posedge clock, tREC, notifier);
+		^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv:58:2: error: expected member
+	endspecify
+	^~~~~~~~~~

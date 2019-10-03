@@ -1,0 +1,24 @@
+name: hdlconvertor_p190
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv:2:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv:7:10: error: 'C' recursively depends on its own definition
+function C::T C::f();
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv:7:15: note: declared here
+function C::T C::f();
+              ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv:13:15: error: redefinition of 'C'
+function real C::f2();
+              ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv:7:15: note: previous definition here
+function C::T C::f();
+              ^

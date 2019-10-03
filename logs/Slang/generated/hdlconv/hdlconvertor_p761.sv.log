@@ -1,0 +1,15 @@
+name: hdlconvertor_p761
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv:12:15: error: unknown interface 'interface'
+module memMod(interface a); // Uses any interface
+              ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv:20:15: error: unknown interface 'interface'
+module cpuMod(interface b);
+              ^~~~~~~~~

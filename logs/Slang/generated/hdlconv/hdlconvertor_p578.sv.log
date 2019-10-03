@@ -1,0 +1,78 @@
+name: hdlconvertor_p578
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:1:1: error: language feature not yet supported
+covergroup zz(int bad);
+^~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:2:1: error: expected member
+cross x, y
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:2:8: error: expected expression
+cross x, y
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:2:8: error: expected ':'
+cross x, y
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:2:8: error: expected ';'
+cross x, y
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:2:8: error: expected member
+cross x, y
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:2:11: error: expected ':'
+cross x, y
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:3:2: error: expected ','
+{
+ ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:1: error: expected expression
+illegal_bins illegal = binsof(y) intersect {bad};
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:1: error: expected member
+illegal_bins illegal = binsof(y) intersect {bad};
+^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:21: error: expected ':'
+illegal_bins illegal = binsof(y) intersect {bad};
+                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:22: error: expected expression
+illegal_bins illegal = binsof(y) intersect {bad};
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:23: error: expected ';'
+illegal_bins illegal = binsof(y) intersect {bad};
+                      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:24: error: expected expression
+illegal_bins illegal = binsof(y) intersect {bad};
+                       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:24: error: expected member
+illegal_bins illegal = binsof(y) intersect {bad};
+                       ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:32: error: expected expression
+illegal_bins illegal = binsof(y) intersect {bad};
+                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:32: error: expected ':'
+illegal_bins illegal = binsof(y) intersect {bad};
+                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:32: error: expected ';'
+illegal_bins illegal = binsof(y) intersect {bad};
+                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:32: error: expected member
+illegal_bins illegal = binsof(y) intersect {bad};
+                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:48: error: expected expression
+illegal_bins illegal = binsof(y) intersect {bad};
+                                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:48: error: expected ':'
+illegal_bins illegal = binsof(y) intersect {bad};
+                                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:48: error: expected ';'
+illegal_bins illegal = binsof(y) intersect {bad};
+                                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv:4:48: error: expected member
+illegal_bins illegal = binsof(y) intersect {bad};
+                                               ^

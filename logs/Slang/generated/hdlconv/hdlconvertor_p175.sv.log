@@ -1,0 +1,30 @@
+name: hdlconvertor_p175
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:1:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:5:9: error: expected identifier
+function new(int a);
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:5:10: error: expected statement
+function new(int a);
+         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:5:19: error: expected declarator
+function new(int a);
+                  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:10:1: error: language feature not yet supported
+class D extends C;
+^~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:14:9: error: expected identifier
+function new;
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv:14:10: error: expected statement
+function new;
+         ^~~

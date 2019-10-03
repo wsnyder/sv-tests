@@ -1,0 +1,63 @@
+<pre>name: hdlconvertor_p490
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:2</a>:1: error: expected member
+checker check_in_context (logic test_sig,
+^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:2</a>:42: error: expected identifier
+checker check_in_context (logic test_sig,
+                                         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:3</a>:27: error: expected declarator
+                          event clock = $inferred_clock,
+                          ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:3</a>:32: error: expected ','
+                          event clock = $inferred_clock,
+                               ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:3</a>:41: error: use of undeclared identifier '$inferred_clock'
+                          event clock = $inferred_clock,
+                                        ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:3</a>:57: error: expected identifier
+                          event clock = $inferred_clock,
+                                                        ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:4</a>:27: error: expected declarator
+                          logic reset = $inferred_disable);
+                          ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:4</a>:32: error: expected ','
+                          logic reset = $inferred_disable);
+                               ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:4</a>:41: error: use of undeclared identifier '$inferred_disable'
+                          logic reset = $inferred_disable);
+                                        ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:4</a>:58: error: expected declarator
+                          logic reset = $inferred_disable);
+                                                         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:7</a>:3: error: language feature not yet supported
+  a1: assert property (@clock disable iff (reset) p(test_sig));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:8</a>:3: error: language feature not yet supported
+  c1: cover property (@clock !reset throughout !test_sig ##1 test_sig);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:9</a>:1: error: expected member
+endchecker : check_in_context
+^~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:16</a>:3: error: unknown module 'check_in_context'
+  check_in_context my_check1(.test_sig(b), .clock(clk), .reset(rst));
+  ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:20</a>:7: error: use of undeclared identifier 'check_in_context'
+      check_in_context my_check2(a);
+      ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:20</a>:33: error: expected declarator
+      check_in_context my_check2(a);
+                                ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:20</a>:34: error: expected ','
+      check_in_context my_check2(a);
+                                 ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv:20</a>:35: error: expected declarator
+      check_in_context my_check2(a);
+                                  ^
+</pre>

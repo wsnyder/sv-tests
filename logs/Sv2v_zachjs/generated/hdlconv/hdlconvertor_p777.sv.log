@@ -1,0 +1,29 @@
+name: hdlconvertor_p777
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p777.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+module top1;
+	localparam [31:0] q_FALSE = 32'd1;
+	localparam [31:0] FALSE = 32'd0;
+	localparam [31:0] TRUE = 32'd1;
+	reg [31:0] myteeth;
+	initial begin
+		myteeth = q_FALSE;
+		myteeth = FALSE;
+	end
+endmodule
+module top2;
+	localparam [31:0] FALSE = 32'd0;
+	localparam [31:0] TRUE = 32'd1;
+	localparam [31:0] ORIGINAL = 32'd0;
+	localparam [31:0] FALSE = 32'd1;
+	reg [31:0] myteeth;
+	initial begin
+		myteeth = FALSE;
+	end
+endmodule

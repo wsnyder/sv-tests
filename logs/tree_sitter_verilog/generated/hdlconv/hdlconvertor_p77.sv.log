@@ -1,0 +1,9 @@
+name: hdlconvertor_p77
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p77.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+

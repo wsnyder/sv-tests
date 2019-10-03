@@ -1,0 +1,18 @@
+name: hdlconvertor_p200_2
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p200_2.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p200_2.sv:1:1: error: language feature not yet supported
+interface class PutImp#(type T = logic);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p200_2.sv:5:1: error: language feature not yet supported
+interface class GetImp#(type T = logic);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p200_2.sv:9:1: error: language feature not yet supported
+interface class PutGetIntf#(type TYPE = logic) extends PutImp#(TYPE), GetImp#(TYPE);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

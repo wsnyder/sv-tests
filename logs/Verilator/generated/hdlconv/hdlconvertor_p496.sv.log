@@ -1,0 +1,34 @@
+name: hdlconvertor_p496
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:1: Unsupported: SystemVerilog 2009 reserved word not implemented: checker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:1: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:1: syntax error, unexpected bit, expecting IDENTIFIER or do or final
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:2: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:2: syntax error, unexpected ')', expecting ',' or ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:4: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:5: Unsupported: SystemVerilog 2009 reserved word not implemented: endchecker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:9: Unsupported: SystemVerilog 2009 reserved word not implemented: checker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:9: syntax error, unexpected bit, expecting IDENTIFIER or do or final
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:10: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:10: syntax error, unexpected ')', expecting ',' or ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:12: Unsupported: SystemVerilog 2009 reserved word not implemented: endchecker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:18: Unsupported: SystemVerilog 2009 reserved word not implemented: checker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:20: Unsupported: SystemVerilog 2005 reserved word not implemented: sequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:20: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:22: Unsupported: SystemVerilog 2005 reserved word not implemented: endsequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:24: Unsupported: SystemVerilog 2009 reserved word not implemented: endchecker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:31: Unsupported: SystemVerilog 2009 reserved word not implemented: checker
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:32: Unsupported: SystemVerilog 2005 reserved word not implemented: sequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:34: Unsupported: SystemVerilog 2005 reserved word not implemented: endsequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:37: syntax error, unexpected IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv:40: Unsupported: SystemVerilog 2009 reserved word not implemented: endchecker
+%Error: Exiting due to 22 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv

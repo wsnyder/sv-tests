@@ -1,0 +1,27 @@
+name: hdlconvertor_p558
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv:1:1: error: language feature not yet supported
+class C1;
+^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv:7:10: error: expected identifier
+	function new(int p1);
+	        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv:7:11: error: expected statement
+	function new(int p1);
+	         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv:7:21: error: expected declarator
+	function new(int p1);
+	                   ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv:14:3: error: use of undeclared identifier 'C1'
+		C1 obj = new(4);
+		^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p558.sv:14:12: error: language feature not yet supported
+		C1 obj = new(4);
+		         ^~~~~~

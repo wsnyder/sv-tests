@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../code.css">
+  </head>
+  <body>
+    third_party/tests/hdlconvertor/tests/sv_test/std2017/p193.sv
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1">1</a>
+<a href="#l-2">2</a>
+<a href="#l-3">3</a>
+<a href="#l-4">4</a>
+<a href="#l-5">5</a>
+<a href="#l-6">6</a>
+<a href="#l-7">7</a>
+<a href="#l-8">8</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="k">class</span> <span class="no">C</span> <span class="p">#(</span><span class="k">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mh">1</span><span class="p">);</span>
+<a name="l-2"></a><span class="k">parameter</span> <span class="k">int</span> <span class="n">q</span> <span class="o">=</span> <span class="mh">5</span><span class="p">;</span> <span class="c1">// local parameter</span>
+<a name="l-3"></a><span class="k">static</span> <span class="k">task</span> <span class="n">t</span><span class="p">;</span>
+<a name="l-4"></a><span class="k">int</span> <span class="n">p</span><span class="p">;</span>
+<a name="l-5"></a><span class="k">int</span> <span class="n">x</span> <span class="o">=</span> <span class="no">C</span><span class="o">::</span><span class="n">p</span><span class="p">;</span> <span class="c1">// C::p disambiguates p</span>
+<a name="l-6"></a><span class="c1">// C::p is not p in the default specialization</span>
+<a name="l-7"></a><span class="k">endtask</span>
+<a name="l-8"></a><span class="k">endclass</span>
+</pre></div>
+</td></tr></table>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+name: hdlconvertor_p576
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:1:1: error: language feature not yet supported
+class cg_cls;
+^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:6: error: expected 'coverpoint'
+	XYA: cross xy, a
+	    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:6: error: expected ';'
+	XYA: cross xy, a
+	    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:7: error: expected expression
+	XYA: cross xy, a
+	     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:7: error: expected member
+	XYA: cross xy, a
+	     ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:15: error: expected expression
+	XYA: cross xy, a
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:15: error: expected ':'
+	XYA: cross xy, a
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:15: error: expected ';'
+	XYA: cross xy, a
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:15: error: expected member
+	XYA: cross xy, a
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:6:18: error: expected ':'
+	XYA: cross xy, a
+	                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:11:3: error: expected ';'
+	}
+	 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:7: error: expected 'coverpoint'
+	aXb : cross a, b
+	     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:7: error: expected ';'
+	aXb : cross a, b
+	     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:8: error: expected expression
+	aXb : cross a, b
+	      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:8: error: expected member
+	aXb : cross a, b
+	      ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:15: error: expected expression
+	aXb : cross a, b
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:15: error: expected ':'
+	aXb : cross a, b
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:15: error: expected ';'
+	aXb : cross a, b
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:15: error: expected member
+	aXb : cross a, b
+	             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:17:18: error: expected ':'
+	aXb : cross a, b
+	                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:18:3: error: expected ','
+	{
+	 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:19:2: error: expected expression
+	bins one = '{ '{1,2}, '{3,4}, '{5,6} };
+	^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:19:2: error: expected member
+	bins one = '{ '{1,2}, '{3,4}, '{5,6} };
+	^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:19:10: error: expected ':'
+	bins one = '{ '{1,2}, '{3,4}, '{5,6} };
+	        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:19:11: error: expected expression
+	bins one = '{ '{1,2}, '{3,4}, '{5,6} };
+	         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p576.sv:20:2: error: expected member
+	}
+	^

@@ -1,0 +1,33 @@
+name: hdlconvertor_p532
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:1:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:4:16: error: use of undeclared identifier 'C'
+function int F(C obj, integer y);
+               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:5:21: error: language feature not yet supported
+F = obj.randomize() with (x) { x < y; };
+                    ^~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:8:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:11:14: error: redefinition of 'F'
+function int F(C obj, integer x);
+             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:4:14: note: previous definition here
+function int F(C obj, integer y);
+             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:11:16: error: use of undeclared identifier 'C'
+function int F(C obj, integer x);
+               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:12:21: error: language feature not yet supported
+F = obj.randomize() with { x < local::x; };
+                    ^~~~~~~~~~~~~~~~~~~~~~

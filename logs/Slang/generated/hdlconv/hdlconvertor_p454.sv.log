@@ -1,0 +1,114 @@
+name: hdlconvertor_p454
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:5:3: error: language feature not yet supported
+  clocking cb_prog @(posedge clk_p); endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:6:3: error: language feature not yet supported
+  clocking cb_checker @(posedge clk_c); endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:7:3: error: language feature not yet supported
+  default clocking cb @(posedge clk_d); endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:8:3: error: language feature not yet supported
+  sequence e4;
+  ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:12:3: error: language feature not yet supported
+  a1: assert property (@(posedge clk_a) a |=> e4.triggered);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:14:3: error: language feature not yet supported
+  sequence e5;
+  ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:20:3: error: language feature not yet supported
+  a2: assert property (@(posedge clk_a) a |=> e5.matched);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:21:3: error: language feature not yet supported
+  sequence e6(f);
+  ^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:25:3: error: language feature not yet supported
+  a3: assert property (@(posedge clk_a) a |=> e6(e4.triggered));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:26:3: error: language feature not yet supported
+  sequence e7;
+  ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:30:3: error: language feature not yet supported
+  a4: assert property (@(posedge clk_a) a |=> e7.triggered);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:35:7: error: identifier 'e4' used before its declaration
+    @(e4);
+      ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:12: note: declared here
+  check c1(e4.triggered, e4);
+           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:40:5: error: language feature not yet supported
+    default clocking cb_prog;
+    ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:45:8: error: expected 'endclocking'
+    end
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:48:3: error: expected member
+  checker check(input in1, input sequence s_f);
+  ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:48:27: error: expected identifier
+  checker check(input in1, input sequence s_f);
+                          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:48:28: error: expected declarator
+  checker check(input in1, input sequence s_f);
+                           ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:48:42: error: expected ','
+  checker check(input in1, input sequence s_f);
+                                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:48:46: error: expected declarator
+  checker check(input in1, input sequence s_f);
+                                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:49:5: error: language feature not yet supported
+    default clocking cb_checker;
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:52:37: error: expected 'endclocking'
+    a4: assert property (a |=> in1);
+                                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:53:3: error: expected member
+  endchecker : check
+  ^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:53:16: error: 'check' is not a type
+  endchecker : check
+               ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:53:16: error: 'check' recursively depends on its own definition
+  endchecker : check
+               ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:3: note: declared here
+  check c1(e4.triggered, e4);
+  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:8: error: expected ','
+  check c1(e4.triggered, e4);
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:11: error: expected declarator
+  check c1(e4.triggered, e4);
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:12: error: expected ','
+  check c1(e4.triggered, e4);
+           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:14: error: expected declarator
+  check c1(e4.triggered, e4);
+             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:15: error: expected ','
+  check c1(e4.triggered, e4);
+              ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:26: error: redefinition of 'e4'
+  check c1(e4.triggered, e4);
+                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:12: note: previous definition here
+  check c1(e4.triggered, e4);
+           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:56:28: error: expected declarator
+  check c1(e4.triggered, e4);
+                           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv:58:3: error: unknown module 'mod_adder'
+  mod_adder ai1(e4.triggered);
+  ^~~~~~~~~

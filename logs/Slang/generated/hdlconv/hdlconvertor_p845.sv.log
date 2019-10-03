@@ -1,0 +1,54 @@
+name: hdlconvertor_p845
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:6:1: error: expected member
+specify
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:8:5: error: expression is not constant
+if (opcode == 2'b00) (i1,i2 *> o1) = (25.0, 25.0);
+    ^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:8:5: note: reference to non-constant variable 'opcode' is not allowed in a constant expression
+if (opcode == 2'b00) (i1,i2 *> o1) = (25.0, 25.0);
+    ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:3:13: note: declared here
+input [2:1] opcode;
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:8:22: error: expected member
+if (opcode == 2'b00) (i1,i2 *> o1) = (25.0, 25.0);
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:10:5: error: expression is not constant
+if (opcode == 2'b01) (i1 => o1) = (5.6, 8.0);
+    ^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:10:5: note: reference to non-constant variable 'opcode' is not allowed in a constant expression
+if (opcode == 2'b01) (i1 => o1) = (5.6, 8.0);
+    ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:3:13: note: declared here
+input [2:1] opcode;
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:10:22: error: expected member
+if (opcode == 2'b01) (i1 => o1) = (5.6, 8.0);
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:12:5: error: expression is not constant
+if (opcode == 2'b10) (i2 => o1) = (5.6, 8.0);
+    ^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:12:5: note: reference to non-constant variable 'opcode' is not allowed in a constant expression
+if (opcode == 2'b10) (i2 => o1) = (5.6, 8.0);
+    ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:3:13: note: declared here
+input [2:1] opcode;
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:12:22: error: expected member
+if (opcode == 2'b10) (i2 => o1) = (5.6, 8.0);
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:14:1: error: expected member
+(opcode *> o1) = (6.1, 6.5);
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv:15:1: error: expected member
+endspecify
+^~~~~~~~~~

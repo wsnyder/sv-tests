@@ -1,0 +1,33 @@
+name: hdlconvertor_p752
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:16:16: error: unknown interface 'interface'
+module memMod (interface a, input logic clk);
+               ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:18:15: error: unknown interface 'interface'
+module cpuMod(interface b, input logic clk);
+              ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:32:8: error: interface port 'sb_intf' not connected
+memMod mem (.a(sb_intf), .clk(clk));
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:1:27: note: declared here
+module memMod (simple_bus sb_intf, input logic clk);
+                          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:32:14: error: port 'a' does not exist in module 'mem'
+memMod mem (.a(sb_intf), .clk(clk));
+             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:33:8: error: interface port 'sb_intf' not connected
+cpuMod cpu (.b(sb_intf), .clk(clk));
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:3:27: note: declared here
+module cpuMod (simple_bus sb_intf, input logic clk);
+                          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p752.sv:33:14: error: port 'b' does not exist in module 'cpu'
+cpuMod cpu (.b(sb_intf), .clk(clk));
+             ^

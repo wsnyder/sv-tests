@@ -1,0 +1,14 @@
+name: hdlconvertor_p130
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p130.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+%Warning-UNPACKED: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p130.sv:2: Unsupported: Unpacked struct/union
+%Warning-UNPACKED: Use "/* verilator lint_off UNPACKED */" and lint_on around source to disable this message.
+%Warning-UNPACKED: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p130.sv:13: Unsupported: Unpacked struct/union
+%Warning-UNPACKED: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p130.sv:9: Unsupported: Unpacked struct/union
+%Warning-UNPACKED: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p130.sv:4: Unsupported: Unpacked struct/union

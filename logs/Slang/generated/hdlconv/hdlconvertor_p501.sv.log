@@ -1,0 +1,33 @@
+name: hdlconvertor_p501
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:1:1: error: expected member
+checker check(bit clk1); // clk1 assigned in the Active region
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:1:23: error: expected declarator
+checker check(bit clk1); // clk1 assigned in the Active region
+                      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:2:1: error: expected member
+rand bit v, w;
+^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:3:8: error: use of undeclared identifier 'clk2'
+assign clk2 = clk1;
+       ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:4:1: error: language feature not yet supported
+m1: assume property (@clk1 !(v && w));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:5:1: error: language feature not yet supported
+m2: assume property (@clk2 v || w);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:6:1: error: language feature not yet supported
+a1: assert property (@clk1 v != w);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:8:1: error: expected member
+endchecker : check
+^~~~~~~~~~

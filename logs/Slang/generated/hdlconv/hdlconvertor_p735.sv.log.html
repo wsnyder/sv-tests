@@ -1,0 +1,30 @@
+<pre>name: hdlconvertor_p735
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:1</a>:16: error: port 'addr' has no I/O member declaration
+module my_mem (addr, data);
+               ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:1</a>:22: error: port 'data' has no I/O member declaration
+module my_mem (addr, data);
+                     ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-21" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:21</a>:16: error: expected expression
+vdff #(.delay( ),.size(10) ) mod_d (.out(out_d),.in(in_d),.clk(clk));
+               ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:27</a>:8: error: identifier 'size' used before its declaration
+input [size-1:0] in;
+       ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:25</a>:11: note: declared here
+parameter size=5, delay=1;
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-30" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:30</a>:8: error: identifier 'size' used before its declaration
+logic [size-1:0] out;
+       ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv:25</a>:11: note: declared here
+parameter size=5, delay=1;
+          ^
+</pre>

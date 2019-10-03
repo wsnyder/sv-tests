@@ -1,0 +1,18 @@
+name: hdlconvertor_p537
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p537.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p537.sv:6:11: error: use of undeclared identifier 'randomize'
+success = randomize( addr, data, rd_wr );
+          ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p537.sv:14:1: error: language feature not yet supported
+class stimc;
+^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p537.sv:19:24: error: use of undeclared identifier 'stimc'
+function bit gen_stim( stimc p );
+                       ^~~~~

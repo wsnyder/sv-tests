@@ -1,0 +1,30 @@
+name: hdlconvertor_p243
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:4:1: error: expected member
+and and1 (e, a, b, c);
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:6:26: error: use of undeclared identifier '$stime'
+$monitor("%d d=%b,e=%b", $stime, d, e);
+                         ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:7:1: error: language feature not yet supported
+assign d = a& b & c;
+^~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:12:1: error: language feature not yet supported
+force d = (a | b | c);
+^~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:13:1: error: language feature not yet supported
+force e = (a | b | c);
+^~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:15:1: error: language feature not yet supported
+release d;
+^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:16:1: error: language feature not yet supported
+release e;
+^~~~~~~~~~

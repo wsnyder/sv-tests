@@ -1,0 +1,21 @@
+name: hdlconvertor_p342
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	wire phi1;
+	wire phi2;
+	bus_A a(phi1);
+	bus_B b(phi2);
+	test main(
+		a,
+		b
+	);
+	cpu cpu1(a);
+	mem mem1(b);
+endmodule

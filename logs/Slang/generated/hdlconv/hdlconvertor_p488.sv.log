@@ -1,0 +1,51 @@
+name: hdlconvertor_p488
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:1: error: expected member
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:33: error: expected identifier
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:34: error: expected declarator
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                 ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:39: error: expected ','
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:46: error: expected identifier
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:47: error: expected declarator
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                              ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:57: error: expected ','
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                                        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:1:65: error: expected declarator
+checker mutex (logic [31:0] sig, event clock, output bit failure);
+                                                                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:2:1: error: language feature not yet supported
+assert property (@clock $onehot0(sig))
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:4:1: error: expected member
+endchecker : mutex
+^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:8:1: error: unknown module 'mutex'
+mutex check_bus(bus, posedge clk, res);
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:8:22: error: expected expression
+mutex check_bus(bus, posedge clk, res);
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:8:22: error: expected port connection
+mutex check_bus(bus, posedge clk, res);
+                     ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv:8:29: error: expected ','
+mutex check_bus(bus, posedge clk, res);
+                            ^

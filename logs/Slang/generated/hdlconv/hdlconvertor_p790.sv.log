@@ -1,0 +1,48 @@
+name: hdlconvertor_p790
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:4:9: error: identifier 'SIZE' used before its declaration
+output [SIZE-1:0] bin;
+        ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:2:11: note: declared here
+parameter SIZE = 8;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:5:8: error: identifier 'SIZE' used before its declaration
+input [SIZE-1:0] gray;
+       ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:2:11: note: declared here
+parameter SIZE = 8;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:19:9: error: identifier 'SIZE' used before its declaration
+output [SIZE-1:0] sum;
+        ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:18:11: note: declared here
+parameter SIZE = 4;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:22:8: error: identifier 'SIZE' used before its declaration
+input [SIZE-1:0] a, b;
+       ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:18:11: note: declared here
+parameter SIZE = 4;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:33:1: error: expected member
+xor g1 ( t[1][i],
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:36:1: error: expected member
+xor g2 ( sum[i], t[1][i],
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:38:1: error: expected member
+and g3 ( t[2][i],
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:41:1: error: expected member
+and g4 ( t[3][i], t[1][i],
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:43:1: error: expected member
+or
+^~

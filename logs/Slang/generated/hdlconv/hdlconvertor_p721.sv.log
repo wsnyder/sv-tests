@@ -1,0 +1,54 @@
+name: hdlconvertor_p721
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1:1: error: expected member
+extern module m (a,b,c,d);
+^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1:18: error: port 'a' has no I/O member declaration
+extern module m (a,b,c,d);
+                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1:20: error: port 'b' has no I/O member declaration
+extern module m (a,b,c,d);
+                   ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1:22: error: port 'c' has no I/O member declaration
+extern module m (a,b,c,d);
+                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1:24: error: port 'd' has no I/O member declaration
+extern module m (a,b,c,d);
+                       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2:1: error: expected member
+extern module a #(parameter size = 8, parameter type TP = logic [7:0])
+^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2:49: error: language feature not yet supported
+extern module a #(parameter size = 8, parameter type TP = logic [7:0])
+                                                ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2:59: error: expected expression
+extern module a #(parameter size = 8, parameter type TP = logic [7:0])
+                                                          ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:3:27: error: 'TP' is not a type
+(input [size:0] a, output TP b);
+                          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:4:10: error: language feature not yet supported
+module m (.*);
+         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:8:10: error: language feature not yet supported
+module a (.*);
+         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:16:42: error: language feature not yet supported
+module a #(parameter size = 8, parameter type TP = logic [7:0])
+                                         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:16:52: error: expected expression
+module a #(parameter size = 8, parameter type TP = logic [7:0])
+                                                   ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:17:27: error: 'TP' is not a type
+(input [size:0] a, output TP b);
+                          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:18:10: error: expected 'endmodule'
+endmodule
+         ^

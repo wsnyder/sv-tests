@@ -1,0 +1,42 @@
+<pre>name: hdlconvertor_p179
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:1</a>:1: error: language feature not yet supported
+class baseA ;
+^~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:4</a>:1: error: language feature not yet supported
+class B ;
+^~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:8</a>:1: error: language feature not yet supported
+class xtndA extends baseA;
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:13</a>:1: error: use of undeclared identifier 'xtndA'
+xtndA xtnd1;
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:14</a>:1: error: use of undeclared identifier 'baseA'
+baseA base2, base3;
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:15</a>:1: error: use of undeclared identifier 'B'
+B b1 = new;
+^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:15</a>:8: error: language feature not yet supported
+B b1 = new;
+       ^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:16</a>:1: error: use of undeclared identifier 'B'
+B b2 = new b1;
+^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:16</a>:8: error: language feature not yet supported
+B b2 = new b1;
+       ^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-21" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:21</a>:9: error: language feature not yet supported
+xtnd1 = new;
+        ^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:24</a>:9: error: language feature not yet supported
+base3 = new base2;
+        ^~~~~~~~~
+</pre>

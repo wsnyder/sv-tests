@@ -1,0 +1,78 @@
+name: hdlconvertor_p348
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:3:3: error: language feature not yet supported
+  global clocking top_clocking @(clk); endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:5:3: error: language feature not yet supported
+  property p1(req, ack);
+  ^~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:9:3: error: language feature not yet supported
+  property p2(req, ack, interrupt);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:10:42: error: expected 'endproperty'
+    @($global_clock) accept_on(interrupt) p1(req, ack);
+                                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:10:43: error: expected member
+    @($global_clock) accept_on(interrupt) p1(req, ack);
+                                          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:11:3: error: expected member
+  endproperty
+  ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:13:3: error: unknown module 'my_checker'
+  my_checker check( 
+  ^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:15:23: error: expected expression
+	  @($global_clock) a[*1:$] ##1 b);
+	                     ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:1: error: expected member
+checker my_checker(property p, sequence s);
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:20: error: language feature not yet supported
+checker my_checker(property p, sequence s);
+                   ^~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:30: error: expected expression
+checker my_checker(property p, sequence s);
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:30: error: expected ';'
+checker my_checker(property p, sequence s);
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:30: error: expected 'endproperty'
+checker my_checker(property p, sequence s);
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:30: error: expected member
+checker my_checker(property p, sequence s);
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:32: error: language feature not yet supported
+checker my_checker(property p, sequence s);
+                               ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:42: error: expected expression
+checker my_checker(property p, sequence s);
+                                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:42: error: expected ';'
+checker my_checker(property p, sequence s);
+                                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:42: error: expected ';'
+checker my_checker(property p, sequence s);
+                                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:18:42: error: expected member
+checker my_checker(property p, sequence s);
+                                         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:20:3: error: language feature not yet supported
+  global clocking checker_clocking @(checker_clk); endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:21:3: error: language feature not yet supported
+  assert property (p);
+  ^~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:22:3: error: language feature not yet supported
+  cover property (s);
+  ^~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p348.sv:23:1: error: expected member
+endchecker
+^~~~~~~~~~

@@ -1,0 +1,33 @@
+<pre>name: hdlconvertor_p532
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:1</a>:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:4</a>:16: error: use of undeclared identifier 'C'
+function int F(C obj, integer y);
+               ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:5</a>:21: error: language feature not yet supported
+F = obj.randomize() with (x) { x < y; };
+                    ^~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:8</a>:1: error: language feature not yet supported
+class C;
+^~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:11</a>:14: error: redefinition of 'F'
+function int F(C obj, integer x);
+             ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:4</a>:14: note: previous definition here
+function int F(C obj, integer y);
+             ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:11</a>:16: error: use of undeclared identifier 'C'
+function int F(C obj, integer x);
+               ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv:12</a>:21: error: language feature not yet supported
+F = obj.randomize() with { x < local::x; };
+                    ^~~~~~~~~~~~~~~~~~~~~~
+</pre>

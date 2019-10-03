@@ -1,0 +1,30 @@
+name: hdlconvertor_p148
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:1:1: error: language feature not yet supported
+class Jumbo_Packet;
+^~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:4:13: error: expected identifier
+    function new( int size );
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:4:14: error: expected statement
+    function new( int size );
+             ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:4:28: error: expected declarator
+    function new( int size );
+                           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:9:1: error: language feature not yet supported
+class Big_Packet;
+^~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:12:13: error: expected identifier
+    function new();
+            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p148.sv:12:14: error: expected statement
+    function new();
+             ^~~

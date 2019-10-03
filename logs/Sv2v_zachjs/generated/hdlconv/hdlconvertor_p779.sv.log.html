@@ -1,0 +1,40 @@
+<pre>name: hdlconvertor_p779
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p779.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p779.sv</a>
+
+module top;
+	generate
+		begin : b
+			initial x = 1;
+			reg signed [31:0] x;
+			initial x = 1;
+		end
+	endgenerate
+	reg signed [31:0] x;
+endmodule
+module top;
+	reg signed [31:0] x;
+	generate
+		begin : b
+			initial x = 1;
+			reg signed [31:0] x;
+		end
+	endgenerate
+endmodule
+module top;
+	reg signed [31:0] x;
+	generate
+		begin : b
+			initial x = f(0);
+		end
+	endgenerate
+	function signed [31:0] f;
+		input _sv2v_unused;
+		f = 1;
+	endfunction
+endmodule
+</pre>

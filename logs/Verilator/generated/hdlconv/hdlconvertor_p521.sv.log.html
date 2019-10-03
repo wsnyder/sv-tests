@@ -1,0 +1,16 @@
+<pre>name: hdlconvertor_p521
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv</a>
+
+%Warning-WIDTH: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv:3</a>: Operator AND expects 32 bits on the LHS, but LHS's VARREF 'w' generates 10 bits.
+%Warning-WIDTH: Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv:3</a>: Operator AND expects 32 bits on the RHS, but RHS's CONST '1'h1' generates 1 bits.
+%Error: Duplicate declaration of cell: $unit
+%Error: ... Location of original declaration
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv</a>
+</pre>

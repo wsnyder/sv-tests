@@ -1,0 +1,49 @@
+name: hdlconvertor_p612
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:6: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:6: syntax error, unexpected '=', expecting IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:7: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:8: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:9: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:10: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:11: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:12: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:13: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:14: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:15: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:16: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:17: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:18: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:19: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:20: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:21: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:22: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:23: Unsupported: SystemVerilog 2009 reserved word not implemented: let
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:25: syntax error, unexpected assert, expecting cover
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:28: syntax error, unexpected ##, expecting ')'
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:36: syntax error, unexpected '#', expecting '('
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:49: Unsupported or unknown PLI call: $assertcontrol
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:54: Unsupported or unknown PLI call: $assertcontrol
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:60: Unsupported or unknown PLI call: $assertcontrol
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:60: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:63: Unsupported or unknown PLI call: $assertcontrol
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:63: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:68: Unsupported or unknown PLI call: $assertcontrol
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:68: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:71: Unsupported or unknown PLI call: $assertcontrol
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:71: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:77: Unsupported or unknown PLI call: $assertcontrol
+%Warning-STMTDLY: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:77: Unsupported: Ignoring delay on this delayed statement.
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:78: Unsupported or unknown PLI call: $assertcontrol
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv:79: Unsupported or unknown PLI call: $assertcontrol
+%Error: Exiting due to 31 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv

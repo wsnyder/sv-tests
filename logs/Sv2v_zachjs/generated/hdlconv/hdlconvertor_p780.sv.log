@@ -1,0 +1,25 @@
+name: hdlconvertor_p780
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p780.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+module top;
+	function signed [31:0] f;
+		input _sv2v_unused;
+		f = 1;
+	endfunction
+	reg signed [31:0] x;
+	generate
+		begin : b
+			initial x = f(0);
+		end
+	endgenerate
+	function signed [31:0] f;
+		input _sv2v_unused;
+		f = 1;
+	endfunction
+endmodule

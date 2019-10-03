@@ -1,0 +1,57 @@
+name: hdlconvertor_p296
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:9:1: error: language feature not yet supported
+property toggles(bit x, y);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:12:1: error: language feature not yet supported
+a2: assert property (@(posedge clock) toggles(c, d));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:18:1: error: language feature not yet supported
+let p1(x) = $past(x);
+^~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:18:11: error: expected expression
+let p1(x) = $past(x);
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:18:21: error: expected '='
+let p1(x) = $past(x);
+                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19:1: error: language feature not yet supported
+let p2(x) = $past(x,,,@(posedge clock));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19:11: error: expected expression
+let p2(x) = $past(x,,,@(posedge clock));
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19:39: error: expected expression
+let p2(x) = $past(x,,,@(posedge clock));
+                                      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19:40: error: expected '='
+let p2(x) = $past(x,,,@(posedge clock));
+                                       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:20:1: error: language feature not yet supported
+let s(x) = $sampled(x);
+^~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:20:10: error: expected expression
+let s(x) = $sampled(x);
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:20:23: error: expected '='
+let s(x) = $sampled(x);
+                      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:22:12: error: use of undeclared identifier 'p1'
+a1: assert(p1(a));
+           ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:23:12: error: use of undeclared identifier 'p2'
+a2: assert(p2(a));
+           ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:24:12: error: use of undeclared identifier 's'
+a3: assert(s(a));
+           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:26:1: error: language feature not yet supported
+a4: assert property(@(posedge clock) p1(a));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

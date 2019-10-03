@@ -1,0 +1,27 @@
+name: hdlconvertor_p772
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:3:1: error: unknown module 'SyncBus'
+SyncBus b1( clk );
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:4:1: error: unknown module 'SyncBus'
+SyncBus b2( clk );
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:6:1: error: use of undeclared identifier 'VI'
+VI v[2] = '{ b1, b2 };
+^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:6:11: error: language feature not yet supported
+VI v[2] = '{ b1, b2 };
+          ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:8:1: error: use of undeclared identifier 'do_it'
+do_it( v[ $urandom_range( 0, 1 ) ] );
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv:16:1: error: language feature not yet supported
+clocking sb @(posedge clk);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~

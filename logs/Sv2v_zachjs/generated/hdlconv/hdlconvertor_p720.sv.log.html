@@ -1,0 +1,31 @@
+<pre>name: hdlconvertor_p720
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p720.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p720.sv</a>
+
+extern module m ();
+extern module a_67009 (
+	parameter size = 8,
+	input [size:0] a,
+	output wire [7:0] b
+);
+module top;
+	wire [8:0] a;
+	wire [7:0] b;
+	wire c;
+	wire d;
+	m mm(
+		.a(a),
+		.b(b),
+		.c(c),
+		.d(d)
+	);
+	a_67009 aa(
+		.a(a),
+		.b(b)
+	);
+endmodule
+</pre>

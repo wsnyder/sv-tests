@@ -1,0 +1,63 @@
+name: hdlconvertor_p771
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:10:1: error: language feature not yet supported
+virtual PBus v8;
+^~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:14:1: error: unexpected qualifiers on class member
+virtual PBus #(16).phy v16_phy;
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:14:9: error: expected member
+virtual PBus #(16).phy v16_phy;
+        ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:16:1: error: unexpected qualifiers on class member
+virtual PBus #(32).phy v32_phy;
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:16:9: error: expected member
+virtual PBus #(32).phy v32_phy;
+        ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:17:1: error: expected member
+initial begin
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:19:1: error: expected member
+v32 = p32; // legal – parameter values match
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:22:1: error: expected member
+v16_phy = v16; // legal assignment from no selected modport to
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:26:1: error: expected member
+v32_phy = p32; // legal assignment from no selected modport to
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:30:1: error: expected member
+end
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:34:36: error: expected declarator
+interface SyncBus( input logic clk );
+                                   ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:35:1: error: expected member
+wire a, b, c;
+^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:36:1: error: expected member
+clocking sb @(posedge clk);
+^~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:37:1: error: expected member
+input a;
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:38:1: error: expected member
+output b;
+^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:39:1: error: expected member
+inout c;
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:41:1: error: expected member
+endclocking
+^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p771.sv:49:8: error: expected 'endclass'
+endtask
+       ^

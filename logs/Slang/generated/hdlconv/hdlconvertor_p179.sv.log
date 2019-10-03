@@ -1,0 +1,42 @@
+name: hdlconvertor_p179
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:1:1: error: language feature not yet supported
+class baseA ;
+^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:4:1: error: language feature not yet supported
+class B ;
+^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:8:1: error: language feature not yet supported
+class xtndA extends baseA;
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:13:1: error: use of undeclared identifier 'xtndA'
+xtndA xtnd1;
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:14:1: error: use of undeclared identifier 'baseA'
+baseA base2, base3;
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:15:1: error: use of undeclared identifier 'B'
+B b1 = new;
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:15:8: error: language feature not yet supported
+B b1 = new;
+       ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:16:1: error: use of undeclared identifier 'B'
+B b2 = new b1;
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:16:8: error: language feature not yet supported
+B b2 = new b1;
+       ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:21:9: error: language feature not yet supported
+xtnd1 = new;
+        ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv:24:9: error: language feature not yet supported
+base3 = new base2;
+        ^~~~~~~~~

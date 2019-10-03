@@ -1,0 +1,39 @@
+name: hdlconvertor_p791
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+module addergen1 (
+	co,
+	sum,
+	a,
+	b,
+	ci
+);
+	parameter SIZE = 4;
+	output [(SIZE - 1):0] sum;
+	output co;
+	input [(SIZE - 1):0] a;
+	input [(SIZE - 1):0] b;
+	input ci;
+	wire [SIZE:0] c;
+	genvar i;
+	assign c[0] = ci;
+	generate
+		for (i = 0; (i < SIZE); i = (i + 1)) begin : bitnum
+			wire t1;
+			wire t2;
+			wire t3;
+			xor g1 (t1, a[i], b[i]);
+			xor g2 (sum[i], t1, c[i]);
+			and g3 (t2, a[i], b[i]);
+			and g4 (t3, t1, c[i]);
+			or g5 (c[(i + 1)], t2, t3);
+		end
+	endgenerate
+	assign co = c[SIZE];
+endmodule

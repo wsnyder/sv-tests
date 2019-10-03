@@ -1,0 +1,25 @@
+name: hdlconvertor_p269
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p269.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+module shift;
+	reg [3:0] start;
+	reg [3:0] result;
+	initial begin
+		start = 1;
+		result = (start << 2);
+	end
+endmodule
+module ashift;
+	reg signed [3:0] start;
+	reg signed [3:0] result;
+	initial begin
+		start = 4'b1000;
+		result = (start >>> 2);
+	end
+endmodule

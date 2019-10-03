@@ -1,0 +1,21 @@
+name: hdlconvertor_p123
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123.sv:13:61: error: expected expression
+      (reset_n && ($past(en) != 0) && en == 0) |->(en == 0)[*min_quiet:max_quiet] ##1 ($countones(en) == 1);
+                                                            ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123.sv:13:108: error: expected expression
+      (reset_n && ($past(en) != 0) && en == 0) |->(en == 0)[*min_quiet:max_quiet] ##1 ($countones(en) == 1);
+                                                                                                           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123.sv:17:28: error: use of undeclared identifier '$isunbounded'
+  if ( (min_quiet == 0) && $isunbounded(max_quiet) )
+                           ^~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123.sv:18:5: error: expected member
+    $warning(warning_msg);
+    ^~~~~~~~

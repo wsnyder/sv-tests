@@ -1,0 +1,19 @@
+name: hdlconvertor_p802
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 0
+
+
+-- Executing script file `scr.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing SystemVerilog input from `/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv' to AST representation.
+Generating RTLIL representation for module `\busdriver'.
+Generating RTLIL representation for module `\busdriver_equiv'.
+Generating RTLIL representation for module `\dffn'.
+Generating RTLIL representation for module `\MxN_pipeline'.
+Successfully finished Verilog frontend.

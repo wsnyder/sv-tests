@@ -1,0 +1,28 @@
+name: hdlconvertor_p772
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: -6
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv::2 error in parsing: (syntax error, unexpected ';', expecting '(')
+logic clk;
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv::6 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting voLTE or '=')
+VI v[2] = '{ b1, b2 };
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv::7 Unsuported token
+repeat( 20 )
+ ^~~~
+PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv::16 error in parsing: (syntax error, unexpected '@', expecting '(')
+clocking sb @(posedge clk);
+ERROR (7)::PARSE_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv::19 Odin does not handle inouts (data)
+inout data;
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/parse_making_ast.cpp]markAndProcessPortWith::652 

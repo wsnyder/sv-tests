@@ -1,0 +1,42 @@
+name: hdlconvertor_p793
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:13:1: error: expected member
+and g1(a, b, c);
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:17:1: error: expected member
+or g1(a, b, c);
+^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:31:1: error: expected member
+xor g1(a, b, c); // XOR with hierarchical name test.u1.g1
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:36:1: error: expected member
+xnor g1(a, b, c); // XNOR with hierarchical name test.u1.g1
+^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:47:8: error: identifier 'a_width' used before its declaration
+input [a_width-1:0] a;
+       ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:43:11: note: declared here
+parameter a_width = 8, b_width = 8;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:48:8: error: identifier 'b_width' used before its declaration
+input [b_width-1:0] b;
+       ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:43:24: note: declared here
+parameter a_width = 8, b_width = 8;
+                       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:49:9: error: identifier 'product_width' used before its declaration
+output [product_width-1:0] product;
+        ^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:44:12: note: declared here
+localparam product_width = a_width+b_width;
+           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:56:1: error: unknown module 'WALLACE_multiplier'
+WALLACE_multiplier #(a_width,b_width) u1(a, b, product);
+^~~~~~~~~~~~~~~~~~

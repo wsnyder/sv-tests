@@ -1,0 +1,30 @@
+name: hdlconvertor_p198
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:1:1: error: language feature not yet supported
+interface class IntfA #(type T1 = logic);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:6:1: error: language feature not yet supported
+interface class IntfB #(type T = bit) extends IntfA #(T);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:10:1: error: language feature not yet supported
+interface class IntfC;
+^~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:15:1: error: language feature not yet supported
+class ClassA implements IntfC;
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:21:25: error: forward typedef 'IntfD' does not resolve to a data type
+typedef interface class IntfD;
+                        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:23:1: error: language feature not yet supported
+class ClassB implements IntfD #(bit);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p198.sv:30:1: error: language feature not yet supported
+interface class IntfD #(type T1 = logic);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,24 @@
+name: hdlconvertor_p477
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:2: syntax error, unexpected property
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:3: Unsupported or unknown PLI call: $rose
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:10: Unsupported or unknown PLI call: $fell
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:14: Unsupported or unknown PLI call: $fell
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:18: Unsupported: SystemVerilog 2005 reserved word not implemented: sequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:21: Unsupported: SystemVerilog 2005 reserved word not implemented: endsequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:28: Unsupported or unknown PLI call: $fell
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:31: syntax error, unexpected assert, expecting cover
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:34: syntax error, unexpected assert, expecting cover
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:42: Unsupported or unknown PLI call: $fell
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:45: Unsupported: SystemVerilog 2005 reserved word not implemented: sequence
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:46: Unsupported or unknown PLI call: $rose
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv:47: Unsupported: SystemVerilog 2005 reserved word not implemented: endsequence
+%Error: Exiting due to 13 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p477.sv

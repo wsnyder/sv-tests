@@ -1,0 +1,43 @@
+<pre>name: hdlconvertor_p124
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv</a>
+
+module ma_E4814 (
+	i,
+	o
+);
+	parameter p1 = 1;
+	input wire [p1:0] i;
+	output reg [p1:0] o;
+	reg signed [15:0] j = 0;
+	always @(i) begin
+		o = i;
+		j = (j + 1);
+	end
+endmodule
+module ma_EDF75 (
+	i,
+	o
+);
+	parameter p1 = 1;
+	input wire [p1:0] i;
+	output reg [p1:0] o;
+	reg signed [31:0] j = 0;
+	always @(i) begin
+		o = i;
+		j = (j + 1);
+	end
+endmodule
+module mb;
+	wire [3:0] i;
+	wire [3:0] o;
+	ma_EDF75 #(.p1(3)) u1(
+		i,
+		o
+	);
+endmodule
+</pre>

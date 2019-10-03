@@ -1,0 +1,105 @@
+name: hdlconvertor_p499
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:1: error: expected member
+checker c1(bit fclk, bit a, bit b);
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:21: error: expected identifier
+checker c1(bit fclk, bit a, bit b);
+                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:22: error: expected declarator
+checker c1(bit fclk, bit a, bit b);
+                     ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:25: error: expected ','
+checker c1(bit fclk, bit a, bit b);
+                        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:28: error: expected identifier
+checker c1(bit fclk, bit a, bit b);
+                           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:29: error: expected declarator
+checker c1(bit fclk, bit a, bit b);
+                            ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:32: error: expected ','
+checker c1(bit fclk, bit a, bit b);
+                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:3:34: error: expected declarator
+checker c1(bit fclk, bit a, bit b);
+                                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:4:1: error: language feature not yet supported
+default clocking @ (posedge fclk); endclocking
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:4:17: error: expected identifier
+default clocking @ (posedge fclk); endclocking
+                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:1: error: expected member
+checker c2(bit bclk, bit x, bit y);
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:21: error: expected identifier
+checker c2(bit bclk, bit x, bit y);
+                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:22: error: expected declarator
+checker c2(bit bclk, bit x, bit y);
+                     ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:25: error: expected ','
+checker c2(bit bclk, bit x, bit y);
+                        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:28: error: expected identifier
+checker c2(bit bclk, bit x, bit y);
+                           ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:29: error: expected declarator
+checker c2(bit bclk, bit x, bit y);
+                            ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:32: error: expected ','
+checker c2(bit bclk, bit x, bit y);
+                               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:5:34: error: expected declarator
+checker c2(bit bclk, bit x, bit y);
+                                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:6:1: error: language feature not yet supported
+default clocking @ (posedge bclk); endclocking
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:6:17: error: expected identifier
+default clocking @ (posedge bclk); endclocking
+                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:7:1: error: expected member
+rand bit m, n;
+^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:8:1: error: language feature not yet supported
+u1: assume property (f1(x,m));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:9:1: error: language feature not yet supported
+u2: assume property (f2(y,n));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:10:1: error: expected member
+endchecker
+^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:12:1: error: unknown module 'c2'
+c2 B1(fclk, q+r, r);
+^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:15:1: error: language feature not yet supported
+u3: assume property (f3(a, q));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:16:1: error: language feature not yet supported
+u4: assume property (f4(b, r));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:17:1: error: expected member
+endchecker
+^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:19:1: error: unknown module 'c1'
+c1 F1(mclk, v1, const'(v2));
+^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:19:16: error: expected ','
+c1 F1(mclk, v1, const'(v2));
+               ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:19:17: error: expected data type (implicit type name not allowed)
+c1 F1(mclk, v1, const'(v2));
+                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p499.sv:19:22: error: expected port connection
+c1 F1(mclk, v1, const'(v2));
+                     ^

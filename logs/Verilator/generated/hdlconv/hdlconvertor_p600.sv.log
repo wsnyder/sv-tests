@@ -1,0 +1,12 @@
+name: hdlconvertor_p600
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv:16: syntax error, unexpected PACKAGE-IDENTIFIER, expecting IDENTIFIER or do or final
+%Error: Internal Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv:15: ../V3ParseSym.h:112: Symbols suggest ending STRUCTDTYPE but parser thinks ending MODULE 'top'
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv

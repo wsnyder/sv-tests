@@ -1,0 +1,45 @@
+name: hdlconvertor_p755
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:1:11: error: unknown interface 'i2'
+module m (i2.master i);
+          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:3:11: error: unknown interface 'i2'
+module s (i2.slave i);
+          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:6:1: error: unknown module 'i2'
+i2 i();
+^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:7:9: error: use of undeclared identifier 'i'
+m u1(.i(i));
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:8:9: error: use of undeclared identifier 'i'
+s u2(.i(i));
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:11:11: error: use of undeclared identifier 'i2'
+module m (i2 i);
+          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:13:11: error: use of undeclared identifier 'i2'
+module s (i2 i);
+          ^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:16:1: error: unknown module 'i2'
+i2 i();
+^~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:17:9: error: use of undeclared identifier 'i'
+m u1(.i(i.master));
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:17:9: note: reference to 'i' by hierarchical name is not allowed in a constant expression
+m u1(.i(i.master));
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:18:9: error: use of undeclared identifier 'i'
+s u2(.i(i.slave));
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv:18:9: note: reference to 'i' by hierarchical name is not allowed in a constant expression
+s u2(.i(i.slave));
+        ^

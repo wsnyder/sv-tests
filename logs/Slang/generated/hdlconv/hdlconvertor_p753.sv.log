@@ -1,0 +1,24 @@
+name: hdlconvertor_p753
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:1:16: error: unknown interface 'interface'
+module memMod (interface a, input logic clk);
+               ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:3:16: error: unknown interface 'interface'
+module cpuMod (interface b, input logic clk);
+               ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:7:1: error: unknown module 'simple_bus'
+simple_bus sb_intf();
+^~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:8:20: error: use of undeclared identifier 'sb_intf'
+memMod mem (.*, .a(sb_intf)); // partial implicit port connections
+                   ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:9:20: error: use of undeclared identifier 'sb_intf'
+cpuMod cpu (.*, .b(sb_intf)); // partial implicit port connections
+                   ^~~~~~~

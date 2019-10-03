@@ -1,0 +1,21 @@
+<pre>name: hdlconvertor_p284
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p284.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p284.sv</a>
+
+module bitlength;
+	reg [3:0] a;
+	reg [3:0] b;
+	reg [3:0] c;
+	wire [4:0] d;
+	initial begin
+		a = 9;
+		b = 8;
+		c = 1;
+		$display("answer = %b", (c ? (a & b) : d));
+	end
+endmodule
+</pre>

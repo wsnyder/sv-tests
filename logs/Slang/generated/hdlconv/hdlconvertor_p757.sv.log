@@ -1,0 +1,33 @@
+name: hdlconvertor_p757
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:24:12: error: 'slave' is not an interface instance or array of instances
+memMod mem(sb_intf.slave); // Connect the modport to the module instance
+           ^~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:24:19: error: hierarchical names are not allowed in constant expressions
+memMod mem(sb_intf.slave); // Connect the modport to the module instance
+           ~~~~~~~^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:25:12: error: 'master' is not an interface instance or array of instances
+cpuMod cpu(sb_intf.master);
+           ^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:25:19: error: hierarchical names are not allowed in constant expressions
+cpuMod cpu(sb_intf.master);
+           ~~~~~~~^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:41:15: error: unknown interface 'interface'
+module memMod(interface a); // Uses just the interface
+              ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:46:15: error: unknown interface 'interface'
+module cpuMod(interface b);
+              ^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:51:19: error: hierarchical names are not allowed in constant expressions
+memMod mem(sb_intf.slave); // Connect the modport to the module instance
+           ~~~~~~~^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv:52:19: error: hierarchical names are not allowed in constant expressions
+cpuMod cpu(sb_intf.master);
+           ~~~~~~~^

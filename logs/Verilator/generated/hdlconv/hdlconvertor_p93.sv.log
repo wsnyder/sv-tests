@@ -1,0 +1,19 @@
+name: hdlconvertor_p93
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 10
+
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:7: syntax error, unexpected ']', expecting TYPE-IDENTIFIER
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:12: Unsupported: SystemVerilog 2012 reserved word not implemented: nettype
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:16: Unsupported: SystemVerilog 2012 reserved word not implemented: nettype
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:16: Unsupported: SystemVerilog 2005 reserved word not implemented: with
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:16: syntax error, unexpected IDENTIFIER, expecting ',' or ';'
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:21: Unsupported: SystemVerilog 2012 reserved word not implemented: nettype
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:23: Unsupported: SystemVerilog 2012 reserved word not implemented: nettype
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv:23: syntax error, unexpected IDENTIFIER
+%Error: Exiting due to 8 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p93.sv

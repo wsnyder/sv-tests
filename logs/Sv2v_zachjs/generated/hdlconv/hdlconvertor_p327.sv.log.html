@@ -1,0 +1,27 @@
+<pre>name: hdlconvertor_p327
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv</a>
+
+module tryfact;
+	function automatic integer factorial;
+		input reg [31:0] operand;
+		if ((operand >= 2)) factorial = (factorial((operand - 1)) * operand);
+		else factorial = 1;
+	endfunction
+	integer result;
+	initial begin
+		begin : sv2v_autoblock_0
+			reg signed [31:0] n;
+			for (n = 0; (n <= 7); n = (n + 1))
+				begin
+					result = factorial(n);
+					$display("%0d factorial=%0d", n, result);
+				end
+		end
+	end
+endmodule
+</pre>

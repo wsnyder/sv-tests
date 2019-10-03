@@ -1,0 +1,114 @@
+name: hdlconvertor_p501_2
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:3:1: error: expected member
+checker assert_window1 (
+^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:4:19: error: expected identifier
+  logic test_expr,
+                  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:6:3: error: expected declarator
+  untyped start_event, // Window opens at the completion of the start_event
+  ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:6:10: error: expected ','
+  untyped start_event, // Window opens at the completion of the start_event
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:6:23: error: expected identifier
+  untyped start_event, // Window opens at the completion of the start_event
+                      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:7:3: error: expected declarator
+  untyped end_event,
+  ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:7:10: error: expected ','
+  untyped end_event,
+         ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:7:21: error: expected identifier
+  untyped end_event,
+                    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9:3: error: expected declarator
+  event clock = $inferred_clock,
+  ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9:8: error: expected ','
+  event clock = $inferred_clock,
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9:17: error: use of undeclared identifier '$inferred_clock'
+  event clock = $inferred_clock,
+                ^~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9:33: error: expected identifier
+  event clock = $inferred_clock,
+                                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10:3: error: expected declarator
+  logic reset = $inferred_disable,
+  ^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10:8: error: expected ','
+  logic reset = $inferred_disable,
+       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10:17: error: use of undeclared identifier '$inferred_disable'
+  logic reset = $inferred_disable,
+                ^~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10:35: error: expected identifier
+  logic reset = $inferred_disable,
+                                  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:11:3: error: expected declarator
+  string error_msg = "violation",
+  ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:11:9: error: expected ','
+  string error_msg = "violation",
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:12:3: error: redefinition of 'coverage_level' as different kind of symbol
+  coverage_level clevel = cover_all // This argument should be bound to an
+  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:1:40: note: previous definition here
+typedef enum { cover_none, cover_all } coverage_level;
+                                       ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:12:17: error: expected ','
+  coverage_level clevel = cover_all // This argument should be bound to an
+                ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:14:1: error: expected declarator
+);
+^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:16:3: error: language feature not yet supported
+  default clocking @clock; endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:16:19: error: expected identifier
+  default clocking @clock; endclocking
+                  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:17:3: error: expected member
+  default disable iff reset;
+  ^~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:32:3: error: language feature not yet supported
+  property p_window;
+  ^~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:33:43: error: expected expression
+    start_event && !window |=> test_expr[+] ##0 end_event;
+                                          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:36:3: error: language feature not yet supported
+  a_window: assert property (p_window) else $error(error_msg);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:38:16: error: expression is not constant
+  generate if (clevel != cover_none) begin : cover_b
+               ^~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:38:16: note: reference to non-constant variable 'clevel' is not allowed in a constant expression
+  generate if (clevel != cover_none) begin : cover_b
+               ^~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:12:18: note: declared here
+  coverage_level clevel = cover_all // This argument should be bound to an
+                 ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:43:35: error: expected expression
+      ##1 (!end_event && window) [*]
+                                  ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:43:36: error: expected expression
+      ##1 (!end_event && window) [*]
+                                   ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:45:7: error: expected expression
+      ) $display("window covered");
+      ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:48:1: error: expected member
+endchecker : assert_window1
+^~~~~~~~~~

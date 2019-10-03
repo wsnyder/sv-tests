@@ -1,0 +1,12 @@
+name: hdlconvertor_p701
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+zachjs-sv2v: takeIdent didn't find identifier: [DTDot "a",DTInstance [("",Just {b, c})],DTComma,DTIdent "f",DTComma,DTDot "g",DTInstance [("",Just h[1])]]
+CallStack (from HasCallStack):
+  error, called at src/Language/SystemVerilog/Parser/ParseDecl.hs:398:20 in main:Language.SystemVerilog.Parser.ParseDecl

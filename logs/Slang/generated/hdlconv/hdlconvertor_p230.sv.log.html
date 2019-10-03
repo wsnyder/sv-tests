@@ -1,0 +1,30 @@
+<pre>name: hdlconvertor_p230
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:2</a>:1: error: use of undeclared identifier 'process'
+process job[] = new [N];
+^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:2</a>:17: error: language feature not yet supported
+process job[] = new [N];
+                ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:3</a>:1: error: language feature not yet supported
+foreach (job[j])
+^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:5</a>:19: error: use of undeclared identifier 'j'
+automatic int k = j;
+                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:6</a>:16: error: unknown class or package 'process'
+begin job[k] = process::self(); end
+               ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:8</a>:1: error: language feature not yet supported
+foreach (job[j])
+^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv:12</a>:1: error: language feature not yet supported
+foreach (job[j]) begin
+^~~~~~~~~~~~~~~~~~~~~~
+</pre>

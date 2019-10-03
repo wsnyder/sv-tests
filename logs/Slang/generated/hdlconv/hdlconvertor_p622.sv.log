@@ -1,0 +1,36 @@
+name: hdlconvertor_p622
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:8:1: error: use of undeclared identifier '$readmemb'
+$readmemb("array.dat", mem);
+^~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:12:1: error: use of undeclared identifier '$async$and$array'
+$async$and$array(mem,{a1,a2,a3,a4,a5,a6,a7},{b1,b2,b3});
+^~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:20:10: error: expression is not constant
+logic [1:cols] a, mem[1:rows];
+         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:20:10: note: reference to non-constant variable 'cols' is not allowed in a constant expression
+logic [1:cols] a, mem[1:rows];
+         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:19:11: note: declared here
+const int cols = 3;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:21:10: error: expression is not constant
+logic [1:rows] b;
+         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:21:10: note: reference to non-constant variable 'rows' is not allowed in a constant expression
+logic [1:rows] b;
+         ^~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:18:11: note: declared here
+const int rows = 4;
+          ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:24:1: error: use of undeclared identifier '$async$and$plane'
+$async$and$plane(mem,a[1:3],b[1:4]);
+^~~~~~~~~~~~~~~~

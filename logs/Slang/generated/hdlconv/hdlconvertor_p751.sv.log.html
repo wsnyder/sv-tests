@@ -1,0 +1,18 @@
+<pre>name: hdlconvertor_p751
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv</a>
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv.html#l-52" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv:52</a>:8: warning: port 'rdy' has no connection [-Wunconnected-port]
+memMod mem(sb_intf, clk); // Connect the interface to the module instance
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv.html#l-53" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv:53</a>:8: warning: port 'mode' has no connection [-Wunconnected-port]
+cpuMod cpu(.b(sb_intf), .clk(clk)); // Either by position or by name
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv.html#l-53" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p751.sv:53</a>:13: error: port 'b' does not exist in module 'cpu'
+cpuMod cpu(.b(sb_intf), .clk(clk)); // Either by position or by name
+            ^
+</pre>

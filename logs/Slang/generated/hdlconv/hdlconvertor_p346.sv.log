@@ -1,0 +1,21 @@
+name: hdlconvertor_p346
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p346.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p346.sv:3:1: error: language feature not yet supported
+global clocking sys @(clk1 or clk2); endclocking
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p346.sv:13:1: error: language feature not yet supported
+global clocking sub_sys1 @(subclk1); endclocking
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p346.sv:19:1: error: language feature not yet supported
+global clocking sub_sys2 @(subclk2); endclocking
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p346.sv:24:10: error: use of undeclared identifier '$global_clock'
+always @($global_clock) begin
+         ^~~~~~~~~~~~~

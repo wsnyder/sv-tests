@@ -1,0 +1,27 @@
+name: hdlconvertor_p711
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:7:1: error: unknown module 'alu'
+alu alu (alu_out, , ain, bin, opcode); // zero output is unconnected
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:8:1: error: unknown module 'accum'
+accum accum (dataout[7:0], alu_out, clk, rst_n);
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:9:1: error: unknown module 'xtend'
+xtend xtend (dataout[15:8], alu_out[7], clk);
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:19:1: error: unknown module 'alu'
+alu
+^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:24:1: error: unknown module 'accum'
+accum accum (.dataout(dataout[7:0]), .datain(alu_out),
+^~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p711.sv:27:1: error: unknown module 'xtend'
+xtend xtend (.dout(dataout[15:8]), .din(alu_out[7]),
+^~~~~

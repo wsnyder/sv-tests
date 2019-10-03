@@ -1,0 +1,36 @@
+name: hdlconvertor_p770
+description: Tests imported from hdlconv
+files: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv
+should_fail: 0
+tags: hdlconv
+incdirs: 
+top_module: 
+rc: 1
+
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:6:1: error: language feature not yet supported
+class SBusTransactor;
+^~~~~~~~~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:10:9: error: expected identifier
+function new( virtual SBus s );
+        ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:10:10: error: expected statement
+function new( virtual SBus s );
+         ^~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:10:30: error: expected declarator
+function new( virtual SBus s );
+                             ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:31:1: error: use of undeclared identifier 'SBusTransactor'
+SBusTransactor t[1:4];
+^~~~~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:32:8: error: language feature not yet supported
+t[1] = new( s[1] );
+       ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:33:8: error: language feature not yet supported
+t[2] = new( s[2] );
+       ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:34:8: error: language feature not yet supported
+t[3] = new( s[3] );
+       ^~~~~~~~~~~
+../../home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv:35:8: error: language feature not yet supported
+t[4] = new( s[4] );
+       ^~~~~~~~~~~
