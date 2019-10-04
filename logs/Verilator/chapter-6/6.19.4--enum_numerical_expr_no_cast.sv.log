@@ -1,9 +1,0 @@
-name: enum_numerical_expr_no_cast
-description: enum numerical expression without casting
-should_fail: 1
-tags: 6.19.4
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.4--enum_numerical_expr_no_cast.sv
-incdirs: 
-top_module: 
-rc: 0
-

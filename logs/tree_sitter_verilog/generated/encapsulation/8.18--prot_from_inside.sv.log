@@ -1,9 +1,0 @@
-name: prot_from_inside
-description: encapsulation test
-should_fail: 0
-tags: 8.18
-files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation/8.18--prot_from_inside.sv
-incdirs: 
-top_module: 
-rc: 0
-

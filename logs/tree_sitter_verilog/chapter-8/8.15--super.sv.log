@@ -1,9 +1,0 @@
-name: super
-description: accessing superclass methods via super
-should_fail: 0
-tags: 8.15
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.15--super.sv
-incdirs: 
-top_module: 
-rc: 0
-

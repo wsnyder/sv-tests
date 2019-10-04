@@ -1,9 +1,0 @@
-name: push_back_assign
-description: Update queue by assignment (push_back)
-should_fail: 0
-tags: 7.10.4
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_back_assign.sv
-incdirs: 
-top_module: 
-rc: 0
-

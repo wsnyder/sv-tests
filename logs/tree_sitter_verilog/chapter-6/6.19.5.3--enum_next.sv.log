@@ -1,9 +1,0 @@
-name: enum_next
-description: enum next method tests
-should_fail: 0
-tags: 6.19.5.3
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.3--enum_next.sv
-incdirs: 
-top_module: 
-rc: 0
-

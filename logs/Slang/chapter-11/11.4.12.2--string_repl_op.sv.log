@@ -1,9 +1,0 @@
-name: string_repl_op
-description: string replication operator test
-should_fail: 0
-tags: 11.4.12.2
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_repl_op.sv
-incdirs: 
-top_module: 
-rc: 0
-

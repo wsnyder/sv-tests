@@ -1,9 +1,0 @@
-name: variable_multiple_assignments
-description: Variable multiple assignments tests
-should_fail: 1
-tags: 6.5
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.5--variable_multiple_assignments.sv
-incdirs: 
-top_module: 
-rc: 0
-

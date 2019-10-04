@@ -1,9 +1,0 @@
-name: pop_front
-description: Test queues pop_front function support
-should_fail: 0
-tags: 7.10.2.4 7.10.2
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front.sv
-incdirs: 
-top_module: 
-rc: 0
-

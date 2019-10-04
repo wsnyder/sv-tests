@@ -1,9 +1,0 @@
-name: static_methods
-description: static class methods test
-should_fail: 0
-tags: 8.10
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.10--static_methods.sv
-incdirs: 
-top_module: 
-rc: 0
-

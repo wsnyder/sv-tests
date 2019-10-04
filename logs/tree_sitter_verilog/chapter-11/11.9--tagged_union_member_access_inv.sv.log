@@ -1,9 +1,0 @@
-name: tagged_union_member_access_inv
-description: invalid tagged union member access test
-should_fail: 1
-tags: 11.9
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv
-incdirs: 
-top_module: 
-rc: 0
-

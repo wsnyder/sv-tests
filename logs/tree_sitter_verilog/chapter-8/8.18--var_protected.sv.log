@@ -1,9 +1,0 @@
-name: var_protected
-description: class with protected variable
-should_fail: 0
-tags: 8.18
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.18--var_protected.sv
-incdirs: 
-top_module: 
-rc: 0
-

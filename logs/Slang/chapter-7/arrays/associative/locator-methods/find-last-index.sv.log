@@ -1,9 +1,0 @@
-name: array-locator-methods-find-last-index
-description: Test support of array locator methods
-should_fail: 0
-tags: 7.12.1 7.12 7.10
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods/find-last-index.sv
-incdirs: 
-top_module: 
-rc: -11
-

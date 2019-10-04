@@ -1,9 +1,0 @@
-name: parameter_range
-description: parameter with implied range tests
-should_fail: 0
-tags: 6.20.2
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--parameter_range.sv
-incdirs: 
-top_module: 
-rc: 0
-

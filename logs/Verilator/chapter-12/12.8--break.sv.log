@@ -1,9 +1,0 @@
-name: jump_break
-description: A module testing break statement
-should_fail: 0
-tags: 12.8
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--break.sv
-incdirs: 
-top_module: 
-rc: 0
-

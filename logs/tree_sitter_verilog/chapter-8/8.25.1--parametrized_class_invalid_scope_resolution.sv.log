@@ -1,9 +1,0 @@
-name: parametrized_class_invalid_scope_resolution
-description: parametrized class invalid scope resolution
-should_fail: 1
-tags: 8.25.1
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv
-incdirs: 
-top_module: 
-rc: 0
-

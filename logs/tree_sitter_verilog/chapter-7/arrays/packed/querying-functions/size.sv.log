@@ -1,9 +1,0 @@
-name: arrays-packed-quering-functions-size
-description: Test quering functions support on packed arrays
-should_fail: 0
-tags: 7.11 7.4.1
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/size.sv
-incdirs: 
-top_module: 
-rc: 0
-

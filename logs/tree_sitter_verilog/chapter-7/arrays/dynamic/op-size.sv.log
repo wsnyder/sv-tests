@@ -1,9 +1,0 @@
-name: dynamic-arrays-op-size
-description: Test dynamic arrays operator size support
-should_fail: 0
-tags: 7.5.2
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv
-incdirs: 
-top_module: 
-rc: 0
-

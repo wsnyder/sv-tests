@@ -1,9 +1,0 @@
-name: pragma-directive
-description: Try to set a pragma
-should_fail: 0
-tags: 5.6.4
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-pragma.sv
-incdirs: 
-top_module: 
-rc: 0
-

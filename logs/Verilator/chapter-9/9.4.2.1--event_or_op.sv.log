@@ -1,9 +1,0 @@
-name: event_or_op
-description: event or operator
-should_fail: 0
-tags: 9.4.2.1
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.1--event_or_op.sv
-incdirs: 
-top_module: 
-rc: 0
-

@@ -1,9 +1,0 @@
-name: priority_casez
-description: casez statement with priority
-should_fail: 0
-tags: 12.5.3
-files: /home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase/12.5.3--priority_casez.sv
-incdirs: 
-top_module: 
-rc: 0
-

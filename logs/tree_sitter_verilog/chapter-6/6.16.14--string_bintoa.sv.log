@@ -1,9 +1,0 @@
-name: string_bintoa
-description: string.bintoa()  tests
-should_fail: 0
-tags: 6.16.14
-files: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.14--string_bintoa.sv
-incdirs: 
-top_module: 
-rc: 0
-
