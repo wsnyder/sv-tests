@@ -1422,7 +1422,7 @@ number_test_45,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number
 number_test_48,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_48.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,False,True
 number_test_31,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_31.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,False,False
 number_test_34,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_34.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,False,False
-number_test_63,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_63.sv,5.6.4 5.7.1 5.7.2,False,True,False,False,False,False,False
+number_test_63,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_63.sv,5.6.4 5.7.1 5.7.2,True,False,True,True,True,True,True
 number_test_60,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_60.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,False,True
 number_test_64,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_64.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,False,True
 number_test_49,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_49.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,False,True
