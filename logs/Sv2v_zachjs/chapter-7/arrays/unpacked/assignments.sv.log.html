@@ -1,10 +1,14 @@
-<pre>name: array-unpacked-assignments
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
 description: Test unpacked arrays assignments
 should_fail: 0
 tags: 7.6 7.4.2
 incdirs: 
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/assignments.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/assignments.sv</a>
+
 
 module top;
 	reg signed [127:0] A;
@@ -18,4 +22,6 @@ module top;
 		$display(":assert: ((%d == 0) and (%d == 1) and (%d == 2) and (%d == 3))", B[0+:32], B[32+:32], B[64+:32], B[96+:32]);
 	end
 endmodule
+
+
 </pre>

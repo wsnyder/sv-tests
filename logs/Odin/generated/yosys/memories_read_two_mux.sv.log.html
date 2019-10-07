@@ -1,10 +1,14 @@
-<pre>name: memories_read_two_mux
+<pre>
+<h3>
+<a href="https://verilogtorouting.org/" target="_blank">odin</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/memories/read_two_mux.v.html" target="file-frame">third_party/tools/yosys/tests/memories/read_two_mux.v</a>
+
 
 --------------
 Odin has decided you MAY fail ... :
@@ -16,4 +20,6 @@ PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/memories/read_two
 ERROR (3)::NETLIST_ERROR <a href="../../../../third_party/tools/yosys/tests/memories/read_two_mux.v.html" target="file-frame">third_party/tools/yosys/tests/memories/read_two_mux.v</a>::7 Odin doesn't support arrays declared [m:n] where m is less than n.
 reg [7:0] bram[0:255];
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]define_nets_with_driver::1299 
+
+
 </pre>

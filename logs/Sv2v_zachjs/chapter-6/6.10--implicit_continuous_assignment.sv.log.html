@@ -1,4 +1,7 @@
-<pre>name: implicit_continuous_assignment
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
 description: implicit declaration in continuous assignment tests
 should_fail: 0
 tags: 6.10
@@ -6,9 +9,12 @@ incdirs:
 top_module: 
 files: <a href="../../../tests/chapter-6/6.10--implicit_continuous_assignment.sv.html" target="file-frame">tests/chapter-6/6.10--implicit_continuous_assignment.sv</a>
 
+
 module top;
 	wire [3:0] a = 8;
 	wire [3:0] b = 5;
 	assign c = (| (a | b));
 endmodule
+
+
 </pre>

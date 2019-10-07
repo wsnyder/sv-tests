@@ -1,10 +1,14 @@
-<pre>name: simple_omsp_dbg_uart
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/omsp_dbg_uart.v.html" target="file-frame">third_party/tools/yosys/tests/simple/omsp_dbg_uart.v</a>
+
 
 module omsp_dbg_uart (
 	dbg_clk,
@@ -33,4 +37,6 @@ module omsp_dbg_uart (
 	assign cmd_valid = ((uart_state == RX_CMD) & xfer_done);
 	assign xfer_done = (uart_state != RX_SYNC);
 endmodule
+
+
 </pre>

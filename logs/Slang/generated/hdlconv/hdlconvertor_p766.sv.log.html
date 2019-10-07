@@ -1,10 +1,14 @@
-<pre>name: hdlconvertor_p766
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p766.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p766.sv</a>
+
 
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p766.sv.html#l-29" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p766.sv:29</a>:15: error: unknown interface 'interface'
 module memMod(interface a); // Uses just the interface keyword
@@ -24,4 +28,6 @@ memMod memW(wide_intf.slave); // 16-bit wide memory
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p766.sv.html#l-57" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p766.sv:57</a>:22: error: hierarchical names are not allowed in constant expressions
 cpuMod cpuW(wide_intf.master); // 16-bit wide cpu
             ~~~~~~~~~^
+
+
 </pre>

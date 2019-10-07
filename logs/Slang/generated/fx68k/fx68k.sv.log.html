@@ -1,10 +1,14 @@
-<pre>name: fx68k
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Full fx68k core test
 should_fail: 0
 tags: fx68k
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
+
 
 ../..<a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:2: error: identifier 's_clks' used before its declaration
 	s_clks Clks;
@@ -195,4 +199,6 @@ localparam TVN_SPURIOUS = 12;
 ../..<a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-298" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:298</a>:26: error: use of undeclared identifier 'inpb'
 			subHcarry = inpa[4] ^ inpb[4] ^ rtemp[4];
 			                      ^~~~
+
+
 </pre>

@@ -1,10 +1,14 @@
-<pre>name: sva_basic04
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic04.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic04.sv</a>
+
 
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic04.sv.html#l-2" target="file-frame">third_party/tools/yosys/tests/sva/basic04.sv:2</a>:2: error: language feature not yet supported
 	a_rw: assert property ( @(posedge clock) !(read && write) );
@@ -24,4 +28,6 @@ bind top top_properties properties_inst (.*);
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic04.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic04.sv:10</a>:41: error: expected declarator
 bind top top_properties properties_inst (.*);
                                         ^
+
+
 </pre>

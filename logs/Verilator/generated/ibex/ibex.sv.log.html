@@ -1,10 +1,14 @@
-<pre>name: ibex
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
 description: Full ibex core test
 should_fail: 0
 tags: ibex
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/ibex/rtl
 top_module: 
 files: <a href="../../../../third_party/cores/ibex/examples/sim/rtl/prim_clock_gating.sv.html" target="file-frame">third_party/cores/ibex/examples/sim/rtl/prim_clock_gating.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_pkg.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_pkg.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_alu.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_alu.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_compressed_decoder.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_compressed_decoder.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_controller.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_controller.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_cs_registers.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_cs_registers.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_decoder.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_decoder.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_ex_block.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_ex_block.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_id_stage.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_id_stage.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_if_stage.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_if_stage.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_load_store_unit.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_load_store_unit.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_multdiv_slow.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_multdiv_slow.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_multdiv_fast.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_multdiv_fast.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_prefetch_buffer.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_prefetch_buffer.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_fetch_fifo.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_fetch_fifo.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_pmp.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_pmp.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_core.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_core.sv</a> <a href="../../../../third_party/cores/ibex/rtl/ibex_register_file_ff.sv.html" target="file-frame">third_party/cores/ibex/rtl/ibex_register_file_ff.sv</a>
+
 
 %Warning-UNOPTFLAT: <a href="../../../../third_party/cores/ibex/rtl/ibex_if_stage.sv.html#l-93" target="file-frame">third_party/cores/ibex/rtl/ibex_if_stage.sv:93</a>: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.if_stage_i.if_id_pipe_reg_we
 %Warning-UNOPTFLAT: Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
@@ -97,4 +101,6 @@ files: <a href="../../../../third_party/cores/ibex/examples/sim/rtl/prim_clock_g
 %Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/ibex/rtl/ibex_controller.sv.html#l-191" target="file-frame">third_party/cores/ibex/rtl/ibex_controller.sv:191</a>:  ALWAYS
 %Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/ibex/rtl/ibex_core.sv.html#l-130" target="file-frame">third_party/cores/ibex/rtl/ibex_core.sv:130</a>:  ibex_core.core_ctrl_firstfetch
 %Warning-UNOPTFLAT: <a href="../../../../third_party/cores/ibex/rtl/ibex_cs_registers.sv.html#l-149" target="file-frame">third_party/cores/ibex/rtl/ibex_cs_registers.sv:149</a>: Signal unoptimizable: Feedback to clock or circular logic: ibex_core.cs_registers_i.mie_q
+
+
 </pre>

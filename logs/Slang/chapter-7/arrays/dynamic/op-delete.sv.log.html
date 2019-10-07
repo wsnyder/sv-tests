@@ -1,4 +1,7 @@
-<pre>name: dynamic-arrays-op-delete
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Test dynamic arrays operator delete support
 should_fail: 0
 tags: 7.5.3
@@ -6,10 +9,13 @@ incdirs:
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv</a>
 
+
 ../..<a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv:9</a>:14: error: dimension requires a constant range
 bit [7:0] arr[];
              ^~
 ../..<a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv:12</a>:11: error: language feature not yet supported
     arr = new [ 16 ];
           ^~~~~~~~~~
+
+
 </pre>

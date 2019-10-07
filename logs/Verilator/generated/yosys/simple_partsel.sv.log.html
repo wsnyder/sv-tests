@@ -1,4 +1,7 @@
-<pre>name: simple_partsel
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
@@ -6,9 +9,12 @@ incdirs:
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v</a>
 
+
 %Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:7</a>: Unsupported: Multiple top level modules: partsel_test002 and partsel_test001
 %Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:7</a>: Fix, or use --top-module option to select which you want.
 %Error: Exiting due to 2 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v</a>
+
+
 </pre>

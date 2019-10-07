@@ -1,4 +1,7 @@
-<pre>name: structure-arrays-illegal
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
 description: Structure array assignment tests
 should_fail: 1
 tags: 5.10
@@ -6,10 +9,13 @@ incdirs:
 top_module: 
 files: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>
 
+
 module top;
 	struct {
 		reg signed [31:0] a;
 		reg signed [31:0] b;
 	} ms [1:0] = {0, 0, 1, 1};
 endmodule
+
+
 </pre>

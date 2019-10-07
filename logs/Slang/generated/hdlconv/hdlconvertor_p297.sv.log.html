@@ -1,10 +1,14 @@
-<pre>name: hdlconvertor_p297
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv</a>
+
 
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:7</a>:17: error: use of undeclared identifier '$past'
     a1: assert(($past(a))); // Illegal: no clock can be inferred
@@ -21,4 +25,6 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:11</a>:3: error: language feature not yet supported
   a4: assert property(@(posedge clock)($past(a)));
   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 </pre>

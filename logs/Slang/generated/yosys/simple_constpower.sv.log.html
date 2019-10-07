@@ -1,10 +1,14 @@
-<pre>name: simple_constpower
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v</a>
+
 
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v:10</a>:44: error: use of undeclared identifier '$signed'
 		assign ys[i*8 + j*64 + 7 : i*8 + j*64] = $signed(i-4) ** $signed(j-4);
@@ -18,4 +22,6 @@ files: <a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.ht
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v:11</a>:60: error: use of undeclared identifier '$unsigned'
 		assign yu[i*8 + j*64 + 7 : i*8 + j*64] = $unsigned(i) ** $unsigned(j);
 		                                                         ^~~~~~~~~
+
+
 </pre>

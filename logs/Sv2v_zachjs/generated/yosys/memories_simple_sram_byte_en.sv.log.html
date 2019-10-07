@@ -1,10 +1,14 @@
-<pre>name: memories_simple_sram_byte_en
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/memories/simple_sram_byte_en.v.html" target="file-frame">third_party/tools/yosys/tests/memories/simple_sram_byte_en.v</a>
+
 
 module generic_sram_byte_en (
 	i_clk,
@@ -30,4 +34,6 @@ module generic_sram_byte_en (
 		o_read_data <= mem[((((DATA_WIDTH - 1) >= 0) ? 0 : (DATA_WIDTH - 1)) + (((0 >= ((2 ** ADDRESS_WIDTH) - 1)) ? i_address : (((2 ** ADDRESS_WIDTH) - 1) - i_address)) * (((DATA_WIDTH - 1) >= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))))+:(((DATA_WIDTH - 1) >= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))];
 	end
 endmodule
+
+
 </pre>

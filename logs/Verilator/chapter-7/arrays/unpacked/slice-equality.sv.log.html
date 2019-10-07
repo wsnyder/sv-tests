@@ -1,4 +1,7 @@
-<pre>name: operations-on-unpacked-arrays-slice-equality
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
 description: Test unpacked arrays operations support (slice equality)
 should_fail: 0
 tags: 7.4.3
@@ -6,7 +9,10 @@ incdirs:
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv</a>
 
+
 %Error: Internal Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv:20</a>: ../V3EmitC.cpp:758: Unknown node type reached emitter: SLICESEL
 %Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv</a>
+
+
 </pre>

@@ -1,10 +1,14 @@
-<pre>name: debug-directives
+<pre>
+<h3>
+<a href="https://verilogtorouting.org/" target="_blank">odin</a>
+</h3>
 description: Debugging compiler directives
 should_fail: 0
 tags: 5.6.4
 incdirs: 
 top_module: 
 files: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>
+
 
 --------------
 Odin has decided you MAY fail ... :
@@ -16,4 +20,6 @@ WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-5/5.6.4--compiler-directi
 ERROR (3)::PARSE_ERROR <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>::9 __FILE__ define cannot be found
   initial $display("At %s @ %d\n", `__FILE__, `__LINE__);
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/verilog_flex.l]load_define::736 
+
+
 </pre>

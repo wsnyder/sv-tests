@@ -1,4 +1,7 @@
-<pre>name: simple_sincos
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
@@ -6,10 +9,13 @@ incdirs:
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/sincos.v.html" target="file-frame">third_party/tools/yosys/tests/simple/sincos.v</a>
 
+
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/sincos.v.html#l-77" target="file-frame">third_party/tools/yosys/tests/simple/sincos.v:77</a>:22: error: use of undeclared identifier '$signed'
                 dx = $signed(y >>> $signed({1'b0, i}));
                      ^~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/sincos.v.html#l-78" target="file-frame">third_party/tools/yosys/tests/simple/sincos.v:78</a>:22: error: use of undeclared identifier '$signed'
                 dy = $signed(x >>> $signed({1'b0, i}));
                      ^~~~~~~
+
+
 </pre>

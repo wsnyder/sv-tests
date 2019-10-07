@@ -1,4 +1,7 @@
-<pre>name: block_names_par
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
 description: parallel block names check
 should_fail: 0
 tags: 9.3.4
@@ -6,10 +9,13 @@ incdirs:
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.4--block_names_par.sv.html" target="file-frame">tests/chapter-9/9.3.4--block_names_par.sv</a>
 
+
 %Error: <a href="../../../tests/chapter-9/9.3.4--block_names_par.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.4--block_names_par.sv:12</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
 %Error: <a href="../../../tests/chapter-9/9.3.4--block_names_par.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.4--block_names_par.sv:12</a>: syntax error, unexpected ':'
 %Error: <a href="../../../tests/chapter-9/9.3.4--block_names_par.sv.html#l-16" target="file-frame">tests/chapter-9/9.3.4--block_names_par.sv:16</a>: Unsupported: Verilog 1995 reserved word not implemented: join
 %Error: Cannot continue
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.3.4--block_names_par.sv.html" target="file-frame">tests/chapter-9/9.3.4--block_names_par.sv</a>
+
+
 </pre>

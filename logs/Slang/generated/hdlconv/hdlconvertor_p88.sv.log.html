@@ -1,10 +1,14 @@
-<pre>name: hdlconvertor_p88
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv</a>
+
 
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv:1</a>:42: error: language feature not yet supported
 module ma #( parameter p1 = 1, parameter type p2 = shortint )
@@ -18,4 +22,6 @@ module ma #( parameter p1 = 1, parameter type p2 = shortint )
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv:12</a>:20: error: expected expression
   ma #(.p1(3), .p2(int)) u1(i,o); //redefines p2 to a type of int
                    ^~~
+
+
 </pre>

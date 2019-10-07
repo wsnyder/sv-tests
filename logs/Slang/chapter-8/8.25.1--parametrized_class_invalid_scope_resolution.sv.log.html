@@ -1,10 +1,14 @@
-<pre>name: parametrized_class_invalid_scope_resolution
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: parametrized class invalid scope resolution
 should_fail: 1
 tags: 8.25.1
 incdirs: 
 top_module: 
 files: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
+
 
 ../..<a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>:2: error: language feature not yet supported
 	class par_cls #(int a = 25);
@@ -18,4 +22,6 @@ files: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scop
 ../..<a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-18" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:18</a>:12: error: unknown class or package 'par_cls'
 		$display(par_cls::b);
 		         ^~~~~~~
+
+
 </pre>

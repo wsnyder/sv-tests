@@ -1,10 +1,14 @@
-<pre>name: dynamic_array_unpack_stream
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: stream unpack test with dynamic array
 should_fail: 0
 tags: 11.4.14.4
 incdirs: 
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
+
 
 ../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-11" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:11</a>:12: error: dimension requires a constant range
 byte i_data[];
@@ -24,4 +28,6 @@ byte o_data[];
 ../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-29" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:29</a>:2: error: language feature not yet supported
 	{<< byte{o_header, o_len, o_data with [0 +: o_len], o_crc}} = pkt;
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 </pre>

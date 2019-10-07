@@ -1,10 +1,14 @@
-<pre>name: simple_hierdefparam
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v</a>
+
 
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v:4</a>:12: error: standalone generate block without loop or condition is not allowed
   generate begin:foo
@@ -15,4 +19,6 @@ files: <a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v:8</a>:3: error: language feature not yet supported
   defparam foo.mod_a.bar[1].mod_b.addvalue = 43;
   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 </pre>

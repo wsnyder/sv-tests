@@ -1,4 +1,7 @@
-<pre>name: operations-on-unpacked-arrays-variable-slice-rw
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
 description: Test packed arrays operations support (Variable slice)
 should_fail: 0
 tags: 7.4.3 7.4.6
@@ -6,7 +9,10 @@ incdirs:
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
 
+
 %Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-22" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:22</a>: Illegal +: or -: select; type already selected, or bad dimension: type is UNPACKARRAYDTYPE
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
+
+
 </pre>

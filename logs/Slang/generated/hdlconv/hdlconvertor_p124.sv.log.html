@@ -1,10 +1,14 @@
-<pre>name: hdlconvertor_p124
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: 
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv</a>
+
 
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv:2</a>:32: error: language feature not yet supported
 #( parameter p1 = 1, parameter type p2 = shortint )
@@ -18,4 +22,6 @@ p2 j = 0; // type of j is set by a parameter, (shortint unless redefined)
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p124.sv:12</a>:18: error: expected expression
 ma #(.p1(3), .p2(int)) u1(i,o); //redefines p2 to a type of int
                  ^~~
+
+
 </pre>

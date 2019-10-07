@@ -1,4 +1,7 @@
-<pre>name: variable_redeclare
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
 description: Variable redeclaration tests
 should_fail: 1
 tags: 6.5
@@ -6,8 +9,11 @@ incdirs:
 top_module: 
 files: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
 
+
 %Error: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>: Duplicate declaration of signal: v
 %Error: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-8" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:8</a>: ... Location of original declaration
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
+
+
 </pre>
