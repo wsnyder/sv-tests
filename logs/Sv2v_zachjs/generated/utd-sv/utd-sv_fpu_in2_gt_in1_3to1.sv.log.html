@@ -1,0 +1,38 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/fpu_in2_gt_in1_3to1.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in2_gt_in1_3to1.v</a>
+
+
+module fpu_in2_gt_in1_3to1 (
+	din2_neq_din1_hi,
+	din2_gt_din1_hi,
+	din2_neq_din1_mid,
+	din2_gt_din1_mid,
+	din2_neq_din1_lo,
+	din2_gt_din1_lo,
+	din2_neq_din1,
+	din2_gt_din1
+);
+	input din2_neq_din1_hi;
+	input din2_gt_din1_hi;
+	input din2_neq_din1_mid;
+	input din2_gt_din1_mid;
+	input din2_neq_din1_lo;
+	input din2_gt_din1_lo;
+	output din2_neq_din1;
+	output din2_gt_din1;
+	wire din2_neq_din1;
+	wire din2_gt_din1;
+	assign din2_neq_din1 = ((din2_neq_din1_hi || din2_neq_din1_mid) || din2_neq_din1_lo);
+	assign din2_gt_din1 = (((din2_neq_din1_hi && din2_gt_din1_hi) || (((! din2_neq_din1_hi) && din2_neq_din1_mid) && din2_gt_din1_mid)) || (((! din2_neq_din1_hi) && (! din2_neq_din1_mid)) && din2_gt_din1_lo));
+endmodule
+
+
+</pre>

@@ -1,0 +1,465 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/flop_rptrs_xc2.v.html" target="file-frame">third_party/tests/utd-sv/flop_rptrs_xc2.v</a>
+
+
+module flop_rptrs_xc2 (
+	sparc_out,
+	so,
+	jbussync2_out,
+	jbussync1_out,
+	grst_out,
+	gdbginit_out,
+	ddrsync2_out,
+	ddrsync1_out,
+	cken_out,
+	spare_in,
+	se,
+	sd,
+	jbussync2_in,
+	jbussync1_in,
+	grst_in,
+	gdbginit_in,
+	gclk,
+	ddrsync2_in,
+	ddrsync1_in,
+	cken_in,
+	agrst_l,
+	adbginit_l
+);
+	output [25:0] cken_out;
+	output ddrsync1_out;
+	output ddrsync2_out;
+	output gdbginit_out;
+	output grst_out;
+	output jbussync1_out;
+	output jbussync2_out;
+	output so;
+	output [5:0] sparc_out;
+	input adbginit_l;
+	input agrst_l;
+	input [25:0] cken_in;
+	input ddrsync1_in;
+	input ddrsync2_in;
+	input gclk;
+	input gdbginit_in;
+	input grst_in;
+	input jbussync1_in;
+	input jbussync2_in;
+	input sd;
+	input se;
+	input [5:0] spare_in;
+	wire clk;
+	wire scan_data_0;
+	wire scan_data_1;
+	wire scan_data_10;
+	wire scan_data_11;
+	wire scan_data_2;
+	wire scan_data_3;
+	wire scan_data_4;
+	wire scan_data_5;
+	wire scan_data_6;
+	wire scan_data_7;
+	wire scan_data_8;
+	wire scan_data_9;
+	bw_u1_ckbuf_33x I73(
+		.clk(clk),
+		.rclk(gclk)
+	);
+	bw_u1_soffasr_2x spare_ff_5_(
+		.sd(sd),
+		.q(sparc_out[5]),
+		.so(scan_data_0),
+		.ck(clk),
+		.d(spare_in[5]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_soffasr_2x spare_ff_4_(
+		.q(sparc_out[4]),
+		.so(scan_data_1),
+		.ck(clk),
+		.d(spare_in[4]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se),
+		.sd(scan_data_0)
+	);
+	bw_u1_soffasr_2x spare_ff_3_(
+		.q(sparc_out[3]),
+		.so(scan_data_2),
+		.ck(clk),
+		.d(spare_in[3]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se),
+		.sd(scan_data_1)
+	);
+	bw_u1_soffasr_2x spare_ff_2_(
+		.q(sparc_out[2]),
+		.so(scan_data_3),
+		.ck(clk),
+		.d(spare_in[2]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se),
+		.sd(scan_data_2)
+	);
+	bw_u1_soffasr_2x spare_ff_1_(
+		.q(sparc_out[1]),
+		.so(scan_data_4),
+		.ck(clk),
+		.d(spare_in[1]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se),
+		.sd(scan_data_3)
+	);
+	bw_u1_soffasr_2x spare_ff_0_(
+		.q(sparc_out[0]),
+		.so(scan_data_5),
+		.ck(clk),
+		.d(spare_in[0]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se),
+		.sd(scan_data_4)
+	);
+	bw_u1_soffasr_2x cken_ff_25_(
+		.q(cken_out[25]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[25]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_24_(
+		.q(cken_out[24]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[24]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_23_(
+		.q(cken_out[23]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[23]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_22_(
+		.q(cken_out[22]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[22]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_21_(
+		.q(cken_out[21]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[21]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_20_(
+		.q(cken_out[20]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[20]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_19_(
+		.q(cken_out[19]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[19]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_18_(
+		.q(cken_out[18]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[18]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_17_(
+		.q(cken_out[17]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[17]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_16_(
+		.q(cken_out[16]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[16]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_15_(
+		.q(cken_out[15]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[15]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_14_(
+		.q(cken_out[14]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[14]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_13_(
+		.q(cken_out[13]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[13]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_12_(
+		.q(cken_out[12]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[12]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_11_(
+		.q(cken_out[11]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[11]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_10_(
+		.q(cken_out[10]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[10]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_9_(
+		.q(cken_out[9]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[9]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_8_(
+		.q(cken_out[8]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[8]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_7_(
+		.q(cken_out[7]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[7]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_6_(
+		.q(cken_out[6]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[6]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_5_(
+		.q(cken_out[5]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[5]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_4_(
+		.q(cken_out[4]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[4]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_3_(
+		.q(cken_out[3]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[3]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_2_(
+		.q(cken_out[2]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[2]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_1_(
+		.q(cken_out[1]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[1]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x cken_ff_0_(
+		.q(cken_out[0]),
+		.so(),
+		.ck(clk),
+		.d(cken_in[0]),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(1'b0),
+		.sd(1'b0)
+	);
+	bw_u1_soffasr_2x ddrsync1_ff(
+		.q(ddrsync1_out),
+		.so(scan_data_9),
+		.d(ddrsync1_in),
+		.sd(scan_data_8),
+		.ck(clk),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_soffasr_2x ddrsync2_ff(
+		.q(ddrsync2_out),
+		.so(scan_data_8),
+		.d(ddrsync2_in),
+		.sd(scan_data_7),
+		.ck(clk),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_soffasr_2x jbussync1_ff(
+		.q(jbussync1_out),
+		.so(scan_data_7),
+		.d(jbussync1_in),
+		.sd(scan_data_6),
+		.ck(clk),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_soffasr_2x jbussync2_ff(
+		.q(jbussync2_out),
+		.so(scan_data_6),
+		.d(jbussync2_in),
+		.sd(scan_data_5),
+		.ck(clk),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_soffasr_2x gdbginit_ff(
+		.q(gdbginit_out),
+		.so(scan_data_10),
+		.d(gdbginit_in),
+		.sd(scan_data_9),
+		.r_l(adbginit_l),
+		.ck(clk),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_soffasr_2x gclk_ff(
+		.q(grst_out),
+		.so(scan_data_11),
+		.d(grst_in),
+		.sd(scan_data_10),
+		.ck(clk),
+		.r_l(agrst_l),
+		.s_l(1'b1),
+		.se(se)
+	);
+	bw_u1_scanlg_2x scanout_latch(
+		.so(so),
+		.sd(scan_data_11),
+		.ck(clk),
+		.se(1'b1)
+	);
+endmodule
+
+
+</pre>

@@ -1,0 +1,56 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sync_pulse_synchronizer.v.html" target="file-frame">third_party/tests/utd-sv/sync_pulse_synchronizer.v</a>
+
+
+module sync_pulse_synchronizer (
+	sync_out,
+	so,
+	async_in,
+	gclk,
+	rclk,
+	si,
+	se
+);
+	output sync_out;
+	output so;
+	input async_in;
+	input gclk;
+	input rclk;
+	input si;
+	input se;
+	wire pre_sync_out;
+	wire so_rptr;
+	wire so_lockup;
+	bw_u1_soff_8x repeater(
+		.q(pre_sync_out),
+		.so(so_rptr),
+		.ck(gclk),
+		.d(async_in),
+		.se(se),
+		.sd(si)
+	);
+	bw_u1_scanl_2x lockup(
+		.so(so_lockup),
+		.sd(so_rptr),
+		.ck(gclk)
+	);
+	bw_u1_soff_8x syncff(
+		.q(sync_out),
+		.so(so),
+		.ck(rclk),
+		.d(pre_sync_out),
+		.se(se),
+		.sd(so_lockup)
+	);
+endmodule
+
+
+</pre>

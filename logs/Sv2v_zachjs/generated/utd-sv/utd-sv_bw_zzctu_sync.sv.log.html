@@ -1,0 +1,66 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/bw_zzctu_sync.v.html" target="file-frame">third_party/tests/utd-sv/bw_zzctu_sync.v</a>
+
+
+module bw_zzctu_sync (
+	so,
+	out,
+	sob,
+	d,
+	si,
+	sib,
+	pll_out,
+	pll_out_l,
+	se
+);
+	input d;
+	input si;
+	input sib;
+	input pll_out;
+	input pll_out_l;
+	input se;
+	output so;
+	output sob;
+	output out;
+	wire ql1;
+	wire ql2;
+	wire so1;
+	wire so2;
+	wire pll_out_inv;
+	assign pll_out_inv = (~ pll_out);
+	bw_u1_soffi_4x u_I0(
+		.q_l(ql1),
+		.so(so),
+		.ck(pll_out),
+		.d(d),
+		.se(se),
+		.sd(si)
+	);
+	bw_u1_soffi_4x u_I1(
+		.q_l(ql2),
+		.so(sob1),
+		.ck(pll_out_inv),
+		.d(ql1),
+		.se(se),
+		.sd(sib)
+	);
+	bw_u1_soff_8x u_I2(
+		.q(out),
+		.so(sob),
+		.ck(pll_out_l),
+		.d(ql2),
+		.se(se),
+		.sd(sob1)
+	);
+endmodule
+
+
+</pre>

@@ -1,0 +1,49 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_vuad_io.v.html" target="file-frame">third_party/tests/utd-sv/sctag_vuad_io.v</a>
+
+
+module sctag_vuad_io (
+	data_out_io,
+	array_data_in_buf_top,
+	array_data_in_buf_bottom,
+	data_out_col1,
+	data_out_col2,
+	data_out_col3,
+	data_out_col4,
+	array_data_in,
+	mux_sel
+);
+	input [25:0] data_out_col1;
+	input [25:0] data_out_col2;
+	input [25:0] data_out_col3;
+	input [25:0] data_out_col4;
+	input [25:0] array_data_in;
+	output [25:0] data_out_io;
+	output [25:0] array_data_in_buf_top;
+	output [25:0] array_data_in_buf_bottom;
+	input [3:0] mux_sel;
+	assign array_data_in_buf_top = array_data_in;
+	assign array_data_in_buf_bottom = array_data_in;
+	mux4ds #(26) mux_data_out_io(
+		.dout(data_out_io[25:0]),
+		.in0(data_out_col1[25:0]),
+		.in1(data_out_col2[25:0]),
+		.in2(data_out_col3[25:0]),
+		.in3(data_out_col4[25:0]),
+		.sel0(mux_sel[0]),
+		.sel1(mux_sel[1]),
+		.sel2(mux_sel[2]),
+		.sel3(mux_sel[3])
+	);
+endmodule
+
+
+</pre>

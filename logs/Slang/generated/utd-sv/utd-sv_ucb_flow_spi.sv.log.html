@@ -1,0 +1,78 @@
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v</a>
+
+
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-85" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:85</a>:11: error: identifier 'IOB_UCB_WIDTH' used before its declaration
+   input [IOB_UCB_WIDTH-1:0] 		iob_ucb_data;
+          ^~~~~~~~~~~~~      		
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-74" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:74</a>:14: note: declared here
+   parameter IOB_UCB_WIDTH = 32;  // data bus width from IOB to UCB
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-107" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:107</a>:11: error: identifier 'REG_WIDTH' used before its declaration
+   input [REG_WIDTH-1:0] 		data_out;
+          ^~~~~~~~~      		
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-76" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:76</a>:14: note: declared here
+   parameter REG_WIDTH     = 64;  // please do not change this parameter
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-121" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:121</a>:12: error: identifier 'UCB_IOB_WIDTH' used before its declaration
+   output [UCB_IOB_WIDTH-1:0] 		ucb_iob_data;
+           ^~~~~~~~~~~~~      		
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-75" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:75</a>:14: note: declared here
+   parameter UCB_IOB_WIDTH = 8;   // data bus width from UCB to IOB
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-186" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:186</a>:4: error: unknown module 'ucb_bus_in'
+   ucb_bus_in #(IOB_UCB_WIDTH,64) ucb_bus_in (.rst_l(rst_l),
+   ^~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-223" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:223</a>:4: error: unknown module 'dff_ns'
+   dff_ns #(`UCB_BUF_DEPTH) buf_head_ff (.din(buf_head_next),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-236" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:236</a>:4: error: unknown module 'dff_ns'
+   dff_ns #(`UCB_BUF_DEPTH) buf_tail_ff (.din(buf_tail_next),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-243" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:243</a>:4: error: unknown module 'dffrle_ns'
+   dffrle_ns #(1) buf_full_ff (.din(buf_full_next),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-252" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:252</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(1) buf_empty_ff (.din(buf_empty_next),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-269" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:269</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(`UCB_BUF_WIDTH) buf0_ff (.din(req_in),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-275" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:275</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(`UCB_BUF_WIDTH) buf1_ff (.din(req_in),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-311" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:311</a>:4: error: unknown module 'dffrl_ns'
+   dffrl_ns #(1) ack_buf_vld_ff (.din(ack_buf_vld_next),
+   ^~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-316" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:316</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(1) ack_buf_is_nack_ff (.din(rd_nack_vld|ifill_nack_vld),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-321" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:321</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(1) ack_buf_is_data128_ff (.din(data128),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-336" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:336</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(REG_WIDTH+`UCB_BUF_HI-`UCB_PKT_LO+1) ack_buf_ff (.din(ack_buf_in),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-359" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:359</a>:4: error: unknown module 'dffrl_ns'
+   dffrl_ns #(1) int_buf_vld_ff (.din(int_buf_vld_next),
+   ^~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-370" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:370</a>:4: error: unknown module 'dffe_ns'
+   dffe_ns #(`UCB_INT_VEC_HI-`UCB_PKT_LO+1) int_buf_ff (.din(int_buf_in),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-384" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:384</a>:4: error: unknown module 'dffrle_ns'
+   dffrle_ns #(1) int_last_rd_ff (.din(int_buf_rd),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_flow_spi.v.html#l-416" target="file-frame">third_party/tests/utd-sv/ucb_flow_spi.v:416</a>:4: error: unknown module 'ucb_bus_out'
+   ucb_bus_out #(UCB_IOB_WIDTH, REG_WIDTH) ucb_bus_out (.rst_l(rst_l),
+   ^~~~~~~~~~~
+
+
+</pre>

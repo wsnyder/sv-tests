@@ -1,0 +1,32 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/fpu_cnt_lead0_lvl1.v.html" target="file-frame">third_party/tests/utd-sv/fpu_cnt_lead0_lvl1.v</a>
+
+
+module fpu_cnt_lead0_lvl1 (
+	din,
+	din_3_0_eq_0,
+	din_3_2_eq_0,
+	lead0_4b_0
+);
+	input [3:0] din;
+	output din_3_0_eq_0;
+	output din_3_2_eq_0;
+	output lead0_4b_0;
+	wire din_3_0_eq_0;
+	wire din_3_2_eq_0;
+	wire lead0_4b_0;
+	assign din_3_0_eq_0 = (! (| din[3:0]));
+	assign din_3_2_eq_0 = (! (| din[3:2]));
+	assign lead0_4b_0 = (((! din_3_2_eq_0) && (! din[3])) || (din_3_2_eq_0 && (! din[1])));
+endmodule
+
+
+</pre>

@@ -1,0 +1,31 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html" target="file-frame">third_party/tests/utd-sv/efc_lib.v</a>
+
+
+module bw_efc_latch (
+	d,
+	c,
+	q
+);
+	parameter SIZE = 1;
+	input [(SIZE - 1):0] d;
+	input c;
+	output [(SIZE - 1):0] q;
+	bw_u1_scanlg_2x u_lat [(SIZE - 1):0] (
+		.so(q),
+		.ck(c),
+		.sd(d),
+		.se(1'b1)
+	);
+endmodule
+
+
+</pre>

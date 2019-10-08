@@ -1,0 +1,27 @@
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html" target="file-frame">third_party/tests/utd-sv/module-instance.v</a>
+
+
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: Cannot find file containing module: dbl_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: This may be because there's no search path specified with -I<dir>.
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       dbl_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       dbl_buf.v
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       dbl_buf.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       obj_dir/dbl_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       obj_dir/dbl_buf.v
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       obj_dir/dbl_buf.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-19" target="file-frame">third_party/tests/utd-sv/module-instance.v:19</a>: Cannot find file containing module: module_being_instanced
+%Error: Exiting due to 10 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/module-instance.v.html" target="file-frame">third_party/tests/utd-sv/module-instance.v</a>
+
+
+</pre>

@@ -1,0 +1,44 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/spu_ma_mon.v.html" target="file-frame">third_party/tests/utd-sv/spu_ma_mon.v</a>
+
+
+module spu_ma_mon (
+	clk,
+	wrmi_mamul_1sthalf,
+	wrmi_mamul_2ndhalf,
+	wrmi_maaeqb_1sthalf,
+	wrmi_maaeqb_2ndhalf,
+	iptr,
+	iminus_lenminus1,
+	mul_data
+);
+	input clk;
+	input wrmi_mamul_1sthalf;
+	input wrmi_mamul_2ndhalf;
+	input wrmi_maaeqb_1sthalf;
+	input wrmi_maaeqb_2ndhalf;
+	input [6:0] iptr;
+	input [6:0] iminus_lenminus1;
+	input [63:0] mul_data;
+	always @(negedge clk) begin
+		if ((wrmi_mamul_1sthalf | wrmi_maaeqb_1sthalf)) begin
+			$display("%0d:spu_ma> ", $time, "M[", iptr, "] = %h", mul_data);
+			$info(0, "SPU_MON_M[", iptr, "] = %h", mul_data);
+		end
+		if ((wrmi_mamul_2ndhalf | wrmi_maaeqb_2ndhalf)) begin
+			$display("%0d:spu_ma> ", $time, "M[", iminus_lenminus1, "] = %h", mul_data);
+			$info(0, "SPU_MON_M[", iminus_lenminus1, "] = %h", mul_data);
+		end
+	end
+endmodule
+
+
+</pre>

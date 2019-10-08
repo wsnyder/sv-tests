@@ -1,0 +1,38 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/scbuf_slowsig_buf.v.html" target="file-frame">third_party/tests/utd-sv/scbuf_slowsig_buf.v</a>
+
+
+module scbuf_slowsig_buf (
+	mem_write_disable_buf,
+	sehold_buf,
+	se_buf,
+	arst_l_buf,
+	mem_write_disable,
+	sehold,
+	se,
+	arst_l
+);
+	output mem_write_disable_buf;
+	output sehold_buf;
+	output se_buf;
+	output arst_l_buf;
+	input mem_write_disable;
+	input sehold;
+	input se;
+	input arst_l;
+	assign mem_write_disable_buf = mem_write_disable;
+	assign sehold_buf = sehold;
+	assign se_buf = se;
+	assign arst_l_buf = arst_l;
+endmodule
+
+
+</pre>

@@ -1,0 +1,28 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_retbuf.v.html" target="file-frame">third_party/tests/utd-sv/sctag_retbuf.v</a>
+
+
+module sctag_retbuf (
+	retdp_data_c7,
+	retdp_ecc_c7,
+	retdp_data_c7_buf,
+	retdp_ecc_c7_buf
+);
+	output [127:0] retdp_data_c7;
+	output [27:0] retdp_ecc_c7;
+	input [127:0] retdp_data_c7_buf;
+	input [27:0] retdp_ecc_c7_buf;
+	assign retdp_data_c7 = retdp_data_c7_buf;
+	assign retdp_ecc_c7 = retdp_ecc_c7_buf;
+endmodule
+
+
+</pre>

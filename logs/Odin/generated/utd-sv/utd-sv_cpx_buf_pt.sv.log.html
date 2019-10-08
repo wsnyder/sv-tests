@@ -1,0 +1,27 @@
+<pre>
+<h3>
+<a href="https://verilogtorouting.org/" target="_blank">odin</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/cpx_buf_pt.v.html" target="file-frame">third_party/tests/utd-sv/cpx_buf_pt.v</a>
+
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sys.h::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sys.h) has an unsupported extension (.h), Odin only supports {  .v .vh }
+
+WARNING (3)::ARG_ERROR /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/iop.h::1 File (/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/iop.h) has an unsupported extension (.h), Odin only supports {  .v .vh }
+
+ERROR (4)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/cpx_buf_pt.v.html" target="file-frame">third_party/tests/utd-sv/cpx_buf_pt.v</a>::67 Can't find module name dff_s
+	    .so            ());
+Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/ast_elaborate.cpp]build_hierarchy::988 
+
+
+</pre>

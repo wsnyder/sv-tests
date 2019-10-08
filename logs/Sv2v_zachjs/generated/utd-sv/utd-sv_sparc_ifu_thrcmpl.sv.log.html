@@ -1,0 +1,134 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v</a>
+
+
+module sparc_ifu_thrcmpl (
+	completion,
+	wm_imiss,
+	wm_other,
+	clk,
+	se,
+	si,
+	reset,
+	fcl_ifq_icmiss_s1,
+	erb_dtu_ifeterr_d1,
+	sw_cond_s,
+	en_spec_g,
+	atr_s,
+	dtu_fcl_thr_active,
+	ifq_dtu_thrrdy,
+	ifq_dtu_pred_rdy,
+	exu_lop_done,
+	branch_done_d,
+	fixedop_done,
+	ldmiss,
+	spec_ld_d,
+	trap,
+	retr_thr_wakeup,
+	flush_wake_w2,
+	ldhit_thr,
+	spec_ld_g,
+	clear_wmo_e,
+	wm_stbwait,
+	stb_retry,
+	rst_thread,
+	trap_thrrdy,
+	thr_s2,
+	thr_e,
+	thr_s1,
+	fp_thrrdy,
+	lsu_ifu_ldst_cmplt,
+	sta_done_e,
+	killed_inst_done_e
+);
+	input clk;
+	input se;
+	input si;
+	input reset;
+	input fcl_ifq_icmiss_s1;
+	input erb_dtu_ifeterr_d1;
+	input sw_cond_s;
+	input en_spec_g;
+	input atr_s;
+	input [3:0] dtu_fcl_thr_active;
+	input [3:0] ifq_dtu_thrrdy;
+	input [3:0] ifq_dtu_pred_rdy;
+	input [3:0] exu_lop_done;
+	input [3:0] branch_done_d;
+	input [3:0] fixedop_done;
+	input [3:0] ldmiss;
+	input [3:0] spec_ld_d;
+	input [3:0] trap;
+	input [3:0] retr_thr_wakeup;
+	input [3:0] flush_wake_w2;
+	input [3:0] ldhit_thr;
+	input [3:0] spec_ld_g;
+	input clear_wmo_e;
+	input [3:0] wm_stbwait;
+	input [3:0] stb_retry;
+	input [3:0] rst_thread;
+	input [3:0] trap_thrrdy;
+	input [3:0] thr_s2;
+	input [3:0] thr_e;
+	input [3:0] thr_s1;
+	input [3:0] fp_thrrdy;
+	input [3:0] lsu_ifu_ldst_cmplt;
+	input sta_done_e;
+	input killed_inst_done_e;
+	output [3:0] completion;
+	output [3:0] wm_imiss;
+	output [3:0] wm_other;
+	wire [3:0] wm_imiss;
+	wire [3:0] wm_other;
+	wire [3:0] wmi_nxt;
+	wire [3:0] wmo_nxt;
+	wire [3:0] clr_wmo_thr_e;
+	wire [3:0] ldst_thrrdy;
+	wire [3:0] ld_thrrdy;
+	wire [3:0] sta_thrrdy;
+	wire [3:0] killed_thrrdy;
+	wire [3:0] fp_thrrdy;
+	wire [3:0] pred_ifq_rdy;
+	wire [3:0] imiss_thrrdy;
+	wire [3:0] other_thrrdy;
+	dffr_s #(4) wmi_ff(
+		.din(wmi_nxt),
+		.clk(clk),
+		.q(wm_imiss),
+		.rst(reset),
+		.se(se),
+		.si(),
+		.so()
+	);
+	dffr_s #(4) wmo_ff(
+		.din(wmo_nxt),
+		.clk(clk),
+		.q(wm_other),
+		.rst(reset),
+		.se(se),
+		.si(),
+		.so()
+	);
+	assign wmi_nxt = ((({4 {fcl_ifq_icmiss_s1}} & thr_s1) | ({4 {erb_dtu_ifeterr_d1}} & thr_e)) | (wm_imiss & (~ imiss_thrrdy)));
+	assign clr_wmo_thr_e = ({4 {clear_wmo_e}} & thr_e);
+	assign wmo_nxt = ((((((({4 {sw_cond_s}} & thr_s2) & (~ clr_wmo_thr_e)) | trap) | ldmiss) & dtu_fcl_thr_active) | rst_thread) | ((wm_other & dtu_fcl_thr_active) & (~ ((other_thrrdy | spec_ld_d) | clr_wmo_thr_e))));
+	assign ldst_thrrdy = (lsu_ifu_ldst_cmplt & (~ spec_ld_g));
+	assign ld_thrrdy = (ldhit_thr & {4 {(~ en_spec_g)}});
+	assign sta_thrrdy = (thr_e & {4 {sta_done_e}});
+	assign killed_thrrdy = (thr_e & {4 {killed_inst_done_e}});
+	assign other_thrrdy = ((((((((((ldst_thrrdy | branch_done_d) | ld_thrrdy) | exu_lop_done) | fixedop_done) | killed_thrrdy) | retr_thr_wakeup) | flush_wake_w2) | fp_thrrdy) | sta_thrrdy) | trap_thrrdy);
+	assign pred_ifq_rdy = ((ifq_dtu_pred_rdy & {4 {(~ atr_s)}}) & dtu_fcl_thr_active);
+	assign imiss_thrrdy = (pred_ifq_rdy | ifq_dtu_thrrdy);
+	assign completion = ((((imiss_thrrdy | (~ wm_imiss)) & (other_thrrdy | (~ wm_other))) & (stb_retry | (~ wm_stbwait))) & ((wm_imiss | wm_other) | wm_stbwait));
+endmodule
+
+
+</pre>

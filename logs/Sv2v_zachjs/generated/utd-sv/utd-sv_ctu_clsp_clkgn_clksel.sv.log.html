@@ -1,0 +1,119 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/ctu_clsp_clkgn_clksel.v.html" target="file-frame">third_party/tests/utd-sv/ctu_clsp_clkgn_clksel.v</a>
+
+
+module ctu_clsp_clkgn_clksel (
+	clkout,
+	sysclk_sel,
+	io_pwron_rst_l,
+	sel,
+	testmode_l,
+	sysclk,
+	divbypclk,
+	byp_mult_sel_l,
+	nstepsel,
+	jtag_clock_dr,
+	capture_l,
+	bypmode
+);
+	input io_pwron_rst_l;
+	input [2:0] sel;
+	input testmode_l;
+	input sysclk;
+	input divbypclk;
+	input byp_mult_sel_l;
+	input nstepsel;
+	input jtag_clock_dr;
+	input capture_l;
+	input bypmode;
+	output clkout;
+	output sysclk_sel;
+	wire force_altclk_l;
+	wire altclk_sync_l;
+	wire tck_sync;
+	wire bypclk_sync_pre;
+	wire bypclk_sync;
+	wire tck_sync_pre;
+	wire force_alt_clk_sync;
+	wire mult_sel;
+	wire nstep_clock_dr;
+	wire clock_dr;
+	wire altclk_sync_l_bar;
+	wire sysclk_sel_bar;
+	ctu_and2 u_capture_l_gated(
+		.a(jtag_clock_dr),
+		.b(capture_l),
+		.z(nstep_clock_dr)
+	);
+	ctu_mux21 u_jtag_clock_mux_gated(
+		.z(clock_dr),
+		.s(testmode_l),
+		.d0(jtag_clock_dr),
+		.d1(nstep_clock_dr)
+	);
+	ctu_clksel_async_synchronizer u_mult_sel_clk(
+		.presyncdata(mult_sel),
+		.syncdata(force_alt_clk_sync),
+		.arst_l(io_pwron_rst_l),
+		.aset_l(1'b1),
+		.clk(sysclk)
+	);
+	ctu_clksel_async_synchronizer u_byp_mult_sel_sync(
+		.presyncdata(altclk_sync_pre),
+		.syncdata(altclk_sync_l),
+		.arst_l(io_pwron_rst_l),
+		.aset_l(1'b1),
+		.clk(divbypclk)
+	);
+	ctu_clksel_async_synchronizer u_bypclk_sync(
+		.presyncdata(bypclk_sync_pre),
+		.syncdata(bypclk_sync),
+		.aset_l(io_pwron_rst_l),
+		.arst_l(1'b1),
+		.clk(divbypclk)
+	);
+	ctu_clksel_async_synchronizer u_tck_sync(
+		.presyncdata(tck_sync_pre),
+		.syncdata(tck_sync),
+		.arst_l(io_pwron_rst_l),
+		.aset_l(1'b1),
+		.clk(jtag_clock_dr)
+	);
+	assign mult_sel = (bypmode | nstepsel);
+	assign force_altclk_l = sel[0];
+	assign altclk_sync_pre = byp_mult_sel_l;
+	assign bypclk_sync_pre = sel[2];
+	assign tck_sync_pre = sel[1];
+	bw_u1_aoi22_4x u_clkout_gated(
+		.a1(bypclk_sync),
+		.a2(divbypclk),
+		.b1(tck_sync),
+		.b2(clock_dr),
+		.z(clkout)
+	);
+	ctu_inv u_altclk_sync_l_gated(
+		.z(altclk_sync_l_bar),
+		.a(altclk_sync_l)
+	);
+	bw_u1_oai21_4x u_sysclk_sel_bar_gated(
+		.a(altclk_sync_l_bar),
+		.b1(force_altclk_l),
+		.b2(force_alt_clk_sync),
+		.z(sysclk_sel_bar)
+	);
+	ctu_inv u_sysclk_sel_gated(
+		.z(sysclk_sel),
+		.a(sysclk_sel_bar)
+	);
+endmodule
+
+
+</pre>

@@ -1,0 +1,28 @@
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html" target="file-frame">third_party/tests/utd-sv/inc-2.v</a>
+
+
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>: Cannot find include file: inc-1.h
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>: This may be because there's no search path specified with -I<dir>.
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>:       inc-1.h
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>:       inc-1.h.v
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>:       inc-1.h.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>:       obj_dir/inc-1.h
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>:       obj_dir/inc-1.h.v
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/inc-2.v:2</a>:       obj_dir/inc-1.h.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-6" target="file-frame">third_party/tests/utd-sv/inc-2.v:6</a>: Define or directive not defined: `BUS_WIDTH
+%Error: <a href="../../../../third_party/tests/utd-sv/inc-2.v.html#l-6" target="file-frame">third_party/tests/utd-sv/inc-2.v:6</a>: syntax error, unexpected ']', expecting TYPE-IDENTIFIER
+%Error: Exiting due to 11 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/inc-2.v.html" target="file-frame">third_party/tests/utd-sv/inc-2.v</a>
+
+
+</pre>

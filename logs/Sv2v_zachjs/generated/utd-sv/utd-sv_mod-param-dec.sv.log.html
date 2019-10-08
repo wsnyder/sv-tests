@@ -1,0 +1,30 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/mod-param-dec.v.html" target="file-frame">third_party/tests/utd-sv/mod-param-dec.v</a>
+
+
+module mod_param_dec_1;
+	parameter DATA_WIDTH = 8;
+	parameter ADDRESS_WIDTH = 4;
+	parameter FIFO_DEPTH = (1 << ADDRESS_WIDTH);
+endmodule
+module mod_param_dec_2 (
+	clk,
+	half_clk
+);
+	parameter DATA_WIDTH = 8;
+	parameter ADDRESS_WIDTH = 4;
+	parameter FIFO_DEPTH = (1 << ADDRESS_WIDTH);
+	input wire clk;
+	output wire half_clk;
+endmodule
+
+
+</pre>

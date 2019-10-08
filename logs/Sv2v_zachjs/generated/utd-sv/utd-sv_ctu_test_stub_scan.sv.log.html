@@ -1,0 +1,36 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/ctu_test_stub_scan.v.html" target="file-frame">third_party/tests/utd-sv/ctu_test_stub_scan.v</a>
+
+
+module ctu_test_stub_scan (
+	se,
+	so_0,
+	global_shift_enable,
+	ctu_tst_scan_disable,
+	ctu_tst_short_chain,
+	long_chain_so_0,
+	short_chain_so_0
+);
+	input global_shift_enable;
+	input ctu_tst_scan_disable;
+	input ctu_tst_short_chain;
+	input long_chain_so_0;
+	input short_chain_so_0;
+	output se;
+	output so_0;
+	wire short_chain_select;
+	assign se = ((~ ctu_tst_scan_disable) & global_shift_enable);
+	assign short_chain_select = ctu_tst_short_chain;
+	assign so_0 = (short_chain_select ? short_chain_so_0 : long_chain_so_0);
+endmodule
+
+
+</pre>

@@ -1,0 +1,108 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_dir_ctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_dir_ctl.v</a>
+
+
+module sctag_dir_ctl (
+	so,
+	rd_data_en_c4,
+	wr_data_en_c4,
+	cam_en_c4,
+	rw_entry_c4,
+	inval_mask_c4,
+	warm_rst_c4,
+	rd_data_sel0_c5,
+	rd_data_sel1_c5,
+	rd_data_sel_right_c6,
+	rd_data_sel_left_c6,
+	lkup_en_c4_buf,
+	inval_mask_c4_buf,
+	rw_dec_c4_buf,
+	rd_en_c4_buf,
+	wr_en_c4_buf,
+	rw_entry_c4_buf,
+	dir_clear_c4_buf,
+	rclk,
+	si,
+	se,
+	sehold
+);
+	input [3:0] lkup_en_c4_buf;
+	input [7:0] inval_mask_c4_buf;
+	input [3:0] rw_dec_c4_buf;
+	input rd_en_c4_buf;
+	input wr_en_c4_buf;
+	input [5:0] rw_entry_c4_buf;
+	input dir_clear_c4_buf;
+	input rclk;
+	input si;
+	input se;
+	input sehold;
+	output so;
+	output [3:0] rd_data_en_c4;
+	output [3:0] wr_data_en_c4;
+	output [3:0] cam_en_c4;
+	output [5:0] rw_entry_c4;
+	output [7:0] inval_mask_c4;
+	output warm_rst_c4;
+	output rd_data_sel0_c5;
+	output rd_data_sel1_c5;
+	output rd_data_sel_right_c6;
+	output rd_data_sel_left_c6;
+	wire rd_data_sel_left_c5;
+	wire rd_data_sel_right_c5;
+	wire [3:0] rd_data_en_c5;
+	assign warm_rst_c4 = dir_clear_c4_buf;
+	assign rd_data_en_c4 = ({4 {rd_en_c4_buf}} & rw_dec_c4_buf);
+	assign wr_data_en_c4 = ({4 {(wr_en_c4_buf & (~ warm_rst_c4))}} & rw_dec_c4_buf);
+	dffe_s #(2) ff_rd_data_en_c5_en(
+		.q(rd_data_en_c5[1:0]),
+		.din(rd_data_en_c4[1:0]),
+		.en((~ sehold)),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+	dff_s #(2) ff_rd_data_en_c5(
+		.q(rd_data_en_c5[3:2]),
+		.din(rd_data_en_c4[3:2]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+	assign rd_data_sel0_c5 = rd_data_en_c5[0];
+	assign rd_data_sel1_c5 = rd_data_en_c5[1];
+	assign rd_data_sel_left_c5 = (rd_data_en_c5[0] | rd_data_en_c5[2]);
+	dff_s #(1) ff_rd_data_sel_left_c6(
+		.q(rd_data_sel_left_c6),
+		.din(rd_data_sel_left_c5),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+	assign rd_data_sel_right_c5 = (rd_data_en_c5[1] | rd_data_en_c5[3]);
+	dff_s #(1) ff_rd_data_sel_right_c6(
+		.q(rd_data_sel_right_c6),
+		.din(rd_data_sel_right_c5),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+	assign cam_en_c4[3:0] = lkup_en_c4_buf[3:0];
+	assign inval_mask_c4[7:0] = inval_mask_c4_buf[7:0];
+	assign rw_entry_c4[5:0] = rw_entry_c4_buf[5:0];
+endmodule
+
+
+</pre>

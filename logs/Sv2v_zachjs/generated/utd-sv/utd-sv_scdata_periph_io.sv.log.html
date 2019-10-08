@@ -1,0 +1,51 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/scdata_periph_io.v.html" target="file-frame">third_party/tests/utd-sv/scdata_periph_io.v</a>
+
+
+module scdata_periph_io (
+	so,
+	scdata_scbuf_decc_out_c7,
+	scbuf_scdata_fbdecc_c5,
+	scdata_decc_out_c6,
+	scbuf_scdata_fbdecc_c4,
+	rclk,
+	se,
+	si
+);
+	input [623:0] scdata_decc_out_c6;
+	input [623:0] scbuf_scdata_fbdecc_c4;
+	input rclk;
+	input se;
+	input si;
+	output so;
+	output [623:0] scdata_scbuf_decc_out_c7;
+	output [623:0] scbuf_scdata_fbdecc_c5;
+	wire [623:0] scdata_decc_out_c6;
+	dff_s #(624) ff_scbuf_scdata_fbdecc_c5(
+		.q(scbuf_scdata_fbdecc_c5[623:0]),
+		.din(scbuf_scdata_fbdecc_c4[623:0]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+	dff_s #(624) ff_scdata_scbuf_decc_out_c7(
+		.q(scdata_scbuf_decc_out_c7[623:0]),
+		.din(scdata_decc_out_c6[623:0]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+endmodule
+
+
+</pre>

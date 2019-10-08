@@ -1,0 +1,31 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_macros.v.html" target="file-frame">third_party/tests/utd-sv/fpu_rptr_macros.v</a>
+
+
+module fpu_bufrpt_grp64 (
+	in,
+	out
+);
+	input [63:0] in;
+	output [63:0] out;
+	assign out[63:0] = in[63:0];
+endmodule
+module fpu_bufrpt_grp32 (
+	in,
+	out
+);
+	input [31:0] in;
+	output [31:0] out;
+	assign out[31:0] = in[31:0];
+endmodule
+
+
+</pre>

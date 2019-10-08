@@ -1,0 +1,66 @@
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v</a>
+
+
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:1: error: unknown module 'clken_buf'
+clken_buf  clk_buf  (.clk(clk_1), .rclk(rclk), .enb_l(sehold), .tmb_l(~se));
+^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-146" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:146</a>:1: error: unknown module 'dff_s'
+dff_s     #(`TAG_WIDTH-6)  ff_wrdata_tag_c1  	
+^~~~~                                        	
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-150" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:150</a>:1: error: unknown module 'zzecc_sctag_24b_gen'
+zzecc_sctag_24b_gen     tagecc0 (.din({2'b0,wrdata_tag_c1[`TAG_WIDTH-1:6]}),
+^~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-182" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:182</a>:1: error: unknown module 'mux2ds'
+mux2ds #(32) mux_cam_addr_c3 ( .dout (lkup_addr_c3[39:8]),
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-189" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:189</a>:1: error: unknown module 'dff_s'
+dff_s  #(30)  ff_tagdp_lkup_addr_c4  (.din(tagdp_lkup_addr_c3[39:10]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-197" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:197</a>:1: error: unknown module 'mux4ds'
+mux4ds	#(`TAG_WIDTH)	mux_lru_tag (.dout (tagdp_evict_tag_c3[`TAG_WIDTH-1:0]),
+^~~~~~	             	
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-219" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:219</a>:1: error: unknown module 'dff_s'
+dff_s  #(`TAG_WIDTH)  ff_tagdp_evict_tag_c4  (.din(tagdp_evict_tag_c3[`TAG_WIDTH-1:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-222" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:222</a>:1: error: unknown module 'dff_s'
+dff_s  #(`TAG_WIDTH)  ff_tagdp_diag_data_c6  (.din(tagdp_evict_tag_c4[`TAG_WIDTH-1:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-225" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:225</a>:1: error: unknown module 'dff_s'
+dff_s  #(`TAG_WIDTH)  ff_tagdp_diag_data_c7  (.din(tagdp_diag_data_c6[`TAG_WIDTH-1:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-234" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:234</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c2     (.din(tag_acc_ecc_c1[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-237" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:237</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c3     (.din(tag_acc_ecc_c2[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-240" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:240</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c4     (.din(tag_acc_ecc_c3[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-243" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:243</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c5     (.din(tag_acc_ecc_c4[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-246" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:246</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c6     (.din(tag_acc_ecc_c5[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-249" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:249</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c7     (.din(tag_acc_ecc_c6[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-252" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:252</a>:1: error: unknown module 'dff_s'
+dff_s     #(6)    ff_ecc_c8     (.din(tag_acc_ecc_c7[5:0]), .clk(rclk),
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-259" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:259</a>:1: error: unknown module 'dff_s'
+dff_s  #(1)  ff_addr11_c4  (.din(lkup_addr_c3[11]), .clk(rclk),
+^~~~~
+
+
+</pre>

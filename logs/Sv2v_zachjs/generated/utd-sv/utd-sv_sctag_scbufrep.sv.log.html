@@ -1,0 +1,38 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_scbufrep.v.html" target="file-frame">third_party/tests/utd-sv/sctag_scbufrep.v</a>
+
+
+module sctag_scbufrep (
+	sctag_scbuf_stdecc_c3,
+	so,
+	rep_store_data_c2,
+	rclk,
+	si,
+	se
+);
+	output [77:0] sctag_scbuf_stdecc_c3;
+	output so;
+	input [77:0] rep_store_data_c2;
+	input rclk;
+	input si;
+	input se;
+	dff_s #(78) ff_stdata_c3(
+		.q(sctag_scbuf_stdecc_c3[77:0]),
+		.din(rep_store_data_c2[77:0]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+endmodule
+
+
+</pre>

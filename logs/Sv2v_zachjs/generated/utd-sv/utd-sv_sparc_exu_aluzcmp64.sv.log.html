@@ -1,0 +1,36 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluzcmp64.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluzcmp64.v</a>
+
+
+module sparc_exu_aluzcmp64 (
+	in,
+	zero64,
+	zero32
+);
+	input [63:0] in;
+	output zero64;
+	output zero32;
+	wire low_nonzero;
+	wire high_nonzero;
+	sparc_exu_aluor32 lowcmp(
+		.in(in[31:0]),
+		.out(low_nonzero)
+	);
+	sparc_exu_aluor32 highcmp(
+		.in(in[63:32]),
+		.out(high_nonzero)
+	);
+	assign zero32 = (~ low_nonzero);
+	assign zero64 = (~ (low_nonzero | high_nonzero));
+endmodule
+
+
+</pre>

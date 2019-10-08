@@ -1,0 +1,71 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_alulogic.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_alulogic.v</a>
+
+
+module sparc_exu_alulogic (
+	logic_out,
+	rs1_data,
+	rs2_data,
+	isand,
+	isor,
+	isxor,
+	pass_rs2_data,
+	inv_logic,
+	ifu_exu_sethi_inst_e
+);
+	input [63:0] rs1_data;
+	input [63:0] rs2_data;
+	input isand;
+	input isor;
+	input isxor;
+	input pass_rs2_data;
+	input inv_logic;
+	input ifu_exu_sethi_inst_e;
+	output [63:0] logic_out;
+	wire [63:0] rs1_data_bf1;
+	wire [63:0] rs2_data_bf1;
+	wire [63:0] mov_data;
+	wire [63:0] result_and;
+	wire [63:0] result_or;
+	wire [63:0] result_xor;
+	wire [63:0] rs2_xor_invert;
+	mux4ds #(64) logic_mux(
+		.dout(logic_out[63:0]),
+		.in0(result_and[63:0]),
+		.in1(result_or[63:0]),
+		.in2(result_xor[63:0]),
+		.in3(mov_data[63:0]),
+		.sel0(isand),
+		.sel1(isor),
+		.sel2(isxor),
+		.sel3(pass_rs2_data)
+	);
+	dp_buffer #(64) rs1_data_buf(
+		.dout(rs1_data_bf1[63:0]),
+		.in(rs1_data[63:0])
+	);
+	dp_buffer #(64) rs2_data_buf(
+		.dout(rs2_data_bf1[63:0]),
+		.in(rs2_data[63:0])
+	);
+	assign mov_data[63:32] = (rs2_data_bf1[63:32] & {32 {(~ ifu_exu_sethi_inst_e)}});
+	dp_buffer #(32) rs2_data_buf2(
+		.dout(mov_data[31:0]),
+		.in(rs2_data_bf1[31:0])
+	);
+	assign rs2_xor_invert[63:0] = (rs2_data_bf1[63:0] ^ {64 {inv_logic}});
+	assign result_and = (rs1_data_bf1 & rs2_xor_invert);
+	assign result_or = (rs1_data_bf1 | rs2_xor_invert);
+	assign result_xor = (rs1_data_bf1 ^ rs2_xor_invert);
+endmodule
+
+
+</pre>

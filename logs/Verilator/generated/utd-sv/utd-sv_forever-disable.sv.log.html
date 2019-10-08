@@ -1,0 +1,22 @@
+<pre>
+<h3>
+<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/forever-disable.v.html" target="file-frame">third_party/tests/utd-sv/forever-disable.v</a>
+
+
+%Warning-STMTDLY: <a href="../../../../third_party/tests/utd-sv/forever-disable.v.html#l-9" target="file-frame">third_party/tests/utd-sv/forever-disable.v:9</a>: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: Use "/* verilator lint_off STMTDLY */" and lint_on around source to disable this message.
+%Error: <a href="../../../../third_party/tests/utd-sv/forever-disable.v.html#l-5" target="file-frame">third_party/tests/utd-sv/forever-disable.v:5</a>: Can't find definition of variable: i
+%Error: <a href="../../../../third_party/tests/utd-sv/forever-disable.v.html#l-7" target="file-frame">third_party/tests/utd-sv/forever-disable.v:7</a>: Can't find definition of variable: a
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/forever-disable.v.html" target="file-frame">third_party/tests/utd-sv/forever-disable.v</a>
+
+
+</pre>

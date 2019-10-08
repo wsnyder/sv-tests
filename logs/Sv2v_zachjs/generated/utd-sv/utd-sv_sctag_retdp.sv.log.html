@@ -1,0 +1,54 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_retdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_retdp.v</a>
+
+
+module sctag_retdp (
+	retdp_data_c7_buf,
+	retdp_ecc_c7_buf,
+	so,
+	scdata_sctag_decc_c6,
+	rclk,
+	si,
+	se
+);
+	output [127:0] retdp_data_c7_buf;
+	output [27:0] retdp_ecc_c7_buf;
+	output so;
+	input [155:0] scdata_sctag_decc_c6;
+	input rclk;
+	input si;
+	input se;
+	wire [127:0] retdp_data_c6;
+	wire [27:0] retdp_ecc_c6;
+	assign {retdp_data_c6[31:0], retdp_ecc_c6[6:0]} = scdata_sctag_decc_c6[38:0];
+	assign {retdp_data_c6[63:32], retdp_ecc_c6[13:7]} = scdata_sctag_decc_c6[77:39];
+	assign {retdp_data_c6[95:64], retdp_ecc_c6[20:14]} = scdata_sctag_decc_c6[116:78];
+	assign {retdp_data_c6[127:96], retdp_ecc_c6[27:21]} = scdata_sctag_decc_c6[155:117];
+	dff_s #(128) ff_data_rtn_c7(
+		.q(retdp_data_c7_buf[127:0]),
+		.din(retdp_data_c6[127:0]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+	dff_s #(28) ff_ecc_rtn_c7(
+		.q(retdp_ecc_c7_buf[27:0]),
+		.din(retdp_ecc_c6[27:0]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+endmodule
+
+
+</pre>

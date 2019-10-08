@@ -1,0 +1,32 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/fpu_in2_gt_in1_3b.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in2_gt_in1_3b.v</a>
+
+
+module fpu_in2_gt_in1_3b (
+	din1,
+	din2,
+	din2_neq_din1,
+	din2_gt_din1
+);
+	input [2:0] din1;
+	input [2:0] din2;
+	output din2_neq_din1;
+	output din2_gt_din1;
+	wire [2:0] din2_eq_din1;
+	wire din2_neq_din1;
+	wire din2_gt_din1;
+	assign din2_eq_din1[2:0] = (~ (din1 ^ din2));
+	assign din2_neq_din1 = (! (& din2_eq_din1));
+	assign din2_gt_din1 = ((((! din1[2]) && din2[2]) || ((din2_eq_din1[2] && (! din1[1])) && din2[1])) || (((& din2_eq_din1[2:1]) && (! din1[0])) && din2[0]));
+endmodule
+
+
+</pre>

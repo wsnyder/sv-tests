@@ -1,0 +1,51 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_ecl_cnt6.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_ecl_cnt6.v</a>
+
+
+module sparc_exu_ecl_cnt6 (
+	cntr,
+	reset,
+	clk,
+	se
+);
+	input reset;
+	input clk;
+	input se;
+	output [5:0] cntr;
+	wire [5:0] next_cntr;
+	wire tog1;
+	wire tog2;
+	wire tog3;
+	wire tog4;
+	wire tog5;
+	assign tog1 = cntr[0];
+	assign tog2 = (cntr[0] & cntr[1]);
+	assign tog3 = ((cntr[0] & cntr[1]) & cntr[2]);
+	assign tog4 = (((cntr[0] & cntr[1]) & cntr[2]) & cntr[3]);
+	assign tog5 = ((((cntr[0] & cntr[1]) & cntr[2]) & cntr[3]) & cntr[4]);
+	assign next_cntr[0] = ((~ reset) & (~ cntr[0]));
+	assign next_cntr[1] = ((~ reset) & (((~ cntr[1]) & tog1) | (cntr[1] & (~ tog1))));
+	assign next_cntr[2] = ((~ reset) & (((~ cntr[2]) & tog2) | (cntr[2] & (~ tog2))));
+	assign next_cntr[3] = ((~ reset) & (((~ cntr[3]) & tog3) | (cntr[3] & (~ tog3))));
+	assign next_cntr[4] = ((~ reset) & (((~ cntr[4]) & tog4) | (cntr[4] & (~ tog4))));
+	assign next_cntr[5] = ((~ reset) & (((~ cntr[5]) & tog5) | (cntr[5] & (~ tog5))));
+	dff_s #(6) cntr_dff(
+		.din(next_cntr[5:0]),
+		.clk(clk),
+		.q(cntr[5:0]),
+		.se(se),
+		.si(),
+		.so()
+	);
+endmodule
+
+
+</pre>

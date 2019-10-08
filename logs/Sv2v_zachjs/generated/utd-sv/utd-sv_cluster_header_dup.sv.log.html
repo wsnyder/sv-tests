@@ -1,0 +1,84 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v</a>
+
+
+module cluster_header_dup (
+	dbginit_l,
+	cluster_grst_l,
+	rclk,
+	so,
+	gclk,
+	cluster_cken,
+	arst_l,
+	grst_l,
+	adbginit_l,
+	gdbginit_l,
+	si,
+	se
+);
+	input gclk;
+	input cluster_cken;
+	input arst_l;
+	input grst_l;
+	input adbginit_l;
+	input gdbginit_l;
+	output dbginit_l;
+	output cluster_grst_l;
+	output rclk;
+	input si;
+	input se;
+	output so;
+	wire pre_sync_enable;
+	wire sync_enable;
+	wire cluster_grst_l;
+	wire dbginit_l;
+	wire rst_sync_so;
+	bw_u1_soffasr_2x sync_cluster_master(
+		.so(),
+		.q(pre_sync_enable),
+		.ck(gclk),
+		.d(cluster_cken),
+		.r_l(arst_l),
+		.s_l(1'b1),
+		.sd(1'b0),
+		.se(1'b0)
+	);
+	bw_clk_cclk_scanlasr_2x sync_cluster_slave(
+		.r_l(arst_l),
+		.so(sync_enable),
+		.ck(gclk),
+		.sd(pre_sync_enable)
+	);
+	assign #(10) rclk = (gclk & sync_enable);
+	synchronizer_asr rst_repeater(
+		.sync_out(cluster_grst_l),
+		.so(rst_sync_so),
+		.async_in(grst_l),
+		.gclk(gclk),
+		.rclk(rclk),
+		.arst_l(arst_l),
+		.si(si),
+		.se(se)
+	);
+	synchronizer_asr_dup dbginit_repeater(
+		.sync_out(dbginit_l),
+		.so(so),
+		.async_in(gdbginit_l),
+		.gclk(gclk),
+		.rclk(rclk),
+		.arst_l(adbginit_l),
+		.si(rst_sync_so),
+		.se(se)
+	);
+endmodule
+
+
+</pre>

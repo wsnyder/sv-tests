@@ -1,0 +1,88 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/lsu_pcx_qmon.v.html" target="file-frame">third_party/tests/utd-sv/lsu_pcx_qmon.v</a>
+
+
+module lsu_pcx_qmon (
+	so,
+	qwrite,
+	sel_qentry0,
+	rclk,
+	grst_l,
+	arst_l,
+	si,
+	se,
+	send_by_pcx,
+	send_to_pcx
+);
+	input rclk;
+	input grst_l;
+	input arst_l;
+	input si;
+	input se;
+	output so;
+	input send_by_pcx;
+	input send_to_pcx;
+	output qwrite;
+	output sel_qentry0;
+	wire clk;
+	wire reset;
+	wire dbb_reset_l;
+	wire entry0_rst;
+	wire entry1_rst;
+	wire entry0_en;
+	wire entry1_en;
+	wire entry0_din;
+	wire entry1_din;
+	wire entry0_full;
+	wire entry1_full;
+	dffrl_async rstff(
+		.din(grst_l),
+		.q(dbb_reset_l),
+		.clk(clk),
+		.se(se),
+		.si(),
+		.so(),
+		.rst_l(arst_l)
+	);
+	assign reset = (~ dbb_reset_l);
+	assign clk = rclk;
+	assign entry0_rst = (reset | (send_by_pcx & (~ entry0_en)));
+	assign entry0_en = ((entry1_full & send_by_pcx) | ((~ (entry0_full & (~ send_by_pcx))) & send_to_pcx));
+	assign entry0_din = entry0_en;
+	dffre_s qstate_entry0(
+		.din(entry0_din),
+		.q(entry0_full),
+		.rst(entry0_rst),
+		.en(entry0_en),
+		.clk(clk),
+		.se(1'b0),
+		.si(),
+		.so()
+	);
+	assign entry1_rst = (reset | (send_by_pcx & (~ entry1_en)));
+	assign entry1_en = ((entry0_full & send_to_pcx) & (~ (send_by_pcx & (~ entry1_full))));
+	assign entry1_din = entry1_en;
+	dffre_s qstate_entry1(
+		.din(entry1_din),
+		.q(entry1_full),
+		.rst(entry1_rst),
+		.en(entry1_en),
+		.clk(clk),
+		.se(1'b0),
+		.si(),
+		.so()
+	);
+	assign qwrite = (~ entry1_full);
+	assign sel_qentry0 = ((~ entry0_full) & (~ send_to_pcx));
+endmodule
+
+
+</pre>

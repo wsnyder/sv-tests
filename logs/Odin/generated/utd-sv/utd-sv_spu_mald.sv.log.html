@@ -1,0 +1,41 @@
+<pre>
+<h3>
+<a href="https://verilogtorouting.org/" target="_blank">odin</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>
+
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::109 Could not resolve initial assignment to a constant value, skipping
+
+					mactl_ldop;
+WARNING (3)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::110 Could not resolve initial assignment to a constant value, skipping
+
+wire spu_mald_done_rst = reset | spu_mactl_iss_pulse_dly;
+WARNING (4)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::125 Could not resolve initial assignment to a constant value, skipping
+
+					local_stxa_abort; 
+WARNING (5)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::156 Could not resolve initial assignment to a constant value, skipping
+
+wire start_ldop = spu_mactl_iss_pulse_dly & mactl_ldop;
+WARNING (6)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::193 Could not resolve initial assignment to a constant value, skipping
+
+wire tr2mamemwr_frm_wait4ln = cur_wait4ln_state & ln_received;
+WARNING (7)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::194 Could not resolve initial assignment to a constant value, skipping
+
+wire tr2mamemwr_frm_chk4mpa1maddr0 = cur_chk4mpa1maddr0_state & spu_maaddr_mpa1maddr0 & len_neqz;
+WARNING (8)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>::197 Could not resolve initial assignment to a constant value, skipping
+
+		     tr2mamemwr_frm_chk4mpa1maddr0) & len_neqz;
+
+
+</pre>

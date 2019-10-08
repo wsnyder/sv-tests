@@ -1,0 +1,71 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/sctag_dir_in.v.html" target="file-frame">third_party/tests/utd-sv/sctag_dir_in.v</a>
+
+
+module sctag_dir_in (
+	lkup_wr_data_c5,
+	rddata_out_c6,
+	so,
+	lkup_wr_data_c4,
+	rd_data1_out_c5,
+	rd_data2_out_c5,
+	rd_enable1_c5,
+	rclk,
+	si,
+	se,
+	sehold
+);
+	output [32:0] lkup_wr_data_c5;
+	output [31:0] rddata_out_c6;
+	output so;
+	input [32:0] lkup_wr_data_c4;
+	input [31:0] rd_data1_out_c5;
+	input [31:0] rd_data2_out_c5;
+	input rd_enable1_c5;
+	input rclk;
+	input si;
+	input se;
+	input sehold;
+	wire [31:0] rddata_out_c5;
+	wire clk_en;
+	clken_buf clk_buf(
+		.clk(clk_en),
+		.rclk(rclk),
+		.enb_l(sehold),
+		.tmb_l((~ se))
+	);
+	dff_s #(33) ff_lkup_wr_data_c5(
+		.q(lkup_wr_data_c5[32:0]),
+		.din(lkup_wr_data_c4[32:0]),
+		.clk(clk_en),
+		.se(se),
+		.si(),
+		.so()
+	);
+	mux2ds #(32) mux_rddata_out_c5(
+		.dout(rddata_out_c5[31:0]),
+		.in0(rd_data1_out_c5[31:0]),
+		.in1(rd_data2_out_c5[31:0]),
+		.sel0(rd_enable1_c5),
+		.sel1((~ rd_enable1_c5))
+	);
+	dff_s #(32) ff_rddata_out_c6(
+		.q(rddata_out_c6[31:0]),
+		.din(rddata_out_c5[31:0]),
+		.clk(rclk),
+		.se(se),
+		.si(),
+		.so()
+	);
+endmodule
+
+
+</pre>

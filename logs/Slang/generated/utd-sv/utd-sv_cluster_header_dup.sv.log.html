@@ -1,0 +1,30 @@
+<pre>
+<h3>
+<a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v</a>
+
+
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-53" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:53</a>:4: error: unknown module 'bw_u1_soffasr_2x'
+   bw_u1_soffasr_2x sync_cluster_master ( // no scan hook-up
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:65</a>:4: error: unknown module 'bw_clk_cclk_scanlasr_2x'
+   bw_clk_cclk_scanlasr_2x sync_cluster_slave ( // use scan lock-up latch
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-77" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:77</a>:11: error: language feature not yet supported
+   assign #10 rclk = gclk & sync_enable;
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-79" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:79</a>:4: error: unknown module 'synchronizer_asr'
+   synchronizer_asr rst_repeater (
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-90" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:90</a>:4: error: unknown module 'synchronizer_asr_dup'
+   synchronizer_asr_dup dbginit_repeater (
+   ^~~~~~~~~~~~~~~~~~~~
+
+
+</pre>

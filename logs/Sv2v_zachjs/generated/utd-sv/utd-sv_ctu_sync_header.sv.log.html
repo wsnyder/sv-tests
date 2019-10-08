@@ -1,0 +1,147 @@
+<pre>
+<h3>
+<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
+</h3>
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: 
+top_module: 
+files: <a href="../../../../third_party/tests/utd-sv/ctu_sync_header.v.html" target="file-frame">third_party/tests/utd-sv/ctu_sync_header.v</a>
+
+
+module ctu_sync_header (
+	ctu_dram_tx_sync_early,
+	jbus_rx_sync,
+	jbus_tx_sync,
+	so,
+	cmp_clk,
+	cmp_gclk,
+	ctu_dram_tx_sync,
+	ctu_jbus_rx_sync,
+	ctu_jbus_tx_sync,
+	se,
+	si,
+	start_clk_early_jl
+);
+	input cmp_clk;
+	input cmp_gclk;
+	input ctu_dram_tx_sync;
+	input ctu_jbus_rx_sync;
+	input ctu_jbus_tx_sync;
+	input se;
+	input si;
+	input start_clk_early_jl;
+	output ctu_dram_tx_sync_early;
+	output jbus_rx_sync;
+	output jbus_tx_sync;
+	output so;
+	wire ctu_dram_tx_sync_dly1;
+	wire ctu_dram_tx_sync_dly2;
+	wire ctu_jbus_rx_sync_dly1;
+	wire ctu_jbus_rx_sync_dly2;
+	wire ctu_jbus_rx_sync_dly3;
+	wire ctu_jbus_tx_sync_dly1;
+	wire ctu_jbus_tx_sync_dly2;
+	wire ctu_jbus_tx_sync_dly3;
+	wire ctu_dram_tx_sync_early_nxt;
+	wire jbus_tx_sync_nxt;
+	wire jbus_rx_sync_nxt;
+	wire jbus_tx_sync_local;
+	wire jbus_rx_sync_local;
+	wire dram_tx_sync_local;
+	wire pulse_cnt_dn_nxt;
+	wire [2:0] pulse_cnt_nxt;
+	wire [2:0] pulse_cnt;
+	wire pulse_filter;
+	dff_ns u_ctu_dram_tx_sync_dly1(
+		.q(ctu_dram_tx_sync_dly1),
+		.din(ctu_dram_tx_sync),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_jbus_tx_sync_dly1(
+		.q(ctu_jbus_tx_sync_dly1),
+		.din(ctu_jbus_tx_sync),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_jbus_rx_sync_dly1(
+		.q(ctu_jbus_rx_sync_dly1),
+		.din(ctu_jbus_rx_sync),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_dram_tx_sync_dly2(
+		.q(ctu_dram_tx_sync_dly2),
+		.din(ctu_dram_tx_sync_dly1),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_jbus_tx_sync_dly2(
+		.q(ctu_jbus_tx_sync_dly2),
+		.din(ctu_jbus_tx_sync_dly1),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_jbus_rx_sync_dly2(
+		.q(ctu_jbus_rx_sync_dly2),
+		.din(ctu_jbus_rx_sync_dly1),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_jbus_tx_sync_dly3(
+		.q(ctu_jbus_tx_sync_dly3),
+		.din(ctu_jbus_tx_sync_dly2),
+		.clk(cmp_gclk)
+	);
+	dff_ns u_ctu_jbus_rx_sync_dly3(
+		.q(ctu_jbus_rx_sync_dly3),
+		.din(ctu_jbus_rx_sync_dly2),
+		.clk(cmp_gclk)
+	);
+	cluster_header_sync u_ctu_cluster_header_sync(
+		.dram_tx_sync_local(dram_tx_sync_local),
+		.jbus_rx_sync_local(jbus_rx_sync_local),
+		.jbus_tx_sync_local(jbus_tx_sync_local),
+		.dram_rx_sync_local(),
+		.so(so),
+		.dram_rx_sync_global(1'b0),
+		.dram_tx_sync_global(ctu_dram_tx_sync_dly2),
+		.jbus_rx_sync_global(ctu_jbus_rx_sync_dly3),
+		.jbus_tx_sync_global(ctu_jbus_tx_sync_dly3),
+		.cmp_gclk(cmp_gclk),
+		.cmp_rclk(cmp_clk),
+		.si(si),
+		.se(se)
+	);
+	assign pulse_cnt_dn_nxt = (pulse_cnt == 3'b111);
+	assign pulse_cnt_nxt = ((~ pulse_cnt_dn_nxt) ? (pulse_cnt + 3'b001) : pulse_cnt);
+	dffrl_async_ns #(3) u_pulse_cnt(
+		.din(pulse_cnt_nxt),
+		.clk(cmp_clk),
+		.rst_l(start_clk_early_jl),
+		.q(pulse_cnt)
+	);
+	dffrl_async_ns u_filter_pulse(
+		.din(pulse_cnt_dn_nxt),
+		.clk(cmp_clk),
+		.rst_l(start_clk_early_jl),
+		.q(pulse_filter)
+	);
+	assign jbus_rx_sync_nxt = (jbus_rx_sync_local & pulse_filter);
+	dff_ns u_jbus_rx_sync(
+		.q(jbus_rx_sync),
+		.din(jbus_rx_sync_nxt),
+		.clk(cmp_clk)
+	);
+	assign jbus_tx_sync_nxt = (jbus_tx_sync_local & pulse_filter);
+	dff_ns u_jbus_tx_sync(
+		.q(jbus_tx_sync),
+		.din(jbus_tx_sync_nxt),
+		.clk(cmp_clk)
+	);
+	assign ctu_dram_tx_sync_early_nxt = (dram_tx_sync_local & pulse_filter);
+	dff_ns u_dram_tx_sync_early(
+		.q(ctu_dram_tx_sync_early),
+		.din(ctu_dram_tx_sync_early_nxt),
+		.clk(cmp_clk)
+	);
+endmodule
+
+
+</pre>
