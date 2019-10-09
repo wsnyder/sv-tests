@@ -15,15 +15,15 @@ module shift;
 	reg [3:0] result;
 	initial begin
 		start = 1;
-		result = (start << 2);
+		result = (start &lt;&lt; 2);
 	end
 endmodule
 module ashift;
 	reg signed [3:0] start;
 	reg signed [3:0] result;
 	initial begin
-		start = 4'b1000;
-		result = (start >>> 2);
+		start = 4&#39;b1000;
+		result = (start &gt;&gt;&gt; 2);
 	end
 endmodule
 

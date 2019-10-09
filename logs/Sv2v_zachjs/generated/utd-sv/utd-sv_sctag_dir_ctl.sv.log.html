@@ -60,8 +60,8 @@ module sctag_dir_ctl (
 	wire rd_data_sel_right_c5;
 	wire [3:0] rd_data_en_c5;
 	assign warm_rst_c4 = dir_clear_c4_buf;
-	assign rd_data_en_c4 = ({4 {rd_en_c4_buf}} & rw_dec_c4_buf);
-	assign wr_data_en_c4 = ({4 {(wr_en_c4_buf & (~ warm_rst_c4))}} & rw_dec_c4_buf);
+	assign rd_data_en_c4 = ({4 {rd_en_c4_buf}} &amp; rw_dec_c4_buf);
+	assign wr_data_en_c4 = ({4 {(wr_en_c4_buf &amp; (~ warm_rst_c4))}} &amp; rw_dec_c4_buf);
 	dffe_s #(2) ff_rd_data_en_c5_en(
 		.q(rd_data_en_c5[1:0]),
 		.din(rd_data_en_c4[1:0]),

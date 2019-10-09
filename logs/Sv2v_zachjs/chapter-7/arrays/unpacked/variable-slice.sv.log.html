@@ -17,10 +17,10 @@ module top;
 	initial begin
 		arr_a = {1, 1, 1, 1, 1, 1, 1, 1};
 		arr_b = {0, 0, 0, 0, 0, 0, 0, 0};
-		$display(":assert: ('%b%b%b%b_%b%b%b%b' == '1111_1111')", arr_a[7], arr_a[6], arr_a[5], arr_a[4], arr_a[3], arr_a[2], arr_a[1], arr_a[0]);
-		$display(":assert: ('%b%b%b%b_%b%b%b%b' == '0000_0000')", arr_b[7], arr_b[6], arr_b[5], arr_b[4], arr_b[3], arr_b[2], arr_b[1], arr_b[0]);
+		$display(&#34;:assert: (&#39;%b%b%b%b_%b%b%b%b&#39; == &#39;1111_1111&#39;)&#34;, arr_a[7], arr_a[6], arr_a[5], arr_a[4], arr_a[3], arr_a[2], arr_a[1], arr_a[0]);
+		$display(&#34;:assert: (&#39;%b%b%b%b_%b%b%b%b&#39; == &#39;0000_0000&#39;)&#34;, arr_b[7], arr_b[6], arr_b[5], arr_b[4], arr_b[3], arr_b[2], arr_b[1], arr_b[0]);
 		arr_b[4+:c] = arr_a[1+:c];
-		$display(":assert: ('%b%b%b%b_%b%b%b%b' == '0111_0000')", arr_b[7], arr_b[6], arr_b[5], arr_b[4], arr_b[3], arr_b[2], arr_b[1], arr_b[0]);
+		$display(&#34;:assert: (&#39;%b%b%b%b_%b%b%b%b&#39; == &#39;0111_0000&#39;)&#34;, arr_b[7], arr_b[6], arr_b[5], arr_b[4], arr_b[3], arr_b[2], arr_b[1], arr_b[0]);
 	end
 endmodule
 

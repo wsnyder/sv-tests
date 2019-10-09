@@ -23,10 +23,10 @@ module flif_flop (
 	reg q;
 	always @(posedge clk) begin
 		if ((reset == 1)) begin
-			q <= 0;
+			q &lt;= 0;
 		end
 		else begin
-			q <= d;
+			q &lt;= d;
 		end
 	end
 endmodule

@@ -15,7 +15,7 @@ module top;
 	wire signed [31:0] b = 5;
 	reg signed [31:0] c;
 	initial begin
-		c = ((a > b) ? 11 : 13);
+		c = ((a &gt; b) ? 11 : 13);
 	end
 endmodule
 

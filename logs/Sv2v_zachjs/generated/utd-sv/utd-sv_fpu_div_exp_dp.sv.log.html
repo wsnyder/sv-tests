@@ -136,10 +136,10 @@ module fpu_div_exp_dp (
 		.si(),
 		.so()
 	);
-	assign div_expadd1_in1[12:0] = ((({13 {d234stg_fdiv}} & div_exp1[12:0]) | ({13 {div_expadd1_in1_dbl}} & {2'b0, div_exp_in1[10:0]})) | ({13 {div_expadd1_in1_sng}} & {5'b0, div_exp_in1[10:3]}));
-	assign div_expadd1_in2[12:0] = (((((({13 {div_expadd1_in1_dbl}} & 13'h0436) | ({13 {div_expadd1_in1_sng}} & 13'h0099)) | ({13 {div_expadd1_in2_exp_in2_dbl}} & (~ {2'b0, div_exp_in2[10:0]}))) | ({13 {div_expadd1_in2_exp_in2_sng}} & (~ {5'b0, div_exp_in2[10:3]}))) | ({13 {d3stg_fdiv}} & (~ {7'b0, div_shl_cnt[5:0]}))) | ({13 {d4stg_fdiv}} & {7'b0, div_shl_cnt[5:0]}));
+	assign div_expadd1_in1[12:0] = ((({13 {d234stg_fdiv}} &amp; div_exp1[12:0]) | ({13 {div_expadd1_in1_dbl}} &amp; {2&#39;b0, div_exp_in1[10:0]})) | ({13 {div_expadd1_in1_sng}} &amp; {5&#39;b0, div_exp_in1[10:3]}));
+	assign div_expadd1_in2[12:0] = (((((({13 {div_expadd1_in1_dbl}} &amp; 13&#39;h0436) | ({13 {div_expadd1_in1_sng}} &amp; 13&#39;h0099)) | ({13 {div_expadd1_in2_exp_in2_dbl}} &amp; (~ {2&#39;b0, div_exp_in2[10:0]}))) | ({13 {div_expadd1_in2_exp_in2_sng}} &amp; (~ {5&#39;b0, div_exp_in2[10:3]}))) | ({13 {d3stg_fdiv}} &amp; (~ {7&#39;b0, div_shl_cnt[5:0]}))) | ({13 {d4stg_fdiv}} &amp; {7&#39;b0, div_shl_cnt[5:0]}));
 	assign div_expadd1[12:0] = (div_expadd1_in1[12:0] + div_expadd1_in2[12:0]);
-	assign div_exp1_in[12:0] = (((({13 {div_exp1_expadd1}} & div_expadd1[12:0]) | ({13 {div_exp1_0835}} & 13'h0835)) | ({13 {div_exp1_0118}} & 13'h0118)) | ({13 {div_exp1_zero}} & 13'h0000));
+	assign div_exp1_in[12:0] = (((({13 {div_exp1_expadd1}} &amp; div_expadd1[12:0]) | ({13 {div_exp1_0835}} &amp; 13&#39;h0835)) | ({13 {div_exp1_0118}} &amp; 13&#39;h0118)) | ({13 {div_exp1_zero}} &amp; 13&#39;h0000));
 	dffe_s #(13) i_div_exp1(
 		.din(div_exp1_in[12:0]),
 		.en(div_exp1_load),
@@ -149,11 +149,11 @@ module fpu_div_exp_dp (
 		.si(),
 		.so()
 	);
-	assign div_expadd2_in1[12:0] = (({13 {div_expadd2_in1_exp_out}} & div_exp_out[12:0]) | ({13 {d5stg_fdiva}} & div_exp1[12:0]));
-	assign div_expadd2_in2[12:0] = ((({13 {d5stg_fdiva}} & {7'h7f, d5stg_fdivs, 1'b0, d5stg_fdivd, d5stg_fdivs, 1'b1, d5stg_fdivs}) | ({13 {d6stg_fdiv}} & {13 {div_expadd2_no_decr_inv}})) | ({13 {d7stg_fdiv}} & 13'h0000));
-	assign div_expadd2[12:0] = ((div_expadd2_in1[12:0] + div_expadd2_in2[12:0]) + {12'b0, div_expadd2_cin});
+	assign div_expadd2_in1[12:0] = (({13 {div_expadd2_in1_exp_out}} &amp; div_exp_out[12:0]) | ({13 {d5stg_fdiva}} &amp; div_exp1[12:0]));
+	assign div_expadd2_in2[12:0] = ((({13 {d5stg_fdiva}} &amp; {7&#39;h7f, d5stg_fdivs, 1&#39;b0, d5stg_fdivd, d5stg_fdivs, 1&#39;b1, d5stg_fdivs}) | ({13 {d6stg_fdiv}} &amp; {13 {div_expadd2_no_decr_inv}})) | ({13 {d7stg_fdiv}} &amp; 13&#39;h0000));
+	assign div_expadd2[12:0] = ((div_expadd2_in1[12:0] + div_expadd2_in2[12:0]) + {12&#39;b0, div_expadd2_cin});
 	assign div_expadd2_12 = div_expadd2[12];
-	assign div_exp_out_in[12:0] = ((({13 {(div_exp_out_expadd2 && (! (div_frac_add_52_inv && div_exp_out_expadd22_inv)))}} & div_expadd2[12:0]) | ({13 {div_exp_out_of}} & {2'b00, {3 {d7stg_fdivd}}, 7'h7f, d7stg_to_0_inv})) | ({13 {(div_exp_out_exp_out && (div_frac_add_52_inv || d7stg_rndup_inv))}} & div_exp_out[12:0]));
+	assign div_exp_out_in[12:0] = ((({13 {(div_exp_out_expadd2 &amp;&amp; (! (div_frac_add_52_inv &amp;&amp; div_exp_out_expadd22_inv)))}} &amp; div_expadd2[12:0]) | ({13 {div_exp_out_of}} &amp; {2&#39;b00, {3 {d7stg_fdivd}}, 7&#39;h7f, d7stg_to_0_inv})) | ({13 {(div_exp_out_exp_out &amp;&amp; (div_frac_add_52_inv || d7stg_rndup_inv))}} &amp; div_exp_out[12:0]));
 	dffe_s #(13) i_div_exp_out(
 		.din(div_exp_out_in[12:0]),
 		.en(div_exp_out_load),

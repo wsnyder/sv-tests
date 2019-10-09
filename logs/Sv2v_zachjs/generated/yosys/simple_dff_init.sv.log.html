@@ -17,9 +17,9 @@ module dff0_test (
 );
 	input clk;
 	output n1;
-	reg n1 = 32'd0;
+	reg n1 = 32&#39;d0;
 	output n1_inv;
-	always @(posedge clk) n1 <= n1_inv;
+	always @(posedge clk) n1 &lt;= n1_inv;
 	assign n1_inv = (~ n1);
 endmodule
 module dff1_test (
@@ -28,10 +28,10 @@ module dff1_test (
 	clk
 );
 	input clk;
-	(* init = 32'd1 *) output n1;
-	reg n1 = 32'd1;
+	(* init = 32&#39;d1 *) output n1;
+	reg n1 = 32&#39;d1;
 	output n1_inv;
-	always @(posedge clk) n1 <= n1_inv;
+	always @(posedge clk) n1 &lt;= n1_inv;
 	assign n1_inv = (~ n1);
 endmodule
 module dff0a_test (
@@ -40,10 +40,10 @@ module dff0a_test (
 	clk
 );
 	input clk;
-	(* init = 32'd0 *) output n1;
-	reg n1 = 32'd0;
+	(* init = 32&#39;d0 *) output n1;
+	reg n1 = 32&#39;d0;
 	output n1_inv;
-	always @(posedge clk) n1 <= n1_inv;
+	always @(posedge clk) n1 &lt;= n1_inv;
 	assign n1_inv = (~ n1);
 endmodule
 module dff1a_test (
@@ -52,10 +52,10 @@ module dff1a_test (
 	clk
 );
 	input clk;
-	(* init = 32'd1 *) output n1;
-	reg n1 = 32'd1;
+	(* init = 32&#39;d1 *) output n1;
+	reg n1 = 32&#39;d1;
 	output n1_inv;
-	always @(posedge clk) n1 <= n1_inv;
+	always @(posedge clk) n1 &lt;= n1_inv;
 	assign n1_inv = (~ n1);
 endmodule
 module dff_test_997 (
@@ -68,7 +68,7 @@ module dff_test_997 (
 	input signed  wire4;
 	reg [1:0] reg10 = 0;
 	always @(posedge clk) begin
-		reg10 <= wire4;
+		reg10 &lt;= wire4;
 	end
 	assign y = reg10;
 endmodule

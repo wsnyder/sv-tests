@@ -20,52 +20,52 @@ specify
 specparam invertrise = 3, invertfall = 4;
 ^~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:5: error: expression is not constant
-if (a) (b => out) = (invertrise, invertfall);
+if (a) (b =&gt; out) = (invertrise, invertfall);
     ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:5: note: reference to non-constant variable 'a' is not allowed in a constant expression
-if (a) (b => out) = (invertrise, invertfall);
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:5: note: reference to non-constant variable &#39;a&#39; is not allowed in a constant expression
+if (a) (b =&gt; out) = (invertrise, invertfall);
     ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:7: note: declared here
 input a, b;
       ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:8: error: expected member
-if (a) (b => out) = (invertrise, invertfall);
+if (a) (b =&gt; out) = (invertrise, invertfall);
        ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:5: error: expression is not constant
-if (b) (a => out) = (invertrise, invertfall);
+if (b) (a =&gt; out) = (invertrise, invertfall);
     ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:5: note: reference to non-constant variable 'b' is not allowed in a constant expression
-if (b) (a => out) = (invertrise, invertfall);
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:5: note: reference to non-constant variable &#39;b&#39; is not allowed in a constant expression
+if (b) (a =&gt; out) = (invertrise, invertfall);
     ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:10: note: declared here
 input a, b;
          ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:8: error: expected member
-if (b) (a => out) = (invertrise, invertfall);
+if (b) (a =&gt; out) = (invertrise, invertfall);
        ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:5: error: expression is not constant
-if (~a)(b => out) = (noninvrise, noninvfall);
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
     ^~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:6: note: reference to non-constant variable 'a' is not allowed in a constant expression
-if (~a)(b => out) = (noninvrise, noninvfall);
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:6: note: reference to non-constant variable &#39;a&#39; is not allowed in a constant expression
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
      ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:7: note: declared here
 input a, b;
       ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:8: error: expected member
-if (~a)(b => out) = (noninvrise, noninvfall);
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
        ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:5: error: expression is not constant
-if (~b)(a => out) = (noninvrise, noninvfall);
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
     ^~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:6: note: reference to non-constant variable 'b' is not allowed in a constant expression
-if (~b)(a => out) = (noninvrise, noninvfall);
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:6: note: reference to non-constant variable &#39;b&#39; is not allowed in a constant expression
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
      ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:10: note: declared here
 input a, b;
          ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:8: error: expected member
-if (~b)(a => out) = (noninvrise, noninvfall);
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
        ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:12</a>:1: error: expected member
 endspecify

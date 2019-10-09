@@ -23,12 +23,12 @@ module GrayCounter (
 	input wire Clk;
 	reg [(COUNTER_WIDTH - 1):0] BinaryCount;
 	always @(posedge Clk) if (Clear_in) begin
-		BinaryCount <= ({COUNTER_WIDTH {1'b 0}} + 1);
-		GrayCount_out <= {COUNTER_WIDTH {1'b 0}};
+		BinaryCount &lt;= ({COUNTER_WIDTH {1&#39;b 0}} + 1);
+		GrayCount_out &lt;= {COUNTER_WIDTH {1&#39;b 0}};
 	end
 	else if (Enable_in) begin
-		BinaryCount <= (BinaryCount + 1);
-		GrayCount_out <= {BinaryCount[(COUNTER_WIDTH - 1)], (BinaryCount[(COUNTER_WIDTH - 2):0] ^ BinaryCount[(COUNTER_WIDTH - 1):1])};
+		BinaryCount &lt;= (BinaryCount + 1);
+		GrayCount_out &lt;= {BinaryCount[(COUNTER_WIDTH - 1)], (BinaryCount[(COUNTER_WIDTH - 2):0] ^ BinaryCount[(COUNTER_WIDTH - 1):1])};
 	end
 endmodule
 

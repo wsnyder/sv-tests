@@ -37,7 +37,7 @@ module generic_fifo (
 	wire [LOG2(DEPTH):0] depth;
 	always @(posedge clk or posedge reset) begin
 		casez ({read, write, reset})
-			3'b???: out <= 0;
+			3&#39;b???: out &lt;= 0;
 		endcase
 	end
 endmodule

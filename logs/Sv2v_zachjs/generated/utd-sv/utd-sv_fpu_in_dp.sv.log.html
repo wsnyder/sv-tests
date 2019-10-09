@@ -125,7 +125,7 @@ module fpu_in_dp (
 	clken_buf ckbuf_in_dp(
 		.clk(clk),
 		.rclk(rclk),
-		.enb_l(1'b0),
+		.enb_l(1&#39;b0),
 		.tmb_l(se_l)
 	);
 	dff_s #(5) i_fp_id_in(
@@ -174,8 +174,8 @@ module fpu_in_dp (
 	assign fp_srca_53_0_neq_0 = (| fp_srca_in[53:0]);
 	assign fp_srca_50_0_neq_0 = (| fp_srca_in[50:0]);
 	assign fp_srca_53_32_neq_0 = (| fp_srca_in[53:32]);
-	assign fp_srca_exp_eq_0 = (! ((| fp_srca_in[62:55]) || (fp_op_in[1] && (| fp_srca_in[54:52]))));
-	assign fp_srca_exp_neq_ffs = (! ((& fp_srca_in[62:55]) && (fp_op_in[0] || (& fp_srca_in[54:52]))));
+	assign fp_srca_exp_eq_0 = (! ((| fp_srca_in[62:55]) || (fp_op_in[1] &amp;&amp; (| fp_srca_in[54:52]))));
+	assign fp_srca_exp_neq_ffs = (! ((&amp; fp_srca_in[62:55]) &amp;&amp; (fp_op_in[0] || (&amp; fp_srca_in[54:52]))));
 	dffe_s #(69) i_fp_srcb_in(
 		.din({fp_srca_exp_neq_ffs, fp_srca_exp_eq_0, fp_srca_53_0_neq_0, fp_srca_50_0_neq_0, fp_srca_53_32_neq_0, fp_srca_in[63:0]}),
 		.en(fp_data_rdy),
@@ -185,8 +185,8 @@ module fpu_in_dp (
 		.si(),
 		.so()
 	);
-	assign fp_src1_in[68:0] = (({69 {fp_op_in_7_inv}} & {fp_srca_exp_neq_ffs, fp_srca_exp_eq_0, fp_srca_53_0_neq_0, fp_srca_50_0_neq_0, fp_srca_53_32_neq_0, fp_srca_in[63:0]}) | ({69 {fp_op_in_7}} & 69'h180000000000000000));
-	assign fp_src2_in[68:0] = (({69 {fp_op_in_7_inv}} & fp_srcb_in[68:0]) | ({69 {fp_op_in_7}} & {fp_srca_exp_neq_ffs, fp_srca_exp_eq_0, fp_srca_53_0_neq_0, fp_srca_50_0_neq_0, fp_srca_53_32_neq_0, fp_srca_in[63:0]}));
+	assign fp_src1_in[68:0] = (({69 {fp_op_in_7_inv}} &amp; {fp_srca_exp_neq_ffs, fp_srca_exp_eq_0, fp_srca_53_0_neq_0, fp_srca_50_0_neq_0, fp_srca_53_32_neq_0, fp_srca_in[63:0]}) | ({69 {fp_op_in_7}} &amp; 69&#39;h180000000000000000));
+	assign fp_src2_in[68:0] = (({69 {fp_op_in_7_inv}} &amp; fp_srcb_in[68:0]) | ({69 {fp_op_in_7}} &amp; {fp_srca_exp_neq_ffs, fp_srca_exp_eq_0, fp_srca_53_0_neq_0, fp_srca_50_0_neq_0, fp_srca_53_32_neq_0, fp_srca_in[63:0]}));
 	dff_s #(155) i_inq_din_d1(
 		.din({fp_id_in[4:0], fp_rnd_mode_in[1:0], fp_fcc_in[1:0], fp_op_in[7:0], fp_src1_in[68:0], fp_src2_in[68:0]}),
 		.clk(clk),
@@ -195,7 +195,7 @@ module fpu_in_dp (
 		.si(),
 		.so()
 	);
-	assign inq_data[154:0] = (({155 {inq_fwrd}} & {fp_id_in[4:0], fp_rnd_mode_in[1:0], fp_fcc_in[1:0], fp_op_in[7:0], fp_src1_in[68:0], fp_src2_in[68:0]}) | ({155 {inq_fwrd_inv}} & (({155 {inq_bp}} & inq_din_d1[154:0]) | ({155 {inq_bp_inv}} & inq_dout[154:0]))));
+	assign inq_data[154:0] = (({155 {inq_fwrd}} &amp; {fp_id_in[4:0], fp_rnd_mode_in[1:0], fp_fcc_in[1:0], fp_op_in[7:0], fp_src1_in[68:0], fp_src2_in[68:0]}) | ({155 {inq_fwrd_inv}} &amp; (({155 {inq_bp}} &amp; inq_din_d1[154:0]) | ({155 {inq_bp_inv}} &amp; inq_dout[154:0]))));
 	assign inq_id[4:0] = inq_data[154:150];
 	assign inq_rnd_mode[1:0] = inq_data[149:148];
 	assign inq_fcc[1:0] = inq_data[147:146];

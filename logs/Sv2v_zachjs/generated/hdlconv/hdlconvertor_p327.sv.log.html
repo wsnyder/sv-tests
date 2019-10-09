@@ -13,17 +13,17 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 module tryfact;
 	function automatic integer factorial;
 		input reg [31:0] operand;
-		if ((operand >= 2)) factorial = (factorial((operand - 1)) * operand);
+		if ((operand &gt;= 2)) factorial = (factorial((operand - 1)) * operand);
 		else factorial = 1;
 	endfunction
 	integer result;
 	initial begin
 		begin : sv2v_autoblock_0
 			reg signed [31:0] n;
-			for (n = 0; (n <= 7); n = (n + 1))
+			for (n = 0; (n &lt;= 7); n = (n + 1))
 				begin
 					result = factorial(n);
-					$display("%0d factorial=%0d", n, result);
+					$display(&#34;%0d factorial=%0d&#34;, n, result);
 				end
 		end
 	end

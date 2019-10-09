@@ -53,23 +53,23 @@ module sctag_dirl_buf (
 	assign wr_en_c4_buf = wr_en_c4;
 	assign rw_entry_c4_buf = rw_entry_c4;
 	assign lkup_wr_data_c4_buf = lkup_wr_data_c4;
-	assign lkup_en_c4_buf[0] = (lkup_row_en_c4[0] & lkup_panel_en_c4[0]);
-	assign lkup_en_c4_buf[1] = (lkup_row_en_c4[0] & lkup_panel_en_c4[1]);
-	assign lkup_en_c4_buf[2] = (lkup_row_en_c4[0] & lkup_panel_en_c4[2]);
-	assign lkup_en_c4_buf[3] = (lkup_row_en_c4[0] & lkup_panel_en_c4[3]);
-	assign lkup_en_c4_buf[4] = (lkup_row_en_c4[1] & lkup_panel_en_c4[0]);
-	assign lkup_en_c4_buf[5] = (lkup_row_en_c4[1] & lkup_panel_en_c4[1]);
-	assign lkup_en_c4_buf[6] = (lkup_row_en_c4[1] & lkup_panel_en_c4[2]);
-	assign lkup_en_c4_buf[7] = (lkup_row_en_c4[1] & lkup_panel_en_c4[3]);
+	assign lkup_en_c4_buf[0] = (lkup_row_en_c4[0] &amp; lkup_panel_en_c4[0]);
+	assign lkup_en_c4_buf[1] = (lkup_row_en_c4[0] &amp; lkup_panel_en_c4[1]);
+	assign lkup_en_c4_buf[2] = (lkup_row_en_c4[0] &amp; lkup_panel_en_c4[2]);
+	assign lkup_en_c4_buf[3] = (lkup_row_en_c4[0] &amp; lkup_panel_en_c4[3]);
+	assign lkup_en_c4_buf[4] = (lkup_row_en_c4[1] &amp; lkup_panel_en_c4[0]);
+	assign lkup_en_c4_buf[5] = (lkup_row_en_c4[1] &amp; lkup_panel_en_c4[1]);
+	assign lkup_en_c4_buf[6] = (lkup_row_en_c4[1] &amp; lkup_panel_en_c4[2]);
+	assign lkup_en_c4_buf[7] = (lkup_row_en_c4[1] &amp; lkup_panel_en_c4[3]);
 	assign dir_clear_c4_buf = dir_clear_c4;
-	assign rw_dec_c4_buf[0] = (rw_row_en_c4[0] & rw_panel_en_c4[0]);
-	assign rw_dec_c4_buf[1] = (rw_row_en_c4[0] & rw_panel_en_c4[1]);
-	assign rw_dec_c4_buf[2] = (rw_row_en_c4[0] & rw_panel_en_c4[2]);
-	assign rw_dec_c4_buf[3] = (rw_row_en_c4[0] & rw_panel_en_c4[3]);
-	assign rw_dec_c4_buf[4] = (rw_row_en_c4[1] & rw_panel_en_c4[0]);
-	assign rw_dec_c4_buf[5] = (rw_row_en_c4[1] & rw_panel_en_c4[1]);
-	assign rw_dec_c4_buf[6] = (rw_row_en_c4[1] & rw_panel_en_c4[2]);
-	assign rw_dec_c4_buf[7] = (rw_row_en_c4[1] & rw_panel_en_c4[3]);
+	assign rw_dec_c4_buf[0] = (rw_row_en_c4[0] &amp; rw_panel_en_c4[0]);
+	assign rw_dec_c4_buf[1] = (rw_row_en_c4[0] &amp; rw_panel_en_c4[1]);
+	assign rw_dec_c4_buf[2] = (rw_row_en_c4[0] &amp; rw_panel_en_c4[2]);
+	assign rw_dec_c4_buf[3] = (rw_row_en_c4[0] &amp; rw_panel_en_c4[3]);
+	assign rw_dec_c4_buf[4] = (rw_row_en_c4[1] &amp; rw_panel_en_c4[0]);
+	assign rw_dec_c4_buf[5] = (rw_row_en_c4[1] &amp; rw_panel_en_c4[1]);
+	assign rw_dec_c4_buf[6] = (rw_row_en_c4[1] &amp; rw_panel_en_c4[2]);
+	assign rw_dec_c4_buf[7] = (rw_row_en_c4[1] &amp; rw_panel_en_c4[3]);
 endmodule
 
 

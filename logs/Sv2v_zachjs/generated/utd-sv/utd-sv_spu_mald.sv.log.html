@@ -54,10 +54,10 @@ module spu_mald (
 	output spu_mald_done_set;
 	wire tr2wait4ln_frm_ldreq;
 	wire local_stxa_abort;
-	wire spu_mald_done_wen = (((spu_mald_done | spu_wen_ma_unc_err_pulse) | local_stxa_abort) & mactl_ldop);
+	wire spu_mald_done_wen = (((spu_mald_done | spu_wen_ma_unc_err_pulse) | local_stxa_abort) &amp; mactl_ldop);
 	wire spu_mald_done_rst = (reset | spu_mactl_iss_pulse_dly);
 	dffre_s #(1) spu_mald_done_ff(
-		.din(1'b1),
+		.din(1&#39;b1),
 		.q(spu_mald_done_set),
 		.en(spu_mald_done_wen),
 		.rst(spu_mald_done_rst),
@@ -111,16 +111,16 @@ module spu_mald (
 		.si(),
 		.so()
 	);
-	wire start_ldop = (spu_mactl_iss_pulse_dly & mactl_ldop);
-	assign spu_mald_done = (cur_chk4mpa1maddr0_state & (~ len_neqz));
-	assign nxt_idle_state = ((state_reset | spu_mald_done) | (cur_idle_state & (~ start_ldop)));
-	assign nxt_ldreq_state = ((((cur_chk4mpa1maddr0_state & (~ spu_maaddr_mpa1maddr0)) & len_neqz) | (cur_idle_state & start_ldop)) | (cur_ldreq_state & (~ ldreq_ack)));
-	assign spu_mald_rstln = ((((cur_mamemwr_state & ld_inprog) & len_neqz) | local_stxa_abort) | spu_wen_ma_unc_err_pulse);
-	assign tr2wait4ln_frm_ldreq = (cur_ldreq_state & ldreq_ack);
-	assign nxt_wait4ln_state = (tr2wait4ln_frm_ldreq | (cur_wait4ln_state & (~ ln_received)));
-	wire tr2mamemwr_frm_wait4ln = (cur_wait4ln_state & ln_received);
-	wire tr2mamemwr_frm_chk4mpa1maddr0 = ((cur_chk4mpa1maddr0_state & spu_maaddr_mpa1maddr0) & len_neqz);
-	wire mald_memwen = ((tr2mamemwr_frm_wait4ln | tr2mamemwr_frm_chk4mpa1maddr0) & len_neqz);
+	wire start_ldop = (spu_mactl_iss_pulse_dly &amp; mactl_ldop);
+	assign spu_mald_done = (cur_chk4mpa1maddr0_state &amp; (~ len_neqz));
+	assign nxt_idle_state = ((state_reset | spu_mald_done) | (cur_idle_state &amp; (~ start_ldop)));
+	assign nxt_ldreq_state = ((((cur_chk4mpa1maddr0_state &amp; (~ spu_maaddr_mpa1maddr0)) &amp; len_neqz) | (cur_idle_state &amp; start_ldop)) | (cur_ldreq_state &amp; (~ ldreq_ack)));
+	assign spu_mald_rstln = ((((cur_mamemwr_state &amp; ld_inprog) &amp; len_neqz) | local_stxa_abort) | spu_wen_ma_unc_err_pulse);
+	assign tr2wait4ln_frm_ldreq = (cur_ldreq_state &amp; ldreq_ack);
+	assign nxt_wait4ln_state = (tr2wait4ln_frm_ldreq | (cur_wait4ln_state &amp; (~ ln_received)));
+	wire tr2mamemwr_frm_wait4ln = (cur_wait4ln_state &amp; ln_received);
+	wire tr2mamemwr_frm_chk4mpa1maddr0 = ((cur_chk4mpa1maddr0_state &amp; spu_maaddr_mpa1maddr0) &amp; len_neqz);
+	wire mald_memwen = ((tr2mamemwr_frm_wait4ln | tr2mamemwr_frm_chk4mpa1maddr0) &amp; len_neqz);
 	wire mald_memwen_dly;
 	dffr_s #(1) wen_dly_ff(
 		.din(mald_memwen),
@@ -132,12 +132,12 @@ module spu_mald (
 		.so()
 	);
 	assign nxt_mamemwr_state = mald_memwen_dly;
-	assign local_stxa_abort = (mald_memwen_dly & spu_mactl_stxa_force_abort);
+	assign local_stxa_abort = (mald_memwen_dly &amp; spu_mactl_stxa_force_abort);
 	assign nxt_chk4mpa1maddr0_state = cur_mamemwr_state;
 	assign spu_mald_memwen = nxt_mamemwr_state;
 	assign spu_mald_maaddr_addrinc = cur_mamemwr_state;
 	assign spu_mald_mpa_addrinc = cur_mamemwr_state;
-	assign spu_mald_force_mpa_add16 = 1'b0;
+	assign spu_mald_force_mpa_add16 = 1&#39;b0;
 	assign spu_mald_ldreq = cur_ldreq_state;
 endmodule
 

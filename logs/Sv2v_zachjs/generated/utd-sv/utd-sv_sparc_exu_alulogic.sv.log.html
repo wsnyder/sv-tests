@@ -56,13 +56,13 @@ module sparc_exu_alulogic (
 		.dout(rs2_data_bf1[63:0]),
 		.in(rs2_data[63:0])
 	);
-	assign mov_data[63:32] = (rs2_data_bf1[63:32] & {32 {(~ ifu_exu_sethi_inst_e)}});
+	assign mov_data[63:32] = (rs2_data_bf1[63:32] &amp; {32 {(~ ifu_exu_sethi_inst_e)}});
 	dp_buffer #(32) rs2_data_buf2(
 		.dout(mov_data[31:0]),
 		.in(rs2_data_bf1[31:0])
 	);
 	assign rs2_xor_invert[63:0] = (rs2_data_bf1[63:0] ^ {64 {inv_logic}});
-	assign result_and = (rs1_data_bf1 & rs2_xor_invert);
+	assign result_and = (rs1_data_bf1 &amp; rs2_xor_invert);
 	assign result_or = (rs1_data_bf1 | rs2_xor_invert);
 	assign result_xor = (rs1_data_bf1 ^ rs2_xor_invert);
 endmodule

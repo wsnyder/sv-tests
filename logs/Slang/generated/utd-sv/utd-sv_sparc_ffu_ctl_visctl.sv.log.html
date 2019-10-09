@@ -13,124 +13,124 @@ files: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html
 ../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-133" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:133</a>:21: error: expected declarator
    wire        logic;
                     ^
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-240" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:240</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-240" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:240</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s visop_e2m(.din(issue_visop_e), .clk(clk), .q(visop_m), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-241" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:241</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-241" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:241</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s visop_m2w(.din(visop_m), .clk(clk), .q(visop_w), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-242" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:242</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-242" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:242</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s visop_w2w2(.din(visop_w_vld), .clk(clk), .q(visop_w2), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-243" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:243</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-243" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:243</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s visop_w22w3(.din(visop_w2_vld), .clk(clk), .q(visop_w3), .si(), .so(), .se(se));
    ^~~~~
 ../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-259" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:259</a>:16: error: expected expression
-   assign      logic = ~opf[8] & ~opf[7] & opf[6] & opf[5];
+   assign      logic = ~opf[8] &amp; ~opf[7] &amp; opf[6] &amp; opf[5];
                ^~~~~
 ../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-263" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:263</a>:54: error: expected expression
-   assign illegal_vis_e = (visop_e & ~(add | align | logic | siam | alignaddr) | 
+   assign illegal_vis_e = (visop_e &amp; ~(add | align | logic | siam | alignaddr) | 
                                                      ^~~~~
 ../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-265" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:265</a>:52: error: expected expression
-   assign rs1_check_nonzero_e = visop_e & (siam | (logic & (opf_log_zero | opf_log_one | opf_log_src2 | opf_log_not2)));
+   assign rs1_check_nonzero_e = visop_e &amp; (siam | (logic &amp; (opf_log_zero | opf_log_one | opf_log_src2 | opf_log_not2)));
                                                    ^~~~~
 ../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-266" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:266</a>:43: error: expected expression
-   assign rs2_check_nonzero_e = visop_e & logic & (opf_log_zero | opf_log_one | opf_log_src1 | opf_log_not1);
+   assign rs2_check_nonzero_e = visop_e &amp; logic &amp; (opf_log_zero | opf_log_one | opf_log_src1 | opf_log_not1);
                                           ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-275" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:275</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-275" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:275</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s sub_dff(.din(opf[2]), .clk(clk), .q(ctl_vis_subtract), .se(se), .si(), .so());
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-308" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:308</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-308" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:308</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s invert_rs1_dff(.din(invert_rs1_next), .clk(clk), .q(ctl_vis_log_invert_rs1),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-310" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:310</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-310" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:310</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s invert_rs2_dff(.din(invert_rs2_next), .clk(clk), .q(ctl_vis_log_invert_rs2),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-315" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:315</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-315" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:315</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(2) log_pass_dff(.din({log_pass_rs1_next,log_pass_rs2_next}), .clk(clk),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-339" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:339</a>:4: error: unknown module 'mux4ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-339" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:339</a>:4: error: unknown module &#39;mux4ds&#39;
    mux4ds #(6) curr_gsr_mux(.dout({gsr_rnd[2:0], gsr_align[2:0]}),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-348" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:348</a>:4: error: unknown module 'mux4ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-348" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:348</a>:4: error: unknown module &#39;mux4ds&#39;
    mux4ds #(6) gsr_e_mux(.dout({gsr_rnd_e[2:0], gsr_align_e[2:0]}),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-357" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:357</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-357" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:357</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(43) gsr_e2m(.din({dp_ctl_gsr_mask_e[31:0],gsr_rnd_e[2:0],
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-361" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:361</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-361" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:361</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(3) gsr_align_dff(.din(gsr_align[2:0]), .clk(clk), .q(gsr_align_d1[2:0]), .se(se), .si(), .so());
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-364" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:364</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-364" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:364</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(2) fpu_rnd_dff(.din(fpu_rnd_next[1:0]), .clk(clk), .q(fpu_rnd[1:0]), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-373" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:373</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-373" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:373</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s gsr_addr_d2e(.din(gsr_addr_d), .clk(clk), .q(gsr_addr_e), .se(se), .si(), .so());
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-379" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:379</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-379" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:379</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s wgsr_e2m(.din(wgsr_e), .clk(clk), .q(wgsr_m), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-380" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:380</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-380" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:380</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s wgsr_m2w(.din(wgsr_vld_m), .clk(clk), .q(wgsr_w), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-381" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:381</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-381" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:381</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s wgsr_w2w2(.din(wgsr_vld_w), .clk(clk), .q(wgsr_w2), .si(), .so(), .se(se));
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-420" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:420</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-420" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:420</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t0_rnd_mux(.dout(t0_gsr_rnd_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-427" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:427</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-427" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:427</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t0_align_mux(.dout(t0_gsr_align_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-434" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:434</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-434" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:434</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t1_rnd_mux(.dout(t1_gsr_rnd_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-441" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:441</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-441" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:441</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t1_align_mux(.dout(t1_gsr_align_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-448" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:448</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-448" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:448</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t2_rnd_mux(.dout(t2_gsr_rnd_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-455" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:455</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-455" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:455</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t2_align_mux(.dout(t2_gsr_align_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-462" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:462</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-462" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:462</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t3_rnd_mux(.dout(t3_gsr_rnd_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-469" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:469</a>:4: error: unknown module 'mux3ds'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-469" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:469</a>:4: error: unknown module &#39;mux3ds&#39;
    mux3ds #(3) t3_align_mux(.dout(t3_gsr_align_next[2:0]),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-478" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:478</a>:4: error: unknown module 'dffr_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-478" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:478</a>:4: error: unknown module &#39;dffr_s&#39;
    dffr_s #(6) t0_gsr_dff(.din({t0_gsr_rnd_next[2:0], t0_gsr_align_next[2:0]}), .clk(clk),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-481" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:481</a>:4: error: unknown module 'dffr_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-481" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:481</a>:4: error: unknown module &#39;dffr_s&#39;
    dffr_s #(6) t1_gsr_dff(.din({t1_gsr_rnd_next[2:0], t1_gsr_align_next[2:0]}), .clk(clk),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-484" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:484</a>:4: error: unknown module 'dffr_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-484" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:484</a>:4: error: unknown module &#39;dffr_s&#39;
    dffr_s #(6) t2_gsr_dff(.din({t2_gsr_rnd_next[2:0], t2_gsr_align_next[2:0]}), .clk(clk),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-487" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:487</a>:4: error: unknown module 'dffr_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-487" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:487</a>:4: error: unknown module &#39;dffr_s&#39;
    dffr_s #(6) t3_gsr_dff(.din({t3_gsr_rnd_next[2:0], t3_gsr_align_next[2:0]}), .clk(clk),
    ^~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-491" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:491</a>:4: error: unknown module 'dffre_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-491" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:491</a>:4: error: unknown module &#39;dffre_s&#39;
    dffre_s #(3) siam_rnd_dff(.din(ifu_ffu_rnd_e[2:0]), .clk(clk),
    ^~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-494" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:494</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-494" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:494</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(3) align_offset_dff1(.din(exu_ffu_gsr_align_m[2:0]), .clk(clk),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-496" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:496</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-496" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:496</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(3) align_offset_dff2(.din(wgsr_align_offset_w[2:0]), .clk(clk),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-498" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:498</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-498" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:498</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(3) rnd_dff1(.din(exu_ffu_gsr_rnd_m[2:0]), .clk(clk),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-500" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:500</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-500" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:500</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(3) rnd_dff2(.din(wgsr_rnd_w[2:0]), .clk(clk),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-503" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:503</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-503" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:503</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(37) wsr_data_m2w(.din(wsr_data_m[36:0]), .clk(clk), .q(wsr_data_w[36:0]),
    ^~~~~
-../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-505" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:505</a>:4: error: unknown module 'dff_s'
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-505" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:505</a>:4: error: unknown module &#39;dff_s&#39;
    dff_s #(37) wsr_data_w2w2(.din(wsr_data_w[36:0]), .clk(clk), .q(ctl_dp_wsr_data_w2[36:0]),
    ^~~~~
 

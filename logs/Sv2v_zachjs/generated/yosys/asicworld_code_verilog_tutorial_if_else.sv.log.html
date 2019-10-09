@@ -16,10 +16,10 @@ module if_else;
 	wire din;
 	wire reset;
 	always @(posedge clk) if (reset) begin
-		dff <= 0;
+		dff &lt;= 0;
 	end
 	else begin
-		dff <= din;
+		dff &lt;= din;
 	end
 endmodule
 

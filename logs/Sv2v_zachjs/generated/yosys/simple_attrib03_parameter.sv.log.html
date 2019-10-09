@@ -22,8 +22,8 @@ module bar (
 	input wire rst;
 	input wire [(WIDTH - 1):0] inp;
 	output reg [(WIDTH - 1):0] out;
-	always @(posedge clk) if (rst) out <= 0;
-	else out <= (inp + INCREMENT);
+	always @(posedge clk) if (rst) out &lt;= 0;
+	else out &lt;= (inp + INCREMENT);
 endmodule
 module foo (
 	clk,

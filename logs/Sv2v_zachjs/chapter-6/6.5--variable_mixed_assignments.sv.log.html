@@ -14,7 +14,7 @@ module top;
 	wire clk = 0;
 	reg signed [31:0] v;
 	always @(*) v = 12;
-	always @(posedge clk) v <= (~ v);
+	always @(posedge clk) v &lt;= (~ v);
 endmodule
 
 

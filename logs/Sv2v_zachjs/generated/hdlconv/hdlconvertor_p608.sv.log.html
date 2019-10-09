@@ -18,8 +18,8 @@ module test (
 	input [(N - 1):0] in;
 	output [(N - 1):0] out;
 	generate
-		if (((N < 1) || (N > 8))) ThisModuleDoesNotExist __sv2v_elab_error(
-			"Parameter N has an invalid value of %0d",
+		if (((N &lt; 1) || (N &gt; 8))) ThisModuleDoesNotExist __sv2v_elab_error(
+			&#34;Parameter N has an invalid value of %0d&#34;,
 			N
 		);
 	endgenerate

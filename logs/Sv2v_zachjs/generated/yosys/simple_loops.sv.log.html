@@ -53,26 +53,26 @@ module aes (
 		next_addroundkey_round = addroundkey_round;
 		if (((addroundkey_round == 1) || (addroundkey_round == 0))) keysched_last_key_i = key_i;
 		else keysched_last_key_i = keysched_new_key_o;
-		if (((round == 0) && addroundkey_start_i)) begin
+		if (((round == 0) &amp;&amp; addroundkey_start_i)) begin
 			data_var = addroundkey_data_i;
 			round_key_var = key_i;
 			round_data_var = (round_key_var ^ data_var);
 			next_addroundkey_data_reg = round_data_var;
 			next_addroundkey_ready_o = 1;
 		end
-		else if ((addroundkey_start_i && (round != 0))) begin
+		else if ((addroundkey_start_i &amp;&amp; (round != 0))) begin
 			keysched_last_key_i = key_i;
 			keysched_start_i = 1;
 			keysched_round_i = 1;
 			next_addroundkey_round = 1;
 		end
-		else if (((addroundkey_round != round) && keysched_ready_o)) begin
+		else if (((addroundkey_round != round) &amp;&amp; keysched_ready_o)) begin
 			next_addroundkey_round = (addroundkey_round + 1);
 			keysched_last_key_i = keysched_new_key_o;
 			keysched_start_i = 1;
 			keysched_round_i = (addroundkey_round + 1);
 		end
-		else if (((addroundkey_round == round) && keysched_ready_o)) begin
+		else if (((addroundkey_round == round) &amp;&amp; keysched_ready_o)) begin
 			data_var = addroundkey_data_i;
 			round_key_var = keysched_new_key_o;
 			round_data_var = (round_key_var ^ data_var);

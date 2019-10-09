@@ -28,13 +28,13 @@ module forloops01 (
 	output reg [3:0] y;
 	integer k;
 	always @(posedge clk) begin
-		for (k = 0; (k < 2); k = (k + 1))
+		for (k = 0; (k &lt; 2); k = (k + 1))
 			p[(2 * k)+:2] = ({a, b} ^ {2 {k}});
-		x <= (k + {a, b});
+		x &lt;= (k + {a, b});
 	end
 	always @(*) begin
-		for (k = 0; (k < 4); k = (k + 1))
-			q[k] = ({(~ a), (~ b), a, b} >> k[1:0]);
+		for (k = 0; (k &lt; 4); k = (k + 1))
+			q[k] = ({(~ a), (~ b), a, b} &gt;&gt; k[1:0]);
 		y = (k - {a, b});
 	end
 endmodule
@@ -54,8 +54,8 @@ module forloops02 (
 	output [3:0] y;
 	integer k;
 	always @(*) begin
-		for (k = 0; (k < 4); k = (k + 1))
-			q[k] = ({(~ a), (~ b), a, b} >> k[1:0]);
+		for (k = 0; (k &lt; 4); k = (k + 1))
+			q[k] = ({(~ a), (~ b), a, b} &gt;&gt; k[1:0]);
 	end
 	always @(*) begin
 		x = (k + {a, b});

@@ -110,9 +110,9 @@ module fpu_mul_ctl (
 	si,
 	so
 );
-	parameter FMULS = 8'h49;
-	parameter FMULD = 8'h4a;
-	parameter FSMULD = 8'h69;
+	parameter FMULS = 8&#39;h49;
+	parameter FMULD = 8&#39;h4a;
+	parameter FSMULD = 8&#39;h69;
 	input inq_in1_51;
 	input inq_in1_54;
 	input inq_in1_53_0_neq_0;
@@ -561,24 +561,24 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m1stg_denorm_sng_in1 = (mul_exp_in1_exp_eq_0 && m1stg_sngopa[0]);
-	assign m1stg_denorm_dbl_in1 = (mul_exp_in1_exp_eq_0 && m1stg_dblopa[0]);
-	assign m1stg_denorm_sng_in2 = (mul_exp_in2_exp_eq_0 && m1stg_sngopa[0]);
-	assign m1stg_denorm_dbl_in2 = (mul_exp_in2_exp_eq_0 && m1stg_dblopa[0]);
+	assign m1stg_denorm_sng_in1 = (mul_exp_in1_exp_eq_0 &amp;&amp; m1stg_sngopa[0]);
+	assign m1stg_denorm_dbl_in1 = (mul_exp_in1_exp_eq_0 &amp;&amp; m1stg_dblopa[0]);
+	assign m1stg_denorm_sng_in2 = (mul_exp_in2_exp_eq_0 &amp;&amp; m1stg_sngopa[0]);
+	assign m1stg_denorm_dbl_in2 = (mul_exp_in2_exp_eq_0 &amp;&amp; m1stg_dblopa[0]);
 	assign m1stg_denorm_in1 = (m1stg_denorm_sng_in1 || m1stg_denorm_dbl_in1);
 	assign m1stg_denorm_in2 = (m1stg_denorm_sng_in2 || m1stg_denorm_dbl_in2);
-	assign m1stg_norm_sng_in1 = ((! mul_exp_in1_exp_eq_0) && m1stg_sngopa[0]);
-	assign m1stg_norm_dbl_in1 = ((! mul_exp_in1_exp_eq_0) && m1stg_dblopa[0]);
-	assign m1stg_norm_sng_in2 = ((! mul_exp_in2_exp_eq_0) && m1stg_sngopa[0]);
-	assign m1stg_norm_dbl_in2 = ((! mul_exp_in2_exp_eq_0) && m1stg_dblopa[0]);
-	assign m1stg_snan_sng_in1 = ((((! mul_exp_in1_exp_neq_ffs) && (! mul_frac_in1_54)) && mul_frac_in1_53_32_neq_0) && m1stg_sngopa[1]);
-	assign m1stg_snan_dbl_in1 = ((((! mul_exp_in1_exp_neq_ffs) && (! mul_frac_in1_51)) && mul_frac_in1_50_0_neq_0) && m1stg_dblopa[1]);
-	assign m1stg_snan_sng_in2 = ((((! mul_exp_in2_exp_neq_ffs) && (! mul_frac_in2_54)) && mul_frac_in2_53_32_neq_0) && m1stg_sngopa[1]);
-	assign m1stg_snan_dbl_in2 = ((((! mul_exp_in2_exp_neq_ffs) && (! mul_frac_in2_51)) && mul_frac_in2_50_0_neq_0) && m1stg_dblopa[1]);
-	assign m1stg_qnan_sng_in1 = (((! mul_exp_in1_exp_neq_ffs) && mul_frac_in1_54) && m1stg_sngopa[1]);
-	assign m1stg_qnan_dbl_in1 = (((! mul_exp_in1_exp_neq_ffs) && mul_frac_in1_51) && m1stg_dblopa[1]);
-	assign m1stg_qnan_sng_in2 = (((! mul_exp_in2_exp_neq_ffs) && mul_frac_in2_54) && m1stg_sngopa[1]);
-	assign m1stg_qnan_dbl_in2 = (((! mul_exp_in2_exp_neq_ffs) && mul_frac_in2_51) && m1stg_dblopa[1]);
+	assign m1stg_norm_sng_in1 = ((! mul_exp_in1_exp_eq_0) &amp;&amp; m1stg_sngopa[0]);
+	assign m1stg_norm_dbl_in1 = ((! mul_exp_in1_exp_eq_0) &amp;&amp; m1stg_dblopa[0]);
+	assign m1stg_norm_sng_in2 = ((! mul_exp_in2_exp_eq_0) &amp;&amp; m1stg_sngopa[0]);
+	assign m1stg_norm_dbl_in2 = ((! mul_exp_in2_exp_eq_0) &amp;&amp; m1stg_dblopa[0]);
+	assign m1stg_snan_sng_in1 = ((((! mul_exp_in1_exp_neq_ffs) &amp;&amp; (! mul_frac_in1_54)) &amp;&amp; mul_frac_in1_53_32_neq_0) &amp;&amp; m1stg_sngopa[1]);
+	assign m1stg_snan_dbl_in1 = ((((! mul_exp_in1_exp_neq_ffs) &amp;&amp; (! mul_frac_in1_51)) &amp;&amp; mul_frac_in1_50_0_neq_0) &amp;&amp; m1stg_dblopa[1]);
+	assign m1stg_snan_sng_in2 = ((((! mul_exp_in2_exp_neq_ffs) &amp;&amp; (! mul_frac_in2_54)) &amp;&amp; mul_frac_in2_53_32_neq_0) &amp;&amp; m1stg_sngopa[1]);
+	assign m1stg_snan_dbl_in2 = ((((! mul_exp_in2_exp_neq_ffs) &amp;&amp; (! mul_frac_in2_51)) &amp;&amp; mul_frac_in2_50_0_neq_0) &amp;&amp; m1stg_dblopa[1]);
+	assign m1stg_qnan_sng_in1 = (((! mul_exp_in1_exp_neq_ffs) &amp;&amp; mul_frac_in1_54) &amp;&amp; m1stg_sngopa[1]);
+	assign m1stg_qnan_dbl_in1 = (((! mul_exp_in1_exp_neq_ffs) &amp;&amp; mul_frac_in1_51) &amp;&amp; m1stg_dblopa[1]);
+	assign m1stg_qnan_sng_in2 = (((! mul_exp_in2_exp_neq_ffs) &amp;&amp; mul_frac_in2_54) &amp;&amp; m1stg_sngopa[1]);
+	assign m1stg_qnan_dbl_in2 = (((! mul_exp_in2_exp_neq_ffs) &amp;&amp; mul_frac_in2_51) &amp;&amp; m1stg_dblopa[1]);
 	assign m1stg_snan_in1 = (m1stg_snan_sng_in1 || m1stg_snan_dbl_in1);
 	assign m1stg_snan_in2 = (m1stg_snan_sng_in2 || m1stg_snan_dbl_in2);
 	assign m1stg_qnan_in1 = (m1stg_qnan_sng_in1 || m1stg_qnan_dbl_in1);
@@ -619,10 +619,10 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m1stg_nan_sng_in1 = (((! mul_exp_in1_exp_neq_ffs) && (mul_frac_in1_54 || mul_frac_in1_53_32_neq_0)) && m1stg_sngopa[2]);
-	assign m1stg_nan_dbl_in1 = (((! mul_exp_in1_exp_neq_ffs) && (mul_frac_in1_51 || mul_frac_in1_50_0_neq_0)) && m1stg_dblopa[2]);
-	assign m1stg_nan_sng_in2 = (((! mul_exp_in2_exp_neq_ffs) && (mul_frac_in2_54 || mul_frac_in2_53_32_neq_0)) && m1stg_sngopa[2]);
-	assign m1stg_nan_dbl_in2 = (((! mul_exp_in2_exp_neq_ffs) && (mul_frac_in2_51 || mul_frac_in2_50_0_neq_0)) && m1stg_dblopa[2]);
+	assign m1stg_nan_sng_in1 = (((! mul_exp_in1_exp_neq_ffs) &amp;&amp; (mul_frac_in1_54 || mul_frac_in1_53_32_neq_0)) &amp;&amp; m1stg_sngopa[2]);
+	assign m1stg_nan_dbl_in1 = (((! mul_exp_in1_exp_neq_ffs) &amp;&amp; (mul_frac_in1_51 || mul_frac_in1_50_0_neq_0)) &amp;&amp; m1stg_dblopa[2]);
+	assign m1stg_nan_sng_in2 = (((! mul_exp_in2_exp_neq_ffs) &amp;&amp; (mul_frac_in2_54 || mul_frac_in2_53_32_neq_0)) &amp;&amp; m1stg_sngopa[2]);
+	assign m1stg_nan_dbl_in2 = (((! mul_exp_in2_exp_neq_ffs) &amp;&amp; (mul_frac_in2_51 || mul_frac_in2_50_0_neq_0)) &amp;&amp; m1stg_dblopa[2]);
 	assign m1stg_nan_in1 = (m1stg_nan_sng_in1 || m1stg_nan_dbl_in1);
 	assign m1stg_nan_in2 = (m1stg_nan_sng_in2 || m1stg_nan_dbl_in2);
 	dffe_s #(1) i_m2stg_nan_in2(
@@ -634,10 +634,10 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m1stg_inf_sng_in1 = ((((! mul_exp_in1_exp_neq_ffs) && (! mul_frac_in1_54)) && (! mul_frac_in1_53_32_neq_0)) && m1stg_sngopa[2]);
-	assign m1stg_inf_dbl_in1 = ((((! mul_exp_in1_exp_neq_ffs) && (! mul_frac_in1_51)) && (! mul_frac_in1_50_0_neq_0)) && m1stg_dblopa[2]);
-	assign m1stg_inf_sng_in2 = ((((! mul_exp_in2_exp_neq_ffs) && (! mul_frac_in2_54)) && (! mul_frac_in2_53_32_neq_0)) && m1stg_sngopa[2]);
-	assign m1stg_inf_dbl_in2 = ((((! mul_exp_in2_exp_neq_ffs) && (! mul_frac_in2_51)) && (! mul_frac_in2_50_0_neq_0)) && m1stg_dblopa[2]);
+	assign m1stg_inf_sng_in1 = ((((! mul_exp_in1_exp_neq_ffs) &amp;&amp; (! mul_frac_in1_54)) &amp;&amp; (! mul_frac_in1_53_32_neq_0)) &amp;&amp; m1stg_sngopa[2]);
+	assign m1stg_inf_dbl_in1 = ((((! mul_exp_in1_exp_neq_ffs) &amp;&amp; (! mul_frac_in1_51)) &amp;&amp; (! mul_frac_in1_50_0_neq_0)) &amp;&amp; m1stg_dblopa[2]);
+	assign m1stg_inf_sng_in2 = ((((! mul_exp_in2_exp_neq_ffs) &amp;&amp; (! mul_frac_in2_54)) &amp;&amp; (! mul_frac_in2_53_32_neq_0)) &amp;&amp; m1stg_sngopa[2]);
+	assign m1stg_inf_dbl_in2 = ((((! mul_exp_in2_exp_neq_ffs) &amp;&amp; (! mul_frac_in2_51)) &amp;&amp; (! mul_frac_in2_50_0_neq_0)) &amp;&amp; m1stg_dblopa[2]);
 	assign m1stg_inf_in1 = (m1stg_inf_sng_in1 || m1stg_inf_dbl_in1);
 	assign m1stg_inf_in2 = (m1stg_inf_sng_in2 || m1stg_inf_dbl_in2);
 	assign m1stg_inf_in = (m1stg_inf_in1 || m1stg_inf_in2);
@@ -668,15 +668,15 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m1stg_infnan_sng_in1 = ((! mul_exp_in1_exp_neq_ffs) && m1stg_sngopa[3]);
-	assign m1stg_infnan_dbl_in1 = ((! mul_exp_in1_exp_neq_ffs) && m1stg_dblopa[3]);
-	assign m1stg_infnan_sng_in2 = ((! mul_exp_in2_exp_neq_ffs) && m1stg_sngopa[3]);
-	assign m1stg_infnan_dbl_in2 = ((! mul_exp_in2_exp_neq_ffs) && m1stg_dblopa[3]);
+	assign m1stg_infnan_sng_in1 = ((! mul_exp_in1_exp_neq_ffs) &amp;&amp; m1stg_sngopa[3]);
+	assign m1stg_infnan_dbl_in1 = ((! mul_exp_in1_exp_neq_ffs) &amp;&amp; m1stg_dblopa[3]);
+	assign m1stg_infnan_sng_in2 = ((! mul_exp_in2_exp_neq_ffs) &amp;&amp; m1stg_sngopa[3]);
+	assign m1stg_infnan_dbl_in2 = ((! mul_exp_in2_exp_neq_ffs) &amp;&amp; m1stg_dblopa[3]);
 	assign m1stg_infnan_in1 = (m1stg_infnan_sng_in1 || m1stg_infnan_dbl_in1);
 	assign m1stg_infnan_in2 = (m1stg_infnan_sng_in2 || m1stg_infnan_dbl_in2);
 	assign m1stg_infnan_in = (m1stg_infnan_in1 || m1stg_infnan_in2);
-	assign m1stg_zero_in1 = ((mul_exp_in1_exp_eq_0 && (! mul_frac_in1_53_0_neq_0)) && (! mul_frac_in1_54));
-	assign m1stg_zero_in2 = ((mul_exp_in2_exp_eq_0 && (! mul_frac_in2_53_0_neq_0)) && (! mul_frac_in2_54));
+	assign m1stg_zero_in1 = ((mul_exp_in1_exp_eq_0 &amp;&amp; (! mul_frac_in1_53_0_neq_0)) &amp;&amp; (! mul_frac_in1_54));
+	assign m1stg_zero_in2 = ((mul_exp_in2_exp_eq_0 &amp;&amp; (! mul_frac_in2_53_0_neq_0)) &amp;&amp; (! mul_frac_in2_54));
 	assign m1stg_zero_in = (m1stg_zero_in1 || m1stg_zero_in2);
 	dffe_s #(1) i_m2stg_zero_in1(
 		.din(m1stg_zero_in1),
@@ -705,8 +705,8 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m1stg_step = (m6stg_stepa && (! m1stg_mul));
-	assign m1stg_op_in[7:0] = (({8 {(m1stg_step && (! reset))}} & (inq_op[7:0] & {8 {inq_mul}})) | ({8 {((! m6stg_step) && (! reset))}} & m1stg_op[7:0]));
+	assign m1stg_step = (m6stg_stepa &amp;&amp; (! m1stg_mul));
+	assign m1stg_op_in[7:0] = (({8 {(m1stg_step &amp;&amp; (! reset))}} &amp; (inq_op[7:0] &amp; {8 {inq_mul}})) | ({8 {((! m6stg_step) &amp;&amp; (! reset))}} &amp; m1stg_op[7:0]));
 	dff_s #(8) i_m1stg_op(
 		.din(m1stg_op_in[7:0]),
 		.clk(rclk),
@@ -715,7 +715,7 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m1stg_mul_in = (((m1stg_step && (! reset)) && inq_mul) || (((! m6stg_step) && (! reset)) && m1stg_mul));
+	assign m1stg_mul_in = (((m1stg_step &amp;&amp; (! reset)) &amp;&amp; inq_mul) || (((! m6stg_step) &amp;&amp; (! reset)) &amp;&amp; m1stg_mul));
 	dff_s #(1) i_m1stg_mul(
 		.din(m1stg_mul_in),
 		.clk(rclk),
@@ -982,7 +982,7 @@ module fpu_mul_ctl (
 	assign m5stg_fmul = m5stg_opdec[4];
 	assign m5stg_fmuls = m5stg_opdec[2];
 	assign m5stg_fmuld = m5stg_opdec[1];
-	assign m6stg_fmul_in = (((m6stg_stepa && (! reset)) && m5stg_fmul) || (((! m6stg_stepa) && (! reset)) && m6stg_fmul));
+	assign m6stg_fmul_in = (((m6stg_stepa &amp;&amp; (! reset)) &amp;&amp; m5stg_fmul) || (((! m6stg_stepa) &amp;&amp; (! reset)) &amp;&amp; m6stg_fmul));
 	dffre_s #(3) i_m6stg_opdec(
 		.din(m5stg_opdec[4:2]),
 		.en(m6stg_step),
@@ -993,7 +993,7 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m6stg_id_in[9:0] = (({10 {m6stg_stepa}} & {(m5stg_id[4:2] == 3'o7), (m5stg_id[4:2] == 3'o6), (m5stg_id[4:2] == 3'o5), (m5stg_id[4:2] == 3'o4), (m5stg_id[4:2] == 3'o3), (m5stg_id[4:2] == 3'o2), (m5stg_id[4:2] == 3'o1), (m5stg_id[4:2] == 3'o0), m5stg_id[1:0]}) | ({10 {(! m6stg_stepa)}} & m6stg_id[9:0]));
+	assign m6stg_id_in[9:0] = (({10 {m6stg_stepa}} &amp; {(m5stg_id[4:2] == 3&#39;o7), (m5stg_id[4:2] == 3&#39;o6), (m5stg_id[4:2] == 3&#39;o5), (m5stg_id[4:2] == 3&#39;o4), (m5stg_id[4:2] == 3&#39;o3), (m5stg_id[4:2] == 3&#39;o2), (m5stg_id[4:2] == 3&#39;o1), (m5stg_id[4:2] == 3&#39;o0), m5stg_id[1:0]}) | ({10 {(! m6stg_stepa)}} &amp; m6stg_id[9:0]));
 	dffe_s #(10) i_m6stg_id(
 		.din(m6stg_id_in[9:0]),
 		.en(m6stg_step),
@@ -1006,14 +1006,14 @@ module fpu_mul_ctl (
 	assign m6stg_fmul = m6stg_opdec[4];
 	assign m6stg_fmul_dbl_dst = m6stg_opdec[3];
 	assign m6stg_fmuls = m6stg_opdec[2];
-	assign m6stg_hold = (m6stg_fmul && (! mul_dest_rdy));
-	assign m6stg_holda = (m6stg_fmul && (! mul_dest_rdya));
+	assign m6stg_hold = (m6stg_fmul &amp;&amp; (! mul_dest_rdy));
+	assign m6stg_holda = (m6stg_fmul &amp;&amp; (! mul_dest_rdya));
 	assign m6stg_step = (! m6stg_hold);
 	assign m6stg_stepa = (! m6stg_holda);
 	assign mul_pipe_active_in = (((((((m1stg_fmul || m2stg_fmul) || m3astg_opdec[4]) || m3bstg_opdec[4]) || m3stg_fmul) || m4stg_fmul) || m5stg_fmul) || m6stg_fmul);
 	dffre_s #(1) i_mul_pipe_active(
 		.din(mul_pipe_active_in),
-		.en(1'b1),
+		.en(1&#39;b1),
 		.rst(reset),
 		.clk(rclk),
 		.q(mul_pipe_active),
@@ -1067,7 +1067,7 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m2stg_sign = ((((m2stg_sign1 && (! m2stg_snan_in2)) && (! (m2stg_qnan_in2 && (! m2stg_snan_in1)))) ^ ((m2stg_sign2 && (! (m2stg_snan_in1 && (! m2stg_snan_in2)))) && (! (m2stg_qnan_in1 && (! m2stg_nan_in2))))) && (! (m2stg_inf_in && m2stg_zero_in)));
+	assign m2stg_sign = ((((m2stg_sign1 &amp;&amp; (! m2stg_snan_in2)) &amp;&amp; (! (m2stg_qnan_in2 &amp;&amp; (! m2stg_snan_in1)))) ^ ((m2stg_sign2 &amp;&amp; (! (m2stg_snan_in1 &amp;&amp; (! m2stg_snan_in2)))) &amp;&amp; (! (m2stg_qnan_in1 &amp;&amp; (! m2stg_nan_in2))))) &amp;&amp; (! (m2stg_inf_in &amp;&amp; m2stg_zero_in)));
 	dffe_s #(1) i_m3astg_sign(
 		.din(m2stg_sign),
 		.en(m6stg_step),
@@ -1077,7 +1077,7 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m2stg_nv = (((m2stg_snan_in1 || m2stg_snan_in2) || (m2stg_zero_in1 && m2stg_inf_in2)) || (m2stg_inf_in1 && m2stg_zero_in2));
+	assign m2stg_nv = (((m2stg_snan_in1 || m2stg_snan_in2) || (m2stg_zero_in1 &amp;&amp; m2stg_inf_in2)) || (m2stg_inf_in1 &amp;&amp; m2stg_zero_in2));
 	dffe_s #(1) i_m3astg_nv(
 		.din(m2stg_nv),
 		.en(m6stg_step),
@@ -1222,8 +1222,8 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m5stg_in_of = (((((! m5stg_exp[12]) && m5stg_fmuld) && (m5stg_exp[11] || (& m5stg_exp[10:0]))) && m5stg_of_mask) || ((((! m5stg_exp[12]) && m5stg_fmuls) && ((| m5stg_exp[11:8]) || (& m5stg_exp[7:0]))) && m5stg_of_mask));
-	assign mul_of_out_tmp1_in = ((((((! m5stg_exp[12]) && m5stg_fmuld) && (& m5stg_exp[10:1])) && m5stg_rndup) && m5stg_of_mask) || (((((! m5stg_exp[12]) && m5stg_fmuls) && (& m5stg_exp[7:1])) && m5stg_rndup) && m5stg_of_mask));
+	assign m5stg_in_of = (((((! m5stg_exp[12]) &amp;&amp; m5stg_fmuld) &amp;&amp; (m5stg_exp[11] || (&amp; m5stg_exp[10:0]))) &amp;&amp; m5stg_of_mask) || ((((! m5stg_exp[12]) &amp;&amp; m5stg_fmuls) &amp;&amp; ((| m5stg_exp[11:8]) || (&amp; m5stg_exp[7:0]))) &amp;&amp; m5stg_of_mask));
+	assign mul_of_out_tmp1_in = ((((((! m5stg_exp[12]) &amp;&amp; m5stg_fmuld) &amp;&amp; (&amp; m5stg_exp[10:1])) &amp;&amp; m5stg_rndup) &amp;&amp; m5stg_of_mask) || (((((! m5stg_exp[12]) &amp;&amp; m5stg_fmuls) &amp;&amp; (&amp; m5stg_exp[7:1])) &amp;&amp; m5stg_rndup) &amp;&amp; m5stg_of_mask));
 	dffe_s #(1) i_mul_of_out_tmp1(
 		.din(mul_of_out_tmp1_in),
 		.en(m6stg_step),
@@ -1251,8 +1251,8 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign mul_of_out = (mul_of_out_tmp2 || (mul_of_out_tmp1 && mul_of_out_cout));
-	assign mul_uf_out_in = ((m5stg_exp[12] || (! (| m5stg_exp[11:0]))) && m5stg_frac_neq_0);
+	assign mul_of_out = (mul_of_out_tmp2 || (mul_of_out_tmp1 &amp;&amp; mul_of_out_cout));
+	assign mul_uf_out_in = ((m5stg_exp[12] || (! (| m5stg_exp[11:0]))) &amp;&amp; m5stg_frac_neq_0);
 	dffe_s #(1) i_mul_uf_out(
 		.din(mul_uf_out_in),
 		.en(m6stg_step),
@@ -1262,7 +1262,7 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign mul_nx_out_in = ((m5stg_fmuld && m5stg_frac_dbl_nx) || (m5stg_fmuls && m5stg_frac_sng_nx));
+	assign mul_nx_out_in = ((m5stg_fmuld &amp;&amp; m5stg_frac_dbl_nx) || (m5stg_fmuls &amp;&amp; m5stg_frac_sng_nx));
 	dffe_s #(1) i_mul_nx_out(
 		.din(mul_nx_out_in),
 		.en(m6stg_step),
@@ -1272,20 +1272,20 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign mul_exc_out[4:0] = {mul_nv_out, mul_of_out, mul_uf_out, 1'b0, (mul_nx_out || mul_of_out)};
-	assign m2stg_frac1_dbl_norm = (m1stg_norm_dbl_in1 && (((! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)) || (m1stg_snan_dbl_in1 && (! m1stg_snan_dbl_in2))) || (m1stg_qnan_dbl_in1 && (! m1stg_nan_dbl_in2))));
-	assign m2stg_frac1_dbl_dnrm = (m1stg_denorm_dbl_in1 && (! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)));
-	assign m2stg_frac1_sng_norm = (m1stg_norm_sng_in1 && (((! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)) || (m1stg_snan_sng_in1 && (! m1stg_snan_sng_in2))) || (m1stg_qnan_sng_in1 && (! m1stg_nan_sng_in2))));
-	assign m2stg_frac1_sng_dnrm = (m1stg_denorm_sng_in1 && (! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)));
-	assign m2stg_frac1_inf = ((((m1stg_inf_in && (! m1stg_nan_in1)) && (! m1stg_nan_in2)) || m1stg_snan_in2) || (m1stg_qnan_in2 && (! m1stg_snan_in1)));
-	assign m2stg_frac2_dbl_norm = (m1stg_norm_dbl_in2 && (((! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)) || m1stg_snan_dbl_in2) || (m1stg_qnan_dbl_in2 && (! m1stg_snan_dbl_in1))));
-	assign m2stg_frac2_dbl_dnrm = (m1stg_denorm_dbl_in2 && (! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)));
-	assign m2stg_frac2_sng_norm = (m1stg_norm_sng_in2 && (((! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)) || m1stg_snan_sng_in2) || (m1stg_qnan_sng_in2 && (! m1stg_snan_sng_in1))));
-	assign m2stg_frac2_sng_dnrm = (m1stg_denorm_sng_in2 && (! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)));
-	assign m2stg_frac2_inf = ((((m1stg_inf_in && (! m1stg_nan_in1)) && (! m1stg_nan_in2)) || (m1stg_snan_in1 && (! m1stg_snan_in2))) || (m1stg_qnan_in1 && (! m1stg_nan_in2)));
-	assign m1stg_inf_zero_in = ((m1stg_inf_in1 && m1stg_zero_in2) || (m1stg_zero_in1 && m1stg_inf_in2));
-	assign m1stg_inf_zero_in_dbl = (((m1stg_inf_in1 && m1stg_zero_in2) || (m1stg_zero_in1 && m1stg_inf_in2)) && m1stg_fmul_dbl_dst);
-	assign m2stg_ld0_1_in[5:0] = ({6 {(m1stg_denorm_in1 && (! m1stg_infnan_in))}} & m1stg_ld0_1[5:0]);
+	assign mul_exc_out[4:0] = {mul_nv_out, mul_of_out, mul_uf_out, 1&#39;b0, (mul_nx_out || mul_of_out)};
+	assign m2stg_frac1_dbl_norm = (m1stg_norm_dbl_in1 &amp;&amp; (((! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)) || (m1stg_snan_dbl_in1 &amp;&amp; (! m1stg_snan_dbl_in2))) || (m1stg_qnan_dbl_in1 &amp;&amp; (! m1stg_nan_dbl_in2))));
+	assign m2stg_frac1_dbl_dnrm = (m1stg_denorm_dbl_in1 &amp;&amp; (! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)));
+	assign m2stg_frac1_sng_norm = (m1stg_norm_sng_in1 &amp;&amp; (((! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)) || (m1stg_snan_sng_in1 &amp;&amp; (! m1stg_snan_sng_in2))) || (m1stg_qnan_sng_in1 &amp;&amp; (! m1stg_nan_sng_in2))));
+	assign m2stg_frac1_sng_dnrm = (m1stg_denorm_sng_in1 &amp;&amp; (! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)));
+	assign m2stg_frac1_inf = ((((m1stg_inf_in &amp;&amp; (! m1stg_nan_in1)) &amp;&amp; (! m1stg_nan_in2)) || m1stg_snan_in2) || (m1stg_qnan_in2 &amp;&amp; (! m1stg_snan_in1)));
+	assign m2stg_frac2_dbl_norm = (m1stg_norm_dbl_in2 &amp;&amp; (((! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)) || m1stg_snan_dbl_in2) || (m1stg_qnan_dbl_in2 &amp;&amp; (! m1stg_snan_dbl_in1))));
+	assign m2stg_frac2_dbl_dnrm = (m1stg_denorm_dbl_in2 &amp;&amp; (! (m1stg_infnan_dbl_in1 || m1stg_infnan_dbl_in2)));
+	assign m2stg_frac2_sng_norm = (m1stg_norm_sng_in2 &amp;&amp; (((! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)) || m1stg_snan_sng_in2) || (m1stg_qnan_sng_in2 &amp;&amp; (! m1stg_snan_sng_in1))));
+	assign m2stg_frac2_sng_dnrm = (m1stg_denorm_sng_in2 &amp;&amp; (! (m1stg_infnan_sng_in1 || m1stg_infnan_sng_in2)));
+	assign m2stg_frac2_inf = ((((m1stg_inf_in &amp;&amp; (! m1stg_nan_in1)) &amp;&amp; (! m1stg_nan_in2)) || (m1stg_snan_in1 &amp;&amp; (! m1stg_snan_in2))) || (m1stg_qnan_in1 &amp;&amp; (! m1stg_nan_in2)));
+	assign m1stg_inf_zero_in = ((m1stg_inf_in1 &amp;&amp; m1stg_zero_in2) || (m1stg_zero_in1 &amp;&amp; m1stg_inf_in2));
+	assign m1stg_inf_zero_in_dbl = (((m1stg_inf_in1 &amp;&amp; m1stg_zero_in2) || (m1stg_zero_in1 &amp;&amp; m1stg_inf_in2)) &amp;&amp; m1stg_fmul_dbl_dst);
+	assign m2stg_ld0_1_in[5:0] = ({6 {(m1stg_denorm_in1 &amp;&amp; (! m1stg_infnan_in))}} &amp; m1stg_ld0_1[5:0]);
 	dffe_s #(6) i_m2stg_ld0_1(
 		.din(m2stg_ld0_1_in[5:0]),
 		.en(m6stg_step),
@@ -1295,7 +1295,7 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m2stg_ld0_2_in[5:0] = ({6 {(m1stg_denorm_in2 && (! m1stg_infnan_in))}} & m1stg_ld0_2[5:0]);
+	assign m2stg_ld0_2_in[5:0] = ({6 {(m1stg_denorm_in2 &amp;&amp; (! m1stg_infnan_in))}} &amp; m1stg_ld0_2[5:0]);
 	dffe_s #(6) i_m2stg_ld0_2(
 		.din(m2stg_ld0_2_in[5:0]),
 		.en(m6stg_step),
@@ -1305,12 +1305,12 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m2stg_exp_expadd = ((! m1stg_infnan_in) && (! m1stg_zero_in));
-	assign m2stg_exp_0bff = (m1stg_fmuld && m1stg_infnan_in);
-	assign m2stg_exp_017f = (m1stg_fmuls && m1stg_infnan_in);
-	assign m2stg_exp_04ff = (m1stg_fsmuld && m1stg_infnan_in);
-	assign m2stg_exp_zero = (m1stg_zero_in && (! m1stg_infnan_in));
-	assign m2stg_ld0[6:0] = ({1'b0, m2stg_ld0_1[5:0]} + {1'b0, m2stg_ld0_2[5:0]});
+	assign m2stg_exp_expadd = ((! m1stg_infnan_in) &amp;&amp; (! m1stg_zero_in));
+	assign m2stg_exp_0bff = (m1stg_fmuld &amp;&amp; m1stg_infnan_in);
+	assign m2stg_exp_017f = (m1stg_fmuls &amp;&amp; m1stg_infnan_in);
+	assign m2stg_exp_04ff = (m1stg_fsmuld &amp;&amp; m1stg_infnan_in);
+	assign m2stg_exp_zero = (m1stg_zero_in &amp;&amp; (! m1stg_infnan_in));
+	assign m2stg_ld0[6:0] = ({1&#39;b0, m2stg_ld0_1[5:0]} + {1&#39;b0, m2stg_ld0_2[5:0]});
 	assign m2stg_ld0_inv[6:0] = (~ m2stg_ld0[6:0]);
 	dffe_s #(7) i_m3astg_ld0_inv(
 		.din(m2stg_ld0_inv[6:0]),
@@ -1340,7 +1340,7 @@ module fpu_mul_ctl (
 		.so()
 	);
 	assign m3stg_exp_lte_0 = ((! (| m3stg_exp[11:0])) || m3stg_exp[12]);
-	assign m4stg_right_shift_in = ((! m3stg_expadd_lte_0_inv) && m3stg_exp_lte_0);
+	assign m4stg_right_shift_in = ((! m3stg_expadd_lte_0_inv) &amp;&amp; m3stg_exp_lte_0);
 	dffe_s #(1) i_m4stg_right_shift(
 		.din(m4stg_right_shift_in),
 		.en(m6stg_step),
@@ -1350,22 +1350,22 @@ module fpu_mul_ctl (
 		.si(),
 		.so()
 	);
-	assign m3stg_exp_minus1[5:0] = (m3stg_exp[5:0] + 6'h3f);
-	assign m3stg_exp_inv_plus2[5:0] = ((~ m3stg_exp[5:0]) + 6'h02);
-	assign m3stg_exp_lt_neg57 = (((! (& m3stg_exp[11:6])) || (! (| m3stg_exp[5:3]))) && m3stg_exp[12]);
-	assign m4stg_sh_cnt_in[5:0] = (((({6 {((! m3stg_expadd_lte_0_inv) && (! m3stg_exp_lte_0))}} & m3stg_exp_minus1[5:0]) | ({6 {(((! m3stg_expadd_lte_0_inv) && m3stg_exp_lte_0) && m3stg_exp_lt_neg57)}} & 6'h39)) | ({6 {(((! m3stg_expadd_lte_0_inv) && m3stg_exp_lte_0) && (! m3stg_exp_lt_neg57))}} & m3stg_exp_inv_plus2[5:0])) | ({6 {m3stg_expadd_lte_0_inv}} & (~ m3stg_ld0_inv[5:0])));
-	assign m4stg_left_shift_step = ((! m4stg_right_shift) && m6stg_step);
-	assign m4stg_right_shift_step = (m4stg_right_shift && m6stg_step);
-	assign m4stg_inc_exp_54 = ((! (| m4stg_exp[12:0])) && (! m4stg_right_shift));
+	assign m3stg_exp_minus1[5:0] = (m3stg_exp[5:0] + 6&#39;h3f);
+	assign m3stg_exp_inv_plus2[5:0] = ((~ m3stg_exp[5:0]) + 6&#39;h02);
+	assign m3stg_exp_lt_neg57 = (((! (&amp; m3stg_exp[11:6])) || (! (| m3stg_exp[5:3]))) &amp;&amp; m3stg_exp[12]);
+	assign m4stg_sh_cnt_in[5:0] = (((({6 {((! m3stg_expadd_lte_0_inv) &amp;&amp; (! m3stg_exp_lte_0))}} &amp; m3stg_exp_minus1[5:0]) | ({6 {(((! m3stg_expadd_lte_0_inv) &amp;&amp; m3stg_exp_lte_0) &amp;&amp; m3stg_exp_lt_neg57)}} &amp; 6&#39;h39)) | ({6 {(((! m3stg_expadd_lte_0_inv) &amp;&amp; m3stg_exp_lte_0) &amp;&amp; (! m3stg_exp_lt_neg57))}} &amp; m3stg_exp_inv_plus2[5:0])) | ({6 {m3stg_expadd_lte_0_inv}} &amp; (~ m3stg_ld0_inv[5:0])));
+	assign m4stg_left_shift_step = ((! m4stg_right_shift) &amp;&amp; m6stg_step);
+	assign m4stg_right_shift_step = (m4stg_right_shift &amp;&amp; m6stg_step);
+	assign m4stg_inc_exp_54 = ((! (| m4stg_exp[12:0])) &amp;&amp; (! m4stg_right_shift));
 	assign m4stg_inc_exp_55 = (! m4stg_right_shift);
-	assign m4stg_inc_exp_105 = ((m4stg_expadd_eq_0 && m4stg_right_shift) && m4stg_frac_105);
-	assign m5stg_rndup = (((((((m5stg_rnd_mode[1:0] == 2'b10) && (! m5stg_sign)) && (m5stg_frac[2:0] != 3'b0)) || (((m5stg_rnd_mode[1:0] == 2'b11) && m5stg_sign) && (m5stg_frac[2:0] != 3'b0))) || (((m5stg_rnd_mode[1:0] == 2'b00) && m5stg_frac[2]) && ((m5stg_frac[1:0] != 2'b0) || m5stg_frac[3]))) && m5stg_fmuld) || ((((((m5stg_rnd_mode[1:0] == 2'b10) && (! m5stg_sign)) && (m5stg_frac[31:0] != 32'b0)) || (((m5stg_rnd_mode[1:0] == 2'b11) && m5stg_sign) && (m5stg_frac[31:0] != 32'b0))) || (((m5stg_rnd_mode[1:0] == 2'b00) && m5stg_frac[31]) && ((m5stg_frac[30:0] != 31'b0) || m5stg_frac[32]))) && m5stg_fmuls));
-	assign m5stg_to_0 = (((m5stg_rnd_mode[1:0] == 2'b01) || ((m5stg_rnd_mode[1:0] == 2'b10) && m5stg_sign)) || ((m5stg_rnd_mode[1:0] == 2'b11) && (! m5stg_sign)));
+	assign m4stg_inc_exp_105 = ((m4stg_expadd_eq_0 &amp;&amp; m4stg_right_shift) &amp;&amp; m4stg_frac_105);
+	assign m5stg_rndup = (((((((m5stg_rnd_mode[1:0] == 2&#39;b10) &amp;&amp; (! m5stg_sign)) &amp;&amp; (m5stg_frac[2:0] != 3&#39;b0)) || (((m5stg_rnd_mode[1:0] == 2&#39;b11) &amp;&amp; m5stg_sign) &amp;&amp; (m5stg_frac[2:0] != 3&#39;b0))) || (((m5stg_rnd_mode[1:0] == 2&#39;b00) &amp;&amp; m5stg_frac[2]) &amp;&amp; ((m5stg_frac[1:0] != 2&#39;b0) || m5stg_frac[3]))) &amp;&amp; m5stg_fmuld) || ((((((m5stg_rnd_mode[1:0] == 2&#39;b10) &amp;&amp; (! m5stg_sign)) &amp;&amp; (m5stg_frac[31:0] != 32&#39;b0)) || (((m5stg_rnd_mode[1:0] == 2&#39;b11) &amp;&amp; m5stg_sign) &amp;&amp; (m5stg_frac[31:0] != 32&#39;b0))) || (((m5stg_rnd_mode[1:0] == 2&#39;b00) &amp;&amp; m5stg_frac[31]) &amp;&amp; ((m5stg_frac[30:0] != 31&#39;b0) || m5stg_frac[32]))) &amp;&amp; m5stg_fmuls));
+	assign m5stg_to_0 = (((m5stg_rnd_mode[1:0] == 2&#39;b01) || ((m5stg_rnd_mode[1:0] == 2&#39;b10) &amp;&amp; m5stg_sign)) || ((m5stg_rnd_mode[1:0] == 2&#39;b11) &amp;&amp; (! m5stg_sign)));
 	assign m5stg_to_0_inv = (! m5stg_to_0);
-	assign mul_frac_out_fracadd = (m5stg_rndup && (! m5stg_in_of));
-	assign mul_frac_out_frac = ((! m5stg_rndup) && (! m5stg_in_of));
-	assign mul_exp_out_exp_plus1 = (m5stg_rndup && (! m5stg_in_of));
-	assign mul_exp_out_exp = ((! m5stg_rndup) && (! m5stg_in_of));
+	assign mul_frac_out_fracadd = (m5stg_rndup &amp;&amp; (! m5stg_in_of));
+	assign mul_frac_out_frac = ((! m5stg_rndup) &amp;&amp; (! m5stg_in_of));
+	assign mul_exp_out_exp_plus1 = (m5stg_rndup &amp;&amp; (! m5stg_in_of));
+	assign mul_exp_out_exp = ((! m5stg_rndup) &amp;&amp; (! m5stg_in_of));
 endmodule
 
 

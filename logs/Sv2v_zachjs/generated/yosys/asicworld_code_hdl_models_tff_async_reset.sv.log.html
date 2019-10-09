@@ -22,10 +22,10 @@ module tff_async_reset (
 	output q;
 	reg q;
 	always @(posedge clk or negedge reset) if ((~ reset)) begin
-		q <= 1'b0;
+		q &lt;= 1&#39;b0;
 	end
 	else if (data) begin
-		q <= (! q);
+		q &lt;= (! q);
 	end
 endmodule
 

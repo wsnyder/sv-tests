@@ -23,10 +23,10 @@ byte o_data[];
 	i_data = new[5];
 	         ^~~~~~
 ../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-27" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:27</a>:8: error: language feature not yet supported
-	pkt = {<< byte{i_header, i_len, i_data, i_crc}};
+	pkt = {&lt;&lt; byte{i_header, i_len, i_data, i_crc}};
 	      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-29" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:29</a>:2: error: language feature not yet supported
-	{<< byte{o_header, o_len, o_data with [0 +: o_len], o_crc}} = pkt;
+	{&lt;&lt; byte{o_header, o_len, o_data with [0 +: o_len], o_crc}} = pkt;
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

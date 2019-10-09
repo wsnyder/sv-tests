@@ -17,10 +17,10 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-5/5.13-builtin-methods-strings.sv.html" target="file-frame">tests/chapter-5/5.13-builtin-methods-strings.sv</a>::1 File (<a href="../../../tests/chapter-5/5.13-builtin-methods-strings.sv.html" target="file-frame">tests/chapter-5/5.13-builtin-methods-strings.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../tests/chapter-5/5.13-builtin-methods-strings.sv.html" target="file-frame">tests/chapter-5/5.13-builtin-methods-strings.sv</a>::8 error in parsing: (syntax error, unexpected '=', expecting '(')
-  string a = "test";
-PARSE_ERROR <a href="../../../tests/chapter-5/5.13-builtin-methods-strings.sv.html" target="file-frame">tests/chapter-5/5.13-builtin-methods-strings.sv</a>::11 error in parsing: (syntax error, unexpected ')')
-    $display("length check: %d\n", a.len());
+PARSE_ERROR <a href="../../../tests/chapter-5/5.13-builtin-methods-strings.sv.html" target="file-frame">tests/chapter-5/5.13-builtin-methods-strings.sv</a>::8 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
+  string a = &#34;test&#34;;
+PARSE_ERROR <a href="../../../tests/chapter-5/5.13-builtin-methods-strings.sv.html" target="file-frame">tests/chapter-5/5.13-builtin-methods-strings.sv</a>::11 error in parsing: (syntax error, unexpected &#39;)&#39;)
+    $display(&#34;length check: %d\n&#34;, a.len());
 ERROR (5)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

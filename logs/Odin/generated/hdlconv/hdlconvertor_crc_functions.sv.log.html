@@ -17,21 +17,21 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::1 File (<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::5 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(' or ';')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::5 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39; or &#39;;&#39;)
 function byte calc_crc(byte unsigned cmd[]);
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::7 error in parsing: (syntax error, unexpected ';', expecting '(')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::7 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
     int i;
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::10 error in parsing: (syntax error, unexpected ')')
-    for (i=0; i<cmd.size(); i++) begin
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::28 error in parsing: (syntax error, unexpected '[', expecting '(' or ';')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::10 error in parsing: (syntax error, unexpected &#39;)&#39;)
+    for (i=0; i&lt;cmd.size(); i++) begin
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::28 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting &#39;(&#39; or &#39;;&#39;)
 function automatic bit[31:0] genCRC32(input bit [7:0] databyte_stream[]);
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::29 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::29 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
     int unsigned i, j;
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::34 error in parsing: (syntax error, unexpected '+', expecting '=')
-    for (i = 0; i < databyte_stream.size; i++)  // Byte-Stream
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::37 error in parsing: (syntax error, unexpected '+', expecting '=')
-        for (j=0; j < 8; j++) // Bitwise from LSB to MSB
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::48 error in parsing: (syntax error, unexpected ';', expecting '(')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::34 error in parsing: (syntax error, unexpected &#39;+&#39;, expecting &#39;=&#39;)
+    for (i = 0; i &lt; databyte_stream.size; i++)  // Byte-Stream
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::37 error in parsing: (syntax error, unexpected &#39;+&#39;, expecting &#39;=&#39;)
+        for (j=0; j &lt; 8; j++) // Bitwise from LSB to MSB
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/others/crc_functions.sv</a>::48 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
     return crc32_val;
 ERROR (11)::NETLIST_ERROR Could not find a top level module
 

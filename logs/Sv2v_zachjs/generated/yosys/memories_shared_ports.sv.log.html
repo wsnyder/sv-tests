@@ -34,10 +34,10 @@ module test (
 	output reg [31:0] rd_data;
 	reg [511:0] mem;
 	always @(posedge clk) begin
-		if (wr_en1) mem[((15 - wr_addr1) * 32)+:16] <= wr_data;
-		else if (wr_en2) mem[(((15 - wr_addr2) * 32) + 8)+:16] <= wr_data;
-		else if (wr_en3) mem[(((15 - wr_addr3) * 32) + 16)+:16] <= wr_data;
-		rd_data <= mem[((15 - rd_addr) * 32)+:32];
+		if (wr_en1) mem[((15 - wr_addr1) * 32)+:16] &lt;= wr_data;
+		else if (wr_en2) mem[(((15 - wr_addr2) * 32) + 8)+:16] &lt;= wr_data;
+		else if (wr_en3) mem[(((15 - wr_addr3) * 32) + 16)+:16] &lt;= wr_data;
+		rd_data &lt;= mem[((15 - rd_addr) * 32)+:32];
 	end
 endmodule
 

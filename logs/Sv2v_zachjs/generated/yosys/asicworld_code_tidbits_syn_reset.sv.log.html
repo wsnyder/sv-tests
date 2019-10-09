@@ -24,11 +24,11 @@ module syn_reset (
 	wire reset;
 	wire a;
 	reg c;
-	always @(posedge clk) if ((reset == 1'b1)) begin
-		c <= 0;
+	always @(posedge clk) if ((reset == 1&#39;b1)) begin
+		c &lt;= 0;
 	end
 	else begin
-		c <= a;
+		c &lt;= a;
 	end
 endmodule
 

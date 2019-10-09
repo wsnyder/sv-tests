@@ -20,37 +20,37 @@ files: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" t
 	default disable iff (reset);
 	^~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-14" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:14</a>:2: error: language feature not yet supported
-	assert property (up |=> cnt == $past(cnt) + 8'd 1);
+	assert property (up |=&gt; cnt == $past(cnt) + 8&#39;d 1);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-15" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:15</a>:2: error: language feature not yet supported
-	assert property (up [*2] |=> cnt == $past(cnt, 2) + 8'd 2);
+	assert property (up [*2] |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-15" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:15</a>:23: error: expected expression
-	assert property (up [*2] |=> cnt == $past(cnt, 2) + 8'd 2);
+	assert property (up [*2] |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
 	                     ^
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-16" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:16</a>:2: error: language feature not yet supported
-	assert property (up ##1 up |=> cnt == $past(cnt, 2) + 8'd 2);
+	assert property (up ##1 up |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-19" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:19</a>:2: error: language feature not yet supported
-	assume property (down |-> !up);
+	assume property (down |-&gt; !up);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-21" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:21</a>:2: error: language feature not yet supported
-	assert property (up ##1 down |=> cnt == $past(cnt, 2));
+	assert property (up ##1 down |=&gt; cnt == $past(cnt, 2));
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-22" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:22</a>:2: error: language feature not yet supported
-	assert property (down |=> cnt == $past(cnt) - 8'd 1);
+	assert property (down |=&gt; cnt == $past(cnt) - 8&#39;d 1);
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-24" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:24</a>:2: error: language feature not yet supported
 	property down_n(n);
 	^~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-25" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:25</a>:9: error: expected expression
-		down [*n] |=> cnt == $past(cnt, n) - n;
+		down [*n] |=&gt; cnt == $past(cnt, n) - n;
 		      ^
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-28" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:28</a>:2: error: language feature not yet supported
-	assert property (down_n(8'd 3));
+	assert property (down_n(8&#39;d 3));
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-29" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:29</a>:2: error: language feature not yet supported
-	assert property (down_n(8'd 5));
+	assert property (down_n(8&#39;d 5));
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

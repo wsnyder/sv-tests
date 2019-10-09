@@ -2,7 +2,7 @@
 <h3>
 <a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
 </h3>
-description: A module testing return <expr> statement
+description: A module testing return &lt;expr&gt; statement
 should_fail: 0
 tags: 12.8
 incdirs: 
@@ -18,7 +18,7 @@ module jump_tb;
 	initial begin
 		begin : sv2v_autoblock_0
 			reg signed [31:0] i;
-			for (i = 0; (i < 256); i = (i + 1))
+			for (i = 0; (i &lt; 256); i = (i + 1))
 				begin
 					$display(fun(i));
 				end

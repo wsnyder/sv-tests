@@ -17,16 +17,16 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::1 File (<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::2 error in parsing: (syntax error, unexpected '{', expecting '(')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::2 error in parsing: (syntax error, unexpected &#39;{&#39;, expecting &#39;(&#39;)
 typedef enum {ON, OFF} switch_e;
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::3 error in parsing: (syntax error, unexpected '{', expecting '(')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::3 error in parsing: (syntax error, unexpected &#39;{&#39;, expecting &#39;(&#39;)
 typedef struct {switch_e sw; string s;} pair_t;
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::3 error in parsing: (syntax error, unexpected ';', expecting '(')
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::3 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
 typedef struct {switch_e sw; string s;} pair_t;
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::4 error in parsing: (syntax error, unexpected '[', expecting '(')
-pair_t va[int] = '{10:'{OFF, "switch10"}, 20:'{ON, "switch20"}};
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::8 error in parsing: (syntax error, unexpected '.', expecting ')')
-$display("va[10].s = %p;", va[10].s);
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::4 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting &#39;(&#39;)
+pair_t va[int] = &#39;{10:&#39;{OFF, &#34;switch10&#34;}, 20:&#39;{ON, &#34;switch20&#34;}};
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv</a>::8 error in parsing: (syntax error, unexpected &#39;.&#39;, expecting &#39;)&#39;)
+$display(&#34;va[10].s = %p;&#34;, va[10].s);
 ERROR (8)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

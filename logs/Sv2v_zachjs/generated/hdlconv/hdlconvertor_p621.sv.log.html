@@ -37,7 +37,7 @@ module async_array (
 	wire b2;
 	wire b3;
 	initial begin
-		$readmemb("array.dat", mem);
+		$readmemb(&#34;array.dat&#34;, mem);
 		$async$and$array(mem, {a1, a2, a3, a4, a5, a6, a7}, {b1, b2, b3});
 	end
 endmodule

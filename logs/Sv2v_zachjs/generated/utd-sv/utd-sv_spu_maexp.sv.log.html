@@ -66,10 +66,10 @@ module spu_maexp (
 	wire tr2esmax_frm_echk;
 	wire cur_rde_state;
 	wire local_stxa_abort;
-	wire spu_maexp_done_wen = (((spu_maexp_exp_done | spu_mactl_kill_op) | local_stxa_abort) & spu_mactl_expop);
+	wire spu_maexp_done_wen = (((spu_maexp_exp_done | spu_mactl_kill_op) | local_stxa_abort) &amp; spu_mactl_expop);
 	wire spu_maexp_done_rst = (reset | spu_mactl_iss_pulse_dly);
 	dffre_s #(1) spu_maexp_done_ff(
-		.din(1'b1),
+		.din(1&#39;b1),
 		.q(spu_maexp_done_set),
 		.en(spu_maexp_done_wen),
 		.rst(spu_maexp_done_rst),
@@ -78,9 +78,9 @@ module spu_maexp (
 		.si(),
 		.so()
 	);
-	assign local_stxa_abort = (spu_mared_red_done & spu_mactl_stxa_force_abort);
+	assign local_stxa_abort = (spu_mared_red_done &amp; spu_mactl_stxa_force_abort);
 	wire state_reset = (((reset | spu_maexp_exp_done) | spu_mactl_kill_op) | local_stxa_abort);
-	wire expop_start = (spu_mactl_iss_pulse_dly & spu_mactl_expop);
+	wire expop_start = (spu_mactl_iss_pulse_dly &amp; spu_mactl_expop);
 	dff_s #(1) idle_state_ff(
 		.din(nxt_idle_state),
 		.q(cur_idle_state),
@@ -134,21 +134,21 @@ module spu_maexp (
 		.si(),
 		.so()
 	);
-	assign tr2idle_frm_esmax = (spu_maaddr_esmax & cur_esmax_state);
+	assign tr2idle_frm_esmax = (spu_maaddr_esmax &amp; cur_esmax_state);
 	assign spu_maexp_exp_done = tr2idle_frm_esmax;
-	assign nxt_idle_state = ((state_reset | tr2idle_frm_esmax) | (cur_idle_state & (~ expop_start)));
-	assign tr2rde_frm_idle = (cur_idle_state & expop_start);
-	assign tr2rde_frm_esmax = ((cur_esmax_state & (~ spu_maaddr_esmax)) & spu_maaddr_esmod64);
+	assign nxt_idle_state = ((state_reset | tr2idle_frm_esmax) | (cur_idle_state &amp; (~ expop_start)));
+	assign tr2rde_frm_idle = (cur_idle_state &amp; expop_start);
+	assign tr2rde_frm_esmax = ((cur_esmax_state &amp; (~ spu_maaddr_esmax)) &amp; spu_maaddr_esmod64);
 	assign nxt_rde_state = (tr2rde_frm_idle | tr2rde_frm_esmax);
 	assign tr2gotomulred1_frm_rde = cur_rde_state;
-	assign tr2gotomulred1_frm_esmax = ((cur_esmax_state & (~ spu_maaddr_esmax)) & (~ spu_maaddr_esmod64));
-	assign nxt_gotomulred1_state = ((tr2gotomulred1_frm_rde | tr2gotomulred1_frm_esmax) | (cur_gotomulred1_state & (~ spu_mared_red_done)));
-	assign tr2echk_frm_gotomulred1 = (cur_gotomulred1_state & spu_mared_red_done);
+	assign tr2gotomulred1_frm_esmax = ((cur_esmax_state &amp; (~ spu_maaddr_esmax)) &amp; (~ spu_maaddr_esmod64));
+	assign nxt_gotomulred1_state = ((tr2gotomulred1_frm_rde | tr2gotomulred1_frm_esmax) | (cur_gotomulred1_state &amp; (~ spu_mared_red_done)));
+	assign tr2echk_frm_gotomulred1 = (cur_gotomulred1_state &amp; spu_mared_red_done);
 	assign nxt_echk_state = tr2echk_frm_gotomulred1;
-	assign tr2gotomulred2_frm_echk = (cur_echk_state & spu_madp_e_eq_one);
-	assign nxt_gotomulred2_state = (tr2gotomulred2_frm_echk | (cur_gotomulred2_state & (~ spu_mared_red_done)));
-	assign tr2esmax_frm_gotomulred2 = (cur_gotomulred2_state & spu_mared_red_done);
-	assign tr2esmax_frm_echk = (cur_echk_state & (~ spu_madp_e_eq_one));
+	assign tr2gotomulred2_frm_echk = (cur_echk_state &amp; spu_madp_e_eq_one);
+	assign nxt_gotomulred2_state = (tr2gotomulred2_frm_echk | (cur_gotomulred2_state &amp; (~ spu_mared_red_done)));
+	assign tr2esmax_frm_gotomulred2 = (cur_gotomulred2_state &amp; spu_mared_red_done);
+	assign tr2esmax_frm_echk = (cur_echk_state &amp; (~ spu_madp_e_eq_one));
 	assign nxt_esmax_state = (tr2esmax_frm_gotomulred2 | tr2esmax_frm_echk);
 	assign spu_maexp_e_rd_oprnd_sel = (tr2rde_frm_idle | tr2rde_frm_esmax);
 	assign spu_maexp_memren = spu_maexp_e_rd_oprnd_sel;

@@ -32,7 +32,7 @@ module task_func_test01 (
 		input reg [3:0] s1;
 		input reg [3:0] s2;
 		input reg [3:0] s3;
-		sum_shift = ((s1 + (s2 << 2)) + (s3 << 4));
+		sum_shift = ((s1 + (s2 &lt;&lt; 2)) + (s3 &lt;&lt; 4));
 	endfunction
 	task reset_w;
 		
@@ -46,7 +46,7 @@ module task_func_test01 (
 	always @(posedge clk) begin
 		x = sum_shift(a, b, c);
 		y = sum_shift(a[7:4], b[5:2], c[3:0]);
-		z = (sum_shift(a[0], b[5:4], (c >> 5)) ^ sum_shift(1, 2, 3));
+		z = (sum_shift(a[0], b[5:4], (c &gt;&gt; 5)) ^ sum_shift(1, 2, 3));
 		reset_w();
 		add_to(w, x);
 		add_to(w, y);
@@ -75,7 +75,7 @@ module task_func_test02 (
 		input reg [3:0] s1;
 		input reg [3:0] s2;
 		input reg [3:0] s3;
-		sum_shift = ((s1 + (s2 << 2)) + (s3 << 4));
+		sum_shift = ((s1 + (s2 &lt;&lt; 2)) + (s3 &lt;&lt; 4));
 	endfunction
 	task reset_w;
 		
@@ -89,7 +89,7 @@ module task_func_test02 (
 	always @(posedge clk) begin
 		x = sum_shift(a, b, c);
 		y = sum_shift(a[7:4], b[5:2], c[3:0]);
-		z = (sum_shift(a[0], b[5:4], (c >> 5)) ^ sum_shift(1, 2, 3));
+		z = (sum_shift(a[0], b[5:4], (c &gt;&gt; 5)) ^ sum_shift(1, 2, 3));
 		reset_w();
 		add_to(w, x);
 		add_to(w, y);
@@ -110,8 +110,8 @@ module task_func_test03 (
 		input reg [7:0] b;
 		begin : TEST
 			integer i;
-			for (i = 0; (i <= 7); i = (i + 1))
-				test[i] = (a[i] & b[i]);
+			for (i = 0; (i &lt;= 7); i = (i + 1))
+				test[i] = (a[i] &amp; b[i]);
 		end
 	endfunction
 endmodule

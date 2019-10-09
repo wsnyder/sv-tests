@@ -11,13 +11,13 @@ files: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" t
 
 
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>:2: error: language feature not yet supported
-	check_selA: assert property ( @(posedge clk) selA |=> Q == $past(QA) );
+	check_selA: assert property ( @(posedge clk) selA |=&gt; Q == $past(QA) );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:8</a>:2: error: language feature not yet supported
-	check_selB: assert property ( @(posedge clk) selB |=> Q == $past(QB) );
+	check_selB: assert property ( @(posedge clk) selB |=&gt; Q == $past(QB) );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:10</a>:2: error: language feature not yet supported
-	assume_not_11: assume property ( @(posedge clk) !(selA & selB) );
+	assume_not_11: assume property ( @(posedge clk) !(selA &amp; selB) );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

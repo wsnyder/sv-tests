@@ -63,28 +63,28 @@ module ctu_clsp_clkgn_clksel (
 		.presyncdata(mult_sel),
 		.syncdata(force_alt_clk_sync),
 		.arst_l(io_pwron_rst_l),
-		.aset_l(1'b1),
+		.aset_l(1&#39;b1),
 		.clk(sysclk)
 	);
 	ctu_clksel_async_synchronizer u_byp_mult_sel_sync(
 		.presyncdata(altclk_sync_pre),
 		.syncdata(altclk_sync_l),
 		.arst_l(io_pwron_rst_l),
-		.aset_l(1'b1),
+		.aset_l(1&#39;b1),
 		.clk(divbypclk)
 	);
 	ctu_clksel_async_synchronizer u_bypclk_sync(
 		.presyncdata(bypclk_sync_pre),
 		.syncdata(bypclk_sync),
 		.aset_l(io_pwron_rst_l),
-		.arst_l(1'b1),
+		.arst_l(1&#39;b1),
 		.clk(divbypclk)
 	);
 	ctu_clksel_async_synchronizer u_tck_sync(
 		.presyncdata(tck_sync_pre),
 		.syncdata(tck_sync),
 		.arst_l(io_pwron_rst_l),
-		.aset_l(1'b1),
+		.aset_l(1&#39;b1),
 		.clk(jtag_clock_dr)
 	);
 	assign mult_sel = (bypmode | nstepsel);

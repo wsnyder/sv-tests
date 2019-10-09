@@ -31,7 +31,7 @@ module fpu_in2_gt_in1_3to1 (
 	wire din2_neq_din1;
 	wire din2_gt_din1;
 	assign din2_neq_din1 = ((din2_neq_din1_hi || din2_neq_din1_mid) || din2_neq_din1_lo);
-	assign din2_gt_din1 = (((din2_neq_din1_hi && din2_gt_din1_hi) || (((! din2_neq_din1_hi) && din2_neq_din1_mid) && din2_gt_din1_mid)) || (((! din2_neq_din1_hi) && (! din2_neq_din1_mid)) && din2_gt_din1_lo));
+	assign din2_gt_din1 = (((din2_neq_din1_hi &amp;&amp; din2_gt_din1_hi) || (((! din2_neq_din1_hi) &amp;&amp; din2_neq_din1_mid) &amp;&amp; din2_gt_din1_mid)) || (((! din2_neq_din1_hi) &amp;&amp; (! din2_neq_din1_mid)) &amp;&amp; din2_gt_din1_lo));
 endmodule
 
 

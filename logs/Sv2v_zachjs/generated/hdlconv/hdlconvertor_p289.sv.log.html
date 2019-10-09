@@ -13,10 +13,10 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 module string_test;
 	reg [112:1] stringvar;
 	initial begin
-		stringvar = "Hello world";
-		$display("%s is stored as %h", stringvar, stringvar);
-		stringvar = {stringvar, "!!!"};
-		$display("%s is stored as %h", stringvar, stringvar);
+		stringvar = &#34;Hello world&#34;;
+		$display(&#34;%s is stored as %h&#34;, stringvar, stringvar);
+		stringvar = {stringvar, &#34;!!!&#34;};
+		$display(&#34;%s is stored as %h&#34;, stringvar, stringvar);
 	end
 endmodule
 

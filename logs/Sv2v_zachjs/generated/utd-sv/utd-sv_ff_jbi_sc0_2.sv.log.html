@@ -67,7 +67,7 @@ module ff_jbi_sc0_2 (
 		.q(jbi_sctag_req_d1[31:0]),
 		.din(jbi_sctag_req[31:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -75,7 +75,7 @@ module ff_jbi_sc0_2 (
 		.q(scbuf_jbi_data_d1[31:0]),
 		.din(scbuf_jbi_data[31:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -83,7 +83,7 @@ module ff_jbi_sc0_2 (
 		.q({jbi_scbuf_ecc_d1[6:0], jbi_sctag_req_vld_d1, scbuf_jbi_ctag_vld_d1, scbuf_jbi_ue_err_d1, sctag_jbi_iq_dequeue_d1, sctag_jbi_wib_dequeue_d1, sctag_jbi_por_req_d1}),
 		.din({jbi_scbuf_ecc[6:0], jbi_sctag_req_vld, scbuf_jbi_ctag_vld, scbuf_jbi_ue_err, sctag_jbi_iq_dequeue, sctag_jbi_wib_dequeue, sctag_jbi_por_req}),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);

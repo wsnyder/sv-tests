@@ -177,10 +177,10 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_sel_c2 = ((idx_c1c2comp_c1 & arbctl_inst_vld_c2) & (~ (decdp_inst_int_c1 | inst_int_c2)));
-	assign vuad_sel_c4 = ((idx_c1c4comp_c1 & inst_vld_c4) & (~ (decdp_inst_int_c1 | inst_int_c4)));
-	assign vuad_sel_c2orc3 = (((idx_c1c3comp_c1 & inst_vld_c3) & (~ (decdp_inst_int_c1 | inst_int_c3))) | vuad_sel_c2);
-	assign vuad_sel_wr = ((idx_c1c5comp_c1 & inst_vld_c5) & (~ (decdp_inst_int_c1 | inst_int_c5)));
+	assign vuad_sel_c2 = ((idx_c1c2comp_c1 &amp; arbctl_inst_vld_c2) &amp; (~ (decdp_inst_int_c1 | inst_int_c2)));
+	assign vuad_sel_c4 = ((idx_c1c4comp_c1 &amp; inst_vld_c4) &amp; (~ (decdp_inst_int_c1 | inst_int_c4)));
+	assign vuad_sel_c2orc3 = (((idx_c1c3comp_c1 &amp; inst_vld_c3) &amp; (~ (decdp_inst_int_c1 | inst_int_c3))) | vuad_sel_c2);
+	assign vuad_sel_wr = ((idx_c1c5comp_c1 &amp; inst_vld_c5) &amp; (~ (decdp_inst_int_c1 | inst_int_c5)));
 	assign vuad_sel_c4orc5 = (vuad_sel_c4 | vuad_sel_wr);
 	assign vuad_sel_rd = (((~ (vuad_sel_c2orc3 | vuad_sel_c4orc5)) | vuadctl_no_bypass_c1) | sehold);
 	dff_s #(1) ff_vuad_sel_c2_d1(
@@ -319,9 +319,9 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign wr_disable_c3 = ((inst_int_c3 | (l2_bypass_mode_on_d1 & (~ arbctl_inst_diag_c3))) | arbctl_inst_diag_c3);
-	assign sel_diag0_data_wr_c3 = ((arbctl_inst_l2vuad_vld_c3 & decdp_st_inst_c3) & acc_vd_c3);
-	assign bistordiag_wr_vd_c3 = (sel_diag0_data_wr_c3 | (bist_vuad_wr_en & bist_wr_vd_c3));
+	assign wr_disable_c3 = ((inst_int_c3 | (l2_bypass_mode_on_d1 &amp; (~ arbctl_inst_diag_c3))) | arbctl_inst_diag_c3);
+	assign sel_diag0_data_wr_c3 = ((arbctl_inst_l2vuad_vld_c3 &amp; decdp_st_inst_c3) &amp; acc_vd_c3);
+	assign bistordiag_wr_vd_c3 = (sel_diag0_data_wr_c3 | (bist_vuad_wr_en &amp; bist_wr_vd_c3));
 	dff_s #(1) ff_bistordiag_wr_vd_c4(
 		.q(bistordiag_wr_vd_c4),
 		.din(bistordiag_wr_vd_c3),
@@ -330,9 +330,9 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_array_wr_en1_c3 = ((inst_vld_c3 & (~ wr_disable_c3)) | bistordiag_wr_vd_c3);
-	assign sel_diag1_data_wr_c3 = ((arbctl_inst_l2vuad_vld_c3 & decdp_st_inst_c3) & acc_ua_c3);
-	assign bistordiag_wr_ua_c3 = (sel_diag1_data_wr_c3 | (bist_vuad_wr_en & (~ bist_wr_vd_c3)));
+	assign vuad_array_wr_en1_c3 = ((inst_vld_c3 &amp; (~ wr_disable_c3)) | bistordiag_wr_vd_c3);
+	assign sel_diag1_data_wr_c3 = ((arbctl_inst_l2vuad_vld_c3 &amp; decdp_st_inst_c3) &amp; acc_ua_c3);
+	assign bistordiag_wr_ua_c3 = (sel_diag1_data_wr_c3 | (bist_vuad_wr_en &amp; (~ bist_wr_vd_c3)));
 	dff_s #(1) ff_bistordiag_wr_ua_c4(
 		.q(bistordiag_wr_ua_c4),
 		.din(bistordiag_wr_ua_c3),
@@ -341,7 +341,7 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_array_wr_en0_c3 = ((inst_vld_c3 & (~ wr_disable_c3)) | bistordiag_wr_ua_c3);
+	assign vuad_array_wr_en0_c3 = ((inst_vld_c3 &amp; (~ wr_disable_c3)) | bistordiag_wr_ua_c3);
 	dff_s #(1) ff_vuad_array_wr_en0_c4(
 		.din(vuad_array_wr_en0_c3),
 		.clk(rclk),
@@ -390,8 +390,8 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign sel_ua_wr_data_byp = (vuad_sel_wr_d1 & vuad_array_wr_en1_c6);
-	assign sel_vd_wr_data_byp = (vuad_sel_wr_d1 & vuad_array_wr_en0_c6);
+	assign sel_ua_wr_data_byp = (vuad_sel_wr_d1 &amp; vuad_array_wr_en1_c6);
+	assign sel_vd_wr_data_byp = (vuad_sel_wr_d1 &amp; vuad_array_wr_en0_c6);
 	dff_s #(1) ff_inst_int_c4(
 		.q(inst_int_c4),
 		.din(inst_int_c3),
@@ -408,7 +408,7 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_error_c4 = (((~ (arbctl_inst_diag_c4 | inst_int_c4)) & ((| parity_c4[3:2]) | (| parity_c4[1:0]))) & inst_vld_c4);
+	assign vuad_error_c4 = (((~ (arbctl_inst_diag_c4 | inst_int_c4)) &amp; ((| parity_c4[3:2]) | (| parity_c4[1:0]))) &amp; inst_vld_c4);
 	dff_s #(1) ff_vuad_error_c5(
 		.q(vuad_error_c5),
 		.din(vuad_error_c4),
@@ -441,27 +441,27 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign fill_inst_vld_c2 = (arbdp_inst_fb_c2 & arbctl_inst_vld_c2);
-	assign dec_lo_fill_way_c2[0] = ((arbdp_inst_way_c2[1:0] == 2'd0) & fill_inst_vld_c2);
-	assign dec_lo_fill_way_c2[1] = ((arbdp_inst_way_c2[1:0] == 2'd1) & fill_inst_vld_c2);
-	assign dec_lo_fill_way_c2[2] = ((arbdp_inst_way_c2[1:0] == 2'd2) & fill_inst_vld_c2);
-	assign dec_lo_fill_way_c2[3] = ((arbdp_inst_way_c2[1:0] == 2'd3) & fill_inst_vld_c2);
-	assign dec_hi_fill_way_c2[0] = (arbdp_inst_way_c2[3:2] == 2'd0);
-	assign dec_hi_fill_way_c2[1] = (arbdp_inst_way_c2[3:2] == 2'd1);
-	assign dec_hi_fill_way_c2[2] = (arbdp_inst_way_c2[3:2] == 2'd2);
-	assign dec_hi_fill_way_c2[3] = (arbdp_inst_way_c2[3:2] == 2'd3);
-	assign fill_way_c2[0] = (dec_hi_fill_way_c2[0] & dec_lo_fill_way_c2[0]);
-	assign fill_way_c2[1] = (dec_hi_fill_way_c2[0] & dec_lo_fill_way_c2[1]);
-	assign fill_way_c2[2] = (dec_hi_fill_way_c2[0] & dec_lo_fill_way_c2[2]);
-	assign fill_way_c2[3] = (dec_hi_fill_way_c2[0] & dec_lo_fill_way_c2[3]);
-	assign fill_way_c2[4] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) & dec_lo_fill_way_c2[0]);
-	assign fill_way_c2[5] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) & dec_lo_fill_way_c2[1]);
-	assign fill_way_c2[6] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) & dec_lo_fill_way_c2[2]);
-	assign fill_way_c2[7] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) & dec_lo_fill_way_c2[3]);
-	assign fill_way_c2[8] = (dec_hi_fill_way_c2[2] & dec_lo_fill_way_c2[0]);
-	assign fill_way_c2[9] = (dec_hi_fill_way_c2[2] & dec_lo_fill_way_c2[1]);
-	assign fill_way_c2[10] = (dec_hi_fill_way_c2[2] & dec_lo_fill_way_c2[2]);
-	assign fill_way_c2[11] = (dec_hi_fill_way_c2[2] & dec_lo_fill_way_c2[3]);
+	assign fill_inst_vld_c2 = (arbdp_inst_fb_c2 &amp; arbctl_inst_vld_c2);
+	assign dec_lo_fill_way_c2[0] = ((arbdp_inst_way_c2[1:0] == 2&#39;d0) &amp; fill_inst_vld_c2);
+	assign dec_lo_fill_way_c2[1] = ((arbdp_inst_way_c2[1:0] == 2&#39;d1) &amp; fill_inst_vld_c2);
+	assign dec_lo_fill_way_c2[2] = ((arbdp_inst_way_c2[1:0] == 2&#39;d2) &amp; fill_inst_vld_c2);
+	assign dec_lo_fill_way_c2[3] = ((arbdp_inst_way_c2[1:0] == 2&#39;d3) &amp; fill_inst_vld_c2);
+	assign dec_hi_fill_way_c2[0] = (arbdp_inst_way_c2[3:2] == 2&#39;d0);
+	assign dec_hi_fill_way_c2[1] = (arbdp_inst_way_c2[3:2] == 2&#39;d1);
+	assign dec_hi_fill_way_c2[2] = (arbdp_inst_way_c2[3:2] == 2&#39;d2);
+	assign dec_hi_fill_way_c2[3] = (arbdp_inst_way_c2[3:2] == 2&#39;d3);
+	assign fill_way_c2[0] = (dec_hi_fill_way_c2[0] &amp; dec_lo_fill_way_c2[0]);
+	assign fill_way_c2[1] = (dec_hi_fill_way_c2[0] &amp; dec_lo_fill_way_c2[1]);
+	assign fill_way_c2[2] = (dec_hi_fill_way_c2[0] &amp; dec_lo_fill_way_c2[2]);
+	assign fill_way_c2[3] = (dec_hi_fill_way_c2[0] &amp; dec_lo_fill_way_c2[3]);
+	assign fill_way_c2[4] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) &amp; dec_lo_fill_way_c2[0]);
+	assign fill_way_c2[5] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) &amp; dec_lo_fill_way_c2[1]);
+	assign fill_way_c2[6] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) &amp; dec_lo_fill_way_c2[2]);
+	assign fill_way_c2[7] = ((dec_hi_fill_way_c2[1] | dec_hi_fill_way_c2[3]) &amp; dec_lo_fill_way_c2[3]);
+	assign fill_way_c2[8] = (dec_hi_fill_way_c2[2] &amp; dec_lo_fill_way_c2[0]);
+	assign fill_way_c2[9] = (dec_hi_fill_way_c2[2] &amp; dec_lo_fill_way_c2[1]);
+	assign fill_way_c2[10] = (dec_hi_fill_way_c2[2] &amp; dec_lo_fill_way_c2[2]);
+	assign fill_way_c2[11] = (dec_hi_fill_way_c2[2] &amp; dec_lo_fill_way_c2[3]);
 	dff_s #(12) ff_fill_way_c3(
 		.q(fill_way_c3[11:0]),
 		.din(fill_way_c2[11:0]),
@@ -471,7 +471,7 @@ module sctag_vuaddp_ctl (
 		.so()
 	);
 	assign alloc_set_cond_c2 = (arbdp_vuadctl_pst_no_ctrue_c2 | decdp_cas1_inst_c2);
-	assign alloc_rst_cond_c2 = ((arbdp_pst_with_ctrue_c2 | (decdp_cas2_inst_c2 & arbdp_inst_mb_c2)) | (arbdp_inst_mb_c2 & (~ alloc_set_cond_c2)));
+	assign alloc_rst_cond_c2 = ((arbdp_pst_with_ctrue_c2 | (decdp_cas2_inst_c2 &amp; arbdp_inst_mb_c2)) | (arbdp_inst_mb_c2 &amp; (~ alloc_set_cond_c2)));
 	dff_s #(1) ff_alloc_set_cond_c3(
 		.q(alloc_set_cond_c3),
 		.din(alloc_set_cond_c2),

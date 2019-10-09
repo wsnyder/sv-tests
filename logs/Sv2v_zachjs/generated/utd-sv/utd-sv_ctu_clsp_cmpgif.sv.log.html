@@ -144,13 +144,13 @@ module ctu_clsp_cmpgif (
 		.q(start_clk_cg)
 	);
 	dffrl_async_ns u_cmp_grst_l(
-		.din((cmp_grst_cl_l & start_clk_cg)),
+		.din((cmp_grst_cl_l &amp; start_clk_cg)),
 		.clk(cmp_gclk),
 		.rst_l(io_pwron_rst_l),
 		.q(cmp_grst_out_l)
 	);
 	dffrl_async_ns u_cmp_dbginit_l(
-		.din((cmp_dbginit_cl_l & start_clk_cg)),
+		.din((cmp_dbginit_cl_l &amp; start_clk_cg)),
 		.clk(cmp_gclk),
 		.rst_l(io_pwron_rst_l),
 		.q(cmp_gdbginit_out_l)

@@ -19,11 +19,11 @@ checker check(bit clk1); // clk1 assigned in the Active region
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:2</a>:1: error: expected member
 rand bit v, w;
 ^~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:3</a>:8: error: use of undeclared identifier 'clk2'
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:3</a>:8: error: use of undeclared identifier &#39;clk2&#39;
 assign clk2 = clk1;
        ^~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:4</a>:1: error: language feature not yet supported
-m1: assume property (@clk1 !(v && w));
+m1: assume property (@clk1 !(v &amp;&amp; w));
 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv:5</a>:1: error: language feature not yet supported
 m2: assume property (@clk2 v || w);

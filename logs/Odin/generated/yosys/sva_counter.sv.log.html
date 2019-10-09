@@ -23,23 +23,23 @@ PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.ht
 	default disable iff (reset);
 	^~~~
 PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::14 error in parsing: (syntax error, unexpected voPAL)
-	assert property (up |=> cnt == $past(cnt) + 8'd 1);
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::15 error in parsing: (syntax error, unexpected '*')
-	assert property (up [*2] |=> cnt == $past(cnt, 2) + 8'd 2);
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::16 error in parsing: (syntax error, unexpected '#', expecting ')' or ',')
-	assert property (up ##1 up |=> cnt == $past(cnt, 2) + 8'd 2);
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::19 error in parsing: (syntax error, unexpected '>')
-	assume property (down |-> !up);
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::21 error in parsing: (syntax error, unexpected '#', expecting ')' or ',')
-	assert property (up ##1 down |=> cnt == $past(cnt, 2));
+	assert property (up |=&gt; cnt == $past(cnt) + 8&#39;d 1);
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::15 error in parsing: (syntax error, unexpected &#39;*&#39;)
+	assert property (up [*2] |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::16 error in parsing: (syntax error, unexpected &#39;#&#39;, expecting &#39;)&#39; or &#39;,&#39;)
+	assert property (up ##1 up |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::19 error in parsing: (syntax error, unexpected &#39;&gt;&#39;)
+	assume property (down |-&gt; !up);
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::21 error in parsing: (syntax error, unexpected &#39;#&#39;, expecting &#39;)&#39; or &#39;,&#39;)
+	assert property (up ##1 down |=&gt; cnt == $past(cnt, 2));
 PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::22 error in parsing: (syntax error, unexpected voPAL)
-	assert property (down |=> cnt == $past(cnt) - 8'd 1);
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::25 error in parsing: (syntax error, unexpected '[', expecting vSYMBOL_ID or '#')
-		down [*n] |=> cnt == $past(cnt, n) - n;
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::28 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting '(')
-	assert property (down_n(8'd 3));
-PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::29 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting ')' or ',')
-	assert property (down_n(8'd 5));
+	assert property (down |=&gt; cnt == $past(cnt) - 8&#39;d 1);
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::25 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+		down [*n] |=&gt; cnt == $past(cnt, n) - n;
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::28 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
+	assert property (down_n(8&#39;d 3));
+PARSE_ERROR <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>::29 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;)&#39; or &#39;,&#39;)
+	assert property (down_n(8&#39;d 5));
 ERROR (14)::PARSE_ERROR Parser found (1) errors in your syntax, exiting
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/odin_error.cpp]verify_delayed_error::30 
 

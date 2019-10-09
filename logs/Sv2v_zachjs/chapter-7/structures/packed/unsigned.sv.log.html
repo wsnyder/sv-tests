@@ -13,9 +13,9 @@ files: <a href="../../../../../tests/chapter-7/structures/packed/unsigned.sv.htm
 module top;
 	reg unsigned [7:0] p1;
 	initial begin
-		p1 = 8'd200;
-		$display(":assert: ('%h' == 'c8')", p1);
-		$display(":assert: (%d == 200)", p1);
+		p1 = 8&#39;d200;
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;c8&#39;)&#34;, p1);
+		$display(&#34;:assert: (%d == 200)&#34;, p1);
 	end
 endmodule
 

@@ -19,7 +19,7 @@ module decoder_using_assign (
 	input enable;
 	output [15:0] decoder_out;
 	wire [15:0] decoder_out;
-	assign decoder_out = (enable ? (1 << binary_in) : 16'b0);
+	assign decoder_out = (enable ? (1 &lt;&lt; binary_in) : 16&#39;b0);
 endmodule
 
 

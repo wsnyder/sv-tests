@@ -21,7 +21,7 @@ module tlu_addern_32 (
 	input [(ADDER_DATA_WIDTH - 1):0] din;
 	input [(INCR_DATA_WIDTH - 1):0] incr;
 	output [(ADDER_DATA_WIDTH - 1):0] sum;
-	assign sum[(ADDER_DATA_WIDTH - 1):0] = (din[(ADDER_DATA_WIDTH - 1):0] + {{UPPER_DATA_WIDTH {1'b0}}, incr[(INCR_DATA_WIDTH - 1):0]});
+	assign sum[(ADDER_DATA_WIDTH - 1):0] = (din[(ADDER_DATA_WIDTH - 1):0] + {{UPPER_DATA_WIDTH {1&#39;b0}}, incr[(INCR_DATA_WIDTH - 1):0]});
 endmodule
 
 

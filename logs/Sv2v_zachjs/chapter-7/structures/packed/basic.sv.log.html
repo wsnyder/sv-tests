@@ -13,9 +13,9 @@ files: <a href="../../../../../tests/chapter-7/structures/packed/basic.sv.html" 
 module top;
 	reg [7:0] p1;
 	initial begin
-		p1 = 8'h5a;
-		$display(":assert: ('%h' == '5a')", p1);
-		$display(":assert: (('%h' == 'a') and ('%h' == '5'))", p1[3:0], p1[7:4]);
+		p1 = 8&#39;h5a;
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;5a&#39;)&#34;, p1);
+		$display(&#34;:assert: ((&#39;%h&#39; == &#39;a&#39;) and (&#39;%h&#39; == &#39;5&#39;))&#34;, p1[3:0], p1[7:4]);
 	end
 endmodule
 

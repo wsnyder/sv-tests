@@ -23,7 +23,7 @@ module ctu_clsp_clkgn_ssiclk (
 	wire jbus_clk_stage1_nxt;
 	wire jbus_clk_stage1;
 	wire ctu_jbi_ssiclk;
-	assign jbus_clk_stage1_nxt = ((jbus_clk_stage1 | ctu_jbi_ssiclk) ? (~ ctu_jbi_ssiclk) : ((~ ctu_jbi_ssiclk) & ssiclk_enable));
+	assign jbus_clk_stage1_nxt = ((jbus_clk_stage1 | ctu_jbi_ssiclk) ? (~ ctu_jbi_ssiclk) : ((~ ctu_jbi_ssiclk) &amp; ssiclk_enable));
 	dffrl_async_ns u_ctu_jbi_ssiclk_d1(
 		.din(jbus_clk_stage1_nxt),
 		.clk(jbus_clk),

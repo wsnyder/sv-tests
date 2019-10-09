@@ -181,7 +181,7 @@ module scbuf_evict (
 		.din(jbi_sctag_req_ecc_s2[38:0]),
 		.clk(rclk),
 		.q(jbi_sctag_req_ecc_s3[38:0]),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -190,7 +190,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbwr_wen_c7),
 		.din(sctag_scbuf_wbwr_wen_c6),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -198,7 +198,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbwr_wen_c8),
 		.din(sctag_scbuf_wbwr_wen_c7),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -210,7 +210,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbwr_wl_c7[2:0]),
 		.din(sctag_scbuf_wbwr_wl_c6[2:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -218,7 +218,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbwr_wl_c8[2:0]),
 		.din(sctag_scbuf_wbwr_wl_c7[2:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -230,7 +230,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbrd_wl_r1[2:0]),
 		.din(sctag_scbuf_wbrd_wl_r0[2:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -242,7 +242,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_rdma_rdwl_r1[1:0]),
 		.din(sctag_scbuf_rdma_rdwl_r0[1:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -254,7 +254,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_rdma_wren_s3[15:0]),
 		.din(sctag_scbuf_rdma_wren_s2[15:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -266,7 +266,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_rdma_wrwl_s3[1:0]),
 		.din(sctag_scbuf_rdma_wrwl_s2[1:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -278,7 +278,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbrd_en_r1),
 		.din(sctag_scbuf_wbrd_en_r0),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -297,7 +297,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_wbrd_en_r2),
 		.din(sctag_scbuf_wbrd_en_r1_in),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -305,7 +305,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_rdma_rden_r1),
 		.din(sctag_scbuf_rdma_rden_r0),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -317,7 +317,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_rdma_rden_r2),
 		.din(sctag_scbuf_rdma_rden_r1),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -325,11 +325,11 @@ module scbuf_evict (
 		.q(sctag_scbuf_rdma_rden_r3),
 		.din(sctag_scbuf_rdma_rden_r2),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
-	assign error_qual_in = (sctag_scbuf_rdma_rden_r3 | (error_qual & sctag_scbuf_evict_en_r3));
+	assign error_qual_in = (sctag_scbuf_rdma_rden_r3 | (error_qual &amp; sctag_scbuf_evict_en_r3));
 	dffrl_s #(1) ff_array_rd_ptr(
 		.q(error_qual),
 		.din(error_qual_in),
@@ -363,7 +363,7 @@ module scbuf_evict (
 		.q(wb_array_dout_r3[623:0]),
 		.din(wb_rdma_mux_out[623:0]),
 		.clk(en_clk_r2),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -371,7 +371,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_evict_en_r1),
 		.din(sctag_scbuf_evict_en_r0),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -379,7 +379,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_evict_en_r2),
 		.din(sctag_scbuf_evict_en_r1),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -387,7 +387,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_evict_en_r3),
 		.din(sctag_scbuf_evict_en_r2),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -395,7 +395,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_evict_en_r4),
 		.din(sctag_scbuf_evict_en_r3),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -403,7 +403,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_evict_en_r5),
 		.din(sctag_scbuf_evict_en_r4),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -411,7 +411,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_ev_dword_r1[2:0]),
 		.din(sctag_scbuf_ev_dword_r0[2:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -419,7 +419,7 @@ module scbuf_evict (
 		.q(sctag_scbuf_ev_dword_r2[2:0]),
 		.din(sctag_scbuf_ev_dword_r1[2:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -427,13 +427,13 @@ module scbuf_evict (
 		.q(sctag_scbuf_ev_dword_r3[2:0]),
 		.din(sctag_scbuf_ev_dword_r2[2:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
-	assign sel_in0 = (sctag_scbuf_ev_dword_r3[1:0] == 2'b00);
-	assign sel_in1 = (sctag_scbuf_ev_dword_r3[1:0] == 2'b01);
-	assign sel_in2 = (sctag_scbuf_ev_dword_r3[1:0] == 2'b10);
+	assign sel_in0 = (sctag_scbuf_ev_dword_r3[1:0] == 2&#39;b00);
+	assign sel_in1 = (sctag_scbuf_ev_dword_r3[1:0] == 2&#39;b01);
+	assign sel_in2 = (sctag_scbuf_ev_dword_r3[1:0] == 2&#39;b10);
 	assign sel_in3 = (~ ((sel_in0 | sel_in1) | sel_in2));
 	mux4ds #(78) mux_wb_array_dout_1(
 		.dout(wb_array_dout_r3_4t1[77:0]),
@@ -468,7 +468,7 @@ module scbuf_evict (
 		.q(wb_array_dout_r4[77:0]),
 		.din(wb_array_dout_r3_8t1[77:0]),
 		.clk(en_clk_r3),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -486,14 +486,14 @@ module scbuf_evict (
 		.parity(wb_array_dout_r4[45:39]),
 		.din(wb_array_dout_r4[77:46])
 	);
-	assign evict_uncorr_err_r4 = ((sctag_scbuf_evict_en_r4 & (! error_qual)) & (((| check0_r4[5:0]) & (~ parity0_r4)) | ((| check1_r4[5:0]) & (~ parity1_r4))));
-	assign evict_uncorr_err_unqual_r4 = (sctag_scbuf_evict_en_r4 & (((| check0_r4[5:0]) & (~ parity0_r4)) | ((| check1_r4[5:0]) & (~ parity1_r4))));
-	assign evict_corr_err_r4 = ((sctag_scbuf_evict_en_r4 & (! error_qual)) & (parity0_r4 | parity1_r4));
+	assign evict_uncorr_err_r4 = ((sctag_scbuf_evict_en_r4 &amp; (! error_qual)) &amp; (((| check0_r4[5:0]) &amp; (~ parity0_r4)) | ((| check1_r4[5:0]) &amp; (~ parity1_r4))));
+	assign evict_uncorr_err_unqual_r4 = (sctag_scbuf_evict_en_r4 &amp; (((| check0_r4[5:0]) &amp; (~ parity0_r4)) | ((| check1_r4[5:0]) &amp; (~ parity1_r4))));
+	assign evict_corr_err_r4 = ((sctag_scbuf_evict_en_r4 &amp; (! error_qual)) &amp; (parity0_r4 | parity1_r4));
 	dff_s #(64) ff_wb_array_dout_r5(
 		.q(wb_array_dout_r5[63:0]),
 		.din(wb_array_dout_ecc_r4[63:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -501,7 +501,7 @@ module scbuf_evict (
 		.q(evict_uncorr_err_r5),
 		.din(evict_uncorr_err_r4),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -509,7 +509,7 @@ module scbuf_evict (
 		.q(evict_uncorr_err_unqual_r5),
 		.din(evict_uncorr_err_unqual_r4),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -517,7 +517,7 @@ module scbuf_evict (
 		.q(evict_corr_err_r5),
 		.din(evict_corr_err_r4),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);

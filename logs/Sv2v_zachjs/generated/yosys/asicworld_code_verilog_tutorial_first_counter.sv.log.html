@@ -25,11 +25,11 @@ module first_counter (
 	wire enable;
 	reg [3:0] counter_out;
 	always @(posedge clock) begin : COUNTER
-		if ((reset == 1'b1)) begin
-			counter_out <= 4'b0000;
+		if ((reset == 1&#39;b1)) begin
+			counter_out &lt;= 4&#39;b0000;
 		end
-		else if ((enable == 1'b1)) begin
-			counter_out <= (counter_out + 1);
+		else if ((enable == 1&#39;b1)) begin
+			counter_out &lt;= (counter_out + 1);
 		end
 	end
 endmodule

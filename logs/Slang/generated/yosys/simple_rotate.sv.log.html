@@ -14,7 +14,7 @@ files: <a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html" 
                         always @*
                                ^~
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:22</a>:45: error: too many arguments to subroutine call; expected 0 but 2 were provided
-                                         in[wrap(j, i)] & (shift_amount[i] ^ direction);
+                                         in[wrap(j, i)] &amp; (shift_amount[i] ^ direction);
                                             ^~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-38" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:38</a>:1: error: language feature not yet supported
 input integer pos;
@@ -22,11 +22,11 @@ input integer pos;
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-39" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:39</a>:1: error: language feature not yet supported
 input integer level;
 ^~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:42</a>:15: error: use of undeclared identifier 'pos'
-        out = pos - (1 << level);
+../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:42</a>:15: error: use of undeclared identifier &#39;pos&#39;
+        out = pos - (1 &lt;&lt; level);
               ^~~
-../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:42</a>:27: error: use of undeclared identifier 'level'
-        out = pos - (1 << level);
+../..<a href="../../../../third_party/tools/yosys/tests/simple/rotate.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/rotate.v:42</a>:27: error: use of undeclared identifier &#39;level&#39;
+        out = pos - (1 &lt;&lt; level);
                           ^~~~~
 
 

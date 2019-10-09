@@ -54,50 +54,50 @@ module uart (
 	reg rx_d2;
 	reg rx_busy;
 	always @(posedge rxclk or posedge reset) if (reset) begin
-		rx_reg <= 0;
-		rx_data <= 0;
-		rx_sample_cnt <= 0;
-		rx_cnt <= 0;
-		rx_frame_err <= 0;
-		rx_over_run <= 0;
-		rx_empty <= 1;
-		rx_d1 <= 1;
-		rx_d2 <= 1;
-		rx_busy <= 0;
+		rx_reg &lt;= 0;
+		rx_data &lt;= 0;
+		rx_sample_cnt &lt;= 0;
+		rx_cnt &lt;= 0;
+		rx_frame_err &lt;= 0;
+		rx_over_run &lt;= 0;
+		rx_empty &lt;= 1;
+		rx_d1 &lt;= 1;
+		rx_d2 &lt;= 1;
+		rx_busy &lt;= 0;
 	end
 	else begin
-		rx_d1 <= rx_in;
-		rx_d2 <= rx_d1;
+		rx_d1 &lt;= rx_in;
+		rx_d2 &lt;= rx_d1;
 		if (uld_rx_data) begin
-			rx_data <= rx_reg;
-			rx_empty <= 1;
+			rx_data &lt;= rx_reg;
+			rx_empty &lt;= 1;
 		end
 		if (rx_enable) begin
-			if (((! rx_busy) && (! rx_d2))) begin
-				rx_busy <= 1;
-				rx_sample_cnt <= 1;
-				rx_cnt <= 0;
+			if (((! rx_busy) &amp;&amp; (! rx_d2))) begin
+				rx_busy &lt;= 1;
+				rx_sample_cnt &lt;= 1;
+				rx_cnt &lt;= 0;
 			end
 			if (rx_busy) begin
-				rx_sample_cnt <= (rx_sample_cnt + 1);
+				rx_sample_cnt &lt;= (rx_sample_cnt + 1);
 				if ((rx_sample_cnt == 7)) begin
-					if (((rx_d2 == 1) && (rx_cnt == 0))) begin
-						rx_busy <= 0;
+					if (((rx_d2 == 1) &amp;&amp; (rx_cnt == 0))) begin
+						rx_busy &lt;= 0;
 					end
 					else begin
-						rx_cnt <= (rx_cnt + 1);
-						if (((rx_cnt > 0) && (rx_cnt < 9))) begin
-							rx_reg[(rx_cnt - 1)] <= rx_d2;
+						rx_cnt &lt;= (rx_cnt + 1);
+						if (((rx_cnt &gt; 0) &amp;&amp; (rx_cnt &lt; 9))) begin
+							rx_reg[(rx_cnt - 1)] &lt;= rx_d2;
 						end
 						if ((rx_cnt == 9)) begin
-							rx_busy <= 0;
+							rx_busy &lt;= 0;
 							if ((rx_d2 == 0)) begin
-								rx_frame_err <= 1;
+								rx_frame_err &lt;= 1;
 							end
 							else begin
-								rx_empty <= 0;
-								rx_frame_err <= 0;
-								rx_over_run <= (rx_empty ? 0 : 1);
+								rx_empty &lt;= 0;
+								rx_frame_err &lt;= 0;
+								rx_over_run &lt;= (rx_empty ? 0 : 1);
 							end
 						end
 					end
@@ -105,42 +105,42 @@ module uart (
 			end
 		end
 		if ((! rx_enable)) begin
-			rx_busy <= 0;
+			rx_busy &lt;= 0;
 		end
 	end
 	always @(posedge txclk or posedge reset) if (reset) begin
-		tx_reg <= 0;
-		tx_empty <= 1;
-		tx_over_run <= 0;
-		tx_out <= 1;
-		tx_cnt <= 0;
+		tx_reg &lt;= 0;
+		tx_empty &lt;= 1;
+		tx_over_run &lt;= 0;
+		tx_out &lt;= 1;
+		tx_cnt &lt;= 0;
 	end
 	else begin
 		if (ld_tx_data) begin
 			if ((! tx_empty)) begin
-				tx_over_run <= 0;
+				tx_over_run &lt;= 0;
 			end
 			else begin
-				tx_reg <= tx_data;
-				tx_empty <= 0;
+				tx_reg &lt;= tx_data;
+				tx_empty &lt;= 0;
 			end
 		end
-		if ((tx_enable && (! tx_empty))) begin
-			tx_cnt <= (tx_cnt + 1);
+		if ((tx_enable &amp;&amp; (! tx_empty))) begin
+			tx_cnt &lt;= (tx_cnt + 1);
 			if ((tx_cnt == 0)) begin
-				tx_out <= 0;
+				tx_out &lt;= 0;
 			end
-			if (((tx_cnt > 0) && (tx_cnt < 9))) begin
-				tx_out <= tx_reg[(tx_cnt - 1)];
+			if (((tx_cnt &gt; 0) &amp;&amp; (tx_cnt &lt; 9))) begin
+				tx_out &lt;= tx_reg[(tx_cnt - 1)];
 			end
 			if ((tx_cnt == 9)) begin
-				tx_out <= 1;
-				tx_cnt <= 0;
-				tx_empty <= 1;
+				tx_out &lt;= 1;
+				tx_cnt &lt;= 0;
+				tx_empty &lt;= 1;
 			end
 		end
 		if ((! tx_enable)) begin
-			tx_cnt <= 0;
+			tx_cnt &lt;= 0;
 		end
 	end
 endmodule

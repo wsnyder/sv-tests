@@ -80,8 +80,8 @@ module lsu_tlbdp (
 	assign tlb_tte_data_mx_sel1 = tlb_rd_tte_data_21_16_sel_buf;
 	assign tlb_tte_data_mx_sel0 = tlb_rd_tte_data_15_13_sel_buf;
 	assign pg_sz_b0 = tlb_tte_data_mx_sel0;
-	assign pg_sz_b1 = (((~ tlb_tte_data_mx_sel2) & tlb_tte_data_mx_sel1) & tlb_tte_data_mx_sel0);
-	assign pg_sz_b2 = ((tlb_tte_data_mx_sel2 & tlb_tte_data_mx_sel1) & tlb_tte_data_mx_sel0);
+	assign pg_sz_b1 = (((~ tlb_tte_data_mx_sel2) &amp; tlb_tte_data_mx_sel1) &amp; tlb_tte_data_mx_sel0);
+	assign pg_sz_b2 = ((tlb_tte_data_mx_sel2 &amp; tlb_tte_data_mx_sel1) &amp; tlb_tte_data_mx_sel0);
 	assign lsu_tte_pg_sz_b2 = pg_sz_b2;
 	assign lsu_tte_pg_sz_b1 = pg_sz_b1;
 	assign lsu_tte_pg_sz_b0 = pg_sz_b0;
@@ -105,7 +105,7 @@ module lsu_tlbdp (
 		.si(),
 		.so()
 	);
-	assign stb_cam_vld = ((ld_inst_vld_m & (tlb_cam_hit | dtlb_bypass_m)) & (~ (asi_internal_m & lsu_alt_space_m)));
+	assign stb_cam_vld = ((ld_inst_vld_m &amp; (tlb_cam_hit | dtlb_bypass_m)) &amp; (~ (asi_internal_m &amp; lsu_alt_space_m)));
 	wire [58:0] tlb_rd_tte_tag_buf;
 	wire [42:0] tlb_rd_tte_data_buf;
 	wire lsu_tte_pg_sz_b1_buf;
@@ -129,7 +129,7 @@ module lsu_tlbdp (
 	wire [63:0] formatted_tte_tag;
 	wire [63:0] formatted_tte_data;
 	assign formatted_tte_tag[63:0] = {tlb_rd_tte_tag_buf[58:56], tlb_rd_tte_tag_buf[55], tlb_rd_tte_tag_buf[54], tlb_rd_tte_tag_buf[27], tlb_rd_tte_tag_buf[17], tlb_rd_tte_tag_buf[13], {8 {tlb_rd_tte_tag_buf[53]}}, tlb_rd_tte_tag_buf[53:34], tlb_rd_tte_tag_buf[33:28], tlb_rd_tte_tag_buf[23:18], tlb_rd_tte_tag_buf[16:14], tlb_rd_tte_tag_buf[12:0]};
-	assign formatted_tte_data[63:0] = {tlb_rd_tte_tag_buf[26], lsu_tte_pg_sz_b1_buf, lsu_tte_pg_sz_b0_buf, tlb_rd_tte_data_buf[10], tlb_rd_tte_data_buf[9], 9'd0, 1'b0, lsu_tte_pg_sz_b2_buf, tlb_rd_tte_tag_buf[24], tlb_rd_tte_data_buf[42], tlb_rd_tte_data_buf[23], tlb_rd_tte_data_buf[16], tlb_rd_tte_data_buf[12], 2'd0, 1'b0, tlb_rd_tte_data_buf[41:30], tlb_rd_tte_data_buf[29:24], tlb_rd_tte_data_buf[22:17], tlb_rd_tte_data_buf[15:13], 6'd0, tlb_rd_tte_data_buf[8], tlb_rd_tte_data_buf[7], tlb_rd_tte_data_buf[6], tlb_rd_tte_data_buf[5], tlb_rd_tte_data_buf[4], tlb_rd_tte_data_buf[3], 1'b0};
+	assign formatted_tte_data[63:0] = {tlb_rd_tte_tag_buf[26], lsu_tte_pg_sz_b1_buf, lsu_tte_pg_sz_b0_buf, tlb_rd_tte_data_buf[10], tlb_rd_tte_data_buf[9], 9&#39;d0, 1&#39;b0, lsu_tte_pg_sz_b2_buf, tlb_rd_tte_tag_buf[24], tlb_rd_tte_data_buf[42], tlb_rd_tte_data_buf[23], tlb_rd_tte_data_buf[16], tlb_rd_tte_data_buf[12], 2&#39;d0, 1&#39;b0, tlb_rd_tte_data_buf[41:30], tlb_rd_tte_data_buf[29:24], tlb_rd_tte_data_buf[22:17], tlb_rd_tte_data_buf[15:13], 6&#39;d0, tlb_rd_tte_data_buf[8], tlb_rd_tte_data_buf[7], tlb_rd_tte_data_buf[6], tlb_rd_tte_data_buf[5], tlb_rd_tte_data_buf[4], tlb_rd_tte_data_buf[3], 1&#39;b0};
 	assign lsu_tlb_rd_data[63:0] = (lsu_tlb_data_rd_vld_g ? formatted_tte_data[63:0] : formatted_tte_tag[63:0]);
 	wire lsu_rd_tte_data_parity;
 	wire lsu_rd_tte_tag_parity;

@@ -203,14 +203,14 @@ module sctag_dirrep (
 		.si(),
 		.so()
 	);
-	assign dc_rdwr_panel_dec_c4[0] = ((~ dir_panel_dcd_c4[4]) & (~ dir_panel_dcd_c4[3]));
-	assign dc_rdwr_panel_dec_c4[1] = ((~ dir_panel_dcd_c4[4]) & dir_panel_dcd_c4[3]);
-	assign dc_rdwr_panel_dec_c4[2] = (dir_panel_dcd_c4[4] & (~ dir_panel_dcd_c4[3]));
-	assign dc_rdwr_panel_dec_c4[3] = (dir_panel_dcd_c4[4] & dir_panel_dcd_c4[3]);
-	assign dc_rdwr_row_en_c4[0] = (dir_panel_dcd_c4[1:0] == 2'd0);
-	assign dc_rdwr_row_en_c4[1] = (dir_panel_dcd_c4[1:0] == 2'd1);
-	assign dc_rdwr_row_en_c4[2] = (dir_panel_dcd_c4[1:0] == 2'd2);
-	assign dc_rdwr_row_en_c4[3] = (dir_panel_dcd_c4[1:0] == 2'd3);
+	assign dc_rdwr_panel_dec_c4[0] = ((~ dir_panel_dcd_c4[4]) &amp; (~ dir_panel_dcd_c4[3]));
+	assign dc_rdwr_panel_dec_c4[1] = ((~ dir_panel_dcd_c4[4]) &amp; dir_panel_dcd_c4[3]);
+	assign dc_rdwr_panel_dec_c4[2] = (dir_panel_dcd_c4[4] &amp; (~ dir_panel_dcd_c4[3]));
+	assign dc_rdwr_panel_dec_c4[3] = (dir_panel_dcd_c4[4] &amp; dir_panel_dcd_c4[3]);
+	assign dc_rdwr_row_en_c4[0] = (dir_panel_dcd_c4[1:0] == 2&#39;d0);
+	assign dc_rdwr_row_en_c4[1] = (dir_panel_dcd_c4[1:0] == 2&#39;d1);
+	assign dc_rdwr_row_en_c4[2] = (dir_panel_dcd_c4[1:0] == 2&#39;d2);
+	assign dc_rdwr_row_en_c4[3] = (dir_panel_dcd_c4[1:0] == 2&#39;d3);
 	dff_s #(4) ff_dir_panel_icd_c4(
 		.q({dir_panel_icd_c4[4:3], dir_panel_icd_c4[1:0]}),
 		.din({arbctl_dir_panel_icd_c3[4:3], arbctl_dir_panel_icd_c3[1:0]}),
@@ -219,14 +219,14 @@ module sctag_dirrep (
 		.si(),
 		.so()
 	);
-	assign ic_rdwr_panel_dec_c4[0] = (dir_panel_icd_c4[4:3] == 2'd0);
-	assign ic_rdwr_panel_dec_c4[1] = (dir_panel_icd_c4[4:3] == 2'd1);
-	assign ic_rdwr_panel_dec_c4[2] = (dir_panel_icd_c4[4:3] == 2'd2);
-	assign ic_rdwr_panel_dec_c4[3] = (dir_panel_icd_c4[4:3] == 2'd3);
-	assign ic_rdwr_row_en_c4[0] = (dir_panel_icd_c4[1:0] == 2'd0);
-	assign ic_rdwr_row_en_c4[1] = (dir_panel_icd_c4[1:0] == 2'd1);
-	assign ic_rdwr_row_en_c4[2] = (dir_panel_icd_c4[1:0] == 2'd2);
-	assign ic_rdwr_row_en_c4[3] = (dir_panel_icd_c4[1:0] == 2'd3);
+	assign ic_rdwr_panel_dec_c4[0] = (dir_panel_icd_c4[4:3] == 2&#39;d0);
+	assign ic_rdwr_panel_dec_c4[1] = (dir_panel_icd_c4[4:3] == 2&#39;d1);
+	assign ic_rdwr_panel_dec_c4[2] = (dir_panel_icd_c4[4:3] == 2&#39;d2);
+	assign ic_rdwr_panel_dec_c4[3] = (dir_panel_icd_c4[4:3] == 2&#39;d3);
+	assign ic_rdwr_row_en_c4[0] = (dir_panel_icd_c4[1:0] == 2&#39;d0);
+	assign ic_rdwr_row_en_c4[1] = (dir_panel_icd_c4[1:0] == 2&#39;d1);
+	assign ic_rdwr_row_en_c4[2] = (dir_panel_icd_c4[1:0] == 2&#39;d2);
+	assign ic_rdwr_row_en_c4[3] = (dir_panel_icd_c4[1:0] == 2&#39;d3);
 	dff_s #(3) ff_lkup_row_addr_dcd_c4(
 		.q(lkup_row_addr_dcd_c4[2:0]),
 		.din(lkup_row_addr_dcd_c3[2:0]),
@@ -235,10 +235,10 @@ module sctag_dirrep (
 		.si(),
 		.so()
 	);
-	assign dc_lkup_panel_dec_c4[0] = (lkup_row_addr_dcd_c4[2:1] == 2'd0);
-	assign dc_lkup_panel_dec_c4[1] = (lkup_row_addr_dcd_c4[2:1] == 2'd1);
-	assign dc_lkup_panel_dec_c4[2] = (lkup_row_addr_dcd_c4[2:1] == 2'd2);
-	assign dc_lkup_panel_dec_c4[3] = (lkup_row_addr_dcd_c4[2:1] == 2'd3);
+	assign dc_lkup_panel_dec_c4[0] = (lkup_row_addr_dcd_c4[2:1] == 2&#39;d0);
+	assign dc_lkup_panel_dec_c4[1] = (lkup_row_addr_dcd_c4[2:1] == 2&#39;d1);
+	assign dc_lkup_panel_dec_c4[2] = (lkup_row_addr_dcd_c4[2:1] == 2&#39;d2);
+	assign dc_lkup_panel_dec_c4[3] = (lkup_row_addr_dcd_c4[2:1] == 2&#39;d3);
 	dff_s #(4) ff_lkup_bank_ena_dcd_c4(
 		.q(dc_lkup_row_dec_c4[3:0]),
 		.din(arbctl_lkup_bank_ena_dcd_c3[3:0]),
@@ -256,10 +256,10 @@ module sctag_dirrep (
 		.so()
 	);
 	assign lkup_addr8_c4 = lkup_row_addr_icd_c4[0];
-	assign ic_lkup_panel_dec_c4[0] = (lkup_row_addr_icd_c4[2:1] == 2'd0);
-	assign ic_lkup_panel_dec_c4[1] = (lkup_row_addr_icd_c4[2:1] == 2'd1);
-	assign ic_lkup_panel_dec_c4[2] = (lkup_row_addr_icd_c4[2:1] == 2'd2);
-	assign ic_lkup_panel_dec_c4[3] = (lkup_row_addr_icd_c4[2:1] == 2'd3);
+	assign ic_lkup_panel_dec_c4[0] = (lkup_row_addr_icd_c4[2:1] == 2&#39;d0);
+	assign ic_lkup_panel_dec_c4[1] = (lkup_row_addr_icd_c4[2:1] == 2&#39;d1);
+	assign ic_lkup_panel_dec_c4[2] = (lkup_row_addr_icd_c4[2:1] == 2&#39;d2);
+	assign ic_lkup_panel_dec_c4[3] = (lkup_row_addr_icd_c4[2:1] == 2&#39;d3);
 	dff_s #(4) ff_lkup_bank_ena_icd_c4(
 		.q(ic_lkup_row_dec_c4[3:0]),
 		.din(arbctl_lkup_bank_ena_icd_c3[3:0]),

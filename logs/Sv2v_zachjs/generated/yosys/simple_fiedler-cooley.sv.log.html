@@ -32,19 +32,19 @@ module up3down5 (
 	reg [9:0] cnt_dn;
 	reg [8:0] count_nxt;
 	always @(posedge clock) begin
-		cnt_dn = (count_out - 3'b 101);
-		cnt_up = (count_out + 2'b 11);
+		cnt_dn = (count_out - 3&#39;b 101);
+		cnt_up = (count_out + 2&#39;b 11);
 		case ({up, down})
-			2'b 00: count_nxt = data_in;
-			2'b 01: count_nxt = cnt_dn;
-			2'b 10: count_nxt = cnt_up;
-			2'b 11: count_nxt = count_out;
-			default: count_nxt = 9'bX;
+			2&#39;b 00: count_nxt = data_in;
+			2&#39;b 01: count_nxt = cnt_dn;
+			2&#39;b 10: count_nxt = cnt_up;
+			2&#39;b 11: count_nxt = count_out;
+			default: count_nxt = 9&#39;bX;
 		endcase
-		parity_out <= (^ count_nxt);
-		carry_out <= (up & cnt_up[9]);
-		borrow_out <= (down & cnt_dn[9]);
-		count_out <= count_nxt;
+		parity_out &lt;= (^ count_nxt);
+		carry_out &lt;= (up &amp; cnt_up[9]);
+		borrow_out &lt;= (down &amp; cnt_dn[9]);
+		count_out &lt;= count_nxt;
 	end
 endmodule
 

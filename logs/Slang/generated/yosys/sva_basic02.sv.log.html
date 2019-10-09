@@ -11,18 +11,18 @@ files: <a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html" t
 
 
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-12" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:12</a>:2: error: language feature not yet supported
-	a_rw: assert property ( @(posedge clock) !(read && write) );
+	a_rw: assert property ( @(posedge clock) !(read &amp;&amp; write) );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-16" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:16</a>:2: error: language feature not yet supported
-	a_wr: assert property ( @(posedge clock) write |=> ready );
+	a_wr: assert property ( @(posedge clock) write |=&gt; ready );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-20" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:20</a>:1: error: expected member
 bind top top_properties properties_inst (.*);
 ^~~~
-../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-20" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:20</a>:6: error: use of undeclared identifier 'top'
+../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-20" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:20</a>:6: error: use of undeclared identifier &#39;top&#39;
 bind top top_properties properties_inst (.*);
      ^~~
-../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-20" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:20</a>:24: error: expected ','
+../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-20" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:20</a>:24: error: expected &#39;,&#39;
 bind top top_properties properties_inst (.*);
                        ^
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic02.sv.html#l-20" target="file-frame">third_party/tools/yosys/tests/sva/basic02.sv:20</a>:41: error: expected declarator

@@ -54,8 +54,8 @@ module lsu_pcx_qmon (
 	);
 	assign reset = (~ dbb_reset_l);
 	assign clk = rclk;
-	assign entry0_rst = (reset | (send_by_pcx & (~ entry0_en)));
-	assign entry0_en = ((entry1_full & send_by_pcx) | ((~ (entry0_full & (~ send_by_pcx))) & send_to_pcx));
+	assign entry0_rst = (reset | (send_by_pcx &amp; (~ entry0_en)));
+	assign entry0_en = ((entry1_full &amp; send_by_pcx) | ((~ (entry0_full &amp; (~ send_by_pcx))) &amp; send_to_pcx));
 	assign entry0_din = entry0_en;
 	dffre_s qstate_entry0(
 		.din(entry0_din),
@@ -63,12 +63,12 @@ module lsu_pcx_qmon (
 		.rst(entry0_rst),
 		.en(entry0_en),
 		.clk(clk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
-	assign entry1_rst = (reset | (send_by_pcx & (~ entry1_en)));
-	assign entry1_en = ((entry0_full & send_to_pcx) & (~ (send_by_pcx & (~ entry1_full))));
+	assign entry1_rst = (reset | (send_by_pcx &amp; (~ entry1_en)));
+	assign entry1_en = ((entry0_full &amp; send_to_pcx) &amp; (~ (send_by_pcx &amp; (~ entry1_full))));
 	assign entry1_din = entry1_en;
 	dffre_s qstate_entry1(
 		.din(entry1_din),
@@ -76,12 +76,12 @@ module lsu_pcx_qmon (
 		.rst(entry1_rst),
 		.en(entry1_en),
 		.clk(clk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
 	assign qwrite = (~ entry1_full);
-	assign sel_qentry0 = ((~ entry0_full) & (~ send_to_pcx));
+	assign sel_qentry0 = ((~ entry0_full) &amp; (~ send_to_pcx));
 endmodule
 
 

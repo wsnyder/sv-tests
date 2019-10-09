@@ -56,15 +56,15 @@ module sparc_exu_aluor32 (
 	assign nor1_14 = (~ (in[27] | in[26]));
 	assign nor1_15 = (~ (in[29] | in[28]));
 	assign nor1_16 = (~ (in[31] | in[30]));
-	assign nand2_1 = (~ (((nor1_1 & nor1_2) & nor1_3) & nor1_4));
-	assign nand2_2 = (~ (((nor1_5 & nor1_6) & nor1_7) & nor1_8));
-	assign nand2_3 = (~ (((nor1_9 & nor1_10) & nor1_11) & nor1_12));
-	assign nand2_4 = (~ (((nor1_13 & nor1_14) & nor1_15) & nor1_16));
+	assign nand2_1 = (~ (((nor1_1 &amp; nor1_2) &amp; nor1_3) &amp; nor1_4));
+	assign nand2_2 = (~ (((nor1_5 &amp; nor1_6) &amp; nor1_7) &amp; nor1_8));
+	assign nand2_3 = (~ (((nor1_9 &amp; nor1_10) &amp; nor1_11) &amp; nor1_12));
+	assign nand2_4 = (~ (((nor1_13 &amp; nor1_14) &amp; nor1_15) &amp; nor1_16));
 	assign inv3_1 = (~ nand2_1);
 	assign inv3_2 = (~ nand2_2);
 	assign inv3_3 = (~ nand2_3);
 	assign inv3_4 = (~ nand2_4);
-	assign out = (~ (((inv3_1 & inv3_2) & inv3_3) & inv3_4));
+	assign out = (~ (((inv3_1 &amp; inv3_2) &amp; inv3_3) &amp; inv3_4));
 endmodule
 
 

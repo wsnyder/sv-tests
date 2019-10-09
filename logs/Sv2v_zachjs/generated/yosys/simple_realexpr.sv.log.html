@@ -39,7 +39,7 @@ module demo_002 (
 	output [63:0] y1;
 	output [63:0] y2;
 	output [63:0] y3;
-	assign y0 = (1'bx >= ((- 1) * (- 1.17)));
+	assign y0 = (1&#39;bx &gt;= ((- 1) * (- 1.17)));
 	assign y1 = (- 1);
 	assign y2 = (- 1);
 	assign y3 = (- 1);
@@ -52,7 +52,7 @@ module demo_003 (
 	output B;
 	parameter real p = 0;
 	assign A = (p == 1.0);
-	assign B = (p != "1.000000");
+	assign B = (p != &#34;1.000000&#34;);
 endmodule
 module demo_004 (
 	A,

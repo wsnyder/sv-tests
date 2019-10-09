@@ -17,14 +17,14 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::1 File (<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::8 error in parsing: (syntax error, unexpected vIF, expecting vENDSPECIFY or vSPECPARAM or '(')
-if (a) (b => out) = (invertrise, invertfall);
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::9 error in parsing: (syntax error, unexpected '(')
-if (b) (a => out) = (invertrise, invertfall);
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::10 error in parsing: (syntax error, unexpected '(')
-if (~a)(b => out) = (noninvrise, noninvfall);
-PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::11 error in parsing: (syntax error, unexpected '(')
-if (~b)(a => out) = (noninvrise, noninvfall);
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::8 error in parsing: (syntax error, unexpected vIF, expecting vENDSPECIFY or vSPECPARAM or &#39;(&#39;)
+if (a) (b =&gt; out) = (invertrise, invertfall);
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::9 error in parsing: (syntax error, unexpected &#39;(&#39;)
+if (b) (a =&gt; out) = (invertrise, invertfall);
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::10 error in parsing: (syntax error, unexpected &#39;(&#39;)
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>::11 error in parsing: (syntax error, unexpected &#39;(&#39;)
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
 ERROR (7)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

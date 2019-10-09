@@ -31,44 +31,44 @@ module fsm_using_single_always (
 	reg gnt_0;
 	reg gnt_1;
 	parameter SIZE = 3;
-	parameter IDLE = 3'b001;
-	parameter GNT0 = 3'b010;
-	parameter GNT1 = 3'b100;
+	parameter IDLE = 3&#39;b001;
+	parameter GNT0 = 3&#39;b010;
+	parameter GNT1 = 3&#39;b100;
 	reg [(SIZE - 1):0] state;
 	wire [(SIZE - 1):0] next_state;
 	always @(posedge clock) begin : FSM
-		if ((reset == 1'b1)) begin
-			state <= #(1) IDLE;
-			gnt_0 <= 0;
-			gnt_1 <= 0;
+		if ((reset == 1&#39;b1)) begin
+			state &lt;= #(1) IDLE;
+			gnt_0 &lt;= 0;
+			gnt_1 &lt;= 0;
 		end
 		else case (state)
-			IDLE: if ((req_0 == 1'b1)) begin
-				state <= #(1) GNT0;
-				gnt_0 <= 1;
+			IDLE: if ((req_0 == 1&#39;b1)) begin
+				state &lt;= #(1) GNT0;
+				gnt_0 &lt;= 1;
 			end
-			else if ((req_1 == 1'b1)) begin
-				gnt_1 <= 1;
-				state <= #(1) GNT1;
-			end
-			else begin
-				state <= #(1) IDLE;
-			end
-			GNT0: if ((req_0 == 1'b1)) begin
-				state <= #(1) GNT0;
+			else if ((req_1 == 1&#39;b1)) begin
+				gnt_1 &lt;= 1;
+				state &lt;= #(1) GNT1;
 			end
 			else begin
-				gnt_0 <= 0;
-				state <= #(1) IDLE;
+				state &lt;= #(1) IDLE;
 			end
-			GNT1: if ((req_1 == 1'b1)) begin
-				state <= #(1) GNT1;
+			GNT0: if ((req_0 == 1&#39;b1)) begin
+				state &lt;= #(1) GNT0;
 			end
 			else begin
-				gnt_1 <= 0;
-				state <= #(1) IDLE;
+				gnt_0 &lt;= 0;
+				state &lt;= #(1) IDLE;
 			end
-			default: state <= #(1) IDLE;
+			GNT1: if ((req_1 == 1&#39;b1)) begin
+				state &lt;= #(1) GNT1;
+			end
+			else begin
+				gnt_1 &lt;= 0;
+				state &lt;= #(1) IDLE;
+			end
+			default: state &lt;= #(1) IDLE;
 		endcase
 	end
 endmodule

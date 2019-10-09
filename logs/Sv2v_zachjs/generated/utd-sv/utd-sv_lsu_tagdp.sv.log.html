@@ -89,10 +89,10 @@ module lsu_tagdp (
 		.so()
 	);
 	mux4ds #(64) lsu_misc_rdata_sel(
-		.in0({16'h0, lsu_local_ldxa_data_g[47:0]}),
+		.in0({16&#39;h0, lsu_local_ldxa_data_g[47:0]}),
 		.in1(lsu_tlb_rd_data[63:0]),
-		.in2({16'h0, lsu_va_wtchpt_addr[47:3], 3'b000}),
-		.in3({33'h0, dtag_rdata_sel_g[29:0], dtag_vld_sel_g}),
+		.in2({16&#39;h0, lsu_va_wtchpt_addr[47:3], 3&#39;b000}),
+		.in3({33&#39;h0, dtag_rdata_sel_g[29:0], dtag_vld_sel_g}),
 		.sel0(lsu_local_ldxa_sel_g),
 		.sel1(lsu_local_ldxa_tlbrd_sel_g),
 		.sel2(lsu_va_wtchpt_sel_g),

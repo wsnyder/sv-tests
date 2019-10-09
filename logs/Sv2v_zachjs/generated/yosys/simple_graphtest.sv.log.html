@@ -23,20 +23,20 @@ module graphtest (
 	output [9:0] Y;
 	output [7:0] Z;
 	wire [4:0] t;
-	assign t[4] = 1'b0;
-	assign t[2:0] = (A[2:0] & {2'b10, B[3]});
+	assign t[4] = 1&#39;b0;
+	assign t[2:0] = (A[2:0] &amp; {2&#39;b10, B[3]});
 	assign t[3] = (A[2] ^ B[3]);
-	assign Y = {3'b111, A, t[2:0]};
-	assign Z[0] = 1'b0;
+	assign Y = {3&#39;b111, A, t[2:0]};
+	assign Z[0] = 1&#39;b0;
 	assign Z[1] = t[3];
 	assign Z[3:2] = A[2:1];
-	assign Z[7:4] = {1'b0, B[2:0]};
+	assign Z[7:4] = {1&#39;b0, B[2:0]};
 	always @(*) begin
-		if ((A == 4'b1111)) begin
+		if ((A == 4&#39;b1111)) begin
 			X = B;
 		end
 		else begin
-			X = 4'b0000;
+			X = 4&#39;b0000;
 		end
 	end
 endmodule

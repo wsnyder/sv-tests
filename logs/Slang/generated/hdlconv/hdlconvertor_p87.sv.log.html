@@ -10,14 +10,14 @@ top_module:
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv:4</a>:9: error: use of undeclared identifier '$isunbounded'
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv:4</a>:9: error: use of undeclared identifier &#39;$isunbounded&#39;
     if ($isunbounded(max_cks)) begin
         ^~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv:7</a>:48: error: expected expression
-           (reset_n && $rose(expr)) |-> (expr [* min_cks]);
+           (reset_n &amp;&amp; $rose(expr)) |-&gt; (expr [* min_cks]);
                                                ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv:14</a>:47: error: expected expression
-           (reset_n && $rose(expr)) |-> (expr[* min_cks:max_cks])
+           (reset_n &amp;&amp; $rose(expr)) |-&gt; (expr[* min_cks:max_cks])
                                               ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv:15</a>:23: error: expected expression
            ##1 (!expr);

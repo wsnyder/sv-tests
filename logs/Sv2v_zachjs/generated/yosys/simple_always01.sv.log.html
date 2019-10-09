@@ -19,7 +19,7 @@ module uut_always01 (
 	input reset;
 	output [3:0] count;
 	reg [3:0] count;
-	always @(posedge clock) count <= (reset ? 0 : (count + 1));
+	always @(posedge clock) count &lt;= (reset ? 0 : (count + 1));
 endmodule
 
 

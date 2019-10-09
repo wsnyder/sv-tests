@@ -25,8 +25,8 @@ module top (
 	input wire QB;
 	output reg Q;
 	always @(posedge clk) begin
-		if (selA) Q <= QA;
-		if (selB) Q <= QB;
+		if (selA) Q &lt;= QA;
+		if (selB) Q &lt;= QB;
 	end
 endmodule
 

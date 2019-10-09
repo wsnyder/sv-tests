@@ -27,29 +27,29 @@ module serial_crc_ccitt (
 	reg [15:0] lfsr;
 	assign crc_out = lfsr;
 	always @(posedge clk) if (reset) begin
-		lfsr <= 16'hFFFF;
+		lfsr &lt;= 16&#39;hFFFF;
 	end
 	else if (enable) begin
 		if (init) begin
-			lfsr <= 16'hFFFF;
+			lfsr &lt;= 16&#39;hFFFF;
 		end
 		else begin
-			lfsr[0] <= (data_in ^ lfsr[15]);
-			lfsr[1] <= lfsr[0];
-			lfsr[2] <= lfsr[1];
-			lfsr[3] <= lfsr[2];
-			lfsr[4] <= lfsr[3];
-			lfsr[5] <= ((lfsr[4] ^ data_in) ^ lfsr[15]);
-			lfsr[6] <= lfsr[5];
-			lfsr[7] <= lfsr[6];
-			lfsr[8] <= lfsr[7];
-			lfsr[9] <= lfsr[8];
-			lfsr[10] <= lfsr[9];
-			lfsr[11] <= lfsr[10];
-			lfsr[12] <= ((lfsr[11] ^ data_in) ^ lfsr[15]);
-			lfsr[13] <= lfsr[12];
-			lfsr[14] <= lfsr[13];
-			lfsr[15] <= lfsr[14];
+			lfsr[0] &lt;= (data_in ^ lfsr[15]);
+			lfsr[1] &lt;= lfsr[0];
+			lfsr[2] &lt;= lfsr[1];
+			lfsr[3] &lt;= lfsr[2];
+			lfsr[4] &lt;= lfsr[3];
+			lfsr[5] &lt;= ((lfsr[4] ^ data_in) ^ lfsr[15]);
+			lfsr[6] &lt;= lfsr[5];
+			lfsr[7] &lt;= lfsr[6];
+			lfsr[8] &lt;= lfsr[7];
+			lfsr[9] &lt;= lfsr[8];
+			lfsr[10] &lt;= lfsr[9];
+			lfsr[11] &lt;= lfsr[10];
+			lfsr[12] &lt;= ((lfsr[11] ^ data_in) ^ lfsr[15]);
+			lfsr[13] &lt;= lfsr[12];
+			lfsr[14] &lt;= lfsr[13];
+			lfsr[15] &lt;= lfsr[14];
 		end
 	end
 endmodule

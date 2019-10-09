@@ -22,8 +22,8 @@ module repwhile_test001 (
 		input reg [31:0] value;
 		begin
 			mylog2 = 0;
-			while ((value > 0)) begin
-				value = (value >> 1);
+			while ((value &gt; 0)) begin
+				value = (value &gt;&gt; 1);
 				mylog2 = (mylog2 + 1);
 			end
 		end
@@ -32,17 +32,17 @@ module repwhile_test001 (
 		input reg [7:0] value;
 		begin
 			myexp2 = 1;
-			repeat (value) myexp2 = (myexp2 << 1);
+			repeat (value) myexp2 = (myexp2 &lt;&lt; 1);
 		end
 	endfunction
 	reg [511:0] y_table;
 	reg [2047:0] x_table;
 	integer i;
 	initial begin
-		for (i = 0; (i < 64); i = (i + 1))
+		for (i = 0; (i &lt; 64); i = (i + 1))
 			begin
-				y_table[(i * 8)+:8] <= mylog2(i);
-				x_table[(i * 32)+:32] <= myexp2(i);
+				y_table[(i * 8)+:8] &lt;= mylog2(i);
+				x_table[(i * 32)+:32] &lt;= myexp2(i);
 			end
 	end
 	assign y = y_table[(a * 8)+:8];

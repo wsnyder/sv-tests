@@ -14,7 +14,7 @@ module always_tb;
 	wire a = 0;
 	wire b = 0;
 	reg q = 0;
-	always_latch if (a) q <= b;
+	always_latch if (a) q &lt;= b;
 endmodule
 
 

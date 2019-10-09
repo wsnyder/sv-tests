@@ -17,7 +17,7 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>::103 Could not resolve initial assignment to a constant value, skipping
 
-wire spu_mast_done_wen = (spu_mast_st_done | local_kill_abort) & mactl_stop;
+wire spu_mast_done_wen = (spu_mast_st_done | local_kill_abort) &amp; mactl_stop;
 WARNING (3)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>::104 Could not resolve initial assignment to a constant value, skipping
 
 wire spu_mast_done_rst = reset | spu_mactl_iss_pulse_dly;
@@ -26,10 +26,10 @@ WARNING (4)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mas
 wire  state_reset = reset | local_kill_abort;
 WARNING (5)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>::171 Could not resolve initial assignment to a constant value, skipping
 
-wire start_stop = spu_mactl_iss_pulse_dly & mactl_stop;
+wire start_stop = spu_mactl_iss_pulse_dly &amp; mactl_stop;
 WARNING (6)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>::193 Could not resolve initial assignment to a constant value, skipping
 
-wire tr2rdmem_frm_idle = cur_idle_state & start_stop;
+wire tr2rdmem_frm_idle = cur_idle_state &amp; start_stop;
 WARNING (7)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>::306 Could not resolve initial assignment to a constant value, skipping
 
 wire rd_cntr_en = cur_rdmem_state;

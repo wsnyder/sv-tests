@@ -17,15 +17,15 @@ module parallel_if;
 	wire enable;
 	wire up_en;
 	wire down_en;
-	always @(posedge clk) if ((reset == 1'b0)) begin
-		counter <= 4'b0000;
+	always @(posedge clk) if ((reset == 1&#39;b0)) begin
+		counter &lt;= 4&#39;b0000;
 	end
 	else begin
-		if (((enable == 1'b1) && (up_en == 1'b1))) begin
-			counter <= (counter + 1'b1);
+		if (((enable == 1&#39;b1) &amp;&amp; (up_en == 1&#39;b1))) begin
+			counter &lt;= (counter + 1&#39;b1);
 		end
-		if (((enable == 1'b1) && (down_en == 1'b1))) begin
-			counter <= (counter - 1'b1);
+		if (((enable == 1&#39;b1) &amp;&amp; (down_en == 1&#39;b1))) begin
+			counter &lt;= (counter - 1&#39;b1);
 		end
 	end
 endmodule

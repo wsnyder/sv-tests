@@ -20,7 +20,7 @@ module top (
 	input reset;
 	input antecedent;
 	output reg consequent;
-	always @(posedge clk) consequent <= (reset ? 0 : antecedent);
+	always @(posedge clk) consequent &lt;= (reset ? 0 : antecedent);
 endmodule
 
 

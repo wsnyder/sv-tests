@@ -27,7 +27,7 @@ module ctu_test_stub_scan (
 	output se;
 	output so_0;
 	wire short_chain_select;
-	assign se = ((~ ctu_tst_scan_disable) & global_shift_enable);
+	assign se = ((~ ctu_tst_scan_disable) &amp; global_shift_enable);
 	assign short_chain_select = ctu_tst_short_chain;
 	assign so_0 = (short_chain_select ? short_chain_so_0 : long_chain_so_0);
 endmodule

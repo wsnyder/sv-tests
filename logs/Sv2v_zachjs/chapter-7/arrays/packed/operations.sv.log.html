@@ -2,7 +2,7 @@
 <h3>
 <a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
 </h3>
-description: Test packed arrays operations support (R & W)
+description: Test packed arrays operations support (R &amp; W)
 should_fail: 0
 tags: 7.4.3
 incdirs: 
@@ -13,12 +13,12 @@ files: <a href="../../../../../tests/chapter-7/arrays/packed/operations.sv.html"
 module top;
 	reg [7:0] arr;
 	initial begin
-		arr = 8'h00;
-		$display(":assert: ('%h' == '00')", arr);
-		arr = 8'hde;
-		$display(":assert: ('%h' == 'de')", arr);
-		arr = 8'had;
-		$display(":assert: ('%h' == 'ad')", arr);
+		arr = 8&#39;h00;
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;00&#39;)&#34;, arr);
+		arr = 8&#39;hde;
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;de&#39;)&#34;, arr);
+		arr = 8&#39;had;
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;ad&#39;)&#34;, arr);
 	end
 endmodule
 

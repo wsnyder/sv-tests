@@ -2,7 +2,7 @@
 <h3>
 <a href="https://verilogtorouting.org/" target="_blank">odin</a>
 </h3>
-description: >>= assignment test
+description: &gt;&gt;= assignment test
 should_fail: 0
 tags: 11.4.1
 incdirs: 
@@ -17,12 +17,12 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::1 File (<a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::8 error in parsing: (syntax error, unexpected '=', expecting '(')
+PARSE_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::8 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
 int a = 12;
-PARSE_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::9 error in parsing: (syntax error, unexpected '=', expecting '(')
+PARSE_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::9 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
 int b = 5;
-PARSE_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::11 error in parsing: (syntax error, unexpected voSRIGHT, expecting voLTE or '=')
-    a >>= b;
+PARSE_ERROR <a href="../../../../tests/generated/assignment_op/11.4.1--log_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--log_shr_assignment.sv</a>::11 error in parsing: (syntax error, unexpected voSRIGHT, expecting voLTE or &#39;=&#39;)
+    a &gt;&gt;= b;
 ERROR (6)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

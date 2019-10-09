@@ -47,13 +47,13 @@ module sctag_dir_out (
 	);
 	zzpar16 par_row1_parity(
 		.z(row1_parity),
-		.d({1'b0, rddata_out_c6[30], rddata_out_c6[28], rddata_out_c6[26], rddata_out_c6[24], rddata_out_c6[22], rddata_out_c6[20], rddata_out_c6[18], rddata_out_c6[16], rddata_out_c6[14], rddata_out_c6[12], rddata_out_c6[10], rddata_out_c6[8], rddata_out_c6[6], rddata_out_c6[4], rddata_out_c6[2]})
+		.d({1&#39;b0, rddata_out_c6[30], rddata_out_c6[28], rddata_out_c6[26], rddata_out_c6[24], rddata_out_c6[22], rddata_out_c6[20], rddata_out_c6[18], rddata_out_c6[16], rddata_out_c6[14], rddata_out_c6[12], rddata_out_c6[10], rddata_out_c6[8], rddata_out_c6[6], rddata_out_c6[4], rddata_out_c6[2]})
 	);
 	zzpar16 par_row2_parity(
 		.z(row2_parity),
 		.d({rddata_out_c6[31], rddata_out_c6[29], rddata_out_c6[27], rddata_out_c6[25], rddata_out_c6[23], rddata_out_c6[21], rddata_out_c6[19], rddata_out_c6[17], rddata_out_c6[15], rddata_out_c6[13], rddata_out_c6[11], rddata_out_c6[9], rddata_out_c6[7], rddata_out_c6[5], rddata_out_c6[3], rddata_out_c6[1]})
 	);
-	assign parity_vld_prev = (((row1_parity ^ row2_parity) & rddata_out_c6[0]) & (rd_data_sel_c6_top | rd_data_sel_c6_bottom));
+	assign parity_vld_prev = (((row1_parity ^ row2_parity) &amp; rddata_out_c6[0]) &amp; (rd_data_sel_c6_top | rd_data_sel_c6_bottom));
 	dff_s #(1) ff_parity_vld(
 		.q(parity_vld),
 		.din(parity_vld_prev),

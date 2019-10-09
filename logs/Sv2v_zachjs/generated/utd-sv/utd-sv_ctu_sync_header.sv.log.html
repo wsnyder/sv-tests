@@ -100,7 +100,7 @@ module ctu_sync_header (
 		.jbus_tx_sync_local(jbus_tx_sync_local),
 		.dram_rx_sync_local(),
 		.so(so),
-		.dram_rx_sync_global(1'b0),
+		.dram_rx_sync_global(1&#39;b0),
 		.dram_tx_sync_global(ctu_dram_tx_sync_dly2),
 		.jbus_rx_sync_global(ctu_jbus_rx_sync_dly3),
 		.jbus_tx_sync_global(ctu_jbus_tx_sync_dly3),
@@ -109,8 +109,8 @@ module ctu_sync_header (
 		.si(si),
 		.se(se)
 	);
-	assign pulse_cnt_dn_nxt = (pulse_cnt == 3'b111);
-	assign pulse_cnt_nxt = ((~ pulse_cnt_dn_nxt) ? (pulse_cnt + 3'b001) : pulse_cnt);
+	assign pulse_cnt_dn_nxt = (pulse_cnt == 3&#39;b111);
+	assign pulse_cnt_nxt = ((~ pulse_cnt_dn_nxt) ? (pulse_cnt + 3&#39;b001) : pulse_cnt);
 	dffrl_async_ns #(3) u_pulse_cnt(
 		.din(pulse_cnt_nxt),
 		.clk(cmp_clk),
@@ -123,19 +123,19 @@ module ctu_sync_header (
 		.rst_l(start_clk_early_jl),
 		.q(pulse_filter)
 	);
-	assign jbus_rx_sync_nxt = (jbus_rx_sync_local & pulse_filter);
+	assign jbus_rx_sync_nxt = (jbus_rx_sync_local &amp; pulse_filter);
 	dff_ns u_jbus_rx_sync(
 		.q(jbus_rx_sync),
 		.din(jbus_rx_sync_nxt),
 		.clk(cmp_clk)
 	);
-	assign jbus_tx_sync_nxt = (jbus_tx_sync_local & pulse_filter);
+	assign jbus_tx_sync_nxt = (jbus_tx_sync_local &amp; pulse_filter);
 	dff_ns u_jbus_tx_sync(
 		.q(jbus_tx_sync),
 		.din(jbus_tx_sync_nxt),
 		.clk(cmp_clk)
 	);
-	assign ctu_dram_tx_sync_early_nxt = (dram_tx_sync_local & pulse_filter);
+	assign ctu_dram_tx_sync_early_nxt = (dram_tx_sync_local &amp; pulse_filter);
 	dff_ns u_dram_tx_sync_early(
 		.q(ctu_dram_tx_sync_early),
 		.din(ctu_dram_tx_sync_early_nxt),

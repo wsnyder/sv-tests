@@ -115,7 +115,7 @@ module ctu_clsp_synch_jldl (
 	output ctu_ddr3_iodll_rst_l;
 	output start_clk_dl;
 	wire jbus_rx_sync_gated;
-	assign jbus_rx_sync_gated = (jbus_rx_sync & start_clk_cl);
+	assign jbus_rx_sync_gated = (jbus_rx_sync &amp; start_clk_cl);
 	dffrle_ns u_start_clk_dl(
 		.din(start_clk_cl),
 		.q(start_clk_dl),

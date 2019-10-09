@@ -112,14 +112,14 @@ module ctu_clsp_synch_cljl (
 		.din(ctu_efc_cken_pre_jl),
 		.clk(jbus_clk)
 	);
-	assign ctu_jbusl_cken_jl_nxt = (start_clk_jl ? ctu_jbusl_cken_pre_jl : 1'b1);
+	assign ctu_jbusl_cken_jl_nxt = (start_clk_jl ? ctu_jbusl_cken_pre_jl : 1&#39;b1);
 	dffsl_async_ns u_ctu_jbusl_cken_jl(
 		.din(ctu_jbusl_cken_jl_nxt),
 		.q(ctu_jbusl_cken_jl),
 		.clk(jbus_clk),
 		.set_l(io_pwron_rst_l)
 	);
-	assign ctu_jbusr_cken_jl_nxt = (start_clk_jl ? ctu_jbusr_cken_pre_jl : 1'b1);
+	assign ctu_jbusr_cken_jl_nxt = (start_clk_jl ? ctu_jbusr_cken_pre_jl : 1&#39;b1);
 	dffsl_async_ns u_ctu_jbusr_cken_jl(
 		.din(ctu_jbusr_cken_jl_nxt),
 		.q(ctu_jbusr_cken_jl),
@@ -132,14 +132,14 @@ module ctu_clsp_synch_cljl (
 		.din(ctu_jbi_cken_pre_jl),
 		.clk(jbus_clk)
 	);
-	assign ctu_dbg_cken_jl_nxt = (start_clk_jl ? ctu_dbg_cken_pre_jl : 1'b1);
+	assign ctu_dbg_cken_jl_nxt = (start_clk_jl ? ctu_dbg_cken_pre_jl : 1&#39;b1);
 	dffsl_async_ns u_ctu_dbg_cken_jl(
 		.set_l(io_pwron_rst_l),
 		.q(ctu_dbg_cken_jl),
 		.din(ctu_dbg_cken_jl_nxt),
 		.clk(jbus_clk)
 	);
-	assign ctu_misc_cken_jl_nxt = (start_clk_jl ? ctu_misc_cken_pre_jl : 1'b1);
+	assign ctu_misc_cken_jl_nxt = (start_clk_jl ? ctu_misc_cken_pre_jl : 1&#39;b1);
 	dffsl_async_ns u_ctu_misc_cken_jl(
 		.set_l(io_pwron_rst_l),
 		.q(ctu_misc_cken_jl),

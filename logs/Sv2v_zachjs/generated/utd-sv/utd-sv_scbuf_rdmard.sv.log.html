@@ -92,7 +92,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_ctag_c8[14:0]),
 		.din(sctag_scbuf_ctag_c7[14:0]),
 		.clk(en_clk_ctag),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -100,12 +100,12 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_ctag_c9[14:0]),
 		.din(sctag_scbuf_ctag_c8[14:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
 	assign io_read_c8 = sctag_scbuf_ctag_c8[12];
-	assign sctag_scbuf_we_c8 = (io_read_c8 & sctag_scbuf_req_en_c8);
+	assign sctag_scbuf_we_c8 = (io_read_c8 &amp; sctag_scbuf_req_en_c8);
 	clken_buf clk_buf_data(
 		.clk(en_clk_data),
 		.rclk(rclk),
@@ -116,7 +116,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_req_en_c8),
 		.din(sctag_scbuf_req_en_c7),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -124,7 +124,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_req_en_c9),
 		.din(sctag_scbuf_req_en_c8),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -132,7 +132,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_req_en_c10),
 		.din(sctag_scbuf_req_en_c9),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -140,7 +140,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_word_vld_c8),
 		.din(sctag_scbuf_word_vld_c7),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -148,7 +148,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_word_vld_c9),
 		.din(sctag_scbuf_word_vld_c8),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -156,7 +156,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_word_vld_c10),
 		.din(sctag_scbuf_word_vld_c9),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -166,7 +166,7 @@ module scbuf_rdmard (
 		.q(scdata_scbuf_decc_out_c9[623:0]),
 		.din(scdata_scbuf_decc_out_c8[623:0]),
 		.clk(en_clk_data),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -174,7 +174,7 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_word_c8[3:0]),
 		.din(sctag_scbuf_word_c7[3:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -182,18 +182,18 @@ module scbuf_rdmard (
 		.q(sctag_scbuf_word_c9[3:0]),
 		.din(sctag_scbuf_word_c8[3:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
-	assign sel_in0 = (sctag_scbuf_word_c9[2:1] == 2'b00);
-	assign sel_in1 = (sctag_scbuf_word_c9[2:1] == 2'b01);
-	assign sel_in2 = (sctag_scbuf_word_c9[2:1] == 2'b10);
+	assign sel_in0 = (sctag_scbuf_word_c9[2:1] == 2&#39;b00);
+	assign sel_in1 = (sctag_scbuf_word_c9[2:1] == 2&#39;b01);
+	assign sel_in2 = (sctag_scbuf_word_c9[2:1] == 2&#39;b10);
 	assign sel_in3 = (~ ((sel_in0 | sel_in1) | sel_in2));
 	assign word_c9 = {sctag_scbuf_word_c9[3], sctag_scbuf_word_c9[0]};
-	assign sel_in4 = (word_c9 == 2'b00);
-	assign sel_in5 = (word_c9 == 2'b01);
-	assign sel_in6 = (word_c9 == 2'b10);
+	assign sel_in4 = (word_c9 == 2&#39;b00);
+	assign sel_in5 = (word_c9 == 2&#39;b01);
+	assign sel_in6 = (word_c9 == 2&#39;b10);
 	assign sel_in7 = (~ ((sel_in4 | sel_in5) | sel_in6));
 	mux4ds #(78) mux_scdata_scbuf_decc_out_r(
 		.dout(scdata_scbuf_decc_out_c9_4t1[77:0]),
@@ -232,7 +232,7 @@ module scbuf_rdmard (
 		.q(scdata_scbuf_decc_out_c10[38:0]),
 		.din(scdata_scbuf_decc_out_c9_16t1[38:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -243,20 +243,20 @@ module scbuf_rdmard (
 		.parity(scdata_scbuf_decc_out_c10[6:0]),
 		.din(scdata_scbuf_decc_out_c10[38:7])
 	);
-	assign rdmard_uncorr_err_c10 = (sctag_scbuf_word_vld_c10 & ((| check0_c10[5:0]) & (~ parity0_c10)));
-	assign rdmard_corr_err_c10 = (sctag_scbuf_word_vld_c10 & parity0_c10);
+	assign rdmard_uncorr_err_c10 = (sctag_scbuf_word_vld_c10 &amp; ((| check0_c10[5:0]) &amp; (~ parity0_c10)));
+	assign rdmard_corr_err_c10 = (sctag_scbuf_word_vld_c10 &amp; parity0_c10);
 	mux2ds #(32) mux_data_ctag_c9(
 		.dout(data_ctag_mux_out_c9[31:0]),
 		.in0(scdata_scbuf_dat_out_c10[31:0]),
 		.sel0((~ sctag_scbuf_req_en_c9)),
-		.in1({17'b0, sctag_scbuf_ctag_c9[14:0]}),
+		.in1({17&#39;b0, sctag_scbuf_ctag_c9[14:0]}),
 		.sel1(sctag_scbuf_req_en_c9)
 	);
 	dff_s #(32) ff_data_ctag_mux_out_c10(
 		.q(data_ctag_mux_out_c10[31:0]),
 		.din(data_ctag_mux_out_c9[31:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -264,7 +264,7 @@ module scbuf_rdmard (
 		.q(rdmard_uncorr_err_c11),
 		.din(rdmard_uncorr_err_c10),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -272,7 +272,7 @@ module scbuf_rdmard (
 		.q(rdmard_corr_err_c11),
 		.din(rdmard_corr_err_c10),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);

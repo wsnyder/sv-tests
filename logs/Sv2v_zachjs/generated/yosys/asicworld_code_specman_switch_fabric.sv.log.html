@@ -131,16 +131,16 @@ module switch (
 	reg [7:0] data_out;
 	reg data_out_ack;
 	always @(posedge clk) if (reset) begin
-		data_out <= 0;
-		data_out_ack <= 0;
+		data_out &lt;= 0;
+		data_out_ack &lt;= 0;
 	end
 	else if (data_in_valid) begin
-		data_out <= data_in;
-		data_out_ack <= 1;
+		data_out &lt;= data_in;
+		data_out_ack &lt;= 1;
 	end
 	else begin
-		data_out <= 0;
-		data_out_ack <= 0;
+		data_out &lt;= 0;
+		data_out_ack &lt;= 0;
 	end
 endmodule
 

@@ -31,9 +31,9 @@ module fsm_using_function (
 	reg gnt_0;
 	reg gnt_1;
 	parameter SIZE = 3;
-	parameter IDLE = 3'b001;
-	parameter GNT0 = 3'b010;
-	parameter GNT1 = 3'b100;
+	parameter IDLE = 3&#39;b001;
+	parameter GNT0 = 3&#39;b010;
+	parameter GNT1 = 3&#39;b100;
 	reg [(SIZE - 1):0] state;
 	wire [(SIZE - 1):0] next_state;
 	assign next_state = fsm_function(state, req_0, req_1);
@@ -42,22 +42,22 @@ module fsm_using_function (
 		input reg req_0;
 		input reg req_1;
 		case (state)
-			IDLE: if ((req_0 == 1'b1)) begin
+			IDLE: if ((req_0 == 1&#39;b1)) begin
 				fsm_function = GNT0;
 			end
-			else if ((req_1 == 1'b1)) begin
+			else if ((req_1 == 1&#39;b1)) begin
 				fsm_function = GNT1;
 			end
 			else begin
 				fsm_function = IDLE;
 			end
-			GNT0: if ((req_0 == 1'b1)) begin
+			GNT0: if ((req_0 == 1&#39;b1)) begin
 				fsm_function = GNT0;
 			end
 			else begin
 				fsm_function = IDLE;
 			end
-			GNT1: if ((req_1 == 1'b1)) begin
+			GNT1: if ((req_1 == 1&#39;b1)) begin
 				fsm_function = GNT1;
 			end
 			else begin
@@ -67,35 +67,35 @@ module fsm_using_function (
 		endcase
 	endfunction
 	always @(posedge clock) begin : FSM_SEQ
-		if ((reset == 1'b1)) begin
-			state <= #(1) IDLE;
+		if ((reset == 1&#39;b1)) begin
+			state &lt;= #(1) IDLE;
 		end
 		else begin
-			state <= #(1) next_state;
+			state &lt;= #(1) next_state;
 		end
 	end
 	always @(posedge clock) begin : OUTPUT_LOGIC
-		if ((reset == 1'b1)) begin
-			gnt_0 <= #(1) 1'b0;
-			gnt_1 <= #(1) 1'b0;
+		if ((reset == 1&#39;b1)) begin
+			gnt_0 &lt;= #(1) 1&#39;b0;
+			gnt_1 &lt;= #(1) 1&#39;b0;
 		end
 		else begin
 			case (state)
 				IDLE: begin
-					gnt_0 <= #(1) 1'b0;
-					gnt_1 <= #(1) 1'b0;
+					gnt_0 &lt;= #(1) 1&#39;b0;
+					gnt_1 &lt;= #(1) 1&#39;b0;
 				end
 				GNT0: begin
-					gnt_0 <= #(1) 1'b1;
-					gnt_1 <= #(1) 1'b0;
+					gnt_0 &lt;= #(1) 1&#39;b1;
+					gnt_1 &lt;= #(1) 1&#39;b0;
 				end
 				GNT1: begin
-					gnt_0 <= #(1) 1'b0;
-					gnt_1 <= #(1) 1'b1;
+					gnt_0 &lt;= #(1) 1&#39;b0;
+					gnt_1 &lt;= #(1) 1&#39;b1;
 				end
 				default: begin
-				gnt_0 <= #(1) 1'b0;
-				gnt_1 <= #(1) 1'b0;
+				gnt_0 &lt;= #(1) 1&#39;b0;
+				gnt_1 &lt;= #(1) 1&#39;b0;
 			end
 			endcase
 		end

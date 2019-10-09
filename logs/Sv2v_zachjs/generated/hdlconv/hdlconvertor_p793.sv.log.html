@@ -44,7 +44,7 @@ module multiplier (
 	input [(b_width - 1):0] b;
 	output [(product_width - 1):0] product;
 	generate
-		if (((a_width < 8) || (b_width < 8))) begin : mult
+		if (((a_width &lt; 8) || (b_width &lt; 8))) begin : mult
 			CLA_multiplier #(
 				a_width,
 				b_width

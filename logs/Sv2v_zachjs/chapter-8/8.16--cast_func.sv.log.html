@@ -13,7 +13,7 @@ files: <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-f
 module class_tb;
 	initial begin : sv2v_autoblock_0
 		reg [31:0] val;
-		if ((! $cast(val, 5))) $display("$cast failed");
+		if ((! $cast(val, 5))) $display(&#34;$cast failed&#34;);
 		$display(val);
 	end
 endmodule

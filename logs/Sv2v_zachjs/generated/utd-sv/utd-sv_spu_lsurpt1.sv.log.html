@@ -77,7 +77,7 @@ module spu_lsurpt1 (
 		.q({spu_lsu_ldst_pckt[122:72], spu_lsu_ldst_pckt[69:0]}),
 		.en(spu_wen_pcx_wen),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -87,7 +87,7 @@ module spu_lsurpt1 (
 		.q(spu_ldstreq_pcx_q[71:70]),
 		.en(spu_wen_pcx_wen),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -104,7 +104,7 @@ module spu_lsurpt1 (
 		.din(spu_madp_ldxa_data[63:0]),
 		.q(spu_lsu_ldxa_data_w2[63:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -112,7 +112,7 @@ module spu_lsurpt1 (
 		.din(spu_ctl_ldxa_tid_w2[1:0]),
 		.q(spu_lsu_ldxa_tid_w2[1:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -122,7 +122,7 @@ module spu_lsurpt1 (
 		.q(spu_lsu_ldxa_data_vld_w2),
 		.rst(reset),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -131,7 +131,7 @@ module spu_lsurpt1 (
 		.q(spu_lsu_ldxa_illgl_va_w2),
 		.rst(reset),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -141,7 +141,7 @@ module spu_lsurpt1 (
 		.din(exu_lsu_rs3_data_e[63:0]),
 		.q(spu_lsurpt1_rs3_data_m[63:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -149,7 +149,7 @@ module spu_lsurpt1 (
 		.din(spu_lsurpt1_rs3_data_m[63:0]),
 		.q(spu_lsurpt1_rs3_data_g[63:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -157,7 +157,7 @@ module spu_lsurpt1 (
 		.din(spu_lsurpt1_rs3_data_g[63:0]),
 		.q(spu_lsurpt1_rs3_data_g2[63:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);
@@ -165,7 +165,7 @@ module spu_lsurpt1 (
 		.din(lsu_spu_stb_empty[3:0]),
 		.q(spu_lsurpt1_stb_empty[3:0]),
 		.clk(rclk),
-		.se(1'b0),
+		.se(1&#39;b0),
 		.si(),
 		.so()
 	);

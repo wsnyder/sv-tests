@@ -23,8 +23,8 @@ module nonblocking (
 	reg c;
 	reg b;
 	always @(posedge clk) begin
-		b <= a;
-		c <= b;
+		b &lt;= a;
+		c &lt;= b;
 	end
 endmodule
 

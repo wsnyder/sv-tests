@@ -40,10 +40,10 @@ module uut_always03 (
 	always @(posedge clock) begin
 		out1 = in1;
 		if (in2) out1 = (! out1);
-		out2 <= out1;
-		if (in3) out2 <= out2;
-		if (in4) if (in5) out3 <= in6;
-		else out3 <= in7;
+		out2 &lt;= out1;
+		if (in3) out2 &lt;= out2;
+		if (in4) if (in5) out3 &lt;= in6;
+		else out3 &lt;= in7;
 		out1 = (out1 ^ out2);
 	end
 endmodule

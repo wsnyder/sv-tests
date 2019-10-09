@@ -19,7 +19,7 @@ module gray2bin1 (
 	input [(SIZE - 1):0] gray;
 	genvar i;
 	generate
-		for (i = 0; (i < SIZE); i = (i + 1)) begin : bitnum
+		for (i = 0; (i &lt; SIZE); i = (i + 1)) begin : bitnum
 			assign bin[i] = (^ gray[(SIZE - 1):i]);
 		end
 	endgenerate

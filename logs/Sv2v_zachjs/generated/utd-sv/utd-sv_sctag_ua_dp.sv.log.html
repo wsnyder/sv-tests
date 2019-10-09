@@ -146,7 +146,7 @@ module sctag_ua_dp (
 	);
 	zzpar16 parity_used_rd(
 		.z(used_rd_parity_c2),
-		.d({3'b0, parity_rd_c2[1], used_rd_c2[11:0]})
+		.d({3&#39;b0, parity_rd_c2[1], used_rd_c2[11:0]})
 	);
 	dff_s #(12) ff_used_c3(
 		.q(used_c3[11:0]),
@@ -156,10 +156,10 @@ module sctag_ua_dp (
 		.si(),
 		.so()
 	);
-	assign used_byp_c3_in = (((used_c3 | fill_way_c3) | hit_wayvld_c3) & (~ ((({12 {vuad_evict_c3}} & lru_way_sel_c3) | ({12 {wr64_inst_c3}} & hit_wayvld_c3)) | {12 {(& (used_c3 | alloc_c3))}})));
+	assign used_byp_c3_in = (((used_c3 | fill_way_c3) | hit_wayvld_c3) &amp; (~ ((({12 {vuad_evict_c3}} &amp; lru_way_sel_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3)) | {12 {(&amp; (used_c3 | alloc_c3))}})));
 	zzpar16 parity_used_wr(
 		.z(parity_wr_c3[1]),
-		.d({4'b0, used_byp_c3_in[11:0]})
+		.d({4&#39;b0, used_byp_c3_in[11:0]})
 	);
 	dff_s #(13) ff_used_c4(
 		.q({parity_wr_data_c4[1], used_c4[11:0]}),
@@ -248,7 +248,7 @@ module sctag_ua_dp (
 	);
 	zzpar16 parity_dir_rd(
 		.z(alloc_rd_parity_c2),
-		.d({3'b0, parity_rd_c2[0], alloc_rd_c2[11:0]})
+		.d({3&#39;b0, parity_rd_c2[0], alloc_rd_c2[11:0]})
 	);
 	mux2ds #(12) mux_alloc_byp_c2_in(
 		.dout(alloc_byp_c2_in[11:0]),
@@ -265,10 +265,10 @@ module sctag_ua_dp (
 		.si(),
 		.so()
 	);
-	assign alloc_byp_c3_in = (((alloc_c3 | ({12 {alloc_set_cond_c3}} & hit_wayvld_c3)) | ({12 {vuad_evict_c3}} & lru_way_sel_c3)) & (~ (({12 {alloc_rst_cond_c3}} & hit_wayvld_c3) | ({12 {fbctl_vuad_bypassed_c3}} & fill_way_c3))));
+	assign alloc_byp_c3_in = (((alloc_c3 | ({12 {alloc_set_cond_c3}} &amp; hit_wayvld_c3)) | ({12 {vuad_evict_c3}} &amp; lru_way_sel_c3)) &amp; (~ (({12 {alloc_rst_cond_c3}} &amp; hit_wayvld_c3) | ({12 {fbctl_vuad_bypassed_c3}} &amp; fill_way_c3))));
 	zzpar16 parity_dir_wr(
 		.z(parity_wr_c3[0]),
-		.d({4'b0, alloc_byp_c3_in[11:0]})
+		.d({4&#39;b0, alloc_byp_c3_in[11:0]})
 	);
 	dff_s #(13) ff_alloc_c4(
 		.q({parity_wr_data_c4[0], alloc_c4[11:0]}),

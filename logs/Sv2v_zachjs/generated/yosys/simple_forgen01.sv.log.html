@@ -20,10 +20,10 @@ module uut_forgen01 (
 	integer j;
 	reg [31:0] lut;
 	initial begin
-		for (i = 0; (i < 32); i = (i + 1))
+		for (i = 0; (i &lt; 32); i = (i + 1))
 			begin
-				lut[i] = (i > 1);
-				for (j = 2; ((j * j) <= i); j = (j + 1))
+				lut[i] = (i &gt; 1);
+				for (j = 2; ((j * j) &lt;= i); j = (j + 1))
 					if (((i % j) == 0)) lut[i] = 0;
 			end
 	end

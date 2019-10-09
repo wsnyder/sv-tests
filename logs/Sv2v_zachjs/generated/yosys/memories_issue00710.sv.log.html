@@ -28,9 +28,9 @@ module top (
 	output reg [7:0] rdata;
 	reg [2047:0] bram;
 	(* keep *) reg dummy;
-	always @(posedge clk) if (reset) dummy <= 1'b0;
-	else if (re) rdata <= bram[((255 - addr) * 8)+:8];
-	else if (we) bram[((255 - addr) * 8)+:8] <= wdata;
+	always @(posedge clk) if (reset) dummy &lt;= 1&#39;b0;
+	else if (re) rdata &lt;= bram[((255 - addr) * 8)+:8];
+	else if (we) bram[((255 - addr) * 8)+:8] &lt;= wdata;
 endmodule
 
 

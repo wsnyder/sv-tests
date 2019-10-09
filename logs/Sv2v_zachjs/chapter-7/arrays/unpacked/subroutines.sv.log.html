@@ -13,14 +13,14 @@ files: <a href="../../../../../tests/chapter-7/arrays/unpacked/subroutines.sv.ht
 module top;
 	task fun;
 		reg signed [95:0] a;
-		$display(":assert: ((%d == 0) and (%d == 1) and (%d == 2))", a[0+:32], a[32+:32], a[64+:32]);
+		$display(&#34;:assert: ((%d == 0) and (%d == 1) and (%d == 2))&#34;, a[0+:32], a[32+:32], a[64+:32]);
 	endtask
 	initial begin : sv2v_autoblock_0
 		reg signed [95:0] b;
 		b[0+:32] = 0;
 		b[32+:32] = 1;
 		b[64+:32] = 2;
-		$display(":assert: ((%d == 0) and (%d == 1) and (%d == 2))", b[0+:32], b[32+:32], b[64+:32]);
+		$display(&#34;:assert: ((%d == 0) and (%d == 1) and (%d == 2))&#34;, b[0+:32], b[32+:32], b[64+:32]);
 		fun(b);
 	end
 endmodule

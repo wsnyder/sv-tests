@@ -20,8 +20,8 @@ module uut_always02 (
 	output [3:0] count;
 	reg [3:0] count;
 	always @(posedge clock) begin
-		count <= (count + 1);
-		if (reset) count <= 0;
+		count &lt;= (count + 1);
+		if (reset) count &lt;= 0;
 	end
 endmodule
 

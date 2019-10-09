@@ -29,11 +29,11 @@ module accum (
 	clk,
 	rst_n
 );
-	parameter [7:0] My_DataIn = 8'hFF;
+	parameter [7:0] My_DataIn = 8&#39;hFF;
 	output wire [7:0] dataout;
 	input [7:0] datain = My_DataIn;
 	input clk;
-	input rst_n = 1'b1;
+	input rst_n = 1&#39;b1;
 endmodule
 module xtend (
 	dout,
@@ -44,7 +44,7 @@ module xtend (
 	output wire [7:0] dout;
 	input din;
 	input clk;
-	input rst = 1'b0;
+	input rst = 1&#39;b0;
 endmodule
 
 

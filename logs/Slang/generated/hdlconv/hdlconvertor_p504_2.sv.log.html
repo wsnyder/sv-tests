@@ -10,17 +10,17 @@ top_module:
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv:1</a>:20: error: use of undeclared identifier 'MyBus'
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv:1</a>:20: error: use of undeclared identifier &#39;MyBus&#39;
 task exercise_bus (MyBus bus);
                    ^~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv:4</a>:23: error: language feature not yet supported
 res = bus.randomize() with {atype == low;};
                       ^~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv:6</a>:23: error: language feature not yet supported
-res = bus.randomize() with {10 <= addr && addr <= 20;};
+res = bus.randomize() with {10 &lt;= addr &amp;&amp; addr &lt;= 20;};
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p504_2.sv:8</a>:23: error: language feature not yet supported
-res = bus.randomize() with {(data & (data - 1)) == 0;};
+res = bus.randomize() with {(data &amp; (data - 1)) == 0;};
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

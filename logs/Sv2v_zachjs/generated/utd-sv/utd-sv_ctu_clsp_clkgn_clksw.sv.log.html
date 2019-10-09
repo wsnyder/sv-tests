@@ -68,11 +68,11 @@ module ctu_clsp_clkgn_clksw (
 		.testmode_l(testmode_l),
 		.sysclk(cmp_gclk_bypass),
 		.divbypclk(cmp_div_bypass),
-		.byp_mult_sel_l(1'b0),
+		.byp_mult_sel_l(1&#39;b0),
 		.nstepsel(cmp_nstep_sel),
 		.jtag_clock_dr(jtag_clock_dr_cmp),
 		.capture_l(capture_l),
-		.bypmode(1'b0)
+		.bypmode(1&#39;b0)
 	);
 	ctu_clsp_clkgn_clksel u_jbus(
 		.clkout(jbus_tst_clk),
@@ -95,12 +95,12 @@ module ctu_clsp_clkgn_clksw (
 		.sel(jtag_clsp_sel_dram[2:0]),
 		.testmode_l(testmode_l),
 		.sysclk(dram_gclk_bypass),
-		.divbypclk(1'b0),
-		.byp_mult_sel_l(1'b1),
+		.divbypclk(1&#39;b0),
+		.byp_mult_sel_l(1&#39;b1),
 		.nstepsel(dram_nstep_sel),
 		.jtag_clock_dr(jtag_clock_dr_dram),
 		.capture_l(capture_l),
-		.bypmode(1'b0)
+		.bypmode(1&#39;b0)
 	);
 endmodule
 

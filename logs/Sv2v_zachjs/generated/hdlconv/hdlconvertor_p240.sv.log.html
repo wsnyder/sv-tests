@@ -13,20 +13,20 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 module multiple2;
 	reg a;
 	initial a = 1;
-	initial a <= #(4) 0;
-	initial a <= #(4) 1;
+	initial a &lt;= #(4) 0;
+	initial a &lt;= #(4) 1;
 endmodule
 module multiple3;
 	reg a;
-	initial #(8) a <= #(8) 1;
-	initial #(12) a <= #(4) 0;
+	initial #(8) a &lt;= #(8) 1;
+	initial #(12) a &lt;= #(4) 0;
 endmodule
 module multiple4;
 	reg r1;
 	reg [2:0] i;
 	initial begin
-		for (i = 0; (i <= 5); i = (i + 1))
-			r1 <= #((i * 10)) i[0];
+		for (i = 0; (i &lt;= 5); i = (i + 1))
+			r1 &lt;= #((i * 10)) i[0];
 	end
 endmodule
 

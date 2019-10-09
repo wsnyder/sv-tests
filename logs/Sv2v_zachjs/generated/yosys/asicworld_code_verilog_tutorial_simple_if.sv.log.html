@@ -15,7 +15,7 @@ module simple_if;
 	wire enable;
 	wire din;
 	always @(enable or din) if (enable) begin
-		latch <= din;
+		latch &lt;= din;
 	end
 endmodule
 

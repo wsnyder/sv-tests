@@ -164,8 +164,8 @@ module sparc_exu_ecl_divcntl (
 	wire reset_cnt;
 	wire [5:0] cntr;
 	wire cntris63;
-	assign divcntl_wb_req_g = (div_state[5] | ((~ ((div_state[5] | div_state[3]) | div_state[4])) & mdqctl_divcntl_muldone));
-	assign ecl_div_sel_div = (~ ((~ ((div_state[5] | div_state[3]) | div_state[4])) & mdqctl_divcntl_muldone));
+	assign divcntl_wb_req_g = (div_state[5] | ((~ ((div_state[5] | div_state[3]) | div_state[4])) &amp; mdqctl_divcntl_muldone));
+	assign ecl_div_sel_div = (~ ((~ ((div_state[5] | div_state[3]) | div_state[4])) &amp; mdqctl_divcntl_muldone));
 	dff_s #(6) divstate_dff(
 		.din(next_state[5:0]),
 		.clk(clk),
@@ -174,41 +174,41 @@ module sparc_exu_ecl_divcntl (
 		.si(),
 		.so()
 	);
-	assign ecl_div_almostlast_cycle = (go_last_calc & (~ ecl_div_ld_inputs));
-	assign ecl_div_sel_adder = ((div_state[1] | div_state[2]) & (~ ecl_div_ld_inputs));
+	assign ecl_div_almostlast_cycle = (go_last_calc &amp; (~ ecl_div_ld_inputs));
+	assign ecl_div_sel_adder = ((div_state[1] | div_state[2]) &amp; (~ ecl_div_ld_inputs));
 	assign ecl_div_last_cycle = div_state[2];
 	assign ecl_div_ld_inputs = mdqctl_divcntl_input_vld;
 	assign ecl_div_keep_d = (~ (ecl_div_sel_adder | ecl_div_ld_inputs));
 	assign reset_cnt = (~ div_state[1]);
-	assign stay_idle = (div_state[0] & (~ mdqctl_divcntl_input_vld));
-	assign go_idle = (div_state[5] & wb_divcntl_ack_g);
+	assign stay_idle = (div_state[0] &amp; (~ mdqctl_divcntl_input_vld));
+	assign go_idle = (div_state[5] &amp; wb_divcntl_ack_g);
 	assign next_state[0] = (((go_idle | stay_idle) | mdqctl_divcntl_reset_div) | reset);
-	assign stay_run = ((div_state[1] & (~ cntris63)) & (~ ecl_div_muls));
-	assign go_run = (div_state[0] & mdqctl_divcntl_input_vld);
-	assign next_state[1] = (((go_run | stay_run) & (~ mdqctl_divcntl_reset_div)) & (~ reset));
-	assign go_last_calc = (div_state[1] & cntris63);
-	assign next_state[2] = ((go_last_calc & (~ mdqctl_divcntl_reset_div)) & (~ reset));
+	assign stay_run = ((div_state[1] &amp; (~ cntris63)) &amp; (~ ecl_div_muls));
+	assign go_run = (div_state[0] &amp; mdqctl_divcntl_input_vld);
+	assign next_state[1] = (((go_run | stay_run) &amp; (~ mdqctl_divcntl_reset_div)) &amp; (~ reset));
+	assign go_last_calc = (div_state[1] &amp; cntris63);
+	assign next_state[2] = ((go_last_calc &amp; (~ mdqctl_divcntl_reset_div)) &amp; (~ reset));
 	assign go_chk_ovfl = div_state[2];
-	assign next_state[3] = ((go_chk_ovfl & (~ mdqctl_divcntl_reset_div)) & (~ reset));
-	assign go_fix_ovfl = (div_state[3] | (div_state[1] & ecl_div_muls));
-	assign next_state[4] = ((go_fix_ovfl & (~ mdqctl_divcntl_reset_div)) & (~ reset));
+	assign next_state[3] = ((go_chk_ovfl &amp; (~ mdqctl_divcntl_reset_div)) &amp; (~ reset));
+	assign go_fix_ovfl = (div_state[3] | (div_state[1] &amp; ecl_div_muls));
+	assign next_state[4] = ((go_fix_ovfl &amp; (~ mdqctl_divcntl_reset_div)) &amp; (~ reset));
 	assign go_done = div_state[4];
-	assign stay_done = (div_state[5] & (~ wb_divcntl_ack_g));
-	assign next_state[5] = (((go_done | stay_done) & (~ mdqctl_divcntl_reset_div)) & (~ reset));
+	assign stay_done = (div_state[5] &amp; (~ wb_divcntl_ack_g));
+	assign next_state[5] = (((go_done | stay_done) &amp; (~ mdqctl_divcntl_reset_div)) &amp; (~ reset));
 	sparc_exu_ecl_cnt6 cnt6(
 		.reset(reset_cnt),
 		.cntr(cntr[5:0]),
 		.clk(clk),
 		.se(se)
 	);
-	assign cntris63 = (((((cntr[5] & cntr[4]) & cntr[3]) & cntr[2]) & cntr[1]) & cntr[0]);
-	assign ecl_div_dividend_sign = (ecl_div_signed_div & div_ecl_dividend_msb);
-	assign ecl_div_xinmask = (div_ecl_divisorin_31 & ecl_div_signed_div);
-	assign divisor_sign = (div_ecl_x_msb & ecl_div_signed_div);
+	assign cntris63 = (((((cntr[5] &amp; cntr[4]) &amp; cntr[3]) &amp; cntr[2]) &amp; cntr[1]) &amp; cntr[0]);
+	assign ecl_div_dividend_sign = (ecl_div_signed_div &amp; div_ecl_dividend_msb);
+	assign ecl_div_xinmask = (div_ecl_divisorin_31 &amp; ecl_div_signed_div);
+	assign divisor_sign = (div_ecl_x_msb &amp; ecl_div_signed_div);
 	assign adderin1_64 = div_ecl_d_msb;
-	assign adderin2_64 = ((ecl_div_signed_div & div_ecl_x_msb) ^ subtract);
+	assign adderin2_64 = ((ecl_div_signed_div &amp; div_ecl_x_msb) ^ subtract);
 	assign bit64_halfadd = (adderin1_64 ^ adderin2_64);
-	assign partial_qpredict = (bit64_halfadd ^ (~ (div_ecl_x_msb & ecl_div_signed_div)));
+	assign partial_qpredict = (bit64_halfadd ^ (~ (div_ecl_x_msb &amp; ecl_div_signed_div)));
 	assign partial_qpredict_l = (~ partial_qpredict);
 	assign firstq = ecl_div_dividend_sign;
 	mux2ds #(2) qnext_mux(
@@ -232,7 +232,7 @@ module sparc_exu_ecl_divcntl (
 		.si(),
 		.so()
 	);
-	assign firstlast_sub = (((~ ecl_div_almostlast_cycle) & (~ ecl_div_muls)) & ((~ ecl_div_signed_div) | (~ (div_ecl_dividend_msb ^ (~ div_ecl_xin_msb_l)))));
+	assign firstlast_sub = (((~ ecl_div_almostlast_cycle) &amp; (~ ecl_div_muls)) &amp; ((~ ecl_div_signed_div) | (~ (div_ecl_dividend_msb ^ (~ div_ecl_xin_msb_l)))));
 	assign ecl_div_keepx = (~ (ecl_div_ld_inputs | ecl_div_almostlast_cycle));
 	mux2ds #(2) subnext_mux(
 		.dout(sub_next_nocout[1:0]),
@@ -256,10 +256,10 @@ module sparc_exu_ecl_divcntl (
 		.so()
 	);
 	assign ecl_div_subtract_l = (~ subtract);
-	assign detect_zero = (div_ecl_detect_zero_low & div_ecl_detect_zero_high);
+	assign detect_zero = (div_ecl_detect_zero_low &amp; div_ecl_detect_zero_high);
 	assign ecl_div_cin = (ecl_div_last_cycle ? last_cin : subtract);
-	assign new_zero_rem_with_zero = ((~ ecl_div_ld_inputs) & ((~ div_ecl_d_62) | ecl_div_almostlast_cycle));
-	assign new_zero_rem_no_zero = (zero_rem_q & new_zero_rem_with_zero);
+	assign new_zero_rem_with_zero = ((~ ecl_div_ld_inputs) &amp; ((~ div_ecl_d_62) | ecl_div_almostlast_cycle));
+	assign new_zero_rem_no_zero = (zero_rem_q &amp; new_zero_rem_with_zero);
 	assign zero_rem_d = (detect_zero ? new_zero_rem_with_zero : new_zero_rem_no_zero);
 	dff_s zero_rem_dff(
 		.din(zero_rem_d),
@@ -269,8 +269,8 @@ module sparc_exu_ecl_divcntl (
 		.si(),
 		.so()
 	);
-	assign last_cin_with_zero = (ecl_div_signed_div & (((divisor_sign & (~ div_ecl_d_62)) | (((~ divisor_sign) & div_ecl_d_62) & (~ new_zero_rem_with_zero))) | ((divisor_sign & div_ecl_d_62) & new_zero_rem_with_zero)));
-	assign last_cin_no_zero = (ecl_div_signed_div & (((divisor_sign & (~ div_ecl_d_62)) | (((~ divisor_sign) & div_ecl_d_62) & (~ new_zero_rem_no_zero))) | ((divisor_sign & div_ecl_d_62) & new_zero_rem_no_zero)));
+	assign last_cin_with_zero = (ecl_div_signed_div &amp; (((divisor_sign &amp; (~ div_ecl_d_62)) | (((~ divisor_sign) &amp; div_ecl_d_62) &amp; (~ new_zero_rem_with_zero))) | ((divisor_sign &amp; div_ecl_d_62) &amp; new_zero_rem_with_zero)));
+	assign last_cin_no_zero = (ecl_div_signed_div &amp; (((divisor_sign &amp; (~ div_ecl_d_62)) | (((~ divisor_sign) &amp; div_ecl_d_62) &amp; (~ new_zero_rem_no_zero))) | ((divisor_sign &amp; div_ecl_d_62) &amp; new_zero_rem_no_zero)));
 	assign last_cin_next = (detect_zero ? last_cin_with_zero : last_cin_no_zero);
 	dff_s last_cin_dff(
 		.din(last_cin_next),
@@ -283,8 +283,8 @@ module sparc_exu_ecl_divcntl (
 	wire inputs_neg_d;
 	wire inputs_neg_q;
 	wire large_neg_ovfl;
-	assign inputs_neg_d = (div_ecl_dividend_msb & div_ecl_divisorin_31);
-	assign large_neg_ovfl = (inputs_neg_q & (~ gencc_in_msb_l_d1));
+	assign inputs_neg_d = (div_ecl_dividend_msb &amp; div_ecl_divisorin_31);
+	assign large_neg_ovfl = (inputs_neg_q &amp; (~ gencc_in_msb_l_d1));
 	dffe_s inputs_neg_dff(
 		.din(inputs_neg_d),
 		.clk(clk),
@@ -303,15 +303,15 @@ module sparc_exu_ecl_divcntl (
 		.so()
 	);
 	assign ecl_div_sel_64b = (ecl_div_div64 | ecl_div_muls);
-	assign ecl_div_sel_u32 = ((~ ecl_div_sel_64b) & (~ ecl_div_signed_div));
-	assign ecl_div_sel_pos32 = (((~ ecl_div_sel_64b) & ecl_div_signed_div) & (gencc_in_msb_l_d1 | large_neg_ovfl));
-	assign ecl_div_sel_neg32 = ((((~ ecl_div_sel_64b) & ecl_div_signed_div) & (~ gencc_in_msb_l_d1)) & (~ large_neg_ovfl));
-	assign ecl_div_upper32_zero = (upper32_equal_d1 & gencc_in_msb_l_d1);
-	assign ecl_div_upper33_zero = ((upper32_equal_d1 & gencc_in_msb_l_d1) & (~ gencc_in_31_d1));
-	assign ecl_div_upper33_one = ((upper32_equal_d1 & (~ gencc_in_msb_l_d1)) & gencc_in_31_d1);
-	assign unsign_ovfl = ((ecl_div_sel_u32 & (~ ecl_div_upper32_zero)) & sel_div_d1);
-	assign pos_ovfl = ((ecl_div_sel_pos32 & (~ ecl_div_upper33_zero)) & sel_div_d1);
-	assign neg_ovfl = ((ecl_div_sel_neg32 & (~ ecl_div_upper33_one)) & sel_div_d1);
+	assign ecl_div_sel_u32 = ((~ ecl_div_sel_64b) &amp; (~ ecl_div_signed_div));
+	assign ecl_div_sel_pos32 = (((~ ecl_div_sel_64b) &amp; ecl_div_signed_div) &amp; (gencc_in_msb_l_d1 | large_neg_ovfl));
+	assign ecl_div_sel_neg32 = ((((~ ecl_div_sel_64b) &amp; ecl_div_signed_div) &amp; (~ gencc_in_msb_l_d1)) &amp; (~ large_neg_ovfl));
+	assign ecl_div_upper32_zero = (upper32_equal_d1 &amp; gencc_in_msb_l_d1);
+	assign ecl_div_upper33_zero = ((upper32_equal_d1 &amp; gencc_in_msb_l_d1) &amp; (~ gencc_in_31_d1));
+	assign ecl_div_upper33_one = ((upper32_equal_d1 &amp; (~ gencc_in_msb_l_d1)) &amp; gencc_in_31_d1);
+	assign unsign_ovfl = ((ecl_div_sel_u32 &amp; (~ ecl_div_upper32_zero)) &amp; sel_div_d1);
+	assign pos_ovfl = ((ecl_div_sel_pos32 &amp; (~ ecl_div_upper33_zero)) &amp; sel_div_d1);
+	assign neg_ovfl = ((ecl_div_sel_neg32 &amp; (~ ecl_div_upper33_one)) &amp; sel_div_d1);
 	assign div_v = ((pos_ovfl | unsign_ovfl) | neg_ovfl);
 	assign next_muls_c = (div_state[1] ? div_ecl_cout32 : muls_c);
 	assign muls_rs1_data_31_m = (~ muls_rs1_31_m_l);
@@ -323,7 +323,7 @@ module sparc_exu_ecl_divcntl (
 		.si(),
 		.so()
 	);
-	assign ovfl_32 = (((muls_rs1_data_31_w & rs2_data_31_w) & (~ div_adder_out_31_w)) | (((~ muls_rs1_data_31_w) & (~ rs2_data_31_w)) & div_adder_out_31_w));
+	assign ovfl_32 = (((muls_rs1_data_31_w &amp; rs2_data_31_w) &amp; (~ div_adder_out_31_w)) | (((~ muls_rs1_data_31_w) &amp; (~ rs2_data_31_w)) &amp; div_adder_out_31_w));
 	assign next_muls_v = (div_state[4] ? ovfl_32 : muls_v);
 	dff_s muls_c_dff(
 		.din(next_muls_c),
@@ -341,14 +341,14 @@ module sparc_exu_ecl_divcntl (
 		.si(),
 		.so()
 	);
-	assign xcc[3] = (((~ gencc_in_msb_l_d1) & (~ unsign_ovfl)) & (~ pos_ovfl));
-	assign icc[3] = (((gencc_in_31_d1 & (~ pos_ovfl)) | neg_ovfl) | unsign_ovfl);
-	assign xcc[2] = ((upper32_equal_d1 & gencc_in_msb_l_d1) & (~ low32_nonzero_d1));
-	assign icc[2] = ((~ low32_nonzero_d1) & (~ div_v));
-	assign xcc[1] = 1'b0;
-	assign icc[1] = ((ecl_div_muls & sel_div_d1) ? muls_v : div_v);
-	assign xcc[0] = 1'b0;
-	assign icc[0] = ((ecl_div_muls & sel_div_d1) & muls_c);
+	assign xcc[3] = (((~ gencc_in_msb_l_d1) &amp; (~ unsign_ovfl)) &amp; (~ pos_ovfl));
+	assign icc[3] = (((gencc_in_31_d1 &amp; (~ pos_ovfl)) | neg_ovfl) | unsign_ovfl);
+	assign xcc[2] = ((upper32_equal_d1 &amp; gencc_in_msb_l_d1) &amp; (~ low32_nonzero_d1));
+	assign icc[2] = ((~ low32_nonzero_d1) &amp; (~ div_v));
+	assign xcc[1] = 1&#39;b0;
+	assign icc[1] = ((ecl_div_muls &amp; sel_div_d1) ? muls_v : div_v);
+	assign xcc[0] = 1&#39;b0;
+	assign icc[0] = ((ecl_div_muls &amp; sel_div_d1) &amp; muls_c);
 	assign divcntl_ccr_cc_w2 = {xcc, icc};
 endmodule
 

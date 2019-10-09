@@ -18,7 +18,7 @@ module sparc_exu_div_32eql (
 	output equal;
 	wire [31:0] inxor;
 	wire notequal;
-	assign inxor[0] = 1'b0;
+	assign inxor[0] = 1&#39;b0;
 	assign inxor[1] = (in[31] ^ in[30]);
 	assign inxor[2] = (in[30] ^ in[29]);
 	assign inxor[3] = (in[29] ^ in[28]);

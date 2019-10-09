@@ -19,7 +19,7 @@ module top;
 		A[64+:32] = 2;
 		A[96+:32] = 3;
 		B = A;
-		$display(":assert: ((%d == 0) and (%d == 1) and (%d == 2) and (%d == 3))", B[0+:32], B[32+:32], B[64+:32], B[96+:32]);
+		$display(&#34;:assert: ((%d == 0) and (%d == 1) and (%d == 2) and (%d == 3))&#34;, B[0+:32], B[32+:32], B[64+:32], B[96+:32]);
 	end
 endmodule
 

@@ -22,7 +22,7 @@ module mux_using_if (
 	output mux_out;
 	reg mux_out;
 	always @(sel or din_0 or din_1) begin : MUX
-		if ((sel == 1'b0)) begin
+		if ((sel == 1&#39;b0)) begin
 			mux_out = din_0;
 		end
 		else begin

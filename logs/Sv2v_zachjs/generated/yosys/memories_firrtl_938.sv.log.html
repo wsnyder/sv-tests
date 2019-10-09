@@ -25,10 +25,10 @@ module top (
 	reg [511:0] ram;
 	always @(posedge clk) begin
 		if (we_a) begin
-			ram[(addr_a * 8)+:8] <= data_a;
-			q_a <= data_a;
+			ram[(addr_a * 8)+:8] &lt;= data_a;
+			q_a &lt;= data_a;
 		end
-		q_a <= ram[(addr_a * 8)+:8];
+		q_a &lt;= ram[(addr_a * 8)+:8];
 	end
 endmodule
 

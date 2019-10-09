@@ -11,10 +11,10 @@ files: <a href="../../../../third_party/tools/yosys/tests/sva/basic01.sv.html" t
 
 
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic01.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic01.sv:10</a>:2: error: language feature not yet supported
-	a_rw: assert property ( @(posedge clock) !(read && write) );
+	a_rw: assert property ( @(posedge clock) !(read &amp;&amp; write) );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic01.sv.html#l-14" target="file-frame">third_party/tools/yosys/tests/sva/basic01.sv:14</a>:2: error: language feature not yet supported
-	a_wr: assert property ( @(posedge clock) write |=> ready );
+	a_wr: assert property ( @(posedge clock) write |=&gt; ready );
 	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

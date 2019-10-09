@@ -17,7 +17,7 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::NETLIST_ERROR <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v</a>::2 Could not resolve initial assignment to a constant value, skipping
 
-wire [5:0] offset = idx << 2;
+wire [5:0] offset = idx &lt;&lt; 2;
 ERROR (3)::NETLIST_ERROR Found multiple top level modules
 	partsel_test001	partsel_test002
 

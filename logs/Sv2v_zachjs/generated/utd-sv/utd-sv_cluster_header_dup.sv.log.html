@@ -47,9 +47,9 @@ module cluster_header_dup (
 		.ck(gclk),
 		.d(cluster_cken),
 		.r_l(arst_l),
-		.s_l(1'b1),
-		.sd(1'b0),
-		.se(1'b0)
+		.s_l(1&#39;b1),
+		.sd(1&#39;b0),
+		.se(1&#39;b0)
 	);
 	bw_clk_cclk_scanlasr_2x sync_cluster_slave(
 		.r_l(arst_l),
@@ -57,7 +57,7 @@ module cluster_header_dup (
 		.ck(gclk),
 		.sd(pre_sync_enable)
 	);
-	assign #(10) rclk = (gclk & sync_enable);
+	assign #(10) rclk = (gclk &amp; sync_enable);
 	synchronizer_asr rst_repeater(
 		.sync_out(cluster_grst_l),
 		.so(rst_sync_so),

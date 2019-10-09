@@ -17,12 +17,12 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>::1 File (<a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>::9 error in parsing: (syntax error, unexpected '=', expecting '(')
-int a = {"A", "B", "C", "D"};
-PARSE_ERROR <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>::10 error in parsing: (syntax error, unexpected '=', expecting '(')
-int b = {"E", "F", "G", "H"};
+PARSE_ERROR <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>::9 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
+int a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
+PARSE_ERROR <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>::10 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
+int b = {&#34;E&#34;, &#34;F&#34;, &#34;G&#34;, &#34;H&#34;};
 PARSE_ERROR <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>::14 error in parsing: (syntax error, unexpected voSRIGHT)
-	c = {>> byte {a, b}};
+	c = {&gt;&gt; byte {a, b}};
 ERROR (6)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 

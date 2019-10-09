@@ -117,17 +117,17 @@ module sparc_ifu_thrcmpl (
 		.si(),
 		.so()
 	);
-	assign wmi_nxt = ((({4 {fcl_ifq_icmiss_s1}} & thr_s1) | ({4 {erb_dtu_ifeterr_d1}} & thr_e)) | (wm_imiss & (~ imiss_thrrdy)));
-	assign clr_wmo_thr_e = ({4 {clear_wmo_e}} & thr_e);
-	assign wmo_nxt = ((((((({4 {sw_cond_s}} & thr_s2) & (~ clr_wmo_thr_e)) | trap) | ldmiss) & dtu_fcl_thr_active) | rst_thread) | ((wm_other & dtu_fcl_thr_active) & (~ ((other_thrrdy | spec_ld_d) | clr_wmo_thr_e))));
-	assign ldst_thrrdy = (lsu_ifu_ldst_cmplt & (~ spec_ld_g));
-	assign ld_thrrdy = (ldhit_thr & {4 {(~ en_spec_g)}});
-	assign sta_thrrdy = (thr_e & {4 {sta_done_e}});
-	assign killed_thrrdy = (thr_e & {4 {killed_inst_done_e}});
+	assign wmi_nxt = ((({4 {fcl_ifq_icmiss_s1}} &amp; thr_s1) | ({4 {erb_dtu_ifeterr_d1}} &amp; thr_e)) | (wm_imiss &amp; (~ imiss_thrrdy)));
+	assign clr_wmo_thr_e = ({4 {clear_wmo_e}} &amp; thr_e);
+	assign wmo_nxt = ((((((({4 {sw_cond_s}} &amp; thr_s2) &amp; (~ clr_wmo_thr_e)) | trap) | ldmiss) &amp; dtu_fcl_thr_active) | rst_thread) | ((wm_other &amp; dtu_fcl_thr_active) &amp; (~ ((other_thrrdy | spec_ld_d) | clr_wmo_thr_e))));
+	assign ldst_thrrdy = (lsu_ifu_ldst_cmplt &amp; (~ spec_ld_g));
+	assign ld_thrrdy = (ldhit_thr &amp; {4 {(~ en_spec_g)}});
+	assign sta_thrrdy = (thr_e &amp; {4 {sta_done_e}});
+	assign killed_thrrdy = (thr_e &amp; {4 {killed_inst_done_e}});
 	assign other_thrrdy = ((((((((((ldst_thrrdy | branch_done_d) | ld_thrrdy) | exu_lop_done) | fixedop_done) | killed_thrrdy) | retr_thr_wakeup) | flush_wake_w2) | fp_thrrdy) | sta_thrrdy) | trap_thrrdy);
-	assign pred_ifq_rdy = ((ifq_dtu_pred_rdy & {4 {(~ atr_s)}}) & dtu_fcl_thr_active);
+	assign pred_ifq_rdy = ((ifq_dtu_pred_rdy &amp; {4 {(~ atr_s)}}) &amp; dtu_fcl_thr_active);
 	assign imiss_thrrdy = (pred_ifq_rdy | ifq_dtu_thrrdy);
-	assign completion = ((((imiss_thrrdy | (~ wm_imiss)) & (other_thrrdy | (~ wm_other))) & (stb_retry | (~ wm_stbwait))) & ((wm_imiss | wm_other) | wm_stbwait));
+	assign completion = ((((imiss_thrrdy | (~ wm_imiss)) &amp; (other_thrrdy | (~ wm_other))) &amp; (stb_retry | (~ wm_stbwait))) &amp; ((wm_imiss | wm_other) | wm_stbwait));
 endmodule
 
 

@@ -2,7 +2,7 @@
 <h3>
 <a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
 </h3>
-description: & operator test
+description: &amp; operator test
 should_fail: 0
 tags: 11.4.9
 incdirs: 
@@ -14,7 +14,7 @@ module top;
 	reg signed [31:0] a = 12;
 	wire signed [31:0] b = 5;
 	initial begin
-		a = (& b);
+		a = (&amp; b);
 	end
 endmodule
 

@@ -17,7 +17,7 @@ property q1;
 property q5;
 ^~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv:6</a>:18: error: expected expression
-@(negedge clk) b[*3] |=> !b;
+@(negedge clk) b[*3] |=&gt; !b;
                  ^
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv:8</a>:1: error: language feature not yet supported
 property q6;
@@ -26,7 +26,7 @@ property q6;
 a5: assert property (q6);
 ^~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv:13</a>:1: error: language feature not yet supported
-a6: assert property ($fell(c) |=> q6);
+a6: assert property ($fell(c) |=&gt; q6);
 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv:15</a>:1: error: language feature not yet supported
 sequence s2;

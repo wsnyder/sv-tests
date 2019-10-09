@@ -50,12 +50,12 @@ module sparc_exu_shft (
 	wire [3:0] shift16_e;
 	wire shiftby_msb;
 	wire extend32bit_e;
-	assign shiftby_msb = (byp_alu_rs2_data_e[5] & (~ ecl_shft_op32_e));
-	assign shift16_e[0] = ((~ shiftby_msb) & (~ byp_alu_rs2_data_e[4]));
-	assign shift16_e[1] = ((~ shiftby_msb) & byp_alu_rs2_data_e[4]);
-	assign shift16_e[2] = (shiftby_msb & (~ byp_alu_rs2_data_e[4]));
-	assign shift16_e[3] = (shiftby_msb & byp_alu_rs2_data_e[4]);
-	assign shifter_input[63:0] = (byp_alu_rs1_data_e[63:0] & {64 {(~ ecl_shft_enshift_e_l)}});
+	assign shiftby_msb = (byp_alu_rs2_data_e[5] &amp; (~ ecl_shft_op32_e));
+	assign shift16_e[0] = ((~ shiftby_msb) &amp; (~ byp_alu_rs2_data_e[4]));
+	assign shift16_e[1] = ((~ shiftby_msb) &amp; byp_alu_rs2_data_e[4]);
+	assign shift16_e[2] = (shiftby_msb &amp; (~ byp_alu_rs2_data_e[4]));
+	assign shift16_e[3] = (shiftby_msb &amp; byp_alu_rs2_data_e[4]);
+	assign shifter_input[63:0] = (byp_alu_rs1_data_e[63:0] &amp; {64 {(~ ecl_shft_enshift_e_l)}});
 	dp_mux2es #(64) mux_shiftout(
 		.dout(shft_alu_shift_out_e[63:0]),
 		.in0(lshift1[63:0]),
@@ -118,9 +118,9 @@ module sparc_exu_shft (
 	);
 	mux4ds #(64) mux_left16(
 		.dout(lshift16[63:0]),
-		.in0({shifter_input_b1[15:0], {48 {1'b0}}}),
-		.in1({shifter_input_b1[31:0], {32 {1'b0}}}),
-		.in2({shifter_input_b1[47:0], {16 {1'b0}}}),
+		.in0({shifter_input_b1[15:0], {48 {1&#39;b0}}}),
+		.in1({shifter_input_b1[31:0], {32 {1&#39;b0}}}),
+		.in2({shifter_input_b1[47:0], {16 {1&#39;b0}}}),
 		.in3(shifter_input_b1[63:0]),
 		.sel0(shift16_e[3]),
 		.sel1(shift16_e[2]),
@@ -129,9 +129,9 @@ module sparc_exu_shft (
 	);
 	mux4ds #(64) mux_left4(
 		.dout(lshift4[63:0]),
-		.in0({lshift16_b1[51:0], {12 {1'b0}}}),
-		.in1({lshift16_b1[55:0], {8 {1'b0}}}),
-		.in2({lshift16_b1[59:0], {4 {1'b0}}}),
+		.in0({lshift16_b1[51:0], {12 {1&#39;b0}}}),
+		.in1({lshift16_b1[55:0], {8 {1&#39;b0}}}),
+		.in2({lshift16_b1[59:0], {4 {1&#39;b0}}}),
 		.in3(lshift16_b1[63:0]),
 		.sel0(ecl_shft_shift4_e[3]),
 		.sel1(ecl_shft_shift4_e[2]),
@@ -140,9 +140,9 @@ module sparc_exu_shft (
 	);
 	mux4ds #(64) mux_left1(
 		.dout(lshift1[63:0]),
-		.in0({lshift4_b1[60:0], {3 {1'b0}}}),
-		.in1({lshift4_b1[61:0], {2 {1'b0}}}),
-		.in2({lshift4_b1[62:0], {1 {1'b0}}}),
+		.in0({lshift4_b1[60:0], {3 {1&#39;b0}}}),
+		.in1({lshift4_b1[61:0], {2 {1&#39;b0}}}),
+		.in2({lshift4_b1[62:0], {1 {1&#39;b0}}}),
 		.in3(lshift4_b1[63:0]),
 		.sel0(ecl_shft_shift1_e[3]),
 		.sel1(ecl_shft_shift1_e[2]),
