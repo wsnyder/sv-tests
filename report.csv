@@ -1163,7 +1163,7 @@ string_octtoa,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.13--str
 enum_anon,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19--enum_anon.sv,6.19,True,True,True,False,False,True,False,True
 enum_numerical_expr_cast,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv,6.19.4,True,True,True,False,False,True,False,True
 localparam,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.4--localparam.sv,6.20.4,True,True,True,True,False,True,False,True
-typedef,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv,6.18,False,True,False,False,False,False,False,True
+typedef,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.18--typedef.sv,6.18,True,True,True,False,False,True,False,True
 logic_vector,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.1--logic_vector.sv,6.9.1,True,True,True,True,False,True,False,True
 specparam,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.5--specparam.sv,6.20.5,False,True,True,False,False,True,False,False
 bitstream_cast,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.24.3--bitstream_cast.sv,6.24.3,True,True,True,False,False,True,False,True
@@ -1753,7 +1753,7 @@ number_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_
 number_test_52,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_52.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_71,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_71.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_24,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_24.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-conditional_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv,12.6.3,False,False,False,False,False,False,False,False
+conditional_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv,12.6.3,False,True,False,False,False,True,False,False
 dowhile_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.5--dowhile.sv,12.7.5,False,True,True,False,False,True,False,False
 jump_return_expr,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return_val.sv,12.8,True,True,True,False,False,True,False,True
 jump_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv,12.8,False,True,True,False,False,True,False,True

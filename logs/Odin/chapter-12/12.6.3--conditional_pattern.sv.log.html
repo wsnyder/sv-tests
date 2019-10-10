@@ -21,8 +21,8 @@ PARSE_ERROR <a href="../../../tests/chapter-12/12.6.3--conditional_pattern.sv.ht
 	typedef union tagged {
 PARSE_ERROR <a href="../../../tests/chapter-12/12.6.3--conditional_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.3--conditional_pattern.sv</a>::21 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
 	u tmp;
-PARSE_ERROR <a href="../../../tests/chapter-12/12.6.3--conditional_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.3--conditional_pattern.sv</a>::26 error in parsing: (syntax error, unexpected vSYMBOL_ID)
-          val = (tmp matches tagged a &#39;{4&#39;b01zx, .v}) ? 1 : 2;
+PARSE_ERROR <a href="../../../tests/chapter-12/12.6.3--conditional_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.3--conditional_pattern.sv</a>::26 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;;&#39;)
+          val = tmp matches tagged a &#39;{4&#39;b01zx, .v} ? 1 : 2;
 ERROR (6)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 
