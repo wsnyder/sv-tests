@@ -142,7 +142,7 @@ module sparc_exu_shft (
 		.dout(lshift1[63:0]),
 		.in0({lshift4_b1[60:0], {3 {1&#39;b0}}}),
 		.in1({lshift4_b1[61:0], {2 {1&#39;b0}}}),
-		.in2({lshift4_b1[62:0], {1 {1&#39;b0}}}),
+		.in2({lshift4_b1[62:0], 1&#39;b0}),
 		.in3(lshift4_b1[63:0]),
 		.sel0(ecl_shft_shift1_e[3]),
 		.sel1(ecl_shft_shift1_e[2]),

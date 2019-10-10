@@ -10,7 +10,38 @@ top_module:
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv</a>
 
 
-<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv:19</a>:1: Parse error: unexpected token &#39;fork&#39; (KW_fork).
+module cct (
+	stim1,
+	stim2
+);
+	input stim1;
+	input stim2;
+	mod amod(stim1);
+	mod bmod(stim2);
+endmodule
+module mod (in);
+	input in;
+	always @(posedge in) begin : keep
+		reg hold;
+		hold = in;
+	end
+endmodule
+module wave;
+	reg stim1;
+	wire stim2;
+	cct a(
+		stim1,
+		stim2
+	);
+	initial begin : wave1
+		#(100) fork : innerwave
+			reg hold;
+		join
+		#(150) begin
+			stim1 = 0;
+		end
+	end
+endmodule
 
 
 </pre>

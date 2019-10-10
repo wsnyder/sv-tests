@@ -10,7 +10,21 @@ top_module:
 files: <a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v</a>
 
 
-<a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v:9</a>:9: Parse error: unexpected token &#39;for&#39; (KW_for).
+module constpower (
+	ys,
+	yu
+);
+	output [511:0] ys;
+	output [511:0] yu;
+	genvar i;
+	genvar j;
+	generate
+		for (i = 0; (i &lt; 8); i = (i + 1)) for (j = 0; (j &lt; 8); j = (j + 1)) begin : V
+			assign ys[(((i * 8) + (j * 64)) + 7):((i * 8) + (j * 64))] = ($signed((i - 4)) ** $signed((j - 4)));
+			assign yu[(((i * 8) + (j * 64)) + 7):((i * 8) + (j * 64))] = ($unsigned(i) ** $unsigned(j));
+		end
+	endgenerate
+endmodule
 
 
 </pre>

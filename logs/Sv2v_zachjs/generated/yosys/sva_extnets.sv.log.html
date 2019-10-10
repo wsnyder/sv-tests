@@ -10,7 +10,31 @@ top_module:
 files: <a href="../../../../third_party/tools/yosys/tests/sva/extnets.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/extnets.sv</a>
 
 
-<a href="../../../../third_party/tools/yosys/tests/sva/extnets.sv.html#l-21" target="file-frame">third_party/tools/yosys/tests/sva/extnets.sv:21</a>:21: Parse error: unexpected token &#39;,&#39; (Sym_comma).
+module top (
+	i,
+	o
+);
+	input i;
+	output o;
+	A A();
+	B B();
+	assign A.i = i;
+	assign o = B.o;
+	always @(*) ;
+endmodule
+module A;
+	wire i;
+	wire y;
+	assign B.x = (! i);
+	assign y = (! B.y);
+endmodule
+module B;
+	wire x;
+	wire y;
+	wire o;
+	assign y = x;
+	assign o = A.y;
+endmodule
 
 
 </pre>

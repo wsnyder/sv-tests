@@ -24,13 +24,13 @@ module test (
 	input [3:0] wr_addr;
 	input [3:0] wr_en;
 	input [31:0] wr_data;
-	reg [511:0] mem;
+	reg [31:0] mem [0:15];
 	always @(posedge clk) begin
-		mem[((15 - wr_addr) * 32)+:8] &lt;= (wr_en[0] ? wr_data[7:0] : mem[((15 - wr_addr) * 32)+:8]);
-		mem[(((15 - wr_addr) * 32) + 8)+:8] &lt;= (wr_en[1] ? wr_data[15:8] : mem[(((15 - wr_addr) * 32) + 8)+:8]);
-		mem[(((15 - wr_addr) * 32) + 16)+:8] &lt;= (wr_en[2] ? wr_data[23:16] : mem[(((15 - wr_addr) * 32) + 16)+:8]);
-		mem[(((15 - wr_addr) * 32) + 24)+:8] &lt;= (wr_en[3] ? wr_data[31:24] : mem[(((15 - wr_addr) * 32) + 24)+:8]);
-		rd_data &lt;= mem[((15 - rd_addr) * 32)+:32];
+		mem[wr_addr][7:0] &lt;= (wr_en[0] ? wr_data[7:0] : mem[wr_addr][7:0]);
+		mem[wr_addr][15:8] &lt;= (wr_en[1] ? wr_data[15:8] : mem[wr_addr][15:8]);
+		mem[wr_addr][23:16] &lt;= (wr_en[2] ? wr_data[23:16] : mem[wr_addr][23:16]);
+		mem[wr_addr][31:24] &lt;= (wr_en[3] ? wr_data[31:24] : mem[wr_addr][31:24]);
+		rd_data &lt;= mem[rd_addr];
 	end
 endmodule
 

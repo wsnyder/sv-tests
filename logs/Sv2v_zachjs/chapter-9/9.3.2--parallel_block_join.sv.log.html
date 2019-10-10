@@ -10,7 +10,16 @@ top_module:
 files: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join.sv.html" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join.sv</a>
 
 
-<a href="../../../tests/chapter-9/9.3.2--parallel_block_join.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join.sv:12</a>:17: Parse error: unexpected token &#39;fork&#39; (KW_fork).
+module parallel_tb;
+	reg a = 0;
+	reg b = 0;
+	reg c = 0;
+	initial fork
+		a = 1;
+		b = 0;
+		c = 1;
+	join
+endmodule
 
 
 </pre>

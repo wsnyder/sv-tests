@@ -10,7 +10,16 @@ top_module:
 files: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv.html" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>
 
 
-<a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv:12</a>:21: Parse error: unexpected token &#39;:&#39; (Sym_colon).
+module block_tb;
+	reg a = 0;
+	reg b = 0;
+	reg c = 0;
+	initial fork : name
+		a = 1;
+		b = 0;
+		c = 1;
+	join
+endmodule
 
 
 </pre>

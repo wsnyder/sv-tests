@@ -13,10 +13,12 @@ files: <a href="../../../tests/chapter-12/12.8--return_val.sv.html" target="file
 module jump_tb;
 	function signed [31:0] fun;
 		input reg signed [31:0] a;
-		fun = (a * 3);
+		begin
+			fun = (a * 3);
+		end
 	endfunction
 	initial begin
-		begin : sv2v_autoblock_0
+		begin : sv2v_autoblock_1
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; 256); i = (i + 1))
 				begin

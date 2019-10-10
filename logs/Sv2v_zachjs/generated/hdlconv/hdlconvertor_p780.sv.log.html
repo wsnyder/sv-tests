@@ -13,7 +13,9 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 module top;
 	function signed [31:0] f;
 		input _sv2v_unused;
-		f = 1;
+		begin
+			f = 1;
+		end
 	endfunction
 	reg signed [31:0] x;
 	generate
@@ -23,7 +25,9 @@ module top;
 	endgenerate
 	function signed [31:0] f;
 		input _sv2v_unused;
-		f = 1;
+		begin
+			f = 1;
+		end
 	endfunction
 endmodule
 

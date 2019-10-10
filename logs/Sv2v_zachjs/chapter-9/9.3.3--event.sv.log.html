@@ -10,7 +10,20 @@ top_module:
 files: <a href="../../../tests/chapter-9/9.3.3--event.sv.html" target="file-frame">tests/chapter-9/9.3.3--event.sv</a>
 
 
-<a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-8" target="file-frame">tests/chapter-9/9.3.3--event.sv:8</a>:9: Parse error: unexpected token &#39;event&#39; (KW_event).
+module block_tb;
+	event ev;
+	reg [3:0] a = 0;
+	initial fork
+		begin
+			a = &#39;h3;
+			#(20) ;
+			-&gt; ev;
+		end
+		begin
+			@(ev) a = &#39;h4;
+		end
+	join
+endmodule
 
 
 </pre>

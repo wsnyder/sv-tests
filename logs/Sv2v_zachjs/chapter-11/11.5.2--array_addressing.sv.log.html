@@ -11,10 +11,10 @@ files: <a href="../../../tests/chapter-11/11.5.2--array_addressing.sv.html" targ
 
 
 module top;
-	wire [8191:0] mem;
+	wire [7:0] mem [0:1023];
 	reg [7:0] a;
 	initial begin
-		a = mem[7200+:8];
+		a = mem[123];
 	end
 endmodule
 

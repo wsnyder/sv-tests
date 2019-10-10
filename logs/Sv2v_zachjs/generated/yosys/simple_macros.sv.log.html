@@ -10,7 +10,56 @@ top_module:
 files: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html" target="file-frame">third_party/tools/yosys/tests/simple/macros.v</a>
 
 
-<a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-243" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:243</a>:30: Parse error: unexpected token &#39;&#39;ha&#39; (Lit_number).
+module test_def (
+	a,
+	y
+);
+	input [31:0] a;
+	output [7:0] y;
+	assign y = a[23:16];
+endmodule
+module test_ifdef (
+	a,
+	y
+);
+	input [2:0] a;
+	output reg [31:0] y;
+	always @(*) begin
+		y = 0;
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[1]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[1]);
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[1]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[1]);
+		y = ((y &lt;&lt; 1) | a[2]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[0]);
+		y = ((y &lt;&lt; 1) | a[2]);
+	end
+endmodule
+module test_comment_in_macro (
+	din_a,
+	dout_a
+);
+	input [3:0] din_a;
+	output [3:0] dout_a;
+	assign dout_a = (din_a | 4&#39;ha);
+endmodule
 
 
 </pre>

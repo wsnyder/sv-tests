@@ -26,12 +26,12 @@ module generic_sram_byte_en (
 	input [(ADDRESS_WIDTH - 1):0] i_address;
 	input [((DATA_WIDTH / 8) - 1):0] i_byte_enable;
 	output reg [(DATA_WIDTH - 1):0] o_read_data;
-	reg [((0 &gt;= ((2 ** ADDRESS_WIDTH) - 1)) ? (((DATA_WIDTH - 1) &gt;= 0) ? ((((0 &gt;= ((2 ** ADDRESS_WIDTH) - 1)) ? (2 - (2 ** ADDRESS_WIDTH)) : (2 ** ADDRESS_WIDTH)) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + ((((2 ** ADDRESS_WIDTH) - 1) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) - 1)) : ((((0 &gt;= ((2 ** ADDRESS_WIDTH) - 1)) ? (2 - (2 ** ADDRESS_WIDTH)) : (2 ** ADDRESS_WIDTH)) * ((0 &gt;= (DATA_WIDTH - 1)) ? (2 - DATA_WIDTH) : DATA_WIDTH)) + (((DATA_WIDTH - 1) + (((2 ** ADDRESS_WIDTH) - 1) * ((0 &gt;= (DATA_WIDTH - 1)) ? (2 - DATA_WIDTH) : DATA_WIDTH))) - 1))) : (((DATA_WIDTH - 1) &gt;= 0) ? ((((((2 ** ADDRESS_WIDTH) - 1) &gt;= 0) ? (2 ** ADDRESS_WIDTH) : (2 - (2 ** ADDRESS_WIDTH))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + -1) : ((((((2 ** ADDRESS_WIDTH) - 1) &gt;= 0) ? (2 ** ADDRESS_WIDTH) : (2 - (2 ** ADDRESS_WIDTH))) * ((0 &gt;= (DATA_WIDTH - 1)) ? (2 - DATA_WIDTH) : DATA_WIDTH)) + ((DATA_WIDTH - 1) - 1)))):((0 &gt;= ((2 ** ADDRESS_WIDTH) - 1)) ? (((DATA_WIDTH - 1) &gt;= 0) ? (((2 ** ADDRESS_WIDTH) - 1) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) : ((DATA_WIDTH - 1) + (((2 ** ADDRESS_WIDTH) - 1) * ((0 &gt;= (DATA_WIDTH - 1)) ? (2 - DATA_WIDTH) : DATA_WIDTH)))) : (((DATA_WIDTH - 1) &gt;= 0) ? 0 : (DATA_WIDTH - 1)))] mem;
+	reg [(DATA_WIDTH - 1):0] mem [0:((2 ** ADDRESS_WIDTH) - 1)];
 	integer i;
 	always @(posedge i_clk) begin
 		for (i = 0; (i &lt; (DATA_WIDTH / 8)); i = (i + 1))
-			if ((i_write_enable &amp;&amp; i_byte_enable[i])) mem[((((0 &gt;= ((2 ** ADDRESS_WIDTH) - 1)) ? i_address : (((2 ** ADDRESS_WIDTH) - 1) - i_address)) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? (i * 8) : ((i * 8) + 7)) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? (i * 8) : ((i * 8) + 7)) - (DATA_WIDTH - 1)))))+:(((DATA_WIDTH - 1) &gt;= 0) ? 8 : 8)] &lt;= i_write_data[(i * 8)+:8];
-		o_read_data &lt;= mem[((((DATA_WIDTH - 1) &gt;= 0) ? 0 : (DATA_WIDTH - 1)) + (((0 &gt;= ((2 ** ADDRESS_WIDTH) - 1)) ? i_address : (((2 ** ADDRESS_WIDTH) - 1) - i_address)) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))))+:(((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))];
+			if ((i_write_enable &amp;&amp; i_byte_enable[i])) mem[i_address][(i * 8)+:8] &lt;= i_write_data[(i * 8)+:8];
+		o_read_data &lt;= mem[i_address];
 	end
 endmodule
 

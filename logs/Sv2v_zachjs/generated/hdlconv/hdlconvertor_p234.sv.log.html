@@ -10,7 +10,50 @@ top_module:
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv</a>
 
 
-<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:24</a>:29: Parse error: unexpected token &#39;,&#39; (Sym_comma).
+module adder (
+	sum_out,
+	carry_out,
+	carry_in,
+	ina,
+	inb
+);
+	output [3:0] sum_out;
+	output carry_out;
+	input [3:0] ina;
+	input [3:0] inb;
+	input carry_in;
+	wire carry_out;
+	wire carry_in;
+	wire [3:0] sum_out;
+	wire [3:0] ina;
+	wire [3:0] inb;
+	assign {carry_out, sum_out} = ((ina + inb) + carry_in);
+endmodule
+module select_bus (
+	busout,
+	bus0,
+	bus1,
+	bus2,
+	bus3,
+	enable,
+	s
+);
+	parameter n = 16;
+	parameter Zee = 16&#39;bz;
+	output [1:n] busout;
+	input [1:n] bus0;
+	input [1:n] bus1;
+	input [1:n] bus2;
+	input [1:n] bus3;
+	input enable;
+	input [1:2] s;
+	tri [1:n] data;
+	tri [1:n] busout = (enable ? data : Zee);
+	assign data = ((s == 0) ? bus0 : Zee);
+	assign data = ((s == 1) ? bus1 : Zee);
+	assign data = ((s == 2) ? bus2 : Zee);
+	assign data = ((s == 3) ? bus3 : Zee);
+endmodule
 
 
 </pre>

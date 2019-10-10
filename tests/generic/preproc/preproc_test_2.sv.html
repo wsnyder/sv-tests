@@ -15,16 +15,22 @@
 <a href="#l-7"> 7</a>
 <a href="#l-8"> 8</a>
 <a href="#l-9"> 9</a>
-<a href="#l-10">10</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a href="#l-10">10</a>
+<a href="#l-11">11</a>
+<a href="#l-12">12</a>
+<a href="#l-13">13</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
 <a name="l-2"></a><span class="cm">:name: preproc_test_2</span>
 <a name="l-3"></a><span class="cm">:description: Test</span>
 <a name="l-4"></a><span class="cm">:should_fail: 0</span>
 <a name="l-5"></a><span class="cm">:tags: 5.6.4</span>
 <a name="l-6"></a><span class="cm">*/</span>
-<a name="l-7"></a><span class="no">`include</span> <span class="s">&quot;foo.svh&quot;</span>
-<a name="l-8"></a><span class="no">`ifndef</span> <span class="no">SANITY</span>
-<a name="l-9"></a><span class="cp">`define SANITY</span>
+<a name="l-7"></a><span class="no">`include</span> <span class="s">&quot;preproc_test_2.svh&quot;</span>
+<a name="l-8"></a><span class="no">`ifndef</span> <span class="no">SUCCESS</span>
+<a name="l-9"></a><span class="n">Didn</span><span class="p">&#39;</span><span class="n">t</span> <span class="n">successfully</span> <span class="k">include</span> <span class="n">preproc_test_2</span><span class="p">.</span><span class="n">svh</span><span class="o">!</span>
 <a name="l-10"></a><span class="no">`endif</span>
+<a name="l-11"></a><span class="no">`ifndef</span> <span class="no">SANITY</span>
+<a name="l-12"></a><span class="cp">`define SANITY</span>
+<a name="l-13"></a><span class="no">`endif</span>
 </pre></div>
 </td></tr></table>
   </body>

@@ -11,13 +11,13 @@ files: <a href="../../../../../tests/chapter-7/arrays/multidimensional/copy.sv.h
 
 
 module top;
-	reg [351:32] arr_a;
-	reg [351:32] arr_b;
+	reg [31:0] arr_a [1:10];
+	reg [31:0] arr_b [1:10];
 	initial begin
-		arr_a[320+:32] = 32&#39;hdeadbeef;
-		$display(&#34;:assert: (&#39;%h&#39; == &#39;deadbeef&#39;)&#34;, arr_a[320+:32]);
-		arr_b[288+:32] = arr_a[320+:32];
-		$display(&#34;:assert: (&#39;%h&#39; == &#39;deadbeef&#39;)&#34;, arr_b[288+:32]);
+		arr_a[1] = 32&#39;hdeadbeef;
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;deadbeef&#39;)&#34;, arr_a[1]);
+		arr_b[2] = arr_a[1];
+		$display(&#34;:assert: (&#39;%h&#39; == &#39;deadbeef&#39;)&#34;, arr_b[2]);
 	end
 endmodule
 

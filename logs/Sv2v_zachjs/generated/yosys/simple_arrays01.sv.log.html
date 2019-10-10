@@ -23,10 +23,10 @@ module uut_arrays01 (
 	input [3:0] wr_data;
 	output [3:0] rd_data;
 	reg [3:0] rd_data;
-	reg [63:0] memory;
+	reg [3:0] memory [15:0];
 	always @(posedge clock) begin
-		if (we) memory[(addr * 4)+:4] &lt;= wr_data;
-		rd_data &lt;= memory[(addr * 4)+:4];
+		if (we) memory[addr] &lt;= wr_data;
+		rd_data &lt;= memory[addr];
 	end
 endmodule
 

@@ -11,9 +11,9 @@ files: <a href="../../../../../tests/chapter-7/arrays/multidimensional/basic.sv.
 
 
 module top;
-	wire [351:32] arr;
-	wire [2047:0] mem;
-	wire [1956:277] arr2;
+	wire [31:0] arr [1:10];
+	wire [7:0] mem [0:255];
+	wire [36:7] arr2 [1:7][1:8];
 endmodule
 
 

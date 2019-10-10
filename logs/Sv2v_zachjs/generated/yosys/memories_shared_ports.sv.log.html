@@ -32,12 +32,12 @@ module test (
 	input [15:0] wr_data;
 	input [3:0] rd_addr;
 	output reg [31:0] rd_data;
-	reg [511:0] mem;
+	reg [31:0] mem [0:15];
 	always @(posedge clk) begin
-		if (wr_en1) mem[((15 - wr_addr1) * 32)+:16] &lt;= wr_data;
-		else if (wr_en2) mem[(((15 - wr_addr2) * 32) + 8)+:16] &lt;= wr_data;
-		else if (wr_en3) mem[(((15 - wr_addr3) * 32) + 16)+:16] &lt;= wr_data;
-		rd_data &lt;= mem[((15 - rd_addr) * 32)+:32];
+		if (wr_en1) mem[wr_addr1][15:0] &lt;= wr_data;
+		else if (wr_en2) mem[wr_addr2][23:8] &lt;= wr_data;
+		else if (wr_en3) mem[wr_addr3][31:16] &lt;= wr_data;
+		rd_data &lt;= mem[rd_addr];
 	end
 endmodule
 

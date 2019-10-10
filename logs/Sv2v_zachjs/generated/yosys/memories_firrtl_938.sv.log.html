@@ -22,13 +22,13 @@ module top (
 	input we_a;
 	input clk;
 	output reg [7:0] q_a;
-	reg [511:0] ram;
+	reg [7:0] ram [63:0];
 	always @(posedge clk) begin
 		if (we_a) begin
-			ram[(addr_a * 8)+:8] &lt;= data_a;
+			ram[addr_a] &lt;= data_a;
 			q_a &lt;= data_a;
 		end
-		q_a &lt;= ram[(addr_a * 8)+:8];
+		q_a &lt;= ram[addr_a];
 	end
 endmodule
 

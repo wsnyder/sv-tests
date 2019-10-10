@@ -10,7 +10,56 @@ top_module:
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv</a>
 
 
-<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv:25</a>:2: Parse error: unexpected token &#39;delay&#39; (Id_simple).
+module tb1;
+	wire [9:0] out_a;
+	wire [9:0] out_d;
+	wire [4:0] out_b;
+	wire [4:0] out_c;
+	wire [9:0] in_a;
+	wire [9:0] in_d;
+	wire [4:0] in_b;
+	wire [4:0] in_c;
+	wire clk;
+	vdff #(
+		.size(10),
+		.delay(15)
+	) mod_a(
+		.out(out_a),
+		.in(in_a),
+		.clk(clk)
+	);
+	vdff mod_b(
+		.out(out_b),
+		.in(in_b),
+		.clk(clk)
+	);
+	vdff #(
+		.size(5),
+		.delay(12)
+	) mod_c(
+		.out(out_c),
+		.in(in_c),
+		.clk(clk)
+	);
+	vdff #(.size(10)) mod_d(
+		.out(out_d),
+		.in(in_d),
+		.clk(clk)
+	);
+endmodule
+module vdff (
+	out,
+	in,
+	clk
+);
+	parameter size = 5;
+	parameter delay = 1;
+	output [(size - 1):0] out;
+	input [(size - 1):0] in;
+	input wire clk;
+	[(size - 1):0] out;
+	always @(posedge clk) #(delay) out = in;
+endmodule
 
 
 </pre>

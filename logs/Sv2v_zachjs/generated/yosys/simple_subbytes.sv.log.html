@@ -55,20 +55,20 @@ module subbytes_00 (
 	end
 	reg [31:0] data_i_var;
 	reg [31:0] data_reg_128;
-	reg [31:0] data_array;
-	reg [31:0] data_reg_var;
+	reg [7:0] data_array [3:0];
+	reg [7:0] data_reg_var [3:0];
 	always @(decrypt_i or start_i or state or data_i or sbox_data_i or data_reg) begin
 		data_i_var = data_i;
-		data_array[0+:8] = data_i_var[31:24];
-		data_array[8+:8] = data_i_var[23:16];
-		data_array[16+:8] = data_i_var[15:8];
-		data_array[24+:8] = data_i_var[7:0];
-		data_reg_var[0+:8] = data_reg[31:24];
-		data_reg_var[8+:8] = data_reg[23:16];
-		data_reg_var[16+:8] = data_reg[15:8];
-		data_reg_var[24+:8] = data_reg[7:0];
+		data_array[0] = data_i_var[31:24];
+		data_array[1] = data_i_var[23:16];
+		data_array[2] = data_i_var[15:8];
+		data_array[3] = data_i_var[7:0];
+		data_reg_var[0] = data_reg[31:24];
+		data_reg_var[1] = data_reg[23:16];
+		data_reg_var[2] = data_reg[15:8];
+		data_reg_var[3] = data_reg[7:0];
 		sbox_decrypt_o = decrypt_i;
-		sbox_data_o = data_array[(state * 8)+:8];
+		sbox_data_o = data_array[state];
 		next_state = state;
 		next_data_reg = data_reg;
 		next_ready_o = 0;
@@ -79,11 +79,11 @@ module subbytes_00 (
 			end
 		end
 		else begin
-			data_reg_var[(state * 8)+:8] = sbox_data_i;
-			data_reg_128[31:24] = data_reg_var[0+:8];
-			data_reg_128[23:16] = data_reg_var[8+:8];
-			data_reg_128[15:8] = data_reg_var[16+:8];
-			data_reg_128[7:0] = data_reg_var[24+:8];
+			data_reg_var[state] = sbox_data_i;
+			data_reg_128[31:24] = data_reg_var[0];
+			data_reg_128[23:16] = data_reg_var[1];
+			data_reg_128[15:8] = data_reg_var[2];
+			data_reg_128[7:0] = data_reg_var[3];
 			next_data_reg = data_reg_128;
 			next_state = (state + 1);
 		end

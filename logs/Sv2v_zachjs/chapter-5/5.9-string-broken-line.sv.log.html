@@ -10,7 +10,12 @@ top_module:
 files: <a href="../../../tests/chapter-5/5.9-string-broken-line.sv.html" target="file-frame">tests/chapter-5/5.9-string-broken-line.sv</a>
 
 
-<a href="../../../tests/chapter-5/5.9-string-broken-line.sv.html#l-10" target="file-frame">tests/chapter-5/5.9-string-broken-line.sv:10</a>:14: Parse error: unexpected token &#39;&#34;&#39; (Unknown).
+module top;
+	initial begin
+		$display(&#34;broken \
+		              line&#34;);
+	end
+endmodule
 
 
 </pre>

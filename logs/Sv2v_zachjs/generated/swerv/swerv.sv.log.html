@@ -672,7 +672,7 @@ module pic_ctrl (
 	localparam INT_GRPS = (INTPEND_SIZE / 32);
 	localparam INTPRIORITY_BITS = 4;
 	localparam ID_BITS = 8;
-	localparam [((TOTAL_INT * 32) + -1):0] GW_CONFIG = {TOTAL_INT {0}};
+	localparam signed [((TOTAL_INT * 32) + -1):0] GW_CONFIG = {TOTAL_INT {0}};
 	wire addr_intpend_base_match;
 	wire addr_intenable_base_match;
 	wire addr_intpriority_base_match;
@@ -1031,7 +1031,7 @@ module pic_ctrl (
 	endgenerate
 	always @(*) begin : INTPEND_RD
 		intpend_rd_out = 1&#39;sb0;
-		begin : sv2v_autoblock_26
+		begin : sv2v_autoblock_27
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; INT_GRPS); i = (i + 1))
 				begin
@@ -1043,7 +1043,7 @@ module pic_ctrl (
 		intenable_rd_out = 1&#39;sb0;
 		intpriority_rd_out = 1&#39;sb0;
 		gw_config_rd_out = 1&#39;sb0;
-		begin : sv2v_autoblock_27
+		begin : sv2v_autoblock_28
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; TOTAL_INT); i = (i + 1))
 				begin
@@ -3372,7 +3372,7 @@ module dma_ctrl (
 	assign fifo_full = fifo_full_spec_bus;
 	always @(*) begin
 		num_fifo_vld[3:0] = 4&#39;b0;
-		begin : sv2v_autoblock_28
+		begin : sv2v_autoblock_29
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -4208,14 +4208,14 @@ module ifu_aln_ctl (
 	assign q1final[127:0] = (((((((({128 {q1sel[0]}} &amp; q1eff[127:0]) | ({128 {q1sel[1]}} &amp; {{16 {1&#39;b0}}, q1eff[127:16]})) | ({128 {q1sel[2]}} &amp; {{32 {1&#39;b0}}, q1eff[127:32]})) | ({128 {q1sel[3]}} &amp; {{48 {1&#39;b0}}, q1eff[127:48]})) | ({128 {q1sel[4]}} &amp; {{64 {1&#39;b0}}, q1eff[127:64]})) | ({128 {q1sel[5]}} &amp; {{80 {1&#39;b0}}, q1eff[127:80]})) | ({128 {q1sel[6]}} &amp; {{96 {1&#39;b0}}, q1eff[127:96]})) | ({128 {q1sel[7]}} &amp; {{112 {1&#39;b0}}, q1eff[127:112]}));
 	assign aligndata[63:0] = (((({64 {f0val[3]}} &amp; q0final[63:0]) | ({64 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {q1final[15:0], q0final[47:0]})) | ({64 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {q1final[31:0], q0final[31:0]})) | ({64 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {q1final[47:0], q0final[15:0]}));
 	assign alignval[3:0] = (((({4 {f0val[3]}} &amp; 4&#39;b1111) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1val[0], 3&#39;b111})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {f1val[1:0], 2&#39;b11})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {f1val[2:0], 1&#39;b1}));
-	assign alignicaf[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0icaf}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {{1 {f1icaf}}, {3 {f0icaf}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1icaf}}, {2 {f0icaf}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1icaf}}, {1 {f0icaf}}}));
-	assign alignsbecc[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0sbecc}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {{1 {f1sbecc}}, {3 {f0sbecc}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1sbecc}}, {2 {f0sbecc}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1sbecc}}, {1 {f0sbecc}}}));
-	assign aligndbecc[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0dbecc}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {{1 {f1dbecc}}, {3 {f0dbecc}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1dbecc}}, {2 {f0dbecc}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1dbecc}}, {1 {f0dbecc}}}));
+	assign alignicaf[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0icaf}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1icaf, {3 {f0icaf}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1icaf}}, {2 {f0icaf}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1icaf}}, f0icaf}));
+	assign alignsbecc[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0sbecc}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1sbecc, {3 {f0sbecc}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1sbecc}}, {2 {f0sbecc}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1sbecc}}, f0sbecc}));
+	assign aligndbecc[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0dbecc}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1dbecc, {3 {f0dbecc}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1dbecc}}, {2 {f0dbecc}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1dbecc}}, f0dbecc}));
 	assign alignbrend[3:0] = (((({4 {f0val[3]}} &amp; f0brend[3:0]) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1brend[0], f0brend[2:0]})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {f1brend[1:0], f0brend[1:0]})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {f1brend[2:0], f0brend[0]}));
 	assign alignpc4[3:0] = (((({4 {f0val[3]}} &amp; f0pc4[3:0]) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1pc4[0], f0pc4[2:0]})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {f1pc4[1:0], f0pc4[1:0]})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {f1pc4[2:0], f0pc4[0]}));
 	assign alignparity[3:0] = (((({4 {f0val[3]}} &amp; q0parityfinal[3:0]) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {q1parityfinal[0], q0parityfinal[2:0]})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {q1parityfinal[1:0], q0parityfinal[1:0]})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {q1parityfinal[2:0], q0parityfinal[0]}));
-	assign aligntagperr[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0perr}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {{1 {f1perr}}, {3 {f0perr}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1perr}}, {2 {f0perr}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1perr}}, {1 {f0perr}}}));
-	assign alignicfetch[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0icfetch}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {{1 {f1icfetch}}, {3 {f0icfetch}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1icfetch}}, {2 {f0icfetch}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1icfetch}}, {1 {f0icfetch}}}));
+	assign aligntagperr[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0perr}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1perr, {3 {f0perr}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1perr}}, {2 {f0perr}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1perr}}, f0perr}));
+	assign alignicfetch[3:0] = (((({4 {f0val[3]}} &amp; {4 {f0icfetch}}) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1icfetch, {3 {f0icfetch}}})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {{2 {f1icfetch}}, {2 {f0icfetch}}})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {{3 {f1icfetch}}, f0icfetch}));
 	assign alignret[3:0] = (((({4 {f0val[3]}} &amp; f0ret[3:0]) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1ret[0], f0ret[2:0]})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {f1ret[1:0], f0ret[1:0]})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {f1ret[2:0], f0ret[0]}));
 	assign alignway[3:0] = (((({4 {f0val[3]}} &amp; f0way[3:0]) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1way[0], f0way[2:0]})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {f1way[1:0], f0way[1:0]})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {f1way[2:0], f0way[0]}));
 	assign alignhist1[3:0] = (((({4 {f0val[3]}} &amp; f0hist1[3:0]) | ({4 {(f0val[2] &amp; (~ f0val[3]))}} &amp; {f1hist1[0], f0hist1[2:0]})) | ({4 {(f0val[1] &amp; (~ f0val[2]))}} &amp; {f1hist1[1:0], f0hist1[1:0]})) | ({4 {(f0val[0] &amp; (~ f0val[1]))}} &amp; {f1hist1[2:0], f0hist1[0]}));
@@ -4806,11 +4806,15 @@ module ifu_bp_ctl (
 );
 	function automatic [1:0] sv2v_cast_2;
 		input reg [1:0] inp;
-		sv2v_cast_2 = inp;
+		begin
+			sv2v_cast_2 = inp;
+		end
 	endfunction
 	function automatic [3:0] sv2v_cast_4;
 		input reg [3:0] inp;
-		sv2v_cast_4 = inp;
+		begin
+			sv2v_cast_4 = inp;
+		end
 	endfunction
 	localparam [3:0] NULL = 4&#39;b0000;
 	localparam [3:0] MUL = 4&#39;b0001;
@@ -5534,7 +5538,7 @@ module ifu_bp_ctl (
 		btb_bank1_rd_data_way1_f2_in[25:0] = 1&#39;sb0;
 		btb_bank2_rd_data_way1_f2_in[25:0] = 1&#39;sb0;
 		btb_bank3_rd_data_way1_f2_in[25:0] = 1&#39;sb0;
-		begin : sv2v_autoblock_29
+		begin : sv2v_autoblock_30
 			reg signed [31:0] j;
 			for (j = 0; (j &lt; LRU_SIZE); j = (j + 1))
 				begin
@@ -5600,7 +5604,7 @@ module ifu_bp_ctl (
 		bht_bank5_rd_data_f2_in[1:0] = 1&#39;sb0;
 		bht_bank6_rd_data_f2_in[1:0] = 1&#39;sb0;
 		bht_bank7_rd_data_f2_in[1:0] = 1&#39;sb0;
-		begin : sv2v_autoblock_30
+		begin : sv2v_autoblock_31
 			reg signed [31:0] j;
 			for (j = 0; (j &lt; 16); j = (j + 1))
 				begin
@@ -6182,11 +6186,15 @@ module ifu_mem_ctl (
 );
 	function automatic [2:0] sv2v_cast_3;
 		input reg [2:0] inp;
-		sv2v_cast_3 = inp;
+		begin
+			sv2v_cast_3 = inp;
+		end
 	endfunction
 	function automatic [5:0] sv2v_cast_6;
 		input reg [5:0] inp;
-		sv2v_cast_6 = inp;
+		begin
+			sv2v_cast_6 = inp;
+		end
 	endfunction
 	localparam [2:0] ERR_IDLE = 3&#39;b000;
 	localparam [2:0] IDLE = 3&#39;b000;
@@ -7166,7 +7174,7 @@ module ifu_mem_ctl (
 	endgenerate
 	always @(*) begin : way_status_out_mux
 		way_status[2:0] = 3&#39;b0;
-		begin : sv2v_autoblock_31
+		begin : sv2v_autoblock_32
 			reg signed [31:0] j;
 			for (j = 0; (j &lt; ICACHE_TAG_DEPTH); j = (j + 1))
 				begin : status_mux_loop
@@ -7279,7 +7287,7 @@ module ifu_mem_ctl (
 	reg [3:0] ic_tag_valid_unq;
 	always @(*) begin : tag_valid_out_mux
 		ic_tag_valid_unq[3:0] = 4&#39;b0;
-		begin : sv2v_autoblock_32
+		begin : sv2v_autoblock_33
 			reg signed [31:0] j;
 			for (j = 0; (j &lt; ICACHE_TAG_DEPTH); j = (j + 1))
 				begin : tag_valid_loop
@@ -8972,7 +8980,7 @@ module dec_decode_ctl (
 	always @(*) begin
 		found = 0;
 		cam_wen[NBLOAD_SIZE_MSB:0] = 1&#39;sb0;
-		begin : sv2v_autoblock_33
+		begin : sv2v_autoblock_34
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; NBLOAD_SIZE); i = (i + 1))
 				begin
@@ -9031,7 +9039,7 @@ module dec_decode_ctl (
 		dec_nonblock_load_waddr[4:0] = 1&#39;sb0;
 		i0_nonblock_load_stall = i0_nonblock_boundary_stall;
 		i1_nonblock_load_stall = i1_nonblock_boundary_stall;
-		begin : sv2v_autoblock_34
+		begin : sv2v_autoblock_35
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; NBLOAD_SIZE); i = (i + 1))
 				begin
@@ -10369,11 +10377,15 @@ module dec_gpr_ctl (
 );
 	function automatic [0:0] sv2v_cast_1;
 		input reg [0:0] inp;
-		sv2v_cast_1 = inp;
+		begin
+			sv2v_cast_1 = inp;
+		end
 	endfunction
 	function automatic [4:0] sv2v_cast_5;
 		input reg [4:0] inp;
-		sv2v_cast_5 = inp;
+		begin
+			sv2v_cast_5 = inp;
+		end
 	endfunction
 	parameter GPR_BANKS = 1;
 	parameter GPR_BANKS_LOG2 = 1;
@@ -10446,11 +10458,11 @@ module dec_gpr_ctl (
 		w1v[31:1] = 31&#39;b0;
 		w2v[31:1] = 31&#39;b0;
 		gpr_in[1023:32] = 1&#39;sb0;
-		begin : sv2v_autoblock_35
+		begin : sv2v_autoblock_36
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; GPR_BANKS); i = (i + 1))
 				begin
-					begin : sv2v_autoblock_36
+					begin : sv2v_autoblock_37
 						reg signed [31:0] j;
 						for (j = 1; (j &lt; 32); j = (j + 1))
 							begin
@@ -10462,7 +10474,7 @@ module dec_gpr_ctl (
 					end
 				end
 		end
-		begin : sv2v_autoblock_37
+		begin : sv2v_autoblock_38
 			reg signed [31:0] j;
 			for (j = 1; (j &lt; 32); j = (j + 1))
 				begin
@@ -17598,13 +17610,11 @@ module lsu_stbuf (
 	stbuf_fwdbyteen_lo_dc3,
 	scan_mode
 );
-	function automatic signed [2:0] sv2v_cast_3_signed;
-		input reg signed [2:0] inp;
-		sv2v_cast_3_signed = inp;
-	endfunction
-	function automatic [2:0] sv2v_cast_3;
-		input reg [2:0] inp;
-		sv2v_cast_3 = inp;
+	function automatic [($clog2(LSU_STBUF_DEPTH) - 1):0] sv2v_cast_881A8;
+		input reg [($clog2(LSU_STBUF_DEPTH) - 1):0] inp;
+		begin
+			sv2v_cast_881A8 = inp;
+		end
 	endfunction
 	localparam [3:0] NULL = 4&#39;b0000;
 	localparam [3:0] MUL = 4&#39;b0001;
@@ -17955,7 +17965,7 @@ module lsu_stbuf (
 	assign NxtRdPtr[(DEPTH_LOG2 - 1):0] = RdPtrPlus1[(DEPTH_LOG2 - 1):0];
 	always @(*) begin
 		stbuf_numvld_any[3:0] = 1&#39;sb0;
-		begin : sv2v_autoblock_38
+		begin : sv2v_autoblock_39
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -17997,13 +18007,13 @@ module lsu_stbuf (
 	always @(*) begin : GenLdFwd
 		stbuf_fwdbyteen_hi_dc2[(BYTE_WIDTH - 1):0] = 1&#39;sb0;
 		stbuf_fwdbyteen_lo_dc2[(BYTE_WIDTH - 1):0] = 1&#39;sb0;
-		begin : sv2v_autoblock_39
+		begin : sv2v_autoblock_40
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
 					stbuf_ldmatch_hi[i] = ((((stbuf_addr[(((((DEPTH - 1) &gt;= 0) ? i : (0 - (i - (DEPTH - 1)))) * LSU_SB_BITS) + $clog2(BYTE_WIDTH))+:(((LSU_SB_BITS - 1) - $clog2(BYTE_WIDTH)) + 1)] == cmpaddr_hi_dc2[(LSU_SB_BITS - 1):$clog2(BYTE_WIDTH)]) &amp; (stbuf_drain_vld[i] | (~ lsu_pkt_dc2[11:11]))) &amp; (~ stbuf_flush_vld[i])) &amp; ((stbuf_addr_in_pic[i] &amp; addr_in_pic_dc2) | ((~ stbuf_addr_in_pic[i]) &amp; addr_in_dccm_dc2)));
 					stbuf_ldmatch_lo[i] = ((((stbuf_addr[(((((DEPTH - 1) &gt;= 0) ? i : (0 - (i - (DEPTH - 1)))) * LSU_SB_BITS) + $clog2(BYTE_WIDTH))+:(((LSU_SB_BITS - 1) - $clog2(BYTE_WIDTH)) + 1)] == cmpaddr_lo_dc2[(LSU_SB_BITS - 1):$clog2(BYTE_WIDTH)]) &amp; (stbuf_drain_vld[i] | (~ lsu_pkt_dc2[11:11]))) &amp; (~ stbuf_flush_vld[i])) &amp; ((stbuf_addr_in_pic[i] &amp; addr_in_pic_dc2) | ((~ stbuf_addr_in_pic[i]) &amp; addr_in_dccm_dc2)));
-					begin : sv2v_autoblock_40
+					begin : sv2v_autoblock_41
 						reg signed [31:0] j;
 						for (j = 0; (j &lt; BYTE_WIDTH); j = (j + 1))
 							begin
@@ -18029,33 +18039,33 @@ module lsu_stbuf (
 	always @(*) begin
 		stbuf_fwddata_hi_dc2[(DATA_WIDTH - 1):0] = 1&#39;sb0;
 		stbuf_fwddata_lo_dc2[(DATA_WIDTH - 1):0] = 1&#39;sb0;
-		begin : sv2v_autoblock_41
+		begin : sv2v_autoblock_42
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
-					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 0 : (BYTE_WIDTH - 1)))]) begin
-						stbuf_fwddata_hi_dc2[7:0] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 0 : (BYTE_WIDTH - 1)))]) begin
+						stbuf_fwddata_hi_dc2[7:0] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 0 : (BYTE_WIDTH - 1)))]) begin
-						stbuf_fwddata_lo_dc2[7:0] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 0 : (BYTE_WIDTH - 1)))]) begin
+						stbuf_fwddata_lo_dc2[7:0] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 0 : 7) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 1 : (-1 + (BYTE_WIDTH - 1))))]) begin
-						stbuf_fwddata_hi_dc2[15:8] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 1 : (-1 + (BYTE_WIDTH - 1))))]) begin
+						stbuf_fwddata_hi_dc2[15:8] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 1 : (-1 + (BYTE_WIDTH - 1))))]) begin
-						stbuf_fwddata_lo_dc2[15:8] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 1 : (-1 + (BYTE_WIDTH - 1))))]) begin
+						stbuf_fwddata_lo_dc2[15:8] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 8 : 15) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 2 : (-2 + (BYTE_WIDTH - 1))))]) begin
-						stbuf_fwddata_hi_dc2[23:16] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 2 : (-2 + (BYTE_WIDTH - 1))))]) begin
+						stbuf_fwddata_hi_dc2[23:16] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 2 : (-2 + (BYTE_WIDTH - 1))))]) begin
-						stbuf_fwddata_lo_dc2[23:16] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 2 : (-2 + (BYTE_WIDTH - 1))))]) begin
+						stbuf_fwddata_lo_dc2[23:16] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 16 : 23) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 3 : (-3 + (BYTE_WIDTH - 1))))]) begin
-						stbuf_fwddata_hi_dc2[31:24] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 3 : (-3 + (BYTE_WIDTH - 1))))]) begin
+						stbuf_fwddata_hi_dc2[31:24] = stbuf_fwddatavec_hi[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) - (DATA_WIDTH - 1)))))+:8];
 					end
-					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 3 : (-3 + (BYTE_WIDTH - 1))))]) begin
-						stbuf_fwddata_lo_dc2[31:24] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) : (0 - (sv2v_cast_3((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_3_signed(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) - (DATA_WIDTH - 1)))))+:8];
+					if (stbuf_fwdbyteenvec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((BYTE_WIDTH - 1) &gt;= 0) ? BYTE_WIDTH : (2 - BYTE_WIDTH))) + (((BYTE_WIDTH - 1) &gt;= 0) ? 3 : (-3 + (BYTE_WIDTH - 1))))]) begin
+						stbuf_fwddata_lo_dc2[31:24] = stbuf_fwddatavec_lo[(((((DEPTH - 1) &gt;= 0) ? sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) : (0 - (sv2v_cast_881A8((WrPtr[(DEPTH_LOG2 - 1):0] + sv2v_cast_881A8(i))) - (DEPTH - 1)))) * (((DATA_WIDTH - 1) &gt;= 0) ? DATA_WIDTH : (2 - DATA_WIDTH))) + (((DATA_WIDTH - 1) &gt;= 0) ? (((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) : (0 - ((((DATA_WIDTH - 1) &gt;= 0) ? 24 : 31) - (DATA_WIDTH - 1)))))+:8];
 					end
 				end
 		end
@@ -18238,19 +18248,33 @@ module lsu_bus_buffer (
 );
 	function automatic [2:0] sv2v_cast_3;
 		input reg [2:0] inp;
-		sv2v_cast_3 = inp;
-	endfunction
-	function automatic [3:0] sv2v_cast_4;
-		input reg [3:0] inp;
-		sv2v_cast_4 = inp;
-	endfunction
-	function automatic [7:0] sv2v_cast_8;
-		input reg [7:0] inp;
-		sv2v_cast_8 = inp;
+		begin
+			sv2v_cast_3 = inp;
+		end
 	endfunction
 	function automatic [31:0] sv2v_cast_32;
 		input reg [31:0] inp;
-		sv2v_cast_32 = inp;
+		begin
+			sv2v_cast_32 = inp;
+		end
+	endfunction
+	function automatic [3:0] sv2v_cast_4;
+		input reg [3:0] inp;
+		begin
+			sv2v_cast_4 = inp;
+		end
+	endfunction
+	function automatic [7:0] sv2v_cast_8;
+		input reg [7:0] inp;
+		begin
+			sv2v_cast_8 = inp;
+		end
+	endfunction
+	function automatic [(TIMER_LOG2 - 1):0] sv2v_cast_9B8C9;
+		input reg [(TIMER_LOG2 - 1):0] inp;
+		begin
+			sv2v_cast_9B8C9 = inp;
+		end
 	endfunction
 	localparam [2:0] IDLE = 3&#39;b000;
 	localparam [2:0] WAIT = 3&#39;b001;
@@ -18435,7 +18459,7 @@ module lsu_bus_buffer (
 	localparam DEPTH_LOG2 = 3;
 	localparam TIMER = 8;
 	localparam TIMER_LOG2 = $clog2(TIMER);
-	localparam TIMER_MAX = sv2v_cast_3((TIMER - 1));
+	localparam TIMER_MAX = sv2v_cast_9B8C9((TIMER - 1));
 	wire [3:0] ldst_byteen_hi_dc2;
 	wire [3:0] ldst_byteen_lo_dc2;
 	wire [(DEPTH - 1):0] ld_addr_hitvec_lo;
@@ -18669,7 +18693,7 @@ module lsu_bus_buffer (
 	always @(*) begin
 		ld_fwddata_buf_lo[31:0] = ({{8 {ld_byte_ibuf_hit_lo[3]}}, {8 {ld_byte_ibuf_hit_lo[2]}}, {8 {ld_byte_ibuf_hit_lo[1]}}, {8 {ld_byte_ibuf_hit_lo[0]}}} &amp; ibuf_data[31:0]);
 		ld_fwddata_buf_hi[31:0] = ({{8 {ld_byte_ibuf_hit_hi[3]}}, {8 {ld_byte_ibuf_hit_hi[2]}}, {8 {ld_byte_ibuf_hit_hi[1]}}, {8 {ld_byte_ibuf_hit_hi[0]}}} &amp; ibuf_data[31:0]);
-		begin : sv2v_autoblock_42
+		begin : sv2v_autoblock_43
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -18951,7 +18975,7 @@ module lsu_bus_buffer (
 		WrPtr1_dc3[(DEPTH_LOG2 - 1):0] = 1&#39;sb0;
 		found_wrptr0 = 1&#39;sb0;
 		found_wrptr1 = 1&#39;sb0;
-		begin : sv2v_autoblock_43
+		begin : sv2v_autoblock_44
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -18961,7 +18985,7 @@ module lsu_bus_buffer (
 					end
 				end
 		end
-		begin : sv2v_autoblock_44
+		begin : sv2v_autoblock_45
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -19222,7 +19246,7 @@ module lsu_bus_buffer (
 		buf_numvld_wrcmd_any[3:0] = 4&#39;b0;
 		buf_numvld_cmd_any[3:0] = 4&#39;b0;
 		buf_numvld_pend_any[3:0] = 4&#39;b0;
-		begin : sv2v_autoblock_45
+		begin : sv2v_autoblock_46
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -19240,7 +19264,7 @@ module lsu_bus_buffer (
 	assign ld_freeze_en = (((((((is_sideeffects_dc2 | dec_nonblock_load_freeze_dc2) | dec_tlu_non_blocking_disable) &amp; lsu_busreq_dc2) &amp; lsu_pkt_dc2[14:14]) &amp; (~ lsu_freeze_dc3)) &amp; (~ flush_dc2_up)) &amp; (~ ld_full_hit_dc2));
 	always @(*) begin
 		ld_freeze_rst = (flush_dc3 | (dec_tlu_cancel_e4 &amp; ld_freeze_dc3));
-		begin : sv2v_autoblock_46
+		begin : sv2v_autoblock_47
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -19263,7 +19287,7 @@ module lsu_bus_buffer (
 		lsu_nonblock_load_data_tag[(DEPTH_LOG2 - 1):0] = 1&#39;sb0;
 		lsu_nonblock_load_data_lo[31:0] = 1&#39;sb0;
 		lsu_nonblock_load_data_hi[31:0] = 1&#39;sb0;
-		begin : sv2v_autoblock_47
+		begin : sv2v_autoblock_48
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -19287,7 +19311,7 @@ module lsu_bus_buffer (
 	assign lsu_nonblock_load_data = ((((({32 {(lsu_nonblock_unsign &amp; (lsu_nonblock_sz[1:0] == 2&#39;b00))}} &amp; {24&#39;b0, lsu_nonblock_data_unalgn[7:0]}) | ({32 {(lsu_nonblock_unsign &amp; (lsu_nonblock_sz[1:0] == 2&#39;b01))}} &amp; {16&#39;b0, lsu_nonblock_data_unalgn[15:0]})) | ({32 {((~ lsu_nonblock_unsign) &amp; (lsu_nonblock_sz[1:0] == 2&#39;b00))}} &amp; {{24 {lsu_nonblock_data_unalgn[7]}}, lsu_nonblock_data_unalgn[7:0]})) | ({32 {((~ lsu_nonblock_unsign) &amp; (lsu_nonblock_sz[1:0] == 2&#39;b01))}} &amp; {{16 {lsu_nonblock_data_unalgn[15]}}, lsu_nonblock_data_unalgn[15:0]})) | ({32 {(lsu_nonblock_sz[1:0] == 2&#39;b10)}} &amp; lsu_nonblock_data_unalgn[31:0]));
 	always @(*) begin
 		bus_sideeffect_pend = ((obuf_valid &amp; obuf_sideeffect) &amp; dec_tlu_sideeffect_posted_disable);
-		begin : sv2v_autoblock_48
+		begin : sv2v_autoblock_49
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -19298,7 +19322,7 @@ module lsu_bus_buffer (
 	assign lsu_imprecise_error_load_any = lsu_nonblock_load_data_error;
 	always @(*) begin
 		bus_addr_match_pending = 1&#39;sb0;
-		begin : sv2v_autoblock_49
+		begin : sv2v_autoblock_50
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -19310,7 +19334,7 @@ module lsu_bus_buffer (
 	always @(*) begin
 		lsu_imprecise_error_store_any = 1&#39;sb0;
 		lsu_imprecise_error_store_tag = 1&#39;sb0;
-		begin : sv2v_autoblock_50
+		begin : sv2v_autoblock_51
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; DEPTH); i = (i + 1))
 				begin
@@ -20134,7 +20158,7 @@ module lsu_bus_intf (
 	always @(*) begin
 		ld_full_hit_lo_dc2 = 1&#39;b1;
 		ld_full_hit_hi_dc2 = 1&#39;b1;
-		begin : sv2v_autoblock_51
+		begin : sv2v_autoblock_52
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; 4); i = (i + 1))
 				begin
@@ -22128,7 +22152,7 @@ module rvfindfirst1 (
 	always @(*) begin
 		dout[(SHIFT - 1):0] = {SHIFT {1&#39;b0}};
 		done = 1&#39;b0;
-		begin : sv2v_autoblock_52
+		begin : sv2v_autoblock_53
 			reg signed [31:0] i;
 			for (i = (WIDTH - 1); (i &gt; 0); i = (i - 1))
 				begin : find_first_one
@@ -22149,7 +22173,7 @@ module rvfindfirst1hot (
 	always @(*) begin
 		dout[(WIDTH - 1):0] = {WIDTH {1&#39;b0}};
 		done = 1&#39;b0;
-		begin : sv2v_autoblock_53
+		begin : sv2v_autoblock_54
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; WIDTH); i = (i + 1))
 				begin : find_first_one
@@ -22206,7 +22230,7 @@ module rvbtb_ghr_hash (
 	input wire [5:4] hashin;
 	input wire [4:0] ghr;
 	output wire [7:4] hash;
-	assign hash[7:4] = {(ghr[3:2] ^ {ghr[4], {1 {1&#39;b0}}}), (hashin[5:4] ^ ghr[1:0])};
+	assign hash[7:4] = {(ghr[3:2] ^ {ghr[4], 1&#39;b0}), (hashin[5:4] ^ ghr[1:0])};
 endmodule
 module rvrangecheck (
 	addr,
@@ -22319,13 +22343,13 @@ module ram_32768x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [1277951:0] ram_core;
+	reg [38:0] ram_core [32767:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_16384x39 (
@@ -22340,13 +22364,13 @@ module ram_16384x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [638975:0] ram_core;
+	reg [38:0] ram_core [16383:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_8192x39 (
@@ -22361,13 +22385,13 @@ module ram_8192x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [319487:0] ram_core;
+	reg [38:0] ram_core [8191:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_4096x39 (
@@ -22382,13 +22406,13 @@ module ram_4096x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [159743:0] ram_core;
+	reg [38:0] ram_core [4095:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_3072x39 (
@@ -22403,13 +22427,13 @@ module ram_3072x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [119807:0] ram_core;
+	reg [38:0] ram_core [3071:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_2048x39 (
@@ -22424,13 +22448,13 @@ module ram_2048x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [79871:0] ram_core;
+	reg [38:0] ram_core [2047:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1536x39 (
@@ -22445,13 +22469,13 @@ module ram_1536x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [59903:0] ram_core;
+	reg [38:0] ram_core [1535:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1024x39 (
@@ -22466,13 +22490,13 @@ module ram_1024x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [39935:0] ram_core;
+	reg [38:0] ram_core [1023:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_768x39 (
@@ -22487,13 +22511,13 @@ module ram_768x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [29951:0] ram_core;
+	reg [38:0] ram_core [767:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_512x39 (
@@ -22508,13 +22532,13 @@ module ram_512x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [19967:0] ram_core;
+	reg [38:0] ram_core [511:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_256x39 (
@@ -22529,13 +22553,13 @@ module ram_256x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [9983:0] ram_core;
+	reg [38:0] ram_core [255:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_128x39 (
@@ -22550,13 +22574,13 @@ module ram_128x39 (
 	input wire [38:0] D;
 	output reg [38:0] Q;
 	input wire WE;
-	reg [4991:0] ram_core;
+	reg [38:0] ram_core [127:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 39)+:39] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 39)+:39];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1024x20 (
@@ -22571,13 +22595,13 @@ module ram_1024x20 (
 	input wire [19:0] D;
 	output reg [19:0] Q;
 	input wire WE;
-	reg [20479:0] ram_core;
+	reg [19:0] ram_core [1023:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 20)+:20] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 20)+:20];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_512x20 (
@@ -22592,13 +22616,13 @@ module ram_512x20 (
 	input wire [19:0] D;
 	output reg [19:0] Q;
 	input wire WE;
-	reg [10239:0] ram_core;
+	reg [19:0] ram_core [511:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 20)+:20] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 20)+:20];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_256x20 (
@@ -22613,13 +22637,13 @@ module ram_256x20 (
 	input wire [19:0] D;
 	output reg [19:0] Q;
 	input wire WE;
-	reg [5119:0] ram_core;
+	reg [19:0] ram_core [255:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 20)+:20] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 20)+:20];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_128x20 (
@@ -22634,13 +22658,13 @@ module ram_128x20 (
 	input wire [19:0] D;
 	output reg [19:0] Q;
 	input wire WE;
-	reg [2559:0] ram_core;
+	reg [19:0] ram_core [127:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 20)+:20] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 20)+:20];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_64x20 (
@@ -22655,13 +22679,13 @@ module ram_64x20 (
 	input wire [19:0] D;
 	output reg [19:0] Q;
 	input wire WE;
-	reg [1279:0] ram_core;
+	reg [19:0] ram_core [63:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 20)+:20] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 20)+:20];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_4096x34 (
@@ -22676,13 +22700,13 @@ module ram_4096x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [139263:0] ram_core;
+	reg [33:0] ram_core [4095:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_2048x34 (
@@ -22697,13 +22721,13 @@ module ram_2048x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [69631:0] ram_core;
+	reg [33:0] ram_core [2047:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1024x34 (
@@ -22718,13 +22742,13 @@ module ram_1024x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [34815:0] ram_core;
+	reg [33:0] ram_core [1023:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_512x34 (
@@ -22739,13 +22763,13 @@ module ram_512x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [17407:0] ram_core;
+	reg [33:0] ram_core [511:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_256x34 (
@@ -22760,13 +22784,13 @@ module ram_256x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [8703:0] ram_core;
+	reg [33:0] ram_core [255:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_128x34 (
@@ -22781,13 +22805,13 @@ module ram_128x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [4351:0] ram_core;
+	reg [33:0] ram_core [127:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_64x34 (
@@ -22802,13 +22826,13 @@ module ram_64x34 (
 	input wire [33:0] D;
 	output reg [33:0] Q;
 	input wire WE;
-	reg [2175:0] ram_core;
+	reg [33:0] ram_core [63:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 34)+:34] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 34)+:34];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_4096x42 (
@@ -22823,13 +22847,13 @@ module ram_4096x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [172031:0] ram_core;
+	reg [41:0] ram_core [4095:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_2048x42 (
@@ -22844,13 +22868,13 @@ module ram_2048x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [86015:0] ram_core;
+	reg [41:0] ram_core [2047:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1024x42 (
@@ -22865,13 +22889,13 @@ module ram_1024x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [43007:0] ram_core;
+	reg [41:0] ram_core [1023:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_512x42 (
@@ -22886,13 +22910,13 @@ module ram_512x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [21503:0] ram_core;
+	reg [41:0] ram_core [511:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_256x42 (
@@ -22907,13 +22931,13 @@ module ram_256x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [10751:0] ram_core;
+	reg [41:0] ram_core [255:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_128x42 (
@@ -22928,13 +22952,13 @@ module ram_128x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [5375:0] ram_core;
+	reg [41:0] ram_core [127:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_64x42 (
@@ -22949,13 +22973,13 @@ module ram_64x42 (
 	input wire [41:0] D;
 	output reg [41:0] Q;
 	input wire WE;
-	reg [2687:0] ram_core;
+	reg [41:0] ram_core [63:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 42)+:42] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 42)+:42];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1024x21 (
@@ -22970,13 +22994,13 @@ module ram_1024x21 (
 	input wire [20:0] D;
 	output reg [20:0] Q;
 	input wire WE;
-	reg [21503:0] ram_core;
+	reg [20:0] ram_core [1023:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 21)+:21] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 21)+:21];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_512x21 (
@@ -22991,13 +23015,13 @@ module ram_512x21 (
 	input wire [20:0] D;
 	output reg [20:0] Q;
 	input wire WE;
-	reg [10751:0] ram_core;
+	reg [20:0] ram_core [511:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 21)+:21] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 21)+:21];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_256x21 (
@@ -23012,13 +23036,13 @@ module ram_256x21 (
 	input wire [20:0] D;
 	output reg [20:0] Q;
 	input wire WE;
-	reg [5375:0] ram_core;
+	reg [20:0] ram_core [255:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 21)+:21] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 21)+:21];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_128x21 (
@@ -23033,13 +23057,13 @@ module ram_128x21 (
 	input wire [20:0] D;
 	output reg [20:0] Q;
 	input wire WE;
-	reg [2687:0] ram_core;
+	reg [20:0] ram_core [127:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 21)+:21] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 21)+:21];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_64x21 (
@@ -23054,13 +23078,13 @@ module ram_64x21 (
 	input wire [20:0] D;
 	output reg [20:0] Q;
 	input wire WE;
-	reg [1343:0] ram_core;
+	reg [20:0] ram_core [63:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 21)+:21] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 21)+:21];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_1024x25 (
@@ -23075,13 +23099,13 @@ module ram_1024x25 (
 	input wire [24:0] D;
 	output reg [24:0] Q;
 	input wire WE;
-	reg [25599:0] ram_core;
+	reg [24:0] ram_core [1023:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 25)+:25] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 25)+:25];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_512x25 (
@@ -23096,13 +23120,13 @@ module ram_512x25 (
 	input wire [24:0] D;
 	output reg [24:0] Q;
 	input wire WE;
-	reg [12799:0] ram_core;
+	reg [24:0] ram_core [511:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 25)+:25] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 25)+:25];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_256x25 (
@@ -23117,13 +23141,13 @@ module ram_256x25 (
 	input wire [24:0] D;
 	output reg [24:0] Q;
 	input wire WE;
-	reg [6399:0] ram_core;
+	reg [24:0] ram_core [255:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 25)+:25] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 25)+:25];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_128x25 (
@@ -23138,13 +23162,13 @@ module ram_128x25 (
 	input wire [24:0] D;
 	output reg [24:0] Q;
 	input wire WE;
-	reg [3199:0] ram_core;
+	reg [24:0] ram_core [127:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 25)+:25] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 25)+:25];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ram_64x25 (
@@ -23159,13 +23183,13 @@ module ram_64x25 (
 	input wire [24:0] D;
 	output reg [24:0] Q;
 	input wire WE;
-	reg [1599:0] ram_core;
+	reg [24:0] ram_core [63:0];
 	always @(posedge CLK) begin
 		if (WE) begin
-			ram_core[(ADR * 25)+:25] &lt;= D;
+			ram_core[ADR] &lt;= D;
 			Q &lt;= 1&#39;sbx;
 		end
-		else Q &lt;= ram_core[(ADR * 25)+:25];
+		else Q &lt;= ram_core[ADR];
 	end
 endmodule
 module ahb_to_axi4 (
@@ -23558,7 +23582,9 @@ module axi4_to_ahb (
 );
 	function automatic [2:0] sv2v_cast_3;
 		input reg [2:0] inp;
-		sv2v_cast_3 = inp;
+		begin
+			sv2v_cast_3 = inp;
+		end
 	endfunction
 	localparam [2:0] IDLE = 3&#39;b000;
 	localparam [2:0] CMD_RD = 3&#39;b001;
@@ -23720,7 +23746,7 @@ module axi4_to_ahb (
 		begin
 			found = 1&#39;sb0;
 			start_ptr[2:0] = (get_next ? (current_byte_ptr[2:0] + 3&#39;b1) : current_byte_ptr[2:0]);
-			begin : sv2v_autoblock_54
+			begin : sv2v_autoblock_55
 				reg signed [31:0] j;
 				for (j = 0; (j &lt; 8); j = (j + 1))
 					begin

@@ -10,7 +10,25 @@ top_module:
 files: <a href="../../../tests/chapter-12/12.8--continue.sv.html" target="file-frame">tests/chapter-12/12.8--continue.sv</a>
 
 
-<a href="../../../tests/chapter-12/12.8--continue.sv.html#l-11" target="file-frame">tests/chapter-12/12.8--continue.sv:11</a>:33: Parse error: unexpected token &#39;continue&#39; (KW_continue).
+module jump_tb;
+	initial begin
+		begin : sv2v_autoblock_1
+			reg [0:1] _sv2v_loop_90483;
+			_sv2v_loop_90483 = 1;
+			begin : sv2v_autoblock_2
+				reg signed [31:0] i;
+				for (i = 0; ((_sv2v_loop_90483 != 0) &amp;&amp; (i &lt; 256)); i = (i + 1))
+					begin
+						_sv2v_loop_90483 = 1;
+						if ((i &lt; 100)) _sv2v_loop_90483 = 2;
+						if ((_sv2v_loop_90483 == 1)) begin
+							$display(i);
+						end
+					end
+			end
+		end
+	end
+endmodule
 
 
 </pre>

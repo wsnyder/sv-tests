@@ -26,9 +26,10 @@ module test;
 		else if ((p == 2)) case (q)
 			0, 1, 2: begin : u1
 				xor g1 (a, b, c);
-			end		begin : u1
-					xnor g1 (a, b, c);
-				end
+			end
+			default: begin : u1
+			xnor g1 (a, b, c);
+		end
 		endcase
 	endgenerate
 endmodule

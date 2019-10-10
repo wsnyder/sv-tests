@@ -10,7 +10,89 @@ top_module:
 files: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v</a>
 
 
-<a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:7</a>:21: Parse error: unexpected token &#39;,&#39; (Sym_comma).
+module wandwor_test0 (
+	A,
+	B,
+	C,
+	D,
+	X,
+	Y,
+	Z
+);
+	input A;
+	input B;
+	input C;
+	input D;
+	output wor X;
+	output wand Y;
+	output Z;
+	assign X = A;
+	assign X = B;
+	assign Y = C;
+	assign Y = D;
+	foo foo_0(
+		C,
+		D,
+		X
+	);
+	foo foo_1(
+		A,
+		B,
+		Y
+	);
+	foo foo_2(
+		X,
+		Y,
+		Z
+	);
+endmodule
+module wandwor_test1 (
+	A,
+	B,
+	C,
+	D,
+	X,
+	Y,
+	Z
+);
+	input [3:0] A;
+	input [3:0] B;
+	input [3:0] C;
+	input [3:0] D;
+	output wor [3:0] X;
+	output wand [3:0] Y;
+	output Z;
+	bar bar_inst(
+		.I0({A, B}),
+		.I1({B, A}),
+		.O({X, Y})
+	);
+	assign X = C;
+	assign X = D;
+	assign Y = C;
+	assign Y = D;
+	assign Z = (^ {X, Y});
+endmodule
+module foo (
+	I0,
+	I1,
+	O
+);
+	input I0;
+	input I1;
+	output O;
+	assign O = (I0 ^ I1);
+endmodule
+module bar (
+	I0,
+	I1,
+	O
+);
+	input [7:0] I0;
+	input [7:0] I1;
+	output [7:0] O;
+	assign O = (I0 + I1);
+endmodule
 
 
 </pre>

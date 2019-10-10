@@ -11,13 +11,13 @@ files: <a href="../../../../../tests/chapter-7/arrays/unpacked/assignments.sv.ht
 
 
 module top;
-	reg signed [127:0] A;
+	reg signed [31:0] A [3:0];
 	reg signed [127:0] B;
 	initial begin
-		A[0+:32] = 0;
-		A[32+:32] = 1;
-		A[64+:32] = 2;
-		A[96+:32] = 3;
+		A[0] = 0;
+		A[1] = 1;
+		A[2] = 2;
+		A[3] = 3;
 		B = A;
 		$display(&#34;:assert: ((%d == 0) and (%d == 1) and (%d == 2) and (%d == 3))&#34;, B[0+:32], B[32+:32], B[64+:32], B[96+:32]);
 	end

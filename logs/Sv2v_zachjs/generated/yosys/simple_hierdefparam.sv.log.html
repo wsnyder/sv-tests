@@ -10,7 +10,53 @@ top_module:
 files: <a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v</a>
 
 
-<a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v:19</a>:22: Parse error: unexpected token &#39;,&#39; (Sym_comma).
+module hierdefparam_top (
+	A,
+	Y
+);
+	input [7:0] A;
+	output [7:0] Y;
+	generate
+		begin : foo
+			hierdefparam_a mod_a(
+				.A(A),
+				.Y(Y)
+			);
+		end
+	endgenerate
+	defparam foo.mod_a.bar[0].mod_b.addvalue = 42;
+	defparam foo.mod_a.bar[1].mod_b.addvalue = 43;
+endmodule
+module hierdefparam_a (
+	A,
+	Y
+);
+	input [7:0] A;
+	output [7:0] Y;
+	genvar i;
+	generate
+		for (i = 0; (i &lt; 2); i = (i + 1)) begin : bar
+			wire [7:0] a;
+			wire [7:0] y;
+			hierdefparam_b mod_b(
+				.A(a),
+				.Y(y)
+			);
+		end
+	endgenerate
+	assign bar[0].a = A;
+	assign bar[1].a = bar[0].y;
+	assign Y = bar[1].y;
+endmodule
+module hierdefparam_b (
+	A,
+	Y
+);
+	input [7:0] A;
+	output [7:0] Y;
+	parameter [7:0] addvalue = 44;
+	assign Y = (A + addvalue);
+endmodule
 
 
 </pre>

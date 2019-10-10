@@ -11,12 +11,12 @@ files: <a href="../../../../tests/chapter-7/memories/read-write.sv.html" target=
 
 
 module top;
-	reg [2047:0] mem;
+	reg [7:0] mem [0:255];
 	initial begin
-		mem[2000+:8] = 0;
-		$display(&#34;:assert: (%d == 0)&#34;, mem[2000+:8]);
-		mem[2000+:8] = 5;
-		$display(&#34;:assert: (%d == 5)&#34;, mem[2000+:8]);
+		mem[5] = 0;
+		$display(&#34;:assert: (%d == 0)&#34;, mem[5]);
+		mem[5] = 5;
+		$display(&#34;:assert: (%d == 5)&#34;, mem[5]);
 	end
 endmodule
 

@@ -10,7 +10,41 @@ top_module:
 files: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v</a>
 
 
-<a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:8</a>:19: Parse error: unexpected token &#39;,&#39; (Sym_comma).
+module wreduce_test0 (
+	a,
+	b,
+	x,
+	y,
+	z
+);
+	input [7:0] a;
+	input [7:0] b;
+	output [15:0] x;
+	output [15:0] y;
+	output [15:0] z;
+	assign x = (- $signed({1&#39;b0, a}));
+	assign y = ($signed({1&#39;b0, a}) + $signed({1&#39;b0, b}));
+	assign z = (x ^ y);
+endmodule
+module wreduce_test1 (
+	a,
+	b,
+	x,
+	y,
+	z,
+	w
+);
+	input [31:0] a;
+	input [31:0] b;
+	output [7:0] x;
+	output [7:0] y;
+	output [7:0] z;
+	output [7:0] w;
+	assign x = (a - b);
+	assign y = (a * b);
+	assign z = (a &gt;&gt; b);
+	assign w = (a &lt;&lt; b);
+endmodule
 
 
 </pre>

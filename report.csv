@@ -77,7 +77,7 @@ utd-sv_ccx_spc_rpt,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-s
 utd-sv_cpx_buf_pm_even,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/cpx_buf_pm_even.v,utd-sv,True,True,False,True,True,False,False,False
 utd-sv_rep_jbi_sc0_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/rep_jbi_sc0_2.v,utd-sv,True,True,True,True,True,True,False,True
 utd-sv_sctag_snpctl,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sctag_snpctl.v,utd-sv,False,True,False,True,False,False,False,True
-utd-sv_std-6.1.2-contassign2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/std-6.1.2-contassign2.v,utd-sv,False,True,True,False,False,True,False,False
+utd-sv_std-6.1.2-contassign2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/std-6.1.2-contassign2.v,utd-sv,False,True,True,False,False,True,False,True
 utd-sv_pcx_buf_p0_even,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_buf_p0_even.v,utd-sv,True,True,False,True,True,False,False,False
 utd-sv_pcx_dp4,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_dp4.v,utd-sv,False,True,False,True,False,False,False,False
 utd-sv_pad_efc,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pad_efc.v,utd-sv,True,True,False,True,False,False,False,True
@@ -328,7 +328,7 @@ utd-sv_sparc_exu_aluor32,/home/travis/build/SymbiFlow/sv-tests/third_party/tests
 utd-sv_cpx_buf_p0,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/cpx_buf_p0.v,utd-sv,True,True,False,True,True,False,False,False
 utd-sv_cpx_databuf_ca2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/cpx_databuf_ca2.v,utd-sv,True,True,False,True,True,False,False,False
 utd-sv_sparc_exu_aluaddsub,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sparc_exu_aluaddsub.v,utd-sv,False,True,False,True,False,True,False,True
-fx68k,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/fx68k/fx68k.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/fx68k/fx68kAlu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/fx68k/uaddrPla.sv,fx68k,False,False,False,False,False,True,False,False
+fx68k,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/fx68k/fx68k.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/fx68k/fx68kAlu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/fx68k/uaddrPla.sv,fx68k,False,False,False,False,False,True,False,True
 or_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--or_assignment.sv,11.4.1,True,True,True,False,False,True,False,True
 mul_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--mul_assignment.sv,11.4.1,True,True,True,False,False,True,False,True
 xor_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--xor_assignment.sv,11.4.1,True,True,True,False,False,True,False,True
@@ -342,7 +342,7 @@ mod_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_
 log_shl_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--log_shl_assignment.sv,11.4.1,True,True,True,False,False,True,False,True
 log_shr_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--log_shr_assignment.sv,11.4.1,True,True,True,False,False,True,False,True
 minus_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op/11.4.1--minus_assignment.sv,11.4.1,True,True,True,False,False,True,False,True
-hana_test_parser,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v,yosys,False,False,False,False,False,True,False,False
+hana_test_parser,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_parser.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v,yosys,False,False,False,False,False,True,False,True
 hana_test_simulation_shifter,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_simulation_shifter.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v,yosys,True,True,False,False,False,True,False,True
 hana_test_simulation_seq,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_simulation_seq.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v,yosys,True,True,False,False,False,True,False,True
 hana_test_simulation_decoder,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/test_simulation_decoder.v /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/hana/hana_vlib.v,yosys,True,True,False,False,False,True,False,True
@@ -413,8 +413,8 @@ integer_integer,/home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6
 integer_byte,/home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_byte.sv,6.11,True,True,True,False,False,True,False,True
 integer_signed_byte,/home/travis/build/SymbiFlow/sv-tests/tests/generated/integers/6.11--integer_signed_byte.sv,6.11,True,True,True,False,False,True,False,True
 asicworld_code_verilog_tutorial_decoder_always,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_decoder_always.v,yosys,True,True,True,True,False,True,False,True
-asicworld_code_hdl_models_lfsr_updown,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_lfsr_updown.v,yosys,True,False,True,True,False,True,False,False
-errors_syntax_err05,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err05.v,yosys,False,False,True,True,True,True,True,True
+asicworld_code_hdl_models_lfsr_updown,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_lfsr_updown.v,yosys,True,False,True,True,False,True,False,True
+errors_syntax_err05,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err05.v,yosys,False,False,True,True,True,True,True,False
 simple_attrib09_case,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib09_case.v,yosys,True,True,True,True,False,True,False,True
 asicworld_code_hdl_models_encoder_using_if,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_encoder_using_if.v,yosys,True,True,True,True,False,True,False,True
 asicworld_code_verilog_tutorial_bus_con,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_bus_con.v,yosys,True,True,True,True,True,True,False,True
@@ -422,7 +422,7 @@ asicworld_code_hdl_models_uart,/home/travis/build/SymbiFlow/sv-tests/third_party
 asicworld_code_hdl_models_mux_using_case,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_case.v,yosys,True,True,True,True,True,True,False,True
 asicworld_code_verilog_tutorial_fsm_full_tb,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_fsm_full_tb.v,yosys,False,True,False,False,False,False,False,False
 memories_read_two_mux,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/read_two_mux.v,yosys,True,True,True,True,False,True,False,True
-simple_carryadd,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v,yosys,False,True,True,True,False,True,False,False
+simple_carryadd,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/carryadd.v,yosys,False,True,True,True,False,True,False,True
 simple_values,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/values.v,yosys,False,True,False,True,False,True,False,True
 simple_forgen02,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen02.v,yosys,False,True,True,True,False,True,False,True
 memories_simple_sram_byte_en,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/simple_sram_byte_en.v,yosys,True,True,True,True,False,True,False,True
@@ -457,17 +457,17 @@ memories_implicit_en,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yos
 asicworld_code_hdl_models_rom_using_case,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_rom_using_case.v,yosys,True,True,True,True,True,True,False,True
 asicworld_code_hdl_models_mux_using_assign,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_using_assign.v,yosys,True,True,True,True,True,True,False,True
 simple_repwhile,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/repwhile.v,yosys,False,True,True,True,False,True,False,True
-simple_macros,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v,yosys,False,False,False,True,False,True,False,False
-simple_partsel,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/partsel.v,yosys,True,False,False,True,False,True,False,False
+simple_macros,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/macros.v,yosys,False,False,False,True,False,True,False,True
+simple_partsel,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/partsel.v,yosys,True,False,False,True,False,True,False,True
 sva_sva_not,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_not.sv,yosys,False,False,False,False,False,True,False,False
 asicworld_code_verilog_tutorial_tri_buf,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_tri_buf.v,yosys,True,True,True,True,True,True,False,True
-simple_muxtree,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/muxtree.v,yosys,False,True,False,True,False,True,False,False
+simple_muxtree,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/muxtree.v,yosys,False,True,False,True,False,True,False,True
 simple_dff_different_styles,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/dff_different_styles.v,yosys,True,True,False,True,False,True,False,True
 asicworld_code_tidbits_wire_example,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_wire_example.v,yosys,True,True,True,True,True,True,False,True
 asicworld_code_verilog_tutorial_parity,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_parity.v,yosys,False,True,True,True,True,True,False,True
 simple_aes_kexp128,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/aes_kexp128.v,yosys,True,True,True,True,False,True,False,True
 simple_subbytes,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/subbytes.v,yosys,True,True,True,True,False,True,False,True
-simple_fiedler-cooley,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v,yosys,True,False,True,True,False,True,False,True
+simple_fiedler-cooley,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/fiedler-cooley.v,yosys,True,True,True,True,False,True,False,True
 simple_omsp_dbg_uart,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/omsp_dbg_uart.v,yosys,True,True,True,True,True,True,False,True
 memories_shared_ports,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories/shared_ports.v,yosys,True,True,True,True,False,True,False,True
 simple_implicit_ports,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/implicit_ports.v,yosys,True,True,True,False,False,True,False,True
@@ -495,8 +495,8 @@ asicworld_code_tidbits_reg_combo_example,/home/travis/build/SymbiFlow/sv-tests/t
 simple_forloops,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forloops.v,yosys,False,True,False,True,False,True,False,True
 simple_attrib08_mod_inst,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib08_mod_inst.v,yosys,True,True,True,True,False,True,False,True
 errors_syntax_err13,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err13.v,yosys,False,False,False,True,True,False,True,False
-sva_extnets,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/extnets.sv,yosys,False,True,True,True,False,True,False,False
-simple_mem2reg,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v,yosys,False,False,False,True,False,True,False,False
+sva_extnets,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/extnets.sv,yosys,False,True,True,True,False,True,False,True
+simple_mem2reg,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/mem2reg.v,yosys,False,False,False,True,False,True,False,True
 sva_basic05,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic05.sv,yosys,False,False,False,False,False,True,False,True
 asicworld_code_tidbits_fsm_using_always,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_always.v,yosys,False,True,True,True,False,True,False,True
 sva_basic02,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic02.sv,yosys,False,False,False,False,False,True,False,False
@@ -506,7 +506,7 @@ asicworld_code_hdl_models_full_subtracter_gates,/home/travis/build/SymbiFlow/sv-
 sva_basic04,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/basic04.sv,yosys,False,False,False,False,False,True,False,False
 asicworld_code_hdl_models_parallel_crc,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_parallel_crc.v,yosys,True,True,True,True,True,True,False,True
 errors_syntax_err08,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors/syntax_err08.v,yosys,True,True,True,True,True,True,True,True
-simple_generate,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v,yosys,False,False,False,False,False,True,False,False
+simple_generate,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/generate.v,yosys,False,False,False,False,False,True,False,True
 asicworld_code_verilog_tutorial_if_else,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_if_else.v,yosys,True,True,True,True,False,True,False,True
 asicworld_code_hdl_models_up_counter_load,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_up_counter_load.v,yosys,True,True,True,True,True,True,False,True
 asicworld_code_hdl_models_full_adder_gates,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_full_adder_gates.v,yosys,False,True,True,True,True,True,False,True
@@ -517,7 +517,7 @@ asicworld_code_tidbits_blocking,/home/travis/build/SymbiFlow/sv-tests/third_part
 asicworld_code_verilog_tutorial_addbit,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_addbit.v,yosys,True,True,True,True,True,True,False,True
 simple_localparam_attr,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/localparam_attr.v,yosys,False,True,True,False,False,True,False,True
 asicworld_code_verilog_tutorial_parallel_if,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_parallel_if.v,yosys,True,True,True,True,False,True,False,True
-simple_constpower,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/constpower.v,yosys,False,False,True,True,True,True,False,False
+simple_constpower,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/constpower.v,yosys,False,False,True,True,True,True,False,True
 simple_attrib04_net_var,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib04_net_var.v,yosys,True,True,True,True,False,True,False,True
 asicworld_code_hdl_models_up_counter,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_up_counter.v,yosys,True,True,True,True,True,True,False,True
 simple_operators,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/operators.v,yosys,True,True,True,True,False,True,False,True
@@ -526,7 +526,7 @@ sva_basic01,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/
 sva_sva_throughout,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/sva_throughout.sv,yosys,False,False,False,False,True,True,False,False
 sva_counter,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva/counter.sv,yosys,False,False,False,False,False,True,False,False
 asicworld_code_verilog_tutorial_d_ff,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_d_ff.v,yosys,True,True,True,True,True,True,False,True
-simple_wreduce,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wreduce.v,yosys,False,True,False,True,False,True,False,False
+simple_wreduce,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wreduce.v,yosys,False,True,False,True,False,True,False,True
 simple_task_func,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/task_func.v,yosys,False,True,False,True,False,True,False,True
 simple_attrib01_module,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/attrib01_module.v,yosys,True,True,True,True,True,True,False,True
 asicworld_code_hdl_models_decoder_2to4_gates,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_decoder_2to4_gates.v,yosys,False,True,True,True,True,True,False,True
@@ -583,9 +583,9 @@ asicworld_code_verilog_tutorial_counter,/home/travis/build/SymbiFlow/sv-tests/th
 simple_sincos,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/sincos.v,yosys,False,True,True,True,False,True,False,True
 simple_realexpr,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/realexpr.v,yosys,True,True,False,True,False,True,False,True
 simple_forgen01,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/forgen01.v,yosys,True,True,True,True,False,True,False,True
-simple_wandwor,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v,yosys,True,True,False,False,False,True,False,False
+simple_wandwor,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/wandwor.v,yosys,True,True,False,False,False,True,False,True
 asicworld_code_hdl_models_decoder_using_assign,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld/code_hdl_models_decoder_using_assign.v,yosys,True,True,True,True,False,True,False,True
-simple_hierdefparam,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierdefparam.v,yosys,False,False,False,False,False,False,False,False
+simple_hierdefparam,/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple/hierdefparam.v,yosys,False,False,False,False,False,False,False,True
 swerv,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default/common_defines.vh /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/build.h /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/global.h /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include/swerv_types.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv_wrapper.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/pic_ctrl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/swerv.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dma_ctrl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_ic_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/ifu/ifu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_decode_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_gpr_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_ib_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_tlu_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec_trigger.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dec/dec.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_alu_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_mul_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu_div_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/exu/exu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_clkdomain.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_addrcheck.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_stbuf.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_bus_intf.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_ecc.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lsu/lsu_trigger.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dbg/dbg.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_wrapper.v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi/rvjtag_tap.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/beh_lib.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/mem_lib.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/ahb_to_axi4.sv /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib/axi4_to_ahb.sv,swerv,False,False,True,False,False,True,False,True
 unary_op_xor,/home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op/11.4.9--unary_op_xor.sv,11.4.9,True,True,True,False,False,True,False,True
 unary_op_nand,/home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op/11.4.9--unary_op_nand.sv,11.4.9,True,True,True,False,False,True,False,True
@@ -853,7 +853,7 @@ hdlconvertor_p524,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p705,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p705.sv,hdlconv,True,True,False,False,False,True,False,False
 hdlconvertor_p240,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p566,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p566.sv,hdlconv,False,False,False,False,False,True,False,False
-hdlconvertor_p234,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_p234,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p342,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p568,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p568.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p201,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p201.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -964,11 +964,11 @@ hdlconvertor_p189,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p160_1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p188,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p188.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p621,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p621.sv,hdlconv,False,True,False,False,True,True,False,True
-hdlconvertor_p594,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p594.sv,hdlconv,False,False,False,False,False,True,False,False
+hdlconvertor_p594,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p594.sv,hdlconv,False,False,False,False,False,True,False,True
 hdlconvertor_p372,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p372.sv,hdlconv,False,True,False,False,True,True,False,False
 hdlconvertor_p832,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p832.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p332,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p332.sv,hdlconv,False,True,False,False,False,True,False,False
-hdlconvertor_p733,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p733.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_p733,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p733.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p755,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p755.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p230,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p230.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p780,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p780.sv,hdlconv,True,False,True,False,False,True,False,True
@@ -1009,7 +1009,7 @@ hdlconvertor_p541,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p627,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p627.sv,hdlconv,True,True,True,True,False,True,False,True
 hdlconvertor_p510,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p510.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p754,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p754.sv,hdlconv,True,False,True,False,False,True,False,False
-hdlconvertor_p735,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_p735,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p706,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p522,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p522.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p782,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p782.sv,hdlconv,False,True,False,False,False,True,False,True
@@ -1047,9 +1047,9 @@ hdlconvertor_p77,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconv
 hdlconvertor_p331,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p331.sv,hdlconv,True,True,False,False,False,True,False,False
 hdlconvertor_p756,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p756.sv,hdlconv,True,False,False,False,False,True,False,False
 hdlconvertor_p565,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p565.sv,hdlconv,False,False,False,False,False,True,False,False
-hdlconvertor_p249,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p249.sv,hdlconv,True,True,False,False,False,True,False,False
+hdlconvertor_p249,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p249.sv,hdlconv,True,True,False,False,False,True,False,True
 hdlconvertor_p886,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p886.sv,hdlconv,False,True,False,False,False,True,False,False
-hdlconvertor_p795,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p795.sv,hdlconv,True,True,False,True,False,True,False,False
+hdlconvertor_p795,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p795.sv,hdlconv,True,True,False,True,False,True,False,True
 hdlconvertor_p123_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123_2.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p123,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p123.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p488,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p488.sv,hdlconv,False,False,False,False,False,True,False,False
@@ -1062,7 +1062,7 @@ hdlconvertor_p496,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p338,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p338.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p140,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p140.sv,hdlconv,True,True,False,True,False,True,False,True
 hdlconvertor_p454,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv,hdlconv,False,False,False,False,False,True,False,False
-hdlconvertor_p734,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_p734,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p757,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p57,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p57.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p340,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p340.sv,hdlconv,False,False,False,False,False,True,False,False
@@ -1082,7 +1082,7 @@ hdlconvertor_p158,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p753_1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_1.sv,hdlconv,False,False,True,True,False,True,False,True
 hdlconvertor_p833,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p833.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p184_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p184_2.sv,hdlconv,False,True,False,False,False,True,False,False
-hdlconvertor_p723,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_p723,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p726,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv,hdlconv,False,False,False,False,False,True,False,True
 hdlconvertor_p783,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p783.sv,hdlconv,False,False,True,False,False,True,False,True
 hdlconvertor_p765,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv,hdlconv,False,False,False,False,False,True,False,False
@@ -1100,7 +1100,7 @@ hdlconvertor_p707,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p776,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p776.sv,hdlconv,True,False,False,False,False,True,False,True
 hdlconvertor_p503,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p503.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p845,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p845.sv,hdlconv,False,False,True,False,False,True,False,False
-hdlconvertor_p622,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_p622,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p339,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p339.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p532,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p532.sv,hdlconv,False,False,False,False,False,False,False,False
 hdlconvertor_p730,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv,hdlconv,True,False,False,True,False,True,False,True
@@ -1145,7 +1145,7 @@ parameter_dep,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.2--para
 realtime,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--realtime.sv,6.12,True,True,True,False,False,True,False,True
 real,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real.sv,6.12,True,True,True,False,False,True,False,True
 nettype_resolution_fn,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.6.7--nettype_resolution_fn.sv,6.6.7,False,True,False,False,False,True,False,False
-string,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16--string.sv,6.16,True,True,True,False,False,True,False,False
+string,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16--string.sv,6.16,True,True,True,False,False,True,False,True
 enum_numerical_expr_no_cast,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.4--enum_numerical_expr_no_cast.sv,6.19.4,True,False,False,True,True,False,True,False
 vector_vectored_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.9.2--vector_vectored_inv.sv,6.9.2,True,True,True,True,True,True,True,True
 enum_type_checking,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.3--enum_type_checking.sv,6.19.3,True,True,True,False,False,True,False,True
@@ -1197,8 +1197,8 @@ string_itoa,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.11--strin
 enum_last,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.2--enum_last.sv,6.19.5.2,True,True,True,False,False,True,False,False
 cast_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.24.1--cast_op.sv,6.24.1,True,True,True,False,False,True,False,True
 string_getc,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.3--string_getc.sv,6.16.3,False,True,False,False,False,True,False,False
-event,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.17--event.sv,6.17,True,True,False,False,False,True,False,False
-parameter_type,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.3--parameter_type.sv,6.20.3,False,True,True,False,False,True,False,False
+event,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.17--event.sv,6.17,True,True,False,False,False,True,False,True
+parameter_type,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.3--parameter_type.sv,6.20.3,False,True,True,False,False,True,False,True
 real_idx,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select.sv,6.12,True,False,True,True,True,False,True,False
 void,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv,6.13,True,True,True,False,False,True,False,True
 enum_first,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.1--enum_first.sv,6.19.5.1,True,True,True,False,False,True,False,False
@@ -1344,8 +1344,8 @@ operations-on-unpacked-arrays-one-bit,/home/travis/build/SymbiFlow/sv-tests/test
 operations-on-unpacked-arrays-variable-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv,7.4.3 7.4.6,False,True,False,False,False,True,False,True
 unpacked-array-reduction-method-or,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/or.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
 unpacked-array-reduction-method-xor,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
-unpacked-array-reduction-method-product,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/product.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
-unpacked-array-reduction-method-sum,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
+unpacked-array-reduction-method-product,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/product.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,True
+unpacked-array-reduction-method-sum,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,True
 unpacked-array-reduction-method-and,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/and.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
 ordering-methods-sort,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv,7.12.2 7.4.2,False,True,False,False,False,True,False,False
 ordering-methods-reverse,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/reverse.sv,7.12.2 7.4.2,False,True,False,False,False,True,False,False
@@ -1374,12 +1374,12 @@ push_front_assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/p
 process_control,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_suspend_resume.sv,9.7,False,True,False,False,False,True,False,False
 fork_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--fork_return.sv,9.3.3,True,False,True,True,True,False,True,True
 event_sequence,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv,9.4.2.4,False,False,False,False,False,True,False,False
-event_order,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv,9.3.3,False,False,False,False,False,True,False,False
+event_order,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--event.sv,9.3.3,False,False,False,False,False,True,False,True
 parallel_block_join_none,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.2--parallel_block_join_none.sv,9.3.2,False,True,False,False,False,True,False,False
 delay_control,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.1--delay_control.sv,9.4.1,True,True,True,True,False,True,False,True
 parallel_block_join_any,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.2--parallel_block_join_any.sv,9.3.2,False,True,False,False,False,True,False,False
 disable_fork,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.6.3--disable_fork.sv,9.6.3,False,True,False,False,False,True,False,False
-statement_labels_par,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_par.sv,9.3.5,False,True,False,False,False,True,False,False
+statement_labels_par,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_par.sv,9.3.5,False,True,False,False,False,True,False,True
 event_comma_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.1--event_comma_op.sv,9.4.2.1,True,True,True,True,False,True,False,True
 always_latch_expr,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.3--always_latch.sv,9.2.2.3,True,True,True,True,False,True,False,True
 event_nonblocking_assignment_repeat_int,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_int.sv,9.4.5,False,True,False,False,False,True,False,False
@@ -1387,7 +1387,7 @@ process_cls_await,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--pro
 disable,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.6.2--disable.sv,9.6.2,False,True,True,False,False,True,False,False
 event_implicit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.2--event_implicit.sv,9.4.2.2,False,True,True,True,False,True,False,True
 always_comb,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.2--always_comb.sv,9.2.2.2,True,True,True,True,False,True,False,True
-parallel_block_join,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.2--parallel_block_join.sv,9.3.2,False,True,False,False,False,True,False,False
+parallel_block_join,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.2--parallel_block_join.sv,9.3.2,False,True,False,False,False,True,False,True
 event_control_negedge,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_negedge.sv,9.4.2,True,True,True,True,False,True,False,True
 event_or_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.1--event_or_op.sv,9.4.2.1,True,True,True,True,False,True,False,True
 event_sequence_controls,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.3--event_sequence_controls.sv,9.4.3,False,True,False,False,False,True,False,False
@@ -1397,16 +1397,16 @@ process_cls_self,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--proc
 event_nonblocking_assignment_delay,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_delay.sv,9.4.5,False,True,True,True,False,True,False,True
 block_names_seq,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_seq.sv,9.3.4,True,True,True,True,False,True,False,True
 event_control_posedge,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_posedge.sv,9.4.2,True,True,True,True,False,True,False,True
-statement_labels_seq,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv,9.3.5,True,True,False,False,False,True,False,False
+statement_labels_seq,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.5--statement_labels_seq.sv,9.3.5,True,True,False,False,False,True,False,True
 event_control_edge,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2--event_control_edge.sv,9.4.2,True,True,True,False,False,True,False,False
 event_nonblocking_assignment_repeat_neg,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat_neg.sv,9.4.5,False,True,False,False,False,True,False,False
 always_ff,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.4--always_ff.sv,9.2.2.4,True,True,True,True,False,True,False,True
 initial,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.1--initial.sv,9.2.1,True,True,True,True,False,True,False,True
-block_names_par,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv,9.3.4,False,True,False,False,False,True,False,False
+block_names_par,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.4--block_names_par.sv,9.3.4,False,True,False,False,False,True,False,True
 process_cls_kill,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_kill.sv,9.7,False,True,False,False,False,True,False,False
 always,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.2.1--always.sv,9.2.2.1,True,True,True,True,False,True,False,True
 sequential_block,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.1--sequential_block.sv,9.3.1,True,True,True,True,False,True,False,True
-block_start_finish,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv,9.3.3,False,True,False,False,False,True,False,False
+block_start_finish,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--block_start_finish.sv,9.3.3,False,True,False,False,False,True,False,True
 event_nonblocking_assignment_repeat,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.5--event_nonblocking_assignment_repeat.sv,9.4.5,False,True,False,False,False,True,False,False
 disable_other,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.6.2--disable_other.sv,9.6.2,False,True,False,False,False,True,False,False
 final,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.2.3--final.sv,9.2.3,True,True,True,False,False,True,False,False
@@ -1416,7 +1416,7 @@ event_blocking_assignment_delay,/home/travis/build/SymbiFlow/sv-tests/tests/chap
 tagged_union_member_access_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv,11.9,True,False,True,True,True,False,True,True
 tagged_union_member_access,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv,11.9,False,True,False,False,False,True,False,False
 assign_in_expr_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr_inv.sv,11.3.6,True,True,True,True,True,True,True,True
-string_concat_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_concat_op.sv,11.4.12.2,True,True,True,False,False,True,False,False
+string_concat_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_concat_op.sv,11.4.12.2,True,True,True,False,False,True,False,True
 string_bit_array,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10--string_bit_array.sv,11.10,True,True,True,True,False,True,False,True
 dynamic_array_unpack_stream,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.4--dynamic_array_stream.sv,11.4.14.4,False,True,False,False,False,True,False,False
 idx_neg_part_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--idx_neg_part_select.sv,11.5.1,True,True,True,True,False,True,False,True
@@ -1426,14 +1426,14 @@ repl_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.1--repl_o
 unpack_stream,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream.sv,11.4.14.3,False,False,True,False,False,True,False,True
 concat_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12--concat_op.sv,11.4.12,True,True,True,True,False,True,False,True
 empty_string,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.3--empty_string.sv,11.10.3,False,True,False,False,False,True,False,True
-min_max_avg_delay,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.11--min_max_avg_delay.sv,11.11,False,True,True,True,False,True,False,False
+min_max_avg_delay,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.11--min_max_avg_delay.sv,11.11,False,True,True,True,False,True,False,True
 unary_op_inc,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.2--unary_op_inc.sv,11.4.2,True,True,True,False,False,True,False,True
 let_construct,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.12--let_construct.sv,11.12,False,True,False,False,False,True,False,False
 signed_func,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--signed_func.sv,11.7,False,True,True,True,False,True,False,True
 tagged_union,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv,11.9,False,True,False,False,False,True,False,False
 string_concat,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_concat.sv,11.10.1,True,True,True,False,False,True,False,True
 unary_op_dec,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.2--unary_op_dec.sv,11.4.2,True,True,True,False,False,True,False,True
-string_repl_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_repl_op.sv,11.4.12.2,True,True,True,False,False,True,False,False
+string_repl_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_repl_op.sv,11.4.12.2,True,True,True,False,False,True,False,True
 string_compare,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_compare.sv,11.10.1,True,True,True,False,False,True,False,True
 non_idx_part_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--non_idx_part_select.sv,11.5.1,True,True,True,True,False,True,False,True
 idx_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--idx_select.sv,11.5.1,True,True,True,True,False,True,False,True
@@ -1446,7 +1446,7 @@ multi_dim_array_addressing,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-1
 reorder_stream,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.2--reorder_stream.sv,11.4.14.2,False,True,True,False,False,True,False,True
 expr_short_circuit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.5--expr_short_circuit.sv,11.3.5,True,True,True,False,False,True,False,True
 assign_in_expr,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr.sv,11.3.6,True,True,False,False,False,True,False,False
-unpack_stream_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_inv.sv,11.4.14.3,True,True,False,True,True,False,True,False
+unpack_stream_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_inv.sv,11.4.14.3,True,True,False,True,True,False,True,True
 set_member,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.13--set_member.sv,11.4.13,False,True,False,False,False,True,False,True
 unsigned_func,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--unsigned_func.sv,11.7,False,True,True,True,False,True,False,True
 integers-unsized-illegal,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-unsized-illegal.sv,5.7.1,True,True,True,True,True,True,True,True
@@ -1461,7 +1461,7 @@ attributes-operator,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-a
 celldefine,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-celldefine.sv,5.6.4,True,True,True,True,False,True,False,False
 attributes-module,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-module.sv,5.12,True,True,False,True,False,True,False,True
 integers-token,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-token.sv,5.7.1,True,True,True,True,False,True,False,True
-time-literals,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv,5.8,False,True,False,False,False,True,False,False
+time-literals,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.8-time-literals.sv,5.8,False,True,False,False,False,True,False,True
 structure-replication,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-replication.sv,5.10,False,True,False,False,False,True,False,False
 debug-line,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-debug-line.sv,5.6.4,True,True,True,True,False,True,False,False
 comments,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.4--coments.sv,5.4,True,True,True,True,False,True,False,True
@@ -1477,26 +1477,26 @@ integers-sized-illegal,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7
 attributes-conditional,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.12-attributes-conditional.sv,5.12,True,True,True,True,False,True,False,False
 builtin-methods-string,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.13-builtin-methods-strings.sv,5.13,False,True,False,False,False,True,False,False
 structure-arrays,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-arrays.sv,5.10,False,True,True,False,False,True,False,True
-string-word-assignment,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-word-assignment.sv,5.9,False,True,False,False,False,True,False,False
+string-word-assignment,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-word-assignment.sv,5.9,False,True,False,False,False,True,False,True
 builtin-methods-arrays,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.13-builtin-methods-arrays.sv,5.13,False,True,False,False,False,True,False,False
 string-special-chars,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9.1-string-special-chars.sv,5.9.1,True,True,True,True,False,True,False,True
 string-basic,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-basics.sv,5.9 5.3,True,True,True,True,False,True,False,True
 integers-left-padding-bit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding-bit.sv,5.7.1,True,True,True,False,False,True,False,True
 arrays-key-index,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.11-arrays-key-index.sv,5.11,False,True,True,False,False,True,False,False
 arrays-replication,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.11-arrays-replication.sv,5.11,False,True,True,False,False,True,False,False
-integers-underscores,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-underscores.sv,5.7.1,True,False,True,True,False,True,False,True
+integers-underscores,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-underscores.sv,5.7.1,True,True,True,True,False,True,False,True
 structure,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structures.sv,5.10,False,True,False,False,False,True,False,False
 include-directive,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-include.sv,5.6.4,False,True,True,True,False,True,False,True
 structure-arrays-illegal,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-arrays-illegal.sv,5.10,True,False,True,True,True,False,True,False
-integers-left-padding,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv,5.7.1,True,False,True,True,False,True,False,True
+integers-left-padding,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-left-padding.sv,5.7.1,True,True,True,True,False,True,False,True
 pragma-directive,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-pragma.sv,5.6.4,False,False,True,False,False,True,False,False
 escaped-identifiers,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.1--escaped-identifiers.sv,5.6.1,True,True,True,True,False,True,False,True
 begin-keywords,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.6.4--compiler-directives-begin-keywords.sv,5.6.4,True,False,True,False,False,True,False,False
-string-broken-line,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-broken-line.sv,5.9,True,True,True,True,False,True,False,False
+string-broken-line,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.9-string-broken-line.sv,5.9,True,True,True,True,False,True,False,True
 arrays,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.11-arrays.sv,5.11,False,True,True,False,False,True,False,False
-integers-unsized,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-unsized.sv,5.7.1,True,False,True,True,False,True,False,True
+integers-unsized,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-unsized.sv,5.7.1,True,True,True,True,False,True,False,True
 real-token,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.2-real-token.sv,5.7.2,True,True,True,False,False,True,False,True
-integers-signed,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-signed.sv,5.7.1,True,False,True,True,False,True,False,False
+integers-signed,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.7.1--integers-signed.sv,5.7.1,True,True,True,True,False,True,False,False
 enum_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/enum/enum_test_0.sv,6.19,False,True,False,False,False,True,False,True
 union_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/union/union_test_0.sv,7.3,False,True,False,False,False,True,False,True
 typedef_test_24,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_24.sv,6.18,True,True,False,False,False,True,False,True
@@ -1674,7 +1674,7 @@ preproc_test_7,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/prepr
 preproc_test_4,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_4.sv,5.6.4,True,True,False,True,False,True,False,True
 preproc_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_0.sv,5.6.4,True,True,False,True,False,True,False,True
 preproc_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_1.sv,5.6.4,True,True,False,True,False,True,False,True
-preproc_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv,5.6.4,False,True,False,False,False,False,False,False
+preproc_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv,5.6.4,True,False,False,True,False,False,False,True
 preproc_test_6,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_6.sv,5.6.4,True,True,False,True,False,True,False,True
 preproc_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_5.sv,5.6.4,True,True,False,True,False,True,False,True
 preproc_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_13.sv,5.6.4,True,False,False,True,False,False,False,True
@@ -1703,12 +1703,12 @@ number_test_68,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number
 number_test_12,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_12.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_2.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_72,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_72.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-number_test_66,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_66.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
-number_test_47,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_47.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_66,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_66.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
+number_test_47,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_47.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_69,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_69.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_1.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_3,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_3.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-number_test_25,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_25.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_25,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_25.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_36,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_36.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,False
 number_test_27,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_27.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_4,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_4.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
@@ -1724,7 +1724,7 @@ number_test_48,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number
 number_test_31,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_31.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,False
 number_test_34,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_34.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,False
 number_test_63,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_63.sv,5.6.4 5.7.1 5.7.2,True,True,True,True,True,True,True,True
-number_test_60,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_60.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_60,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_60.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_64,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_64.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_49,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_49.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_26,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_26.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
@@ -1733,34 +1733,34 @@ number_test_70,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number
 number_test_15,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_15.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_29,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_29.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_67,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_67.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-number_test_43,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_43.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_43,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_43.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_61,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_61.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_51,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_51.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_46,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_46.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_42,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_42.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_6,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_6.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_44,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_44.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-number_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_11.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_11.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_32,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_32.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,False
 number_test_59,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_59.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-number_test_8,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_8.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_8,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_8.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_35,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_35.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,False
 number_test_14,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_14.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
-number_test_28,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_28.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_28,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_28.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_53,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_53.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_33,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_33.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,False
-number_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_5.sv,5.6.4 5.7.1 5.7.2,True,False,False,False,False,True,False,True
+number_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_5.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_52,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_52.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_71,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_71.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 number_test_24,/home/travis/build/SymbiFlow/sv-tests/tests/generic/number/number_test_24.sv,5.6.4 5.7.1 5.7.2,True,True,False,False,False,True,False,True
 conditional_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.3--conditional_pattern.sv,12.6.3,False,False,False,False,False,False,False,False
 dowhile_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.5--dowhile.sv,12.7.5,False,True,True,False,False,True,False,False
 jump_return_expr,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return_val.sv,12.8,True,True,True,False,False,True,False,True
-jump_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv,12.8,False,True,True,False,False,True,False,False
+jump_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.sv,12.8,False,True,True,False,False,True,False,True
 unique_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--unique_if.sv,12.4.2,True,True,True,False,False,True,False,True
 case,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5--case.sv,12.5,True,True,True,True,False,True,False,True
 case_constant,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.2--case_const.sv,12.5.2,True,True,True,True,False,True,False,True
-jump_break,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--break.sv,12.8,True,True,True,False,False,True,False,False
+jump_break,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--break.sv,12.8,True,True,True,False,False,True,False,True
 repeat_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.2--repeat.sv,12.7.2,True,True,True,False,False,True,False,True
 unique0_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--unique0_if.sv,12.4.2,True,True,True,False,False,True,False,True
 case_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv,12.6.1,False,True,False,False,False,True,False,False
@@ -1768,7 +1768,7 @@ while_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.4--while.
 if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4--if.sv,12.4,True,True,True,True,False,True,False,True
 casex_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casex_pattern.sv,12.6.1,False,True,False,False,False,True,False,False
 for_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.1--for.sv,12.7.1,True,True,True,False,False,True,False,True
-jump_continue,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--continue.sv,12.8,True,True,True,False,False,True,False,False
+jump_continue,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--continue.sv,12.8,True,True,True,False,False,True,False,True
 if_else_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.1--if_else_if.sv,12.4.1,True,True,True,True,False,True,False,True
 foreach_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.3--foreach.sv,12.7.3,False,True,True,False,False,True,False,False
 priority_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv,12.4.2,True,True,True,False,False,True,False,True

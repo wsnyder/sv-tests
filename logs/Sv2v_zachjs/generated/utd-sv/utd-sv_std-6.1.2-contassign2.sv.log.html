@@ -10,7 +10,31 @@ top_module:
 files: <a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v</a>
 
 
-<a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html#l-14" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v:14</a>:29: Parse error: unexpected token &#39;,&#39; (Sym_comma).
+module select_bus (
+	busout,
+	bus0,
+	bus1,
+	bus2,
+	bus3,
+	enable,
+	s
+);
+	parameter n = 16;
+	parameter Zee = 16&#39;bz;
+	output [1:n] busout;
+	input [1:n] bus0;
+	input [1:n] bus1;
+	input [1:n] bus2;
+	input [1:n] bus3;
+	input enable;
+	input [1:2] s;
+	tri [1:n] data;
+	tri [1:n] busout = (enable ? data : Zee);
+	assign data = ((s == 0) ? bus0 : Zee);
+	assign data = ((s == 1) ? bus1 : Zee);
+	assign data = ((s == 2) ? bus2 : Zee);
+	assign data = ((s == 3) ? bus3 : Zee);
+endmodule
 
 
 </pre>

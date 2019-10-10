@@ -10,7 +10,24 @@ top_module:
 files: <a href="../../../tests/chapter-12/12.8--return.sv.html" target="file-frame">tests/chapter-12/12.8--return.sv</a>
 
 
-<a href="../../../tests/chapter-12/12.8--return.sv.html#l-11" target="file-frame">tests/chapter-12/12.8--return.sv:11</a>:31: Parse error: unexpected token &#39;;&#39; (Sym_semi).
+module jump_tb;
+	task fun;
+		input reg signed [31:0] a;
+		begin
+			$display(&#34;a&#34;);
+			if ((a == 21)) ;
+		end
+	endtask
+	initial begin
+		begin : sv2v_autoblock_1
+			reg signed [31:0] i;
+			for (i = 0; (i &lt; 256); i = (i + 1))
+				begin
+					fun(i);
+				end
+		end
+	end
+endmodule
 
 
 </pre>

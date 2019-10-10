@@ -10,7 +10,15 @@ top_module:
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>
 
 
-<a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv:9</a>:8: Parse error: unexpected token &#39;]&#39; (Sym_brack_r).
+module top;
+	wire [31:0] b = {1, 2, 3, 4};
+	reg signed [31:0] y;
+	initial begin
+		$display(&#34;:assert: ((%d == 1) and (%d == 2) and (%d == 3) and (%d == 4))&#34;, b[24+:8], b[16+:8], b[8+:8], b[0+:8]);
+		y = b.sum;
+		$display(&#34;:assert: (%d == 10)&#34;, y);
+	end
+endmodule
 
 
 </pre>
