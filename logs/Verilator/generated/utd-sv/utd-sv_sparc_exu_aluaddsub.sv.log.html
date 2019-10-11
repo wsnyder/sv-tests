@@ -5,24 +5,27 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v</a>
 
 
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sparc_exu_aluadder64.v:53: Operator ADD expects 33 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
+%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sparc_exu_aluadder64.v:56: Operator ADD expects 33 bits on the RHS, but RHS&#39;s VARREF &#39;cout32&#39; generates 1 bits.
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>: Cannot find file containing module: dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       dff_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       dff_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       obj_dir/dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       obj_dir/dff_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-68" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:68</a>:       obj_dir/dff_s.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-77" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:77</a>: Cannot find file containing module: sparc_exu_aluadder64
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html#l-84" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v:84</a>: Cannot find file containing module: sparc_exu_aluspr
 %Error: Exiting due to 11 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_exu_aluaddsub.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_aluaddsub.v</a>
 
 
 </pre>

@@ -5,14 +5,16 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>: Cannot find file containing module: bw_u1_inv_5x
-%Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_inv_5x
+%Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_inv_5x.v
+%Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_inv_5x.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>:       bw_u1_inv_5x
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>:       bw_u1_inv_5x.v
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:65</a>:       bw_u1_inv_5x.sv
@@ -57,8 +59,9 @@ files: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-217" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:217</a>: Cannot find file containing module: bw_u1_inv_5x
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-220" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:220</a>: Cannot find file containing module: bw_u1_inv_4x
 %Error: <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html#l-223" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v:223</a>: Cannot find file containing module: bw_u1_inv_10x
-%Error: Exiting due to 47 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v</a>
+%Error: Exiting due to 49 error(s)
+%Error: Exiting due to too many errors encountered; --error-limit=50
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/bw_dtl_impctl_pullup.v.html" target="file-frame">third_party/tests/utd-sv/bw_dtl_impctl_pullup.v</a>
 
 
 </pre>

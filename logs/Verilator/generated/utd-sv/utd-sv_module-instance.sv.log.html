@@ -5,23 +5,26 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html" target="file-frame">third_party/tests/utd-sv/module-instance.v</a>
 
 
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: Cannot find file containing module: dbl_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       dbl_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       dbl_buf.v
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       dbl_buf.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       obj_dir/dbl_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       obj_dir/dbl_buf.v
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>:       obj_dir/dbl_buf.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-19" target="file-frame">third_party/tests/utd-sv/module-instance.v:19</a>: Cannot find file containing module: module_being_instanced
-%Error: Exiting due to 10 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/module-instance.v.html" target="file-frame">third_party/tests/utd-sv/module-instance.v</a>
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-10" target="file-frame">third_party/tests/utd-sv/module-instance.v:10</a>: Signal definition not found, creating implicitly: rst_l
+%Warning-IMPLICIT: Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-11" target="file-frame">third_party/tests/utd-sv/module-instance.v:11</a>: Signal definition not found, creating implicitly: clk
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-12" target="file-frame">third_party/tests/utd-sv/module-instance.v:12</a>: Signal definition not found, creating implicitly: dbl_buf_wr
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-13" target="file-frame">third_party/tests/utd-sv/module-instance.v:13</a>: Signal definition not found, creating implicitly: c2i_packet
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-14" target="file-frame">third_party/tests/utd-sv/module-instance.v:14</a>: Signal definition not found, creating implicitly: dbl_buf_rd
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-15" target="file-frame">third_party/tests/utd-sv/module-instance.v:15</a>: Signal definition not found, creating implicitly: outdata_buf_in
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-16" target="file-frame">third_party/tests/utd-sv/module-instance.v:16</a>: Signal definition not found, creating implicitly: dbl_buf_vld
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-17" target="file-frame">third_party/tests/utd-sv/module-instance.v:17</a>: Signal definition not found, creating implicitly: dbl_buf_full
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-6" target="file-frame">third_party/tests/utd-sv/module-instance.v:6</a>: Parameter pin not found: __paramNumber2
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-6" target="file-frame">third_party/tests/utd-sv/module-instance.v:6</a>: Parameter pin not found: __paramNumber3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-7" target="file-frame">third_party/tests/utd-sv/module-instance.v:7</a>: Signal definition not found, creating implicitly: REG_WIDTH
+%Error: <a href="../../../../third_party/tests/utd-sv/module-instance.v.html#l-8" target="file-frame">third_party/tests/utd-sv/module-instance.v:8</a>: Parameter pin not found: __paramNumber4
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/module-instance.v.html" target="file-frame">third_party/tests/utd-sv/module-instance.v</a>
 
 
 </pre>

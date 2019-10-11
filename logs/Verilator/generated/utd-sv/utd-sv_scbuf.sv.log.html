@@ -5,22 +5,112 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html" target="file-frame">third_party/tests/utd-sv/scbuf.v</a>
 
 
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>: Cannot find include file: iop.h
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>:       iop.h
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>:       iop.h.v
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>:       iop.h.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>:       obj_dir/iop.h
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>:       obj_dir/iop.h.v
-%Error: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-21" target="file-frame">third_party/tests/utd-sv/scbuf.v:21</a>:       obj_dir/iop.h.sv
-%Error: Exiting due to 9 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/scbuf.v.html" target="file-frame">third_party/tests/utd-sv/scbuf.v</a>
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:288: Signal definition not found, creating implicitly: sctag_scbuf_wbrd_en_r1
+%Warning-IMPLICIT: Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:323: Signal definition not found, creating implicitly: sctag_scbuf_rdma_rden_r3
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:444: Signal definition not found, creating implicitly: sctag_scbuf_evict_en_r4
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:445: Signal definition not found, creating implicitly: parity0_r4
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:446: Signal definition not found, creating implicitly: parity1_r4
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:482: Signal definition not found, creating implicitly: sctag_scbuf_evict_en_r5
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:483: Signal definition not found, creating implicitly: evict_uncorr_err_unqual_r5
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:484: Signal definition not found, creating implicitly: evict_uncorr_err_r5
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:485: Signal definition not found, creating implicitly: evict_corr_err_r5
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-216" target="file-frame">third_party/tests/utd-sv/scbuf.v:216</a>: Signal definition not found, creating implicitly: mem_write_disable
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-217" target="file-frame">third_party/tests/utd-sv/scbuf.v:217</a>: Signal definition not found, creating implicitly: sehold
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-233" target="file-frame">third_party/tests/utd-sv/scbuf.v:233</a>: Signal definition not found, creating implicitly: scan_manual_4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-244" target="file-frame">third_party/tests/utd-sv/scbuf.v:244</a>: Signal definition not found, creating implicitly: arst_l_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-245" target="file-frame">third_party/tests/utd-sv/scbuf.v:245</a>: Signal definition not found, creating implicitly: se_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-246" target="file-frame">third_party/tests/utd-sv/scbuf.v:246</a>: Signal definition not found, creating implicitly: sehold_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-247" target="file-frame">third_party/tests/utd-sv/scbuf.v:247</a>: Signal definition not found, creating implicitly: mem_write_disable_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-258" target="file-frame">third_party/tests/utd-sv/scbuf.v:258</a>: Signal definition not found, creating implicitly: arst_l_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-259" target="file-frame">third_party/tests/utd-sv/scbuf.v:259</a>: Signal definition not found, creating implicitly: se_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-260" target="file-frame">third_party/tests/utd-sv/scbuf.v:260</a>: Signal definition not found, creating implicitly: sehold_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-261" target="file-frame">third_party/tests/utd-sv/scbuf.v:261</a>: Signal definition not found, creating implicitly: mem_write_disable_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-272" target="file-frame">third_party/tests/utd-sv/scbuf.v:272</a>: Signal definition not found, creating implicitly: arst_l_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-273" target="file-frame">third_party/tests/utd-sv/scbuf.v:273</a>: Signal definition not found, creating implicitly: se_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-274" target="file-frame">third_party/tests/utd-sv/scbuf.v:274</a>: Signal definition not found, creating implicitly: sehold_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-275" target="file-frame">third_party/tests/utd-sv/scbuf.v:275</a>: Signal definition not found, creating implicitly: mem_write_disable_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-297" target="file-frame">third_party/tests/utd-sv/scbuf.v:297</a>: Signal definition not found, creating implicitly: scbuf_dram_data_vld_r5_pb
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-298" target="file-frame">third_party/tests/utd-sv/scbuf.v:298</a>: Signal definition not found, creating implicitly: scbuf_dram_data_mecc_r5_pb
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-299" target="file-frame">third_party/tests/utd-sv/scbuf.v:299</a>: Signal definition not found, creating implicitly: scbuf_sctag_ev_uerr_r5_pb
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-300" target="file-frame">third_party/tests/utd-sv/scbuf.v:300</a>: Signal definition not found, creating implicitly: scbuf_sctag_ev_cerr_r5_pb
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-311" target="file-frame">third_party/tests/utd-sv/scbuf.v:311</a>: Signal definition not found, creating implicitly: scan_manual_1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-322" target="file-frame">third_party/tests/utd-sv/scbuf.v:322</a>: Signal definition not found, creating implicitly: scan_manual_2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-332" target="file-frame">third_party/tests/utd-sv/scbuf.v:332</a>: Signal definition not found, creating implicitly: sctag_scbuf_fbwr_wren_r3_v4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-333" target="file-frame">third_party/tests/utd-sv/scbuf.v:333</a>: Signal definition not found, creating implicitly: sctag_scbuf_fbwr_wren_r3_v3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-334" target="file-frame">third_party/tests/utd-sv/scbuf.v:334</a>: Signal definition not found, creating implicitly: sctag_scbuf_fbwr_wren_r3_v2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-335" target="file-frame">third_party/tests/utd-sv/scbuf.v:335</a>: Signal definition not found, creating implicitly: sctag_scbuf_fbwr_wren_r3_v1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-752" target="file-frame">third_party/tests/utd-sv/scbuf.v:752</a>: Signal definition not found, creating implicitly: scan_manual_3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1183" target="file-frame">third_party/tests/utd-sv/scbuf.v:1183</a>: Signal definition not found, creating implicitly: sctag_scbuf_wbrd_en_r1_v1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1184" target="file-frame">third_party/tests/utd-sv/scbuf.v:1184</a>: Signal definition not found, creating implicitly: sctag_scbuf_wbrd_en_r1_v2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1185" target="file-frame">third_party/tests/utd-sv/scbuf.v:1185</a>: Signal definition not found, creating implicitly: sctag_scbuf_wbrd_en_r1_v3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1186" target="file-frame">third_party/tests/utd-sv/scbuf.v:1186</a>: Signal definition not found, creating implicitly: sctag_scbuf_wbrd_en_r1_v4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1199" target="file-frame">third_party/tests/utd-sv/scbuf.v:1199</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_rden_r1_v1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1200" target="file-frame">third_party/tests/utd-sv/scbuf.v:1200</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_rden_r1_v2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1201" target="file-frame">third_party/tests/utd-sv/scbuf.v:1201</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_rden_r1_v3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1202" target="file-frame">third_party/tests/utd-sv/scbuf.v:1202</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_rden_r1_v4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1208" target="file-frame">third_party/tests/utd-sv/scbuf.v:1208</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_wren_s3_v4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1209" target="file-frame">third_party/tests/utd-sv/scbuf.v:1209</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_wren_s3_v3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1210" target="file-frame">third_party/tests/utd-sv/scbuf.v:1210</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_wren_s3_v2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1211" target="file-frame">third_party/tests/utd-sv/scbuf.v:1211</a>: Signal definition not found, creating implicitly: sctag_scbuf_rdma_wren_s3_v1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1219" target="file-frame">third_party/tests/utd-sv/scbuf.v:1219</a>: Signal definition not found, creating implicitly: scbuf_grst_l
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172: Cannot find file containing module: dffrl_async
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172: Looked in:
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       dffrl_async
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       dffrl_async.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       dffrl_async.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       obj_dir/dffrl_async
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       obj_dir/dffrl_async.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:172:       obj_dir/dffrl_async.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:186: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:194: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:199: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:209: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:214: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:225: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:237: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:247: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:270: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:283: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:293: Cannot find file containing module: mux2ds
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:297: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:303: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:313: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:318: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:324: Cannot find file containing module: dffrl_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:333: Cannot find file containing module: clken_buf
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:335: Cannot find file containing module: clken_buf
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:338: Cannot find file containing module: mux2ds
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:342: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:351: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:356: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:361: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:366: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:371: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:378: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:383: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:388: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:399: Cannot find file containing module: mux4ds
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:406: Cannot find file containing module: mux4ds
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:413: Cannot find file containing module: mux2ds
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:418: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:427: Cannot find file containing module: zzecc_sctag_ecc39
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:435: Cannot find file containing module: zzecc_sctag_ecc39
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:455: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:461: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:467: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_evict.v:473: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/scbuf_rdmard.v:97: Cannot find file containing module: clken_buf
+%Error: Exiting due to too many errors encountered; --error-limit=50
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/scbuf.v.html" target="file-frame">third_party/tests/utd-sv/scbuf.v</a>
 
 
 </pre>

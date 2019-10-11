@@ -5,7 +5,7 @@
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
 
@@ -14,7 +14,7 @@ files: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterfa
 %Error: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:109</a>: Can&#39;t find definition of scope/variable: u_MyInterfaceFromTop
 %Error: Exiting due to 2 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
 
 
 </pre>

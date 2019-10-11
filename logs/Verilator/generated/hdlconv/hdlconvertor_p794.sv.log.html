@@ -5,7 +5,7 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv</a>
 
@@ -47,7 +47,7 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html#l-51" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv:51</a>: Can&#39;t find definition of &#39;p&#39; in dotted scope/variable: __BRA__??__KET__.p
 %Error:      Known scopes under &#39;[??]&#39;: &lt;no cells found&gt;
 %Error: Exiting due to 24 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv</a>
 
 
 </pre>

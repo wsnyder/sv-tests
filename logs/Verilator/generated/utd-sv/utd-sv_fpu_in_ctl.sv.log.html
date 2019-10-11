@@ -5,7 +5,7 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>
 
@@ -15,8 +15,10 @@ files: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-866" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:866</a>: Signal definition not found, creating implicitly: inq_adda_dly
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-867" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:867</a>: Signal definition not found, creating implicitly: inq_mula_dly
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>: Cannot find file containing module: dffrl_async
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async.v
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>:       dffrl_async
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>:       dffrl_async.v
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-197" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:197</a>:       dffrl_async.sv
@@ -57,8 +59,8 @@ files: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-827" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:827</a>: Cannot find file containing module: dffre_s
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-840" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:840</a>: Cannot find file containing module: dffre_s
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-853" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:853</a>: Cannot find file containing module: dffre_s
-%Error: Exiting due to 43 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>
+%Error: Exiting due to 45 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>
 
 
 </pre>

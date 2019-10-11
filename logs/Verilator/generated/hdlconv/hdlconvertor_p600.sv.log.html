@@ -5,14 +5,14 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
 
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv:16</a>: syntax error, unexpected PACKAGE-IDENTIFIER, expecting IDENTIFIER or do or final
 %Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv:15</a>: ../V3ParseSym.h:112: Symbols suggest ending STRUCTDTYPE but parser thinks ending MODULE &#39;top&#39;
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
 
 
 </pre>

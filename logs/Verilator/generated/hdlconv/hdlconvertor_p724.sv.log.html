@@ -5,7 +5,7 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv</a>
 
@@ -17,7 +17,7 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-54" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:54</a>: syntax error, unexpected assert
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-58" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:58</a>: syntax error, unexpected assert, expecting cover
 %Error: Cannot continue
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv</a>
 
 
 </pre>

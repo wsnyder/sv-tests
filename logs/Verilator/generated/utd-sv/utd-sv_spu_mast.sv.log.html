@@ -5,7 +5,7 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>
 
@@ -21,8 +21,10 @@ files: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="fi
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-218" target="file-frame">third_party/tests/utd-sv/spu_mast.v:218</a>: Signal definition not found, creating implicitly: nxt_wait4stdrain_state
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-230" target="file-frame">third_party/tests/utd-sv/spu_mast.v:230</a>: Signal definition not found, creating implicitly: nxt_laststreq_state
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>: Cannot find file containing module: dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.v
+%Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>:       dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>:       dff_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-93" target="file-frame">third_party/tests/utd-sv/spu_mast.v:93</a>:       dff_s.sv
@@ -44,8 +46,8 @@ files: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="fi
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-293" target="file-frame">third_party/tests/utd-sv/spu_mast.v:293</a>: Cannot find file containing module: dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-312" target="file-frame">third_party/tests/utd-sv/spu_mast.v:312</a>: Cannot find file containing module: dffre_s
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html#l-319" target="file-frame">third_party/tests/utd-sv/spu_mast.v:319</a>: Cannot find file containing module: dffre_s
-%Error: Exiting due to 24 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>
+%Error: Exiting due to 26 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>
 
 
 </pre>

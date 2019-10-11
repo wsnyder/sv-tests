@@ -5,30 +5,61 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu.v.html" target="file-frame">third_party/tests/utd-sv/fpu.v</a>
 
 
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>: Cannot find file containing module: fpu_in
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>:       fpu_in
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>:       fpu_in.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>:       fpu_in.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>:       obj_dir/fpu_in
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>:       obj_dir/fpu_in.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-268" target="file-frame">third_party/tests/utd-sv/fpu.v:268</a>:       obj_dir/fpu_in.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-328" target="file-frame">third_party/tests/utd-sv/fpu.v:328</a>: Cannot find file containing module: bw_r_rf16x160
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-350" target="file-frame">third_party/tests/utd-sv/fpu.v:350</a>: Cannot find file containing module: fpu_add
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-395" target="file-frame">third_party/tests/utd-sv/fpu.v:395</a>: Cannot find file containing module: fpu_mul
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-438" target="file-frame">third_party/tests/utd-sv/fpu.v:438</a>: Cannot find file containing module: fpu_div
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-479" target="file-frame">third_party/tests/utd-sv/fpu.v:479</a>: Cannot find file containing module: fpu_out
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-530" target="file-frame">third_party/tests/utd-sv/fpu.v:530</a>: Cannot find file containing module: test_stub_scan
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-562" target="file-frame">third_party/tests/utd-sv/fpu.v:562</a>: Cannot find file containing module: bw_clk_cl_fpu_cmp
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-585" target="file-frame">third_party/tests/utd-sv/fpu.v:585</a>: Cannot find file containing module: fpu_rptr_groups
-%Error: Exiting due to 17 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/fpu.v.html" target="file-frame">third_party/tests/utd-sv/fpu.v</a>
+%Warning-PINMISSING: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-438" target="file-frame">third_party/tests/utd-sv/fpu.v:438</a>: Cell has missing pin: eiv_dest_rdy
+%Warning-PINMISSING: Use &#34;/* verilator lint_off PINMISSING */&#34; and lint_on around source to disable this message.
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_div.v:45: Input/output/inout declaration not found for port: eiv_dest_rdy
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:100: Signal definition not found, creating implicitly: out_ctl_rst_l
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out.v:167: Signal definition not found, creating implicitly: scan_out_fpu_out_ctl
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_div.v:85: Input/output/inout does not appear in port list: div_dest_rdy
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_div.v:377: Signal definition not found, creating implicitly: scan_out_fpu_div_ctl
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_div.v:378: Signal definition not found, creating implicitly: scan_out_fpu_div_exp_dp
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-456" target="file-frame">third_party/tests/utd-sv/fpu.v:456</a>: Signal definition not found, creating implicitly: fdiv_clken_l_div_frac_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-457" target="file-frame">third_party/tests/utd-sv/fpu.v:457</a>: Signal definition not found, creating implicitly: fdiv_clken_l_div_exp_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-458" target="file-frame">third_party/tests/utd-sv/fpu.v:458</a>: Signal definition not found, creating implicitly: arst_l_div_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-473" target="file-frame">third_party/tests/utd-sv/fpu.v:473</a>: Signal definition not found, creating implicitly: se_div_buf5
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-474" target="file-frame">third_party/tests/utd-sv/fpu.v:474</a>: Signal definition not found, creating implicitly: scan_manual_3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-475" target="file-frame">third_party/tests/utd-sv/fpu.v:475</a>: Signal definition not found, creating implicitly: scan_manual_4
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-438" target="file-frame">third_party/tests/utd-sv/fpu.v:438</a>: Pin not found: eiv_dest_rdy
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-509" target="file-frame">third_party/tests/utd-sv/fpu.v:509</a>: Signal definition not found, creating implicitly: arst_l_out_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-510" target="file-frame">third_party/tests/utd-sv/fpu.v:510</a>: Signal definition not found, creating implicitly: fpu_grst_l_add_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-519" target="file-frame">third_party/tests/utd-sv/fpu.v:519</a>: Signal definition not found, creating implicitly: se_out_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-521" target="file-frame">third_party/tests/utd-sv/fpu.v:521</a>: Signal definition not found, creating implicitly: scan_manual_5
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-531" target="file-frame">third_party/tests/utd-sv/fpu.v:531</a>: Signal definition not found, creating implicitly: ctu_tst_pre_grst_l_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-532" target="file-frame">third_party/tests/utd-sv/fpu.v:532</a>: Signal definition not found, creating implicitly: arst_l_add_buf4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-533" target="file-frame">third_party/tests/utd-sv/fpu.v:533</a>: Signal definition not found, creating implicitly: global_shift_enable_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-534" target="file-frame">third_party/tests/utd-sv/fpu.v:534</a>: Signal definition not found, creating implicitly: ctu_tst_scan_disable_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-535" target="file-frame">third_party/tests/utd-sv/fpu.v:535</a>: Signal definition not found, creating implicitly: ctu_tst_scanmode_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-536" target="file-frame">third_party/tests/utd-sv/fpu.v:536</a>: Signal definition not found, creating implicitly: ctu_tst_macrotest_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-537" target="file-frame">third_party/tests/utd-sv/fpu.v:537</a>: Signal definition not found, creating implicitly: ctu_tst_short_chain_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-538" target="file-frame">third_party/tests/utd-sv/fpu.v:538</a>: Signal definition not found, creating implicitly: scan_manual_6_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-539" target="file-frame">third_party/tests/utd-sv/fpu.v:539</a>: Signal definition not found, creating implicitly: manual_scan_0
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-546" target="file-frame">third_party/tests/utd-sv/fpu.v:546</a>: Signal definition not found, creating implicitly: rst_tri_en
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-548" target="file-frame">third_party/tests/utd-sv/fpu.v:548</a>: Signal definition not found, creating implicitly: se
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-551" target="file-frame">third_party/tests/utd-sv/fpu.v:551</a>: Signal definition not found, creating implicitly: so_unbuf
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-621" target="file-frame">third_party/tests/utd-sv/fpu.v:621</a>: Signal definition not found, creating implicitly: scan_manual_6
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-692" target="file-frame">third_party/tests/utd-sv/fpu.v:692</a>: Signal definition not found, creating implicitly: grst_l_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-693" target="file-frame">third_party/tests/utd-sv/fpu.v:693</a>: Signal definition not found, creating implicitly: cluster_cken_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-695" target="file-frame">third_party/tests/utd-sv/fpu.v:695</a>: Signal definition not found, creating implicitly: se_add_exp_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-696" target="file-frame">third_party/tests/utd-sv/fpu.v:696</a>: Signal definition not found, creating implicitly: se_add_frac_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-698" target="file-frame">third_party/tests/utd-sv/fpu.v:698</a>: Signal definition not found, creating implicitly: se_mul64_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-699" target="file-frame">third_party/tests/utd-sv/fpu.v:699</a>: Signal definition not found, creating implicitly: se_cluster_header_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-700" target="file-frame">third_party/tests/utd-sv/fpu.v:700</a>: Signal definition not found, creating implicitly: se_in_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-701" target="file-frame">third_party/tests/utd-sv/fpu.v:701</a>: Signal definition not found, creating implicitly: se_mul_buf4
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-705" target="file-frame">third_party/tests/utd-sv/fpu.v:705</a>: Signal definition not found, creating implicitly: arst_l_mul_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-706" target="file-frame">third_party/tests/utd-sv/fpu.v:706</a>: Signal definition not found, creating implicitly: arst_l_cluster_header_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-707" target="file-frame">third_party/tests/utd-sv/fpu.v:707</a>: Signal definition not found, creating implicitly: arst_l_in_buf3
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-711" target="file-frame">third_party/tests/utd-sv/fpu.v:711</a>: Signal definition not found, creating implicitly: fpu_grst_l_mul_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-712" target="file-frame">third_party/tests/utd-sv/fpu.v:712</a>: Signal definition not found, creating implicitly: fpu_grst_l_in_buf2
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-715" target="file-frame">third_party/tests/utd-sv/fpu.v:715</a>: Signal definition not found, creating implicitly: fmul_clken_l_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-721" target="file-frame">third_party/tests/utd-sv/fpu.v:721</a>: Signal definition not found, creating implicitly: si_buf1
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu.v.html#l-725" target="file-frame">third_party/tests/utd-sv/fpu.v:725</a>: Signal definition not found, creating implicitly: pcx_fpio_data_rdy_px2_buf1
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu.v.html" target="file-frame">third_party/tests/utd-sv/fpu.v</a>
 
 
 </pre>

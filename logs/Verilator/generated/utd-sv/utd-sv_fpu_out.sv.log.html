@@ -5,23 +5,37 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html" target="file-frame">third_party/tests/utd-sv/fpu_out.v</a>
 
 
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>: Cannot find file containing module: fpu_out_ctl
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>:       fpu_out_ctl
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>:       fpu_out_ctl.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>:       fpu_out_ctl.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>:       obj_dir/fpu_out_ctl
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>:       obj_dir/fpu_out_ctl.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-147" target="file-frame">third_party/tests/utd-sv/fpu_out.v:147</a>:       obj_dir/fpu_out_ctl.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-171" target="file-frame">third_party/tests/utd-sv/fpu_out.v:171</a>: Cannot find file containing module: fpu_out_dp
-%Error: Exiting due to 10 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html" target="file-frame">third_party/tests/utd-sv/fpu_out.v</a>
+%Warning-IMPLICIT: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:100: Signal definition not found, creating implicitly: out_ctl_rst_l
+%Warning-IMPLICIT: Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
+%Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html#l-167" target="file-frame">third_party/tests/utd-sv/fpu_out.v:167</a>: Signal definition not found, creating implicitly: scan_out_fpu_out_ctl
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112: Cannot find file containing module: clken_buf
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112: Looked in:
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       clken_buf
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       clken_buf.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       clken_buf.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       obj_dir/clken_buf
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       obj_dir/clken_buf.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:112:       obj_dir/clken_buf.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:185: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_dp.v:196: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:90: Cannot find file containing module: dffrl_async
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:117: Cannot find file containing module: dffre_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:156: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:176: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:198: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:209: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:220: Cannot find file containing module: dff_s
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_out_ctl.v:231: Cannot find file containing module: dff_s
+%Error: Exiting due to 21 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_out.v.html" target="file-frame">third_party/tests/utd-sv/fpu_out.v</a>
 
 
 </pre>

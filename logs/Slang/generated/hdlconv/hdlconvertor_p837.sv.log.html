@@ -5,56 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:1</a>:1: error: expected member
-primitive jk_edge_ff (q, clock, j, k, preset, clear);
-^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:4</a>:1: error: expected member
-table
-^~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:7</a>:1: error: expected member
-? ?? *1 : 1 : 1 ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:8</a>:1: error: expected member
-? ?? 10 : ? : 0 ; // clear logic
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:9</a>:1: error: expected member
-? ?? 1* : 0 : 0 ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:10</a>:1: error: expected member
-r 00 00 : 0 : 1 ; // normal clocking cases
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:11</a>:1: error: expected member
-r 00 11 : ? : - ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:12</a>:1: error: expected member
-r 01 11 : ? : 0 ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:13</a>:1: error: expected member
-r 10 11 : ? : 1 ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:14</a>:1: error: expected member
-r 11 11 : 0 : 1 ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:15</a>:1: error: expected member
-r 11 11 : 1 : 0 ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:16</a>:1: error: expected member
-f ?? ?? : ? : - ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:17</a>:1: error: expected member
-b *? ?? : ? : - ; // j and k transition cases
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:18</a>:1: error: expected member
-b ?* ?? : ? : - ;
-^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p837.sv:19</a>:1: error: expected member
-endtable
-^~~~~~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

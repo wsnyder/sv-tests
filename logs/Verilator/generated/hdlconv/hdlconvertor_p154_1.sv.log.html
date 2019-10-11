@@ -5,7 +5,7 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv</a>
 
@@ -20,7 +20,7 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv:15</a>: Perhaps &#39;C&#39; is a package which needs to be predeclared? (IEEE 2012 26.3)
 %Error: Exiting due to 8 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p154_1.sv</a>
 
 
 </pre>

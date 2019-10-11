@@ -5,14 +5,16 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>: Cannot find file containing module: dp_mux2es
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dp_mux2es
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dp_mux2es.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dp_mux2es.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:       dp_mux2es
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:       dp_mux2es.v
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:       dp_mux2es.sv
@@ -32,8 +34,8 @@ files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" targ
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-157" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:157</a>: Cannot find file containing module: dp_buffer
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-158" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:158</a>: Cannot find file containing module: dp_buffer
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-159" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:159</a>: Cannot find file containing module: dp_buffer
-%Error: Exiting due to 22 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v</a>
+%Error: Exiting due to 24 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v</a>
 
 
 </pre>

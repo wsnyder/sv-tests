@@ -5,14 +5,16 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>: Cannot find file containing module: clken_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.v
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>:       clken_buf
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>:       clken_buf.v
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-213" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:213</a>:       clken_buf.sv
@@ -43,8 +45,8 @@ files: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html" targ
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-691" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:691</a>: Cannot find file containing module: dffe_s
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-706" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:706</a>: Cannot find file containing module: dffe_s
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html#l-718" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v:718</a>: Cannot find file containing module: dffe_s
-%Error: Exiting due to 33 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v</a>
+%Error: Exiting due to 35 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_add_exp_dp.v.html" target="file-frame">third_party/tests/utd-sv/fpu_add_exp_dp.v</a>
 
 
 </pre>

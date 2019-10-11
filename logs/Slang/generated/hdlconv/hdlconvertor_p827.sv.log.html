@@ -5,26 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv:4</a>:7: error: expected declarator
-trireg (large) #(0,0,50) cap1;
-      ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv:4</a>:8: error: expected member
-trireg (large) #(0,0,50) cap1;
-       ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv:5</a>:1: error: expected member
-nmos nmos1 (cap1, data, gate); // nmos that drives the trireg
-^~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv:7</a>:41: error: use of undeclared identifier &#39;$time&#39;
-$monitor(&#34;%0d data=%v gate=%v cap1=%v&#34;, $time, data, gate, cap1);
-                                        ^~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p827.sv:7</a>:60: error: use of undeclared identifier &#39;cap1&#39;
-$monitor(&#34;%0d data=%v gate=%v cap1=%v&#34;, $time, data, gate, cap1);
-                                                           ^~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

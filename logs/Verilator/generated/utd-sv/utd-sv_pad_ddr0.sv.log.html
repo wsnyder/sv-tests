@@ -5,14 +5,16 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>: Cannot find file containing module: bw_clk_cl_ddr_ddr
-%Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_clk_cl_ddr_ddr
+%Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_clk_cl_ddr_ddr.v
+%Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_clk_cl_ddr_ddr.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>:       bw_clk_cl_ddr_ddr
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>:       bw_clk_cl_ddr_ddr.v
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-150" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:150</a>:       bw_clk_cl_ddr_ddr.sv
@@ -27,8 +29,8 @@ files: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html" target="fi
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-312" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:312</a>: Cannot find file containing module: bw_u1_buf_40x
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-315" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:315</a>: Cannot find file containing module: bw_u1_buf_40x
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html#l-318" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v:318</a>: Cannot find file containing module: bw_u1_scanl_2x
-%Error: Exiting due to 17 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v</a>
+%Error: Exiting due to 19 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/pad_ddr0.v.html" target="file-frame">third_party/tests/utd-sv/pad_ddr0.v</a>
 
 
 </pre>

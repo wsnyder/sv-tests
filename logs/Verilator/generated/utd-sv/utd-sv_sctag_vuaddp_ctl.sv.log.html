@@ -5,7 +5,7 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v</a>
 
@@ -13,8 +13,10 @@ files: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html" ta
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-382" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:382</a>: Signal definition not found, creating implicitly: vuad_sel_wr_d1
 %Warning-IMPLICIT: Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>: Cannot find file containing module: dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>:       dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>:       dff_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-168" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:168</a>:       dff_s.sv
@@ -55,8 +57,8 @@ files: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html" ta
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-500" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:500</a>: Cannot find file containing module: dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-520" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:520</a>: Cannot find file containing module: dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html#l-525" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v:525</a>: Cannot find file containing module: dff_s
-%Error: Exiting due to 43 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v</a>
+%Error: Exiting due to 45 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sctag_vuaddp_ctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_vuaddp_ctl.v</a>
 
 
 </pre>

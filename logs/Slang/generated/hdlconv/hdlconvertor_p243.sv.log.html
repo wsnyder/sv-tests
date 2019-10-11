@@ -5,32 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:4</a>:1: error: expected member
-and and1 (e, a, b, c);
-^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:6</a>:26: error: use of undeclared identifier &#39;$stime&#39;
-$monitor(&#34;%d d=%b,e=%b&#34;, $stime, d, e);
-                         ^~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:7</a>:1: error: language feature not yet supported
-assign d = a&amp; b &amp; c;
-^~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:12</a>:1: error: language feature not yet supported
-force d = (a | b | c);
-^~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:13</a>:1: error: language feature not yet supported
-force e = (a | b | c);
-^~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:15</a>:1: error: language feature not yet supported
-release d;
-^~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv:16</a>:1: error: language feature not yet supported
-release e;
-^~~~~~~~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

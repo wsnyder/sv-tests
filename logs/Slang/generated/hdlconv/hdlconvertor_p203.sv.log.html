@@ -5,32 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:1</a>:15: error: forward typedef &#39;C2&#39; does not resolve to a data type
-typedef class C2;
-              ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:2</a>:1: error: language feature not yet supported
-class C1;
-^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:5</a>:1: error: language feature not yet supported
-class C2;
-^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:10</a>:15: error: forward typedef &#39;C&#39; does not resolve to a data type
-typedef class C ;
-              ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:12</a>:1: error: language feature not yet supported
-C#(1, real) v2 ;
-^~~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:13</a>:1: error: language feature not yet supported
-C#(.p(2), .T(real)) v3 ;
-^~~~~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p203.sv:17</a>:1: error: language feature not yet supported
-class C #(parameter p = 2, type T = int);
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

@@ -5,7 +5,7 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv</a>
 
@@ -27,7 +27,7 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv.html#l-34" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv:34</a>: Unsupported or unknown PLI call: $urandom_range
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv.html#l-35" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv:35</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endsequence
 %Error: Exiting due to 16 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv</a>
 
 
 </pre>

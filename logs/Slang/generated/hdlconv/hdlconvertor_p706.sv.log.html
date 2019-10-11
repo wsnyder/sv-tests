@@ -5,32 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:17</a>:10: warning: port &#39;datain&#39; has no connection [-Wunconnected-port]
-bus_conn bconn1 (dataout[23:16]);
-         ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-22" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:22</a>:10: warning: port &#39;datain&#39; has no connection [-Wunconnected-port]
-bus_conn bconn3 (dataout[7:0]);
-         ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-37" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:37</a>:13: error: identifier &#39;MSB&#39; used before its declaration
-wire logic [MSB:LSB] out;
-            ^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-28" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:28</a>:11: note: declared here
-parameter MSB=3,LSB=0, DEPTH=4; // these parameters can be redefined
-          ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-37" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:37</a>:17: error: identifier &#39;LSB&#39; used before its declaration
-wire logic [MSB:LSB] out;
-                ^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-28" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:28</a>:17: note: declared here
-parameter MSB=3,LSB=0, DEPTH=4; // these parameters can be redefined
-                ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-45" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:45</a>:22: error: use of undeclared identifier &#39;write&#39;
-input wire clk, read,write reset,
-                     ^~~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

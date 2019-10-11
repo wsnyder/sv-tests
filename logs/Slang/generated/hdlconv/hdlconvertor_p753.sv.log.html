@@ -5,26 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:1</a>:16: error: unknown interface &#39;interface&#39;
-module memMod (interface a, input logic clk);
-               ^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:3</a>:16: error: unknown interface &#39;interface&#39;
-module cpuMod (interface b, input logic clk);
-               ^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:7</a>:1: error: unknown module &#39;simple_bus&#39;
-simple_bus sb_intf();
-^~~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:8</a>:20: error: use of undeclared identifier &#39;sb_intf&#39;
-memMod mem (.*, .a(sb_intf)); // partial implicit port connections
-                   ^~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p753.sv:9</a>:20: error: use of undeclared identifier &#39;sb_intf&#39;
-cpuMod cpu (.*, .b(sb_intf)); // partial implicit port connections
-                   ^~~~~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

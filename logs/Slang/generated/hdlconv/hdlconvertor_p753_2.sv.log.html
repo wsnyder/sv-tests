@@ -5,38 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:3</a>:13: error: identifier &#39;SIZE&#39; used before its declaration
-    output [SIZE-1:0] sum;
-            ^~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:2</a>:15: note: declared here
-    parameter SIZE = 4;
-              ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:5</a>:12: error: identifier &#39;SIZE&#39; used before its declaration
-    input [SIZE-1:0] a, b;
-           ^~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:2</a>:15: note: declared here
-    parameter SIZE = 4;
-              ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:25</a>:9: error: expected member
-        xor g1 ( t[1][i],a[i],b[i]);
-        ^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:26</a>:9: error: expected member
-        xor g2 ( sum[i], t[1][i],c[i]);
-        ^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:27</a>:9: error: expected member
-        and g3 ( t[2][i],a[i],b[i]);
-        ^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-28" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:28</a>:9: error: expected member
-        and g4 ( t[3][i], t[1][i],c[i]);
-        ^~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv.html#l-29" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_2.sv:29</a>:9: error: expected member
-        or g5 (c[i+1], t[2][i], t[3][i]);
-        ^~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

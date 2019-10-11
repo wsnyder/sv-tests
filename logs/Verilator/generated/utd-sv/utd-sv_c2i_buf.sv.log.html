@@ -5,23 +5,31 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html" target="file-frame">third_party/tests/utd-sv/c2i_buf.v</a>
 
 
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>: Cannot find include file: sys.h
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>:       sys.h
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>:       sys.h.v
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>:       sys.h.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>:       obj_dir/sys.h
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>:       obj_dir/sys.h.v
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-29" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:29</a>:       obj_dir/sys.h.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-31" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:31</a>: Cannot find include file: iop.h
-%Error: Exiting due to 10 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html" target="file-frame">third_party/tests/utd-sv/c2i_buf.v</a>
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88: Cannot find file containing module: dffrl_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88: Looked in:
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       dffrl_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       dffrl_ns.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       dffrl_ns.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       obj_dir/dffrl_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       obj_dir/dffrl_ns.v
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:88:       obj_dir/dffrl_ns.sv
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:108: Cannot find file containing module: dffrl_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_out.v:117: Cannot find file containing module: dff_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dbl_buf.v:95: Cannot find file containing module: dffrle_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dbl_buf.v:106: Cannot find file containing module: dffrle_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dbl_buf.v:112: Cannot find file containing module: dffrle_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dbl_buf.v:118: Cannot find file containing module: dffe_ns
+%Error: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dbl_buf.v:123: Cannot find file containing module: dffe_ns
+%Error: Exiting due to 18 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html" target="file-frame">third_party/tests/utd-sv/c2i_buf.v</a>
 
 
 </pre>

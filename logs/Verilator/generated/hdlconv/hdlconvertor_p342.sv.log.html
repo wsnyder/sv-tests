@@ -5,14 +5,16 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>
 
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>: Cannot find file containing module: bus_A
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/bus_A
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/bus_A.v
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/bus_A.sv
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:       bus_A
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:       bus_A.v
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:       bus_A.sv
@@ -23,8 +25,8 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:5</a>: Cannot find file containing module: test
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:6</a>: Cannot find file containing module: cpu
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:7</a>: Cannot find file containing module: mem
-%Error: Exiting due to 13 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>
+%Error: Exiting due to 15 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>
 
 
 </pre>

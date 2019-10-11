@@ -5,7 +5,7 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv</a>
 
@@ -13,7 +13,7 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv:5</a>: Found definition of &#39;t&#39; as a TASK but expected a scope/variable
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv:8</a>: Found definition of &#39;t&#39; as a TASK but expected a scope/variable
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv</a>
 
 
 </pre>

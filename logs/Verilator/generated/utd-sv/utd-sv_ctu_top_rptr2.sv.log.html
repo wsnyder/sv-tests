@@ -5,14 +5,16 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>: Cannot find file containing module: bw_u1_scanlg_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_scanlg_2x
+%Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_scanlg_2x.v
+%Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_scanlg_2x.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>:       bw_u1_scanlg_2x
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>:       bw_u1_scanlg_2x.v
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-49" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:49</a>:       bw_u1_scanlg_2x.sv
@@ -24,8 +26,8 @@ files: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html" targe
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-67" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:67</a>: Cannot find file containing module: mux2ds
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-73" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:73</a>: Cannot find file containing module: dff_s
 %Error: <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html#l-81" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v:81</a>: Cannot find file containing module: dff_s
-%Error: Exiting due to 14 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v</a>
+%Error: Exiting due to 16 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/ctu_top_rptr2.v.html" target="file-frame">third_party/tests/utd-sv/ctu_top_rptr2.v</a>
 
 
 </pre>

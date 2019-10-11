@@ -5,7 +5,7 @@
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>
 
@@ -19,7 +19,7 @@ files: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" t
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-22" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:22</a>: Unsupported or unknown PLI call: $past
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-25" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:25</a>: Unsupported or unknown PLI call: $past
 %Error: Exiting due to 8 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>
 
 
 </pre>

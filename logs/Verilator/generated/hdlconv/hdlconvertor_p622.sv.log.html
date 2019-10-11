@@ -5,7 +5,7 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv</a>
 
@@ -27,7 +27,7 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-37" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:37</a>: Unsupported: Use $display with %b format instead: $displayb
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-37" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:37</a>: Unsupported: Ignoring delay on this delayed statement.
 %Error: Exiting due to 7 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv</a>
 
 
 </pre>

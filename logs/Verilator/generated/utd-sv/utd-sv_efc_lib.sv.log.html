@@ -5,22 +5,24 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html" target="file-frame">third_party/tests/utd-sv/efc_lib.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: Cannot find file containing module: bw_u1_scanlg_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_scanlg_2x
+%Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_scanlg_2x.v
+%Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_scanlg_2x.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       bw_u1_scanlg_2x
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       bw_u1_scanlg_2x.v
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       bw_u1_scanlg_2x.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       obj_dir/bw_u1_scanlg_2x
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       obj_dir/bw_u1_scanlg_2x.v
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       obj_dir/bw_u1_scanlg_2x.sv
-%Error: Internal Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: ../V3Width.cpp:2475: Visit function missing? Widthed expectation for this node: PARSEREF 0x55eca73afeb0 &lt;e76&gt; {d48}  SIZE [TEXT]
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html" target="file-frame">third_party/tests/utd-sv/efc_lib.v</a>
+%Error: Internal Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: ../V3Width.cpp:2475: Visit function missing? Widthed expectation for this node: PARSEREF 0x562bfafd0270 &lt;e76&gt; {d48}  SIZE [TEXT]
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html" target="file-frame">third_party/tests/utd-sv/efc_lib.v</a>
 
 
 </pre>

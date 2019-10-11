@@ -5,14 +5,16 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v</a>
 
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>: Cannot find file containing module: dffr_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffr_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffr_s.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffr_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       dffr_s
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       dffr_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       dffr_s.sv
@@ -20,8 +22,8 @@ files: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html" t
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       obj_dir/dffr_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-129" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:129</a>:       obj_dir/dffr_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html#l-135" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v:135</a>: Cannot find file containing module: dffr_s
-%Error: Exiting due to 10 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v</a>
+%Error: Exiting due to 12 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_ifu_thrcmpl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_thrcmpl.v</a>
 
 
 </pre>

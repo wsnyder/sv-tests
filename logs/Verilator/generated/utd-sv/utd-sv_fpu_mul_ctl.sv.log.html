@@ -5,7 +5,7 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v</a>
 
@@ -13,8 +13,10 @@ files: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html" target=
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-470" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:470</a>: Signal definition not found, creating implicitly: mul_ctl_rst_l
 %Warning-IMPLICIT: Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>: Cannot find file containing module: dffrl_async
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async.v
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_async.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>:       dffrl_async
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>:       dffrl_async.v
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-460" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:460</a>:       dffrl_async.sv
@@ -60,10 +62,8 @@ files: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html" target=
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-1122" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:1122</a>: Cannot find file containing module: dffe_s
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-1146" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:1146</a>: Cannot find file containing module: dffre_s
 %Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-1159" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:1159</a>: Cannot find file containing module: dffe_s
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-1171" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:1171</a>: Cannot find file containing module: dffe_s
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html#l-1190" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v:1190</a>: Cannot find file containing module: dffre_s
 %Error: Exiting due to too many errors encountered; --error-limit=50
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_mul_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_mul_ctl.v</a>
 
 
 </pre>

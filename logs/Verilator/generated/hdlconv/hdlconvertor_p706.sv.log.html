@@ -5,14 +5,14 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv</a>
 
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv:6</a>: syntax error, unexpected &#39;=&#39;, expecting &#39;)&#39; or &#39;,&#39;
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv</a>
 
 
 </pre>

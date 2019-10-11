@@ -5,23 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv:1</a>:24: error: language feature not yet supported
-module renamed_concat (.a({b,c}), f, .g(h[1]));
-                       ^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv:1</a>:35: error: port &#39;f&#39; has no I/O member declaration
-module renamed_concat (.a({b,c}), f, .g(h[1]));
-                                  ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv:1</a>:38: error: language feature not yet supported
-module renamed_concat (.a({b,c}), f, .g(h[1]));
-                                     ^~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv:8</a>:25: error: language feature not yet supported
-module mixed_direction (.p({a, e}));
-                        ^~~~~~~~~~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

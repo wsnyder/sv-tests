@@ -5,29 +5,12 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv</a>
 
 
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv:1</a>:1: error: language feature not yet supported
-class C ;
-^~~~~~~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv:3</a>:13: error: language feature not yet supported
-module M #( type T = C, T p = 4,
-            ^~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv:3</a>:22: error: use of undeclared identifier &#39;C&#39;
-module M #( type T = C, T p = 4,
-                     ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv:3</a>:25: error: &#39;T&#39; is not a type
-module M #( type T = C, T p = 4,
-                        ^
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv:4</a>:1: error: language feature not yet supported
-type T2, T2 p2 = 4
-^~~~
-../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p737.sv:4</a>:10: error: &#39;T2&#39; is not a type
-type T2, T2 p2 = 4
-         ^~
+error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
 
 
 </pre>

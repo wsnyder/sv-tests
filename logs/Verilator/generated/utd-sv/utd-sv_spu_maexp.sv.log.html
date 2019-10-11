@@ -5,7 +5,7 @@
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html" target="file-frame">third_party/tests/utd-sv/spu_maexp.v</a>
 
@@ -23,8 +23,10 @@ files: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html" target="f
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-225" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:225</a>: Signal definition not found, creating implicitly: nxt_gotomulred2_state
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-236" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:236</a>: Signal definition not found, creating implicitly: nxt_esmax_state
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>: Cannot find file containing module: dffre_s
-%Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffre_s
+%Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffre_s.v
+%Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffre_s.sv
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>:       dffre_s
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>:       dffre_s.v
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-103" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:103</a>:       dffre_s.sv
@@ -37,8 +39,8 @@ files: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html" target="f
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-147" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:147</a>: Cannot find file containing module: dffr_s
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-152" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:152</a>: Cannot find file containing module: dffr_s
 %Error: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-157" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:157</a>: Cannot find file containing module: dffr_s
-%Error: Exiting due to 15 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html" target="file-frame">third_party/tests/utd-sv/spu_maexp.v</a>
+%Error: Exiting due to 17 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html" target="file-frame">third_party/tests/utd-sv/spu_maexp.v</a>
 
 
 </pre>
