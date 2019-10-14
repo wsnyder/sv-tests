@@ -27,23 +27,31 @@ module usb_tx_phy (
 	reg next_state;
 	reg ld_sop_d;
 	reg ld_data_d;
-	always @(posedge clk) if (ld_sop_d) hold_reg &lt;= 0;
-	else hold_reg &lt;= DataOut_i;
-	always @(posedge clk) if ((! rst)) state &lt;= 0;
-	else state &lt;= next_state;
+	always @(posedge clk)
+		if (ld_sop_d)
+			hold_reg &lt;= 0;
+		else
+			hold_reg &lt;= DataOut_i;
+	always @(posedge clk)
+		if (!rst)
+			state &lt;= 0;
+		else
+			state &lt;= next_state;
 	always @(state or TxValid_i) begin
 		next_state = state;
 		ld_sop_d = 1&#39;b0;
 		ld_data_d = 1&#39;b0;
 		case (state)
-			0: if (TxValid_i) begin
-				ld_sop_d = 1&#39;b1;
-				next_state = 1;
-			end
-			1: if (TxValid_i) begin
-				ld_data_d = 1&#39;b1;
-				next_state = 0;
-			end
+			0:
+				if (TxValid_i) begin
+					ld_sop_d = 1&#39;b1;
+					next_state = 1;
+				end
+			1:
+				if (TxValid_i) begin
+					ld_data_d = 1&#39;b1;
+					next_state = 0;
+				end
 		endcase
 	end
 endmodule
@@ -53,7 +61,7 @@ module default_cases (
 );
 	input [2:0] a;
 	output reg [3:0] y;
-	always @(*) begin
+	always @(*)
 		case (a)
 			3&#39;b000, 3&#39;b111: y &lt;= 0;
 			3&#39;b001: y &lt;= 1;
@@ -61,7 +69,6 @@ module default_cases (
 			3&#39;b100: y &lt;= 3;
 			default: y &lt;= 4;
 		endcase
-	end
 endmodule
 module select_leaves (
 	R,
@@ -73,8 +80,11 @@ module select_leaves (
 	input C;
 	input D;
 	output reg Q;
-	always @(posedge C) if ((! R)) Q &lt;= R;
-	else Q &lt;= (Q ? Q : (D ? D : Q));
+	always @(posedge C)
+		if (!R)
+			Q &lt;= R;
+		else
+			Q &lt;= (Q ? Q : (D ? D : Q));
 endmodule
 
 

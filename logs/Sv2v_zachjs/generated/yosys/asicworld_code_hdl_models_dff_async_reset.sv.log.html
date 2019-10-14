@@ -22,12 +22,11 @@ module dff_async_reset (
 	input reset;
 	output q;
 	reg q;
-	always @(posedge clk or negedge reset) if ((~ reset)) begin
-		q &lt;= 1&#39;b0;
-	end
-	else begin
-		q &lt;= data;
-	end
+	always @(posedge clk or negedge reset)
+		if (~reset)
+			q &lt;= 1&#39;b0;
+		else
+			q &lt;= data;
 endmodule
 
 

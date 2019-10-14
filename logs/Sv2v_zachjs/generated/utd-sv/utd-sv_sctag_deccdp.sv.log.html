@@ -154,7 +154,7 @@ module sctag_deccdp (
 	mux2ds #(64) ret_mux(
 		.dout(deccdp_arbdp_data_c8[63:0]),
 		.in0(retdp_data_c8[127:64]),
-		.sel0((~ dword_sel_c8)),
+		.sel0(~dword_sel_c8),
 		.in1(retdp_data_c8[63:0]),
 		.sel1(dword_sel_c8)
 	);
@@ -163,7 +163,7 @@ module sctag_deccdp (
 	mux2ds #(39) mux_left_diag_out(
 		.dout(left_diag_out_c7[38:0]),
 		.in0(data_word0_c7[38:0]),
-		.sel0((~ sel_higher_word_c7)),
+		.sel0(~sel_higher_word_c7),
 		.in1(data_word1_c7[38:0]),
 		.sel1(sel_higher_word_c7)
 	);
@@ -172,14 +172,14 @@ module sctag_deccdp (
 	mux2ds #(39) mux_rgt_diag_out(
 		.dout(rgt_diag_out_c7[38:0]),
 		.in0(data_word2_c7[38:0]),
-		.sel0((~ sel_higher_word_c7)),
+		.sel0(~sel_higher_word_c7),
 		.in1(data_word3_c7[38:0]),
 		.sel1(sel_higher_word_c7)
 	);
 	mux2ds #(39) mux_diag_out(
 		.dout(retdp_diag_data_c7[38:0]),
 		.in0(left_diag_out_c7[38:0]),
-		.sel0((~ sel_higher_dword_c7)),
+		.sel0(~sel_higher_dword_c7),
 		.in1(rgt_diag_out_c7[38:0]),
 		.sel1(sel_higher_dword_c7)
 	);

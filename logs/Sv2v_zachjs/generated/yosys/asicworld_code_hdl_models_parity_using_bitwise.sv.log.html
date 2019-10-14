@@ -17,7 +17,7 @@ module parity_using_bitwise (
 );
 	output parity_out;
 	input [7:0] data_in;
-	assign parity_out = (^ data_in);
+	assign parity_out = ^data_in;
 endmodule
 
 

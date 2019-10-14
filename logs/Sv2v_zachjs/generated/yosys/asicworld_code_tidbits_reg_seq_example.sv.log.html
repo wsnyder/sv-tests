@@ -25,12 +25,11 @@ module reg_seq_example (
 	wire clk;
 	wire reset;
 	wire d;
-	always @(posedge clk or posedge reset) if (reset) begin
-		q &lt;= 1&#39;b0;
-	end
-	else begin
-		q &lt;= d;
-	end
+	always @(posedge clk or posedge reset)
+		if (reset)
+			q &lt;= 1&#39;b0;
+		else
+			q &lt;= d;
 endmodule
 
 

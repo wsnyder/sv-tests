@@ -149,11 +149,10 @@ module partsel_test002 (
 	assign q4 = b[(s + 2)+:2];
 	assign q5 = a[(s + 2)-:2];
 	assign q6 = b[(s + 2)-:2];
-	always @(posedge clk) begin
-		if (rst) begin
+	always @(posedge clk)
+		if (rst)
 			{r1, r2} = (16&#39;h1337 ^ {a, b});
-		end
-		else begin
+		else
 			case (s)
 				0: begin
 					r1[3:0] &lt;= (r2[0:3] ^ x1);
@@ -172,8 +171,6 @@ module partsel_test002 (
 					r2 &lt;= r1;
 				end
 			endcase
-		end
-	end
 endmodule
 
 

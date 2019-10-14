@@ -22,11 +22,18 @@ module i2c_test01 (
 	input nReset;
 	output reg al;
 	reg cmd_stop;
-	always @(posedge clk or negedge nReset) if ((~ nReset)) cmd_stop &lt;= #(1) 1&#39;b0;
-	else if (rst) cmd_stop &lt;= #(1) 1&#39;b0;
-	always @(posedge clk or negedge nReset) if ((~ nReset)) al &lt;= #(1) 1&#39;b0;
-	else if (rst) al &lt;= #(1) 1&#39;b0;
-	else al &lt;= #(1) (~ cmd_stop);
+	always @(posedge clk or negedge nReset)
+		if (~nReset)
+			cmd_stop &lt;= #(1) 1&#39;b0;
+		else if (rst)
+			cmd_stop &lt;= #(1) 1&#39;b0;
+	always @(posedge clk or negedge nReset)
+		if (~nReset)
+			al &lt;= #(1) 1&#39;b0;
+		else if (rst)
+			al &lt;= #(1) 1&#39;b0;
+		else
+			al &lt;= #(1) ~cmd_stop;
 endmodule
 module i2c_test02 (
 	clk,
@@ -43,19 +50,23 @@ module i2c_test02 (
 	output reg cmd_stop;
 	reg clk_en;
 	output reg [15:0] cnt;
-	always @(posedge clk) if ((~| cnt)) if ((~ slave_wait)) begin
-		cnt &lt;= #(1) clk_cnt;
-		clk_en &lt;= #(1) 1&#39;b1;
-	end
-	else begin
-		cnt &lt;= #(1) cnt;
-		clk_en &lt;= #(1) 1&#39;b0;
-	end
-	else begin
-		cnt &lt;= #(1) (cnt - 16&#39;h1);
-		clk_en &lt;= #(1) 1&#39;b0;
-	end
-	always @(posedge clk) if (clk_en) cmd_stop &lt;= #(1) cmd;
+	always @(posedge clk)
+		if (~|cnt)
+			if (~slave_wait) begin
+				cnt &lt;= #(1) clk_cnt;
+				clk_en &lt;= #(1) 1&#39;b1;
+			end
+			else begin
+				cnt &lt;= #(1) cnt;
+				clk_en &lt;= #(1) 1&#39;b0;
+			end
+		else begin
+			cnt &lt;= #(1) (cnt - 16&#39;h1);
+			clk_en &lt;= #(1) 1&#39;b0;
+		end
+	always @(posedge clk)
+		if (clk_en)
+			cmd_stop &lt;= #(1) cmd;
 endmodule
 
 

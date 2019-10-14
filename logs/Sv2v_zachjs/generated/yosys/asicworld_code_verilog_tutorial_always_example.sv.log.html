@@ -17,12 +17,11 @@ module always_example;
 	wire enable;
 	wire q_in;
 	reg data;
-	always @(posedge clk) if (reset) begin
-		data &lt;= 0;
-	end
-	else if (enable) begin
-		data &lt;= q_in;
-	end
+	always @(posedge clk)
+		if (reset)
+			data &lt;= 0;
+		else if (enable)
+			data &lt;= q_in;
 endmodule
 
 

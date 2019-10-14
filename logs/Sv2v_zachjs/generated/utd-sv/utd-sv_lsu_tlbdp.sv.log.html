@@ -81,7 +81,7 @@ module lsu_tlbdp (
 	assign tlb_tte_data_mx_sel1 = tlb_rd_tte_data_21_16_sel_buf;
 	assign tlb_tte_data_mx_sel0 = tlb_rd_tte_data_15_13_sel_buf;
 	assign pg_sz_b0 = tlb_tte_data_mx_sel0;
-	assign pg_sz_b1 = (((~ tlb_tte_data_mx_sel2) &amp; tlb_tte_data_mx_sel1) &amp; tlb_tte_data_mx_sel0);
+	assign pg_sz_b1 = ((~tlb_tte_data_mx_sel2 &amp; tlb_tte_data_mx_sel1) &amp; tlb_tte_data_mx_sel0);
 	assign pg_sz_b2 = ((tlb_tte_data_mx_sel2 &amp; tlb_tte_data_mx_sel1) &amp; tlb_tte_data_mx_sel0);
 	assign lsu_tte_pg_sz_b2 = pg_sz_b2;
 	assign lsu_tte_pg_sz_b1 = pg_sz_b1;
@@ -106,7 +106,7 @@ module lsu_tlbdp (
 		.si(),
 		.so()
 	);
-	assign stb_cam_vld = ((ld_inst_vld_m &amp; (tlb_cam_hit | dtlb_bypass_m)) &amp; (~ (asi_internal_m &amp; lsu_alt_space_m)));
+	assign stb_cam_vld = ((ld_inst_vld_m &amp; (tlb_cam_hit | dtlb_bypass_m)) &amp; ~(asi_internal_m &amp; lsu_alt_space_m));
 	wire [58:0] tlb_rd_tte_tag_buf;
 	wire [42:0] tlb_rd_tte_data_buf;
 	wire lsu_tte_pg_sz_b1_buf;
@@ -119,9 +119,9 @@ module lsu_tlbdp (
 	assign lsu_tte_pg_sz_b1_buf = lsu_tte_pg_sz_b1;
 	assign lsu_tte_pg_sz_b0_buf = lsu_tte_pg_sz_b0;
 	assign lsu_tte_pg_sz_b2_buf = lsu_tte_pg_sz_b2;
-	assign tlb_pgnum_l[39:10] = (~ tlb_pgnum[39:10]);
-	assign tlb_pgnum_buf[39:10] = (~ tlb_pgnum_l[39:10]);
-	assign tlb_pgnum_buf2[39:37] = (~ tlb_pgnum_l[39:37]);
+	assign tlb_pgnum_l[39:10] = ~tlb_pgnum[39:10];
+	assign tlb_pgnum_buf[39:10] = ~tlb_pgnum_l[39:10];
+	assign tlb_pgnum_buf2[39:37] = ~tlb_pgnum_l[39:37];
 	assign tlb_rd_tte_data_buf[42:0] = tlb_rd_tte_data[42:0];
 	assign tlb_rd_tte_data_ie_buf = tlb_rd_tte_data_buf[9];
 	assign tlb_rd_tte_data_27_22_sel_buf = tlb_rd_tte_data_buf[23];
@@ -134,8 +134,8 @@ module lsu_tlbdp (
 	assign lsu_tlb_rd_data[63:0] = (lsu_tlb_data_rd_vld_g ? formatted_tte_data[63:0] : formatted_tte_tag[63:0]);
 	wire lsu_rd_tte_data_parity;
 	wire lsu_rd_tte_tag_parity;
-	assign lsu_rd_tte_data_parity = (^ tlb_rd_tte_data_buf[41:0]);
-	assign lsu_rd_tte_tag_parity = (^ {tlb_rd_tte_tag_buf[58:55], tlb_rd_tte_tag_buf[53:27], tlb_rd_tte_tag_buf[25], tlb_rd_tte_tag_buf[23:0]});
+	assign lsu_rd_tte_data_parity = ^tlb_rd_tte_data_buf[41:0];
+	assign lsu_rd_tte_tag_parity = ^{tlb_rd_tte_tag_buf[58:55], tlb_rd_tte_tag_buf[53:27], tlb_rd_tte_tag_buf[25], tlb_rd_tte_tag_buf[23:0]};
 	assign tte_data_parity_error = (tlb_rd_tte_data_parity ^ lsu_rd_tte_data_parity);
 	assign tte_tag_parity_error = (tlb_rd_tte_tag_parity ^ lsu_rd_tte_tag_parity);
 	assign cache_way_hit_buf1[3:0] = cache_way_hit[3:0];

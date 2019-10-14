@@ -11,7 +11,39 @@ files: <a href="../../../../third_party/tests/utd-sv/cpx_buf_pt.v.html" target="
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/cpx_buf_pt.v.html#l-35" target="file-frame">third_party/tests/utd-sv/cpx_buf_pt.v:35</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module cpx_buf_pt (
+	out0_l,
+	out1_l,
+	cpx_src_grant_cx,
+	so,
+	in0,
+	in1,
+	cpx_src_grant_ca,
+	rclk,
+	si,
+	se
+);
+	output [7:0] out0_l;
+	output out1_l;
+	output [7:0] cpx_src_grant_cx;
+	output so;
+	input [7:0] in0;
+	input in1;
+	input [7:0] cpx_src_grant_ca;
+	input rclk;
+	input si;
+	input se;
+	assign out0_l[7:0] = ~in0[7:0];
+	assign out1_l = ~in1;
+	dff_s #(8) dff_ccx_com_src(
+		.din(cpx_src_grant_ca[7:0]),
+		.q(cpx_src_grant_cx[7:0]),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(8&#39;d0),
+		.so()
+	);
+endmodule
 
 
 </pre>

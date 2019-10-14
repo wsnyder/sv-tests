@@ -32,14 +32,11 @@ module graphtest (
 	assign Z[1] = t[3];
 	assign Z[3:2] = A[2:1];
 	assign Z[7:4] = {1&#39;b0, B[2:0]};
-	always @(*) begin
-		if ((A == 4&#39;b1111)) begin
+	always @(*)
+		if ((A == 4&#39;b1111))
 			X = B;
-		end
-		else begin
+		else
 			X = 4&#39;b0000;
-		end
-	end
 endmodule
 
 

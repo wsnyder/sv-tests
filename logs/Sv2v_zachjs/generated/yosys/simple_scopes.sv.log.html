@@ -60,7 +60,7 @@ module scopes_test_01 (
 			begin : bar
 				reg [15:0] x;
 				x = (77 + a);
-				z = (- x);
+				z = -x;
 			end
 			y = (x ^ z);
 		end

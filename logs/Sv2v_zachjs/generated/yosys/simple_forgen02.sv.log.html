@@ -36,8 +36,8 @@ module uut_forgen02 (
 			else begin : chain
 				assign D[2] = carry[(i - 1)];
 			end
-			assign y[i] = (^ D);
-			assign carry[i] = ((&amp; D[1:0]) | ((^ D[1:0]) &amp; D[2]));
+			assign y[i] = ^D;
+			assign carry[i] = (&amp;D[1:0] | (^D[1:0] &amp; D[2]));
 		end
 	endgenerate
 	assign cout = carry[(WIDTH - 1)];

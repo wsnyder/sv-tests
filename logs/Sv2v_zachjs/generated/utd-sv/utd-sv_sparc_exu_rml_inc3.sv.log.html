@@ -19,9 +19,9 @@ module sparc_exu_rml_inc3 (
 	input [2:0] din;
 	input inc;
 	output [2:0] dout;
-	assign dout[2] = ((((((((~ din[2]) &amp; (~ din[1])) &amp; (~ din[0])) &amp; (~ inc)) | ((((~ din[2]) &amp; din[1]) &amp; din[0]) &amp; inc)) | ((din[2] &amp; din[1]) &amp; (~ din[0]))) | ((din[2] &amp; (~ din[1])) &amp; inc)) | ((din[2] &amp; din[0]) &amp; (~ inc)));
-	assign dout[1] = ((((((~ din[1]) &amp; (~ din[0])) &amp; (~ inc)) | ((din[1] &amp; (~ din[0])) &amp; inc)) | (((~ din[1]) &amp; din[0]) &amp; inc)) | ((din[1] &amp; din[0]) &amp; (~ inc)));
-	assign dout[0] = (~ din[0]);
+	assign dout[2] = (((((((~din[2] &amp; ~din[1]) &amp; ~din[0]) &amp; ~inc) | (((~din[2] &amp; din[1]) &amp; din[0]) &amp; inc)) | ((din[2] &amp; din[1]) &amp; ~din[0])) | ((din[2] &amp; ~din[1]) &amp; inc)) | ((din[2] &amp; din[0]) &amp; ~inc));
+	assign dout[1] = (((((~din[1] &amp; ~din[0]) &amp; ~inc) | ((din[1] &amp; ~din[0]) &amp; inc)) | ((~din[1] &amp; din[0]) &amp; inc)) | ((din[1] &amp; din[0]) &amp; ~inc));
+	assign dout[0] = ~din[0];
 endmodule
 
 

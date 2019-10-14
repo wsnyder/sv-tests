@@ -23,7 +23,7 @@ module wreduce_test0 (
 	output [15:0] x;
 	output [15:0] y;
 	output [15:0] z;
-	assign x = (- $signed({1&#39;b0, a}));
+	assign x = -$signed({1&#39;b0, a});
 	assign y = ($signed({1&#39;b0, a}) + $signed({1&#39;b0, b}));
 	assign z = (x ^ y);
 endmodule

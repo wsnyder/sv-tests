@@ -12,9 +12,7 @@ files: <a href="../../../tests/chapter-11/11.7--signed_func.sv.html" target="fil
 
 module top;
 	reg signed [7:0] a;
-	initial begin
-		a = $signed(4&#39;b1000);
-	end
+	initial a = $signed(4&#39;b1000);
 endmodule
 
 

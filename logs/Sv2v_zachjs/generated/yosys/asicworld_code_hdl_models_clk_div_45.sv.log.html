@@ -26,28 +26,28 @@ module clk_div_45 (
 	reg [3:0] counter2;
 	reg toggle1;
 	reg toggle2;
-	always @(posedge clk_in) if ((enable == 1&#39;b0)) begin
-		counter1 &lt;= 4&#39;b0;
-		toggle1 &lt;= 0;
-	end
-	else if ((((counter1 == 3) &amp;&amp; toggle2) || ((~ toggle1) &amp;&amp; (counter1 == 4)))) begin
-		counter1 &lt;= 4&#39;b0;
-		toggle1 &lt;= (~ toggle1);
-	end
-	else begin
-		counter1 &lt;= (counter1 + 1);
-	end
-	always @(negedge clk_in) if ((enable == 1&#39;b0)) begin
-		counter2 &lt;= 4&#39;b0;
-		toggle2 &lt;= 0;
-	end
-	else if ((((counter2 == 3) &amp;&amp; (~ toggle2)) || (toggle2 &amp;&amp; (counter2 == 4)))) begin
-		counter2 &lt;= 4&#39;b0;
-		toggle2 &lt;= (~ toggle2);
-	end
-	else begin
-		counter2 &lt;= (counter2 + 1);
-	end
+	always @(posedge clk_in)
+		if ((enable == 1&#39;b0)) begin
+			counter1 &lt;= 4&#39;b0;
+			toggle1 &lt;= 0;
+		end
+		else if ((((counter1 == 3) &amp;&amp; toggle2) || (~toggle1 &amp;&amp; (counter1 == 4)))) begin
+			counter1 &lt;= 4&#39;b0;
+			toggle1 &lt;= ~toggle1;
+		end
+		else
+			counter1 &lt;= (counter1 + 1);
+	always @(negedge clk_in)
+		if ((enable == 1&#39;b0)) begin
+			counter2 &lt;= 4&#39;b0;
+			toggle2 &lt;= 0;
+		end
+		else if ((((counter2 == 3) &amp;&amp; ~toggle2) || (toggle2 &amp;&amp; (counter2 == 4)))) begin
+			counter2 &lt;= 4&#39;b0;
+			toggle2 &lt;= ~toggle2;
+		end
+		else
+			counter2 &lt;= (counter2 + 1);
 	assign clk_out = (((counter1 &lt; 3) &amp;&amp; (counter2 &lt; 3)) &amp; enable);
 endmodule
 

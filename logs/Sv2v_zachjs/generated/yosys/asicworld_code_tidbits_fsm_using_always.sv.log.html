@@ -40,44 +40,38 @@ module fsm_using_always (
 	always @(state or req_0 or req_1) begin : FSM_COMBO
 		next_state = 3&#39;b000;
 		case (state)
-			IDLE: if ((req_0 == 1&#39;b1)) begin
-				next_state = GNT0;
-			end
-			else if ((req_1 == 1&#39;b1)) begin
-				next_state = GNT1;
-			end
-			else begin
-				next_state = IDLE;
-			end
-			GNT0: if ((req_0 == 1&#39;b1)) begin
-				next_state = GNT0;
-			end
-			else begin
-				next_state = IDLE;
-			end
-			GNT1: if ((req_1 == 1&#39;b1)) begin
-				next_state = GNT1;
-			end
-			else begin
-				next_state = IDLE;
-			end
+			IDLE:
+				if ((req_0 == 1&#39;b1))
+					next_state = GNT0;
+				else if ((req_1 == 1&#39;b1))
+					next_state = GNT1;
+				else
+					next_state = IDLE;
+			GNT0:
+				if ((req_0 == 1&#39;b1))
+					next_state = GNT0;
+				else
+					next_state = IDLE;
+			GNT1:
+				if ((req_1 == 1&#39;b1))
+					next_state = GNT1;
+				else
+					next_state = IDLE;
 			default: next_state = IDLE;
 		endcase
 	end
 	always @(posedge clock) begin : FSM_SEQ
-		if ((reset == 1&#39;b1)) begin
+		if ((reset == 1&#39;b1))
 			state &lt;= #(1) IDLE;
-		end
-		else begin
+		else
 			state &lt;= #(1) next_state;
-		end
 	end
 	always @(posedge clock) begin : OUTPUT_LOGIC
 		if ((reset == 1&#39;b1)) begin
 			gnt_0 &lt;= #(1) 1&#39;b0;
 			gnt_1 &lt;= #(1) 1&#39;b0;
 		end
-		else begin
+		else
 			case (state)
 				IDLE: begin
 					gnt_0 &lt;= #(1) 1&#39;b0;
@@ -96,7 +90,6 @@ module fsm_using_always (
 				gnt_1 &lt;= #(1) 1&#39;b0;
 			end
 			endcase
-		end
 	end
 endmodule
 

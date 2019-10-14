@@ -22,12 +22,11 @@ module counter (
 	input enable;
 	output [3:0] count;
 	reg [3:0] count;
-	always @(posedge clk) if ((reset == 1&#39;b1)) begin
-		count &lt;= 0;
-	end
-	else if ((enable == 1&#39;b1)) begin
-		count &lt;= (count + 1);
-	end
+	always @(posedge clk)
+		if ((reset == 1&#39;b1))
+			count &lt;= 0;
+		else if ((enable == 1&#39;b1))
+			count &lt;= (count + 1);
 endmodule
 
 

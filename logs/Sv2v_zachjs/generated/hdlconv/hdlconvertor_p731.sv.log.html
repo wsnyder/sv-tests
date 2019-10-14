@@ -36,11 +36,10 @@ module generic_fifo (
 	localparam FIFO_LSB = LSB;
 	wire [FIFO_MSB:FIFO_LSB] fifo;
 	wire [LOG2(DEPTH):0] depth;
-	always @(posedge clk or posedge reset) begin
+	always @(posedge clk or posedge reset)
 		casez ({read, write, reset})
 			3&#39;b???: out &lt;= 0;
 		endcase
-	end
 endmodule
 
 

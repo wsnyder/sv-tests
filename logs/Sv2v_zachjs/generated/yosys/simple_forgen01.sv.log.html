@@ -20,14 +20,13 @@ module uut_forgen01 (
 	integer i;
 	integer j;
 	reg [31:0] lut;
-	initial begin
-		for (i = 0; (i &lt; 32); i = (i + 1))
-			begin
-				lut[i] = (i &gt; 1);
-				for (j = 2; ((j * j) &lt;= i); j = (j + 1))
-					if (((i % j) == 0)) lut[i] = 0;
-			end
-	end
+	initial for (i = 0; (i &lt; 32); i = (i + 1))
+		begin
+			lut[i] = (i &gt; 1);
+			for (j = 2; ((j * j) &lt;= i); j = (j + 1))
+				if (((i % j) == 0))
+					lut[i] = 0;
+		end
 	assign y = lut[a];
 endmodule
 

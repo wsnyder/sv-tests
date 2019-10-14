@@ -11,7 +11,81 @@ files: <a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html" target="fil
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-31" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:31</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module dbl_buf (
+	dout,
+	vld,
+	full,
+	clk,
+	rst_l,
+	wr,
+	rd,
+	din
+);
+	parameter BUF_WIDTH = 64;
+	input clk;
+	input rst_l;
+	input wr;
+	input rd;
+	input [(BUF_WIDTH - 1):0] din;
+	output [(BUF_WIDTH - 1):0] dout;
+	output vld;
+	output full;
+	wire wr_buf0;
+	wire wr_buf1;
+	wire buf0_vld;
+	wire buf1_vld;
+	wire buf1_older;
+	wire rd_buf0;
+	wire rd_buf1;
+	wire rd_buf;
+	wire en_vld0;
+	wire en_vld1;
+	wire [(BUF_WIDTH - 1):0] buf0_obj;
+	wire [(BUF_WIDTH - 1):0] buf1_obj;
+	assign wr_buf0 = (wr &amp; (buf1_vld | (~buf0_vld &amp; ~buf1_older)));
+	assign wr_buf1 = (wr &amp; (buf0_vld | (~buf1_vld &amp; buf1_older)));
+	assign rd_buf0 = (rd &amp; ~buf1_older);
+	assign rd_buf1 = (rd &amp; buf1_older);
+	assign rd_buf = (rd &amp; (buf0_vld | buf1_vld));
+	dffrle_ns buf1_older_ff(
+		.din(~buf1_older),
+		.rst_l(rst_l),
+		.en(rd_buf),
+		.clk(clk),
+		.q(buf1_older)
+	);
+	assign en_vld0 = (wr_buf0 | rd_buf0);
+	assign en_vld1 = (wr_buf1 | rd_buf1);
+	dffrle_ns buf0_vld_ff(
+		.din(wr_buf0),
+		.rst_l(rst_l),
+		.en(en_vld0),
+		.clk(clk),
+		.q(buf0_vld)
+	);
+	dffrle_ns buf1_vld_ff(
+		.din(wr_buf1),
+		.rst_l(rst_l),
+		.en(en_vld1),
+		.clk(clk),
+		.q(buf1_vld)
+	);
+	dffe_ns #(BUF_WIDTH) buf0_obj_ff(
+		.din(din),
+		.en(wr_buf0),
+		.clk(clk),
+		.q(buf0_obj)
+	);
+	dffe_ns #(BUF_WIDTH) buf1_obj_ff(
+		.din(din),
+		.en(wr_buf1),
+		.clk(clk),
+		.q(buf1_obj)
+	);
+	assign dout = (buf1_older ? buf1_obj : buf0_obj);
+	assign vld = (buf0_vld | buf1_vld);
+	assign full = (buf0_vld &amp; buf1_vld);
+endmodule
 
 
 </pre>

@@ -11,7 +11,39 @@ files: <a href="../../../../third_party/tests/utd-sv/ccx_spc_rpt.v.html" target=
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/ccx_spc_rpt.v.html#l-37" target="file-frame">third_party/tests/utd-sv/ccx_spc_rpt.v:37</a>:19: Lexical error: Undefined macro: PCX_WIDTH
+module ccx_spc_rpt (
+	spc_pcx_req_pq_buf,
+	spc_pcx_atom_pq_buf,
+	spc_pcx_data_pa_buf,
+	pcx_spc_grant_px_buf,
+	cpx_spc_data_cx2_buf,
+	cpx_spc_data_rdy_cx2_buf,
+	spc_pcx_req_pq,
+	spc_pcx_atom_pq,
+	spc_pcx_data_pa,
+	pcx_spc_grant_px,
+	cpx_spc_data_cx2,
+	cpx_spc_data_rdy_cx2
+);
+	input [4:0] spc_pcx_req_pq;
+	input spc_pcx_atom_pq;
+	input [123:0] spc_pcx_data_pa;
+	input [4:0] pcx_spc_grant_px;
+	input [144:0] cpx_spc_data_cx2;
+	input cpx_spc_data_rdy_cx2;
+	output [4:0] spc_pcx_req_pq_buf;
+	output spc_pcx_atom_pq_buf;
+	output [123:0] spc_pcx_data_pa_buf;
+	output [4:0] pcx_spc_grant_px_buf;
+	output [144:0] cpx_spc_data_cx2_buf;
+	output cpx_spc_data_rdy_cx2_buf;
+	assign spc_pcx_req_pq_buf = spc_pcx_req_pq;
+	assign spc_pcx_atom_pq_buf = spc_pcx_atom_pq;
+	assign spc_pcx_data_pa_buf = spc_pcx_data_pa;
+	assign pcx_spc_grant_px_buf = pcx_spc_grant_px;
+	assign cpx_spc_data_cx2_buf = cpx_spc_data_cx2;
+	assign cpx_spc_data_rdy_cx2_buf = cpx_spc_data_rdy_cx2;
+endmodule
 
 
 </pre>

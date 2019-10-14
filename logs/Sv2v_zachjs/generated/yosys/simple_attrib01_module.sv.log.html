@@ -21,8 +21,11 @@ module bar (
 	input wire rst;
 	input wire inp;
 	output reg out;
-	always @(posedge clk) if (rst) out &lt;= 1&#39;d0;
-	else out &lt;= (~ inp);
+	always @(posedge clk)
+		if (rst)
+			out &lt;= 1&#39;d0;
+		else
+			out &lt;= ~inp;
 endmodule
 module foo (
 	clk,

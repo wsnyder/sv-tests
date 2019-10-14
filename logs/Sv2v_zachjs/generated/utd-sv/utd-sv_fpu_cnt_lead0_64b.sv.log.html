@@ -397,12 +397,12 @@ module fpu_cnt_lead0_64b (
 		.lead0_32b_0(lead0_31_0_0)
 	);
 	assign lead0_6 = (din_63_32_eq_0 &amp;&amp; din_31_0_eq_0);
-	assign lead0_5 = ((! lead0_6) &amp;&amp; din_63_32_eq_0);
-	assign lead0_4 = (((! din_63_32_eq_0) &amp;&amp; din_63_48_eq_0) || ((din_63_32_eq_0 &amp;&amp; din_31_16_eq_0) &amp;&amp; (! lead0_6)));
-	assign lead0_3 = (((! din_63_32_eq_0) &amp;&amp; lead0_63_32_3) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_3) &amp;&amp; (! lead0_6)));
-	assign lead0_2 = (((! din_63_32_eq_0) &amp;&amp; lead0_63_32_2) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_2) &amp;&amp; (! lead0_6)));
-	assign lead0_1 = (((! din_63_32_eq_0) &amp;&amp; lead0_63_32_1) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_1) &amp;&amp; (! lead0_6)));
-	assign lead0_0 = (((! din_63_32_eq_0) &amp;&amp; lead0_63_32_0) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_0) &amp;&amp; (! lead0_6)));
+	assign lead0_5 = (!lead0_6 &amp;&amp; din_63_32_eq_0);
+	assign lead0_4 = ((!din_63_32_eq_0 &amp;&amp; din_63_48_eq_0) || ((din_63_32_eq_0 &amp;&amp; din_31_16_eq_0) &amp;&amp; !lead0_6));
+	assign lead0_3 = ((!din_63_32_eq_0 &amp;&amp; lead0_63_32_3) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_3) &amp;&amp; !lead0_6));
+	assign lead0_2 = ((!din_63_32_eq_0 &amp;&amp; lead0_63_32_2) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_2) &amp;&amp; !lead0_6));
+	assign lead0_1 = ((!din_63_32_eq_0 &amp;&amp; lead0_63_32_1) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_1) &amp;&amp; !lead0_6));
+	assign lead0_0 = ((!din_63_32_eq_0 &amp;&amp; lead0_63_32_0) || ((din_63_32_eq_0 &amp;&amp; lead0_31_0_0) &amp;&amp; !lead0_6));
 	assign lead0[5:0] = {lead0_5, lead0_4, lead0_3, lead0_2, lead0_1, lead0_0};
 endmodule
 

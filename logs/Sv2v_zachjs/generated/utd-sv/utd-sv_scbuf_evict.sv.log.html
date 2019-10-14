@@ -290,7 +290,7 @@ module scbuf_evict (
 	mux2ds #(1) mux_wbrd_en_r1_in(
 		.dout(sctag_scbuf_wbrd_en_r1_in),
 		.in0(sctag_scbuf_wbrd_en_r1),
-		.sel0((~ sehold)),
+		.sel0(~sehold),
 		.in1(sctag_scbuf_wbrd_en_r2),
 		.sel1(sehold)
 	);
@@ -344,21 +344,21 @@ module scbuf_evict (
 	clken_buf clk_buf_r2(
 		.clk(en_clk_r2),
 		.rclk(rclk),
-		.enb_l((~ wb_or_rdma_rden_r2)),
-		.tmb_l((~ se))
+		.enb_l(~wb_or_rdma_rden_r2),
+		.tmb_l(~se)
 	);
 	clken_buf clk_buf_r3(
 		.clk(en_clk_r3),
 		.rclk(rclk),
-		.enb_l((~ sctag_scbuf_evict_en_r3)),
-		.tmb_l((~ se))
+		.enb_l(~sctag_scbuf_evict_en_r3),
+		.tmb_l(~se)
 	);
 	mux2ds #(624) mux_wb_rdma_mux_out(
 		.dout(wb_rdma_mux_out[623:0]),
 		.in0(wb_array_dout[623:0]),
 		.sel0(sctag_scbuf_wbrd_en_r2),
 		.in1(rdma_array_dout[623:0]),
-		.sel1((~ sctag_scbuf_wbrd_en_r2))
+		.sel1(~sctag_scbuf_wbrd_en_r2)
 	);
 	dff_s #(624) ff_wb_array_dout_r3(
 		.q(wb_array_dout_r3[623:0]),
@@ -435,7 +435,7 @@ module scbuf_evict (
 	assign sel_in0 = (sctag_scbuf_ev_dword_r3[1:0] == 2&#39;b00);
 	assign sel_in1 = (sctag_scbuf_ev_dword_r3[1:0] == 2&#39;b01);
 	assign sel_in2 = (sctag_scbuf_ev_dword_r3[1:0] == 2&#39;b10);
-	assign sel_in3 = (~ ((sel_in0 | sel_in1) | sel_in2));
+	assign sel_in3 = ~((sel_in0 | sel_in1) | sel_in2);
 	mux4ds #(78) mux_wb_array_dout_1(
 		.dout(wb_array_dout_r3_4t1[77:0]),
 		.in0(wb_array_dout_r3[77:0]),
@@ -463,7 +463,7 @@ module scbuf_evict (
 		.in0(wb_array_dout_r3_4t1[77:0]),
 		.sel0(sctag_scbuf_ev_dword_r3[2]),
 		.in1(wb_array_dout_r3_4t1[155:78]),
-		.sel1((~ sctag_scbuf_ev_dword_r3[2]))
+		.sel1(~sctag_scbuf_ev_dword_r3[2])
 	);
 	dff_s #(78) ff_wb_array_dout_r4(
 		.q(wb_array_dout_r4[77:0]),
@@ -487,9 +487,9 @@ module scbuf_evict (
 		.parity(wb_array_dout_r4[45:39]),
 		.din(wb_array_dout_r4[77:46])
 	);
-	assign evict_uncorr_err_r4 = ((sctag_scbuf_evict_en_r4 &amp; (! error_qual)) &amp; (((| check0_r4[5:0]) &amp; (~ parity0_r4)) | ((| check1_r4[5:0]) &amp; (~ parity1_r4))));
-	assign evict_uncorr_err_unqual_r4 = (sctag_scbuf_evict_en_r4 &amp; (((| check0_r4[5:0]) &amp; (~ parity0_r4)) | ((| check1_r4[5:0]) &amp; (~ parity1_r4))));
-	assign evict_corr_err_r4 = ((sctag_scbuf_evict_en_r4 &amp; (! error_qual)) &amp; (parity0_r4 | parity1_r4));
+	assign evict_uncorr_err_r4 = ((sctag_scbuf_evict_en_r4 &amp; !error_qual) &amp; ((|check0_r4[5:0] &amp; ~parity0_r4) | (|check1_r4[5:0] &amp; ~parity1_r4)));
+	assign evict_uncorr_err_unqual_r4 = (sctag_scbuf_evict_en_r4 &amp; ((|check0_r4[5:0] &amp; ~parity0_r4) | (|check1_r4[5:0] &amp; ~parity1_r4)));
+	assign evict_corr_err_r4 = ((sctag_scbuf_evict_en_r4 &amp; !error_qual) &amp; (parity0_r4 | parity1_r4));
 	dff_s #(64) ff_wb_array_dout_r5(
 		.q(wb_array_dout_r5[63:0]),
 		.din(wb_array_dout_ecc_r4[63:0]),

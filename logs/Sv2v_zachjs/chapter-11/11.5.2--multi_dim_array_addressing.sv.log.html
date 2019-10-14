@@ -13,9 +13,7 @@ files: <a href="../../../tests/chapter-11/11.5.2--multi_dim_array_addressing.sv.
 module top;
 	wire [7:0] mem [0:1023][0:3];
 	reg [7:0] a;
-	initial begin
-		a = mem[123][2];
-	end
+	initial a = mem[123][2];
 endmodule
 
 

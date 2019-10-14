@@ -16,12 +16,11 @@ module block_tb;
 	initial fork
 		begin
 			a = &#39;h3;
-			#(20) ;
+			#(20)
+				;
 			-&gt; ev;
 		end
-		begin
-			@(ev) a = &#39;h4;
-		end
+		@(ev) a = &#39;h4;
 	join
 endmodule
 

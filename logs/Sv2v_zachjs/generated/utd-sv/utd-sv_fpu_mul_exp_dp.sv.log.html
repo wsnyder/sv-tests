@@ -118,7 +118,7 @@ module fpu_mul_exp_dp (
 	wire [10:0] mul_exp_out_in;
 	wire [10:0] mul_exp_out;
 	wire se_l;
-	assign se_l = (~ se);
+	assign se_l = ~se;
 	clken_buf ckbuf_mul_exp_dp(
 		.clk(clk),
 		.rclk(rclk),
@@ -195,9 +195,9 @@ module fpu_mul_exp_dp (
 		.so()
 	);
 	assign m3stg_expadd[12:0] = ((m3stg_expa[12:0] + {6&#39;h3f, m3stg_ld0_inv[6:0]}) + 13&#39;h0001);
-	assign m3stg_expadd_eq_0 = (&amp; (m3stg_exp[12:0] ^ {6&#39;h3f, m3stg_ld0_inv[6:0]}));
-	assign m3stg_expadd_lte_0_inv = (! (m3stg_expadd[12] || m3stg_expadd_eq_0));
-	assign m4stg_exp_in[12:0] = (m3stg_expadd[12:0] &amp; {13 {(! m3stg_expadd[12])}});
+	assign m3stg_expadd_eq_0 = &amp;(m3stg_exp[12:0] ^ {6&#39;h3f, m3stg_ld0_inv[6:0]});
+	assign m3stg_expadd_lte_0_inv = !(m3stg_expadd[12] || m3stg_expadd_eq_0);
+	assign m4stg_exp_in[12:0] = (m3stg_expadd[12:0] &amp; {13 {!m3stg_expadd[12]}});
 	dffe_s #(13) i_m4stg_exp(
 		.din(m4stg_exp_in[12:0]),
 		.en(m6stg_step),
@@ -226,7 +226,7 @@ module fpu_mul_exp_dp (
 		.si(),
 		.so()
 	);
-	assign m5stg_exp_pre3_in[12:0] = (~ ({13 {(! m6stg_step)}} &amp; m5stg_expa[12:0]));
+	assign m5stg_exp_pre3_in[12:0] = ~({13 {!m6stg_step}} &amp; m5stg_expa[12:0]);
 	dff_s #(13) i_m5stg_exp_pre3(
 		.din(m5stg_exp_pre3_in[12:0]),
 		.clk(clk),
@@ -243,10 +243,10 @@ module fpu_mul_exp_dp (
 		.si(),
 		.so()
 	);
-	assign m5stg_exp[12:0] = ((({13 {(((m5stg_shl_54 &amp; m5stg_inc_exp_54) | (m5stg_shl_55 &amp; m5stg_inc_exp_55)) | m5stg_inc_exp_105)}} &amp; m5stg_exp_pre1[12:0]) | ((~ {13 {(((m5stg_shl_54 &amp; m5stg_inc_exp_54) | (m5stg_shl_55 &amp; m5stg_inc_exp_55)) | m5stg_inc_exp_105)}}) &amp; m5stg_exp_pre2[12:0])) | (~ m5stg_exp_pre3[12:0]));
+	assign m5stg_exp[12:0] = ((({13 {(((m5stg_shl_54 &amp; m5stg_inc_exp_54) | (m5stg_shl_55 &amp; m5stg_inc_exp_55)) | m5stg_inc_exp_105)}} &amp; m5stg_exp_pre1[12:0]) | (~{13 {(((m5stg_shl_54 &amp; m5stg_inc_exp_54) | (m5stg_shl_55 &amp; m5stg_inc_exp_55)) | m5stg_inc_exp_105)}} &amp; m5stg_exp_pre2[12:0])) | ~m5stg_exp_pre3[12:0]);
 	assign m5stg_expa[12:0] = m5stg_exp[12:0];
 	assign m5stg_exp_plus1[12:0] = (m5stg_expa[12:0] + 13&#39;h0001);
-	assign mul_exp_out_in[10:0] = (((({11 {(mul_exp_out_exp_plus1 &amp;&amp; m5stg_fracadd_cout)}} &amp; m5stg_exp_plus1[10:0]) | ({11 {mul_exp_out_exp}} &amp; m5stg_expa[10:0])) | ({11 {((! m5stg_fracadd_cout) &amp;&amp; (! m5stg_in_of))}} &amp; m5stg_expa[10:0])) | ({11 {m5stg_in_of}} &amp; {{3 {m5stg_fmuld}}, 7&#39;h7f, m5stg_to_0_inv}));
+	assign mul_exp_out_in[10:0] = (((({11 {(mul_exp_out_exp_plus1 &amp;&amp; m5stg_fracadd_cout)}} &amp; m5stg_exp_plus1[10:0]) | ({11 {mul_exp_out_exp}} &amp; m5stg_expa[10:0])) | ({11 {(!m5stg_fracadd_cout &amp;&amp; !m5stg_in_of)}} &amp; m5stg_expa[10:0])) | ({11 {m5stg_in_of}} &amp; {{3 {m5stg_fmuld}}, 7&#39;h7f, m5stg_to_0_inv}));
 	dffe_s #(11) i_mul_exp_out(
 		.din(mul_exp_out_in[10:0]),
 		.en(m6stg_step),

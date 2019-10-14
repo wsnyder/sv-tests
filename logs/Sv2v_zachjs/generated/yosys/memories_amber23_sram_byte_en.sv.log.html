@@ -31,17 +31,18 @@ module generic_sram_byte_en (
 	integer i;
 	always @(posedge i_clk) begin
 		o_read_data &lt;= (i_write_enable ? {DATA_WIDTH {1&#39;d0}} : mem[i_address]);
-		if (i_write_enable) for (i = 0; (i &lt; (DATA_WIDTH / 8)); i = (i + 1))
-			begin
-				mem[i_address][(i * 8)] &lt;= (i_byte_enable[i] ? i_write_data[(i * 8)] : mem[i_address][(i * 8)]);
-				mem[i_address][((i * 8) + 1)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 1)] : mem[i_address][((i * 8) + 1)]);
-				mem[i_address][((i * 8) + 2)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 2)] : mem[i_address][((i * 8) + 2)]);
-				mem[i_address][((i * 8) + 3)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 3)] : mem[i_address][((i * 8) + 3)]);
-				mem[i_address][((i * 8) + 4)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 4)] : mem[i_address][((i * 8) + 4)]);
-				mem[i_address][((i * 8) + 5)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 5)] : mem[i_address][((i * 8) + 5)]);
-				mem[i_address][((i * 8) + 6)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 6)] : mem[i_address][((i * 8) + 6)]);
-				mem[i_address][((i * 8) + 7)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 7)] : mem[i_address][((i * 8) + 7)]);
-			end
+		if (i_write_enable)
+			for (i = 0; (i &lt; (DATA_WIDTH / 8)); i = (i + 1))
+				begin
+					mem[i_address][(i * 8)] &lt;= (i_byte_enable[i] ? i_write_data[(i * 8)] : mem[i_address][(i * 8)]);
+					mem[i_address][((i * 8) + 1)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 1)] : mem[i_address][((i * 8) + 1)]);
+					mem[i_address][((i * 8) + 2)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 2)] : mem[i_address][((i * 8) + 2)]);
+					mem[i_address][((i * 8) + 3)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 3)] : mem[i_address][((i * 8) + 3)]);
+					mem[i_address][((i * 8) + 4)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 4)] : mem[i_address][((i * 8) + 4)]);
+					mem[i_address][((i * 8) + 5)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 5)] : mem[i_address][((i * 8) + 5)]);
+					mem[i_address][((i * 8) + 6)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 6)] : mem[i_address][((i * 8) + 6)]);
+					mem[i_address][((i * 8) + 7)] &lt;= (i_byte_enable[i] ? i_write_data[((i * 8) + 7)] : mem[i_address][((i * 8) + 7)]);
+				end
 	end
 endmodule
 

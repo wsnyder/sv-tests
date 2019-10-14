@@ -19,11 +19,14 @@ module tb_casez;
 		shifter = 32&#39;b1;
 		result = (shifter &lt;&lt; 4);
 		casez (result)
-			32&#39;b10000: $display(&#34;true&#34;);
-			32&#39;b11000: $display(&#34;false&#34;);
+			32&#39;b10000:
+				$display(&#34;true&#34;);
+			32&#39;b11000:
+				$display(&#34;false&#34;);
 		endcase
 		casez (result)
-			32&#39;b11000: $display(&#34;false&#34;);
+			32&#39;b11000:
+				$display(&#34;false&#34;);
 			default: $display(&#34;default case&#34;);
 		endcase
 	end

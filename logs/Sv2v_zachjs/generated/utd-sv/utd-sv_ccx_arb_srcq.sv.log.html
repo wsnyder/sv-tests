@@ -11,7 +11,164 @@ files: <a href="../../../../third_party/tests/utd-sv/ccx_arb_srcq.v.html" target
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/ccx_arb_srcq.v.html#l-32" target="file-frame">third_party/tests/utd-sv/ccx_arb_srcq.v:32</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module ccx_arb_srcq (
+	qfull,
+	qsel0,
+	qsel1,
+	shift_x,
+	ctl_qsel0_a,
+	ctl_qsel1_a_l,
+	ctl_shift_a,
+	q0_hold_a,
+	atom_a,
+	req_q,
+	atom_q,
+	grant_a,
+	rclk,
+	reset_d1
+);
+	output qfull;
+	output qsel0;
+	output qsel1;
+	output shift_x;
+	output ctl_qsel0_a;
+	output ctl_qsel1_a_l;
+	output ctl_shift_a;
+	output q0_hold_a;
+	output atom_a;
+	input req_q;
+	input atom_q;
+	input grant_a;
+	input rclk;
+	input reset_d1;
+	wire [1:0] qcount_decr;
+	wire [1:0] qcount_decr_d1;
+	wire [1:0] qcount_decr_r_d1;
+	wire [1:0] qcount_incr;
+	wire qsel0;
+	wire qsel1_l;
+	wire shift_a;
+	wire shift_x;
+	wire q0_hold_a_l;
+	wire shift_hi;
+	wire shift_hi_d1;
+	wire qfull;
+	wire incr_a;
+	wire decr;
+	wire atom_rqqual_x;
+	wire atom_rqqual_a;
+	wire req_atomqual_a;
+	wire req_a;
+	wire atom_a;
+	wire qfull_a;
+	dff_s #(1) dff_ccx_com_atom(
+		.din(atom_q),
+		.q(atom_a),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	dff_s #(1) dff_ccx_com_req(
+		.din(req_q),
+		.q(req_a),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	dff_s #(1) dff_ccx_com_qf(
+		.din(qfull),
+		.q(qfull_a),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	assign atom_rqqual_a = ((atom_a &amp; req_a) | ((atom_rqqual_x &amp; qfull_a) &amp; ~reset_d1));
+	dff_s #(1) dff_ccx_com_atomq(
+		.din(atom_rqqual_a),
+		.q(atom_rqqual_x),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	assign req_atomqual_a = ((atom_rqqual_x | req_a) &amp; (~qfull_a &amp; ~reset_d1));
+	assign incr_a = req_atomqual_a;
+	assign qfull = qcount_incr[1];
+	assign shift_hi = ~(qcount_decr[1] | qcount_decr[0]);
+	dff_s #(1) dff_ccx_com_shift_hi(
+		.din(shift_hi),
+		.q(shift_hi_d1),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	assign decr = (grant_a &amp; ~reset_d1);
+	mux2ds #(1) mx2ds_ccx_com_decr0(
+		.dout(qcount_decr[0]),
+		.in0(qcount_incr[0]),
+		.in1(qcount_incr[1]),
+		.sel0(~decr),
+		.sel1(decr)
+	);
+	mux2ds #(1) mx2ds_ccx_com_decr1(
+		.dout(qcount_decr[1]),
+		.in0(qcount_incr[1]),
+		.in1(1&#39;b0),
+		.sel0(~decr),
+		.sel1(decr)
+	);
+	dff_s #(1) dff_ccx_com_decr0(
+		.din(qcount_decr[0]),
+		.q(qcount_decr_d1[0]),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	assign qcount_decr_r_d1[0] = (qcount_decr_d1[0] &amp; ~reset_d1);
+	dff_s #(1) dff_ccx_com_decr1(
+		.din(qcount_decr[1]),
+		.q(qcount_decr_d1[1]),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	assign qcount_decr_r_d1[1] = (qcount_decr_d1[1] &amp; ~reset_d1);
+	mux2ds #(1) mx2ds_ccx_com_incr0(
+		.dout(qcount_incr[0]),
+		.in0(qcount_decr_r_d1[0]),
+		.in1(shift_hi_d1),
+		.sel0(~incr_a),
+		.sel1(incr_a)
+	);
+	mux2ds #(1) mx2ds_ccx_com_incr1(
+		.dout(qcount_incr[1]),
+		.in0(qcount_decr_r_d1[1]),
+		.in1(qcount_decr_r_d1[0]),
+		.sel0(~incr_a),
+		.sel1(incr_a)
+	);
+	assign qsel1 = (qcount_incr[1] &amp; incr_a);
+	assign qsel0 = (qcount_incr[0] &amp; incr_a);
+	assign shift_a = (qcount_incr[1] &amp; grant_a);
+	dff_s #(1) dff_ccx_com_shiftx(
+		.din(shift_a),
+		.q(shift_x),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;b0),
+		.so()
+	);
+	assign q0_hold_a = ~(~qsel0 &amp; ~shift_x);
+	assign ctl_qsel1_a_l = ~((qcount_decr_r_d1[0] &amp; incr_a) &amp; ~grant_a);
+	assign ctl_qsel0_a = ((qcount_incr[0] &amp; incr_a) | ((qcount_decr_r_d1[0] &amp; incr_a) &amp; grant_a));
+	assign ctl_shift_a = (qcount_decr_r_d1[1] &amp; grant_a);
+endmodule
 
 
 </pre>

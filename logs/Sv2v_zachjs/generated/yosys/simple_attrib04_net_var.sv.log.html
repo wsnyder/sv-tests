@@ -25,8 +25,11 @@ module bar (
 	(* temp_wire *) wire out_val;
 	always @(posedge clk) counter &lt;= (counter + 1);
 	assign out_val = (inp ^ counter[4]);
-	always @(posedge clk) if (rst) out &lt;= 1&#39;d0;
-	else out &lt;= out_val;
+	always @(posedge clk)
+		if (rst)
+			out &lt;= 1&#39;d0;
+		else
+			out &lt;= out_val;
 endmodule
 module foo (
 	clk,

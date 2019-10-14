@@ -25,12 +25,11 @@ module asyn_reset (
 	wire reset;
 	wire a;
 	reg c;
-	always @(posedge clk or posedge reset) if ((reset == 1&#39;b1)) begin
-		c &lt;= 0;
-	end
-	else begin
-		c &lt;= a;
-	end
+	always @(posedge clk or posedge reset)
+		if ((reset == 1&#39;b1))
+			c &lt;= 0;
+		else
+			c &lt;= a;
 endmodule
 
 

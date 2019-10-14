@@ -22,8 +22,11 @@ module which_clock (
 	input d;
 	output q;
 	reg q;
-	always @(posedge x or posedge y) if (x) q &lt;= 1&#39;b0;
-	else q &lt;= d;
+	always @(posedge x or posedge y)
+		if (x)
+			q &lt;= 1&#39;b0;
+		else
+			q &lt;= d;
 endmodule
 
 

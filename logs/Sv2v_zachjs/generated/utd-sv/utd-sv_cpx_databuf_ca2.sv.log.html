@@ -11,7 +11,14 @@ files: <a href="../../../../third_party/tests/utd-sv/cpx_databuf_ca2.v.html" tar
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/cpx_databuf_ca2.v.html#l-29" target="file-frame">third_party/tests/utd-sv/cpx_databuf_ca2.v:29</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module cpx_databuf_ca2 (
+	sctag_cpx_data_buf_pa,
+	sctag_cpx_data_pa
+);
+	output [144:0] sctag_cpx_data_buf_pa;
+	input [144:0] sctag_cpx_data_pa;
+	assign sctag_cpx_data_buf_pa = sctag_cpx_data_pa;
+endmodule
 
 
 </pre>

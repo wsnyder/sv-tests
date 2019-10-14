@@ -45,19 +45,15 @@ module mem2reg_test2 (
 	(* mem2reg *) reg [3:0] mem [0:7];
 	assign data = mem[addr];
 	integer i;
-	always @(posedge clk) begin
-		if (reset) begin
+	always @(posedge clk)
+		if (reset)
 			for (i = 0; (i &lt; 8); i = (i + 1))
 				mem[i] &lt;= i;
-		end
-		else if (mode) begin
+		else if (mode)
 			for (i = 0; (i &lt; 8); i = (i + 1))
 				mem[i] &lt;= (mem[i] + 1);
-		end
-		else begin
+		else
 			mem[addr] &lt;= 0;
-		end
-	end
 endmodule
 module mem2reg_test3 (
 	clk,
@@ -70,9 +66,7 @@ module mem2reg_test3 (
 	output reg [7:0] dout_a;
 	output [7:0] dout_b;
 	reg [7:0] dint_c [0:7];
-	always @(posedge clk) begin
-		{dout_a[0], dint_c[3]} &lt;= din_a;
-	end
+	always @(posedge clk) {dout_a[0], dint_c[3]} &lt;= din_a;
 	assign dout_b = dint_c[3];
 endmodule
 module mem2reg_test4 (

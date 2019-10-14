@@ -254,14 +254,14 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign wbtag_write_wl_c4[0] = (~ wb_valid[0]);
-	assign wbtag_write_wl_c4[1] = ((~ wb_valid[1]) &amp; wb_valid[0]);
-	assign wbtag_write_wl_c4[2] = ((~ wb_valid[2]) &amp; (&amp; wb_valid[1:0]));
-	assign wbtag_write_wl_c4[3] = ((~ wb_valid[3]) &amp; (&amp; wb_valid[2:0]));
-	assign wbtag_write_wl_c4[4] = ((~ wb_valid[4]) &amp; (&amp; wb_valid[3:0]));
-	assign wbtag_write_wl_c4[5] = ((~ wb_valid[5]) &amp; (&amp; wb_valid[4:0]));
-	assign wbtag_write_wl_c4[6] = ((~ wb_valid[6]) &amp; (&amp; wb_valid[5:0]));
-	assign wbtag_write_wl_c4[7] = ((~ wb_valid[7]) &amp; (&amp; wb_valid[6:0]));
+	assign wbtag_write_wl_c4[0] = ~wb_valid[0];
+	assign wbtag_write_wl_c4[1] = (~wb_valid[1] &amp; wb_valid[0]);
+	assign wbtag_write_wl_c4[2] = (~wb_valid[2] &amp; &amp;wb_valid[1:0]);
+	assign wbtag_write_wl_c4[3] = (~wb_valid[3] &amp; &amp;wb_valid[2:0]);
+	assign wbtag_write_wl_c4[4] = (~wb_valid[4] &amp; &amp;wb_valid[3:0]);
+	assign wbtag_write_wl_c4[5] = (~wb_valid[5] &amp; &amp;wb_valid[4:0]);
+	assign wbtag_write_wl_c4[6] = (~wb_valid[6] &amp; &amp;wb_valid[5:0]);
+	assign wbtag_write_wl_c4[7] = (~wb_valid[7] &amp; &amp;wb_valid[6:0]);
 	dff_s #(8) ff_wbtag_write_wl_c5(
 		.q(wbtag_write_wl_c5[7:0]),
 		.din(wbtag_write_wl_c4[7:0]),
@@ -320,7 +320,7 @@ module sctag_wbctl (
 	assign set_rdmat_acked = ({4 {leave_state1}} &amp; latched_rdmad_read_wl);
 	assign set_wb_valid = ({8 {wbtag_write_we_c5}} &amp; wbtag_write_wl_c5);
 	assign reset_wb_valid = ({8 {leave_state2}} &amp; latched_wb_read_wl);
-	assign wb_valid_in = ((wb_valid | set_wb_valid) &amp; (~ reset_wb_valid));
+	assign wb_valid_in = ((wb_valid | set_wb_valid) &amp; ~reset_wb_valid);
 	dffrl_s #(8) ff_wb_valid(
 		.q(wb_valid[7:0]),
 		.din(wb_valid_in[7:0]),
@@ -330,9 +330,9 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign or_wb_valid = (| wb_valid[7:0]);
+	assign or_wb_valid = |wb_valid[7:0];
 	assign set_wb_acked = ({8 {leave_state1}} &amp; latched_wb_read_wl);
-	assign wb_acked_in = ((wb_acked | set_wb_acked) &amp; (~ reset_wb_valid));
+	assign wb_acked_in = ((wb_acked | set_wb_acked) &amp; ~reset_wb_valid);
 	dffrl_s #(8) ff_wb_acked(
 		.q(wb_acked[7:0]),
 		.din(wb_acked_in[7:0]),
@@ -351,9 +351,9 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign bypass_hit_en_c2 = (bypass_en_c2 &amp; (~ arbctl_wbctl_hit_off_c2));
-	assign wb_cam_hit_vec_tmp_c2 = ((wb_cam_match_c2[7:0] &amp; wb_valid[7:0]) &amp; (~ (wb_acked[7:0] | {8 {arbctl_wbctl_hit_off_c2}})));
-	assign wbctl_hit_unqual_c2 = ((| wb_cam_hit_vec_tmp_c2[7:0]) | bypass_hit_en_c2);
+	assign bypass_hit_en_c2 = (bypass_en_c2 &amp; ~arbctl_wbctl_hit_off_c2);
+	assign wb_cam_hit_vec_tmp_c2 = ((wb_cam_match_c2[7:0] &amp; wb_valid[7:0]) &amp; ~(wb_acked[7:0] | {8 {arbctl_wbctl_hit_off_c2}}));
+	assign wbctl_hit_unqual_c2 = (|wb_cam_hit_vec_tmp_c2[7:0] | bypass_hit_en_c2);
 	assign wb_cam_hit_vec_c2 = (wb_cam_hit_vec_tmp_c2 | ({8 {bypass_hit_en_c2}} &amp; wbtag_write_wl_c5));
 	dff_s #(8) ff_wb_cam_hit_vec_c3(
 		.q(wb_cam_hit_vec_c3[7:0]),
@@ -388,7 +388,7 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign mbid_wr_en = (wbctl_hit_qual_c4 &amp; (~ mbctl_hit_c4));
+	assign mbid_wr_en = (wbctl_hit_qual_c4 &amp; ~mbctl_hit_c4);
 	assign sel_insert_mbid_c4 = ({8 {mbid_wr_en}} &amp; wb_cam_hit_vec_c4[7:0]);
 	dffe_s #(4) ff_mbid0(
 		.q(mbid0[3:0]),
@@ -462,7 +462,7 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign wb_mbid_vld_in[7:0] = ((wb_mbid_vld[7:0] | sel_insert_mbid_c4[7:0]) &amp; (~ sel_mbid[7:0]));
+	assign wb_mbid_vld_in[7:0] = ((wb_mbid_vld[7:0] | sel_insert_mbid_c4[7:0]) &amp; ~sel_mbid[7:0]);
 	dffrl_s #(8) ff_wb_mbid_vld(
 		.q(wb_mbid_vld[7:0]),
 		.din(wb_mbid_vld_in[7:0]),
@@ -472,7 +472,7 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign or_wb_mbid_vld_in = (| wb_mbid_vld_in[7:0]);
+	assign or_wb_mbid_vld_in = |wb_mbid_vld_in[7:0];
 	dffrl_s #(1) ff_or_wb_mbid_vld(
 		.q(or_wb_mbid_vld),
 		.din(or_wb_mbid_vld_in),
@@ -483,16 +483,16 @@ module sctag_wbctl (
 		.so()
 	);
 	assign sel_mbid[7:0] = (wb_acked[7:0] &amp; wb_mbid_vld[7:0]);
-	assign sel_default_mux1 = (~ ((sel_mbid[0] | sel_mbid[1]) | sel_mbid[2]));
-	assign sel_default_mux2 = (~ ((sel_mbid[4] | sel_mbid[5]) | sel_mbid[6]));
-	assign sel_default_mbentry = (| sel_mbid[3:0]);
-	assign sel_mbid_rst[0] = (sel_mbid[0] &amp; (~ rst_tri_en));
-	assign sel_mbid_rst[1] = (sel_mbid[1] &amp; (~ rst_tri_en));
-	assign sel_mbid_rst[2] = (sel_mbid[2] &amp; (~ rst_tri_en));
+	assign sel_default_mux1 = ~((sel_mbid[0] | sel_mbid[1]) | sel_mbid[2]);
+	assign sel_default_mux2 = ~((sel_mbid[4] | sel_mbid[5]) | sel_mbid[6]);
+	assign sel_default_mbentry = |sel_mbid[3:0];
+	assign sel_mbid_rst[0] = (sel_mbid[0] &amp; ~rst_tri_en);
+	assign sel_mbid_rst[1] = (sel_mbid[1] &amp; ~rst_tri_en);
+	assign sel_mbid_rst[2] = (sel_mbid[2] &amp; ~rst_tri_en);
 	assign sel_mbid_rst[3] = (sel_default_mux1 | rst_tri_en);
-	assign sel_mbid_rst[4] = (sel_mbid[4] &amp; (~ rst_tri_en));
-	assign sel_mbid_rst[5] = (sel_mbid[5] &amp; (~ rst_tri_en));
-	assign sel_mbid_rst[6] = (sel_mbid[6] &amp; (~ rst_tri_en));
+	assign sel_mbid_rst[4] = (sel_mbid[4] &amp; ~rst_tri_en);
+	assign sel_mbid_rst[5] = (sel_mbid[5] &amp; ~rst_tri_en);
+	assign sel_mbid_rst[6] = (sel_mbid[6] &amp; ~rst_tri_en);
 	assign sel_mbid_rst[7] = (sel_default_mux2 | rst_tri_en);
 	mux4ds #(4) mux_sel_mbid3t0(
 		.dout(sel_mbid3t0[3:0]),
@@ -521,20 +521,20 @@ module sctag_wbctl (
 		.in0(sel_mbid3t0[3:0]),
 		.sel0(sel_default_mbentry),
 		.in1(sel_mbid7t4[3:0]),
-		.sel1((~ sel_default_mbentry))
+		.sel1(~sel_default_mbentry)
 	);
-	assign wbctl_mbctl_dep_rdy_en = (| sel_mbid[7:0]);
+	assign wbctl_mbctl_dep_rdy_en = |sel_mbid[7:0];
 	assign wbctl_mbctl_dep_mbid = sel_mbid7t0[3:0];
-	assign can_req_dram = (((or_wb_valid | or_rdmat_valid) &amp; (~ dram_req_pending)) &amp; (~ mbctl_fbctl_dram_pick));
-	assign enter_state0 = ((~ dbb_rst_l) | leave_state2);
+	assign can_req_dram = (((or_wb_valid | or_rdmat_valid) &amp; ~dram_req_pending) &amp; ~mbctl_fbctl_dram_pick);
+	assign enter_state0 = (~dbb_rst_l | leave_state2);
 	assign leave_state0 = (state[0] &amp; can_req_dram);
-	assign next_state[0] = ((state[0] | enter_state0) &amp; (~ leave_state0));
+	assign next_state[0] = ((state[0] | enter_state0) &amp; ~leave_state0);
 	assign enter_state1 = leave_state0;
 	assign leave_state1 = (state[1] &amp; dram_sctag_wr_ack_d1);
-	assign next_state[1] = (((state[1] | enter_state1) &amp; (~ leave_state1)) &amp; dbb_rst_l);
+	assign next_state[1] = (((state[1] | enter_state1) &amp; ~leave_state1) &amp; dbb_rst_l);
 	assign enter_state2 = leave_state1;
 	assign leave_state2 = (state[2] &amp; (cycle_count[3:0] == 4&#39;d12));
-	assign next_state[2] = (((state[2] | enter_state2) &amp; (~ leave_state2)) &amp; dbb_rst_l);
+	assign next_state[2] = (((state[2] | enter_state2) &amp; ~leave_state2) &amp; dbb_rst_l);
 	dff_s #(3) ff_state(
 		.q(state[2:0]),
 		.din(next_state[2:0]),
@@ -543,7 +543,7 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign dram_req_pending_in = ((dram_req_pending | leave_state0) &amp; (~ leave_state2));
+	assign dram_req_pending_in = ((dram_req_pending | leave_state0) &amp; ~leave_state2);
 	dffrl_s #(1) ff_dram_req_pending(
 		.q(dram_req_pending),
 		.din(dram_req_pending_in),
@@ -555,11 +555,11 @@ module sctag_wbctl (
 	);
 	assign inc_cycle_count = (enter_state2 | state[2]);
 	assign cycle_count_plus1 = (cycle_count + 4&#39;b1);
-	assign next_cycle_count = (cycle_count_plus1 &amp; (~ {4 {leave_state2}}));
+	assign next_cycle_count = (cycle_count_plus1 &amp; ~{4 {leave_state2}});
 	mux2ds #(4) mux_cycle_count_in(
 		.dout(cycle_count_in[3:0]),
 		.in0(cycle_count[3:0]),
-		.sel0((~ inc_cycle_count)),
+		.sel0(~inc_cycle_count),
 		.in1(next_cycle_count[3:0]),
 		.sel1(inc_cycle_count)
 	);
@@ -572,7 +572,7 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign wb_read_en = (leave_state0 &amp; (~ pick_quad_sel[2]));
+	assign wb_read_en = (leave_state0 &amp; ~pick_quad_sel[2]);
 	assign wb_read_wl = pick_wb_read_wl;
 	assign rdmat_read_en = (leave_state0 &amp; pick_quad_sel[2]);
 	assign rdmat_read_wl = pick_rdmat_read_wl;
@@ -639,10 +639,10 @@ module sctag_wbctl (
 	assign sctag_scbuf_wbrd_wl_r0[0] = (((latched_wb_read_wl[1] | latched_wb_read_wl[3]) | latched_wb_read_wl[5]) | latched_wb_read_wl[7]);
 	assign sctag_scbuf_wbrd_wl_r0[1] = (((latched_wb_read_wl[2] | latched_wb_read_wl[3]) | latched_wb_read_wl[6]) | latched_wb_read_wl[7]);
 	assign sctag_scbuf_wbrd_wl_r0[2] = (((latched_wb_read_wl[4] | latched_wb_read_wl[5]) | latched_wb_read_wl[6]) | latched_wb_read_wl[7]);
-	assign sctag_scbuf_wbrd_en_r0 = ((sctag_scbuf_evict_en_r0 &amp; (~ sctag_scbuf_evict_en_r0_d1)) &amp; latched_wb_read_en);
+	assign sctag_scbuf_wbrd_en_r0 = ((sctag_scbuf_evict_en_r0 &amp; ~sctag_scbuf_evict_en_r0_d1) &amp; latched_wb_read_en);
 	assign sctag_scbuf_rdma_rdwl_r0[0] = (latched_rdmad_read_wl[1] | latched_rdmad_read_wl[3]);
 	assign sctag_scbuf_rdma_rdwl_r0[1] = (latched_rdmad_read_wl[2] | latched_rdmad_read_wl[3]);
-	assign sctag_scbuf_rdma_rden_r0 = ((sctag_scbuf_evict_en_r0 &amp; (~ sctag_scbuf_evict_en_r0_d1)) &amp; latched_rdma_read_en);
+	assign sctag_scbuf_rdma_rden_r0 = ((sctag_scbuf_evict_en_r0 &amp; ~sctag_scbuf_evict_en_r0_d1) &amp; latched_rdma_read_en);
 	assign sctag_scbuf_ev_dword_r0 = cycle_count[2:0];
 	assign sctag_scbuf_evict_en_r0 = (leave_state1 | (state[2] &amp; (cycle_count &lt; 4&#39;d8)));
 	dff_s #(1) ff_sctag_scbuf_evict_en_r0_d1(
@@ -665,24 +665,24 @@ module sctag_wbctl (
 	mux2ds #(4) mux_pick_quad0_in(
 		.dout(pick_quad0_in[3:0]),
 		.in0(wb_valid[3:0]),
-		.sel0((~ or_wb_mbid_vld)),
+		.sel0(~or_wb_mbid_vld),
 		.in1(wb_mbid_vld[3:0]),
 		.sel1(or_wb_mbid_vld)
 	);
 	mux2ds #(4) mux_pick_quad1_in(
 		.dout(pick_quad1_in[3:0]),
 		.in0(wb_valid[7:4]),
-		.sel0((~ or_wb_mbid_vld)),
+		.sel0(~or_wb_mbid_vld),
 		.in1(wb_mbid_vld[7:4]),
 		.sel1(or_wb_mbid_vld)
 	);
 	assign pick_quad2_in[3:0] = rdmat_pick_vec[3:0];
-	assign pick_quad_in[0] = (| pick_quad0_in[3:0]);
-	assign pick_quad_in[1] = (| pick_quad1_in[3:0]);
-	assign pick_quad_in[2] = (| pick_quad2_in[3:0]);
-	assign init_pick_state = ((~ dbb_rst_l) | (~ dbginit_l));
-	assign sel_lshift_quad = (leave_state1 &amp; (~ init_pick_state));
-	assign sel_same_quad = ((~ sel_lshift_quad) &amp; (~ init_pick_state));
+	assign pick_quad_in[0] = |pick_quad0_in[3:0];
+	assign pick_quad_in[1] = |pick_quad1_in[3:0];
+	assign pick_quad_in[2] = |pick_quad2_in[3:0];
+	assign init_pick_state = (~dbb_rst_l | ~dbginit_l);
+	assign sel_lshift_quad = (leave_state1 &amp; ~init_pick_state);
+	assign sel_same_quad = (~sel_lshift_quad &amp; ~init_pick_state);
 	assign lshift_quad_state = {quad_state[1:0], quad_state[2]};
 	mux3ds #(3) mux_quad_state_in(
 		.dout(quad_state_in[2:0]),
@@ -701,8 +701,8 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign sel_lshift_quad0 = ((leave_state1 &amp; (| latched_wb_read_wl[3:0])) &amp; (~ init_pick_state));
-	assign sel_same_quad0 = ((~ sel_lshift_quad0) &amp; (~ init_pick_state));
+	assign sel_lshift_quad0 = ((leave_state1 &amp; |latched_wb_read_wl[3:0]) &amp; ~init_pick_state);
+	assign sel_same_quad0 = (~sel_lshift_quad0 &amp; ~init_pick_state);
 	assign lshift_quad0_state = {quad0_state[2:0], quad0_state[3]};
 	mux3ds #(4) mux_quad0_state_in(
 		.dout(quad0_state_in[3:0]),
@@ -721,8 +721,8 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign sel_lshift_quad1 = ((leave_state1 &amp; (| latched_wb_read_wl[7:4])) &amp; (~ init_pick_state));
-	assign sel_same_quad1 = ((~ sel_lshift_quad1) &amp; (~ init_pick_state));
+	assign sel_lshift_quad1 = ((leave_state1 &amp; |latched_wb_read_wl[7:4]) &amp; ~init_pick_state);
+	assign sel_same_quad1 = (~sel_lshift_quad1 &amp; ~init_pick_state);
 	assign lshift_quad1_state = {quad1_state[2:0], quad1_state[3]};
 	mux3ds #(4) mux_quad1_state_in(
 		.dout(quad1_state_in[3:0]),
@@ -741,8 +741,8 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign sel_lshift_quad2 = ((leave_state1 &amp; (| latched_wb_read_wl[7:4])) &amp; (~ init_pick_state));
-	assign sel_same_quad2 = ((~ sel_lshift_quad2) &amp; (~ init_pick_state));
+	assign sel_lshift_quad2 = ((leave_state1 &amp; |latched_wb_read_wl[7:4]) &amp; ~init_pick_state);
+	assign sel_same_quad2 = (~sel_lshift_quad2 &amp; ~init_pick_state);
 	assign lshift_quad2_state = {quad2_state[2:0], quad2_state[3]};
 	mux3ds #(4) mux_quad2_state_in(
 		.dout(quad2_state_in[3:0]),
@@ -761,27 +761,27 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	assign pick_quad0_sel[0] = (pick_quad0_in[0] &amp; (((quad0_state[0] | (quad0_state[1] &amp; (~ ((pick_quad0_in[1] | pick_quad0_in[2]) | pick_quad0_in[3])))) | (quad0_state[2] &amp; (~ (pick_quad0_in[2] | pick_quad0_in[3])))) | (quad0_state[3] &amp; (~ pick_quad0_in[3]))));
-	assign pick_quad0_sel[1] = (pick_quad0_in[1] &amp; (((quad0_state[1] | (quad0_state[2] &amp; (~ ((pick_quad0_in[2] | pick_quad0_in[3]) | pick_quad0_in[0])))) | (quad0_state[3] &amp; (~ (pick_quad0_in[3] | pick_quad0_in[0])))) | (quad0_state[0] &amp; (~ pick_quad0_in[0]))));
-	assign pick_quad0_sel[2] = (pick_quad0_in[2] &amp; (((quad0_state[2] | (quad0_state[3] &amp; (~ ((pick_quad0_in[3] | pick_quad0_in[0]) | pick_quad0_in[1])))) | (quad0_state[0] &amp; (~ (pick_quad0_in[0] | pick_quad0_in[1])))) | (quad0_state[1] &amp; (~ pick_quad0_in[1]))));
-	assign pick_quad0_sel[3] = (pick_quad0_in[3] &amp; (((quad0_state[3] | (quad0_state[0] &amp; (~ ((pick_quad0_in[0] | pick_quad0_in[1]) | pick_quad0_in[2])))) | (quad0_state[1] &amp; (~ (pick_quad0_in[1] | pick_quad0_in[2])))) | (quad0_state[2] &amp; (~ pick_quad0_in[2]))));
-	assign pick_quad1_sel[0] = (pick_quad1_in[0] &amp; (((quad1_state[0] | (quad1_state[1] &amp; (~ ((pick_quad1_in[1] | pick_quad1_in[2]) | pick_quad1_in[3])))) | (quad1_state[2] &amp; (~ (pick_quad1_in[2] | pick_quad1_in[3])))) | (quad1_state[3] &amp; (~ pick_quad1_in[3]))));
-	assign pick_quad1_sel[1] = (pick_quad1_in[1] &amp; (((quad1_state[1] | (quad1_state[2] &amp; (~ ((pick_quad1_in[2] | pick_quad1_in[3]) | pick_quad1_in[0])))) | (quad1_state[3] &amp; (~ (pick_quad1_in[3] | pick_quad1_in[0])))) | (quad1_state[0] &amp; (~ pick_quad1_in[0]))));
-	assign pick_quad1_sel[2] = (pick_quad1_in[2] &amp; (((quad1_state[2] | (quad1_state[3] &amp; (~ ((pick_quad1_in[3] | pick_quad1_in[0]) | pick_quad1_in[1])))) | (quad1_state[0] &amp; (~ (pick_quad1_in[0] | pick_quad1_in[1])))) | (quad1_state[1] &amp; (~ pick_quad1_in[1]))));
-	assign pick_quad1_sel[3] = (pick_quad1_in[3] &amp; (((quad1_state[3] | (quad1_state[0] &amp; (~ ((pick_quad1_in[0] | pick_quad1_in[1]) | pick_quad1_in[2])))) | (quad1_state[1] &amp; (~ (pick_quad1_in[1] | pick_quad1_in[2])))) | (quad1_state[2] &amp; (~ pick_quad1_in[2]))));
-	assign pick_quad2_sel[0] = (pick_quad2_in[0] &amp; (((quad2_state[0] | (quad2_state[1] &amp; (~ ((pick_quad2_in[1] | pick_quad2_in[2]) | pick_quad2_in[3])))) | (quad2_state[2] &amp; (~ (pick_quad2_in[2] | pick_quad2_in[3])))) | (quad2_state[3] &amp; (~ pick_quad2_in[3]))));
-	assign pick_quad2_sel[1] = (pick_quad2_in[1] &amp; (((quad2_state[1] | (quad2_state[2] &amp; (~ ((pick_quad2_in[2] | pick_quad2_in[3]) | pick_quad2_in[0])))) | (quad2_state[3] &amp; (~ (pick_quad2_in[3] | pick_quad2_in[0])))) | (quad2_state[0] &amp; (~ pick_quad2_in[0]))));
-	assign pick_quad2_sel[2] = (pick_quad2_in[2] &amp; (((quad2_state[2] | (quad2_state[3] &amp; (~ ((pick_quad2_in[3] | pick_quad2_in[0]) | pick_quad2_in[1])))) | (quad2_state[0] &amp; (~ (pick_quad2_in[0] | pick_quad2_in[1])))) | (quad2_state[1] &amp; (~ pick_quad2_in[1]))));
-	assign pick_quad2_sel[3] = (pick_quad2_in[3] &amp; (((quad2_state[3] | (quad2_state[0] &amp; (~ ((pick_quad2_in[0] | pick_quad2_in[1]) | pick_quad2_in[2])))) | (quad2_state[1] &amp; (~ (pick_quad2_in[1] | pick_quad2_in[2])))) | (quad2_state[2] &amp; (~ pick_quad2_in[2]))));
-	assign pick_quad_sel[0] = (pick_quad_in[0] &amp; ((quad_state[0] | (quad_state[1] &amp; (~ (pick_quad_in[1] | pick_quad_in[2])))) | (quad_state[2] &amp; (~ pick_quad_in[2]))));
-	assign pick_quad_sel[1] = (pick_quad_in[1] &amp; ((quad_state[1] | (quad_state[2] &amp; (~ (pick_quad_in[2] | pick_quad_in[0])))) | (quad_state[0] &amp; (~ pick_quad_in[0]))));
-	assign pick_quad_sel[2] = (pick_quad_in[2] &amp; ((quad_state[2] | (quad_state[0] &amp; (~ (pick_quad_in[0] | pick_quad_in[1])))) | (quad_state[1] &amp; (~ pick_quad_in[1]))));
+	assign pick_quad0_sel[0] = (pick_quad0_in[0] &amp; (((quad0_state[0] | (quad0_state[1] &amp; ~((pick_quad0_in[1] | pick_quad0_in[2]) | pick_quad0_in[3]))) | (quad0_state[2] &amp; ~(pick_quad0_in[2] | pick_quad0_in[3]))) | (quad0_state[3] &amp; ~pick_quad0_in[3])));
+	assign pick_quad0_sel[1] = (pick_quad0_in[1] &amp; (((quad0_state[1] | (quad0_state[2] &amp; ~((pick_quad0_in[2] | pick_quad0_in[3]) | pick_quad0_in[0]))) | (quad0_state[3] &amp; ~(pick_quad0_in[3] | pick_quad0_in[0]))) | (quad0_state[0] &amp; ~pick_quad0_in[0])));
+	assign pick_quad0_sel[2] = (pick_quad0_in[2] &amp; (((quad0_state[2] | (quad0_state[3] &amp; ~((pick_quad0_in[3] | pick_quad0_in[0]) | pick_quad0_in[1]))) | (quad0_state[0] &amp; ~(pick_quad0_in[0] | pick_quad0_in[1]))) | (quad0_state[1] &amp; ~pick_quad0_in[1])));
+	assign pick_quad0_sel[3] = (pick_quad0_in[3] &amp; (((quad0_state[3] | (quad0_state[0] &amp; ~((pick_quad0_in[0] | pick_quad0_in[1]) | pick_quad0_in[2]))) | (quad0_state[1] &amp; ~(pick_quad0_in[1] | pick_quad0_in[2]))) | (quad0_state[2] &amp; ~pick_quad0_in[2])));
+	assign pick_quad1_sel[0] = (pick_quad1_in[0] &amp; (((quad1_state[0] | (quad1_state[1] &amp; ~((pick_quad1_in[1] | pick_quad1_in[2]) | pick_quad1_in[3]))) | (quad1_state[2] &amp; ~(pick_quad1_in[2] | pick_quad1_in[3]))) | (quad1_state[3] &amp; ~pick_quad1_in[3])));
+	assign pick_quad1_sel[1] = (pick_quad1_in[1] &amp; (((quad1_state[1] | (quad1_state[2] &amp; ~((pick_quad1_in[2] | pick_quad1_in[3]) | pick_quad1_in[0]))) | (quad1_state[3] &amp; ~(pick_quad1_in[3] | pick_quad1_in[0]))) | (quad1_state[0] &amp; ~pick_quad1_in[0])));
+	assign pick_quad1_sel[2] = (pick_quad1_in[2] &amp; (((quad1_state[2] | (quad1_state[3] &amp; ~((pick_quad1_in[3] | pick_quad1_in[0]) | pick_quad1_in[1]))) | (quad1_state[0] &amp; ~(pick_quad1_in[0] | pick_quad1_in[1]))) | (quad1_state[1] &amp; ~pick_quad1_in[1])));
+	assign pick_quad1_sel[3] = (pick_quad1_in[3] &amp; (((quad1_state[3] | (quad1_state[0] &amp; ~((pick_quad1_in[0] | pick_quad1_in[1]) | pick_quad1_in[2]))) | (quad1_state[1] &amp; ~(pick_quad1_in[1] | pick_quad1_in[2]))) | (quad1_state[2] &amp; ~pick_quad1_in[2])));
+	assign pick_quad2_sel[0] = (pick_quad2_in[0] &amp; (((quad2_state[0] | (quad2_state[1] &amp; ~((pick_quad2_in[1] | pick_quad2_in[2]) | pick_quad2_in[3]))) | (quad2_state[2] &amp; ~(pick_quad2_in[2] | pick_quad2_in[3]))) | (quad2_state[3] &amp; ~pick_quad2_in[3])));
+	assign pick_quad2_sel[1] = (pick_quad2_in[1] &amp; (((quad2_state[1] | (quad2_state[2] &amp; ~((pick_quad2_in[2] | pick_quad2_in[3]) | pick_quad2_in[0]))) | (quad2_state[3] &amp; ~(pick_quad2_in[3] | pick_quad2_in[0]))) | (quad2_state[0] &amp; ~pick_quad2_in[0])));
+	assign pick_quad2_sel[2] = (pick_quad2_in[2] &amp; (((quad2_state[2] | (quad2_state[3] &amp; ~((pick_quad2_in[3] | pick_quad2_in[0]) | pick_quad2_in[1]))) | (quad2_state[0] &amp; ~(pick_quad2_in[0] | pick_quad2_in[1]))) | (quad2_state[1] &amp; ~pick_quad2_in[1])));
+	assign pick_quad2_sel[3] = (pick_quad2_in[3] &amp; (((quad2_state[3] | (quad2_state[0] &amp; ~((pick_quad2_in[0] | pick_quad2_in[1]) | pick_quad2_in[2]))) | (quad2_state[1] &amp; ~(pick_quad2_in[1] | pick_quad2_in[2]))) | (quad2_state[2] &amp; ~pick_quad2_in[2])));
+	assign pick_quad_sel[0] = (pick_quad_in[0] &amp; ((quad_state[0] | (quad_state[1] &amp; ~(pick_quad_in[1] | pick_quad_in[2]))) | (quad_state[2] &amp; ~pick_quad_in[2])));
+	assign pick_quad_sel[1] = (pick_quad_in[1] &amp; ((quad_state[1] | (quad_state[2] &amp; ~(pick_quad_in[2] | pick_quad_in[0]))) | (quad_state[0] &amp; ~pick_quad_in[0])));
+	assign pick_quad_sel[2] = (pick_quad_in[2] &amp; ((quad_state[2] | (quad_state[0] &amp; ~(pick_quad_in[0] | pick_quad_in[1]))) | (quad_state[1] &amp; ~pick_quad_in[1])));
 	assign pick_wb_read_wl[3:0] = (pick_quad0_sel[3:0] &amp; {4 {pick_quad_sel[0]}});
 	assign pick_wb_read_wl[7:4] = (pick_quad1_sel[3:0] &amp; {4 {pick_quad_sel[1]}});
 	assign pick_rdmat_read_wl[3:0] = (pick_quad2_sel[3:0] &amp; {4 {pick_quad_sel[2]}});
-	assign inc_wb_count = (wbtag_write_en_c4 &amp; (~ (leave_state2 &amp; latched_wb_read_en)));
-	assign dec_wb_count = ((~ wbtag_write_en_c4) &amp; (leave_state2 &amp; latched_wb_read_en));
-	assign same_wb_count = (~ (inc_wb_count | dec_wb_count));
+	assign inc_wb_count = (wbtag_write_en_c4 &amp; ~(leave_state2 &amp; latched_wb_read_en));
+	assign dec_wb_count = (~wbtag_write_en_c4 &amp; (leave_state2 &amp; latched_wb_read_en));
+	assign same_wb_count = ~(inc_wb_count | dec_wb_count);
 	assign wb_count_plus1 = (wb_count + 4&#39;b1);
 	assign wb_count_minus1 = (wb_count - 4&#39;b1);
 	mux3ds #(4) mux_next_wb_count(
@@ -802,11 +802,9 @@ module sctag_wbctl (
 		.si(),
 		.so()
 	);
-	always @(wb_count) begin
-		if ((wb_count &gt; 4&#39;d8)) begin
+	always @(wb_count)
+		if ((wb_count &gt; 4&#39;d8))
 			$error(&#34;WB_COUNT&#34;, &#34;wb_counter overflow.&#34;);
-		end
-	end
 	assign wb_count_5 = (wb_count[3:0] == 4&#39;d5);
 	assign wb_count_5_plus = (wb_count[3:0] &gt; 4&#39;d5);
 	assign wbctl_arbctl_full_px1_in = (wb_count_5_plus | (wb_count_5 &amp; inc_wb_count));

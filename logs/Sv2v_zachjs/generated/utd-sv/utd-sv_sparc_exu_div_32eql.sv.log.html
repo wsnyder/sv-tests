@@ -51,7 +51,7 @@ module sparc_exu_div_32eql (
 	assign inxor[29] = (in[3] ^ in[2]);
 	assign inxor[30] = (in[2] ^ in[1]);
 	assign inxor[31] = (in[1] ^ in[0]);
-	assign equal = (~ notequal);
+	assign equal = ~notequal;
 	sparc_exu_aluor32 or32(
 		.out(notequal),
 		.in(inxor[31:0])

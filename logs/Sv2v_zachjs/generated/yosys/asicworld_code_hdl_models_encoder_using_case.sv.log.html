@@ -22,7 +22,7 @@ module encoder_using_case (
 	reg [3:0] binary_out;
 	always @(enable or encoder_in) begin
 		binary_out = 0;
-		if (enable) begin
+		if (enable)
 			case (encoder_in)
 				16&#39;h0002: binary_out = 1;
 				16&#39;h0004: binary_out = 2;
@@ -40,7 +40,6 @@ module encoder_using_case (
 				16&#39;h4000: binary_out = 14;
 				16&#39;h8000: binary_out = 15;
 			endcase
-		end
 	end
 endmodule
 

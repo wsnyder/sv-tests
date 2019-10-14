@@ -11,7 +11,37 @@ files: <a href="../../../../third_party/tests/utd-sv/sctag_dbgdp.v.html" target=
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/sctag_dbgdp.v.html#l-21" target="file-frame">third_party/tests/utd-sv/sctag_dbgdp.v:21</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module sctag_dbgdp (
+	so,
+	sctag_dbgbus_out,
+	arbdp_dbg_addr_c3,
+	arbdec_dbgdp_inst_c3,
+	arbctl_dbgdp_inst_vld_c3,
+	l2_dbg_en,
+	rclk,
+	si,
+	se
+);
+	output so;
+	input [29:0] arbdp_dbg_addr_c3;
+	input [8:0] arbdec_dbgdp_inst_c3;
+	input arbctl_dbgdp_inst_vld_c3;
+	input l2_dbg_en;
+	input rclk;
+	input si;
+	input se;
+	output [40:0] sctag_dbgbus_out;
+	wire [40:0] dbgbus_c3;
+	assign dbgbus_c3 = {l2_dbg_en, arbctl_dbgdp_inst_vld_c3, arbdec_dbgdp_inst_c3, arbdp_dbg_addr_c3};
+	dff_s #(41) ff_sctag_dbgbus_out(
+		.din(dbgbus_c3[40:0]),
+		.clk(rclk),
+		.q(sctag_dbgbus_out[40:0]),
+		.se(se),
+		.si(),
+		.so()
+	);
+endmodule
 
 
 </pre>

@@ -13,18 +13,12 @@ files: <a href="../../../tests/chapter-12/12.8--return_val.sv.html" target="file
 module jump_tb;
 	function signed [31:0] fun;
 		input reg signed [31:0] a;
-		begin
-			fun = (a * 3);
-		end
+		fun = (a * 3);
 	endfunction
-	initial begin
-		begin : sv2v_autoblock_1
-			reg signed [31:0] i;
-			for (i = 0; (i &lt; 256); i = (i + 1))
-				begin
-					$display(fun(i));
-				end
-		end
+	initial begin : sv2v_autoblock_1
+		reg signed [31:0] i;
+		for (i = 0; (i &lt; 256); i = (i + 1))
+			$display(fun(i));
 	end
 endmodule
 

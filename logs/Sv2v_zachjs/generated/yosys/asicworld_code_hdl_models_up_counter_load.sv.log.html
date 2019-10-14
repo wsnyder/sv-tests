@@ -26,15 +26,13 @@ module up_counter_load (
 	input clk;
 	input reset;
 	reg [7:0] out;
-	always @(posedge clk) if (reset) begin
-		out &lt;= 8&#39;b0;
-	end
-	else if (load) begin
-		out &lt;= data;
-	end
-	else if (enable) begin
-		out &lt;= (out + 1);
-	end
+	always @(posedge clk)
+		if (reset)
+			out &lt;= 8&#39;b0;
+		else if (load)
+			out &lt;= data;
+		else if (enable)
+			out &lt;= (out + 1);
 endmodule
 
 

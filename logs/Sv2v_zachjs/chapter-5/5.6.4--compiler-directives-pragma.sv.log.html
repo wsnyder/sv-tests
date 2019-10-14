@@ -10,7 +10,11 @@ top_module:
 files: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-pragma.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-pragma.sv</a>
 
 
-<a href="../../../tests/chapter-5/5.6.4--compiler-directives-pragma.sv.html#l-9" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-pragma.sv:9</a>:8: Lexical error: Undefined macro: pragma
+module ts;
+	`pragma protect
+	wire protected_wire;
+	`pragma protect end
+endmodule
 
 
 </pre>

@@ -24,12 +24,11 @@ module clk_div (
 	wire clk_in;
 	wire enable;
 	reg clk_out;
-	always @(posedge clk_in) if (reset) begin
-		clk_out &lt;= 1&#39;b0;
-	end
-	else if (enable) begin
-		clk_out &lt;= (! clk_out);
-	end
+	always @(posedge clk_in)
+		if (reset)
+			clk_out &lt;= 1&#39;b0;
+		else if (enable)
+			clk_out &lt;= !clk_out;
 endmodule
 
 

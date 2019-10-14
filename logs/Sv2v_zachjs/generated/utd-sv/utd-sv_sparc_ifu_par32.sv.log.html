@@ -17,7 +17,7 @@ module sparc_ifu_par32 (
 );
 	input [31:0] in;
 	output out;
-	assign out = (^ in[31:0]);
+	assign out = ^in[31:0];
 endmodule
 
 

@@ -99,7 +99,7 @@ module sctag_vd_dp (
 		.in0(vuad_array_rd_data_c1[24:13]),
 		.sel0(vuad_sel_rd),
 		.in1(valid_byp_c1[11:0]),
-		.sel1((~ vuad_sel_rd))
+		.sel1(~vuad_sel_rd)
 	);
 	dff_s #(12) ff_valid_c2(
 		.q(valid_c2[11:0]),
@@ -123,7 +123,7 @@ module sctag_vd_dp (
 		.in0({parity_wr_data_c6[3], valid_wr_data_c6[11:0]}),
 		.sel0(sel_vd_wr_data_byp),
 		.in1({parity_rd_byp_c2[3], valid_rd_byp_c2[11:0]}),
-		.sel1((~ sel_vd_wr_data_byp))
+		.sel1(~sel_vd_wr_data_byp)
 	);
 	assign diag_rd_vd_out[25] = parity_rd_c2[3];
 	assign diag_rd_vd_out[23:12] = valid_rd_c2[11:0];
@@ -132,14 +132,14 @@ module sctag_vd_dp (
 		.in0(valid_c2[11:0]),
 		.sel0(vuad_sel_c2),
 		.in1(valid_byp_c3_in[11:0]),
-		.sel1((~ vuad_sel_c2))
+		.sel1(~vuad_sel_c2)
 	);
 	mux2ds #(12) mux_valid_byp_c1(
 		.dout(valid_byp_c1[11:0]),
 		.in0(valid_byp_c2c3[11:0]),
 		.sel0(vuad_sel_c2orc3),
 		.in1(valid_byp_c4c5[11:0]),
-		.sel1((~ vuad_sel_c2orc3))
+		.sel1(~vuad_sel_c2orc3)
 	);
 	zzpar16 parity_vld_rd(
 		.z(valid_rd_parity_c2),
@@ -153,7 +153,7 @@ module sctag_vd_dp (
 		.si(),
 		.so()
 	);
-	assign valid_byp_c3_in = ((valid_c3 | fill_way_c3) &amp; (~ (({12 {vuad_evict_c3}} &amp; lru_way_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3))));
+	assign valid_byp_c3_in = ((valid_c3 | fill_way_c3) &amp; ~(({12 {vuad_evict_c3}} &amp; lru_way_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3)));
 	zzpar16 parity_vld_wr(
 		.z(parity_wr_c3[3]),
 		.d({4&#39;b0, valid_byp_c3_in[11:0]})
@@ -169,7 +169,7 @@ module sctag_vd_dp (
 	mux2ds #(13) mux_wr_array_valid_c4(
 		.dout(vuad_array_wr_data_c4[25:13]),
 		.in0({parity_wr_data_c4[3], valid_c4[11:0]}),
-		.sel0((~ bistordiag_wr_vd_c4)),
+		.sel0(~bistordiag_wr_vd_c4),
 		.in1(bistordiag_vd_data[25:13]),
 		.sel1(bistordiag_wr_vd_c4)
 	);
@@ -178,7 +178,7 @@ module sctag_vd_dp (
 		.in0(valid_c4[11:0]),
 		.sel0(vuad_sel_c4),
 		.in1(valid_wr_data_c5[11:0]),
-		.sel1((~ vuad_sel_c4))
+		.sel1(~vuad_sel_c4)
 	);
 	dff_s #(13) ff_valid_wr_c5(
 		.q({parity_wr_data_c5[3], valid_wr_data_c5[11:0]}),
@@ -201,7 +201,7 @@ module sctag_vd_dp (
 		.in0(vuad_array_rd_data_c1[11:0]),
 		.sel0(vuad_sel_rd),
 		.in1(dirty_byp_c1[11:0]),
-		.sel1((~ vuad_sel_rd))
+		.sel1(~vuad_sel_rd)
 	);
 	dff_s #(12) ff_dirty_c2(
 		.q(dirty_c2[11:0]),
@@ -224,7 +224,7 @@ module sctag_vd_dp (
 		.in0({parity_wr_data_c6[2], dirty_wr_data_c6[11:0]}),
 		.sel0(sel_vd_wr_data_byp),
 		.in1({parity_rd_byp_c2[2], dirty_rd_byp_c2[11:0]}),
-		.sel1((~ sel_vd_wr_data_byp))
+		.sel1(~sel_vd_wr_data_byp)
 	);
 	assign diag_rd_vd_out[24] = parity_rd_c2[2];
 	assign diag_rd_vd_out[11:0] = dirty_rd_c2[11:0];
@@ -233,14 +233,14 @@ module sctag_vd_dp (
 		.in0(dirty_c2[11:0]),
 		.sel0(vuad_sel_c2),
 		.in1(dirty_byp_c3_in[11:0]),
-		.sel1((~ vuad_sel_c2))
+		.sel1(~vuad_sel_c2)
 	);
 	mux2ds #(12) mux_dirty_byp_c1(
 		.dout(dirty_byp_c1[11:0]),
 		.in0(dirty_byp_c2c3[11:0]),
 		.sel0(vuad_sel_c2orc3),
 		.in1(dirty_byp_c4c5[11:0]),
-		.sel1((~ vuad_sel_c2orc3))
+		.sel1(~vuad_sel_c2orc3)
 	);
 	zzpar16 parity_dir_rd(
 		.z(dirty_rd_parity_c2),
@@ -249,7 +249,7 @@ module sctag_vd_dp (
 	mux2ds #(12) mux_dirty_byp_c2_in(
 		.dout(dirty_byp_c2_in[11:0]),
 		.in0(dirty_c2[11:0]),
-		.sel0((~ vuad_sel_c2_d1)),
+		.sel0(~vuad_sel_c2_d1),
 		.in1(dirty_byp_c3_in[11:0]),
 		.sel1(vuad_sel_c2_d1)
 	);
@@ -261,8 +261,8 @@ module sctag_vd_dp (
 		.si(),
 		.so()
 	);
-	assign dirty_byp_c3_in = ((dirty_c3 | ({12 {st_to_data_array_c3}} &amp; hit_wayvld_c3)) &amp; (~ (({12 {vuad_evict_c3}} &amp; lru_way_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3))));
-	assign dirty_evict_c3 = (vuad_evict_c3 &amp; (| (lru_way_c3 &amp; dirty_c3)));
+	assign dirty_byp_c3_in = ((dirty_c3 | ({12 {st_to_data_array_c3}} &amp; hit_wayvld_c3)) &amp; ~(({12 {vuad_evict_c3}} &amp; lru_way_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3)));
+	assign dirty_evict_c3 = (vuad_evict_c3 &amp; |(lru_way_c3 &amp; dirty_c3));
 	zzpar16 parity_dir_wr(
 		.z(parity_wr_c3[2]),
 		.d({4&#39;b0, dirty_byp_c3_in[11:0]})
@@ -278,7 +278,7 @@ module sctag_vd_dp (
 	mux2ds #(13) mux_wr_array_dirty_c4(
 		.dout(vuad_array_wr_data_c4[12:0]),
 		.in0({parity_wr_data_c4[2], dirty_c4[11:0]}),
-		.sel0((~ bistordiag_wr_vd_c4)),
+		.sel0(~bistordiag_wr_vd_c4),
 		.in1(bistordiag_vd_data[12:0]),
 		.sel1(bistordiag_wr_vd_c4)
 	);
@@ -287,7 +287,7 @@ module sctag_vd_dp (
 		.in0(dirty_c4[11:0]),
 		.sel0(vuad_sel_c4),
 		.in1(dirty_wr_data_c5[11:0]),
-		.sel1((~ vuad_sel_c4))
+		.sel1(~vuad_sel_c4)
 	);
 	dff_s #(13) ff_dirty_wr_c5(
 		.q({parity_wr_data_c5[2], dirty_wr_data_c5[11:0]}),

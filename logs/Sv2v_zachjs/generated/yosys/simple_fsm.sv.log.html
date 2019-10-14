@@ -38,37 +38,45 @@ module fsm_test (
 		red_b &lt;= 1;
 		green_a &lt;= 0;
 		green_b &lt;= 0;
-		if (reset) state &lt;= 100;
-		else case (state)
-			100: begin
-				if ((button_a &amp;&amp; (! button_b))) state &lt;= 200;
-				if (((! button_a) &amp;&amp; button_b)) state &lt;= 300;
-			end
-			200: begin
-				red_a &lt;= 0;
-				green_a &lt;= 1;
-				cnt &lt;= (cnt + 1);
-				if ((cnt == 5)) state &lt;= 210;
-			end
-			210: begin
-				red_a &lt;= 0;
-				green_a &lt;= cnt[0];
-				cnt &lt;= (cnt + 1);
-				if ((cnt == 10)) state &lt;= 100;
-			end
-			300: begin
-				red_b &lt;= 0;
-				green_b &lt;= 1;
-				cnt &lt;= (cnt + 1);
-				if ((cnt == 5)) state &lt;= 310;
-			end
-			310: begin
-				red_b &lt;= 0;
-				green_b &lt;= cnt[0];
-				cnt &lt;= (cnt + 1);
-				if ((cnt == 10)) state &lt;= 100;
-			end
-		endcase
+		if (reset)
+			state &lt;= 100;
+		else
+			case (state)
+				100: begin
+					if ((button_a &amp;&amp; !button_b))
+						state &lt;= 200;
+					if ((!button_a &amp;&amp; button_b))
+						state &lt;= 300;
+				end
+				200: begin
+					red_a &lt;= 0;
+					green_a &lt;= 1;
+					cnt &lt;= (cnt + 1);
+					if ((cnt == 5))
+						state &lt;= 210;
+				end
+				210: begin
+					red_a &lt;= 0;
+					green_a &lt;= cnt[0];
+					cnt &lt;= (cnt + 1);
+					if ((cnt == 10))
+						state &lt;= 100;
+				end
+				300: begin
+					red_b &lt;= 0;
+					green_b &lt;= 1;
+					cnt &lt;= (cnt + 1);
+					if ((cnt == 5))
+						state &lt;= 310;
+				end
+				310: begin
+					red_b &lt;= 0;
+					green_b &lt;= cnt[0];
+					cnt &lt;= (cnt + 1);
+					if ((cnt == 10))
+						state &lt;= 100;
+				end
+			endcase
 	end
 endmodule
 

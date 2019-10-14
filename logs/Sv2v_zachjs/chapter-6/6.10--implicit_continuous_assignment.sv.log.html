@@ -13,7 +13,7 @@ files: <a href="../../../tests/chapter-6/6.10--implicit_continuous_assignment.sv
 module top;
 	wire [3:0] a = 8;
 	wire [3:0] b = 5;
-	assign c = (| (a | b));
+	assign c = |(a | b);
 endmodule
 
 

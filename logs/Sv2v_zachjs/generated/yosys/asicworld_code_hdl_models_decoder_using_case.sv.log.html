@@ -22,7 +22,7 @@ module decoder_using_case (
 	reg [15:0] decoder_out;
 	always @(enable or binary_in) begin
 		decoder_out = 0;
-		if (enable) begin
+		if (enable)
 			case (binary_in)
 				4&#39;h0: decoder_out = 16&#39;h0001;
 				4&#39;h1: decoder_out = 16&#39;h0002;
@@ -41,7 +41,6 @@ module decoder_using_case (
 				4&#39;hE: decoder_out = 16&#39;h4000;
 				4&#39;hF: decoder_out = 16&#39;h8000;
 			endcase
-		end
 	end
 endmodule
 

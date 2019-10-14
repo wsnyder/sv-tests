@@ -22,9 +22,7 @@ module reg_combo_example (
 	reg y;
 	wire a;
 	wire b;
-	always @(a or b) begin
-		y = (a &amp; b);
-	end
+	always @(a or b) y = (a &amp; b);
 endmodule
 
 

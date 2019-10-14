@@ -20,7 +20,7 @@ module retime_test (
 	input [7:0] a;
 	output z;
 	reg [7:0] ff = 8&#39;hF5;
-	always @(posedge clk) ff &lt;= {ff[6:0], (^ a)};
+	always @(posedge clk) ff &lt;= {ff[6:0], ^a};
 	assign z = ff[7];
 endmodule
 

@@ -13,10 +13,10 @@ files: <a href="../../../tests/chapter-12/12.4--if_else.sv.html" target="file-fr
 module if_tb;
 	wire a = 0;
 	reg b = 0;
-	always begin
-		if (a) b = 1;
-		else b = 0;
-	end
+	always if (a)
+		b = 1;
+	else
+		b = 0;
 endmodule
 
 

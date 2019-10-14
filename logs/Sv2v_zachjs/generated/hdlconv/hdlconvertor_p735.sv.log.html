@@ -76,7 +76,8 @@ module vdff (
 	input [(size - 1):0] in;
 	input clk;
 	reg [(size - 1):0] out;
-	always @(posedge clk) #(delay) out = in;
+	always @(posedge clk)
+		#(delay) out = in;
 endmodule
 
 

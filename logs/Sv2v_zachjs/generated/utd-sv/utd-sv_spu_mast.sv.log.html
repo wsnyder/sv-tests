@@ -134,8 +134,8 @@ module spu_mast (
 		.so()
 	);
 	wire start_stop = (spu_mactl_iss_pulse_dly &amp; mactl_stop);
-	assign spu_mast_st_done = ((((cur_wait4stdrain_state &amp; (~ len_neqz)) &amp; rd_cntr_q[0]) | cur_laststreq_state) &amp; streq_ack);
-	assign nxt_idle_state = ((state_reset | spu_mast_st_done) | (cur_idle_state &amp; (~ start_stop)));
+	assign spu_mast_st_done = ((((cur_wait4stdrain_state &amp; ~len_neqz) &amp; rd_cntr_q[0]) | cur_laststreq_state) &amp; streq_ack);
+	assign nxt_idle_state = ((state_reset | spu_mast_st_done) | (cur_idle_state &amp; ~start_stop));
 	wire tr2rdmem_frm_idle = (cur_idle_state &amp; start_stop);
 	wire dly_tr2rdmem_frm_idle;
 	dff_s #(1) dly_tr2rdmem_frm_idle_ff(
@@ -148,9 +148,9 @@ module spu_mast (
 	);
 	assign tr2rdmem_frm_wait4stdrain = ((cur_wait4stdrain_state &amp; (streq_ack | spu_mast_allow_rdmem)) &amp; len_neqz);
 	assign nxt_rdmem_state = (dly_tr2rdmem_frm_idle | tr2rdmem_frm_wait4stdrain);
-	assign nxt_wait4stdrain_state = (cur_rdmem_state | (cur_wait4stdrain_state &amp; (~ (streq_ack | (spu_mast_allow_rdmem &amp; len_neqz)))));
-	assign tr2laststreq_frm_wait4stdrain = (((cur_wait4stdrain_state &amp; streq_ack) &amp; (~ len_neqz)) &amp; (~ rd_cntr_q[0]));
-	assign nxt_laststreq_state = (tr2laststreq_frm_wait4stdrain | (cur_laststreq_state &amp; (~ streq_ack)));
+	assign nxt_wait4stdrain_state = (cur_rdmem_state | (cur_wait4stdrain_state &amp; ~(streq_ack | (spu_mast_allow_rdmem &amp; len_neqz))));
+	assign tr2laststreq_frm_wait4stdrain = (((cur_wait4stdrain_state &amp; streq_ack) &amp; ~len_neqz) &amp; ~rd_cntr_q[0]);
+	assign nxt_laststreq_state = (tr2laststreq_frm_wait4stdrain | (cur_laststreq_state &amp; ~streq_ack));
 	wire tr2laststreq_frm_wait4stdrain_dly;
 	dff_s #(1) tr2laststreq_frm_wait4stdrain_ff(
 		.din(tr2laststreq_frm_wait4stdrain),
@@ -161,7 +161,7 @@ module spu_mast (
 		.so()
 	);
 	assign spu_mast_maaddr_addrinc = cur_rdmem_state;
-	assign spu_mast_memren = (cur_rdmem_state &amp; (~ local_kill_abort));
+	assign spu_mast_memren = (cur_rdmem_state &amp; ~local_kill_abort);
 	wire cur_rdmem_state_dly;
 	dff_s #(1) cur_rdmem_state_ff(
 		.din(cur_rdmem_state),
@@ -182,8 +182,8 @@ module spu_mast (
 		.so()
 	);
 	assign spu_mast_stbuf_wen = cur_rdmem_state_dly;
-	assign spu_mast_streq = (((((((cur_rdmem_state_dly3 &amp; start_set) &amp; (~ rd_cntr_q[1])) | (streq_ack_dly &amp; len_neqz)) | tr2laststreq_frm_wait4stdrain_dly) &amp; (~ cur_idle_state)) &amp; (~ spu_mactl_perr_set)) &amp; (~ spu_mactl_stxa_force_abort));
-	assign local_kill_abort = (((((cur_rdmem_state_dly3 &amp; start_set) &amp; (~ rd_cntr_q[1])) | (streq_ack_dly &amp; len_neqz)) | tr2laststreq_frm_wait4stdrain_dly) &amp; (spu_mactl_perr_set | spu_mactl_stxa_force_abort));
+	assign spu_mast_streq = (((((((cur_rdmem_state_dly3 &amp; start_set) &amp; ~rd_cntr_q[1]) | (streq_ack_dly &amp; len_neqz)) | tr2laststreq_frm_wait4stdrain_dly) &amp; ~cur_idle_state) &amp; ~spu_mactl_perr_set) &amp; ~spu_mactl_stxa_force_abort);
+	assign local_kill_abort = (((((cur_rdmem_state_dly3 &amp; start_set) &amp; ~rd_cntr_q[1]) | (streq_ack_dly &amp; len_neqz)) | tr2laststreq_frm_wait4stdrain_dly) &amp; (spu_mactl_perr_set | spu_mactl_stxa_force_abort));
 	wire tr2rdmem_frm_wait4stdrain_dly;
 	dff_s #(1) tr2rdmem_frm_wait4stdrain_ff(
 		.din(tr2rdmem_frm_wait4stdrain),
@@ -226,7 +226,7 @@ module spu_mast (
 		.si(),
 		.so()
 	);
-	assign spu_mast_allow_rdmem = ((start_set &amp; (~ rd_cntr_q[1])) &amp; cur_rdmem_state_dly3);
+	assign spu_mast_allow_rdmem = ((start_set &amp; ~rd_cntr_q[1]) &amp; cur_rdmem_state_dly3);
 endmodule
 
 

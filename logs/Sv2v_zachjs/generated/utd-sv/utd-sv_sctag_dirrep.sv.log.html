@@ -118,12 +118,12 @@ module sctag_dirrep (
 		.q(tagdp_lkup_addr11_c5),
 		.din(tagdp_lkup_addr11_c4),
 		.clk(rclk),
-		.en((~ sehold)),
+		.en(~sehold),
 		.se(se),
 		.si(),
 		.so()
 	);
-	assign dir_error_c7 = ((| ic_parity_out) | (| dc_parity_out));
+	assign dir_error_c7 = (|ic_parity_out | |dc_parity_out);
 	dff_s #(1) ff_dir_error_c8(
 		.q(dir_error_c8),
 		.din(dir_error_c7),
@@ -204,9 +204,9 @@ module sctag_dirrep (
 		.si(),
 		.so()
 	);
-	assign dc_rdwr_panel_dec_c4[0] = ((~ dir_panel_dcd_c4[4]) &amp; (~ dir_panel_dcd_c4[3]));
-	assign dc_rdwr_panel_dec_c4[1] = ((~ dir_panel_dcd_c4[4]) &amp; dir_panel_dcd_c4[3]);
-	assign dc_rdwr_panel_dec_c4[2] = (dir_panel_dcd_c4[4] &amp; (~ dir_panel_dcd_c4[3]));
+	assign dc_rdwr_panel_dec_c4[0] = (~dir_panel_dcd_c4[4] &amp; ~dir_panel_dcd_c4[3]);
+	assign dc_rdwr_panel_dec_c4[1] = (~dir_panel_dcd_c4[4] &amp; dir_panel_dcd_c4[3]);
+	assign dc_rdwr_panel_dec_c4[2] = (dir_panel_dcd_c4[4] &amp; ~dir_panel_dcd_c4[3]);
 	assign dc_rdwr_panel_dec_c4[3] = (dir_panel_dcd_c4[4] &amp; dir_panel_dcd_c4[3]);
 	assign dc_rdwr_row_en_c4[0] = (dir_panel_dcd_c4[1:0] == 2&#39;d0);
 	assign dc_rdwr_row_en_c4[1] = (dir_panel_dcd_c4[1:0] == 2&#39;d1);

@@ -32,12 +32,12 @@ module sparc_exu_ecl_cnt6 (
 	assign tog3 = ((cntr[0] &amp; cntr[1]) &amp; cntr[2]);
 	assign tog4 = (((cntr[0] &amp; cntr[1]) &amp; cntr[2]) &amp; cntr[3]);
 	assign tog5 = ((((cntr[0] &amp; cntr[1]) &amp; cntr[2]) &amp; cntr[3]) &amp; cntr[4]);
-	assign next_cntr[0] = ((~ reset) &amp; (~ cntr[0]));
-	assign next_cntr[1] = ((~ reset) &amp; (((~ cntr[1]) &amp; tog1) | (cntr[1] &amp; (~ tog1))));
-	assign next_cntr[2] = ((~ reset) &amp; (((~ cntr[2]) &amp; tog2) | (cntr[2] &amp; (~ tog2))));
-	assign next_cntr[3] = ((~ reset) &amp; (((~ cntr[3]) &amp; tog3) | (cntr[3] &amp; (~ tog3))));
-	assign next_cntr[4] = ((~ reset) &amp; (((~ cntr[4]) &amp; tog4) | (cntr[4] &amp; (~ tog4))));
-	assign next_cntr[5] = ((~ reset) &amp; (((~ cntr[5]) &amp; tog5) | (cntr[5] &amp; (~ tog5))));
+	assign next_cntr[0] = (~reset &amp; ~cntr[0]);
+	assign next_cntr[1] = (~reset &amp; ((~cntr[1] &amp; tog1) | (cntr[1] &amp; ~tog1)));
+	assign next_cntr[2] = (~reset &amp; ((~cntr[2] &amp; tog2) | (cntr[2] &amp; ~tog2)));
+	assign next_cntr[3] = (~reset &amp; ((~cntr[3] &amp; tog3) | (cntr[3] &amp; ~tog3)));
+	assign next_cntr[4] = (~reset &amp; ((~cntr[4] &amp; tog4) | (cntr[4] &amp; ~tog4)));
+	assign next_cntr[5] = (~reset &amp; ((~cntr[5] &amp; tog5) | (cntr[5] &amp; ~tog5)));
 	dff_s #(6) cntr_dff(
 		.din(next_cntr[5:0]),
 		.clk(clk),

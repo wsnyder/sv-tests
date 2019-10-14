@@ -13,9 +13,7 @@ files: <a href="../../../tests/chapter-11/11.5.1--non_idx_part_select.sv.html" t
 module top;
 	wire [15:0] a;
 	reg [3:0] b;
-	initial begin
-		b = a[11:8];
-	end
+	initial b = a[11:8];
 endmodule
 
 

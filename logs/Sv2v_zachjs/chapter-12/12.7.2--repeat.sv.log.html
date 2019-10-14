@@ -12,9 +12,7 @@ files: <a href="../../../tests/chapter-12/12.7.2--repeat.sv.html" target="file-f
 
 module repeat_tb;
 	wire signed [31:0] a = 128;
-	initial begin
-		repeat (a) $display(&#34;repeat&#34;);
-	end
+	initial repeat (a) $display(&#34;repeat&#34;);
 endmodule
 
 

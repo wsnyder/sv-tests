@@ -11,7 +11,97 @@ files: <a href="../../../../third_party/tests/utd-sv/pcx_dp_array02.v.html" targ
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/pcx_dp_array02.v.html#l-29" target="file-frame">third_party/tests/utd-sv/pcx_dp_array02.v:29</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module pcx_dp_array02 (
+	pcx_scache2_data_px_l,
+	pcx_scache0_data_px_l,
+	scan_out,
+	spc7_pcx_data_pa,
+	spc6_pcx_data_pa,
+	spc5_pcx_data_pa,
+	spc4_pcx_data_pa,
+	spc3_pcx_data_pa,
+	spc2_pcx_data_pa,
+	spc1_pcx_data_pa,
+	spc0_pcx_data_pa,
+	shiftenable,
+	rclk,
+	arbpc2_pcxdp_shift_px,
+	arbpc2_pcxdp_qsel1_pa,
+	arbpc2_pcxdp_qsel0_pa,
+	arbpc2_pcxdp_q0_hold_pa,
+	arbpc2_pcxdp_grant_pa,
+	arbpc0_pcxdp_shift_px,
+	arbpc0_pcxdp_qsel1_pa,
+	arbpc0_pcxdp_qsel0_pa,
+	arbpc0_pcxdp_q0_hold_pa,
+	arbpc0_pcxdp_grant_pa,
+	scan_in
+);
+	output [123:0] pcx_scache0_data_px_l;
+	output [123:0] pcx_scache2_data_px_l;
+	input [7:0] arbpc0_pcxdp_grant_pa;
+	input [7:0] arbpc0_pcxdp_q0_hold_pa;
+	input [7:0] arbpc0_pcxdp_qsel0_pa;
+	input [7:0] arbpc0_pcxdp_qsel1_pa;
+	input [7:0] arbpc0_pcxdp_shift_px;
+	input [7:0] arbpc2_pcxdp_grant_pa;
+	input [7:0] arbpc2_pcxdp_q0_hold_pa;
+	input [7:0] arbpc2_pcxdp_qsel0_pa;
+	input [7:0] arbpc2_pcxdp_qsel1_pa;
+	input [7:0] arbpc2_pcxdp_shift_px;
+	input rclk;
+	input shiftenable;
+	input [123:0] spc0_pcx_data_pa;
+	input [123:0] spc1_pcx_data_pa;
+	input [123:0] spc2_pcx_data_pa;
+	input [123:0] spc3_pcx_data_pa;
+	input [123:0] spc4_pcx_data_pa;
+	input [123:0] spc5_pcx_data_pa;
+	input [123:0] spc6_pcx_data_pa;
+	input [123:0] spc7_pcx_data_pa;
+	input scan_in;
+	output scan_out;
+	pcx_dp0 pcx_dp0(
+		.scan_out(),
+		.pcx_scache0_data_px_l(pcx_scache0_data_px_l[123:0]),
+		.arbpc0_pcxdp_grant_pa(arbpc0_pcxdp_grant_pa[7:0]),
+		.arbpc0_pcxdp_q0_hold_pa(arbpc0_pcxdp_q0_hold_pa[7:0]),
+		.arbpc0_pcxdp_qsel0_pa(arbpc0_pcxdp_qsel0_pa[7:0]),
+		.arbpc0_pcxdp_qsel1_pa(arbpc0_pcxdp_qsel1_pa[7:0]),
+		.arbpc0_pcxdp_shift_px(arbpc0_pcxdp_shift_px[7:0]),
+		.rclk(rclk),
+		.scan_in(),
+		.shiftenable(shiftenable),
+		.spc0_pcx_data_pa(spc0_pcx_data_pa[123:0]),
+		.spc1_pcx_data_pa(spc1_pcx_data_pa[123:0]),
+		.spc2_pcx_data_pa(spc2_pcx_data_pa[123:0]),
+		.spc3_pcx_data_pa(spc3_pcx_data_pa[123:0]),
+		.spc4_pcx_data_pa(spc4_pcx_data_pa[123:0]),
+		.spc5_pcx_data_pa(spc5_pcx_data_pa[123:0]),
+		.spc6_pcx_data_pa(spc6_pcx_data_pa[123:0]),
+		.spc7_pcx_data_pa(spc7_pcx_data_pa[123:0])
+	);
+	pcx_dp2 pcx_dp2(
+		.scan_out(),
+		.pcx_scache2_data_px_l(pcx_scache2_data_px_l[123:0]),
+		.arbpc2_pcxdp_grant_pa(arbpc2_pcxdp_grant_pa[7:0]),
+		.arbpc2_pcxdp_q0_hold_pa(arbpc2_pcxdp_q0_hold_pa[7:0]),
+		.arbpc2_pcxdp_qsel0_pa(arbpc2_pcxdp_qsel0_pa[7:0]),
+		.arbpc2_pcxdp_qsel1_pa(arbpc2_pcxdp_qsel1_pa[7:0]),
+		.arbpc2_pcxdp_shift_px(arbpc2_pcxdp_shift_px[7:0]),
+		.rclk(rclk),
+		.scan_in(),
+		.shiftenable(shiftenable),
+		.spc0_pcx_data_pa(spc0_pcx_data_pa[123:0]),
+		.spc1_pcx_data_pa(spc1_pcx_data_pa[123:0]),
+		.spc2_pcx_data_pa(spc2_pcx_data_pa[123:0]),
+		.spc3_pcx_data_pa(spc3_pcx_data_pa[123:0]),
+		.spc4_pcx_data_pa(spc4_pcx_data_pa[123:0]),
+		.spc5_pcx_data_pa(spc5_pcx_data_pa[123:0]),
+		.spc6_pcx_data_pa(spc6_pcx_data_pa[123:0]),
+		.spc7_pcx_data_pa(spc7_pcx_data_pa[123:0])
+	);
+endmodule
 
 
 </pre>

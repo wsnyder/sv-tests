@@ -22,14 +22,11 @@ module flif_flop (
 	input d;
 	output q;
 	reg q;
-	always @(posedge clk) begin
-		if ((reset == 1)) begin
+	always @(posedge clk)
+		if ((reset == 1))
 			q &lt;= 0;
-		end
-		else begin
+		else
 			q &lt;= d;
-		end
-	end
 endmodule
 
 

@@ -73,8 +73,8 @@ module fpu_out_ctl (
 		.si(),
 		.so()
 	);
-	assign reset = (! out_ctl_rst_l);
-	assign add_req_in = (! add_req);
+	assign reset = !out_ctl_rst_l;
+	assign add_req_in = !add_req;
 	assign add_req_step = (add_req_sel || mul_req_sel);
 	dffre_s #(1) i_add_req(
 		.din(add_req_in),
@@ -87,8 +87,8 @@ module fpu_out_ctl (
 		.so()
 	);
 	assign div_req_sel = d8stg_fdiv_in;
-	assign mul_req_sel = ((m6stg_fmul_in &amp;&amp; ((! add_req) || (! a6stg_fadd_in))) &amp;&amp; (! div_req_sel));
-	assign add_req_sel = ((a6stg_fadd_in &amp;&amp; (add_req || (! m6stg_fmul_in))) &amp;&amp; (! div_req_sel));
+	assign mul_req_sel = ((m6stg_fmul_in &amp;&amp; (!add_req || !a6stg_fadd_in)) &amp;&amp; !div_req_sel);
+	assign add_req_sel = ((a6stg_fadd_in &amp;&amp; (add_req || !m6stg_fmul_in)) &amp;&amp; !div_req_sel);
 	assign out_id[9:0] = ((({10 {div_req_sel}} &amp; div_id_out_in[9:0]) | ({10 {mul_req_sel}} &amp; m6stg_id_in[9:0])) | ({10 {add_req_sel}} &amp; add_id_out_in[9:0]));
 	dff_s #(8) i_fp_cpx_req_cq(
 		.din(out_id[9:2]),

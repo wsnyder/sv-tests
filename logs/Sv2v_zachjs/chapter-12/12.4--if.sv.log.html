@@ -13,9 +13,8 @@ files: <a href="../../../tests/chapter-12/12.4--if.sv.html" target="file-frame">
 module if_tb;
 	wire a = 0;
 	reg b = 0;
-	always begin
-		if (a) b = 1;
-	end
+	always if (a)
+		b = 1;
 endmodule
 
 

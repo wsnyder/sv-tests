@@ -27,15 +27,14 @@ module lfsr_updown (
 	output overflow;
 	reg [7:0] count;
 	assign overflow = (up_down ? (count == {{7 {1&#39;b0}}, 1&#39;b1}) : (count == {1&#39;b1, {7 {1&#39;b0}}}));
-	always @(posedge clk) if (reset) count &lt;= {8 {1&#39;b0}};
-	else if (enable) begin
-		if (up_down) begin
-			count &lt;= {(~ (^ (count &amp; 8&#39;b01100011))), count[7:1]};
-		end
-		else begin
-			count &lt;= {count[6:0], (~ (^ (count &amp; 8&#39;b10110001)))};
-		end
-	end
+	always @(posedge clk)
+		if (reset)
+			count &lt;= {8 {1&#39;b0}};
+		else if (enable)
+			if (up_down)
+				count &lt;= {~^(count &amp; 8&#39;b01100011), count[7:1]};
+			else
+				count &lt;= {count[6:0], ~^(count &amp; 8&#39;b10110001)};
 endmodule
 
 

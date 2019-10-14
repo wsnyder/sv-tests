@@ -69,7 +69,7 @@ module sctag_vuadcol_dp (
 		.dout(data_out_col[25:0]),
 		.in0(hi_4to1[25:0]),
 		.in1(lo_4to1[25:0]),
-		.sel0((~ mux2_sel)),
+		.sel0(~mux2_sel),
 		.sel1(mux2_sel)
 	);
 endmodule

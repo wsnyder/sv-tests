@@ -21,13 +21,14 @@ module top (
 	B B();
 	assign A.i = i;
 	assign o = B.o;
-	always @(*) ;
+	always @(*)
+		;
 endmodule
 module A;
 	wire i;
 	wire y;
-	assign B.x = (! i);
-	assign y = (! B.y);
+	assign B.x = !i;
+	assign y = !B.y;
 endmodule
 module B;
 	wire x;

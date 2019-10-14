@@ -31,7 +31,8 @@ module generic_sram_byte_en (
 	integer i;
 	always @(posedge i_clk) begin
 		for (i = 0; (i &lt; (DATA_WIDTH / 8)); i = (i + 1))
-			if ((i_write_enable &amp;&amp; i_byte_enable[i])) mem[i_address][(i * 8)+:8] &lt;= i_write_data[(i * 8)+:8];
+			if ((i_write_enable &amp;&amp; i_byte_enable[i]))
+				mem[i_address][(i * 8)+:8] &lt;= i_write_data[(i * 8)+:8];
 		o_read_data &lt;= mem[i_address];
 	end
 endmodule

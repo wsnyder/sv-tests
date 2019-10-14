@@ -11,7 +11,48 @@ files: <a href="../../../../third_party/tests/utd-sv/pcx_data_px2.v.html" target
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/pcx_data_px2.v.html#l-25" target="file-frame">third_party/tests/utd-sv/pcx_data_px2.v:25</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module pcx_data_px2 (
+	pcx_data_px2,
+	pcx_data_rdy_px2,
+	pcx_stall_pq_buf,
+	so,
+	pcx_data_px_l,
+	pcx_data_rdy_px,
+	pcx_stall_pq,
+	rclk,
+	si,
+	se
+);
+	output [123:0] pcx_data_px2;
+	output pcx_data_rdy_px2;
+	output pcx_stall_pq_buf;
+	output so;
+	input [123:0] pcx_data_px_l;
+	input pcx_data_rdy_px;
+	input pcx_stall_pq;
+	input rclk;
+	input si;
+	input se;
+	wire [123:0] pcx_data_px2_l;
+	dff_s #(124) dff_cpx_data(
+		.din(pcx_data_px_l[123:0]),
+		.q(pcx_data_px2_l[123:0]),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(124&#39;d0),
+		.so()
+	);
+	assign pcx_data_px2 = ~pcx_data_px2_l;
+	dff_s #(1) dff_cpx_datardy(
+		.din(pcx_data_rdy_px),
+		.q(pcx_data_rdy_px2),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;d0),
+		.so()
+	);
+	assign pcx_stall_pq_buf = pcx_stall_pq;
+endmodule
 
 
 </pre>

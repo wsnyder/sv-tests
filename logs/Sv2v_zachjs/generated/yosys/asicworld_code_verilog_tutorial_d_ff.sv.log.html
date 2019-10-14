@@ -27,7 +27,7 @@ module d_ff (
 	reg q_bar;
 	always @(posedge clk) begin
 		q &lt;= d;
-		q_bar &lt;= (! d);
+		q_bar &lt;= !d;
 	end
 endmodule
 

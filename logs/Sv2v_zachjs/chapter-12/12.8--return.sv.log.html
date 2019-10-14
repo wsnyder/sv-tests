@@ -15,17 +15,14 @@ module jump_tb;
 		input reg signed [31:0] a;
 		begin
 			$display(&#34;a&#34;);
-			if ((a == 21)) ;
+			if ((a == 21))
+				;
 		end
 	endtask
-	initial begin
-		begin : sv2v_autoblock_1
-			reg signed [31:0] i;
-			for (i = 0; (i &lt; 256); i = (i + 1))
-				begin
-					fun(i);
-				end
-		end
+	initial begin : sv2v_autoblock_1
+		reg signed [31:0] i;
+		for (i = 0; (i &lt; 256); i = (i + 1))
+			fun(i);
 	end
 endmodule
 

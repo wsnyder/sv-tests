@@ -31,7 +31,8 @@ module top (
 	(* keep *) wire dummy;
 	always @(posedge clk) begin
 		rdata &lt;= (re ? (reset ? 8&#39;b0 : bram[addr]) : rdata);
-		if (we) bram[addr] &lt;= wdata;
+		if (we)
+			bram[addr] &lt;= wdata;
 	end
 endmodule
 

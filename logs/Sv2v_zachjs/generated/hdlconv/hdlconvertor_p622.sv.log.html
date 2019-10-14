@@ -41,7 +41,8 @@ module sync_array (
 	wire b3;
 	initial begin
 		$readmemb(&#34;array.dat&#34;, mem);
-		forever @(posedge clk) $async$and$array(mem, {a1, a2, a3, a4, a5, a6, a7}, {b1, b2, b3});
+		forever @(posedge clk)
+			$async$and$array(mem, {a1, a2, a3, a4, a5, a6, a7}, {b1, b2, b3});
 	end
 endmodule
 module pla;
@@ -57,13 +58,17 @@ module pla;
 		mem[3] = 3&#39;b0?0;
 		mem[4] = 3&#39;b???;
 		#(10) a = 3&#39;b111;
-		#(10) $displayb(a, &#34; -&gt; &#34;, b);
+		#(10)
+			$displayb(a, &#34; -&gt; &#34;, b);
 		#(10) a = 3&#39;b000;
-		#(10) $displayb(a, &#34; -&gt; &#34;, b);
+		#(10)
+			$displayb(a, &#34; -&gt; &#34;, b);
 		#(10) a = 3&#39;bxxx;
-		#(10) $displayb(a, &#34; -&gt; &#34;, b);
+		#(10)
+			$displayb(a, &#34; -&gt; &#34;, b);
 		#(10) a = 3&#39;b101;
-		#(10) $displayb(a, &#34; -&gt; &#34;, b);
+		#(10)
+			$displayb(a, &#34; -&gt; &#34;, b);
 	end
 endmodule
 

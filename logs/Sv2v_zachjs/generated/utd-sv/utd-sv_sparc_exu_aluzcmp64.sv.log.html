@@ -29,8 +29,8 @@ module sparc_exu_aluzcmp64 (
 		.in(in[63:32]),
 		.out(high_nonzero)
 	);
-	assign zero32 = (~ low_nonzero);
-	assign zero64 = (~ (low_nonzero | high_nonzero));
+	assign zero32 = ~low_nonzero;
+	assign zero64 = ~(low_nonzero | high_nonzero);
 endmodule
 
 

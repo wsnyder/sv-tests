@@ -11,7 +11,43 @@ files: <a href="../../../../third_party/tests/utd-sv/cpx_datacx2_ff.v.html" targ
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/cpx_datacx2_ff.v.html#l-25" target="file-frame">third_party/tests/utd-sv/cpx_datacx2_ff.v:25</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module cpx_datacx2_ff (
+	cpx_spc_data_cx2,
+	cpx_spc_data_rdy_cx2,
+	so,
+	cpx_spc_data_cx_l,
+	cpx_spc_data_rdy_cx,
+	rclk,
+	si,
+	se
+);
+	output [144:0] cpx_spc_data_cx2;
+	output cpx_spc_data_rdy_cx2;
+	output so;
+	input [144:0] cpx_spc_data_cx_l;
+	input cpx_spc_data_rdy_cx;
+	input rclk;
+	input si;
+	input se;
+	wire [144:0] cpx_spc_data_cx2_l;
+	dff_s #(145) dff_ccx_data_spc(
+		.din(cpx_spc_data_cx_l[144:0]),
+		.q(cpx_spc_data_cx2_l[144:0]),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(145&#39;d0),
+		.so()
+	);
+	assign cpx_spc_data_cx2 = ~cpx_spc_data_cx2_l;
+	dff_s #(1) dff_ccx_datardy_spc(
+		.din(cpx_spc_data_rdy_cx),
+		.q(cpx_spc_data_rdy_cx2),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(1&#39;d0),
+		.so()
+	);
+endmodule
 
 
 </pre>

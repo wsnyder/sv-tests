@@ -11,7 +11,50 @@ files: <a href="../../../../third_party/tests/utd-sv/ccx_arb_atomq.v.html" targe
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/ccx_arb_atomq.v.html#l-27" target="file-frame">third_party/tests/utd-sv/ccx_arb_atomq.v:27</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module ccx_arb_atomq (
+	q0_dataout,
+	scan_out,
+	ctl_qsel1_a_l,
+	ctl_qsel0_a,
+	ctl_shift_a,
+	atom_a,
+	rclk,
+	reset_d1
+);
+	output q0_dataout;
+	output scan_out;
+	input ctl_qsel1_a_l;
+	input ctl_qsel0_a;
+	input ctl_shift_a;
+	input atom_a;
+	input rclk;
+	input reset_d1;
+	wire q0_datain_pa;
+	wire q1_datain_pa;
+	wire q1_dataout;
+	wire q1_data_out;
+	wire q0_data_out;
+	assign q1_datain_pa = (~ctl_qsel1_a_l ? atom_a : q1_dataout);
+	dff_s #(1) dff_pcx_atomin_q1(
+		.din(q1_datain_pa),
+		.q(q1_data_out),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(),
+		.so()
+	);
+	assign q1_dataout = (~reset_d1 ? q1_data_out : 1&#39;b0);
+	assign q0_datain_pa = (ctl_qsel0_a ? atom_a : (ctl_shift_a ? q1_dataout : q0_dataout));
+	dff_s #(1) dff_pcx_atomin_q0(
+		.din(q0_datain_pa),
+		.q(q0_data_out),
+		.clk(rclk),
+		.se(1&#39;b0),
+		.si(),
+		.so()
+	);
+	assign q0_dataout = (~reset_d1 ? q0_data_out : 1&#39;b0);
+endmodule
 
 
 </pre>

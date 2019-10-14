@@ -47,8 +47,9 @@ module uut (
 	input e;
 	input f;
 	output reg [3:0] out1;
-	always @(posedge clk or posedge arst) begin
-		if (arst) out1 = 0;
+	always @(posedge clk or posedge arst)
+		if (arst)
+			out1 = 0;
 		else begin
 			if (a) begin
 				case ({b, c})
@@ -61,14 +62,14 @@ module uut (
 				end
 				case ({e, f})
 					2&#39;b11: out1 = (out1 + 8);
-					2&#39;b00: ;
+					2&#39;b00:
+						;
 					default: out1 = (out1 + 10);
 				endcase
 				out1 = (out1 ^ 7);
 			end
 			out1 = (out1 + 14);
 		end
-	end
 endmodule
 module uart (
 	reset,
@@ -82,18 +83,17 @@ module uart (
 	input ld_tx_data;
 	output reg tx_empty;
 	output reg [3:0] tx_cnt;
-	always @(posedge txclk) if (reset) begin
-		tx_empty &lt;= 1;
-		tx_cnt &lt;= 0;
-	end
-	else begin
-		if (ld_tx_data) begin
-			tx_empty &lt;= 0;
+	always @(posedge txclk)
+		if (reset) begin
+			tx_empty &lt;= 1;
+			tx_cnt &lt;= 0;
 		end
-		if ((! tx_empty)) begin
-			tx_cnt &lt;= (tx_cnt + 1);
+		else begin
+			if (ld_tx_data)
+				tx_empty &lt;= 0;
+			if (!tx_empty)
+				tx_cnt &lt;= (tx_cnt + 1);
 		end
-	end
 endmodule
 
 

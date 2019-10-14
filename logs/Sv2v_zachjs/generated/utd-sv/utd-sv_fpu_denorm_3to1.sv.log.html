@@ -32,7 +32,7 @@ module fpu_denorm_3to1 (
 	wire din2_din1_nz;
 	wire din2_din1_denorm;
 	assign din2_din1_nz = ((din2_din1_nz_hi || din2_din1_nz_mid) || din2_din1_nz_lo);
-	assign din2_din1_denorm = (((din2_din1_nz_hi &amp;&amp; din2_din1_denorm_hi) || (((! din2_din1_nz_hi) &amp;&amp; din2_din1_nz_mid) &amp;&amp; din2_din1_denorm_mid)) || (((! din2_din1_nz_hi) &amp;&amp; (! din2_din1_nz_mid)) &amp;&amp; din2_din1_denorm_lo));
+	assign din2_din1_denorm = (((din2_din1_nz_hi &amp;&amp; din2_din1_denorm_hi) || ((!din2_din1_nz_hi &amp;&amp; din2_din1_nz_mid) &amp;&amp; din2_din1_denorm_mid)) || ((!din2_din1_nz_hi &amp;&amp; !din2_din1_nz_mid) &amp;&amp; din2_din1_denorm_lo));
 endmodule
 
 

@@ -13,10 +13,10 @@ files: <a href="../../../tests/chapter-12/12.4.2--unique0_if.sv.html" target="fi
 module if_tb;
 	wire [3:0] a = 0;
 	reg [1:0] b = 0;
-	always begin
-		if ((a == 0)) b = 1;
-		else if ((a == 1)) b = 2;
-	end
+	always if ((a == 0))
+		b = 1;
+	else if ((a == 1))
+		b = 2;
 endmodule
 
 

@@ -21,7 +21,7 @@ module top (
 	reg write = 0;
 	reg ready = 0;
 	always @(posedge clock) begin
-		read &lt;= (! ctrl);
+		read &lt;= !ctrl;
 		write &lt;= ctrl;
 		ready &lt;= write;
 	end

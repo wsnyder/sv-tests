@@ -11,7 +11,41 @@ files: <a href="../../../../third_party/tests/utd-sv/io_cpx_reqdata_ff.v.html" t
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/io_cpx_reqdata_ff.v.html#l-25" target="file-frame">third_party/tests/utd-sv/io_cpx_reqdata_ff.v:25</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module io_cpx_reqdata_ff (
+	io_cpx_data_ca2,
+	io_cpx_req_cq2,
+	scan_out,
+	io_cpx_data_ca,
+	io_cpx_req_cq,
+	rclk,
+	scan_in,
+	se
+);
+	output [144:0] io_cpx_data_ca2;
+	output [7:0] io_cpx_req_cq2;
+	output scan_out;
+	input [144:0] io_cpx_data_ca;
+	input [7:0] io_cpx_req_cq;
+	input rclk;
+	input scan_in;
+	input se;
+	dff_s #(145) dff_io_cpx_data(
+		.din(io_cpx_data_ca[144:0]),
+		.q(io_cpx_data_ca2[144:0]),
+		.clk(rclk),
+		.se(se),
+		.si(145&#39;d0),
+		.so()
+	);
+	dff_s #(8) dff_cpx_datardy_io(
+		.din(io_cpx_req_cq[7:0]),
+		.q(io_cpx_req_cq2[7:0]),
+		.clk(rclk),
+		.se(se),
+		.si(8&#39;d0),
+		.so()
+	);
+endmodule
 
 
 </pre>

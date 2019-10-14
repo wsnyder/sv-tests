@@ -15,9 +15,7 @@ module top;
 	wire signed [31:0] b = 12;
 	wire signed [31:0] c = 5;
 	wire signed [31:0] d = 7;
-	initial begin
-		a = ((b == c) || (b == d));
-	end
+	initial a = ((b == c) || (b == d));
 endmodule
 
 

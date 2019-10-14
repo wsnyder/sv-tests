@@ -28,17 +28,14 @@ module parallel_crc_ccitt (
 	reg [15:0] crc_reg;
 	wire [15:0] next_crc;
 	assign crc_out = crc_reg;
-	always @(posedge clk) if (reset) begin
-		crc_reg &lt;= 16&#39;hFFFF;
-	end
-	else if (enable) begin
-		if (init) begin
+	always @(posedge clk)
+		if (reset)
 			crc_reg &lt;= 16&#39;hFFFF;
-		end
-		else begin
-			crc_reg &lt;= next_crc;
-		end
-	end
+		else if (enable)
+			if (init)
+				crc_reg &lt;= 16&#39;hFFFF;
+			else
+				crc_reg &lt;= next_crc;
 	assign next_crc[0] = (((data_in[7] ^ data_in[0]) ^ crc_reg[4]) ^ crc_reg[11]);
 	assign next_crc[1] = (data_in[1] ^ crc_reg[5]);
 	assign next_crc[2] = (data_in[2] ^ crc_reg[6]);

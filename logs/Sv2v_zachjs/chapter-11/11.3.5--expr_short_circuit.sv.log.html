@@ -27,9 +27,7 @@ module top;
 			fun2 = 2;
 		end
 	endfunction
-	initial begin
-		b = ((a &gt; 0) ? fun1(0) : fun2(0));
-	end
+	initial b = ((a &gt; 0) ? fun1(0) : fun2(0));
 endmodule
 
 

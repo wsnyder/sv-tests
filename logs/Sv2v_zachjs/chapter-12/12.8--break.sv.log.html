@@ -11,20 +11,20 @@ files: <a href="../../../tests/chapter-12/12.8--break.sv.html" target="file-fram
 
 
 module jump_tb;
-	initial begin
-		begin : sv2v_autoblock_1
-			reg [0:1] _sv2v_loop_AADE8;
-			_sv2v_loop_AADE8 = 1;
-			begin : sv2v_autoblock_2
-				reg signed [31:0] i;
-				for (i = 0; ((_sv2v_loop_AADE8 != 0) &amp;&amp; (i &lt; 256)); i = (i + 1))
-					begin
-						_sv2v_loop_AADE8 = 1;
-						$display(i);
-						if ((i &gt; 100)) _sv2v_loop_AADE8 = 0;
-						if ((_sv2v_loop_AADE8 == 1)) ;
-					end
-			end
+	initial begin : sv2v_autoblock_1
+		reg [0:1] _sv2v_loop_45D01;
+		_sv2v_loop_45D01 = 1;
+		begin : sv2v_autoblock_2
+			reg signed [31:0] i;
+			for (i = 0; ((_sv2v_loop_45D01 != 0) &amp;&amp; (i &lt; 256)); i = (i + 1))
+				begin
+					_sv2v_loop_45D01 = 1;
+					$display(i);
+					if ((i &gt; 100))
+						_sv2v_loop_45D01 = 0;
+					if ((_sv2v_loop_45D01 == 1))
+						;
+				end
 		end
 	end
 endmodule

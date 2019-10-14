@@ -35,8 +35,8 @@ module fpu_cnt_lead0_lvl2 (
 	wire lead0_8b_1;
 	wire lead0_8b_0;
 	assign din_7_0_eq_0 = (din_3_0_eq_0 &amp;&amp; din_7_4_eq_0);
-	assign lead0_8b_1 = (((! din_7_4_eq_0) &amp;&amp; din_7_6_eq_0) || (din_7_4_eq_0 &amp;&amp; din_3_2_eq_0));
-	assign lead0_8b_0 = (((! din_7_4_eq_0) &amp;&amp; lead0_4b_0_hi) || (din_7_4_eq_0 &amp;&amp; lead0_4b_0_lo));
+	assign lead0_8b_1 = ((!din_7_4_eq_0 &amp;&amp; din_7_6_eq_0) || (din_7_4_eq_0 &amp;&amp; din_3_2_eq_0));
+	assign lead0_8b_0 = ((!din_7_4_eq_0 &amp;&amp; lead0_4b_0_hi) || (din_7_4_eq_0 &amp;&amp; lead0_4b_0_lo));
 endmodule
 
 

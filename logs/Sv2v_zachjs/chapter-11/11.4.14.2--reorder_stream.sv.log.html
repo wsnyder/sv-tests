@@ -13,20 +13,18 @@ files: <a href="../../../tests/chapter-11/11.4.14.2--reorder_stream.sv.html" tar
 module top;
 	wire signed [31:0] a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
 	reg signed [31:0] b;
-	initial begin
-		begin : sv2v_autoblock_1
-			reg [31:0] _sv2v_strm_1922B_inp;
-			reg [31:0] _sv2v_strm_1922B_out;
-			integer _sv2v_strm_1922B_idx;
-			integer _sv2v_strm_1922B_bas;
-			_sv2v_strm_1922B_inp = a;
-			for (_sv2v_strm_1922B_idx = 0; (_sv2v_strm_1922B_idx &lt;= 23); _sv2v_strm_1922B_idx = (_sv2v_strm_1922B_idx + 8))
-				_sv2v_strm_1922B_out[(31 - _sv2v_strm_1922B_idx)-:8] = _sv2v_strm_1922B_inp[_sv2v_strm_1922B_idx+:8];
-			_sv2v_strm_1922B_bas = _sv2v_strm_1922B_idx;
-			for (_sv2v_strm_1922B_idx = 0; (_sv2v_strm_1922B_idx &lt; (32 - _sv2v_strm_1922B_bas)); _sv2v_strm_1922B_idx = (_sv2v_strm_1922B_idx + 1))
-				_sv2v_strm_1922B_out[_sv2v_strm_1922B_idx] = _sv2v_strm_1922B_inp[(_sv2v_strm_1922B_idx + _sv2v_strm_1922B_bas)];
-			b = _sv2v_strm_1922B_out;
-		end
+	initial begin : sv2v_autoblock_1
+		reg [31:0] _sv2v_strm_1922B_inp;
+		reg [31:0] _sv2v_strm_1922B_out;
+		integer _sv2v_strm_1922B_idx;
+		integer _sv2v_strm_1922B_bas;
+		_sv2v_strm_1922B_inp = a;
+		for (_sv2v_strm_1922B_idx = 0; (_sv2v_strm_1922B_idx &lt;= 23); _sv2v_strm_1922B_idx = (_sv2v_strm_1922B_idx + 8))
+			_sv2v_strm_1922B_out[(31 - _sv2v_strm_1922B_idx)-:8] = _sv2v_strm_1922B_inp[_sv2v_strm_1922B_idx+:8];
+		_sv2v_strm_1922B_bas = _sv2v_strm_1922B_idx;
+		for (_sv2v_strm_1922B_idx = 0; (_sv2v_strm_1922B_idx &lt; (32 - _sv2v_strm_1922B_bas)); _sv2v_strm_1922B_idx = (_sv2v_strm_1922B_idx + 1))
+			_sv2v_strm_1922B_out[_sv2v_strm_1922B_idx] = _sv2v_strm_1922B_inp[(_sv2v_strm_1922B_idx + _sv2v_strm_1922B_bas)];
+		b = _sv2v_strm_1922B_out;
 	end
 endmodule
 

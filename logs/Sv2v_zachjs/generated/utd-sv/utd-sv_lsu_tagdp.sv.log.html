@@ -116,22 +116,22 @@ module lsu_tagdp (
 		.si(),
 		.so()
 	);
-	assign dtag_rdata_w0_8b_parity_m[0] = (^ dtag_rdata_w0_m[7:0]);
-	assign dtag_rdata_w0_8b_parity_m[1] = (^ dtag_rdata_w0_m[15:8]);
-	assign dtag_rdata_w0_8b_parity_m[2] = (^ dtag_rdata_w0_m[23:16]);
-	assign dtag_rdata_w0_8b_parity_m[3] = (^ dtag_rdata_w0_m[28:24]);
-	assign dtag_rdata_w1_8b_parity_m[0] = (^ dtag_rdata_w1_m[7:0]);
-	assign dtag_rdata_w1_8b_parity_m[1] = (^ dtag_rdata_w1_m[15:8]);
-	assign dtag_rdata_w1_8b_parity_m[2] = (^ dtag_rdata_w1_m[23:16]);
-	assign dtag_rdata_w1_8b_parity_m[3] = (^ dtag_rdata_w1_m[28:24]);
-	assign dtag_rdata_w2_8b_parity_m[0] = (^ dtag_rdata_w2_m[7:0]);
-	assign dtag_rdata_w2_8b_parity_m[1] = (^ dtag_rdata_w2_m[15:8]);
-	assign dtag_rdata_w2_8b_parity_m[2] = (^ dtag_rdata_w2_m[23:16]);
-	assign dtag_rdata_w2_8b_parity_m[3] = (^ dtag_rdata_w2_m[28:24]);
-	assign dtag_rdata_w3_8b_parity_m[0] = (^ dtag_rdata_w3_m[7:0]);
-	assign dtag_rdata_w3_8b_parity_m[1] = (^ dtag_rdata_w3_m[15:8]);
-	assign dtag_rdata_w3_8b_parity_m[2] = (^ dtag_rdata_w3_m[23:16]);
-	assign dtag_rdata_w3_8b_parity_m[3] = (^ dtag_rdata_w3_m[28:24]);
+	assign dtag_rdata_w0_8b_parity_m[0] = ^dtag_rdata_w0_m[7:0];
+	assign dtag_rdata_w0_8b_parity_m[1] = ^dtag_rdata_w0_m[15:8];
+	assign dtag_rdata_w0_8b_parity_m[2] = ^dtag_rdata_w0_m[23:16];
+	assign dtag_rdata_w0_8b_parity_m[3] = ^dtag_rdata_w0_m[28:24];
+	assign dtag_rdata_w1_8b_parity_m[0] = ^dtag_rdata_w1_m[7:0];
+	assign dtag_rdata_w1_8b_parity_m[1] = ^dtag_rdata_w1_m[15:8];
+	assign dtag_rdata_w1_8b_parity_m[2] = ^dtag_rdata_w1_m[23:16];
+	assign dtag_rdata_w1_8b_parity_m[3] = ^dtag_rdata_w1_m[28:24];
+	assign dtag_rdata_w2_8b_parity_m[0] = ^dtag_rdata_w2_m[7:0];
+	assign dtag_rdata_w2_8b_parity_m[1] = ^dtag_rdata_w2_m[15:8];
+	assign dtag_rdata_w2_8b_parity_m[2] = ^dtag_rdata_w2_m[23:16];
+	assign dtag_rdata_w2_8b_parity_m[3] = ^dtag_rdata_w2_m[28:24];
+	assign dtag_rdata_w3_8b_parity_m[0] = ^dtag_rdata_w3_m[7:0];
+	assign dtag_rdata_w3_8b_parity_m[1] = ^dtag_rdata_w3_m[15:8];
+	assign dtag_rdata_w3_8b_parity_m[2] = ^dtag_rdata_w3_m[23:16];
+	assign dtag_rdata_w3_8b_parity_m[3] = ^dtag_rdata_w3_m[28:24];
 	dff_s #(4) dtag_rdata_w0_8b_parity_g_ff(
 		.din(dtag_rdata_w0_8b_parity_m[3:0]),
 		.q(dtag_rdata_w0_8b_parity_g[3:0]),
@@ -164,10 +164,10 @@ module lsu_tagdp (
 		.si(),
 		.so()
 	);
-	assign lsu_rd_dtag_parity_g[0] = (^ {dtag_rdata_w0_8b_parity_g[3:0], dtag_rdata_w0_parity_g});
-	assign lsu_rd_dtag_parity_g[1] = (^ {dtag_rdata_w1_8b_parity_g[3:0], dtag_rdata_w1_parity_g});
-	assign lsu_rd_dtag_parity_g[2] = (^ {dtag_rdata_w2_8b_parity_g[3:0], dtag_rdata_w2_parity_g});
-	assign lsu_rd_dtag_parity_g[3] = (^ {dtag_rdata_w3_8b_parity_g[3:0], dtag_rdata_w3_parity_g});
+	assign lsu_rd_dtag_parity_g[0] = ^{dtag_rdata_w0_8b_parity_g[3:0], dtag_rdata_w0_parity_g};
+	assign lsu_rd_dtag_parity_g[1] = ^{dtag_rdata_w1_8b_parity_g[3:0], dtag_rdata_w1_parity_g};
+	assign lsu_rd_dtag_parity_g[2] = ^{dtag_rdata_w2_8b_parity_g[3:0], dtag_rdata_w2_parity_g};
+	assign lsu_rd_dtag_parity_g[3] = ^{dtag_rdata_w3_8b_parity_g[3:0], dtag_rdata_w3_parity_g};
 endmodule
 
 

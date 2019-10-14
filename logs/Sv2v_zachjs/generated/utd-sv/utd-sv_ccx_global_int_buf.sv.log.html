@@ -11,7 +11,24 @@ files: <a href="../../../../third_party/tests/utd-sv/ccx_global_int_buf.v.html" 
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/ccx_global_int_buf.v.html#l-23" target="file-frame">third_party/tests/utd-sv/ccx_global_int_buf.v:23</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module ccx_global_int_buf (
+	rst_l_buf,
+	se_buf,
+	adbginit_l_buf,
+	rst_l,
+	se,
+	adbginit_l
+);
+	output rst_l_buf;
+	output se_buf;
+	output adbginit_l_buf;
+	input rst_l;
+	input se;
+	input adbginit_l;
+	assign rst_l_buf = rst_l;
+	assign se_buf = se;
+	assign adbginit_l_buf = adbginit_l;
+endmodule
 
 
 </pre>

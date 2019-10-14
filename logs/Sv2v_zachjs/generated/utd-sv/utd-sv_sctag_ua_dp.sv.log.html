@@ -103,7 +103,7 @@ module sctag_ua_dp (
 		.in0(vuad_array_rd_data_c1[50:39]),
 		.sel0(vuad_sel_rd),
 		.in1(used_byp_c1[11:0]),
-		.sel1((~ vuad_sel_rd))
+		.sel1(~vuad_sel_rd)
 	);
 	dff_s #(12) ff_used_c2(
 		.q(used_c2[11:0]),
@@ -127,7 +127,7 @@ module sctag_ua_dp (
 		.in0({parity_wr_data_c6[1], used_wr_data_c6[11:0]}),
 		.sel0(sel_ua_wr_data_byp),
 		.in1({parity_rd_byp_c2[1], used_rd_byp_c2[11:0]}),
-		.sel1((~ sel_ua_wr_data_byp))
+		.sel1(~sel_ua_wr_data_byp)
 	);
 	assign diag_rd_ua_out[25] = parity_rd_c2[1];
 	assign diag_rd_ua_out[23:12] = used_rd_c2[11:0];
@@ -136,14 +136,14 @@ module sctag_ua_dp (
 		.in0(used_c2[11:0]),
 		.sel0(vuad_sel_c2),
 		.in1(used_byp_c3_in[11:0]),
-		.sel1((~ vuad_sel_c2))
+		.sel1(~vuad_sel_c2)
 	);
 	mux2ds #(12) mux_used_byp_c1(
 		.dout(used_byp_c1[11:0]),
 		.in0(used_byp_c2c3[11:0]),
 		.sel0(vuad_sel_c2orc3),
 		.in1(used_byp_c4c5[11:0]),
-		.sel1((~ vuad_sel_c2orc3))
+		.sel1(~vuad_sel_c2orc3)
 	);
 	zzpar16 parity_used_rd(
 		.z(used_rd_parity_c2),
@@ -157,7 +157,7 @@ module sctag_ua_dp (
 		.si(),
 		.so()
 	);
-	assign used_byp_c3_in = (((used_c3 | fill_way_c3) | hit_wayvld_c3) &amp; (~ ((({12 {vuad_evict_c3}} &amp; lru_way_sel_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3)) | {12 {(&amp; (used_c3 | alloc_c3))}})));
+	assign used_byp_c3_in = (((used_c3 | fill_way_c3) | hit_wayvld_c3) &amp; ~((({12 {vuad_evict_c3}} &amp; lru_way_sel_c3) | ({12 {wr64_inst_c3}} &amp; hit_wayvld_c3)) | {12 {&amp;(used_c3 | alloc_c3)}}));
 	zzpar16 parity_used_wr(
 		.z(parity_wr_c3[1]),
 		.d({4&#39;b0, used_byp_c3_in[11:0]})
@@ -173,7 +173,7 @@ module sctag_ua_dp (
 	mux2ds #(13) mux_wr_array_used_c4(
 		.dout(vuad_array_wr_data_c4[51:39]),
 		.in0({parity_wr_data_c4[1], used_c4[11:0]}),
-		.sel0((~ bistordiag_wr_ua_c4)),
+		.sel0(~bistordiag_wr_ua_c4),
 		.in1(bistordiag_ua_data[25:13]),
 		.sel1(bistordiag_wr_ua_c4)
 	);
@@ -182,7 +182,7 @@ module sctag_ua_dp (
 		.in0(used_c4[11:0]),
 		.sel0(vuad_sel_c4),
 		.in1(used_wr_data_c5[11:0]),
-		.sel1((~ vuad_sel_c4))
+		.sel1(~vuad_sel_c4)
 	);
 	dff_s #(13) ff_used_wr_c5(
 		.q({parity_wr_data_c5[1], used_wr_data_c5[11:0]}),
@@ -205,7 +205,7 @@ module sctag_ua_dp (
 		.in0(vuad_array_rd_data_c1[37:26]),
 		.sel0(vuad_sel_rd),
 		.in1(alloc_byp_c1[11:0]),
-		.sel1((~ vuad_sel_rd))
+		.sel1(~vuad_sel_rd)
 	);
 	dff_s #(12) ff_alloc_c2(
 		.q(alloc_c2[11:0]),
@@ -229,7 +229,7 @@ module sctag_ua_dp (
 		.in0({parity_wr_data_c6[0], alloc_wr_data_c6[11:0]}),
 		.sel0(sel_ua_wr_data_byp),
 		.in1({parity_rd_byp_c2[0], alloc_rd_byp_c2[11:0]}),
-		.sel1((~ sel_ua_wr_data_byp))
+		.sel1(~sel_ua_wr_data_byp)
 	);
 	assign diag_rd_ua_out[24] = parity_rd_c2[0];
 	assign diag_rd_ua_out[11:0] = alloc_rd_c2[11:0];
@@ -238,14 +238,14 @@ module sctag_ua_dp (
 		.in0(alloc_byp_c2_in[11:0]),
 		.sel0(vuad_sel_c2),
 		.in1(alloc_byp_c3_in[11:0]),
-		.sel1((~ vuad_sel_c2))
+		.sel1(~vuad_sel_c2)
 	);
 	mux2ds #(12) mux_alloc_byp_c1(
 		.dout(alloc_byp_c1[11:0]),
 		.in0(alloc_byp_c2c3[11:0]),
 		.sel0(vuad_sel_c2orc3),
 		.in1(alloc_byp_c4c5[11:0]),
-		.sel1((~ vuad_sel_c2orc3))
+		.sel1(~vuad_sel_c2orc3)
 	);
 	zzpar16 parity_dir_rd(
 		.z(alloc_rd_parity_c2),
@@ -254,7 +254,7 @@ module sctag_ua_dp (
 	mux2ds #(12) mux_alloc_byp_c2_in(
 		.dout(alloc_byp_c2_in[11:0]),
 		.in0(alloc_c2[11:0]),
-		.sel0((~ vuad_sel_c2_d1)),
+		.sel0(~vuad_sel_c2_d1),
 		.in1(alloc_byp_c3_in[11:0]),
 		.sel1(vuad_sel_c2_d1)
 	);
@@ -266,7 +266,7 @@ module sctag_ua_dp (
 		.si(),
 		.so()
 	);
-	assign alloc_byp_c3_in = (((alloc_c3 | ({12 {alloc_set_cond_c3}} &amp; hit_wayvld_c3)) | ({12 {vuad_evict_c3}} &amp; lru_way_sel_c3)) &amp; (~ (({12 {alloc_rst_cond_c3}} &amp; hit_wayvld_c3) | ({12 {fbctl_vuad_bypassed_c3}} &amp; fill_way_c3))));
+	assign alloc_byp_c3_in = (((alloc_c3 | ({12 {alloc_set_cond_c3}} &amp; hit_wayvld_c3)) | ({12 {vuad_evict_c3}} &amp; lru_way_sel_c3)) &amp; ~(({12 {alloc_rst_cond_c3}} &amp; hit_wayvld_c3) | ({12 {fbctl_vuad_bypassed_c3}} &amp; fill_way_c3)));
 	zzpar16 parity_dir_wr(
 		.z(parity_wr_c3[0]),
 		.d({4&#39;b0, alloc_byp_c3_in[11:0]})
@@ -282,7 +282,7 @@ module sctag_ua_dp (
 	mux2ds #(13) mux_wr_array_alloc_c4(
 		.dout(vuad_array_wr_data_c4[38:26]),
 		.in0({parity_wr_data_c4[0], alloc_c4[11:0]}),
-		.sel0((~ bistordiag_wr_ua_c4)),
+		.sel0(~bistordiag_wr_ua_c4),
 		.in1(bistordiag_ua_data[12:0]),
 		.sel1(bistordiag_wr_ua_c4)
 	);
@@ -291,7 +291,7 @@ module sctag_ua_dp (
 		.in0(alloc_c4[11:0]),
 		.sel0(vuad_sel_c4),
 		.in1(alloc_wr_data_c5[11:0]),
-		.sel1((~ vuad_sel_c4))
+		.sel1(~vuad_sel_c4)
 	);
 	dff_s #(13) ff_alloc_wr_c5(
 		.q({parity_wr_data_c5[0], alloc_wr_data_c5[11:0]}),

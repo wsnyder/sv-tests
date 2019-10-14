@@ -95,16 +95,16 @@ module ctu_clsp_jbusgif (
 		.rst_l(io_pwron_rst_l),
 		.q(jbus_grst_out_l)
 	);
-	assign force_cken = (jtag_clsp_force_cken_jbus | (~ testmode_l));
+	assign force_cken = (jtag_clsp_force_cken_jbus | ~testmode_l);
 	assign ctu_dram02_cken_muxed = (force_cken ? 1&#39;b1 : (ctu_dram02_cken_jl &amp; start_clk_jl));
 	assign ctu_dram13_cken_muxed = (force_cken ? 1&#39;b1 : (ctu_dram13_cken_jl &amp; start_clk_jl));
 	assign ctu_iob_cken_muxed = (force_cken ? 1&#39;b1 : (ctu_iob_cken_jl &amp; start_clk_jl));
 	assign ctu_jbi_cken_muxed = (force_cken ? 1&#39;b1 : (ctu_jbi_cken_jl &amp; start_clk_jl));
 	assign ctu_efc_cken_muxed = (force_cken ? 1&#39;b1 : (ctu_efc_cken_jl &amp; start_clk_jl));
-	assign ctu_jbusr_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_jbusr_cken_jl) | (~ start_clk_jl)));
-	assign ctu_jbusl_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_jbusl_cken_jl) | (~ start_clk_jl)));
-	assign ctu_dbg_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_dbg_cken_jl) | (~ start_clk_jl)));
-	assign ctu_misc_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_misc_cken_jl) | (~ start_clk_jl)));
+	assign ctu_jbusr_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_jbusr_cken_jl) | ~start_clk_jl));
+	assign ctu_jbusl_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_jbusl_cken_jl) | ~start_clk_jl));
+	assign ctu_dbg_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_dbg_cken_jl) | ~start_clk_jl));
+	assign ctu_misc_cken_muxed = (force_cken ? 1&#39;b1 : ((start_clk_jl &amp; ctu_misc_cken_jl) | ~start_clk_jl));
 	dffrl_async_ns u_ctu_dram02_jbus_cken_nsr(
 		.din(ctu_dram02_cken_muxed),
 		.clk(jbus_gclk),

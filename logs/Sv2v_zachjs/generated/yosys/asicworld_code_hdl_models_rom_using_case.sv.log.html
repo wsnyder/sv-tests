@@ -22,7 +22,7 @@ module rom_using_case (
 	input read_en;
 	input ce;
 	reg [7:0] data;
-	always @(ce or read_en or address) begin
+	always @(ce or read_en or address)
 		case (address)
 			0: data = 10;
 			1: data = 55;
@@ -41,7 +41,6 @@ module rom_using_case (
 			14: data = 8&#39;h70;
 			15: data = 8&#39;h90;
 		endcase
-	end
 endmodule
 
 

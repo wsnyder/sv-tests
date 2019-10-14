@@ -39,7 +39,8 @@ module vdff (
 	input clk;
 	output [0:(size - 1)] out;
 	reg [0:(size - 1)] out;
-	always @(posedge clk) #(delay) out = in;
+	always @(posedge clk)
+		#(delay) out = in;
 endmodule
 module annotate;
 	defparam top.m1.size = 5;

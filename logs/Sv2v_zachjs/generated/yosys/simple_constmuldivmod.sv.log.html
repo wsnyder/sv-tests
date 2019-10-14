@@ -19,7 +19,7 @@ module constmuldivmod (
 	input [7:0] A;
 	input [2:0] mode;
 	output reg [7:0] Y;
-	always @(*) begin
+	always @(*)
 		case (mode)
 			0: Y = (A / 8&#39;d0);
 			1: Y = (A % 8&#39;d0);
@@ -38,7 +38,6 @@ module constmuldivmod (
 			14: Y = (A * 8&#39;d8);
 			default: Y = (8&#39;d16 * A);
 		endcase
-	end
 endmodule
 
 

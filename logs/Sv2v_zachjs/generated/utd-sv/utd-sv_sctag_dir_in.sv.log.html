@@ -41,7 +41,7 @@ module sctag_dir_in (
 		.clk(clk_en),
 		.rclk(rclk),
 		.enb_l(sehold),
-		.tmb_l((~ se))
+		.tmb_l(~se)
 	);
 	dff_s #(33) ff_lkup_wr_data_c5(
 		.q(lkup_wr_data_c5[32:0]),
@@ -56,7 +56,7 @@ module sctag_dir_in (
 		.in0(rd_data1_out_c5[31:0]),
 		.in1(rd_data2_out_c5[31:0]),
 		.sel0(rd_enable1_c5),
-		.sel1((~ rd_enable1_c5))
+		.sel1(~rd_enable1_c5)
 	);
 	dff_s #(32) ff_rddata_out_c6(
 		.q(rddata_out_c6[31:0]),

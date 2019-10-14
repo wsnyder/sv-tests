@@ -59,29 +59,29 @@ module lsu_rrobin_picker2 (
 		.so(),
 		.rst_l(arst_l)
 	);
-	assign reset = (~ dbb_reset_l);
+	assign reset = ~dbb_reset_l;
 	assign clk = rclk;
-	assign thread_force_events_sel = (| (events[3:0] &amp; thread_force[3:0]));
+	assign thread_force_events_sel = |(events[3:0] &amp; thread_force[3:0]);
 	assign thread_force_pe_mask[3:0] = (events[3:0] &amp; thread_force[3:0]);
 	assign pick_thread_force_1hot[0] = thread_force_pe_mask[0];
-	assign pick_thread_force_1hot[1] = (thread_force_pe_mask[1] &amp; (~ thread_force_pe_mask[0]));
-	assign pick_thread_force_1hot[2] = (thread_force_pe_mask[2] &amp; (~| thread_force_pe_mask[1:0]));
-	assign pick_thread_force_1hot[3] = (thread_force_pe_mask[3] &amp; (~| thread_force_pe_mask[2:0]));
-	assign pick_rrobin_events[3:0] = (events[3:0] &amp; (~ pick_rrobin[3:0]));
-	assign pick_rrobin_1hot[0] = ((~ events_pick_dir_d1) &amp; pick_rrobin_events[0]);
-	assign pick_rrobin_1hot[1] = (((~ events_pick_dir_d1) &amp; pick_rrobin_events[1]) &amp; (~ pick_rrobin_events[0]));
-	assign pick_rrobin_1hot[2] = (((~ events_pick_dir_d1) &amp; pick_rrobin_events[2]) &amp; (~| pick_rrobin_events[1:0]));
-	assign pick_rrobin_1hot[3] = (((~ events_pick_dir_d1) &amp; pick_rrobin_events[3]) &amp; (~| pick_rrobin_events[2:0]));
-	assign pick_rev_rrobin_1hot[0] = ((events_pick_dir_d1 &amp; pick_rrobin_events[0]) &amp; (~| pick_rrobin_events[3:1]));
-	assign pick_rev_rrobin_1hot[1] = ((events_pick_dir_d1 &amp; pick_rrobin_events[1]) &amp; (~| pick_rrobin_events[3:2]));
-	assign pick_rev_rrobin_1hot[2] = ((events_pick_dir_d1 &amp; pick_rrobin_events[2]) &amp; (~| pick_rrobin_events[3]));
+	assign pick_thread_force_1hot[1] = (thread_force_pe_mask[1] &amp; ~thread_force_pe_mask[0]);
+	assign pick_thread_force_1hot[2] = (thread_force_pe_mask[2] &amp; ~|thread_force_pe_mask[1:0]);
+	assign pick_thread_force_1hot[3] = (thread_force_pe_mask[3] &amp; ~|thread_force_pe_mask[2:0]);
+	assign pick_rrobin_events[3:0] = (events[3:0] &amp; ~pick_rrobin[3:0]);
+	assign pick_rrobin_1hot[0] = (~events_pick_dir_d1 &amp; pick_rrobin_events[0]);
+	assign pick_rrobin_1hot[1] = ((~events_pick_dir_d1 &amp; pick_rrobin_events[1]) &amp; ~pick_rrobin_events[0]);
+	assign pick_rrobin_1hot[2] = ((~events_pick_dir_d1 &amp; pick_rrobin_events[2]) &amp; ~|pick_rrobin_events[1:0]);
+	assign pick_rrobin_1hot[3] = ((~events_pick_dir_d1 &amp; pick_rrobin_events[3]) &amp; ~|pick_rrobin_events[2:0]);
+	assign pick_rev_rrobin_1hot[0] = ((events_pick_dir_d1 &amp; pick_rrobin_events[0]) &amp; ~|pick_rrobin_events[3:1]);
+	assign pick_rev_rrobin_1hot[1] = ((events_pick_dir_d1 &amp; pick_rrobin_events[1]) &amp; ~|pick_rrobin_events[3:2]);
+	assign pick_rev_rrobin_1hot[2] = ((events_pick_dir_d1 &amp; pick_rrobin_events[2]) &amp; ~|pick_rrobin_events[3]);
 	assign pick_rev_rrobin_1hot[3] = (events_pick_dir_d1 &amp; pick_rrobin_events[3]);
 	assign pick_rrobin_1hot_mx[3:0] = (pick_rev_rrobin_1hot[3:0] | pick_rrobin_1hot[3:0]);
 	assign pick_one_hot[3:0] = (thread_force_events_sel ? pick_thread_force_1hot[3:0] : pick_rrobin_1hot_mx[3:0]);
 	assign pick_rrobin_status_or_one_hot[3:0] = (pick_rrobin[3:0] | events_picked[3:0]);
-	assign pick_rrobin_reset = (reset | (~| (events[3:0] &amp; (~ pick_rrobin_status_or_one_hot[3:0]))));
-	assign pick_rrobin_dir_upd = ((| events[3:0]) &amp; (~| (events[3:0] &amp; (~ pick_rrobin_status_or_one_hot[3:0]))));
-	assign pick_rrobin_din[3:0] = (pick_rrobin_status_or_one_hot[3:0] &amp; (~ {4 {pick_rrobin_reset}}));
+	assign pick_rrobin_reset = (reset | ~|(events[3:0] &amp; ~pick_rrobin_status_or_one_hot[3:0]));
+	assign pick_rrobin_dir_upd = (|events[3:0] &amp; ~|(events[3:0] &amp; ~pick_rrobin_status_or_one_hot[3:0]));
+	assign pick_rrobin_din[3:0] = (pick_rrobin_status_or_one_hot[3:0] &amp; ~{4 {pick_rrobin_reset}});
 	dff_s #(4) ff_pick_rrobin(
 		.din(pick_rrobin_din[3:0]),
 		.q(pick_rrobin[3:0]),
@@ -90,7 +90,7 @@ module lsu_rrobin_picker2 (
 		.si(),
 		.so()
 	);
-	assign events_pick_dir = ((~ reset) &amp; (((~ pick_rrobin_dir_upd) &amp; events_pick_dir_d1) | (pick_rrobin_dir_upd &amp; (~ events_pick_dir_d1))));
+	assign events_pick_dir = (~reset &amp; ((~pick_rrobin_dir_upd &amp; events_pick_dir_d1) | (pick_rrobin_dir_upd &amp; ~events_pick_dir_d1)));
 	dff_s #(1) ff_events_pick_dir(
 		.din(events_pick_dir),
 		.q(events_pick_dir_d1),

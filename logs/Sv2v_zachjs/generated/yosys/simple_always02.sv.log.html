@@ -22,7 +22,8 @@ module uut_always02 (
 	reg [3:0] count;
 	always @(posedge clock) begin
 		count &lt;= (count + 1);
-		if (reset) count &lt;= 0;
+		if (reset)
+			count &lt;= 0;
 	end
 endmodule
 

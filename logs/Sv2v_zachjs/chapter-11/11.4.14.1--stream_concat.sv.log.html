@@ -14,9 +14,7 @@ module top;
 	wire signed [31:0] a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
 	wire signed [31:0] b = {&#34;E&#34;, &#34;F&#34;, &#34;G&#34;, &#34;H&#34;};
 	reg [63:0] c;
-	initial begin
-		c = {a, b};
-	end
+	initial c = {a, b};
 endmodule
 
 

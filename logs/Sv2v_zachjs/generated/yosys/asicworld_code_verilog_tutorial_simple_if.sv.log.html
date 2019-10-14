@@ -15,9 +15,9 @@ module simple_if;
 	reg latch;
 	wire enable;
 	wire din;
-	always @(enable or din) if (enable) begin
-		latch &lt;= din;
-	end
+	always @(enable or din)
+		if (enable)
+			latch &lt;= din;
 endmodule
 
 

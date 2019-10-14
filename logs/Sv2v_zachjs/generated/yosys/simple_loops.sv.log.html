@@ -52,8 +52,10 @@ module aes (
 		next_addroundkey_data_reg = addroundkey_data_reg;
 		next_addroundkey_ready_o = 0;
 		next_addroundkey_round = addroundkey_round;
-		if (((addroundkey_round == 1) || (addroundkey_round == 0))) keysched_last_key_i = key_i;
-		else keysched_last_key_i = keysched_new_key_o;
+		if (((addroundkey_round == 1) || (addroundkey_round == 0)))
+			keysched_last_key_i = key_i;
+		else
+			keysched_last_key_i = keysched_new_key_o;
 		if (((round == 0) &amp;&amp; addroundkey_start_i)) begin
 			data_var = addroundkey_data_i;
 			round_key_var = key_i;

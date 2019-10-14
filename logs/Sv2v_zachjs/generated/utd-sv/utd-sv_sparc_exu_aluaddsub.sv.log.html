@@ -63,7 +63,7 @@ module sparc_exu_aluaddsub (
 		.cout32(alu_ecl_cout32_e),
 		.cout64(cout64_e)
 	);
-	assign alu_ecl_cout64_e_l = (~ cout64_e);
+	assign alu_ecl_cout64_e_l = ~cout64_e;
 	sparc_exu_aluspr spr(
 		.rs1_data(rs1_data[63:0]),
 		.rs2_data(rs2_data[63:0]),

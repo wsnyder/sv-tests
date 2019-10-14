@@ -13,14 +13,12 @@ files: <a href="../../../tests/chapter-12/12.5--case.sv.html" target="file-frame
 module case_tb;
 	wire [3:0] a = 0;
 	reg [3:0] b = 0;
-	always begin
-		case (a)
-			4&#39;h0: b = 12;
-			4&#39;h3: b = 4;
-			4&#39;hf: b = 8;
-			default: b = 0;
-		endcase
-	end
+	always case (a)
+		4&#39;h0: b = 12;
+		4&#39;h3: b = 4;
+		4&#39;hf: b = 8;
+		default: b = 0;
+	endcase
 endmodule
 
 

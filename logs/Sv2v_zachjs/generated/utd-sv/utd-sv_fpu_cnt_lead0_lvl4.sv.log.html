@@ -49,10 +49,10 @@ module fpu_cnt_lead0_lvl4 (
 	wire lead0_32b_1;
 	wire lead0_32b_0;
 	assign din_31_0_eq_0 = (din_15_0_eq_0 &amp;&amp; din_31_16_eq_0);
-	assign lead0_32b_3 = (((! din_31_16_eq_0) &amp;&amp; din_31_24_eq_0) || (din_31_16_eq_0 &amp;&amp; din_15_8_eq_0));
-	assign lead0_32b_2 = (((! din_31_16_eq_0) &amp;&amp; lead0_16b_2_hi) || (din_31_16_eq_0 &amp;&amp; lead0_16b_2_lo));
-	assign lead0_32b_1 = (((! din_31_16_eq_0) &amp;&amp; lead0_16b_1_hi) || (din_31_16_eq_0 &amp;&amp; lead0_16b_1_lo));
-	assign lead0_32b_0 = (((! din_31_16_eq_0) &amp;&amp; lead0_16b_0_hi) || (din_31_16_eq_0 &amp;&amp; lead0_16b_0_lo));
+	assign lead0_32b_3 = ((!din_31_16_eq_0 &amp;&amp; din_31_24_eq_0) || (din_31_16_eq_0 &amp;&amp; din_15_8_eq_0));
+	assign lead0_32b_2 = ((!din_31_16_eq_0 &amp;&amp; lead0_16b_2_hi) || (din_31_16_eq_0 &amp;&amp; lead0_16b_2_lo));
+	assign lead0_32b_1 = ((!din_31_16_eq_0 &amp;&amp; lead0_16b_1_hi) || (din_31_16_eq_0 &amp;&amp; lead0_16b_1_lo));
+	assign lead0_32b_0 = ((!din_31_16_eq_0 &amp;&amp; lead0_16b_0_hi) || (din_31_16_eq_0 &amp;&amp; lead0_16b_0_lo));
 endmodule
 
 

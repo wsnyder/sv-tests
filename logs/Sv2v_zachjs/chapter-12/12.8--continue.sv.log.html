@@ -11,21 +11,19 @@ files: <a href="../../../tests/chapter-12/12.8--continue.sv.html" target="file-f
 
 
 module jump_tb;
-	initial begin
-		begin : sv2v_autoblock_1
-			reg [0:1] _sv2v_loop_90483;
-			_sv2v_loop_90483 = 1;
-			begin : sv2v_autoblock_2
-				reg signed [31:0] i;
-				for (i = 0; ((_sv2v_loop_90483 != 0) &amp;&amp; (i &lt; 256)); i = (i + 1))
-					begin
-						_sv2v_loop_90483 = 1;
-						if ((i &lt; 100)) _sv2v_loop_90483 = 2;
-						if ((_sv2v_loop_90483 == 1)) begin
-							$display(i);
-						end
-					end
-			end
+	initial begin : sv2v_autoblock_1
+		reg [0:1] _sv2v_loop_7C4F7;
+		_sv2v_loop_7C4F7 = 1;
+		begin : sv2v_autoblock_2
+			reg signed [31:0] i;
+			for (i = 0; ((_sv2v_loop_7C4F7 != 0) &amp;&amp; (i &lt; 256)); i = (i + 1))
+				begin
+					_sv2v_loop_7C4F7 = 1;
+					if ((i &lt; 100))
+						_sv2v_loop_7C4F7 = 2;
+					if ((_sv2v_loop_7C4F7 == 1))
+						$display(i);
+				end
 		end
 	end
 endmodule

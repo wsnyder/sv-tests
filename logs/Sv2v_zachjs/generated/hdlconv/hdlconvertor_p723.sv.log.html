@@ -38,9 +38,7 @@ module wave;
 		#(100) fork : innerwave
 			reg hold;
 		join
-		#(150) begin
-			stim1 = 0;
-		end
+		#(150) stim1 = 0;
 	end
 endmodule
 

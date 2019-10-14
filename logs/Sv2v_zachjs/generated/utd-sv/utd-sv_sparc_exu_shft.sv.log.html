@@ -51,19 +51,19 @@ module sparc_exu_shft (
 	wire [3:0] shift16_e;
 	wire shiftby_msb;
 	wire extend32bit_e;
-	assign shiftby_msb = (byp_alu_rs2_data_e[5] &amp; (~ ecl_shft_op32_e));
-	assign shift16_e[0] = ((~ shiftby_msb) &amp; (~ byp_alu_rs2_data_e[4]));
-	assign shift16_e[1] = ((~ shiftby_msb) &amp; byp_alu_rs2_data_e[4]);
-	assign shift16_e[2] = (shiftby_msb &amp; (~ byp_alu_rs2_data_e[4]));
+	assign shiftby_msb = (byp_alu_rs2_data_e[5] &amp; ~ecl_shft_op32_e);
+	assign shift16_e[0] = (~shiftby_msb &amp; ~byp_alu_rs2_data_e[4]);
+	assign shift16_e[1] = (~shiftby_msb &amp; byp_alu_rs2_data_e[4]);
+	assign shift16_e[2] = (shiftby_msb &amp; ~byp_alu_rs2_data_e[4]);
 	assign shift16_e[3] = (shiftby_msb &amp; byp_alu_rs2_data_e[4]);
-	assign shifter_input[63:0] = (byp_alu_rs1_data_e[63:0] &amp; {64 {(~ ecl_shft_enshift_e_l)}});
+	assign shifter_input[63:0] = (byp_alu_rs1_data_e[63:0] &amp; {64 {~ecl_shft_enshift_e_l}});
 	dp_mux2es #(64) mux_shiftout(
 		.dout(shft_alu_shift_out_e[63:0]),
 		.in0(lshift1[63:0]),
 		.in1(rshift1[63:0]),
 		.sel(ecl_shft_lshift_e_l)
 	);
-	assign extend32bit_e = (~ ecl_shft_extend32bit_e_l);
+	assign extend32bit_e = ~ecl_shft_extend32bit_e_l;
 	dp_mux2es #(32) mux_rshift_extend(
 		.dout(rshifterinput[63:32]),
 		.in0(byp_alu_rs1_data_e[63:32]),

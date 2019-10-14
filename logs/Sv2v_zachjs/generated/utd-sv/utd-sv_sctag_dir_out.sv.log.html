@@ -44,7 +44,7 @@ module sctag_dir_out (
 		.in0(rddata_out_c6_top[31:0]),
 		.in1(rddata_out_c6_bottom[31:0]),
 		.sel0(rd_data_sel_c6_top),
-		.sel1((~ rd_data_sel_c6_top))
+		.sel1(~rd_data_sel_c6_top)
 	);
 	zzpar16 par_row1_parity(
 		.z(row1_parity),

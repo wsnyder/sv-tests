@@ -13,9 +13,7 @@ files: <a href="../../../tests/chapter-9/9.4.5--event_nonblocking_assignment_del
 module block_tb;
 	reg a = 0;
 	wire b = 1;
-	initial begin
-		a &lt;= #(10) b;
-	end
+	initial a &lt;= #(10) b;
 endmodule
 
 

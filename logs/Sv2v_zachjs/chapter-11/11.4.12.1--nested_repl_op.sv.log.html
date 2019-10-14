@@ -15,9 +15,7 @@ module top;
 	wire [1:0] b = 2&#39;b10;
 	wire [1:0] c = 2&#39;b01;
 	wire [3:0] d = 4&#39;b1111;
-	initial begin
-		a = {{3 {b, c}}, d};
-	end
+	initial a = {{3 {b, c}}, d};
 endmodule
 
 

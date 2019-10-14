@@ -25,10 +25,8 @@ endmodule
 module multiple4;
 	reg r1;
 	reg [2:0] i;
-	initial begin
-		for (i = 0; (i &lt;= 5); i = (i + 1))
-			r1 &lt;= #((i * 10)) i[0];
-	end
+	initial for (i = 0; (i &lt;= 5); i = (i + 1))
+		r1 &lt;= #((i * 10)) i[0];
 endmodule
 
 

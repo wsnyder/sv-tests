@@ -50,9 +50,9 @@ module d (
 			z = 0;
 			i = 0;
 		end
-		else begin
+		else
 			case (state)
-				1&#39;b0: begin
+				1&#39;b0:
 					if (start) begin
 						x = 159188;
 						y = 0;
@@ -61,7 +61,6 @@ module d (
 						done &lt;= 1&#39;b0;
 						state = 1&#39;b1;
 					end
-				end
 				1&#39;b1: begin
 					dx = $signed((y &gt;&gt;&gt; $signed({1&#39;b0, i})));
 					dy = $signed((x &gt;&gt;&gt; $signed({1&#39;b0, i})));
@@ -102,12 +101,10 @@ module d (
 						state = 1&#39;b0;
 						done &lt;= 1&#39;b1;
 					end
-					else begin
+					else
 						i = (i + 1);
-					end
 				end
 			endcase
-		end
 	end
 endmodule
 

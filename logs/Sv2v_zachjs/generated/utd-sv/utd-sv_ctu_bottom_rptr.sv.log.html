@@ -43,7 +43,7 @@ module ctu_bottom_rptr (
 		.in0(dbgbus_b0[19:0]),
 		.in1(dbgbus_b1[19:0]),
 		.sel0(dbgbus_b0[40]),
-		.sel1((~ dbgbus_b0[40]))
+		.sel1(~dbgbus_b0[40])
 	);
 	dff_s #(20) ff_dbgmuxb01_row0(
 		.q(l2_dbgbus_out[19:0]),
@@ -58,7 +58,7 @@ module ctu_bottom_rptr (
 		.in0(dbgbus_b0[39:20]),
 		.in1(dbgbus_b1[39:20]),
 		.sel0(dbgbus_b0[40]),
-		.sel1((~ dbgbus_b0[40]))
+		.sel1(~dbgbus_b0[40])
 	);
 	dff_s #(20) ff_dbgmuxb01_row1(
 		.q(l2_dbgbus_out[39:20]),

@@ -24,9 +24,9 @@ module fpu_in2_gt_in1_2b (
 	wire [1:0] din2_eq_din1;
 	wire din2_neq_din1;
 	wire din2_gt_din1;
-	assign din2_eq_din1[1:0] = (~ (din1 ^ din2));
-	assign din2_neq_din1 = (! (&amp; din2_eq_din1));
-	assign din2_gt_din1 = (((! din1[1]) &amp;&amp; din2[1]) || ((din2_eq_din1[1] &amp;&amp; (! din1[0])) &amp;&amp; din2[0]));
+	assign din2_eq_din1[1:0] = ~(din1 ^ din2);
+	assign din2_neq_din1 = !&amp;din2_eq_din1;
+	assign din2_gt_din1 = ((!din1[1] &amp;&amp; din2[1]) || ((din2_eq_din1[1] &amp;&amp; !din1[0]) &amp;&amp; din2[0]));
 endmodule
 
 

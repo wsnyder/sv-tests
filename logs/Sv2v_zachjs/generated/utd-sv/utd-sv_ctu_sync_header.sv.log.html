@@ -111,7 +111,7 @@ module ctu_sync_header (
 		.se(se)
 	);
 	assign pulse_cnt_dn_nxt = (pulse_cnt == 3&#39;b111);
-	assign pulse_cnt_nxt = ((~ pulse_cnt_dn_nxt) ? (pulse_cnt + 3&#39;b001) : pulse_cnt);
+	assign pulse_cnt_nxt = (~pulse_cnt_dn_nxt ? (pulse_cnt + 3&#39;b001) : pulse_cnt);
 	dffrl_async_ns #(3) u_pulse_cnt(
 		.din(pulse_cnt_nxt),
 		.clk(cmp_clk),

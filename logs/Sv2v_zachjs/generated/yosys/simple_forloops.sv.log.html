@@ -35,7 +35,7 @@ module forloops01 (
 	end
 	always @(*) begin
 		for (k = 0; (k &lt; 4); k = (k + 1))
-			q[k] = ({(~ a), (~ b), a, b} &gt;&gt; k[1:0]);
+			q[k] = ({~a, ~b, a, b} &gt;&gt; k[1:0]);
 		y = (k - {a, b});
 	end
 endmodule
@@ -54,13 +54,10 @@ module forloops02 (
 	output reg [3:0] x;
 	output [3:0] y;
 	integer k;
-	always @(*) begin
+	always @(*)
 		for (k = 0; (k &lt; 4); k = (k + 1))
-			q[k] = ({(~ a), (~ b), a, b} &gt;&gt; k[1:0]);
-	end
-	always @(*) begin
-		x = (k + {a, b});
-	end
+			q[k] = ({~a, ~b, a, b} &gt;&gt; k[1:0]);
+	always @(*) x = (k + {a, b});
 	assign y = (k - {a, b});
 endmodule
 

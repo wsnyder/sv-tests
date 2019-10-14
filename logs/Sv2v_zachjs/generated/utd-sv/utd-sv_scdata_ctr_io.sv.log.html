@@ -151,7 +151,7 @@ module scdata_ctr_io (
 	);
 	dff_s #(1) ff_cache_wr_en_c3(
 		.q(cache_wr_en_c3),
-		.din((~ sctag_scdata_rd_wr_c2_buf)),
+		.din(~sctag_scdata_rd_wr_c2_buf),
 		.clk(rclk),
 		.se(se),
 		.si(),
@@ -205,7 +205,7 @@ module scdata_ctr_io (
 		.dout(cache_decc_in_c3[623:0]),
 		.in0({8 {st_decc_out_c3[77:0]}}),
 		.in1(scbuf_scdata_fbdecc_c5[623:0]),
-		.sel0((~ cache_sel_fbdecc_c5)),
+		.sel0(~cache_sel_fbdecc_c5),
 		.sel1(cache_sel_fbdecc_c5)
 	);
 	dff_s #(156) ff_scdata_sctag_decc_c6(
@@ -220,7 +220,7 @@ module scdata_ctr_io (
 		.dout(rd_decc_out_c5[623:0]),
 		.in0(cache_decc_out_c5[623:0]),
 		.in1(scbuf_scdata_fbdecc_c5[623:0]),
-		.sel0((~ cache_fb_hit_c5)),
+		.sel0(~cache_fb_hit_c5),
 		.sel1(cache_fb_hit_c5)
 	);
 	assign scdata_decc_out_c5[623:0] = rd_decc_out_c5[623:0];
@@ -238,20 +238,20 @@ module scdata_ctr_io (
 		.in0(rd_decc_out_c5[155:0]),
 		.in1(rd_decc_out_c5[311:156]),
 		.sel0(cache_col_offset_c5[0]),
-		.sel1((~ cache_col_offset_c5[0]))
+		.sel1(~cache_col_offset_c5[0])
 	);
 	mux2ds #(156) mux_decc_c5_23(
 		.dout(decc_c5_23[155:0]),
 		.in0(rd_decc_out_c5[467:312]),
 		.in1(rd_decc_out_c5[623:468]),
 		.sel0(cache_col_offset_c5[2]),
-		.sel1((~ cache_col_offset_c5[2]))
+		.sel1(~cache_col_offset_c5[2])
 	);
 	mux2ds #(156) mux_scdata_sctag_decc_c5(
 		.dout(scdata_sctag_decc_c5[155:0]),
 		.in0(decc_c5_01[155:0]),
 		.in1(decc_c5_23[155:0]),
-		.sel0((~ sel_decc_c5_23)),
+		.sel0(~sel_decc_c5_23),
 		.sel1(sel_decc_c5_23)
 	);
 endmodule

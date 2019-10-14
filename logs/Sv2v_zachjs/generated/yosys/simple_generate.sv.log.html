@@ -46,7 +46,7 @@ module gen_test1 (
 				assign tmpbuf = tmp1[(i + (2 * j))];
 				assign tmp2[j] = tmpbuf;
 			end
-			always @(posedge clk) y[i] &lt;= (^ tmp2);
+			always @(posedge clk) y[i] &lt;= ^tmp2;
 		end
 	endgenerate
 endmodule

@@ -11,7 +11,11 @@ files: <a href="../../../../third_party/tests/utd-sv/ifdef-2.v.html" target="fil
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/ifdef-2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/ifdef-2.v:2</a>:12: Lexical error: Undefined macro: celldefine
+`celldefine
+module test;
+	initial $display(&#34;first_block, second_block, last_result not .&#34;);
+endmodule
+`endcelldefine
 
 
 </pre>

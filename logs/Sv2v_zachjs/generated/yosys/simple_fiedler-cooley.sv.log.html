@@ -42,7 +42,7 @@ module up3down5 (
 			2&#39;b 11: count_nxt = count_out;
 			default: count_nxt = 9&#39;bX;
 		endcase
-		parity_out &lt;= (^ count_nxt);
+		parity_out &lt;= ^count_nxt;
 		carry_out &lt;= (up &amp; cnt_up[9]);
 		borrow_out &lt;= (down &amp; cnt_dn[9]);
 		count_out &lt;= count_nxt;

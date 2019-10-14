@@ -17,7 +17,7 @@ module test01 (
 );
 	input [7:0] a;
 	output [3:0] y;
-	assign y = ((~ a) &gt;&gt; 4);
+	assign y = (~a &gt;&gt; 4);
 endmodule
 module test02 (
 	a,
@@ -25,7 +25,7 @@ module test02 (
 );
 	input signed [3:0] a;
 	output signed [4:0] y;
-	assign y = ((~ a) &gt;&gt; 1);
+	assign y = (~a &gt;&gt; 1);
 endmodule
 module test03 (
 	a,
@@ -35,7 +35,7 @@ module test03 (
 	input [2:0] a;
 	input signed [1:0] b;
 	output y;
-	assign y = ((~ (a &gt;&gt;&gt; 1)) == b);
+	assign y = (~(a &gt;&gt;&gt; 1) == b);
 endmodule
 module test04 (
 	a,
@@ -43,7 +43,7 @@ module test04 (
 );
 	input a;
 	output [1:0] y;
-	assign y = (~ (a - 1&#39;b0));
+	assign y = ~(a - 1&#39;b0);
 endmodule
 module test07 (
 	a,
@@ -87,7 +87,7 @@ module test10 (
 	input signed [1:0] b;
 	input signed [2:0] c;
 	output y;
-	assign y = (^ (a ? b : c));
+	assign y = ^(a ? b : c);
 endmodule
 
 

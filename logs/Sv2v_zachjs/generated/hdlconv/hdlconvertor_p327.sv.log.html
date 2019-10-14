@@ -14,19 +14,19 @@ Deprecation warning: -i has been renamed to -I
 module tryfact;
 	function automatic integer factorial;
 		input reg [31:0] operand;
-		if ((operand &gt;= 2)) factorial = (factorial((operand - 1)) * operand);
-		else factorial = 1;
+		if ((operand &gt;= 2))
+			factorial = (factorial((operand - 1)) * operand);
+		else
+			factorial = 1;
 	endfunction
 	integer result;
-	initial begin
-		begin : sv2v_autoblock_1
-			reg signed [31:0] n;
-			for (n = 0; (n &lt;= 7); n = (n + 1))
-				begin
-					result = factorial(n);
-					$display(&#34;%0d factorial=%0d&#34;, n, result);
-				end
-		end
+	initial begin : sv2v_autoblock_1
+		reg signed [31:0] n;
+		for (n = 0; (n &lt;= 7); n = (n + 1))
+			begin
+				result = factorial(n);
+				$display(&#34;%0d factorial=%0d&#34;, n, result);
+			end
 	end
 endmodule
 

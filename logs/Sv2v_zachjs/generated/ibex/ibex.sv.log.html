@@ -22,11 +22,8 @@ module prim_clock_gating (
 	input test_en_i;
 	output wire clk_o;
 	reg clk_en;
-	always_latch begin
-		if ((clk_i == 1&#39;b0)) begin
-			clk_en &lt;= (en_i | test_en_i);
-		end
-	end
+	always_latch if ((clk_i == 1&#39;b0))
+		clk_en &lt;= (en_i | test_en_i);
 	assign clk_o = (clk_i &amp; clk_en);
 endmodule
 module ibex_alu (
@@ -265,32 +262,27 @@ module ibex_alu (
 	always @(*) begin
 		cmp_signed = 1&#39;b0;
 		case (operator_i)
-			ALU_GT, ALU_GE, ALU_LT, ALU_LE, ALU_SLT, ALU_SLET: begin
-				cmp_signed = 1&#39;b1;
-			end
+			ALU_GT, ALU_GE, ALU_LT, ALU_LE, ALU_SLT, ALU_SLET: cmp_signed = 1&#39;b1;
 			default: ;
 		endcase
 	end
 	assign is_equal = (adder_result == 32&#39;b0);
 	assign is_equal_result_o = is_equal;
-	always @(*) begin
-		if (((operand_a_i[31] ^ operand_b_i[31]) == 1&#39;b0)) begin
+	always @(*)
+		if (((operand_a_i[31] ^ operand_b_i[31]) == 1&#39;b0))
 			is_greater_equal = (adder_result[31] == 1&#39;b0);
-		end
-		else begin
+		else
 			is_greater_equal = (operand_a_i[31] ^ cmp_signed);
-		end
-	end
 	reg cmp_result;
 	always @(*) begin
 		cmp_result = is_equal;
 		case (operator_i)
 			ALU_EQ: cmp_result = is_equal;
-			ALU_NE: cmp_result = (~ is_equal);
-			ALU_GT, ALU_GTU: cmp_result = (is_greater_equal &amp; (~ is_equal));
+			ALU_NE: cmp_result = ~is_equal;
+			ALU_GT, ALU_GTU: cmp_result = (is_greater_equal &amp; ~is_equal);
 			ALU_GE, ALU_GEU: cmp_result = is_greater_equal;
-			ALU_LT, ALU_SLT, ALU_LTU, ALU_SLTU: cmp_result = (~ is_greater_equal);
-			ALU_SLET, ALU_SLETU, ALU_LE, ALU_LEU: cmp_result = ((~ is_greater_equal) | is_equal);
+			ALU_LT, ALU_SLT, ALU_LTU, ALU_SLTU: cmp_result = ~is_greater_equal;
+			ALU_SLET, ALU_SLETU, ALU_LE, ALU_LEU: cmp_result = (~is_greater_equal | is_equal);
 			default: ;
 		endcase
 	end
@@ -478,133 +470,83 @@ module ibex_compressed_decoder (
 		illegal_instr_o = 1&#39;b0;
 		instr_o = 1&#39;sbX;
 		case (instr_i[1:0])
-			2&#39;b00: begin
+			2&#39;b00:
 				case (instr_i[15:13])
 					3&#39;b000: begin
 						instr_o = {2&#39;b0, instr_i[10:7], instr_i[12:11], instr_i[5], instr_i[6], 2&#39;b00, 5&#39;h02, 3&#39;b000, 2&#39;b01, instr_i[4:2], OPCODE_OP_IMM};
-						if ((instr_i[12:5] == 8&#39;b0)) illegal_instr_o = 1&#39;b1;
+						if ((instr_i[12:5] == 8&#39;b0))
+							illegal_instr_o = 1&#39;b1;
 					end
-					3&#39;b010: begin
-						instr_o = {5&#39;b0, instr_i[5], instr_i[12:10], instr_i[6], 2&#39;b00, 2&#39;b01, instr_i[9:7], 3&#39;b010, 2&#39;b01, instr_i[4:2], OPCODE_LOAD};
-					end
-					3&#39;b110: begin
-						instr_o = {5&#39;b0, instr_i[5], instr_i[12], 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b010, instr_i[11:10], instr_i[6], 2&#39;b00, OPCODE_STORE};
-					end
-					default: begin
-					illegal_instr_o = 1&#39;b1;
-				end
+					3&#39;b010: instr_o = {5&#39;b0, instr_i[5], instr_i[12:10], instr_i[6], 2&#39;b00, 2&#39;b01, instr_i[9:7], 3&#39;b010, 2&#39;b01, instr_i[4:2], OPCODE_LOAD};
+					3&#39;b110: instr_o = {5&#39;b0, instr_i[5], instr_i[12], 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b010, instr_i[11:10], instr_i[6], 2&#39;b00, OPCODE_STORE};
+					default: illegal_instr_o = 1&#39;b1;
 				endcase
-			end
-			2&#39;b01: begin
+			2&#39;b01:
 				case (instr_i[15:13])
-					3&#39;b000: begin
-						instr_o = {{6 {instr_i[12]}}, instr_i[12], instr_i[6:2], instr_i[11:7], 3&#39;b0, instr_i[11:7], OPCODE_OP_IMM};
-					end
-					3&#39;b001, 3&#39;b101: begin
-						instr_o = {instr_i[12], instr_i[8], instr_i[10:9], instr_i[6], instr_i[7], instr_i[2], instr_i[11], instr_i[5:3], {9 {instr_i[12]}}, 4&#39;b0, (~ instr_i[15]), OPCODE_JAL};
-					end
-					3&#39;b010: begin
-						instr_o = {{6 {instr_i[12]}}, instr_i[12], instr_i[6:2], 5&#39;b0, 3&#39;b0, instr_i[11:7], OPCODE_OP_IMM};
-					end
+					3&#39;b000: instr_o = {{6 {instr_i[12]}}, instr_i[12], instr_i[6:2], instr_i[11:7], 3&#39;b0, instr_i[11:7], OPCODE_OP_IMM};
+					3&#39;b001, 3&#39;b101: instr_o = {instr_i[12], instr_i[8], instr_i[10:9], instr_i[6], instr_i[7], instr_i[2], instr_i[11], instr_i[5:3], {9 {instr_i[12]}}, 4&#39;b0, ~instr_i[15], OPCODE_JAL};
+					3&#39;b010: instr_o = {{6 {instr_i[12]}}, instr_i[12], instr_i[6:2], 5&#39;b0, 3&#39;b0, instr_i[11:7], OPCODE_OP_IMM};
 					3&#39;b011: begin
 						instr_o = {{15 {instr_i[12]}}, instr_i[6:2], instr_i[11:7], OPCODE_LUI};
-						if ((instr_i[11:7] == 5&#39;h02)) begin
+						if ((instr_i[11:7] == 5&#39;h02))
 							instr_o = {{3 {instr_i[12]}}, instr_i[4:3], instr_i[5], instr_i[2], instr_i[6], 4&#39;b0, 5&#39;h02, 3&#39;b000, 5&#39;h02, OPCODE_OP_IMM};
-						end
-						if (({instr_i[12], instr_i[6:2]} == 6&#39;b0)) illegal_instr_o = 1&#39;b1;
+						if (({instr_i[12], instr_i[6:2]} == 6&#39;b0))
+							illegal_instr_o = 1&#39;b1;
 					end
-					3&#39;b100: begin
+					3&#39;b100:
 						case (instr_i[11:10])
 							2&#39;b00, 2&#39;b01: begin
 								instr_o = {1&#39;b0, instr_i[10], 5&#39;b0, instr_i[6:2], 2&#39;b01, instr_i[9:7], 3&#39;b101, 2&#39;b01, instr_i[9:7], OPCODE_OP_IMM};
-								if ((instr_i[12] == 1&#39;b1)) illegal_instr_o = 1&#39;b1;
+								if ((instr_i[12] == 1&#39;b1))
+									illegal_instr_o = 1&#39;b1;
 							end
-							2&#39;b10: begin
-								instr_o = {{6 {instr_i[12]}}, instr_i[12], instr_i[6:2], 2&#39;b01, instr_i[9:7], 3&#39;b111, 2&#39;b01, instr_i[9:7], OPCODE_OP_IMM};
-							end
-							2&#39;b11: begin
+							2&#39;b10: instr_o = {{6 {instr_i[12]}}, instr_i[12], instr_i[6:2], 2&#39;b01, instr_i[9:7], 3&#39;b111, 2&#39;b01, instr_i[9:7], OPCODE_OP_IMM};
+							2&#39;b11:
 								case ({instr_i[12], instr_i[6:5]})
-									3&#39;b000: begin
-										instr_o = {2&#39;b01, 5&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b000, 2&#39;b01, instr_i[9:7], OPCODE_OP};
-									end
-									3&#39;b001: begin
-										instr_o = {7&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b100, 2&#39;b01, instr_i[9:7], OPCODE_OP};
-									end
-									3&#39;b010: begin
-										instr_o = {7&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b110, 2&#39;b01, instr_i[9:7], OPCODE_OP};
-									end
-									3&#39;b011: begin
-										instr_o = {7&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b111, 2&#39;b01, instr_i[9:7], OPCODE_OP};
-									end
-									3&#39;b100, 3&#39;b101, 3&#39;b110, 3&#39;b111: begin
-										illegal_instr_o = 1&#39;b1;
-									end
-									default: begin
-									illegal_instr_o = 1&#39;bX;
-								end
+									3&#39;b000: instr_o = {2&#39;b01, 5&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b000, 2&#39;b01, instr_i[9:7], OPCODE_OP};
+									3&#39;b001: instr_o = {7&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b100, 2&#39;b01, instr_i[9:7], OPCODE_OP};
+									3&#39;b010: instr_o = {7&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b110, 2&#39;b01, instr_i[9:7], OPCODE_OP};
+									3&#39;b011: instr_o = {7&#39;b0, 2&#39;b01, instr_i[4:2], 2&#39;b01, instr_i[9:7], 3&#39;b111, 2&#39;b01, instr_i[9:7], OPCODE_OP};
+									3&#39;b100, 3&#39;b101, 3&#39;b110, 3&#39;b111: illegal_instr_o = 1&#39;b1;
+									default: illegal_instr_o = 1&#39;bX;
 								endcase
-							end
-							default: begin
-							illegal_instr_o = 1&#39;bX;
-						end
+							default: illegal_instr_o = 1&#39;bX;
 						endcase
-					end
-					3&#39;b110, 3&#39;b111: begin
-						instr_o = {{4 {instr_i[12]}}, instr_i[6:5], instr_i[2], 5&#39;b0, 2&#39;b01, instr_i[9:7], 2&#39;b00, instr_i[13], instr_i[11:10], instr_i[4:3], instr_i[12], OPCODE_BRANCH};
-					end
-					default: begin
-					illegal_instr_o = 1&#39;bX;
-				end
+					3&#39;b110, 3&#39;b111: instr_o = {{4 {instr_i[12]}}, instr_i[6:5], instr_i[2], 5&#39;b0, 2&#39;b01, instr_i[9:7], 2&#39;b00, instr_i[13], instr_i[11:10], instr_i[4:3], instr_i[12], OPCODE_BRANCH};
+					default: illegal_instr_o = 1&#39;bX;
 				endcase
-			end
-			2&#39;b10: begin
+			2&#39;b10:
 				case (instr_i[15:13])
 					3&#39;b000: begin
 						instr_o = {7&#39;b0, instr_i[6:2], instr_i[11:7], 3&#39;b001, instr_i[11:7], OPCODE_OP_IMM};
-						if ((instr_i[12] == 1&#39;b1)) illegal_instr_o = 1&#39;b1;
+						if ((instr_i[12] == 1&#39;b1))
+							illegal_instr_o = 1&#39;b1;
 					end
 					3&#39;b010: begin
 						instr_o = {4&#39;b0, instr_i[3:2], instr_i[12], instr_i[6:4], 2&#39;b00, 5&#39;h02, 3&#39;b010, instr_i[11:7], OPCODE_LOAD};
-						if ((instr_i[11:7] == 5&#39;b0)) illegal_instr_o = 1&#39;b1;
+						if ((instr_i[11:7] == 5&#39;b0))
+							illegal_instr_o = 1&#39;b1;
 					end
-					3&#39;b100: begin
-						if ((instr_i[12] == 1&#39;b0)) begin
-							if ((instr_i[6:2] != 5&#39;b0)) begin
+					3&#39;b100:
+						if ((instr_i[12] == 1&#39;b0))
+							if ((instr_i[6:2] != 5&#39;b0))
 								instr_o = {7&#39;b0, instr_i[6:2], 5&#39;b0, 3&#39;b0, instr_i[11:7], OPCODE_OP};
-							end
 							else begin
 								instr_o = {12&#39;b0, instr_i[11:7], 3&#39;b0, 5&#39;b0, OPCODE_JALR};
-								if ((instr_i[11:7] == 5&#39;b0)) illegal_instr_o = 1&#39;b1;
+								if ((instr_i[11:7] == 5&#39;b0))
+									illegal_instr_o = 1&#39;b1;
 							end
-						end
-						else begin
-							if ((instr_i[6:2] != 5&#39;b0)) begin
-								instr_o = {7&#39;b0, instr_i[6:2], instr_i[11:7], 3&#39;b0, instr_i[11:7], OPCODE_OP};
-							end
-							else begin
-								if ((instr_i[11:7] == 5&#39;b0)) begin
-									instr_o = 32&#39;h00_10_00_73;
-								end
-								else begin
-									instr_o = {12&#39;b0, instr_i[11:7], 3&#39;b000, 5&#39;b00001, OPCODE_JALR};
-								end
-							end
-						end
-					end
-					3&#39;b110: begin
-						instr_o = {4&#39;b0, instr_i[8:7], instr_i[12], instr_i[6:2], 5&#39;h02, 3&#39;b010, instr_i[11:9], 2&#39;b00, OPCODE_STORE};
-					end
-					3&#39;b001, 3&#39;b011, 3&#39;b101, 3&#39;b111: begin
-						illegal_instr_o = 1&#39;b1;
-					end
-					default: begin
-					illegal_instr_o = 1&#39;bX;
-				end
+						else if ((instr_i[6:2] != 5&#39;b0))
+							instr_o = {7&#39;b0, instr_i[6:2], instr_i[11:7], 3&#39;b0, instr_i[11:7], OPCODE_OP};
+						else if ((instr_i[11:7] == 5&#39;b0))
+							instr_o = 32&#39;h00_10_00_73;
+						else
+							instr_o = {12&#39;b0, instr_i[11:7], 3&#39;b000, 5&#39;b00001, OPCODE_JALR};
+					3&#39;b110: instr_o = {4&#39;b0, instr_i[8:7], instr_i[12], instr_i[6:2], 5&#39;h02, 3&#39;b010, instr_i[11:9], 2&#39;b00, OPCODE_STORE};
+					3&#39;b001, 3&#39;b011, 3&#39;b101, 3&#39;b111: illegal_instr_o = 1&#39;b1;
+					default: illegal_instr_o = 1&#39;bX;
 				endcase
-			end
-			default: begin
-			instr_o = instr_i;
-		end
+			default: instr_o = instr_i;
 		endcase
 	end
 	assign is_compressed_o = (instr_i[1:0] != 2&#39;b11);
@@ -907,37 +849,51 @@ module ibex_controller (
 	wire handle_irq;
 	reg [3:0] mfip_id;
 	wire unused_csr_mtip;
-	always @(negedge clk_i) begin
-		if ((((ctrl_fsm_cs == DECODE) &amp;&amp; instr_valid_i) &amp;&amp; illegal_insn)) begin
+	always @(negedge clk_i)
+		if ((((ctrl_fsm_cs == DECODE) &amp;&amp; instr_valid_i) &amp;&amp; illegal_insn))
 			$display(&#34;%t: Illegal instruction (hart %0x) at PC 0x%h: 0x%h&#34;, $time, ibex_core.hart_id_i, ibex_id_stage.pc_id_i, ibex_id_stage.instr_rdata_i);
-		end
-	end
 	assign load_err_d = load_err_i;
 	assign store_err_d = store_err_i;
-	assign illegal_dret = (dret_insn_i &amp; (~ debug_mode_q));
+	assign illegal_dret = (dret_insn_i &amp; ~debug_mode_q);
 	assign illegal_insn = (illegal_insn_i | illegal_dret);
 	assign exc_req = (((ecall_insn_i | ebrk_insn_i) | illegal_insn) | instr_fetch_err_i);
 	assign exc_req_lsu = (store_err_i | load_err_i);
 	assign special_req = (((((mret_insn_i | dret_insn_i) | wfi_insn_i) | csr_pipe_flush_i) | exc_req) | exc_req_lsu);
-	assign enter_debug_mode = (debug_req_i &amp; (~ debug_mode_q));
-	assign handle_irq = ((~ debug_mode_q) &amp; ((irq_nm_i &amp; (~ nmi_mode_q)) | (irq_pending_i &amp; csr_mstatus_mie_i)));
+	assign enter_debug_mode = (debug_req_i &amp; ~debug_mode_q);
+	assign handle_irq = (~debug_mode_q &amp; ((irq_nm_i &amp; ~nmi_mode_q) | (irq_pending_i &amp; csr_mstatus_mie_i)));
 	always @(*) begin : gen_mfip_id
-		if (csr_mfip_i[14]) mfip_id = 4&#39;d14;
-		else if (csr_mfip_i[13]) mfip_id = 4&#39;d13;
-		else if (csr_mfip_i[12]) mfip_id = 4&#39;d12;
-		else if (csr_mfip_i[11]) mfip_id = 4&#39;d11;
-		else if (csr_mfip_i[10]) mfip_id = 4&#39;d10;
-		else if (csr_mfip_i[9]) mfip_id = 4&#39;d9;
-		else if (csr_mfip_i[8]) mfip_id = 4&#39;d8;
-		else if (csr_mfip_i[7]) mfip_id = 4&#39;d7;
-		else if (csr_mfip_i[6]) mfip_id = 4&#39;d6;
-		else if (csr_mfip_i[5]) mfip_id = 4&#39;d5;
-		else if (csr_mfip_i[5]) mfip_id = 4&#39;d5;
-		else if (csr_mfip_i[4]) mfip_id = 4&#39;d4;
-		else if (csr_mfip_i[3]) mfip_id = 4&#39;d3;
-		else if (csr_mfip_i[2]) mfip_id = 4&#39;d2;
-		else if (csr_mfip_i[1]) mfip_id = 4&#39;d1;
-		else mfip_id = 4&#39;d0;
+		if (csr_mfip_i[14])
+			mfip_id = 4&#39;d14;
+		else if (csr_mfip_i[13])
+			mfip_id = 4&#39;d13;
+		else if (csr_mfip_i[12])
+			mfip_id = 4&#39;d12;
+		else if (csr_mfip_i[11])
+			mfip_id = 4&#39;d11;
+		else if (csr_mfip_i[10])
+			mfip_id = 4&#39;d10;
+		else if (csr_mfip_i[9])
+			mfip_id = 4&#39;d9;
+		else if (csr_mfip_i[8])
+			mfip_id = 4&#39;d8;
+		else if (csr_mfip_i[7])
+			mfip_id = 4&#39;d7;
+		else if (csr_mfip_i[6])
+			mfip_id = 4&#39;d6;
+		else if (csr_mfip_i[5])
+			mfip_id = 4&#39;d5;
+		else if (csr_mfip_i[5])
+			mfip_id = 4&#39;d5;
+		else if (csr_mfip_i[4])
+			mfip_id = 4&#39;d4;
+		else if (csr_mfip_i[3])
+			mfip_id = 4&#39;d3;
+		else if (csr_mfip_i[2])
+			mfip_id = 4&#39;d2;
+		else if (csr_mfip_i[1])
+			mfip_id = 4&#39;d1;
+		else
+			mfip_id = 4&#39;d0;
 	end
 	assign unused_csr_mtip = csr_mtip_i;
 	always @(*) begin
@@ -967,9 +923,8 @@ module ibex_controller (
 				instr_req_o = 1&#39;b0;
 				pc_mux_o = PC_BOOT;
 				pc_set_o = 1&#39;b1;
-				if (fetch_enable_i) begin
+				if (fetch_enable_i)
 					ctrl_fsm_ns = BOOT_SET;
-				end
 			end
 			BOOT_SET: begin
 				instr_req_o = 1&#39;b1;
@@ -989,15 +944,13 @@ module ibex_controller (
 				instr_req_o = 1&#39;b0;
 				halt_if = 1&#39;b1;
 				halt_id = 1&#39;b1;
-				if (((((irq_nm_i || irq_pending_i) || debug_req_i) || debug_mode_q) || debug_single_step_i)) begin
+				if (((((irq_nm_i || irq_pending_i) || debug_req_i) || debug_mode_q) || debug_single_step_i))
 					ctrl_fsm_ns = FIRST_FETCH;
-				end
 			end
 			FIRST_FETCH: begin
 				first_fetch_o = 1&#39;b1;
-				if (id_in_ready_o) begin
+				if (id_in_ready_o)
 					ctrl_fsm_ns = DECODE;
-				end
 				if (handle_irq) begin
 					ctrl_fsm_ns = IRQ_TAKEN;
 					halt_if = 1&#39;b1;
@@ -1022,17 +975,15 @@ module ibex_controller (
 						halt_if = 1&#39;b1;
 						halt_id = 1&#39;b1;
 					end
-					if (((enter_debug_mode || handle_irq) &amp;&amp; stall)) begin
+					if (((enter_debug_mode || handle_irq) &amp;&amp; stall))
 						halt_if = 1&#39;b1;
-					end
-					if ((debug_single_step_i &amp;&amp; (! debug_mode_q))) begin
+					if ((debug_single_step_i &amp;&amp; !debug_mode_q)) begin
 						halt_if = 1&#39;b1;
-						if (((! special_req) &amp;&amp; (! stall))) begin
+						if ((!special_req &amp;&amp; !stall))
 							ctrl_fsm_ns = DBG_TAKEN_IF;
-						end
 					end
 				end
-				if (((! stall) &amp;&amp; (! special_req))) begin
+				if ((!stall &amp;&amp; !special_req))
 					if (enter_debug_mode) begin
 						ctrl_fsm_ns = DBG_TAKEN_IF;
 						halt_if = 1&#39;b1;
@@ -1043,7 +994,6 @@ module ibex_controller (
 						halt_if = 1&#39;b1;
 						halt_id = 1&#39;b1;
 					end
-				end
 			end
 			IRQ_TAKEN: begin
 				if (handle_irq) begin
@@ -1052,22 +1002,18 @@ module ibex_controller (
 					exc_pc_mux_o = EXC_PC_IRQ;
 					csr_save_if_o = 1&#39;b1;
 					csr_save_cause_o = 1&#39;b1;
-					if ((irq_nm_i &amp;&amp; (! nmi_mode_q))) begin
+					if ((irq_nm_i &amp;&amp; !nmi_mode_q)) begin
 						exc_cause_o = EXC_CAUSE_IRQ_NM;
 						nmi_mode_d = 1&#39;b1;
 					end
-					else if ((csr_mfip_i != 15&#39;b0)) begin
+					else if ((csr_mfip_i != 15&#39;b0))
 						exc_cause_o = {2&#39;b11, mfip_id};
-					end
-					else if (csr_meip_i) begin
+					else if (csr_meip_i)
 						exc_cause_o = EXC_CAUSE_IRQ_EXTERNAL_M;
-					end
-					else if (csr_msip_i) begin
+					else if (csr_msip_i)
 						exc_cause_o = EXC_CAUSE_IRQ_SOFTWARE_M;
-					end
-					else begin
+					else
 						exc_cause_o = EXC_CAUSE_IRQ_TIMER_M;
-					end
 				end
 				ctrl_fsm_ns = DECODE;
 			end
@@ -1079,12 +1025,10 @@ module ibex_controller (
 					csr_save_if_o = 1&#39;b1;
 					debug_csr_save_o = 1&#39;b1;
 					csr_save_cause_o = 1&#39;b1;
-					if (debug_single_step_i) begin
+					if (debug_single_step_i)
 						debug_cause_o = DBG_CAUSE_STEP;
-					end
-					else begin
+					else
 						debug_cause_o = DBG_CAUSE_HALTREQ;
-					end
 					debug_mode_d = 1&#39;b1;
 				end
 				ctrl_fsm_ns = DECODE;
@@ -1094,7 +1038,7 @@ module ibex_controller (
 					pc_mux_o = PC_EXC;
 					pc_set_o = 1&#39;b1;
 					exc_pc_mux_o = EXC_PC_DBD;
-					if ((debug_ebreakm_i &amp;&amp; (! debug_mode_q))) begin
+					if ((debug_ebreakm_i &amp;&amp; !debug_mode_q)) begin
 						csr_save_cause_o = 1&#39;b1;
 						csr_save_id_o = 1&#39;b1;
 						debug_csr_save_o = 1&#39;b1;
@@ -1122,10 +1066,9 @@ module ibex_controller (
 						exc_cause_o = EXC_CAUSE_ILLEGAL_INSN;
 						csr_mtval_o = (instr_is_compressed_i ? {16&#39;b0, instr_compressed_i} : instr_i);
 					end
-					else if (ecall_insn_i) begin
+					else if (ecall_insn_i)
 						exc_cause_o = EXC_CAUSE_ECALL_MMODE;
-					end
-					else if (ebrk_insn_i) begin
+					else if (ebrk_insn_i)
 						if (debug_mode_q) begin
 							pc_set_o = 1&#39;b0;
 							csr_save_id_o = 1&#39;b0;
@@ -1138,10 +1081,8 @@ module ibex_controller (
 							csr_save_cause_o = 1&#39;b0;
 							ctrl_fsm_ns = DBG_TAKEN_ID;
 						end
-						else begin
+						else
 							exc_cause_o = EXC_CAUSE_BREAKPOINT;
-						end
-					end
 					else if (store_err_q) begin
 						exc_cause_o = EXC_CAUSE_STORE_ACCESS_FAULT;
 						csr_mtval_o = lsu_addr_last_i;
@@ -1151,28 +1092,23 @@ module ibex_controller (
 						csr_mtval_o = lsu_addr_last_i;
 					end
 				end
-				else begin
-					if (mret_insn_i) begin
-						pc_mux_o = PC_ERET;
-						pc_set_o = 1&#39;b1;
-						csr_restore_mret_id_o = 1&#39;b1;
-						if (nmi_mode_q) begin
-							nmi_mode_d = 1&#39;b0;
-						end
-					end
-					else if (dret_insn_i) begin
-						pc_mux_o = PC_DRET;
-						pc_set_o = 1&#39;b1;
-						debug_mode_d = 1&#39;b0;
-					end
-					else if (wfi_insn_i) begin
-						ctrl_fsm_ns = WAIT_SLEEP;
-					end
-					else if ((csr_pipe_flush_i &amp;&amp; handle_irq)) begin
-						ctrl_fsm_ns = IRQ_TAKEN;
-					end
+				else if (mret_insn_i) begin
+					pc_mux_o = PC_ERET;
+					pc_set_o = 1&#39;b1;
+					csr_restore_mret_id_o = 1&#39;b1;
+					if (nmi_mode_q)
+						nmi_mode_d = 1&#39;b0;
 				end
-				if ((debug_single_step_i &amp;&amp; (! debug_mode_q))) begin
+				else if (dret_insn_i) begin
+					pc_mux_o = PC_DRET;
+					pc_set_o = 1&#39;b1;
+					debug_mode_d = 1&#39;b0;
+				end
+				else if (wfi_insn_i)
+					ctrl_fsm_ns = WAIT_SLEEP;
+				else if ((csr_pipe_flush_i &amp;&amp; handle_irq))
+					ctrl_fsm_ns = IRQ_TAKEN;
+				if ((debug_single_step_i &amp;&amp; !debug_mode_q)) begin
 					pc_set_o = 1&#39;b0;
 					ctrl_fsm_ns = DBG_TAKEN_IF;
 				end
@@ -1185,10 +1121,10 @@ module ibex_controller (
 	end
 	assign debug_mode_o = debug_mode_q;
 	assign stall = (((stall_lsu_i | stall_multdiv_i) | stall_jump_i) | stall_branch_i);
-	assign id_in_ready_o = ((~ stall) &amp; (~ halt_if));
-	assign instr_valid_clear_o = ((~ stall) | halt_id);
+	assign id_in_ready_o = (~stall &amp; ~halt_if);
+	assign instr_valid_clear_o = (~stall | halt_id);
 	always @(posedge clk_i or negedge rst_ni) begin : update_regs
-		if ((! rst_ni)) begin
+		if (!rst_ni) begin
 			ctrl_fsm_cs &lt;= RESET;
 			nmi_mode_q &lt;= 1&#39;b0;
 			debug_mode_q &lt;= 1&#39;b0;
@@ -1259,9 +1195,7 @@ module ibex_cs_registers (
 );
 	function automatic [31:0] sv2v_cast_32;
 		input reg [31:0] inp;
-		begin
-			sv2v_cast_32 = inp;
-		end
+		sv2v_cast_32 = inp;
 	endfunction
 	parameter [31:0] MHPMCounterNum = 8;
 	parameter [31:0] MHPMCounterWidth = 40;
@@ -1596,48 +1530,42 @@ module ibex_cs_registers (
 			CSR_PMPADDR15: csr_rdata_int = pmp_addr_rdata[15];
 			CSR_DCSR: begin
 				csr_rdata_int = dcsr_q;
-				illegal_csr = (~ debug_mode_i);
+				illegal_csr = ~debug_mode_i;
 			end
 			CSR_DPC: begin
 				csr_rdata_int = depc_q;
-				illegal_csr = (~ debug_mode_i);
+				illegal_csr = ~debug_mode_i;
 			end
 			CSR_DSCRATCH0: begin
 				csr_rdata_int = dscratch0_q;
-				illegal_csr = (~ debug_mode_i);
+				illegal_csr = ~debug_mode_i;
 			end
 			CSR_DSCRATCH1: begin
 				csr_rdata_int = dscratch1_q;
-				illegal_csr = (~ debug_mode_i);
+				illegal_csr = ~debug_mode_i;
 			end
 			CSR_MCOUNTINHIBIT: csr_rdata_int = mcountinhibit;
 			CSR_MCYCLE: csr_rdata_int = mhpmcounter_q[1984+:32];
 			CSR_MCYCLEH: csr_rdata_int = mhpmcounter_q[2016+:32];
 			CSR_MINSTRET: csr_rdata_int = mhpmcounter_q[1856+:32];
 			CSR_MINSTRETH: csr_rdata_int = mhpmcounter_q[1888+:32];
-			default: begin
-			if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTER_SETUP)) begin
-				csr_rdata_int = mhpmevent[mhpmcounter_idx];
-				if ((((csr_addr[4:0] == 5&#39;b00000) || (csr_addr[4:0] == 5&#39;b00001)) || (csr_addr[4:0] == 5&#39;b00010))) begin
-					illegal_csr = csr_access_i;
-				end
-			end
-			else if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTER)) begin
-				csr_rdata_int = mhpmcounter_q[((31 - mhpmcounter_idx) * 64)+:32];
-				if ((((csr_addr[4:0] == 5&#39;b00000) || (csr_addr[4:0] == 5&#39;b00001)) || (csr_addr[4:0] == 5&#39;b00010))) begin
-					illegal_csr = csr_access_i;
-				end
-			end
-			else if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTERH)) begin
-				csr_rdata_int = mhpmcounter_q[(((31 - mhpmcounter_idx) * 64) + 32)+:32];
-				if ((((csr_addr[4:0] == 5&#39;b00000) || (csr_addr[4:0] == 5&#39;b00001)) || (csr_addr[4:0] == 5&#39;b00010))) begin
-					illegal_csr = csr_access_i;
-				end
-			end
-			else begin
+			default: if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTER_SETUP)) begin
+			csr_rdata_int = mhpmevent[mhpmcounter_idx];
+			if ((((csr_addr[4:0] == 5&#39;b00000) || (csr_addr[4:0] == 5&#39;b00001)) || (csr_addr[4:0] == 5&#39;b00010)))
 				illegal_csr = csr_access_i;
-			end
 		end
+		else if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTER)) begin
+			csr_rdata_int = mhpmcounter_q[((31 - mhpmcounter_idx) * 64)+:32];
+			if ((((csr_addr[4:0] == 5&#39;b00000) || (csr_addr[4:0] == 5&#39;b00001)) || (csr_addr[4:0] == 5&#39;b00010)))
+				illegal_csr = csr_access_i;
+		end
+		else if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTERH)) begin
+			csr_rdata_int = mhpmcounter_q[(((31 - mhpmcounter_idx) * 64) + 32)+:32];
+			if ((((csr_addr[4:0] == 5&#39;b00000) || (csr_addr[4:0] == 5&#39;b00001)) || (csr_addr[4:0] == 5&#39;b00010)))
+				illegal_csr = csr_access_i;
+		end
+		else
+			illegal_csr = csr_access_i;
 		endcase
 	end
 	always @(*) begin
@@ -1660,25 +1588,32 @@ module ibex_cs_registers (
 		mhpmcounter_we = 1&#39;sb0;
 		mhpmcounterh_we = 1&#39;sb0;
 		case (csr_addr_i)
-			CSR_MSTATUS: begin
-				if (csr_we_int) begin
+			CSR_MSTATUS:
+				if (csr_we_int)
 					mstatus_d = sv2v_struct_5B112(csr_wdata_int[CSR_MSTATUS_MIE_BIT], csr_wdata_int[CSR_MSTATUS_MPIE_BIT], PRIV_LVL_M);
-				end
-			end
-			CSR_MIE: begin
+			CSR_MIE:
 				if (csr_we_int) begin
 					mie_d[17:17] = csr_wdata_int[CSR_MSIX_BIT];
 					mie_d[16:16] = csr_wdata_int[CSR_MTIX_BIT];
 					mie_d[15:15] = csr_wdata_int[CSR_MEIX_BIT];
 					mie_d[14:0] = csr_wdata_int[CSR_MFIX_BIT_HIGH:CSR_MFIX_BIT_LOW];
 				end
-			end
-			CSR_MSCRATCH: if (csr_we_int) mscratch_d = csr_wdata_int;
-			CSR_MEPC: if (csr_we_int) mepc_d = {csr_wdata_int[31:1], 1&#39;b0};
-			CSR_MCAUSE: if (csr_we_int) mcause_d = {csr_wdata_int[31], csr_wdata_int[4:0]};
-			CSR_MTVAL: if (csr_we_int) mtval_d = csr_wdata_int;
-			CSR_MTVEC: if (csr_we_int) mtvec_d = {csr_wdata_int[31:8], 6&#39;b0, 2&#39;b01};
-			CSR_DCSR: begin
+			CSR_MSCRATCH:
+				if (csr_we_int)
+					mscratch_d = csr_wdata_int;
+			CSR_MEPC:
+				if (csr_we_int)
+					mepc_d = {csr_wdata_int[31:1], 1&#39;b0};
+			CSR_MCAUSE:
+				if (csr_we_int)
+					mcause_d = {csr_wdata_int[31], csr_wdata_int[4:0]};
+			CSR_MTVAL:
+				if (csr_we_int)
+					mtval_d = csr_wdata_int;
+			CSR_MTVEC:
+				if (csr_we_int)
+					mtvec_d = {csr_wdata_int[31:8], 6&#39;b0, 2&#39;b01};
+			CSR_DCSR:
 				if (csr_we_int) begin
 					dcsr_d = csr_wdata_int;
 					dcsr_d[31:28] = XDEBUGVER_STD;
@@ -1691,67 +1626,41 @@ module ibex_cs_registers (
 					dcsr_d[14:14] = 1&#39;b0;
 					dcsr_d[27:16] = 12&#39;h0;
 				end
-			end
-			CSR_DPC: begin
-				if ((csr_we_int &amp;&amp; (csr_wdata_int[0] == 1&#39;b0))) begin
+			CSR_DPC:
+				if ((csr_we_int &amp;&amp; (csr_wdata_int[0] == 1&#39;b0)))
 					depc_d = csr_wdata_int;
-				end
-			end
-			CSR_DSCRATCH0: begin
-				if (csr_we_int) begin
+			CSR_DSCRATCH0:
+				if (csr_we_int)
 					dscratch0_d = csr_wdata_int;
-				end
-			end
-			CSR_DSCRATCH1: begin
-				if (csr_we_int) begin
+			CSR_DSCRATCH1:
+				if (csr_we_int)
 					dscratch1_d = csr_wdata_int;
-				end
-			end
-			CSR_MCOUNTINHIBIT: begin
-				if (csr_we_int) begin
+			CSR_MCOUNTINHIBIT:
+				if (csr_we_int)
 					mcountinhibit_we = 1&#39;b1;
-				end
-			end
-			CSR_MCYCLE: begin
-				if (csr_we_int) begin
+			CSR_MCYCLE:
+				if (csr_we_int)
 					mhpmcounter_we[0] = 1&#39;b1;
-				end
-			end
-			CSR_MCYCLEH: begin
-				if (csr_we_int) begin
+			CSR_MCYCLEH:
+				if (csr_we_int)
 					mhpmcounterh_we[0] = 1&#39;b1;
-				end
-			end
-			CSR_MINSTRET: begin
-				if (csr_we_int) begin
+			CSR_MINSTRET:
+				if (csr_we_int)
 					mhpmcounter_we[2] = 1&#39;b1;
-				end
-			end
-			CSR_MINSTRETH: begin
-				if (csr_we_int) begin
+			CSR_MINSTRETH:
+				if (csr_we_int)
 					mhpmcounterh_we[2] = 1&#39;b1;
-				end
-			end
-			default: begin
-			if ((csr_we_int == 1&#39;b1)) begin
-				if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTER)) begin
-					mhpmcounter_we[mhpmcounter_idx] = 1&#39;b1;
-				end
-				else if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTERH)) begin
-					mhpmcounterh_we[mhpmcounter_idx] = 1&#39;b1;
-				end
-			end
-		end
+			default: if ((csr_we_int == 1&#39;b1))
+			if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTER))
+				mhpmcounter_we[mhpmcounter_idx] = 1&#39;b1;
+			else if (((csr_addr &amp; CSR_MASK_MCOUNTER) == CSR_OFF_MCOUNTERH))
+				mhpmcounterh_we[mhpmcounter_idx] = 1&#39;b1;
 		endcase
 		case (1&#39;b1)
 			csr_save_cause_i: begin
 				case (1&#39;b1)
-					csr_save_if_i: begin
-						exception_pc = pc_if_i;
-					end
-					csr_save_id_i: begin
-						exception_pc = pc_id_i;
-					end
+					csr_save_if_i: exception_pc = pc_if_i;
+					csr_save_id_i: exception_pc = pc_id_i;
 					default: ;
 				endcase
 				if (debug_csr_save_i) begin
@@ -1787,7 +1696,7 @@ module ibex_cs_registers (
 		case (csr_op_i)
 			CSR_OP_WRITE: csr_wdata_int = csr_wdata_i;
 			CSR_OP_SET: csr_wdata_int = (csr_wdata_i | csr_rdata_o);
-			CSR_OP_CLEAR: csr_wdata_int = ((~ csr_wdata_i) &amp; csr_rdata_o);
+			CSR_OP_CLEAR: csr_wdata_int = (~csr_wdata_i &amp; csr_rdata_o);
 			CSR_OP_READ: begin
 				csr_wdata_int = csr_wdata_i;
 				csr_wreq = 1&#39;b0;
@@ -1798,7 +1707,7 @@ module ibex_cs_registers (
 		end
 		endcase
 	end
-	assign csr_we_int = ((csr_wreq &amp; (~ illegal_csr_priv)) &amp; instr_new_id_i);
+	assign csr_we_int = ((csr_wreq &amp; ~illegal_csr_priv) &amp; instr_new_id_i);
 	assign csr_rdata_o = csr_rdata_int;
 	assign csr_msip_o = mip[17:17];
 	assign csr_mtip_o = mip[16:16];
@@ -1810,9 +1719,9 @@ module ibex_cs_registers (
 	assign csr_mstatus_mie_o = mstatus_q[3:3];
 	assign debug_single_step_o = dcsr_q[2:2];
 	assign debug_ebreakm_o = dcsr_q[15:15];
-	assign irq_pending_o = (((csr_msip_o | csr_mtip_o) | csr_meip_o) | (| csr_mfip_o));
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	assign irq_pending_o = (((csr_msip_o | csr_mtip_o) | csr_meip_o) | |csr_mfip_o);
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni) begin
 			mstatus_q &lt;= sv2v_struct_5B112(1&#39;b0, 1&#39;b0, PRIV_LVL_M);
 			mie_q &lt;= 1&#39;sb0;
 			mscratch_q &lt;= 1&#39;sb0;
@@ -1844,7 +1753,6 @@ module ibex_cs_registers (
 			mstack_epc_q &lt;= mstack_epc_d;
 			mstack_cause_q &lt;= mstack_cause_d;
 		end
-	end
 	assign priv_mode_o = mstatus_q[1:0];
 	generate
 		if (PMPEnable) begin : g_pmp_registers
@@ -1863,20 +1771,17 @@ module ibex_cs_registers (
 					else if ((PMPGranularity == 1)) begin : g_pmp_g1
 						always @(*) begin
 							pmp_addr_rdata[g_exp_rd_data_i] = pmp_addr[g_exp_rd_data_i];
-							if (((pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_OFF) || (pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_TOR))) begin
+							if (((pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_OFF) || (pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_TOR)))
 								pmp_addr_rdata[g_exp_rd_data_i][(PMPGranularity - 1):0] = 1&#39;sb0;
-							end
 						end
 					end
 					else begin
 						always @(*) begin
 							pmp_addr_rdata[g_exp_rd_data_i] = pmp_addr[g_exp_rd_data_i];
-							if (((pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_OFF) || (pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_TOR))) begin
+							if (((pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_OFF) || (pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_TOR)))
 								pmp_addr_rdata[g_exp_rd_data_i][(PMPGranularity - 1):0] = 1&#39;sb0;
-							end
-							else if ((pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_NAPOT)) begin
+							else if ((pmp_cfg[g_exp_rd_data_i][4:3] == PMP_MODE_NAPOT))
 								pmp_addr_rdata[g_exp_rd_data_i][(PMPGranularity - 2):0] = 1&#39;sb1;
-							end
 						end
 					end
 				end
@@ -1887,9 +1792,9 @@ module ibex_cs_registers (
 			end
 			genvar g_pmp_csrs_i;
 			for (g_pmp_csrs_i = 0; (g_pmp_csrs_i &lt; PMPNumRegions); g_pmp_csrs_i = (g_pmp_csrs_i + 1)) begin : g_pmp_csrs
-				assign pmp_cfg_we[g_pmp_csrs_i] = ((csr_we_int &amp; (~ pmp_cfg[g_pmp_csrs_i][5:5])) &amp; (csr_addr == (CSR_OFF_PMP_CFG + (g_pmp_csrs_i[11:0] &gt;&gt; 2))));
+				assign pmp_cfg_we[g_pmp_csrs_i] = ((csr_we_int &amp; ~pmp_cfg[g_pmp_csrs_i][5:5]) &amp; (csr_addr == (CSR_OFF_PMP_CFG + (g_pmp_csrs_i[11:0] &gt;&gt; 2))));
 				always @(*) pmp_cfg_wdata[g_pmp_csrs_i][5:5] = csr_wdata_int[(((g_pmp_csrs_i % 4) * PMP_CFG_W) + 7)];
-				always @(*) begin
+				always @(*)
 					case (csr_wdata_int[(((g_pmp_csrs_i % 4) * PMP_CFG_W) + 3)+:2])
 						2&#39;b00: pmp_cfg_wdata[g_pmp_csrs_i][4:3] = PMP_MODE_OFF;
 						2&#39;b01: pmp_cfg_wdata[g_pmp_csrs_i][4:3] = PMP_MODE_TOR;
@@ -1897,32 +1802,25 @@ module ibex_cs_registers (
 						2&#39;b11: pmp_cfg_wdata[g_pmp_csrs_i][4:3] = PMP_MODE_NAPOT;
 						default: pmp_cfg_wdata[g_pmp_csrs_i][4:3] = 1&#39;sbX;
 					endcase
-				end
 				always @(*) pmp_cfg_wdata[g_pmp_csrs_i][2:2] = csr_wdata_int[(((g_pmp_csrs_i % 4) * PMP_CFG_W) + 2)];
-				always @(*) pmp_cfg_wdata[g_pmp_csrs_i][1:1] = (&amp; csr_wdata_int[((g_pmp_csrs_i % 4) * PMP_CFG_W)+:2]);
+				always @(*) pmp_cfg_wdata[g_pmp_csrs_i][1:1] = &amp;csr_wdata_int[((g_pmp_csrs_i % 4) * PMP_CFG_W)+:2];
 				always @(*) pmp_cfg_wdata[g_pmp_csrs_i][0:0] = csr_wdata_int[((g_pmp_csrs_i % 4) * PMP_CFG_W)];
-				always @(posedge clk_i or negedge rst_ni) begin
-					if ((! rst_ni)) begin
+				always @(posedge clk_i or negedge rst_ni)
+					if (!rst_ni)
 						pmp_cfg[g_pmp_csrs_i] &lt;= &#39;b0;
-					end
-					else if (pmp_cfg_we[g_pmp_csrs_i]) begin
+					else if (pmp_cfg_we[g_pmp_csrs_i])
 						pmp_cfg[g_pmp_csrs_i] &lt;= pmp_cfg_wdata[g_pmp_csrs_i];
-					end
-				end
 				if ((g_pmp_csrs_i &lt; (PMPNumRegions - 1))) begin : g_lower
-					assign pmp_addr_we[g_pmp_csrs_i] = (((csr_we_int &amp; (~ pmp_cfg[g_pmp_csrs_i][5:5])) &amp; (pmp_cfg[(g_pmp_csrs_i + 1)][4:3] != PMP_MODE_TOR)) &amp; (csr_addr == (CSR_OFF_PMP_ADDR + g_pmp_csrs_i[11:0])));
+					assign pmp_addr_we[g_pmp_csrs_i] = (((csr_we_int &amp; ~pmp_cfg[g_pmp_csrs_i][5:5]) &amp; (pmp_cfg[(g_pmp_csrs_i + 1)][4:3] != PMP_MODE_TOR)) &amp; (csr_addr == (CSR_OFF_PMP_ADDR + g_pmp_csrs_i[11:0])));
 				end
 				else begin : g_upper
-					assign pmp_addr_we[g_pmp_csrs_i] = ((csr_we_int &amp; (~ pmp_cfg[g_pmp_csrs_i][5:5])) &amp; (csr_addr == (CSR_OFF_PMP_ADDR + g_pmp_csrs_i[11:0])));
+					assign pmp_addr_we[g_pmp_csrs_i] = ((csr_we_int &amp; ~pmp_cfg[g_pmp_csrs_i][5:5]) &amp; (csr_addr == (CSR_OFF_PMP_ADDR + g_pmp_csrs_i[11:0])));
 				end
-				always @(posedge clk_i or negedge rst_ni) begin
-					if ((! rst_ni)) begin
+				always @(posedge clk_i or negedge rst_ni)
+					if (!rst_ni)
 						pmp_addr[g_pmp_csrs_i] &lt;= &#39;b0;
-					end
-					else if (pmp_addr_we[g_pmp_csrs_i]) begin
+					else if (pmp_addr_we[g_pmp_csrs_i])
 						pmp_addr[g_pmp_csrs_i] &lt;= csr_wdata_int;
-					end
-				end
 				assign csr_pmp_cfg_o[(((0 &gt;= (PMPNumRegions - 1)) ? g_pmp_csrs_i : ((PMPNumRegions - 1) - g_pmp_csrs_i)) * 6)+:6] = pmp_cfg[g_pmp_csrs_i];
 				assign csr_pmp_addr_o[(((0 &gt;= (PMPNumRegions - 1)) ? g_pmp_csrs_i : ((PMPNumRegions - 1) - g_pmp_csrs_i)) * 34)+:34] = {pmp_addr[g_pmp_csrs_i], 2&#39;b00};
 			end
@@ -1941,12 +1839,10 @@ module ibex_cs_registers (
 		end
 	endgenerate
 	always @(*) begin : mcountinhibit_update
-		if ((mcountinhibit_we == 1&#39;b1)) begin
+		if ((mcountinhibit_we == 1&#39;b1))
 			mcountinhibit_d = {csr_wdata_int[31:2], 1&#39;b0, csr_wdata_int[0]};
-		end
-		else begin
+		else
 			mcountinhibit_d = mcountinhibit_q;
-		end
 	end
 	assign mcountinhibit_force = {{(29 - MHPMCounterNum) {1&#39;b1}}, {MHPMCounterNum {1&#39;b0}}, 3&#39;b000};
 	assign mcountinhibit = (mcountinhibit_q | mcountinhibit_force);
@@ -1955,7 +1851,7 @@ module ibex_cs_registers (
 		mhpmcounter_incr[1] = 1&#39;b0;
 		mhpmcounter_incr[2] = instr_ret_i;
 		mhpmcounter_incr[3] = lsu_busy_i;
-		mhpmcounter_incr[4] = (imiss_i &amp; (~ pc_set_i));
+		mhpmcounter_incr[4] = (imiss_i &amp; ~pc_set_i);
 		mhpmcounter_incr[5] = mem_load_i;
 		mhpmcounter_incr[6] = mem_store_i;
 		mhpmcounter_incr[7] = jump_i;
@@ -2017,27 +1913,22 @@ module ibex_cs_registers (
 			reg signed [31:0] i;
 			for (i = 0; (i &lt; 32); i = (i + 1))
 				begin : gen_mhpmcounter_update
-					if ((mhpmcounter_incr[i] &amp; (~ mcountinhibit[i]))) begin
+					if ((mhpmcounter_incr[i] &amp; ~mcountinhibit[i]))
 						mhpmcounter_d[((31 - i) * 64)+:64] = (mhpmcounter_mask[i] &amp; (mhpmcounter_q[((31 - i) * 64)+:64] + 64&#39;h1));
-					end
-					if (mhpmcounter_we[i]) begin
+					if (mhpmcounter_we[i])
 						mhpmcounter_d[((31 - i) * 64)+:32] = (mhpmcounter_mask[i][31:0] &amp; csr_wdata_int);
-					end
-					else if (mhpmcounterh_we[i]) begin
+					else if (mhpmcounterh_we[i])
 						mhpmcounter_d[(((31 - i) * 64) + 32)+:32] = (mhpmcounter_mask[i][63:32] &amp; csr_wdata_int);
-					end
 				end
 		end
 	end
 	always @(posedge clk_i or negedge rst_ni) begin : perf_counter_registers
-		if ((! rst_ni)) begin
+		if (!rst_ni) begin
 			mcountinhibit_q &lt;= 1&#39;sb0;
 			begin : sv2v_autoblock_38
 				reg signed [31:0] i;
 				for (i = 0; (i &lt; 32); i = (i + 1))
-					begin
-						mhpmcounter_q[((31 - i) * 64)+:64] &lt;= 1&#39;sb0;
-					end
+					mhpmcounter_q[((31 - i) * 64)+:64] &lt;= 1&#39;sb0;
 			end
 		end
 		else begin
@@ -2049,9 +1940,7 @@ module ibex_cs_registers (
 		input reg mie;
 		input reg mpie;
 		input reg [1:0] mpp;
-		begin
-			sv2v_struct_5B112 = {mie, mpie, mpp};
-		end
+		sv2v_struct_5B112 = {mie, mpie, mpp};
 	endfunction
 	function [31:0] sv2v_struct_996E9;
 		input reg [3:0] xdebugver;
@@ -2069,9 +1958,7 @@ module ibex_cs_registers (
 		input reg nmip;
 		input reg step;
 		input reg [1:0] prv;
-		begin
-			sv2v_struct_996E9 = {xdebugver, zero2, ebreakm, zero1, ebreaks, ebreaku, stepie, stopcount, stoptime, cause, zero0, mprven, nmip, step, prv};
-		end
+		sv2v_struct_996E9 = {xdebugver, zero2, ebreakm, zero1, ebreaks, ebreaku, stepie, stopcount, stoptime, cause, zero0, mprven, nmip, step, prv};
 	endfunction
 endmodule
 module ibex_decoder (
@@ -2339,22 +2226,17 @@ module ibex_decoder (
 	endgenerate
 	always @(*) begin : csr_operand_check
 		csr_op_o = csr_op;
-		if ((((csr_op == CSR_OP_SET) || (csr_op == CSR_OP_CLEAR)) &amp;&amp; (instr[19:15] == 1&#39;sb0))) begin
+		if ((((csr_op == CSR_OP_SET) || (csr_op == CSR_OP_CLEAR)) &amp;&amp; (instr[19:15] == 1&#39;sb0)))
 			csr_op_o = CSR_OP_READ;
-		end
 	end
 	always @(*) begin : csr_pipeline_flushes
 		csr_pipe_flush_o = 1&#39;b0;
-		if (((csr_access_o == 1&#39;b1) &amp;&amp; ((csr_op_o == CSR_OP_WRITE) || (csr_op_o == CSR_OP_SET)))) begin
-			if (((instr[31:20] == CSR_MSTATUS) || (instr[31:20] == CSR_MIE))) begin
+		if (((csr_access_o == 1&#39;b1) &amp;&amp; ((csr_op_o == CSR_OP_WRITE) || (csr_op_o == CSR_OP_SET))))
+			if (((instr[31:20] == CSR_MSTATUS) || (instr[31:20] == CSR_MIE)))
 				csr_pipe_flush_o = 1&#39;b1;
-			end
-		end
-		else if (((csr_access_o == 1&#39;b1) &amp;&amp; (csr_op_o != CSR_OP_READ))) begin
-			if (((((instr[31:20] == CSR_DCSR) || (instr[31:20] == CSR_DPC)) || (instr[31:20] == CSR_DSCRATCH0)) || (instr[31:20] == CSR_DSCRATCH1))) begin
+		else if (((csr_access_o == 1&#39;b1) &amp;&amp; (csr_op_o != CSR_OP_READ)))
+			if (((((instr[31:20] == CSR_DCSR) || (instr[31:20] == CSR_DPC)) || (instr[31:20] == CSR_DSCRATCH0)) || (instr[31:20] == CSR_DSCRATCH1)))
 				csr_pipe_flush_o = 1&#39;b1;
-			end
-		end
 	end
 	always @(*) begin
 		jump_in_dec_o = 1&#39;b0;
@@ -2421,9 +2303,8 @@ module ibex_decoder (
 					alu_operator_o = ALU_ADD;
 					regfile_we = 1&#39;b1;
 				end
-				if ((instr[14:12] != 3&#39;b0)) begin
+				if ((instr[14:12] != 3&#39;b0))
 					illegal_insn = 1&#39;b1;
-				end
 			end
 			OPCODE_BRANCH: begin
 				branch_in_dec_o = 1&#39;b1;
@@ -2454,13 +2335,12 @@ module ibex_decoder (
 				data_req_o = 1&#39;b1;
 				data_we_o = 1&#39;b1;
 				alu_operator_o = ALU_ADD;
-				if ((! instr[14])) begin
+				if (!instr[14]) begin
 					imm_b_mux_sel_o = IMM_B_S;
 					alu_op_b_mux_sel_o = OP_B_IMM;
 				end
-				else begin
+				else
 					illegal_insn = 1&#39;b1;
-				end
 				case (instr[13:12])
 					2&#39;b00: data_type_o = 2&#39;b10;
 					2&#39;b01: data_type_o = 2&#39;b01;
@@ -2477,19 +2357,16 @@ module ibex_decoder (
 				alu_operator_o = ALU_ADD;
 				alu_op_b_mux_sel_o = OP_B_IMM;
 				imm_b_mux_sel_o = IMM_B_I;
-				data_sign_extension_o = (~ instr[14]);
+				data_sign_extension_o = ~instr[14];
 				case (instr[13:12])
 					2&#39;b00: data_type_o = 2&#39;b10;
 					2&#39;b01: data_type_o = 2&#39;b01;
 					2&#39;b10: begin
 						data_type_o = 2&#39;b00;
-						if (instr[14]) begin
+						if (instr[14])
 							illegal_insn = 1&#39;b1;
-						end
 					end
-					default: begin
-					illegal_insn = 1&#39;b1;
-				end
+					default: illegal_insn = 1&#39;b1;
 				endcase
 			end
 			OPCODE_LUI: begin
@@ -2521,34 +2398,26 @@ module ibex_decoder (
 					3&#39;b111: alu_operator_o = ALU_AND;
 					3&#39;b001: begin
 						alu_operator_o = ALU_SLL;
-						if ((instr[31:25] != 7&#39;b0)) begin
+						if ((instr[31:25] != 7&#39;b0))
 							illegal_insn = 1&#39;b1;
-						end
 					end
-					3&#39;b101: begin
-						if ((instr[31:25] == 7&#39;b0)) begin
+					3&#39;b101:
+						if ((instr[31:25] == 7&#39;b0))
 							alu_operator_o = ALU_SRL;
-						end
-						else if ((instr[31:25] == 7&#39;b010_0000)) begin
+						else if ((instr[31:25] == 7&#39;b010_0000))
 							alu_operator_o = ALU_SRA;
-						end
-						else begin
+						else
 							illegal_insn = 1&#39;b1;
-						end
-					end
-					default: begin
-					alu_operator_o = {5 {1&#39;bX}};
-				end
+					default: alu_operator_o = {5 {1&#39;bX}};
 				endcase
 			end
 			OPCODE_OP: begin
 				alu_op_a_mux_sel_o = OP_A_REG_A;
 				alu_op_b_mux_sel_o = OP_B_REG_B;
 				regfile_we = 1&#39;b1;
-				if (instr[31]) begin
+				if (instr[31])
 					illegal_insn = 1&#39;b1;
-				end
-				else begin
+				else
 					case ({instr[30:25], instr[14:12]})
 						{6&#39;b00_0000, 3&#39;b000}: alu_operator_o = ALU_ADD;
 						{6&#39;b10_0000, 3&#39;b000}: alu_operator_o = ALU_SUB;
@@ -2616,24 +2485,19 @@ module ibex_decoder (
 							multdiv_signed_mode_o = 2&#39;b00;
 							illegal_insn = (RV32M ? 1&#39;b0 : 1&#39;b1);
 						end
-						default: begin
-						illegal_insn = 1&#39;b1;
-					end
+						default: illegal_insn = 1&#39;b1;
 					endcase
-				end
 			end
-			OPCODE_MISC_MEM: begin
+			OPCODE_MISC_MEM:
 				if ((instr[14:12] == 3&#39;b000)) begin
 					alu_operator_o = ALU_ADD;
 					alu_op_a_mux_sel_o = OP_A_REG_A;
 					alu_op_b_mux_sel_o = OP_B_IMM;
 					regfile_we = 1&#39;b0;
 				end
-				else begin
+				else
 					illegal_insn = 1&#39;b1;
-				end
-			end
-			OPCODE_SYSTEM: begin
+			OPCODE_SYSTEM:
 				if ((instr[14:12] == 3&#39;b000)) begin
 					alu_op_a_mux_sel_o = OP_A_REG_A;
 					alu_op_b_mux_sel_o = OP_B_IMM;
@@ -2645,9 +2509,8 @@ module ibex_decoder (
 						12&#39;h105: wfi_insn_o = 1&#39;b1;
 						default: illegal_insn = 1&#39;b1;
 					endcase
-					if (((instr[19:15] != 5&#39;b0) || (instr[11:07] != 5&#39;b0))) begin
+					if (((instr[19:15] != 5&#39;b0) || (instr[11:07] != 5&#39;b0)))
 						illegal_insn = 1&#39;b1;
-					end
 				end
 				else begin
 					csr_access_o = 1&#39;b1;
@@ -2656,12 +2519,10 @@ module ibex_decoder (
 					alu_op_b_mux_sel_o = OP_B_IMM;
 					imm_a_mux_sel_o = IMM_A_Z;
 					imm_b_mux_sel_o = IMM_B_I;
-					if (instr[14]) begin
+					if (instr[14])
 						alu_op_a_mux_sel_o = OP_A_IMM;
-					end
-					else begin
+					else
 						alu_op_a_mux_sel_o = OP_A_REG_A;
-					end
 					case (instr[13:12])
 						2&#39;b01: csr_op = CSR_OP_WRITE;
 						2&#39;b10: csr_op = CSR_OP_SET;
@@ -2670,14 +2531,10 @@ module ibex_decoder (
 					endcase
 					illegal_insn = csr_illegal;
 				end
-			end
-			default: begin
-			illegal_insn = 1&#39;b1;
-		end
+			default: illegal_insn = 1&#39;b1;
 		endcase
-		if (illegal_c_insn_i) begin
+		if (illegal_c_insn_i)
 			illegal_insn = 1&#39;b1;
-		end
 		if (illegal_insn) begin
 			regfile_we = 1&#39;b0;
 			data_req_o = 1&#39;b0;
@@ -2691,7 +2548,7 @@ module ibex_decoder (
 		end
 	end
 	assign illegal_insn_o = (illegal_insn | illegal_reg_rv32e);
-	assign regfile_we_o = (regfile_we &amp; (~ illegal_reg_rv32e));
+	assign regfile_we_o = (regfile_we &amp; ~illegal_reg_rv32e);
 endmodule
 module ibex_ex_block (
 	clk_i,
@@ -2922,7 +2779,7 @@ module ibex_ex_block (
 		.is_equal_result_o(alu_is_equal_result)
 	);
 	generate
-		if ((! MULT_TYPE)) begin : gen_multdiv_slow
+		if (!MULT_TYPE) begin : gen_multdiv_slow
 			ibex_multdiv_slow multdiv_i(
 				.clk_i(clk_i),
 				.rst_ni(rst_ni),
@@ -3355,7 +3212,7 @@ module ibex_id_stage (
 		endcase
 	end
 	assign alu_operand_b = ((alu_op_b_mux_sel == OP_B_IMM) ? imm_b : regfile_rdata_b);
-	assign regfile_we = ((illegal_csr_insn_i || (! instr_executing)) ? 1&#39;b0 : ((data_req_dec || multdiv_en_dec) ? regfile_we_wb : regfile_we_dec));
+	assign regfile_we = ((illegal_csr_insn_i || !instr_executing) ? 1&#39;b0 : ((data_req_dec || multdiv_en_dec) ? regfile_we_wb : regfile_we_dec));
 	always @(*) begin : regfile_wdata_mux
 		case (regfile_wdata_sel)
 			RF_WD_EX: regfile_wdata = regfile_wdata_ex_i;
@@ -3479,7 +3336,7 @@ module ibex_id_stage (
 	);
 	assign multdiv_en_dec = (mult_en_dec | div_en_dec);
 	assign instr_multicycle = (((data_req_dec | multdiv_en_dec) | branch_in_dec) | jump_in_dec);
-	assign instr_executing = (instr_new_i | (instr_multicycle &amp; (~ instr_multicycle_done_q)));
+	assign instr_executing = (instr_new_i | (instr_multicycle &amp; ~instr_multicycle_done_q));
 	assign data_req_id = (instr_executing ? data_req_dec : 1&#39;b0);
 	assign mult_en_id = (instr_executing ? mult_en_dec : 1&#39;b0);
 	assign div_en_id = (instr_executing ? div_en_dec : 1&#39;b0);
@@ -3500,7 +3357,7 @@ module ibex_id_stage (
 	reg [0:0] id_wb_fsm_cs;
 	reg [0:0] id_wb_fsm_ns;
 	always @(posedge clk_i or negedge rst_ni) begin : id_wb_pipeline_reg
-		if ((! rst_ni)) begin
+		if (!rst_ni) begin
 			id_wb_fsm_cs &lt;= IDLE;
 			branch_set_q &lt;= 1&#39;b0;
 			instr_multicycle_done_q &lt;= 1&#39;b0;
@@ -3523,8 +3380,8 @@ module ibex_id_stage (
 		perf_branch_o = 1&#39;b0;
 		instr_ret_o = 1&#39;b0;
 		case (id_wb_fsm_cs)
-			IDLE: begin
-				if (instr_new_i) begin
+			IDLE:
+				if (instr_new_i)
 					case (1&#39;b1)
 						data_req_dec: begin
 							id_wb_fsm_ns = WAIT_MULTICYCLE;
@@ -3539,10 +3396,10 @@ module ibex_id_stage (
 						branch_in_dec: begin
 							id_wb_fsm_ns = (branch_decision_i ? WAIT_MULTICYCLE : IDLE);
 							stall_branch = branch_decision_i;
-							instr_multicycle_done_n = (~ branch_decision_i);
+							instr_multicycle_done_n = ~branch_decision_i;
 							branch_set_n = branch_decision_i;
 							perf_branch_o = 1&#39;b1;
-							instr_ret_o = (~ branch_decision_i);
+							instr_ret_o = ~branch_decision_i;
 						end
 						jump_in_dec: begin
 							id_wb_fsm_ns = WAIT_MULTICYCLE;
@@ -3554,13 +3411,11 @@ module ibex_id_stage (
 						instr_ret_o = 1&#39;b1;
 					end
 					endcase
-				end
-			end
-			WAIT_MULTICYCLE: begin
-				if (((data_req_dec &amp; lsu_valid_i) | ((~ data_req_dec) &amp; ex_valid_i))) begin
+			WAIT_MULTICYCLE:
+				if (((data_req_dec &amp; lsu_valid_i) | (~data_req_dec &amp; ex_valid_i))) begin
 					id_wb_fsm_ns = IDLE;
 					instr_multicycle_done_n = 1&#39;b1;
-					regfile_we_wb = (regfile_we_dec &amp; (~ lsu_load_err_i));
+					regfile_we_wb = (regfile_we_dec &amp; ~lsu_load_err_i);
 					instr_ret_o = 1&#39;b1;
 				end
 				else begin
@@ -3569,10 +3424,7 @@ module ibex_id_stage (
 					stall_branch = branch_in_dec;
 					stall_jump = jump_in_dec;
 				end
-			end
-			default: begin
-			id_wb_fsm_ns = 1&#39;bX;
-		end
+			default: id_wb_fsm_ns = 1&#39;bX;
 		endcase
 	end
 	assign instr_ret_compressed_o = (instr_ret_o &amp; instr_is_compressed_i);
@@ -3864,32 +3716,26 @@ module ibex_if_stage (
 		.instr_pmp_err_i(instr_pmp_err_i),
 		.busy_o(prefetch_busy)
 	);
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni)
 			offset_in_init_q &lt;= 1&#39;b1;
-		end
-		else begin
+		else
 			offset_in_init_q &lt;= offset_in_init_d;
-		end
-	end
 	always @(*) begin
 		offset_in_init_d = offset_in_init_q;
 		fetch_ready = 1&#39;b0;
 		branch_req = 1&#39;b0;
 		have_instr = 1&#39;b0;
-		if (offset_in_init_q) begin
+		if (offset_in_init_q)
 			if (req_i) begin
 				branch_req = 1&#39;b1;
 				offset_in_init_d = 1&#39;b0;
 			end
-		end
-		else begin
-			if (fetch_valid) begin
-				have_instr = 1&#39;b1;
-				if ((req_i &amp;&amp; if_id_pipe_reg_we)) begin
-					fetch_ready = 1&#39;b1;
-					offset_in_init_d = 1&#39;b0;
-				end
+		else if (fetch_valid) begin
+			have_instr = 1&#39;b1;
+			if ((req_i &amp;&amp; if_id_pipe_reg_we)) begin
+				fetch_ready = 1&#39;b1;
+				offset_in_init_d = 1&#39;b0;
 			end
 		end
 		if (pc_set_i) begin
@@ -3900,7 +3746,7 @@ module ibex_if_stage (
 	end
 	assign pc_if_o = fetch_addr;
 	assign if_busy_o = prefetch_busy;
-	assign perf_imiss_o = ((~ fetch_valid) | branch_req);
+	assign perf_imiss_o = (~fetch_valid | branch_req);
 	wire [31:0] instr_decompressed;
 	wire illegal_c_insn;
 	wire instr_is_compressed_int;
@@ -3912,7 +3758,7 @@ module ibex_if_stage (
 	);
 	assign if_id_pipe_reg_we = (have_instr &amp; id_in_ready_i);
 	always @(posedge clk_i or negedge rst_ni) begin : if_id_pipeline_regs
-		if ((! rst_ni)) begin
+		if (!rst_ni) begin
 			instr_new_id_o &lt;= 1&#39;b0;
 			instr_valid_id_o &lt;= 1&#39;b0;
 			instr_rdata_id_o &lt;= 1&#39;sb0;
@@ -3933,9 +3779,8 @@ module ibex_if_stage (
 				illegal_c_insn_id_o &lt;= illegal_c_insn;
 				pc_id_o &lt;= pc_if_o;
 			end
-			else if (instr_valid_clear_i) begin
+			else if (instr_valid_clear_i)
 				instr_valid_id_o &lt;= 1&#39;b0;
-			end
 		end
 	end
 endmodule
@@ -4030,10 +3875,10 @@ module ibex_load_store_unit (
 	reg [2:0] ls_fsm_cs;
 	reg [2:0] ls_fsm_ns;
 	assign data_addr = adder_result_ex_i;
-	always @(*) begin
+	always @(*)
 		case (data_type_ex_i)
-			2&#39;b00: begin
-				if ((! handle_misaligned_q)) begin
+			2&#39;b00:
+				if (!handle_misaligned_q)
 					case (data_addr[1:0])
 						2&#39;b00: data_be = 4&#39;b1111;
 						2&#39;b01: data_be = 4&#39;b1110;
@@ -4041,8 +3886,7 @@ module ibex_load_store_unit (
 						2&#39;b11: data_be = 4&#39;b1000;
 						default: data_be = 1&#39;sbX;
 					endcase
-				end
-				else begin
+				else
 					case (data_addr[1:0])
 						2&#39;b00: data_be = 4&#39;b0000;
 						2&#39;b01: data_be = 4&#39;b0001;
@@ -4050,10 +3894,8 @@ module ibex_load_store_unit (
 						2&#39;b11: data_be = 4&#39;b0111;
 						default: data_be = 1&#39;sbX;
 					endcase
-				end
-			end
-			2&#39;b01: begin
-				if ((! handle_misaligned_q)) begin
+			2&#39;b01:
+				if (!handle_misaligned_q)
 					case (data_addr[1:0])
 						2&#39;b00: data_be = 4&#39;b0011;
 						2&#39;b01: data_be = 4&#39;b0110;
@@ -4061,12 +3903,9 @@ module ibex_load_store_unit (
 						2&#39;b11: data_be = 4&#39;b1000;
 						default: data_be = 1&#39;sbX;
 					endcase
-				end
-				else begin
+				else
 					data_be = 4&#39;b0001;
-				end
-			end
-			2&#39;b10, 2&#39;b11: begin
+			2&#39;b10, 2&#39;b11:
 				case (data_addr[1:0])
 					2&#39;b00: data_be = 4&#39;b0001;
 					2&#39;b01: data_be = 4&#39;b0010;
@@ -4074,12 +3913,10 @@ module ibex_load_store_unit (
 					2&#39;b11: data_be = 4&#39;b1000;
 					default: data_be = 1&#39;sbX;
 				endcase
-			end
 			default: data_be = 1&#39;sbX;
 		endcase
-	end
 	assign wdata_offset = data_addr[1:0];
-	always @(*) begin
+	always @(*)
 		case (wdata_offset)
 			2&#39;b00: data_wdata = data_wdata_ex_i[31:0];
 			2&#39;b01: data_wdata = {data_wdata_ex_i[23:0], data_wdata_ex_i[31:24]};
@@ -4087,20 +3924,18 @@ module ibex_load_store_unit (
 			2&#39;b11: data_wdata = {data_wdata_ex_i[7:0], data_wdata_ex_i[31:8]};
 			default: data_wdata = 1&#39;sbX;
 		endcase
-	end
 	always @(*) begin
 		rdata_d = rdata_q;
-		if (((data_rvalid_i &amp; (~ data_we_q)) &amp; handle_misaligned_q)) begin
+		if (((data_rvalid_i &amp; ~data_we_q) &amp; handle_misaligned_q))
 			rdata_d = data_rdata_i;
-		end
 	end
 	assign data_update = (data_gnt_i | pmp_err_q);
 	assign rdata_offset_d = (data_update ? data_addr[1:0] : rdata_offset_q);
 	assign data_type_d = (data_update ? data_type_ex_i : data_type_q);
 	assign data_sign_ext_d = (data_update ? data_sign_ext_ex_i : data_sign_ext_q);
 	assign data_we_d = (data_update ? data_we_ex_i : data_we_q);
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni) begin
 			rdata_q &lt;= 1&#39;sb0;
 			rdata_offset_q &lt;= 2&#39;h0;
 			data_type_q &lt;= 2&#39;h0;
@@ -4114,8 +3949,7 @@ module ibex_load_store_unit (
 			data_sign_ext_q &lt;= data_sign_ext_d;
 			data_we_q &lt;= data_we_d;
 		end
-	end
-	always @(*) begin
+	always @(*)
 		case (rdata_offset_q)
 			2&#39;b00: rdata_w_ext = data_rdata_i[31:0];
 			2&#39;b01: rdata_w_ext = {data_rdata_i[7:0], rdata_q[31:8]};
@@ -4123,89 +3957,61 @@ module ibex_load_store_unit (
 			2&#39;b11: rdata_w_ext = {data_rdata_i[23:0], rdata_q[31:24]};
 			default: rdata_w_ext = 1&#39;sbX;
 		endcase
-	end
-	always @(*) begin
+	always @(*)
 		case (rdata_offset_q)
-			2&#39;b00: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b00:
+				if (!data_sign_ext_q)
 					rdata_h_ext = {16&#39;h0000, data_rdata_i[15:0]};
-				end
-				else begin
+				else
 					rdata_h_ext = {{16 {data_rdata_i[15]}}, data_rdata_i[15:0]};
-				end
-			end
-			2&#39;b01: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b01:
+				if (!data_sign_ext_q)
 					rdata_h_ext = {16&#39;h0000, data_rdata_i[23:8]};
-				end
-				else begin
+				else
 					rdata_h_ext = {{16 {data_rdata_i[23]}}, data_rdata_i[23:8]};
-				end
-			end
-			2&#39;b10: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b10:
+				if (!data_sign_ext_q)
 					rdata_h_ext = {16&#39;h0000, data_rdata_i[31:16]};
-				end
-				else begin
+				else
 					rdata_h_ext = {{16 {data_rdata_i[31]}}, data_rdata_i[31:16]};
-				end
-			end
-			2&#39;b11: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b11:
+				if (!data_sign_ext_q)
 					rdata_h_ext = {16&#39;h0000, data_rdata_i[7:0], rdata_q[31:24]};
-				end
-				else begin
+				else
 					rdata_h_ext = {{16 {data_rdata_i[7]}}, data_rdata_i[7:0], rdata_q[31:24]};
-				end
-			end
 			default: rdata_h_ext = 1&#39;sbX;
 		endcase
-	end
-	always @(*) begin
+	always @(*)
 		case (rdata_offset_q)
-			2&#39;b00: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b00:
+				if (!data_sign_ext_q)
 					rdata_b_ext = {24&#39;h00_0000, data_rdata_i[7:0]};
-				end
-				else begin
+				else
 					rdata_b_ext = {{24 {data_rdata_i[7]}}, data_rdata_i[7:0]};
-				end
-			end
-			2&#39;b01: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b01:
+				if (!data_sign_ext_q)
 					rdata_b_ext = {24&#39;h00_0000, data_rdata_i[15:8]};
-				end
-				else begin
+				else
 					rdata_b_ext = {{24 {data_rdata_i[15]}}, data_rdata_i[15:8]};
-				end
-			end
-			2&#39;b10: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b10:
+				if (!data_sign_ext_q)
 					rdata_b_ext = {24&#39;h00_0000, data_rdata_i[23:16]};
-				end
-				else begin
+				else
 					rdata_b_ext = {{24 {data_rdata_i[23]}}, data_rdata_i[23:16]};
-				end
-			end
-			2&#39;b11: begin
-				if ((! data_sign_ext_q)) begin
+			2&#39;b11:
+				if (!data_sign_ext_q)
 					rdata_b_ext = {24&#39;h00_0000, data_rdata_i[31:24]};
-				end
-				else begin
+				else
 					rdata_b_ext = {{24 {data_rdata_i[31]}}, data_rdata_i[31:24]};
-				end
-			end
 			default: rdata_b_ext = 1&#39;sbX;
 		endcase
-	end
-	always @(*) begin
+	always @(*)
 		case (data_type_q)
 			2&#39;b00: data_rdata_ext = rdata_w_ext;
 			2&#39;b01: data_rdata_ext = rdata_h_ext;
 			2&#39;b10, 2&#39;b11: data_rdata_ext = rdata_b_ext;
 			default: data_rdata_ext = 1&#39;sbX;
 		endcase
-	end
 	assign split_misaligned_access = (((data_type_ex_i == 2&#39;b00) &amp;&amp; (data_addr[1:0] != 2&#39;b00)) || ((data_type_ex_i == 2&#39;b01) &amp;&amp; (data_addr[1:0] == 2&#39;b11)));
 	always @(*) begin
 		ls_fsm_ns = ls_fsm_cs;
@@ -4216,7 +4022,7 @@ module ibex_load_store_unit (
 		data_or_pmp_err = 1&#39;b0;
 		pmp_err_d = pmp_err_q;
 		case (ls_fsm_cs)
-			IDLE: begin
+			IDLE:
 				if (data_req_ex_i) begin
 					data_req_o = 1&#39;b1;
 					pmp_err_d = data_pmp_err_i;
@@ -4224,11 +4030,9 @@ module ibex_load_store_unit (
 						handle_misaligned_d = split_misaligned_access;
 						ls_fsm_ns = (split_misaligned_access ? WAIT_RVALID_MIS : WAIT_RVALID);
 					end
-					else begin
+					else
 						ls_fsm_ns = (split_misaligned_access ? WAIT_GNT_MIS : WAIT_GNT);
-					end
 				end
-			end
 			WAIT_GNT_MIS: begin
 				data_req_o = 1&#39;b1;
 				if ((data_gnt_i || pmp_err_q)) begin
@@ -4247,22 +4051,17 @@ module ibex_load_store_unit (
 						handle_misaligned_d = 1&#39;b0;
 						ls_fsm_ns = (data_gnt_i ? WAIT_RVALID_ERR : WAIT_GNT_ERR);
 					end
-					else begin
+					else
 						ls_fsm_ns = (data_gnt_i ? WAIT_RVALID : WAIT_GNT);
-					end
 				end
-				else begin
-					if (data_gnt_i) begin
-						ls_fsm_ns = WAIT_RVALID_DONE;
-					end
-				end
+				else if (data_gnt_i)
+					ls_fsm_ns = WAIT_RVALID_DONE;
 			end
 			WAIT_GNT: begin
 				addr_incr_req_o = handle_misaligned_q;
 				data_req_o = 1&#39;b1;
-				if ((data_gnt_i || pmp_err_q)) begin
+				if ((data_gnt_i || pmp_err_q))
 					ls_fsm_ns = WAIT_RVALID;
-				end
 			end
 			WAIT_RVALID: begin
 				data_req_o = 1&#39;b0;
@@ -4272,26 +4071,21 @@ module ibex_load_store_unit (
 					handle_misaligned_d = 1&#39;b0;
 					ls_fsm_ns = IDLE;
 				end
-				else begin
+				else
 					ls_fsm_ns = WAIT_RVALID;
-				end
 			end
 			WAIT_GNT_ERR: begin
 				data_req_o = 1&#39;b1;
 				addr_incr_req_o = 1&#39;b1;
-				if (pmp_err_q) begin
+				if (pmp_err_q)
 					ls_fsm_ns = IDLE;
-				end
-				else if (data_gnt_i) begin
+				else if (data_gnt_i)
 					ls_fsm_ns = WAIT_RVALID_ERR;
-				end
 			end
-			WAIT_RVALID_ERR: begin
-				if ((data_rvalid_i || pmp_err_q)) begin
+			WAIT_RVALID_ERR:
+				if ((data_rvalid_i || pmp_err_q))
 					ls_fsm_ns = IDLE;
-				end
-			end
-			WAIT_RVALID_DONE: begin
+			WAIT_RVALID_DONE:
 				if (data_rvalid_i) begin
 					pmp_err_d = data_pmp_err_i;
 					if (data_err_i) begin
@@ -4300,24 +4094,19 @@ module ibex_load_store_unit (
 						handle_misaligned_d = 1&#39;b0;
 						ls_fsm_ns = WAIT_RVALID_ERR;
 					end
-					else begin
+					else
 						ls_fsm_ns = WAIT_RVALID;
-					end
 				end
-			end
-			default: begin
-			ls_fsm_ns = 1&#39;bX;
-		end
+			default: ls_fsm_ns = 1&#39;bX;
 		endcase
 	end
 	always @(*) begin
 		addr_last_d = addr_last_q;
-		if (((data_req_o &amp; data_gnt_i) &amp; (~ (load_err_o | store_err_o)))) begin
+		if (((data_req_o &amp; data_gnt_i) &amp; ~(load_err_o | store_err_o)))
 			addr_last_d = data_addr;
-		end
 	end
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni) begin
 			ls_fsm_cs &lt;= IDLE;
 			addr_last_q &lt;= 1&#39;sb0;
 			handle_misaligned_q &lt;= 1&#39;sb0;
@@ -4329,7 +4118,6 @@ module ibex_load_store_unit (
 			handle_misaligned_q &lt;= handle_misaligned_d;
 			pmp_err_q &lt;= pmp_err_d;
 		end
-	end
 	assign data_rdata_ex_o = data_rdata_ext;
 	assign data_addr_w_aligned = {data_addr[31:2], 2&#39;b00};
 	assign data_addr_o = data_addr_w_aligned;
@@ -4337,7 +4125,7 @@ module ibex_load_store_unit (
 	assign data_we_o = data_we_ex_i;
 	assign data_be_o = data_be;
 	assign addr_last_o = addr_last_q;
-	assign load_err_o = (data_or_pmp_err &amp; (~ data_we_q));
+	assign load_err_o = (data_or_pmp_err &amp; ~data_we_q);
 	assign store_err_o = (data_or_pmp_err &amp; data_we_q);
 	assign busy_o = (ls_fsm_cs != IDLE);
 endmodule
@@ -4571,36 +4359,30 @@ module ibex_multdiv_slow (
 		alu_operand_a_o = accum_window_q;
 		multdiv_result_o = (div_en_i ? accum_window_q[31:0] : res_adder_l);
 		case (operator_i)
-			MD_OP_MULL: begin
-				alu_operand_b_o = op_a_bw_pp;
+			MD_OP_MULL: alu_operand_b_o = op_a_bw_pp;
+			MD_OP_MULH: alu_operand_b_o = ((md_state_q == MD_LAST) ? op_a_bw_last_pp : op_a_bw_pp);
+			default: case (md_state_q)
+			MD_IDLE: begin
+				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
+				alu_operand_b_o = {~op_b_i, 1&#39;b1};
 			end
-			MD_OP_MULH: begin
-				alu_operand_b_o = ((md_state_q == MD_LAST) ? op_a_bw_last_pp : op_a_bw_pp);
+			MD_ABS_A: begin
+				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
+				alu_operand_b_o = {~op_a_i, 1&#39;b1};
+			end
+			MD_ABS_B: begin
+				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
+				alu_operand_b_o = {~op_b_i, 1&#39;b1};
+			end
+			MD_CHANGE_SIGN: begin
+				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
+				alu_operand_b_o = {~accum_window_q[31:0], 1&#39;b1};
 			end
 			default: begin
-			case (md_state_q)
-				MD_IDLE: begin
-					alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-					alu_operand_b_o = {(~ op_b_i), 1&#39;b1};
-				end
-				MD_ABS_A: begin
-					alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-					alu_operand_b_o = {(~ op_a_i), 1&#39;b1};
-				end
-				MD_ABS_B: begin
-					alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-					alu_operand_b_o = {(~ op_b_i), 1&#39;b1};
-				end
-				MD_CHANGE_SIGN: begin
-					alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-					alu_operand_b_o = {(~ accum_window_q[31:0]), 1&#39;b1};
-				end
-				default: begin
-				alu_operand_a_o = {accum_window_q[31:0], 1&#39;b1};
-				alu_operand_b_o = {(~ op_b_shift_q[31:0]), 1&#39;b1};
-			end
-			endcase
+			alu_operand_a_o = {accum_window_q[31:0], 1&#39;b1};
+			alu_operand_b_o = {~op_b_shift_q[31:0], 1&#39;b1};
 		end
+		endcase
 		endcase
 	end
 	assign is_greater_equal = (((accum_window_q[31] ^ op_b_shift_q[31]) == 1&#39;b0) ? (res_adder_h[31] == 1&#39;b0) : accum_window_q[31]);
@@ -4608,8 +4390,8 @@ module ibex_multdiv_slow (
 	assign next_reminder = (is_greater_equal ? res_adder_h : op_remainder);
 	assign next_quotient = (is_greater_equal ? (op_a_shift_q | one_shift) : op_a_shift_q);
 	assign b_0 = {32 {op_b_shift_q[0]}};
-	assign op_a_bw_pp = {(~ (op_a_shift_q[32] &amp; op_b_shift_q[0])), (op_a_shift_q[31:0] &amp; b_0)};
-	assign op_a_bw_last_pp = {(op_a_shift_q[32] &amp; op_b_shift_q[0]), (~ (op_a_shift_q[31:0] &amp; b_0))};
+	assign op_a_bw_pp = {~(op_a_shift_q[32] &amp; op_b_shift_q[0]), (op_a_shift_q[31:0] &amp; b_0)};
+	assign op_a_bw_last_pp = {(op_a_shift_q[32] &amp; op_b_shift_q[0]), ~(op_a_shift_q[31:0] &amp; b_0)};
 	assign sign_a = (op_a_i[31] &amp; signed_mode_i[0]);
 	assign sign_b = (op_b_i[31] &amp; signed_mode_i[1]);
 	assign op_a_ext = {sign_a, op_a_i};
@@ -4619,7 +4401,7 @@ module ibex_multdiv_slow (
 	assign div_change_sign = (sign_a ^ sign_b);
 	assign rem_change_sign = sign_a;
 	always @(posedge clk_i or negedge rst_ni) begin : proc_multdiv_state_q
-		if ((! rst_ni)) begin
+		if (!rst_ni) begin
 			multdiv_state_q &lt;= 5&#39;h0;
 			accum_window_q &lt;= 33&#39;h0;
 			op_b_shift_q &lt;= 33&#39;h0;
@@ -4643,19 +4425,19 @@ module ibex_multdiv_slow (
 		op_a_shift_d = op_a_shift_q;
 		op_numerator_d = op_numerator_q;
 		md_state_d = md_state_q;
-		if ((mult_en_i || div_en_i)) begin
+		if ((mult_en_i || div_en_i))
 			case (md_state_q)
 				MD_IDLE: begin
 					case (operator_i)
 						MD_OP_MULL: begin
 							op_a_shift_d = (op_a_ext &lt;&lt; 1);
-							accum_window_d = {(~ (op_a_ext[32] &amp; op_b_i[0])), (op_a_ext[31:0] &amp; {32 {op_b_i[0]}})};
+							accum_window_d = {~(op_a_ext[32] &amp; op_b_i[0]), (op_a_ext[31:0] &amp; {32 {op_b_i[0]}})};
 							op_b_shift_d = (op_b_ext &gt;&gt; 1);
 							md_state_d = MD_COMP;
 						end
 						MD_OP_MULH: begin
 							op_a_shift_d = op_a_ext;
-							accum_window_d = {1&#39;b1, (~ (op_a_ext[32] &amp; op_b_i[0])), (op_a_ext[31:1] &amp; {31 {op_b_i[0]}})};
+							accum_window_d = {1&#39;b1, ~(op_a_ext[32] &amp; op_b_i[0]), (op_a_ext[31:1] &amp; {31 {op_b_i[0]}})};
 							op_b_shift_d = (op_b_ext &gt;&gt; 1);
 							md_state_d = MD_COMP;
 						end
@@ -4700,7 +4482,7 @@ module ibex_multdiv_slow (
 					endcase
 					md_state_d = ((multdiv_state_q == 5&#39;d1) ? MD_LAST : MD_COMP);
 				end
-				MD_LAST: begin
+				MD_LAST:
 					case (operator_i)
 						MD_OP_MULL: begin
 							accum_window_d = res_adder_l;
@@ -4719,7 +4501,6 @@ module ibex_multdiv_slow (
 						md_state_d = MD_CHANGE_SIGN;
 					end
 					endcase
-				end
 				MD_CHANGE_SIGN: begin
 					md_state_d = MD_FINISH;
 					case (operator_i)
@@ -4727,14 +4508,9 @@ module ibex_multdiv_slow (
 						default: accum_window_d = (rem_change_sign ? alu_adder_i : accum_window_q);
 					endcase
 				end
-				MD_FINISH: begin
-					md_state_d = MD_IDLE;
-				end
-				default: begin
-				md_state_d = 1&#39;bX;
-			end
+				MD_FINISH: md_state_d = MD_IDLE;
+				default: md_state_d = 1&#39;bX;
 			endcase
-		end
 	end
 	assign valid_o = ((md_state_q == MD_FINISH) | ((md_state_q == MD_LAST) &amp; ((operator_i == MD_OP_MULL) | (operator_i == MD_OP_MULH))));
 endmodule
@@ -4973,7 +4749,7 @@ module ibex_multdiv_fast (
 	reg mult_valid;
 	reg div_valid;
 	always @(posedge clk_i or negedge rst_ni) begin : proc_mult_state_q
-		if ((! rst_ni)) begin
+		if (!rst_ni) begin
 			mult_state_q &lt;= ALBL;
 			mac_res_q &lt;= 1&#39;sb0;
 			div_counter_q &lt;= 1&#39;sb0;
@@ -4983,9 +4759,8 @@ module ibex_multdiv_fast (
 			op_quotient_q &lt;= 1&#39;sb0;
 		end
 		else begin
-			if (mult_en_i) begin
+			if (mult_en_i)
 				mult_state_q &lt;= mult_state_n;
-			end
 			if (div_en_i) begin
 				div_counter_q &lt;= div_counter_n;
 				op_denominator_q &lt;= op_denominator_n;
@@ -5009,14 +4784,11 @@ module ibex_multdiv_fast (
 	assign next_remainder = (is_greater_equal ? res_adder_h[31:0] : mac_res_q[31:0]);
 	assign next_quotient = (is_greater_equal ? ({1&#39;b0, op_quotient_q} | {1&#39;b0, one_shift}) : {1&#39;b0, op_quotient_q});
 	assign one_shift = ({31&#39;b0, 1&#39;b1} &lt;&lt; div_counter_q);
-	always @(*) begin
-		if (((mac_res_q[31] ^ op_denominator_q[31]) == 1&#39;b0)) begin
+	always @(*)
+		if (((mac_res_q[31] ^ op_denominator_q[31]) == 1&#39;b0))
 			is_greater_equal = (res_adder_h[31] == 1&#39;b0);
-		end
-		else begin
+		else
 			is_greater_equal = mac_res_q[31];
-		end
-	end
 	assign div_sign_a = (op_a_i[31] &amp; signed_mode_i[0]);
 	assign div_sign_b = (op_b_i[31] &amp; signed_mode_i[1]);
 	assign div_change_sign = (div_sign_a ^ div_sign_b);
@@ -5029,7 +4801,7 @@ module ibex_multdiv_fast (
 		op_numerator_n = op_numerator_q;
 		op_denominator_n = op_denominator_q;
 		alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-		alu_operand_b_o = {(~ op_b_i), 1&#39;b1};
+		alu_operand_b_o = {~op_b_i, 1&#39;b1};
 		div_valid = 1&#39;b0;
 		case (md_state_q)
 			MD_IDLE: begin
@@ -5042,7 +4814,7 @@ module ibex_multdiv_fast (
 					md_state_n = (equal_to_zero ? MD_FINISH : MD_ABS_A);
 				end
 				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-				alu_operand_b_o = {(~ op_b_i), 1&#39;b1};
+				alu_operand_b_o = {~op_b_i, 1&#39;b1};
 				div_counter_n = 5&#39;d31;
 			end
 			MD_ABS_A: begin
@@ -5051,7 +4823,7 @@ module ibex_multdiv_fast (
 				md_state_n = MD_ABS_B;
 				div_counter_n = 5&#39;d31;
 				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-				alu_operand_b_o = {(~ op_a_i), 1&#39;b1};
+				alu_operand_b_o = {~op_a_i, 1&#39;b1};
 			end
 			MD_ABS_B: begin
 				op_remainder_n = {33&#39;h0, op_numerator_q[31]};
@@ -5059,44 +4831,38 @@ module ibex_multdiv_fast (
 				md_state_n = MD_COMP;
 				div_counter_n = 5&#39;d31;
 				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-				alu_operand_b_o = {(~ op_b_i), 1&#39;b1};
+				alu_operand_b_o = {~op_b_i, 1&#39;b1};
 			end
 			MD_COMP: begin
 				op_remainder_n = {1&#39;b0, next_remainder[31:0], op_numerator_q[div_counter_n]};
 				op_quotient_n = next_quotient[31:0];
 				md_state_n = ((div_counter_q == 5&#39;d1) ? MD_LAST : MD_COMP);
 				alu_operand_a_o = {mac_res_q[31:0], 1&#39;b1};
-				alu_operand_b_o = {(~ op_denominator_q[31:0]), 1&#39;b1};
+				alu_operand_b_o = {~op_denominator_q[31:0], 1&#39;b1};
 			end
 			MD_LAST: begin
-				if ((operator_i == MD_OP_DIV)) begin
+				if ((operator_i == MD_OP_DIV))
 					op_remainder_n = {1&#39;b0, next_quotient};
-				end
-				else begin
+				else
 					op_remainder_n = {2&#39;b0, next_remainder[31:0]};
-				end
 				alu_operand_a_o = {mac_res_q[31:0], 1&#39;b1};
-				alu_operand_b_o = {(~ op_denominator_q[31:0]), 1&#39;b1};
+				alu_operand_b_o = {~op_denominator_q[31:0], 1&#39;b1};
 				md_state_n = MD_CHANGE_SIGN;
 			end
 			MD_CHANGE_SIGN: begin
 				md_state_n = MD_FINISH;
-				if ((operator_i == MD_OP_DIV)) begin
+				if ((operator_i == MD_OP_DIV))
 					op_remainder_n = (div_change_sign ? {2&#39;h0, alu_adder_i} : mac_res_q);
-				end
-				else begin
+				else
 					op_remainder_n = (rem_change_sign ? {2&#39;h0, alu_adder_i} : mac_res_q);
-				end
 				alu_operand_a_o = {32&#39;h0, 1&#39;b1};
-				alu_operand_b_o = {(~ mac_res_q[31:0]), 1&#39;b1};
+				alu_operand_b_o = {~mac_res_q[31:0], 1&#39;b1};
 			end
 			MD_FINISH: begin
 				md_state_n = MD_IDLE;
 				div_valid = 1&#39;b1;
 			end
-			default: begin
-			md_state_n = 1&#39;bX;
-		end
+			default: md_state_n = 1&#39;bX;
 		endcase
 	end
 	assign valid_o = (mult_valid | div_valid);
@@ -5125,12 +4891,10 @@ module ibex_multdiv_fast (
 				sign_a = 1&#39;b0;
 				sign_b = (signed_mode_i[1] &amp; op_b_i[31]);
 				accum = {18&#39;b0, mac_res_q[31:16]};
-				if ((operator_i == MD_OP_MULL)) begin
+				if ((operator_i == MD_OP_MULL))
 					mac_res_n = {2&#39;b0, mac_res[15:0], mac_res_q[15:0]};
-				end
-				else begin
+				else
 					mac_res_n = mac_res;
-				end
 				mult_state_n = AHBL;
 			end
 			AHBL: begin
@@ -5161,9 +4925,7 @@ module ibex_multdiv_fast (
 				mult_state_n = ALBL;
 				mult_valid = 1&#39;b1;
 			end
-			default: begin
-			mult_state_n = 1&#39;bX;
-		end
+			default: mult_state_n = 1&#39;bX;
 		endcase
 	end
 endmodule
@@ -5227,7 +4989,7 @@ module ibex_prefetch_buffer (
 	wire fifo_valid;
 	wire fifo_ready;
 	wire fifo_clear;
-	assign busy_o = ((| rdata_outstanding_q) | instr_req_o);
+	assign busy_o = (|rdata_outstanding_q | instr_req_o);
 	assign instr_or_pmp_err = (instr_err_i | pmp_err_q);
 	assign fifo_clear = branch_i;
 	ibex_fetch_fifo fifo_i(
@@ -5245,11 +5007,11 @@ module ibex_prefetch_buffer (
 		.out_addr_o(addr_o),
 		.out_err_o(err_o)
 	);
-	assign valid_req = ((req_i &amp; (fifo_ready | branch_i)) &amp; (~&amp; rdata_outstanding_q));
-	assign gnt_or_pmp_err = (instr_gnt_i | (pmp_err_q &amp; (~ branch_i)));
+	assign valid_req = ((req_i &amp; (fifo_ready | branch_i)) &amp; ~&amp;rdata_outstanding_q);
+	assign gnt_or_pmp_err = (instr_gnt_i | (pmp_err_q &amp; ~branch_i));
 	assign rvalid_or_pmp_err = (instr_rvalid_i | pmp_err_q);
-	assign valid_req_d = ((branch_i | valid_req_q) &amp; (~ (valid_req &amp; instr_gnt_i)));
-	assign addr_valid = ((branch_i | ((req_i &amp; fifo_ready) &amp; (~ rdata_outstanding_q[0]))) | ((rvalid_or_pmp_err &amp; (~ branch_abort_q[0])) &amp; ((valid_req &amp; instr_gnt_i) | rdata_outstanding_q[1])));
+	assign valid_req_d = ((branch_i | valid_req_q) &amp; ~(valid_req &amp; instr_gnt_i));
+	assign addr_valid = ((branch_i | ((req_i &amp; fifo_ready) &amp; ~rdata_outstanding_q[0])) | ((rvalid_or_pmp_err &amp; ~branch_abort_q[0]) &amp; ((valid_req &amp; instr_gnt_i) | rdata_outstanding_q[1])));
 	assign fetch_addr = ({instr_addr_q[31:2], 2&#39;b00} + 32&#39;d4);
 	assign instr_addr = (branch_i ? addr_i : (valid_req_q ? instr_addr_q : fetch_addr));
 	assign instr_addr_w_aligned = {instr_addr[31:2], 2&#39;b00};
@@ -5261,16 +5023,16 @@ module ibex_prefetch_buffer (
 				assign branch_abort_n[g_outstanding_reqs_i] = ((branch_i &amp; rdata_outstanding_q[g_outstanding_reqs_i]) | branch_abort_q[g_outstanding_reqs_i]);
 			end
 			else begin : g_reqtop
-				assign rdata_outstanding_n[g_outstanding_reqs_i] = (((valid_req &amp; instr_gnt_i) &amp; (&amp; rdata_outstanding_q[(g_outstanding_reqs_i - 1):0])) | rdata_outstanding_q[g_outstanding_reqs_i]);
+				assign rdata_outstanding_n[g_outstanding_reqs_i] = (((valid_req &amp; instr_gnt_i) &amp; &amp;rdata_outstanding_q[(g_outstanding_reqs_i - 1):0]) | rdata_outstanding_q[g_outstanding_reqs_i]);
 				assign branch_abort_n[g_outstanding_reqs_i] = ((branch_i &amp; rdata_outstanding_q[g_outstanding_reqs_i]) | branch_abort_q[g_outstanding_reqs_i]);
 			end
 		end
 	endgenerate
 	assign rdata_outstanding_s = (rvalid_or_pmp_err ? {1&#39;b0, rdata_outstanding_n[(NUM_REQS - 1):1]} : rdata_outstanding_n);
 	assign branch_abort_s = (rvalid_or_pmp_err ? {1&#39;b0, branch_abort_n[(NUM_REQS - 1):1]} : branch_abort_n);
-	assign fifo_valid = ((rdata_outstanding_q[0] &amp; (~ branch_abort_q[0])) &amp; rvalid_or_pmp_err);
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	assign fifo_valid = ((rdata_outstanding_q[0] &amp; ~branch_abort_q[0]) &amp; rvalid_or_pmp_err);
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni) begin
 			valid_req_q &lt;= 1&#39;b0;
 			rdata_outstanding_q &lt;= &#39;b0;
 			branch_abort_q &lt;= &#39;b0;
@@ -5280,13 +5042,11 @@ module ibex_prefetch_buffer (
 			rdata_outstanding_q &lt;= rdata_outstanding_s;
 			branch_abort_q &lt;= branch_abort_s;
 		end
-	end
-	always @(posedge clk_i) begin
+	always @(posedge clk_i)
 		if (addr_valid) begin
 			instr_addr_q &lt;= instr_addr;
 			pmp_err_q &lt;= instr_pmp_err_i;
 		end
-	end
 	assign instr_req_o = valid_req;
 	assign instr_addr_o = instr_addr_w_aligned;
 endmodule
@@ -5346,63 +5106,60 @@ module ibex_fetch_fifo (
 	assign rdata = (valid_q[0] ? rdata_q[0+:32] : in_rdata_i);
 	assign err = (valid_q[0] ? err_q[0] : in_err_i);
 	assign valid = (valid_q[0] | in_valid_i);
-	assign entry0_unaligned_d = (((((in_valid_i &amp; in_addr_i[1]) | entry0_unaligned_q) &amp; (~ (out_ready_i &amp; unaligned_is_compressed))) | (((valid &amp; out_ready_i) &amp; (~ out_addr_o[1])) &amp; aligned_is_compressed)) &amp; (~ clear_i));
+	assign entry0_unaligned_d = (((((in_valid_i &amp; in_addr_i[1]) | entry0_unaligned_q) &amp; ~(out_ready_i &amp; unaligned_is_compressed)) | (((valid &amp; out_ready_i) &amp; ~out_addr_o[1]) &amp; aligned_is_compressed)) &amp; ~clear_i);
 	assign rdata_unaligned = (valid_q[1] ? {rdata_q[32+:16], rdata[31:16]} : {in_rdata_i[15:0], rdata[31:16]});
-	assign err_unaligned = (valid_q[1] ? ((err_q[1] &amp; (~ unaligned_is_compressed)) | err_q[0]) : ((valid_q[0] &amp; err_q[0]) | (in_err_i &amp; ((~ valid_q[0]) | (~ unaligned_is_compressed)))));
+	assign err_unaligned = (valid_q[1] ? ((err_q[1] &amp; ~unaligned_is_compressed) | err_q[0]) : ((valid_q[0] &amp; err_q[0]) | (in_err_i &amp; (~valid_q[0] | ~unaligned_is_compressed))));
 	assign valid_unaligned = (valid_q[1] ? 1&#39;b1 : (valid_q[0] &amp; in_valid_i));
 	assign unaligned_is_compressed = (rdata[17:16] != 2&#39;b11);
 	assign aligned_is_compressed = (rdata[1:0] != 2&#39;b11);
-	always @(*) begin
+	always @(*)
 		if (out_addr_o[1]) begin
 			out_rdata_o = rdata_unaligned;
 			out_err_o = err_unaligned;
-			if (unaligned_is_compressed) begin
+			if (unaligned_is_compressed)
 				out_valid_o = valid;
-			end
-			else begin
+			else
 				out_valid_o = valid_unaligned;
-			end
 		end
 		else begin
 			out_rdata_o = rdata;
 			out_err_o = err;
 			out_valid_o = valid;
 		end
-	end
 	assign out_addr_o[31:2] = (valid_q[0] ? addr_q[2+:30] : in_addr_i[31:2]);
 	assign out_addr_o[1] = (valid_q[0] ? entry0_unaligned_q : in_addr_i[1]);
 	assign out_addr_o[0] = 1&#39;b0;
 	assign unused_addr_in = in_addr_i[0];
-	assign in_ready_o = (~ valid_q[(DEPTH - 2)]);
-	assign pop_fifo = ((out_ready_i &amp; out_valid_o) &amp; ((~ aligned_is_compressed) | out_addr_o[1]));
+	assign in_ready_o = ~valid_q[(DEPTH - 2)];
+	assign pop_fifo = ((out_ready_i &amp; out_valid_o) &amp; (~aligned_is_compressed | out_addr_o[1]));
 	generate
 		genvar g_fifo_next_i;
 		for (g_fifo_next_i = 0; (g_fifo_next_i &lt; (DEPTH - 1)); g_fifo_next_i = (g_fifo_next_i + 1)) begin : g_fifo_next
 			if ((g_fifo_next_i == 0)) begin : g_ent0
-				assign lowest_free_entry[g_fifo_next_i] = (~ valid_q[g_fifo_next_i]);
+				assign lowest_free_entry[g_fifo_next_i] = ~valid_q[g_fifo_next_i];
 			end
 			else begin : g_ent_others
-				assign lowest_free_entry[g_fifo_next_i] = ((~ valid_q[g_fifo_next_i]) &amp; (&amp; valid_q[(g_fifo_next_i - 1):0]));
+				assign lowest_free_entry[g_fifo_next_i] = (~valid_q[g_fifo_next_i] &amp; &amp;valid_q[(g_fifo_next_i - 1):0]);
 			end
 			assign valid_pushed[g_fifo_next_i] = ((in_valid_i &amp; lowest_free_entry[g_fifo_next_i]) | valid_q[g_fifo_next_i]);
 			assign valid_popped[g_fifo_next_i] = (pop_fifo ? valid_pushed[(g_fifo_next_i + 1)] : valid_pushed[g_fifo_next_i]);
-			assign valid_d[g_fifo_next_i] = (valid_popped[g_fifo_next_i] &amp; (~ clear_i));
-			assign entry_en[g_fifo_next_i] = ((valid_pushed[(g_fifo_next_i + 1)] &amp; pop_fifo) | ((in_valid_i &amp; lowest_free_entry[g_fifo_next_i]) &amp; (~ pop_fifo)));
+			assign valid_d[g_fifo_next_i] = (valid_popped[g_fifo_next_i] &amp; ~clear_i);
+			assign entry_en[g_fifo_next_i] = ((valid_pushed[(g_fifo_next_i + 1)] &amp; pop_fifo) | ((in_valid_i &amp; lowest_free_entry[g_fifo_next_i]) &amp; ~pop_fifo));
 			assign addr_d[(2 + (g_fifo_next_i * 30))+:30] = (valid_q[(g_fifo_next_i + 1)] ? addr_q[(2 + ((g_fifo_next_i + 1) * 30))+:30] : in_addr_i[31:2]);
 			assign rdata_d[(g_fifo_next_i * 32)+:32] = (valid_q[(g_fifo_next_i + 1)] ? rdata_q[((g_fifo_next_i + 1) * 32)+:32] : in_rdata_i);
 			assign err_d[g_fifo_next_i] = (valid_q[(g_fifo_next_i + 1)] ? err_q[(g_fifo_next_i + 1)] : in_err_i);
 		end
 	endgenerate
-	assign lowest_free_entry[(DEPTH - 1)] = ((~ valid_q[(DEPTH - 1)]) &amp; (&amp; valid_q[(DEPTH - 2):0]));
+	assign lowest_free_entry[(DEPTH - 1)] = (~valid_q[(DEPTH - 1)] &amp; &amp;valid_q[(DEPTH - 2):0]);
 	assign valid_pushed[(DEPTH - 1)] = (valid_q[(DEPTH - 1)] | (in_valid_i &amp; lowest_free_entry[(DEPTH - 1)]));
 	assign valid_popped[(DEPTH - 1)] = (pop_fifo ? 1&#39;b0 : valid_pushed[(DEPTH - 1)]);
-	assign valid_d[(DEPTH - 1)] = (valid_popped[(DEPTH - 1)] &amp; (~ clear_i));
+	assign valid_d[(DEPTH - 1)] = (valid_popped[(DEPTH - 1)] &amp; ~clear_i);
 	assign entry_en[(DEPTH - 1)] = (in_valid_i &amp; lowest_free_entry[(DEPTH - 1)]);
 	assign addr_d[(2 + ((DEPTH - 1) * 30))+:30] = in_addr_i[31:2];
 	assign rdata_d[((DEPTH - 1) * 32)+:32] = in_rdata_i;
 	assign err_d[(DEPTH - 1)] = in_err_i;
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni) begin
 			valid_q &lt;= 1&#39;sb0;
 			entry0_unaligned_q &lt;= 1&#39;sb0;
 		end
@@ -5410,17 +5167,15 @@ module ibex_fetch_fifo (
 			valid_q &lt;= valid_d;
 			entry0_unaligned_q &lt;= entry0_unaligned_d;
 		end
-	end
 	generate
 		genvar g_fifo_regs_i;
 		for (g_fifo_regs_i = 0; (g_fifo_regs_i &lt; DEPTH); g_fifo_regs_i = (g_fifo_regs_i + 1)) begin : g_fifo_regs
-			always @(posedge clk_i) begin
+			always @(posedge clk_i)
 				if (entry_en[g_fifo_regs_i]) begin
 					addr_q[(2 + (g_fifo_regs_i * 30))+:30] &lt;= addr_d[(2 + (g_fifo_regs_i * 30))+:30];
 					rdata_q[(g_fifo_regs_i * 32)+:32] &lt;= rdata_d[(g_fifo_regs_i * 32)+:32];
 					err_q[g_fifo_regs_i] &lt;= err_d[g_fifo_regs_i];
 				end
-			end
 		end
 	endgenerate
 endmodule
@@ -5626,7 +5381,7 @@ module ibex_pmp (
 					assign region_addr_mask[g_addr_exp_r][g_bitmask_b] = (csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_addr_exp_r : ((PMPNumRegions - 1) - g_addr_exp_r)) * 6) + 3)+:2] != PMP_MODE_NAPOT);
 				end
 				else begin : g_others
-					assign region_addr_mask[g_addr_exp_r][g_bitmask_b] = ((csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_addr_exp_r : ((PMPNumRegions - 1) - g_addr_exp_r)) * 6) + 3)+:2] != PMP_MODE_NAPOT) | (~&amp; csr_pmp_addr_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_addr_exp_r : ((PMPNumRegions - 1) - g_addr_exp_r)) * 34) + (PMPGranularity + 2))+:(((g_bitmask_b - 1) &gt;= (PMPGranularity + 2)) ? (((g_bitmask_b - 1) - (PMPGranularity + 2)) + 1) : (((PMPGranularity + 2) - (g_bitmask_b - 1)) + 1))]));
+					assign region_addr_mask[g_addr_exp_r][g_bitmask_b] = ((csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_addr_exp_r : ((PMPNumRegions - 1) - g_addr_exp_r)) * 6) + 3)+:2] != PMP_MODE_NAPOT) | ~&amp;csr_pmp_addr_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_addr_exp_r : ((PMPNumRegions - 1) - g_addr_exp_r)) * 34) + (PMPGranularity + 2))+:(((g_bitmask_b - 1) &gt;= (PMPGranularity + 2)) ? (((g_bitmask_b - 1) - (PMPGranularity + 2)) + 1) : (((PMPGranularity + 2) - (g_bitmask_b - 1)) + 1))]);
 				end
 			end
 		end
@@ -5641,15 +5396,15 @@ module ibex_pmp (
 				assign region_match_both[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((region_match_low[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] &amp; region_match_high[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]) &amp; (csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6) + 3)+:2] != PMP_MODE_OFF));
 				assign region_match_partial[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((region_match_low[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] ^ region_match_high[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]) &amp; (csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6) + 3)+:2] != PMP_MODE_OFF));
 				assign region_perm_check[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((((pmp_req_type_i[(((0 &gt;= (PMPNumChan - 1)) ? g_access_check_c : ((PMPNumChan - 1) - g_access_check_c)) * 2)+:2] == PMP_ACC_EXEC) &amp; csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6) + 2)+:1]) | ((pmp_req_type_i[(((0 &gt;= (PMPNumChan - 1)) ? g_access_check_c : ((PMPNumChan - 1) - g_access_check_c)) * 2)+:2] == PMP_ACC_WRITE) &amp; csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6) + 1)+:1])) | ((pmp_req_type_i[(((0 &gt;= (PMPNumChan - 1)) ? g_access_check_c : ((PMPNumChan - 1) - g_access_check_c)) * 2)+:2] == PMP_ACC_READ) &amp; csr_pmp_cfg_i[(((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6)+:1]));
-				assign machine_access_fault[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((region_match_both[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] &amp; csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6) + 5)+:1]) &amp; (~ region_perm_check[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]));
+				assign machine_access_fault[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((region_match_both[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] &amp; csr_pmp_cfg_i[((((0 &gt;= (PMPNumRegions - 1)) ? g_regions_r : ((PMPNumRegions - 1) - g_regions_r)) * 6) + 5)+:1]) &amp; ~region_perm_check[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]);
 				if ((g_regions_r == 0)) begin : g_region0
 					assign user_access_allowed[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = (region_match_both[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] &amp; region_perm_check[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]);
 				end
 				else begin : g_oth_regions
-					assign user_access_allowed[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((region_match_both[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] &amp; region_perm_check[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]) &amp; (~| region_match_partial[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? (((PMPNumRegions - 1) &gt;= 0) ? 0 : (g_regions_r - 1)) : (0 - ((((PMPNumRegions - 1) &gt;= 0) ? 0 : (g_regions_r - 1)) - (PMPNumRegions - 1)))))+:(((g_regions_r - 1) &gt;= 0) ? g_regions_r : (2 - g_regions_r))]));
+					assign user_access_allowed[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] = ((region_match_both[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))] &amp; region_perm_check[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? g_regions_r : (0 - (g_regions_r - (PMPNumRegions - 1)))))]) &amp; ~|region_match_partial[(((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))) + (((PMPNumRegions - 1) &gt;= 0) ? (((PMPNumRegions - 1) &gt;= 0) ? 0 : (g_regions_r - 1)) : (0 - ((((PMPNumRegions - 1) &gt;= 0) ? 0 : (g_regions_r - 1)) - (PMPNumRegions - 1)))))+:(((g_regions_r - 1) &gt;= 0) ? g_regions_r : (2 - g_regions_r))]);
 				end
 			end
-			assign access_fault[g_access_check_c] = ((priv_mode_i == PRIV_LVL_M) ? (| machine_access_fault[((((PMPNumRegions - 1) &gt;= 0) ? 0 : (PMPNumRegions - 1)) + ((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))))+:(((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))]) : (~| user_access_allowed[((((PMPNumRegions - 1) &gt;= 0) ? 0 : (PMPNumRegions - 1)) + ((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))))+:(((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))]));
+			assign access_fault[g_access_check_c] = ((priv_mode_i == PRIV_LVL_M) ? |machine_access_fault[((((PMPNumRegions - 1) &gt;= 0) ? 0 : (PMPNumRegions - 1)) + ((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))))+:(((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))] : ~|user_access_allowed[((((PMPNumRegions - 1) &gt;= 0) ? 0 : (PMPNumRegions - 1)) + ((((PMPNumChan - 1) &gt;= 0) ? g_access_check_c : (0 - (g_access_check_c - (PMPNumChan - 1)))) * (((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))))+:(((PMPNumRegions - 1) &gt;= 0) ? PMPNumRegions : (2 - PMPNumRegions))]);
 			assign pmp_req_err_o[g_access_check_c] = access_fault[g_access_check_c];
 		end
 	endgenerate
@@ -5971,16 +5726,13 @@ module ibex_core (
 	wire clk;
 	wire clock_en;
 	assign core_busy_int = ((if_busy | ctrl_busy) | lsu_busy);
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni)
 			core_busy_q &lt;= 1&#39;b0;
-		end
-		else begin
+		else
 			core_busy_q &lt;= core_busy_int;
-		end
-	end
 	assign core_busy = (core_ctrl_firstfetch ? 1&#39;b1 : core_busy_q);
-	assign core_sleep_o = (~ clock_en);
+	assign core_sleep_o = ~clock_en;
 	assign clock_en = (((core_busy | debug_req_i) | irq_pending) | irq_nm_i);
 	prim_clock_gating core_clock_gate_i(
 		.clk_i(clk_i),
@@ -6026,7 +5778,7 @@ module ibex_core (
 		.if_busy_o(if_busy),
 		.perf_imiss_o(perf_imiss)
 	);
-	assign instr_req_o = (instr_req_out &amp; (~ pmp_req_err[PMP_I]));
+	assign instr_req_o = (instr_req_out &amp; ~pmp_req_err[PMP_I]);
 	ibex_id_stage #(
 		.RV32E(RV32E),
 		.RV32M(RV32M)
@@ -6123,7 +5875,7 @@ module ibex_core (
 		.branch_decision_o(branch_decision),
 		.ex_valid_o(ex_valid)
 	);
-	assign data_req_o = (data_req_out &amp; (~ pmp_req_err[PMP_D]));
+	assign data_req_o = (data_req_out &amp; ~pmp_req_err[PMP_D]);
 	ibex_load_store_unit load_store_unit_i(
 		.clk_i(clk),
 		.rst_ni(rst_ni),
@@ -6153,7 +5905,7 @@ module ibex_core (
 	);
 	assign csr_wdata = alu_operand_a_ex;
 	assign csr_addr = (csr_access ? alu_operand_b_ex[11:0] : 12&#39;b0);
-	assign perf_load = ((data_req_o &amp; data_gnt_i) &amp; (~ data_we_o));
+	assign perf_load = ((data_req_o &amp; data_gnt_i) &amp; ~data_we_o);
 	assign perf_store = ((data_req_o &amp; data_gnt_i) &amp; data_we_o);
 	ibex_cs_registers #(
 		.MHPMCounterNum(MHPMCounterNum),
@@ -6258,9 +6010,7 @@ module ibex_register_file (
 );
 	function automatic [4:0] sv2v_cast_5;
 		input reg [4:0] inp;
-		begin
-			sv2v_cast_5 = inp;
-		end
+		sv2v_cast_5 = inp;
 	endfunction
 	parameter RV32E = 0;
 	parameter [31:0] DataWidth = 32;
@@ -6283,25 +6033,18 @@ module ibex_register_file (
 		begin : sv2v_autoblock_39
 			reg [31:0] i;
 			for (i = 1; (i &lt; NUM_WORDS); i = (i + 1))
-				begin
-					we_a_dec[i] = ((waddr_a_i == sv2v_cast_5(i)) ? we_a_i : 1&#39;b0);
-				end
+				we_a_dec[i] = ((waddr_a_i == sv2v_cast_5(i)) ? we_a_i : 1&#39;b0);
 		end
 	end
-	always @(posedge clk_i or negedge rst_ni) begin
-		if ((! rst_ni)) begin
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni)
 			rf_reg_tmp &lt;= {(((NUM_WORDS - 1) &gt;= 1) ? (NUM_WORDS - 1) : (3 - NUM_WORDS)) {1&#39;sb0}};
+		else begin : sv2v_autoblock_40
+			reg signed [31:0] r;
+			for (r = 1; (r &lt; NUM_WORDS); r = (r + 1))
+				if (we_a_dec[r])
+					rf_reg_tmp[((((DataWidth - 1) &gt;= 0) ? 0 : (DataWidth - 1)) + ((((NUM_WORDS - 1) &gt;= 1) ? r : (1 - (r - (NUM_WORDS - 1)))) * (((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))))+:(((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))] &lt;= wdata_a_i;
 		end
-		else begin
-			begin : sv2v_autoblock_40
-				reg signed [31:0] r;
-				for (r = 1; (r &lt; NUM_WORDS); r = (r + 1))
-					begin
-						if (we_a_dec[r]) rf_reg_tmp[((((DataWidth - 1) &gt;= 0) ? 0 : (DataWidth - 1)) + ((((NUM_WORDS - 1) &gt;= 1) ? r : (1 - (r - (NUM_WORDS - 1)))) * (((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))))+:(((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))] &lt;= wdata_a_i;
-					end
-			end
-		end
-	end
 	assign rf_reg[((((DataWidth - 1) &gt;= 0) ? 0 : (DataWidth - 1)) + ((((NUM_WORDS - 1) &gt;= 0) ? 0 : (NUM_WORDS - 1)) * (((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))))+:(((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))] = 1&#39;sb0;
 	assign rf_reg[(((((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth)) + ((((NUM_WORDS - 1) &gt;= 1) ? (NUM_WORDS - 1) : (3 - NUM_WORDS)) * (((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth)))) - 1):(((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))] = rf_reg_tmp[(((((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth)) + ((((NUM_WORDS - 1) &gt;= 1) ? (NUM_WORDS - 1) : (3 - NUM_WORDS)) * (((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth)))) - 1):(((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))];
 	assign rdata_a_o = rf_reg[((((DataWidth - 1) &gt;= 0) ? 0 : (DataWidth - 1)) + ((((NUM_WORDS - 1) &gt;= 0) ? raddr_a_i : (0 - (raddr_a_i - (NUM_WORDS - 1)))) * (((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))))+:(((DataWidth - 1) &gt;= 0) ? DataWidth : (2 - DataWidth))];

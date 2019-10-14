@@ -11,7 +11,203 @@ files: <a href="../../../../third_party/tests/utd-sv/cpx_dp_array.v.html" target
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/cpx_dp_array.v.html#l-29" target="file-frame">third_party/tests/utd-sv/cpx_dp_array.v:29</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module cpx_dp_array (
+	cpx_spc7_data_cx_l,
+	cpx_spc6_data_cx_l,
+	cpx_spc5_data_cx_l,
+	cpx_spc4_data_cx_l,
+	cpx_spc3_data_cx_l,
+	cpx_spc2_data_cx_l,
+	cpx_spc1_data_cx_l,
+	cpx_spc0_data_cx_l,
+	cpx_dp_half_array_odd_so_0,
+	cpx_dp_half_array_even_so_1,
+	si_1,
+	si_0,
+	se_buf1_top,
+	se_buf1_bottom,
+	scache3_cpx_data_ca,
+	scache2_cpx_data_ca,
+	scache1_cpx_data_ca,
+	scache0_cpx_data_ca,
+	rclk,
+	io_cpx_data_ca,
+	fp_cpx_data_ca,
+	arbcp7_cpxdp_shift_cx,
+	arbcp7_cpxdp_qsel1_ca,
+	arbcp7_cpxdp_qsel0_ca,
+	arbcp7_cpxdp_q0_hold_ca,
+	arbcp7_cpxdp_grant_ca,
+	arbcp6_cpxdp_shift_cx,
+	arbcp6_cpxdp_qsel1_ca,
+	arbcp6_cpxdp_qsel0_ca,
+	arbcp6_cpxdp_q0_hold_ca,
+	arbcp6_cpxdp_grant_ca,
+	arbcp5_cpxdp_shift_cx,
+	arbcp5_cpxdp_qsel1_ca,
+	arbcp5_cpxdp_qsel0_ca,
+	arbcp5_cpxdp_q0_hold_ca,
+	arbcp5_cpxdp_grant_ca,
+	arbcp4_cpxdp_shift_cx,
+	arbcp4_cpxdp_qsel1_ca,
+	arbcp4_cpxdp_qsel0_ca,
+	arbcp4_cpxdp_q0_hold_ca,
+	arbcp4_cpxdp_grant_ca,
+	arbcp3_cpxdp_shift_cx,
+	arbcp3_cpxdp_qsel1_ca,
+	arbcp3_cpxdp_qsel0_ca,
+	arbcp3_cpxdp_q0_hold_ca,
+	arbcp3_cpxdp_grant_ca,
+	arbcp2_cpxdp_shift_cx,
+	arbcp2_cpxdp_qsel1_ca,
+	arbcp2_cpxdp_qsel0_ca,
+	arbcp2_cpxdp_q0_hold_ca,
+	arbcp2_cpxdp_grant_ca,
+	arbcp1_cpxdp_shift_cx,
+	arbcp1_cpxdp_qsel1_ca,
+	arbcp1_cpxdp_qsel0_ca,
+	arbcp1_cpxdp_q0_hold_ca,
+	arbcp1_cpxdp_grant_ca,
+	arbcp0_cpxdp_shift_cx,
+	arbcp0_cpxdp_qsel1_ca,
+	arbcp0_cpxdp_qsel0_ca,
+	arbcp0_cpxdp_q0_hold_ca,
+	arbcp0_cpxdp_grant_ca
+);
+	output cpx_dp_half_array_even_so_1;
+	output cpx_dp_half_array_odd_so_0;
+	output [144:0] cpx_spc0_data_cx_l;
+	output [144:0] cpx_spc1_data_cx_l;
+	output [144:0] cpx_spc2_data_cx_l;
+	output [144:0] cpx_spc3_data_cx_l;
+	output [144:0] cpx_spc4_data_cx_l;
+	output [144:0] cpx_spc5_data_cx_l;
+	output [144:0] cpx_spc6_data_cx_l;
+	output [144:0] cpx_spc7_data_cx_l;
+	input [5:0] arbcp0_cpxdp_grant_ca;
+	input [5:0] arbcp0_cpxdp_q0_hold_ca;
+	input [5:0] arbcp0_cpxdp_qsel0_ca;
+	input [5:0] arbcp0_cpxdp_qsel1_ca;
+	input [5:0] arbcp0_cpxdp_shift_cx;
+	input [5:0] arbcp1_cpxdp_grant_ca;
+	input [5:0] arbcp1_cpxdp_q0_hold_ca;
+	input [5:0] arbcp1_cpxdp_qsel0_ca;
+	input [5:0] arbcp1_cpxdp_qsel1_ca;
+	input [5:0] arbcp1_cpxdp_shift_cx;
+	input [5:0] arbcp2_cpxdp_grant_ca;
+	input [5:0] arbcp2_cpxdp_q0_hold_ca;
+	input [5:0] arbcp2_cpxdp_qsel0_ca;
+	input [5:0] arbcp2_cpxdp_qsel1_ca;
+	input [5:0] arbcp2_cpxdp_shift_cx;
+	input [5:0] arbcp3_cpxdp_grant_ca;
+	input [5:0] arbcp3_cpxdp_q0_hold_ca;
+	input [5:0] arbcp3_cpxdp_qsel0_ca;
+	input [5:0] arbcp3_cpxdp_qsel1_ca;
+	input [5:0] arbcp3_cpxdp_shift_cx;
+	input [5:0] arbcp4_cpxdp_grant_ca;
+	input [5:0] arbcp4_cpxdp_q0_hold_ca;
+	input [5:0] arbcp4_cpxdp_qsel0_ca;
+	input [5:0] arbcp4_cpxdp_qsel1_ca;
+	input [5:0] arbcp4_cpxdp_shift_cx;
+	input [5:0] arbcp5_cpxdp_grant_ca;
+	input [5:0] arbcp5_cpxdp_q0_hold_ca;
+	input [5:0] arbcp5_cpxdp_qsel0_ca;
+	input [5:0] arbcp5_cpxdp_qsel1_ca;
+	input [5:0] arbcp5_cpxdp_shift_cx;
+	input [5:0] arbcp6_cpxdp_grant_ca;
+	input [5:0] arbcp6_cpxdp_q0_hold_ca;
+	input [5:0] arbcp6_cpxdp_qsel0_ca;
+	input [5:0] arbcp6_cpxdp_qsel1_ca;
+	input [5:0] arbcp6_cpxdp_shift_cx;
+	input [5:0] arbcp7_cpxdp_grant_ca;
+	input [5:0] arbcp7_cpxdp_q0_hold_ca;
+	input [5:0] arbcp7_cpxdp_qsel0_ca;
+	input [5:0] arbcp7_cpxdp_qsel1_ca;
+	input [5:0] arbcp7_cpxdp_shift_cx;
+	input [144:0] fp_cpx_data_ca;
+	input [144:0] io_cpx_data_ca;
+	input rclk;
+	input [144:0] scache0_cpx_data_ca;
+	input [144:0] scache1_cpx_data_ca;
+	input [144:0] scache2_cpx_data_ca;
+	input [144:0] scache3_cpx_data_ca;
+	input se_buf1_bottom;
+	input se_buf1_top;
+	input si_0;
+	input si_1;
+	cpx_dp_halfarray cpx_dp_even(
+		.cpx_spc0_data_cx_l(cpx_spc0_data_cx_l[144:0]),
+		.cpx_spc2_data_cx_l(cpx_spc2_data_cx_l[144:0]),
+		.cpx_spc4_data_cx_l(cpx_spc4_data_cx_l[144:0]),
+		.cpx_spc6_data_cx_l(cpx_spc6_data_cx_l[144:0]),
+		.scan_out(cpx_dp_half_array_even_so_1),
+		.arbcp0_cpxdp_grant_ca(arbcp0_cpxdp_grant_ca[5:0]),
+		.arbcp0_cpxdp_q0_hold_ca(arbcp0_cpxdp_q0_hold_ca[5:0]),
+		.arbcp0_cpxdp_qsel0_ca(arbcp0_cpxdp_qsel0_ca[5:0]),
+		.arbcp0_cpxdp_qsel1_ca(arbcp0_cpxdp_qsel1_ca[5:0]),
+		.arbcp0_cpxdp_shift_cx(arbcp0_cpxdp_shift_cx[5:0]),
+		.arbcp2_cpxdp_grant_ca(arbcp2_cpxdp_grant_ca[5:0]),
+		.arbcp2_cpxdp_q0_hold_ca(arbcp2_cpxdp_q0_hold_ca[5:0]),
+		.arbcp2_cpxdp_qsel0_ca(arbcp2_cpxdp_qsel0_ca[5:0]),
+		.arbcp2_cpxdp_qsel1_ca(arbcp2_cpxdp_qsel1_ca[5:0]),
+		.arbcp2_cpxdp_shift_cx(arbcp2_cpxdp_shift_cx[5:0]),
+		.arbcp4_cpxdp_grant_ca(arbcp4_cpxdp_grant_ca[5:0]),
+		.arbcp4_cpxdp_q0_hold_ca(arbcp4_cpxdp_q0_hold_ca[5:0]),
+		.arbcp4_cpxdp_qsel0_ca(arbcp4_cpxdp_qsel0_ca[5:0]),
+		.arbcp4_cpxdp_qsel1_ca(arbcp4_cpxdp_qsel1_ca[5:0]),
+		.arbcp4_cpxdp_shift_cx(arbcp4_cpxdp_shift_cx[5:0]),
+		.arbcp6_cpxdp_grant_ca(arbcp6_cpxdp_grant_ca[5:0]),
+		.arbcp6_cpxdp_q0_hold_ca(arbcp6_cpxdp_q0_hold_ca[5:0]),
+		.arbcp6_cpxdp_qsel0_ca(arbcp6_cpxdp_qsel0_ca[5:0]),
+		.arbcp6_cpxdp_qsel1_ca(arbcp6_cpxdp_qsel1_ca[5:0]),
+		.arbcp6_cpxdp_shift_cx(arbcp6_cpxdp_shift_cx[5:0]),
+		.fp_cpx_data_ca(fp_cpx_data_ca[144:0]),
+		.io_cpx_data_ca(io_cpx_data_ca[144:0]),
+		.rclk(rclk),
+		.scache0_cpx_data_ca(scache0_cpx_data_ca[144:0]),
+		.scache1_cpx_data_ca(scache1_cpx_data_ca[144:0]),
+		.scache2_cpx_data_ca(scache2_cpx_data_ca[144:0]),
+		.scache3_cpx_data_ca(scache3_cpx_data_ca[144:0]),
+		.shiftenable(se_buf1_top),
+		.scan_in(si_1)
+	);
+	cpx_dp_halfarray cpx_dp_odd(
+		.cpx_spc0_data_cx_l(cpx_spc1_data_cx_l[144:0]),
+		.cpx_spc2_data_cx_l(cpx_spc3_data_cx_l[144:0]),
+		.cpx_spc4_data_cx_l(cpx_spc5_data_cx_l[144:0]),
+		.cpx_spc6_data_cx_l(cpx_spc7_data_cx_l[144:0]),
+		.scan_out(cpx_dp_half_array_odd_so_0),
+		.arbcp0_cpxdp_grant_ca(arbcp1_cpxdp_grant_ca[5:0]),
+		.arbcp0_cpxdp_q0_hold_ca(arbcp1_cpxdp_q0_hold_ca[5:0]),
+		.arbcp0_cpxdp_qsel0_ca(arbcp1_cpxdp_qsel0_ca[5:0]),
+		.arbcp0_cpxdp_qsel1_ca(arbcp1_cpxdp_qsel1_ca[5:0]),
+		.arbcp0_cpxdp_shift_cx(arbcp1_cpxdp_shift_cx[5:0]),
+		.arbcp2_cpxdp_grant_ca(arbcp3_cpxdp_grant_ca[5:0]),
+		.arbcp2_cpxdp_q0_hold_ca(arbcp3_cpxdp_q0_hold_ca[5:0]),
+		.arbcp2_cpxdp_qsel0_ca(arbcp3_cpxdp_qsel0_ca[5:0]),
+		.arbcp2_cpxdp_qsel1_ca(arbcp3_cpxdp_qsel1_ca[5:0]),
+		.arbcp2_cpxdp_shift_cx(arbcp3_cpxdp_shift_cx[5:0]),
+		.arbcp4_cpxdp_grant_ca(arbcp5_cpxdp_grant_ca[5:0]),
+		.arbcp4_cpxdp_q0_hold_ca(arbcp5_cpxdp_q0_hold_ca[5:0]),
+		.arbcp4_cpxdp_qsel0_ca(arbcp5_cpxdp_qsel0_ca[5:0]),
+		.arbcp4_cpxdp_qsel1_ca(arbcp5_cpxdp_qsel1_ca[5:0]),
+		.arbcp4_cpxdp_shift_cx(arbcp5_cpxdp_shift_cx[5:0]),
+		.arbcp6_cpxdp_grant_ca(arbcp7_cpxdp_grant_ca[5:0]),
+		.arbcp6_cpxdp_q0_hold_ca(arbcp7_cpxdp_q0_hold_ca[5:0]),
+		.arbcp6_cpxdp_qsel0_ca(arbcp7_cpxdp_qsel0_ca[5:0]),
+		.arbcp6_cpxdp_qsel1_ca(arbcp7_cpxdp_qsel1_ca[5:0]),
+		.arbcp6_cpxdp_shift_cx(arbcp7_cpxdp_shift_cx[5:0]),
+		.fp_cpx_data_ca(fp_cpx_data_ca[144:0]),
+		.io_cpx_data_ca(io_cpx_data_ca[144:0]),
+		.rclk(rclk),
+		.scache0_cpx_data_ca(scache0_cpx_data_ca[144:0]),
+		.scache1_cpx_data_ca(scache1_cpx_data_ca[144:0]),
+		.scache2_cpx_data_ca(scache2_cpx_data_ca[144:0]),
+		.scache3_cpx_data_ca(scache3_cpx_data_ca[144:0]),
+		.shiftenable(se_buf1_bottom),
+		.scan_in(si_0)
+	);
+endmodule
 
 
 </pre>

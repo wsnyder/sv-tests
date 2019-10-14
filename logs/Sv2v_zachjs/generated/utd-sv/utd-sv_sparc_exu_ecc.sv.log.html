@@ -186,9 +186,9 @@ module sparc_exu_ecc (
 		.si(),
 		.so()
 	);
-	assign sel_rs1_m = (~ ecl_ecc_sel_rs1_m_l);
-	assign sel_rs2_m = (~ ecl_ecc_sel_rs2_m_l);
-	assign sel_rs3_m = (~ ecl_ecc_sel_rs3_m_l);
+	assign sel_rs1_m = ~ecl_ecc_sel_rs1_m_l;
+	assign sel_rs2_m = ~ecl_ecc_sel_rs2_m_l;
+	assign sel_rs3_m = ~ecl_ecc_sel_rs3_m_l;
 	mux3ds #(7) syn_mux(
 		.dout(err_m[6:0]),
 		.in0(rs1_err_m[6:0]),

@@ -47,45 +47,37 @@ module fsm_full (
 	always @(state or req_0 or req_1 or req_2 or req_3) begin
 		next_state = 0;
 		case (state)
-			IDLE: if ((req_0 == 1&#39;b1)) begin
-				next_state = GNT0;
-			end
-			else if ((req_1 == 1&#39;b1)) begin
-				next_state = GNT1;
-			end
-			else if ((req_2 == 1&#39;b1)) begin
-				next_state = GNT2;
-			end
-			else if ((req_3 == 1&#39;b1)) begin
-				next_state = GNT3;
-			end
-			else begin
-				next_state = IDLE;
-			end
-			GNT0: if ((req_0 == 1&#39;b0)) begin
-				next_state = IDLE;
-			end
-			else begin
-				next_state = GNT0;
-			end
-			GNT1: if ((req_1 == 1&#39;b0)) begin
-				next_state = IDLE;
-			end
-			else begin
-				next_state = GNT1;
-			end
-			GNT2: if ((req_2 == 1&#39;b0)) begin
-				next_state = IDLE;
-			end
-			else begin
-				next_state = GNT2;
-			end
-			GNT3: if ((req_3 == 1&#39;b0)) begin
-				next_state = IDLE;
-			end
-			else begin
-				next_state = GNT3;
-			end
+			IDLE:
+				if ((req_0 == 1&#39;b1))
+					next_state = GNT0;
+				else if ((req_1 == 1&#39;b1))
+					next_state = GNT1;
+				else if ((req_2 == 1&#39;b1))
+					next_state = GNT2;
+				else if ((req_3 == 1&#39;b1))
+					next_state = GNT3;
+				else
+					next_state = IDLE;
+			GNT0:
+				if ((req_0 == 1&#39;b0))
+					next_state = IDLE;
+				else
+					next_state = GNT0;
+			GNT1:
+				if ((req_1 == 1&#39;b0))
+					next_state = IDLE;
+				else
+					next_state = GNT1;
+			GNT2:
+				if ((req_2 == 1&#39;b0))
+					next_state = IDLE;
+				else
+					next_state = GNT2;
+			GNT3:
+				if ((req_3 == 1&#39;b0))
+					next_state = IDLE;
+				else
+					next_state = GNT3;
 			default: next_state = IDLE;
 		endcase
 	end
@@ -106,21 +98,11 @@ module fsm_full (
 					gnt_2 &lt;= 1&#39;b0;
 					gnt_3 &lt;= 1&#39;b0;
 				end
-				GNT0: begin
-					gnt_0 &lt;= 1&#39;b1;
-				end
-				GNT1: begin
-					gnt_1 &lt;= 1&#39;b1;
-				end
-				GNT2: begin
-					gnt_2 &lt;= 1&#39;b1;
-				end
-				GNT3: begin
-					gnt_3 &lt;= 1&#39;b1;
-				end
-				default: begin
-				state &lt;= IDLE;
-			end
+				GNT0: gnt_0 &lt;= 1&#39;b1;
+				GNT1: gnt_1 &lt;= 1&#39;b1;
+				GNT2: gnt_2 &lt;= 1&#39;b1;
+				GNT3: gnt_3 &lt;= 1&#39;b1;
+				default: state &lt;= IDLE;
 			endcase
 		end
 	end

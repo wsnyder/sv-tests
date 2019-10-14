@@ -22,9 +22,7 @@ module v2k_reg;
 		input reg b_in;
 		input reg c_in;
 		input reg signed [7:0] data_in;
-		begin
-			adder = (((a_in + b_in) + c_in) + data_in);
-		end
+		adder = (((a_in + b_in) + c_in) + data_in);
 	endfunction
 endmodule
 

@@ -13,9 +13,7 @@ files: <a href="../../../tests/chapter-11/11.4.12.1--repl_op.sv.html" target="fi
 module top;
 	reg [15:0] a;
 	wire [1:0] b = 2&#39;b10;
-	initial begin
-		a = {8 {b}};
-	end
+	initial a = {8 {b}};
 endmodule
 
 

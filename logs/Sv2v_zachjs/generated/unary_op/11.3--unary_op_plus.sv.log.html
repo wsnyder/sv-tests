@@ -13,9 +13,7 @@ files: <a href="../../../../tests/generated/unary_op/11.3--unary_op_plus.sv.html
 module top;
 	reg signed [31:0] a = 12;
 	wire signed [31:0] b = 5;
-	initial begin
-		a = (+ b);
-	end
+	initial a = +b;
 endmodule
 
 

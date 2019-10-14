@@ -36,7 +36,7 @@ module bw_zzctu_sync (
 	wire so1;
 	wire so2;
 	wire pll_out_inv;
-	assign pll_out_inv = (~ pll_out);
+	assign pll_out_inv = ~pll_out;
 	bw_u1_soffi_4x u_I0(
 		.q_l(ql1),
 		.so(so),

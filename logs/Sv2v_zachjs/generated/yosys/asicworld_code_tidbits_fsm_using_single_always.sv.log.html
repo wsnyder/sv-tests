@@ -43,34 +43,35 @@ module fsm_using_single_always (
 			gnt_0 &lt;= 0;
 			gnt_1 &lt;= 0;
 		end
-		else case (state)
-			IDLE: if ((req_0 == 1&#39;b1)) begin
-				state &lt;= #(1) GNT0;
-				gnt_0 &lt;= 1;
-			end
-			else if ((req_1 == 1&#39;b1)) begin
-				gnt_1 &lt;= 1;
-				state &lt;= #(1) GNT1;
-			end
-			else begin
-				state &lt;= #(1) IDLE;
-			end
-			GNT0: if ((req_0 == 1&#39;b1)) begin
-				state &lt;= #(1) GNT0;
-			end
-			else begin
-				gnt_0 &lt;= 0;
-				state &lt;= #(1) IDLE;
-			end
-			GNT1: if ((req_1 == 1&#39;b1)) begin
-				state &lt;= #(1) GNT1;
-			end
-			else begin
-				gnt_1 &lt;= 0;
-				state &lt;= #(1) IDLE;
-			end
-			default: state &lt;= #(1) IDLE;
-		endcase
+		else
+			case (state)
+				IDLE:
+					if ((req_0 == 1&#39;b1)) begin
+						state &lt;= #(1) GNT0;
+						gnt_0 &lt;= 1;
+					end
+					else if ((req_1 == 1&#39;b1)) begin
+						gnt_1 &lt;= 1;
+						state &lt;= #(1) GNT1;
+					end
+					else
+						state &lt;= #(1) IDLE;
+				GNT0:
+					if ((req_0 == 1&#39;b1))
+						state &lt;= #(1) GNT0;
+					else begin
+						gnt_0 &lt;= 0;
+						state &lt;= #(1) IDLE;
+					end
+				GNT1:
+					if ((req_1 == 1&#39;b1))
+						state &lt;= #(1) GNT1;
+					else begin
+						gnt_1 &lt;= 0;
+						state &lt;= #(1) IDLE;
+					end
+				default: state &lt;= #(1) IDLE;
+			endcase
 	end
 endmodule
 

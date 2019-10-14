@@ -118,8 +118,8 @@ module sparc_ffu_vis (
 	);
 	assign logic_rs1[63:0] = (dp_vis_rs1_data[63:0] ^ {64 {ctl_vis_log_invert_rs1}});
 	assign logic_rs2[63:0] = (dp_vis_rs2_data[63:0] ^ {64 {ctl_vis_log_invert_rs2}});
-	assign logic_nor[63:0] = (~ (logic_rs1[63:0] | logic_rs2[63:0]));
-	assign logic_nand[63:0] = (~ (logic_rs1[63:0] &amp; logic_rs2[63:0]));
+	assign logic_nor[63:0] = ~(logic_rs1[63:0] | logic_rs2[63:0]);
+	assign logic_nand[63:0] = ~(logic_rs1[63:0] &amp; logic_rs2[63:0]);
 	assign logic_xor[63:0] = (logic_rs1[63:0] ^ logic_rs2[63:0]);
 	mux3ds #(64) pass_mux(
 		.dout(logic_pass[63:0]),

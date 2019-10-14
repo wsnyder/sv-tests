@@ -141,7 +141,7 @@ module scbuf_fbd (
 	mux2ds #(624) mux_fb_array_din(
 		.dout(fb_array_din[623:0]),
 		.in0(ram_decc[623:0]),
-		.sel0((~ sctag_scbuf_fbd_stdatasel_c4)),
+		.sel0(~sctag_scbuf_fbd_stdatasel_c4),
 		.in1(sctag_decc[623:0]),
 		.sel1(sctag_scbuf_fbd_stdatasel_c4)
 	);

@@ -184,7 +184,7 @@ module fpu_cnt_lead0_53b (
 		.din_3_2_eq_0(din_4_3_eq_0),
 		.lead0_4b_0(lead0_4_1_0)
 	);
-	assign lead0_0_0 = (! din[0]);
+	assign lead0_0_0 = !din[0];
 	fpu_cnt_lead0_lvl2 i_fpu_cnt_lead0_lvl2_52_45(
 		.din_7_4_eq_0(din_52_49_eq_0),
 		.din_7_6_eq_0(din_52_51_eq_0),
@@ -251,8 +251,8 @@ module fpu_cnt_lead0_53b (
 		.lead0_8b_1(lead0_12_5_1),
 		.lead0_8b_0(lead0_12_5_0)
 	);
-	assign lead0_4_0_1 = ((! din_4_1_eq_0) &amp;&amp; din_4_3_eq_0);
-	assign lead0_4_0_0 = (((! din_4_1_eq_0) &amp;&amp; lead0_4_1_0) || (din_4_1_eq_0 &amp;&amp; lead0_0_0));
+	assign lead0_4_0_1 = (!din_4_1_eq_0 &amp;&amp; din_4_3_eq_0);
+	assign lead0_4_0_0 = ((!din_4_1_eq_0 &amp;&amp; lead0_4_1_0) || (din_4_1_eq_0 &amp;&amp; lead0_0_0));
 	fpu_cnt_lead0_lvl3 i_fpu_cnt_lead0_lvl3_52_37(
 		.din_15_8_eq_0(din_52_45_eq_0),
 		.din_15_12_eq_0(din_52_49_eq_0),
@@ -331,11 +331,11 @@ module fpu_cnt_lead0_53b (
 		.lead0_32b_0(lead0_20_0_0)
 	);
 	assign lead0_5 = din_52_21_eq_0;
-	assign lead0_4 = (((! din_52_21_eq_0) &amp;&amp; din_52_37_eq_0) || (din_52_21_eq_0 &amp;&amp; din_20_5_eq_0));
-	assign lead0_3 = (((! din_52_21_eq_0) &amp;&amp; lead0_52_21_3) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_3));
-	assign lead0_2 = (((! din_52_21_eq_0) &amp;&amp; lead0_52_21_2) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_2));
-	assign lead0_1 = (((! din_52_21_eq_0) &amp;&amp; lead0_52_21_1) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_1));
-	assign lead0_0 = (((! din_52_21_eq_0) &amp;&amp; lead0_52_21_0) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_0));
+	assign lead0_4 = ((!din_52_21_eq_0 &amp;&amp; din_52_37_eq_0) || (din_52_21_eq_0 &amp;&amp; din_20_5_eq_0));
+	assign lead0_3 = ((!din_52_21_eq_0 &amp;&amp; lead0_52_21_3) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_3));
+	assign lead0_2 = ((!din_52_21_eq_0 &amp;&amp; lead0_52_21_2) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_2));
+	assign lead0_1 = ((!din_52_21_eq_0 &amp;&amp; lead0_52_21_1) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_1));
+	assign lead0_0 = ((!din_52_21_eq_0 &amp;&amp; lead0_52_21_0) || (din_52_21_eq_0 &amp;&amp; lead0_20_0_0));
 	assign lead0[5:0] = {lead0_5, lead0_4, lead0_3, lead0_2, lead0_1, lead0_0};
 endmodule
 

@@ -13,7 +13,7 @@ files: <a href="../../../tests/chapter-9/9.2.2.2--always_comb.sv.html" target="f
 module always_tb;
 	wire a = 0;
 	reg b = 0;
-	always @(*) b = (~ a);
+	always @(*) b = ~a;
 endmodule
 
 

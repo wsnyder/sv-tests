@@ -11,7 +11,134 @@ files: <a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html" target="
 
 
 Deprecation warning: -i has been renamed to -I
-<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-31" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:31</a>:17: Lexical error: bad beginning of include arg: &#39;\t&#39;
+module ucb_bus_in (
+	stall,
+	indata_buf_vld,
+	indata_buf,
+	rst_l,
+	clk,
+	vld,
+	data,
+	stall_a1
+);
+	parameter UCB_BUS_WIDTH = 32;
+	parameter REG_WIDTH = 64;
+	input rst_l;
+	input clk;
+	input vld;
+	input [(UCB_BUS_WIDTH - 1):0] data;
+	output stall;
+	output indata_buf_vld;
+	output [(REG_WIDTH + 63):0] indata_buf;
+	input stall_a1;
+	wire vld_d1;
+	wire stall_d1;
+	wire [(UCB_BUS_WIDTH - 1):0] data_d1;
+	wire skid_buf0_en;
+	wire vld_buf0;
+	wire [(UCB_BUS_WIDTH - 1):0] data_buf0;
+	wire skid_buf1_en;
+	wire vld_buf1;
+	wire [(UCB_BUS_WIDTH - 1):0] data_buf1;
+	wire skid_buf0_sel;
+	wire skid_buf1_sel;
+	wire vld_mux;
+	wire [(UCB_BUS_WIDTH - 1):0] data_mux;
+	wire [(((REG_WIDTH + 64) / UCB_BUS_WIDTH) - 1):0] indata_vec_next;
+	wire [(((REG_WIDTH + 64) / UCB_BUS_WIDTH) - 1):0] indata_vec;
+	wire [(REG_WIDTH + 63):0] indata_buf_next;
+	wire indata_vec0_d1;
+	dffrle_ns #(1) vld_d1_ff(
+		.din(vld),
+		.rst_l(rst_l),
+		.en(~stall_d1),
+		.clk(clk),
+		.q(vld_d1)
+	);
+	dffe_ns #(UCB_BUS_WIDTH) data_d1_ff(
+		.din(data),
+		.en(~stall_d1),
+		.clk(clk),
+		.q(data_d1)
+	);
+	dffrl_ns #(1) stall_ff(
+		.din(stall_a1),
+		.clk(clk),
+		.rst_l(rst_l),
+		.q(stall)
+	);
+	dffrl_ns #(1) stall_d1_ff(
+		.din(stall),
+		.clk(clk),
+		.rst_l(rst_l),
+		.q(stall_d1)
+	);
+	assign skid_buf0_en = (stall_a1 &amp; ~stall);
+	dffrle_ns #(1) vld_buf0_ff(
+		.din(vld_d1),
+		.rst_l(rst_l),
+		.en(skid_buf0_en),
+		.clk(clk),
+		.q(vld_buf0)
+	);
+	dffe_ns #(UCB_BUS_WIDTH) data_buf0_ff(
+		.din(data_d1),
+		.en(skid_buf0_en),
+		.clk(clk),
+		.q(data_buf0)
+	);
+	dffrl_ns #(1) skid_buf1_en_ff(
+		.din(skid_buf0_en),
+		.clk(clk),
+		.rst_l(rst_l),
+		.q(skid_buf1_en)
+	);
+	dffrle_ns #(1) vld_buf1_ff(
+		.din(vld_d1),
+		.rst_l(rst_l),
+		.en(skid_buf1_en),
+		.clk(clk),
+		.q(vld_buf1)
+	);
+	dffe_ns #(UCB_BUS_WIDTH) data_buf1_ff(
+		.din(data_d1),
+		.en(skid_buf1_en),
+		.clk(clk),
+		.q(data_buf1)
+	);
+	assign skid_buf0_sel = (~stall_a1 &amp; stall);
+	dffrl_ns #(1) skid_buf1_sel_ff(
+		.din(skid_buf0_sel),
+		.clk(clk),
+		.rst_l(rst_l),
+		.q(skid_buf1_sel)
+	);
+	assign vld_mux = (skid_buf0_sel ? vld_buf0 : (skid_buf1_sel ? vld_buf1 : vld_d1));
+	assign data_mux = (skid_buf0_sel ? data_buf0 : (skid_buf1_sel ? data_buf1 : data_d1));
+	assign indata_vec_next = {vld_mux, indata_vec[(((REG_WIDTH + 64) / UCB_BUS_WIDTH) - 1):1]};
+	dffrle_ns #(((REG_WIDTH + 64) / UCB_BUS_WIDTH)) indata_vec_ff(
+		.din(indata_vec_next),
+		.en(~stall_a1),
+		.rst_l(rst_l),
+		.clk(clk),
+		.q(indata_vec)
+	);
+	assign indata_buf_next = {data_mux, indata_buf[(REG_WIDTH + 63):UCB_BUS_WIDTH]};
+	dffe_ns #((REG_WIDTH + 64)) indata_buf_ff(
+		.din(indata_buf_next),
+		.en(~stall_a1),
+		.clk(clk),
+		.q(indata_buf)
+	);
+	dffrle_ns #(1) indata_vec0_d1_ff(
+		.din(indata_vec[0]),
+		.rst_l(rst_l),
+		.en(~stall_a1),
+		.clk(clk),
+		.q(indata_vec0_d1)
+	);
+	assign indata_buf_vld = (indata_vec[0] &amp; ~indata_vec0_d1);
+endmodule
 
 
 </pre>

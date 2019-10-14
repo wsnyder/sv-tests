@@ -79,14 +79,14 @@ module sctag_dirvec_dp (
 		.dout(ic_cam_hit_c5[31:0]),
 		.in0(ic_cam_hit[31:0]),
 		.in1(ic_cam_hit[63:32]),
-		.sel0((~ tagdp_lkup_addr11_c5)),
+		.sel0(~tagdp_lkup_addr11_c5),
 		.sel1(tagdp_lkup_addr11_c5)
 	);
 	mux2ds #(32) mux2_cam_hit_c5(
 		.dout(ic_cam_hit_c5[63:32]),
 		.in0(ic_cam_hit[95:64]),
 		.in1(ic_cam_hit[127:96]),
-		.sel0((~ tagdp_lkup_addr11_c5)),
+		.sel0(~tagdp_lkup_addr11_c5),
 		.sel1(tagdp_lkup_addr11_c5)
 	);
 	dff_s #(32) ff_dc1_cam_hit_c6(
@@ -172,7 +172,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec0_way_c6[1:0]),
 		.in0(enc_dc_vec0_way_c6[1:0]),
 		.in1(enc_ic_vec0_way_c6[1:0]),
-		.sel0((~ ic_dir_vec0_c6)),
+		.sel0(~ic_dir_vec0_c6),
 		.sel1(ic_dir_vec0_c6)
 	);
 	assign way_way_vld0_c6[0] = enc_c_vec0_way_c6[0];
@@ -189,7 +189,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec4_way_c6[1:0]),
 		.in0(enc_dc_vec4_way_c6[1:0]),
 		.in1(enc_ic_vec4_way_c6[1:0]),
-		.sel0((~ ic_dir_vec4_c6)),
+		.sel0(~ic_dir_vec4_c6),
 		.sel1(ic_dir_vec4_c6)
 	);
 	assign way_way_vld4_c6[0] = enc_c_vec4_way_c6[0];
@@ -206,7 +206,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec8_way_c6[1:0]),
 		.in0(enc_dc_vec8_way_c6[1:0]),
 		.in1(enc_ic_vec8_way_c6[1:0]),
-		.sel0((~ ic_dir_vec8_c6)),
+		.sel0(~ic_dir_vec8_c6),
 		.sel1(ic_dir_vec8_c6)
 	);
 	assign way_way_vld8_c6[0] = enc_c_vec8_way_c6[0];
@@ -223,7 +223,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec12_way_c6[1:0]),
 		.in0(enc_dc_vec12_way_c6[1:0]),
 		.in1(enc_ic_vec12_way_c6[1:0]),
-		.sel0((~ ic_dir_vec12_c6)),
+		.sel0(~ic_dir_vec12_c6),
 		.sel1(ic_dir_vec12_c6)
 	);
 	assign way_way_vld12_c6[0] = enc_c_vec12_way_c6[0];
@@ -240,7 +240,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec16_way_c6[1:0]),
 		.in0(enc_dc_vec16_way_c6[1:0]),
 		.in1(enc_ic_vec16_way_c6[1:0]),
-		.sel0((~ ic_dir_vec16_c6)),
+		.sel0(~ic_dir_vec16_c6),
 		.sel1(ic_dir_vec16_c6)
 	);
 	assign way_way_vld16_c6[0] = enc_c_vec16_way_c6[0];
@@ -257,7 +257,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec20_way_c6[1:0]),
 		.in0(enc_dc_vec20_way_c6[1:0]),
 		.in1(enc_ic_vec20_way_c6[1:0]),
-		.sel0((~ ic_dir_vec20_c6)),
+		.sel0(~ic_dir_vec20_c6),
 		.sel1(ic_dir_vec20_c6)
 	);
 	assign way_way_vld20_c6[0] = enc_c_vec20_way_c6[0];
@@ -274,7 +274,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec24_way_c6[1:0]),
 		.in0(enc_dc_vec24_way_c6[1:0]),
 		.in1(enc_ic_vec24_way_c6[1:0]),
-		.sel0((~ ic_dir_vec24_c6)),
+		.sel0(~ic_dir_vec24_c6),
 		.sel1(ic_dir_vec24_c6)
 	);
 	assign way_way_vld24_c6[0] = enc_c_vec24_way_c6[0];
@@ -291,7 +291,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec28_way_c6[1:0]),
 		.in0(enc_dc_vec28_way_c6[1:0]),
 		.in1(enc_ic_vec28_way_c6[1:0]),
-		.sel0((~ ic_dir_vec28_c6)),
+		.sel0(~ic_dir_vec28_c6),
 		.sel1(ic_dir_vec28_c6)
 	);
 	assign way_way_vld28_c6[0] = enc_c_vec28_way_c6[0];
@@ -327,7 +327,7 @@ module sctag_dirvec_dp (
 		.in0(way_wayvld00_mux1_c6[2:0]),
 		.in1(way_wayvld00_mux2_c6[2:0]),
 		.sel0(sel_mux3_c6),
-		.sel1((~ sel_mux3_c6))
+		.sel1(~sel_mux3_c6)
 	);
 	wire dc_dir_vec32_c6;
 	wire dir_hit_vec32_c6;
@@ -463,7 +463,7 @@ module sctag_dirvec_dp (
 		.in0(way_wayvld01_mux1_c6[2:0]),
 		.in1(way_wayvld01_mux2_c6[2:0]),
 		.sel0(sel_mux3_c6),
-		.sel1((~ sel_mux3_c6))
+		.sel1(~sel_mux3_c6)
 	);
 	wire dc_dir_vec64_c6;
 	wire ic_dir_vec64_c6;
@@ -532,7 +532,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec64_way_c6[1:0]),
 		.in0(enc_dc_vec64_way_c6[1:0]),
 		.in1(enc_ic_vec64_way_c6[1:0]),
-		.sel0((~ ic_dir_vec64_c6)),
+		.sel0(~ic_dir_vec64_c6),
 		.sel1(ic_dir_vec64_c6)
 	);
 	assign way_way_vld64_c6[0] = enc_c_vec64_way_c6[0];
@@ -549,7 +549,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec68_way_c6[1:0]),
 		.in0(enc_dc_vec68_way_c6[1:0]),
 		.in1(enc_ic_vec68_way_c6[1:0]),
-		.sel0((~ ic_dir_vec68_c6)),
+		.sel0(~ic_dir_vec68_c6),
 		.sel1(ic_dir_vec68_c6)
 	);
 	assign way_way_vld68_c6[0] = enc_c_vec68_way_c6[0];
@@ -566,7 +566,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec72_way_c6[1:0]),
 		.in0(enc_dc_vec72_way_c6[1:0]),
 		.in1(enc_ic_vec72_way_c6[1:0]),
-		.sel0((~ ic_dir_vec72_c6)),
+		.sel0(~ic_dir_vec72_c6),
 		.sel1(ic_dir_vec72_c6)
 	);
 	assign way_way_vld72_c6[0] = enc_c_vec72_way_c6[0];
@@ -583,7 +583,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec76_way_c6[1:0]),
 		.in0(enc_dc_vec76_way_c6[1:0]),
 		.in1(enc_ic_vec76_way_c6[1:0]),
-		.sel0((~ ic_dir_vec76_c6)),
+		.sel0(~ic_dir_vec76_c6),
 		.sel1(ic_dir_vec76_c6)
 	);
 	assign way_way_vld76_c6[0] = enc_c_vec76_way_c6[0];
@@ -600,7 +600,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec80_way_c6[1:0]),
 		.in0(enc_dc_vec80_way_c6[1:0]),
 		.in1(enc_ic_vec80_way_c6[1:0]),
-		.sel0((~ ic_dir_vec80_c6)),
+		.sel0(~ic_dir_vec80_c6),
 		.sel1(ic_dir_vec80_c6)
 	);
 	assign way_way_vld80_c6[0] = enc_c_vec80_way_c6[0];
@@ -617,7 +617,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec84_way_c6[1:0]),
 		.in0(enc_dc_vec84_way_c6[1:0]),
 		.in1(enc_ic_vec84_way_c6[1:0]),
-		.sel0((~ ic_dir_vec84_c6)),
+		.sel0(~ic_dir_vec84_c6),
 		.sel1(ic_dir_vec84_c6)
 	);
 	assign way_way_vld84_c6[0] = enc_c_vec84_way_c6[0];
@@ -634,7 +634,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec88_way_c6[1:0]),
 		.in0(enc_dc_vec88_way_c6[1:0]),
 		.in1(enc_ic_vec88_way_c6[1:0]),
-		.sel0((~ ic_dir_vec88_c6)),
+		.sel0(~ic_dir_vec88_c6),
 		.sel1(ic_dir_vec88_c6)
 	);
 	assign way_way_vld88_c6[0] = enc_c_vec88_way_c6[0];
@@ -651,7 +651,7 @@ module sctag_dirvec_dp (
 		.dout(enc_c_vec92_way_c6[1:0]),
 		.in0(enc_dc_vec92_way_c6[1:0]),
 		.in1(enc_ic_vec92_way_c6[1:0]),
-		.sel0((~ ic_dir_vec92_c6)),
+		.sel0(~ic_dir_vec92_c6),
 		.sel1(ic_dir_vec92_c6)
 	);
 	assign way_way_vld92_c6[0] = enc_c_vec92_way_c6[0];
@@ -687,7 +687,7 @@ module sctag_dirvec_dp (
 		.in0(way_wayvld10_mux1_c6[2:0]),
 		.in1(way_wayvld10_mux2_c6[2:0]),
 		.sel0(sel_mux3_c6),
-		.sel1((~ sel_mux3_c6))
+		.sel1(~sel_mux3_c6)
 	);
 	wire dc_dir_vec96_c6;
 	wire dir_hit_vec96_c6;
@@ -823,7 +823,7 @@ module sctag_dirvec_dp (
 		.in0(way_wayvld11_mux1_c6[2:0]),
 		.in1(way_wayvld11_mux2_c6[2:0]),
 		.sel0(sel_mux3_c6),
-		.sel1((~ sel_mux3_c6))
+		.sel1(~sel_mux3_c6)
 	);
 	assign dirdp_req_vec_c6[0] = (((dir_hit_vec0_c6 | dir_hit_vec32_c6) | dir_hit_vec64_c6) | dir_hit_vec96_c6);
 	assign dirdp_req_vec_c6[1] = (((dir_hit_vec4_c6 | dir_hit_vec36_c6) | dir_hit_vec68_c6) | dir_hit_vec100_c6);

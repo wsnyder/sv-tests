@@ -117,7 +117,7 @@ module spu_lsurpt1 (
 		.si(),
 		.so()
 	);
-	wire reset = (~ reset_l);
+	wire reset = ~reset_l;
 	dffr_s #(1) ldxa_vld_ff(
 		.din(spu_ctl_ldxa_data_vld_w2),
 		.q(spu_lsu_ldxa_data_vld_w2),

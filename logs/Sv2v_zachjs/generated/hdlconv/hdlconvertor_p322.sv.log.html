@@ -36,7 +36,8 @@ module traffic_lights;
 		output color;
 		input reg [31:0] tics;
 		begin
-			repeat (tics) @(posedge clock) ;
+			repeat (tics) @(posedge clock)
+				;
 			color = off;
 		end
 	endtask

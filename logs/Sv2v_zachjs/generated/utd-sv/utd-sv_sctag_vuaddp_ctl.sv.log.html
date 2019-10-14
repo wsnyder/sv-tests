@@ -178,12 +178,12 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_sel_c2 = ((idx_c1c2comp_c1 &amp; arbctl_inst_vld_c2) &amp; (~ (decdp_inst_int_c1 | inst_int_c2)));
-	assign vuad_sel_c4 = ((idx_c1c4comp_c1 &amp; inst_vld_c4) &amp; (~ (decdp_inst_int_c1 | inst_int_c4)));
-	assign vuad_sel_c2orc3 = (((idx_c1c3comp_c1 &amp; inst_vld_c3) &amp; (~ (decdp_inst_int_c1 | inst_int_c3))) | vuad_sel_c2);
-	assign vuad_sel_wr = ((idx_c1c5comp_c1 &amp; inst_vld_c5) &amp; (~ (decdp_inst_int_c1 | inst_int_c5)));
+	assign vuad_sel_c2 = ((idx_c1c2comp_c1 &amp; arbctl_inst_vld_c2) &amp; ~(decdp_inst_int_c1 | inst_int_c2));
+	assign vuad_sel_c4 = ((idx_c1c4comp_c1 &amp; inst_vld_c4) &amp; ~(decdp_inst_int_c1 | inst_int_c4));
+	assign vuad_sel_c2orc3 = (((idx_c1c3comp_c1 &amp; inst_vld_c3) &amp; ~(decdp_inst_int_c1 | inst_int_c3)) | vuad_sel_c2);
+	assign vuad_sel_wr = ((idx_c1c5comp_c1 &amp; inst_vld_c5) &amp; ~(decdp_inst_int_c1 | inst_int_c5));
 	assign vuad_sel_c4orc5 = (vuad_sel_c4 | vuad_sel_wr);
-	assign vuad_sel_rd = (((~ (vuad_sel_c2orc3 | vuad_sel_c4orc5)) | vuadctl_no_bypass_c1) | sehold);
+	assign vuad_sel_rd = ((~(vuad_sel_c2orc3 | vuad_sel_c4orc5) | vuadctl_no_bypass_c1) | sehold);
 	dff_s #(1) ff_vuad_sel_c2_d1(
 		.din(vuad_sel_c2),
 		.clk(rclk),
@@ -302,7 +302,7 @@ module sctag_vuaddp_ctl (
 		.in0(bist_vuad_idx_c3[9:0]),
 		.in1(vuad_idx_c3[9:0]),
 		.sel0(bist_vuad_wr_en),
-		.sel1((~ bist_vuad_wr_en))
+		.sel1(~bist_vuad_wr_en)
 	);
 	dff_s #(10) ff_mux_idx_c4(
 		.q(vuad_idx_c4[9:0]),
@@ -320,7 +320,7 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign wr_disable_c3 = ((inst_int_c3 | (l2_bypass_mode_on_d1 &amp; (~ arbctl_inst_diag_c3))) | arbctl_inst_diag_c3);
+	assign wr_disable_c3 = ((inst_int_c3 | (l2_bypass_mode_on_d1 &amp; ~arbctl_inst_diag_c3)) | arbctl_inst_diag_c3);
 	assign sel_diag0_data_wr_c3 = ((arbctl_inst_l2vuad_vld_c3 &amp; decdp_st_inst_c3) &amp; acc_vd_c3);
 	assign bistordiag_wr_vd_c3 = (sel_diag0_data_wr_c3 | (bist_vuad_wr_en &amp; bist_wr_vd_c3));
 	dff_s #(1) ff_bistordiag_wr_vd_c4(
@@ -331,9 +331,9 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_array_wr_en1_c3 = ((inst_vld_c3 &amp; (~ wr_disable_c3)) | bistordiag_wr_vd_c3);
+	assign vuad_array_wr_en1_c3 = ((inst_vld_c3 &amp; ~wr_disable_c3) | bistordiag_wr_vd_c3);
 	assign sel_diag1_data_wr_c3 = ((arbctl_inst_l2vuad_vld_c3 &amp; decdp_st_inst_c3) &amp; acc_ua_c3);
-	assign bistordiag_wr_ua_c3 = (sel_diag1_data_wr_c3 | (bist_vuad_wr_en &amp; (~ bist_wr_vd_c3)));
+	assign bistordiag_wr_ua_c3 = (sel_diag1_data_wr_c3 | (bist_vuad_wr_en &amp; ~bist_wr_vd_c3));
 	dff_s #(1) ff_bistordiag_wr_ua_c4(
 		.q(bistordiag_wr_ua_c4),
 		.din(bistordiag_wr_ua_c3),
@@ -342,7 +342,7 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_array_wr_en0_c3 = ((inst_vld_c3 &amp; (~ wr_disable_c3)) | bistordiag_wr_ua_c3);
+	assign vuad_array_wr_en0_c3 = ((inst_vld_c3 &amp; ~wr_disable_c3) | bistordiag_wr_ua_c3);
 	dff_s #(1) ff_vuad_array_wr_en0_c4(
 		.din(vuad_array_wr_en0_c3),
 		.clk(rclk),
@@ -409,7 +409,7 @@ module sctag_vuaddp_ctl (
 		.si(),
 		.so()
 	);
-	assign vuad_error_c4 = (((~ (arbctl_inst_diag_c4 | inst_int_c4)) &amp; ((| parity_c4[3:2]) | (| parity_c4[1:0]))) &amp; inst_vld_c4);
+	assign vuad_error_c4 = ((~(arbctl_inst_diag_c4 | inst_int_c4) &amp; (|parity_c4[3:2] | |parity_c4[1:0])) &amp; inst_vld_c4);
 	dff_s #(1) ff_vuad_error_c5(
 		.q(vuad_error_c5),
 		.din(vuad_error_c4),
@@ -472,7 +472,7 @@ module sctag_vuaddp_ctl (
 		.so()
 	);
 	assign alloc_set_cond_c2 = (arbdp_vuadctl_pst_no_ctrue_c2 | decdp_cas1_inst_c2);
-	assign alloc_rst_cond_c2 = ((arbdp_pst_with_ctrue_c2 | (decdp_cas2_inst_c2 &amp; arbdp_inst_mb_c2)) | (arbdp_inst_mb_c2 &amp; (~ alloc_set_cond_c2)));
+	assign alloc_rst_cond_c2 = ((arbdp_pst_with_ctrue_c2 | (decdp_cas2_inst_c2 &amp; arbdp_inst_mb_c2)) | (arbdp_inst_mb_c2 &amp; ~alloc_set_cond_c2));
 	dff_s #(1) ff_alloc_set_cond_c3(
 		.q(alloc_set_cond_c3),
 		.din(alloc_set_cond_c2),

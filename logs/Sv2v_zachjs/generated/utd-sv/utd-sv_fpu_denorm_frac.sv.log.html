@@ -269,8 +269,8 @@ module fpu_denorm_frac (
 		.din2_din1_nz(din2_din1_nz_26_0),
 		.din2_din1_denorm(din2_din1_denorm_26_0)
 	);
-	assign din2_din1_denorm = (((din2_din1_nz_53_27 &amp;&amp; din2_din1_denorm_53_27) || ((! din2_din1_nz_53_27) &amp;&amp; (! din2_din1_nz_26_0))) || ((! din2_din1_nz_53_27) &amp;&amp; din2_din1_denorm_26_0));
-	assign din2_din1_denorm_inv = (! din2_din1_denorm);
+	assign din2_din1_denorm = (((din2_din1_nz_53_27 &amp;&amp; din2_din1_denorm_53_27) || (!din2_din1_nz_53_27 &amp;&amp; !din2_din1_nz_26_0)) || (!din2_din1_nz_53_27 &amp;&amp; din2_din1_denorm_26_0));
+	assign din2_din1_denorm_inv = !din2_din1_denorm;
 	assign din2_din1_denorma = din2_din1_denorm;
 	assign din2_din1_denorm_inva = din2_din1_denorm_inv;
 endmodule
