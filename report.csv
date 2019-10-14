@@ -1628,7 +1628,7 @@ class_member_test_45,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/
 class_member_test_58,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_58.sv,8.3,False,True,False,False,False,True,False,False
 class_member_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_2.sv,8.3,False,True,False,False,False,True,False,False
 class_member_test_25,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_25.sv,8.3,False,True,False,False,False,True,False,False
-class_member_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv,8.3,False,True,False,False,False,False,False,False
+class_member_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_13.sv,8.3,False,True,False,False,False,True,False,False
 class_member_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_0.sv,8.3,False,True,False,False,False,True,False,False
 class_member_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_1.sv,8.3,False,True,False,False,False,True,False,False
 class_member_test_20,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_20.sv,8.3,False,True,False,False,False,True,False,False
