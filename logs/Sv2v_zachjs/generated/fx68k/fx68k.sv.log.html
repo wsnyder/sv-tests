@@ -503,8 +503,8 @@ module fx68k (
 			rFC &lt;= 1&#39;sb0;
 		else if ((enT1 &amp; Nanod.permStart)) begin
 			rFC[2] &lt;= pswS;
-			rFC[1] &lt;= (microLatch[16] | (~microLatch[15] &amp; ~Irdecod.isPcRel));
-			rFC[0] &lt;= (microLatch[15] | (~microLatch[16] &amp; Irdecod.isPcRel));
+			rFC[1] &lt;= (microLatch[16] | (~microLatch[15] &amp; Irdecod.isPcRel));
+			rFC[0] &lt;= (microLatch[15] | (~microLatch[16] &amp; ~Irdecod.isPcRel));
 		end
 	reg [2:0] inl;
 	reg updIll;
