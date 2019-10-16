@@ -5,7 +5,7 @@
 description: sequence event test
 should_fail: 0
 tags: 9.4.2.4
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv</a>
 
@@ -25,7 +25,7 @@ files: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html" target
 %Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-35" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:35</a>: Unsupported: Verilog 1995 reserved word not implemented: join
 %Error: Exiting due to 6 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv</a>
 
 
 </pre>

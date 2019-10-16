@@ -5,7 +5,7 @@
 description: $cast task
 should_fail: 0
 tags: 6.24.2 8.16
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target="file-frame">tests/chapter-6/6.24.2--cast_task.sv</a>
 
@@ -13,7 +13,7 @@ files: <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target="file
 %Error: <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html#l-10" target="file-frame">tests/chapter-6/6.24.2--cast_task.sv:10</a>: Unsupported or unknown PLI call: $cast
 %Error: Exiting due to 1 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target="file-frame">tests/chapter-6/6.24.2--cast_task.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target="file-frame">tests/chapter-6/6.24.2--cast_task.sv</a>
 
 
 </pre>

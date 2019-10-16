@@ -5,7 +5,7 @@
 description: superclass type declaration conflicts must be resolved in subclass
 should_fail: 0
 tags: 8.26.6.2
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>
 
@@ -22,7 +22,7 @@ files: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.ht
 %Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv:17</a>: syntax error, unexpected IDENTIFIER, expecting &#39;;&#39;
 %Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
 %Error: Exiting due to 11 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>
 
 
 </pre>

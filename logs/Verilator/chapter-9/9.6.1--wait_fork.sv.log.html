@@ -5,7 +5,7 @@
 description: wait fork test
 should_fail: 0
 tags: 9.6.1
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv.html" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>
 
@@ -23,7 +23,7 @@ files: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv.html" target="file-
 %Error: <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv.html#l-23" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv:23</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
 %Error: Exiting due to 4 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv.html" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.6.1--wait_fork.sv.html" target="file-frame">tests/chapter-9/9.6.1--wait_fork.sv</a>
 
 
 </pre>

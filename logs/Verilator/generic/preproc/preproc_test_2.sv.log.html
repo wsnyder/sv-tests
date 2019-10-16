@@ -5,24 +5,14 @@
 description: Test
 should_fail: 0
 tags: 5.6.4
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc
 top_module: 
 files: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html" target="file-frame">tests/generic/preproc/preproc_test_2.sv</a>
 
 
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>: Cannot find include file: preproc_test_2.svh
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>: This may be because there&#39;s no search path specified with -I&lt;dir&gt;.
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>: Looked in:
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>:       preproc_test_2.svh
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>:       preproc_test_2.svh.v
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>:       preproc_test_2.svh.sv
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>:       obj_dir/preproc_test_2.svh
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>:       obj_dir/preproc_test_2.svh.v
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-7" target="file-frame">tests/generic/preproc/preproc_test_2.sv:7</a>:       obj_dir/preproc_test_2.svh.sv
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-9" target="file-frame">tests/generic/preproc/preproc_test_2.sv:9</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html#l-9" target="file-frame">tests/generic/preproc/preproc_test_2.sv:9</a>: Unsupported: Verilog 2001-config reserved word not implemented; probably you want `include instead: include
-%Error: Exiting due to 11 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html" target="file-frame">tests/generic/preproc/preproc_test_2.sv</a>
+%Error: No top level module found
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc <a href="../../../../tests/generic/preproc/preproc_test_2.sv.html" target="file-frame">tests/generic/preproc/preproc_test_2.sv</a>
 
 
 </pre>

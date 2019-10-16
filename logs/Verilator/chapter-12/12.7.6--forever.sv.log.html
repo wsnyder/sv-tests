@@ -5,7 +5,7 @@
 description: A module testing forever loop
 should_fail: 0
 tags: 12.7.6
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-frame">tests/chapter-12/12.7.6--forever.sv</a>
 
@@ -16,7 +16,7 @@ files: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-
 %Error: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html#l-14" target="file-frame">tests/chapter-12/12.7.6--forever.sv:14</a>: Unsupported: Verilog 1995 reserved word not implemented: join
 %Error: Exiting due to 2 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-frame">tests/chapter-12/12.7.6--forever.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12 <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-frame">tests/chapter-12/12.7.6--forever.sv</a>
 
 
 </pre>

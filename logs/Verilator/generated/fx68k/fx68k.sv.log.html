@@ -5,7 +5,7 @@
 description: Full fx68k core test
 should_fail: 0
 tags: fx68k
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k
 top_module: 
 files: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
 
@@ -78,7 +78,7 @@ files: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-
 %Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-766" target="file-frame">third_party/cores/fx68k/fx68k.sv:766</a>:  ASSIGNW
 %Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:  fx68k.Nanod
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
 
 
 </pre>

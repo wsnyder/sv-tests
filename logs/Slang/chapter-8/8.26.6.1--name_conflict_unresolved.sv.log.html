@@ -5,26 +5,12 @@
 description: unresolved interface class method name conflict
 should_fail: 1
 tags: 8.26.6.1
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv</a>
 
 
-../..<a href="../../../tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:8</a>:2: error: language feature not yet supported
-	interface class ihello;
-	^~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:12</a>:2: error: language feature not yet supported
-	interface class itest;
-	^~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:16</a>:2: error: language feature not yet supported
-	class Hello implements ihello, itest;
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:22</a>:2: error: use of undeclared identifier &#39;Hello&#39;
-	Hello obj;
-	^~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv.html#l-25" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_unresolved.sv:25</a>:9: error: language feature not yet supported
-		obj = new;
-		      ^~~
+error: no input files
 
 
 </pre>

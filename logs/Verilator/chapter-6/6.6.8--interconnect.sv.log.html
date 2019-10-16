@@ -5,7 +5,7 @@
 description: generic interconnect tests
 should_fail: 0
 tags: 6.6.8
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.6.8--interconnect.sv.html" target="file-frame">tests/chapter-6/6.6.8--interconnect.sv</a>
 
@@ -14,7 +14,7 @@ files: <a href="../../../tests/chapter-6/6.6.8--interconnect.sv.html" target="fi
 %Error: <a href="../../../tests/chapter-6/6.6.8--interconnect.sv.html#l-8" target="file-frame">tests/chapter-6/6.6.8--interconnect.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
 %Error: Exiting due to 2 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-6/6.6.8--interconnect.sv.html" target="file-frame">tests/chapter-6/6.6.8--interconnect.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.6.8--interconnect.sv.html" target="file-frame">tests/chapter-6/6.6.8--interconnect.sv</a>
 
 
 </pre>

@@ -5,7 +5,7 @@
 description: Test support of unpacked arrays index querying method
 should_fail: 0
 tags: 7.12.4 7.4.2 7.10 7.12.1
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/index.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/index.sv</a>
 
@@ -14,7 +14,7 @@ files: <a href="../../../../../tests/chapter-7/arrays/unpacked/index.sv.html" ta
 %Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/index.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/index.sv:10</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
 %Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/index.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/unpacked/index.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: with
 %Error: Exiting due to 3 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/arrays/unpacked/index.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/index.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked <a href="../../../../../tests/chapter-7/arrays/unpacked/index.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/index.sv</a>
 
 
 </pre>

@@ -5,7 +5,7 @@
 description: interface class inherited from multiple sources shouldn&#39;t create symbol conflicts
 should_fail: 0
 tags: 8.26.6.3
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>
 
@@ -27,7 +27,7 @@ files: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html"
 %Error: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html#l-21" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
 %Error: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv:22</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
 %Error: Exiting due to 16 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship.sv</a>
 
 
 </pre>

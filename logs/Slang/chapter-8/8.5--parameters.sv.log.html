@@ -5,23 +5,12 @@
 description: parametrized class test
 should_fail: 0
 tags: 8.5 8.25
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.5--parameters.sv.html" target="file-frame">tests/chapter-8/8.5--parameters.sv</a>
 
 
-../..<a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-8" target="file-frame">tests/chapter-8/8.5--parameters.sv:8</a>:2: error: language feature not yet supported
-	class test_cls #(parameter a = 12);
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-11" target="file-frame">tests/chapter-8/8.5--parameters.sv:11</a>:2: error: language feature not yet supported
-	test_cls #(34) test_obj;
-	^~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-14" target="file-frame">tests/chapter-8/8.5--parameters.sv:14</a>:14: error: language feature not yet supported
-		test_obj = new;
-		           ^~~
-../..<a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-15" target="file-frame">tests/chapter-8/8.5--parameters.sv:15</a>:12: error: use of undeclared identifier &#39;test_cls&#39;
-		$display(test_cls.a);
-		         ^~~~~~~~
+error: no input files
 
 
 </pre>

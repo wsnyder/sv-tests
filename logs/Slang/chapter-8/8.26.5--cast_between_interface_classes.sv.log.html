@@ -5,35 +5,12 @@
 description: it should be possible to cast between implemented interface classes
 should_fail: 0
 tags: 8.26.2
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv</a>
 
 
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:8</a>:2: error: language feature not yet supported
-	interface class ihello;
-	^~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:12</a>:2: error: language feature not yet supported
-	interface class itest;
-	^~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:16</a>:2: error: language feature not yet supported
-	class Hello implements ihello, itest;
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-25" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:25</a>:2: error: use of undeclared identifier &#39;Hello&#39;
-	Hello obj;
-	^~~~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-26" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:26</a>:2: error: use of undeclared identifier &#39;ihello&#39;
-	ihello ih_ref;
-	^~~~~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-27" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:27</a>:2: error: use of undeclared identifier &#39;itest&#39;
-	itest it_ref;
-	^~~~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-30" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:30</a>:9: error: language feature not yet supported
-		obj = new;
-		      ^~~
-../..<a href="../../../tests/chapter-8/8.26.5--cast_between_interface_classes.sv.html#l-32" target="file-frame">tests/chapter-8/8.26.5--cast_between_interface_classes.sv:32</a>:3: error: unknown system name &#39;$cast&#39;
-		$cast(it_ref, ih_ref);
-		^~~~~
+error: no input files
 
 
 </pre>

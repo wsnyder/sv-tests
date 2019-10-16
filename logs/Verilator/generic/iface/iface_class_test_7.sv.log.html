@@ -5,7 +5,7 @@
 description: Test
 should_fail: 0
 tags: 8.3 8.26
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/iface
 top_module: 
 files: <a href="../../../../tests/generic/iface/iface_class_test_7.sv.html" target="file-frame">tests/generic/iface/iface_class_test_7.sv</a>
 
@@ -18,7 +18,7 @@ files: <a href="../../../../tests/generic/iface/iface_class_test_7.sv.html" targ
 %Error: <a href="../../../../tests/generic/iface/iface_class_test_7.sv.html#l-12" target="file-frame">tests/generic/iface/iface_class_test_7.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
 %Error: Cannot continue
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/generic/iface/iface_class_test_7.sv.html" target="file-frame">tests/generic/iface/iface_class_test_7.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface <a href="../../../../tests/generic/iface/iface_class_test_7.sv.html" target="file-frame">tests/generic/iface/iface_class_test_7.sv</a>
 
 
 </pre>

@@ -5,7 +5,7 @@
 description: Test
 should_fail: 0
 tags: 6.18
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef
 top_module: 
 files: <a href="../../../../tests/generic/typedef/typedef_test_21.sv.html" target="file-frame">tests/generic/typedef/typedef_test_21.sv</a>
 
@@ -13,7 +13,7 @@ files: <a href="../../../../tests/generic/typedef/typedef_test_21.sv.html" targe
 %Error: Duplicate declaration of cell: $unit
 %Error: ... Location of original declaration
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../tests/generic/typedef/typedef_test_21.sv.html" target="file-frame">tests/generic/typedef/typedef_test_21.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_21.sv.html" target="file-frame">tests/generic/typedef/typedef_test_21.sv</a>
 
 
 </pre>

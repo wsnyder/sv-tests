@@ -5,7 +5,7 @@
 description: $cast function test
 should_fail: 0
 tags: 8.16
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-frame">tests/chapter-8/8.16--cast_func.sv</a>
 
@@ -13,7 +13,7 @@ files: <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-f
 %Error: <a href="../../../tests/chapter-8/8.16--cast_func.sv.html#l-11" target="file-frame">tests/chapter-8/8.16--cast_func.sv:11</a>: Unsupported or unknown PLI call: $cast
 %Error: Exiting due to 1 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-frame">tests/chapter-8/8.16--cast_func.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-frame">tests/chapter-8/8.16--cast_func.sv</a>
 
 
 </pre>

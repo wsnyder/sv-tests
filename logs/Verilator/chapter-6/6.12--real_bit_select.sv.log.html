@@ -5,7 +5,7 @@
 description: real indexing tests
 should_fail: 1
 tags: 6.12
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
 
@@ -15,7 +15,7 @@ files: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="
 %Warning-REALCVT: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Implicit conversion of real to integer
 %Warning-REALCVT: Use &#34;/* verilator lint_off REALCVT */&#34; and lint_on around source to disable this message.
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
 
 
 </pre>

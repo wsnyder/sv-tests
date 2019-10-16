@@ -5,7 +5,7 @@
 description: tagged union member access test
 should_fail: 0
 tags: 11.9
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access.sv</a>
 
@@ -17,7 +17,7 @@ files: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access.sv.ht
 %Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access.sv.html#l-20" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
 %Error: Internal Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access.sv.html#l-7" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access.sv:7</a>: ../V3ParseSym.h:112: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE &#39;top&#39;
 %Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-11/11.9--tagged_union_member_access.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11 <a href="../../../tests/chapter-11/11.9--tagged_union_member_access.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access.sv</a>
 
 
 </pre>

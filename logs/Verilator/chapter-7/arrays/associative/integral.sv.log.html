@@ -5,14 +5,14 @@
 description: Test associative arrays support
 should_fail: 0
 tags: 7.8.4 7.8
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/associative/integral.sv.html" target="file-frame">tests/chapter-7/arrays/associative/integral.sv</a>
 
 
 %Error: <a href="../../../../../tests/chapter-7/arrays/associative/integral.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/integral.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../../../tests/chapter-7/arrays/associative/integral.sv.html" target="file-frame">tests/chapter-7/arrays/associative/integral.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative <a href="../../../../../tests/chapter-7/arrays/associative/integral.sv.html" target="file-frame">tests/chapter-7/arrays/associative/integral.sv</a>
 
 
 </pre>

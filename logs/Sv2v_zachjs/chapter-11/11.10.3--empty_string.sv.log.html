@@ -5,17 +5,14 @@
 description: empty string test
 should_fail: 0
 tags: 11.10.3
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.10.3--empty_string.sv.html" target="file-frame">tests/chapter-11/11.10.3--empty_string.sv</a>
 
 
 module top;
 	reg [112:1] a;
-	initial begin
-		a = &#34;&#34;;
-		$assert((a == 0));
-	end
+	initial a = &#34;&#34;;
 endmodule
 
 

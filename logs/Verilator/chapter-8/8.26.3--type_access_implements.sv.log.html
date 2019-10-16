@@ -5,7 +5,7 @@
 description: access interface class type with scope resolution operator
 should_fail: 0
 tags: 8.26.3
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>
 
@@ -24,7 +24,7 @@ files: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html"
 %Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv:22</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv:22</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
 %Error: Internal Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html#l-7" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv:7</a>: ../V3ParseSym.h:112: Symbols suggest ending TASK &#39;hello&#39; but parser thinks ending MODULE &#39;class_tb&#39;
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>
 
 
 </pre>

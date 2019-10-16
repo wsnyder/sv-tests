@@ -5,23 +5,12 @@
 description: different specializations of an interface class are treated as unique interface class types
 should_fail: 1
 tags: 8.26.6.3
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv.html" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv</a>
 
 
-../..<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:8</a>:2: error: language feature not yet supported
-	interface class ibase#(type T = logic);
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:12</a>:2: error: language feature not yet supported
-	interface class ic1 extends ibase#(bit);
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:16</a>:2: error: language feature not yet supported
-	interface class ic2 extends ibase#(string);
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv.html#l-20" target="file-frame">tests/chapter-8/8.26.6.3--diamond_relationship_parametrized.sv:20</a>:2: error: language feature not yet supported
-	interface class ic3 extends ic1, ic2;
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+error: no input files
 
 
 </pre>

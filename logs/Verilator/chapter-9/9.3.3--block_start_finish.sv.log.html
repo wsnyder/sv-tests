@@ -5,7 +5,7 @@
 description: block start finish check
 should_fail: 0
 tags: 9.3.3
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.3--block_start_finish.sv.html" target="file-frame">tests/chapter-9/9.3.3--block_start_finish.sv</a>
 
@@ -25,7 +25,7 @@ files: <a href="../../../tests/chapter-9/9.3.3--block_start_finish.sv.html" targ
 %Error: <a href="../../../tests/chapter-9/9.3.3--block_start_finish.sv.html#l-22" target="file-frame">tests/chapter-9/9.3.3--block_start_finish.sv:22</a>: Unsupported: Verilog 1995 reserved word not implemented: join
 %Error: Exiting due to 4 error(s)
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-9/9.3.3--block_start_finish.sv.html" target="file-frame">tests/chapter-9/9.3.3--block_start_finish.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.3--block_start_finish.sv.html" target="file-frame">tests/chapter-9/9.3.3--block_start_finish.sv</a>
 
 
 </pre>

@@ -5,7 +5,7 @@
 description: instantiating an interface class
 should_fail: 1
 tags: 8.26.5
-incdirs: 
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
 
@@ -17,7 +17,7 @@ files: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation
 %Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
 %Error: Exiting due to 6 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
 
 
 </pre>
