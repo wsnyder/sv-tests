@@ -32,7 +32,6 @@ utd-sv_bw_r_l2d_rep_bot,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/
 utd-sv_inc-2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/inc-2.v,utd-sv,True,False,True,True,False,True,True,True
 utd-sv_flop_rptrs_xc7,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/flop_rptrs_xc7.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_spu_lsurpt1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/spu_lsurpt1.v,utd-sv,False,True,False,True,False,True,True,True
-utd-sv_operators,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/operators.v,utd-sv,False,False,False,True,False,False,False,False
 utd-sv_flop_rptrs_xc0,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/flop_rptrs_xc0.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_pcx_dp2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_dp2.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_sparc_exu_byp_eccgen,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sparc_exu_byp_eccgen.v,utd-sv,False,True,False,True,False,True,True,True
@@ -200,7 +199,6 @@ utd-sv_fpu,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu.v,
 utd-sv_sctag_cpx_rptr_0,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sctag_cpx_rptr_0.v,utd-sv,True,True,True,True,True,True,True,True
 utd-sv_pad_ddr2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pad_ddr2.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_fpu_denorm_3b,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_denorm_3b.v,utd-sv,True,True,True,True,True,True,True,True
-utd-sv_sparc_ffu_ctl_visctl,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v,utd-sv,False,False,False,False,False,False,False,False
 utd-sv_bw_ctu_pad_cluster,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_ctu_pad_cluster.v,utd-sv,True,True,True,True,False,True,True,True
 utd-sv_fpu_rptr_macros,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_rptr_macros.v,utd-sv,True,True,True,True,False,True,True,True
 utd-sv_iob_ccx_rptr,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/iob_ccx_rptr.v,utd-sv,True,True,True,True,True,True,True,True
