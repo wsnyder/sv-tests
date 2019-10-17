@@ -6,17 +6,21 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test
 should_fail: 0
 tags: 7.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/struct
 top_module: 
 files: <a href="../../../../tests/generic/struct/struct_test_0.sv.html" target="file-frame">tests/generic/struct/struct_test_0.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.086s
 </pre>
 <pre>
 
+%Error: Duplicate declaration of cell: $unit
+%Error: ... Location of original declaration
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/struct <a href="../../../../tests/generic/struct/struct_test_0.sv.html" target="file-frame">tests/generic/struct/struct_test_0.sv</a>
 
 </pre>
 </body>

@@ -13,19 +13,14 @@ tags: 7.10.1 7.10.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
 files: <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-9" target="file-frame">tests/chapter-7/queues/slice.sv:9</a>: Unsupported: $ expression
-int q[$:5];
-      ^
-%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-10" target="file-frame">tests/chapter-7/queues/slice.sv:10</a>: Unsupported: $ expression
-int r[$];
-      ^
+%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-9" target="file-frame">tests/chapter-7/queues/slice.sv:9</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-10" target="file-frame">tests/chapter-7/queues/slice.sv:10</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
 %Error: Exiting due to 2 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
 
 </pre>
 </body>

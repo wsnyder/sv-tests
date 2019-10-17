@@ -13,22 +13,16 @@ tags: 9.3.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv:12</a>: Unsupported: fork statements
-  fork
-  ^~~~
-%Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html#l-16" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;join_any&#39;
-  join_any
-  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html#l-17" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv:17</a>: syntax error, unexpected endmodule
-endmodule
-^~~~~~~~~
-%Error: Cannot continue
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv</a>
+%Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv:12</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html#l-14" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv:14</a>: syntax error, unexpected &#39;=&#39;, expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html#l-16" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: join_any
+%Error: Exiting due to 3 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.2--parallel_block_join_any.sv.html" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join_any.sv</a>
 
 </pre>
 </body>

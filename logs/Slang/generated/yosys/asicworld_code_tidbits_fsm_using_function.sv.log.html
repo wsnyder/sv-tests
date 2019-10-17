@@ -13,58 +13,11 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v</a>
-time_elapsed: 0.005s
+time_elapsed: 0.010s
 </pre>
 <pre>
 
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:29</a>:21: error: too many arguments to subroutine call; expected 0 but 3 were provided
-assign next_state = fsm_function(state, req_0, req_1);
-                    ^~~~~~~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-32" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:32</a>:3: error: language feature not yet supported
-  input  [SIZE-1:0]  state ;	
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~	
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:33</a>:3: error: language feature not yet supported
-  input    req_0 ;
-  ^~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:34</a>:3: error: language feature not yet supported
-  input    req_1 ;
-  ^~~~~~~~~~~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-60" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:60</a>:14: error: language feature not yet supported
-    state &lt;= #1 IDLE;
-             ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-62" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:62</a>:14: error: language feature not yet supported
-    state &lt;= #1 next_state;
-             ^~~~~~~~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-69" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:69</a>:12: error: language feature not yet supported
-  gnt_0 &lt;= #1 1&#39;b0;
-           ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-70" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:70</a>:12: error: language feature not yet supported
-  gnt_1 &lt;= #1 1&#39;b0;
-           ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-75" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:75</a>:28: error: language feature not yet supported
-                  gnt_0 &lt;= #1 1&#39;b0;
-                           ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-76" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:76</a>:28: error: language feature not yet supported
-                  gnt_1 &lt;= #1 1&#39;b0;
-                           ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-79" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:79</a>:29: error: language feature not yet supported
-                   gnt_0 &lt;= #1 1&#39;b1;
-                            ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-80" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:80</a>:29: error: language feature not yet supported
-                   gnt_1 &lt;= #1 1&#39;b0;
-                            ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-83" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:83</a>:29: error: language feature not yet supported
-                   gnt_0 &lt;= #1 1&#39;b0;
-                            ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-84" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:84</a>:29: error: language feature not yet supported
-                   gnt_1 &lt;= #1 1&#39;b1;
-                            ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-87" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:87</a>:30: error: language feature not yet supported
-                    gnt_0 &lt;= #1 1&#39;b0;
-                             ^~~~~~~
-../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-88" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:88</a>:30: error: language feature not yet supported
-                    gnt_1 &lt;= #1 1&#39;b0;
-                             ^~~~~~~
+error: no input files
 
 </pre>
 </body>

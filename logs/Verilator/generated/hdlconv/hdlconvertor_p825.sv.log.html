@@ -13,58 +13,15 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>: Multiple top level modules
-                                                                                                                        : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                                        : ... Top module &#39;tri_latch&#39;
-module tri_latch (qout, nqout, clock, data, enable);
-       ^~~~~~~~~
-                                                                                                                        : ... Top module &#39;iobuf&#39;
-module iobuf (io1, io2, dir);
-       ^~~~~
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>: Input/output/inout declaration not found for port: &#39;io1&#39;
-module iobuf (io1, io2, dir);
-              ^~~
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>: Input/output/inout declaration not found for port: &#39;io2&#39;
-module iobuf (io1, io2, dir);
-                   ^~~
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>: Input/output/inout declaration not found for port: &#39;dir&#39;
-module iobuf (io1, io2, dir);
-                        ^~~
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:18</a>: Can&#39;t find definition of variable: &#39;dir&#39;
-#(5:7:9, 8:10:12, 15:18:21) b1 (io1, io2, dir);
-                                          ^~~
-%Warning-IMPLICIT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:18</a>: Signal definition not found, creating implicitly: &#39;io2&#39;
-#(5:7:9, 8:10:12, 15:18:21) b1 (io1, io2, dir);
-                                     ^~~
-%Warning-IMPLICIT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:18</a>: Signal definition not found, creating implicitly: &#39;io1&#39;
-                                                                                                                        : ... Suggested alternative: &#39;io2&#39;
-#(5:7:9, 8:10:12, 15:18:21) b1 (io1, io2, dir);
-                                ^~~
-%Warning-IMPLICIT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:6</a>: Signal definition not found, creating implicitly: &#39;ndata&#39;
-                                                                                                                       : ... Suggested alternative: &#39;data&#39;
-not #5 n1 (ndata, data);
-           ^~~~~
-%Warning-IMPLICIT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:7</a>: Signal definition not found, creating implicitly: &#39;wa&#39;
-nand #(3,5) n2 (wa, data, clock),
-                ^~
-%Warning-IMPLICIT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:8</a>: Signal definition not found, creating implicitly: &#39;wb&#39;
-                                                                                                                       : ... Suggested alternative: &#39;wa&#39;
-            n3 (wb, ndata, clock);
-                ^~
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:9</a>: Can&#39;t find definition of variable: &#39;nq&#39;
-nand #(12,15) n4 (q, nq, wa),
-                     ^~
-%Warning-IMPLICIT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:9</a>: Signal definition not found, creating implicitly: &#39;q&#39;
-                                                                                                                       : ... Suggested alternative: &#39;nq&#39;
-nand #(12,15) n4 (q, nq, wa),
-                  ^
-%Error: Exiting due to 5 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv</a>
+%Error-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>: Unsupported: Multiple top level modules: iobuf and tri_latch
+%Error-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv</a>
 
 </pre>
 </body>

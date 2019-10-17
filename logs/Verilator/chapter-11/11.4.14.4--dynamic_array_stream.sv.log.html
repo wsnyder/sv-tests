@@ -13,25 +13,18 @@ tags: 11.4.14.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-20" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:20</a>: Unsupported: $ expression
- byte pkt[$];
-          ^
-%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-24" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
- i_data = new[5];
-          ^~~
+%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-11" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:11</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-16" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:16</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-20" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:20</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-24" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-24" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:24</a>: syntax error, unexpected &#39;[&#39;, expecting TYPE-IDENTIFIER
- i_data = new[5];
-             ^
-%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-29" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:29</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;with&#39;
- {&lt;&lt; byte{o_header, o_len, o_data with [0 +: o_len], o_crc}} = pkt;
-                                  ^~~~
-%Error: Exiting due to 4 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11 <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
+%Error: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-29" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:29</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: with
+%Error: Exiting due to 6 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11 <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
 
 </pre>
 </body>

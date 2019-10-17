@@ -6,70 +6,22 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv</a>
-time_elapsed: 0.014s
+time_elapsed: 0.011s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv</a>
-Parsing SystemVerilog input from `<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv</a>&#39; to AST representation.
-Generating RTLIL representation for module `\TopModule&#39;.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-22" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:22</a>: Warning: Identifier `\MyInterfaceInstance.mysig_out&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-25" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:25</a>: Warning: Identifier `\MyInterfaceInstance.setting&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-27" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:27</a>: Warning: Identifier `\MyInterfaceInstance.passThrough&#39; is implicitly declared.
-Generating RTLIL representation for module `\MyInterface&#39;.
-Generating RTLIL representation for module `\SubModule1&#39;.
-Warning: wire &#39;\u_MyInterface.mysig_out&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-70" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:70</a>.
-Warning: wire &#39;\u_MyInterface.mysig_out&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-73" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:73</a>.
-Warning: wire &#39;\u_MyInterface.mysig_out&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-75" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:75</a>.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-70" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:70</a>: Warning: Identifier `\u_MyInterface.mysig_out&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-72" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:72</a>: Warning: Identifier `\u_MyInterface.setting&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-87" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:87</a>: Warning: Identifier `\MyInterfaceInstanceInSub.other_setting&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-89" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:89</a>: Warning: Identifier `\MyInterfaceInstanceInSub.setting&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-90" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:90</a>: Warning: Identifier `\MyInterfaceInstanceInSub.mysig_out&#39; is implicitly declared.
-Generating RTLIL representation for module `\SubModule2&#39;.
-Warning: wire &#39;\u_MyInterfaceInSub3.other_setting&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-105" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:105</a>.
-Warning: wire &#39;\u_MyInterfaceInSub3.other_setting&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-107" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:107</a>.
-Warning: wire &#39;\u_MyInterfaceInSub3.other_setting&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109</a>.
-Warning: wire &#39;\u_MyInterfaceInSub3.other_setting&#39; is assigned in a block at <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-111" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111</a>.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-105" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:105</a>: Warning: Identifier `\u_MyInterfaceInSub3.other_setting&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-105" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:105</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-107" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:107</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-111" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-104" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:104</a>: Warning: Identifier `\u_MyInterfaceInSub3.mysig_out&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-105" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:105</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-107" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:107</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-111" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-105" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:105</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-107" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:107</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-111" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-107" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:107</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-111" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:109</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-111" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:111</a>: Warning: Range select [21:0] out of bounds on signal `\u_MyInterfaceInSub3.other_setting&#39;: Setting all 22 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-114" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:114</a>: Warning: Identifier `\u_MyInterfaceInSub2.passThrough&#39; is implicitly declared.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-114" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:114</a>: Warning: Range select [7:0] out of bounds on signal `\u_MyInterfaceInSub2.passThrough&#39;: Setting all 8 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-114" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:114</a>: Warning: Ignoring assignment to constant bits:
-    old assignment: 8&#39;xxxxxxxx = 8&#39;01111100
-    new assignment: { } = { }.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-115" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:115</a>: Warning: Range select [15:8] out of bounds on signal `\u_MyInterfaceInSub2.passThrough&#39;: Setting all 8 result bits to undef.
-<a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-115" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:115</a>: Warning: Ignoring assignment to constant bits:
-    old assignment: 8&#39;xxxxxxxx = 8&#39;11001000
-    new assignment: { } = { }.
-Successfully finished Verilog frontend.
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface1.sv.html#l-31" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface1.sv:31</a>: syntax error, unexpected TOK_ID
 
 </pre>
 </body>

@@ -6,26 +6,22 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv</a>
-time_elapsed: 0.011s
+time_elapsed: 0.009s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv</a>
-Parsing SystemVerilog input from `<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv</a>&#39; to AST representation.
-Generating RTLIL representation for module `\multiple2&#39;.
-Generating RTLIL representation for module `\multiple3&#39;.
-Generating RTLIL representation for module `\multiple4&#39;.
-Successfully finished Verilog frontend.
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv:24</a>: syntax error, unexpected &#39;+&#39;
 
 </pre>
 </body>

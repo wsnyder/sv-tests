@@ -13,73 +13,39 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v</a>
-time_elapsed: 0.099s
+time_elapsed: 0.101s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>: Cannot find file containing module: &#39;clken_buf&#39;
-clken_buf  clk_buf  (.clk(clk_1), .rclk(rclk), .enb_l(sehold), .tmb_l(~se));
-^~~~~~~~~
-        ... Looked in:
-             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf
-             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.v
-             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.sv
-             clken_buf
-             clken_buf.v
-             clken_buf.sv
-             obj_dir/clken_buf
-             obj_dir/clken_buf.v
-             obj_dir/clken_buf.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-146" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:146</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(28-6)  ff_wrdata_tag_c1   
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-150" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:150</a>: Cannot find file containing module: &#39;zzecc_sctag_24b_gen&#39;
-zzecc_sctag_24b_gen     tagecc0 (.din({2&#39;b0,wrdata_tag_c1[28-1:6]}),
-^~~~~~~~~~~~~~~~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-182" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:182</a>: Cannot find file containing module: &#39;mux2ds&#39;
-mux2ds #(32) mux_cam_addr_c3 ( .dout (lkup_addr_c3[39:8]),
-^~~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-189" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:189</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s  #(30)  ff_tagdp_lkup_addr_c4  (.din(tagdp_lkup_addr_c3[39:10]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-197" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:197</a>: Cannot find file containing module: &#39;mux4ds&#39;
-mux4ds #(28) mux_lru_tag (.dout (tagdp_evict_tag_c3[28-1:0]),
-^~~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-219" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:219</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s  #(28)  ff_tagdp_evict_tag_c4  (.din(tagdp_evict_tag_c3[28-1:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-222" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:222</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s  #(28)  ff_tagdp_diag_data_c6  (.din(tagdp_evict_tag_c4[28-1:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-225" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:225</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s  #(28)  ff_tagdp_diag_data_c7  (.din(tagdp_diag_data_c6[28-1:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-234" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:234</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c2     (.din(tag_acc_ecc_c1[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-237" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:237</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c3     (.din(tag_acc_ecc_c2[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-240" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:240</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c4     (.din(tag_acc_ecc_c3[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-243" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:243</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c5     (.din(tag_acc_ecc_c4[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-246" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:246</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c6     (.din(tag_acc_ecc_c5[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-249" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:249</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c7     (.din(tag_acc_ecc_c6[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-252" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:252</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s     #(6)    ff_ecc_c8     (.din(tag_acc_ecc_c7[5:0]), .clk(rclk),
-^~~~~
-%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-259" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:259</a>: Cannot find file containing module: &#39;dff_s&#39;
-dff_s  #(1)  ff_addr11_c4  (.din(lkup_addr_c3[11]), .clk(rclk),
-^~~~~
-%Error: Exiting due to 17 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>: Cannot find file containing module: clken_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>: Looked in:
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       clken_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       clken_buf.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       clken_buf.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       obj_dir/clken_buf
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       obj_dir/clken_buf.v
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-142" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:142</a>:       obj_dir/clken_buf.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-146" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:146</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-150" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:150</a>: Cannot find file containing module: zzecc_sctag_24b_gen
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-182" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:182</a>: Cannot find file containing module: mux2ds
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-189" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:189</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-197" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:197</a>: Cannot find file containing module: mux4ds
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-219" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:219</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-222" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:222</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-225" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:225</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-234" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:234</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-237" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:237</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-240" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:240</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-243" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:243</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-246" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:246</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-249" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:249</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-252" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:252</a>: Cannot find file containing module: dff_s
+%Error: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html#l-259" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v:259</a>: Cannot find file containing module: dff_s
+%Error: Exiting due to 27 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v</a>
 
 </pre>
 </body>

@@ -6,32 +6,26 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v</a>
-time_elapsed: 0.091s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-39" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:39</a>: Multiple top level modules
-                                                                                                          : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                          : ... Top module &#39;fpu_bufrpt_grp4&#39;
-module fpu_bufrpt_grp4 (
-       ^~~~~~~~~~~~~~~
-                                                                                                          : ... Top module &#39;fpu_rptr_fp_cpx_grp16&#39;
-module fpu_rptr_fp_cpx_grp16 (
-       ^~~~~~~~~~~~~~~~~~~~~
-                                                                                                          : ... Top module &#39;fpu_rptr_pcx_fpio_grp16&#39;
-module fpu_rptr_pcx_fpio_grp16 (
-       ^~~~~~~~~~~~~~~~~~~~~~~
-                                                                                                          : ... Top module &#39;fpu_rptr_inq&#39;
-module fpu_rptr_inq (
-       ^~~~~~~~~~~~
+%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-39" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:39</a>: Unsupported: Multiple top level modules: fpu_rptr_fp_cpx_grp16 and fpu_bufrpt_grp4
+%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-39" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:39</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-54" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:54</a>: Unsupported: Multiple top level modules: fpu_rptr_pcx_fpio_grp16 and fpu_rptr_fp_cpx_grp16
+%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-54" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:54</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-67" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:67</a>: Unsupported: Multiple top level modules: fpu_rptr_inq and fpu_rptr_pcx_fpio_grp16
+%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html#l-67" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v:67</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 6 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_rptr_min_global.v.html" target="file-frame">third_party/tests/utd-sv/fpu_rptr_min_global.v</a>
 
 </pre>
 </body>

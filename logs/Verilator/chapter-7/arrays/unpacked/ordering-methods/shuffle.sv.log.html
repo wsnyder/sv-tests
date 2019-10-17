@@ -13,19 +13,13 @@ tags: 7.12.2 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:9</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
-                                                                                                           : ... In instance top
-int ia[] = { 1, 2, 3, 4, 5 };
-    ^~
-%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:9</a>: ../V3Width.cpp:1344: LHS var should be size complete
-                                                                                                                           : ... In instance top
-int ia[] = { 1, 2, 3, 4, 5 };
-           ^
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv</a>
+%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv</a>
 
 </pre>
 </body>

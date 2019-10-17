@@ -6,32 +6,24 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html" target="file-frame">third_party/tools/yosys/tests/simple/process.v</a>
-time_elapsed: 0.095s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/process.v:21</a>: Multiple top level modules
-                                                                                                          : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                          : ... Top module &#39;blocking_cond&#39;
-module blocking_cond (in, out);
-       ^~~~~~~~~~~~~
-                                                                                                          : ... Top module &#39;uut&#39;
-module uut(clk, arst, a, b, c, d, e, f,  out1);
-       ^~~
-                                                                                                          : ... Top module &#39;uart&#39;
-module uart (reset, txclk, ld_tx_data, tx_empty, tx_cnt);
-       ^~~~
-%Warning-CASEINCOMPLETE: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/process.v:31</a>: Case values incompletely covered (example pattern 0x3)
-   case ({b, c})
-   ^~~~
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/process.v:21</a>: Unsupported: Multiple top level modules: uut and blocking_cond
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/process.v:21</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html#l-61" target="file-frame">third_party/tools/yosys/tests/simple/process.v:61</a>: Unsupported: Multiple top level modules: uart and uut
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html#l-61" target="file-frame">third_party/tools/yosys/tests/simple/process.v:61</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 4 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/process.v.html" target="file-frame">third_party/tools/yosys/tests/simple/process.v</a>
 
 </pre>
 </body>

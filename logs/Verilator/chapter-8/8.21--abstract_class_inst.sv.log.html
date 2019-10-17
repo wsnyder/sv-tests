@@ -13,46 +13,24 @@ tags: 8.21
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
- virtual class base_cls;
- ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
- virtual class base_cls;
-         ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
- virtual class base_cls;
-                       ^
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-9" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
-  pure virtual function void print();
-       ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-10" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
- endclass
- ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-12" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
- class test_cls extends base_cls;
- ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-12" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
- class test_cls extends base_cls;
-                ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-14" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
-  virtual function void print();
-  ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-17" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
- endclass
- ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-22" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:22</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
-  test_obj = new;
-             ^~~
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-9" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-10" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-12" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-12" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-14" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-17" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-22" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:22</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-22" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:22</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-  test_obj = new;
-                ^
 %Error: Exiting due to 11 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>
 
 </pre>
 </body>

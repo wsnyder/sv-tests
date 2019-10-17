@@ -13,29 +13,20 @@ tags: 9.3.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.3--event.sv.html" target="file-frame">tests/chapter-9/9.3.3--event.sv</a>
-time_elapsed: 0.094s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-8" target="file-frame">tests/chapter-9/9.3.3--event.sv:8</a>: Unsupported: event data types
- event ev;
- ^~~~~
-%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-10" target="file-frame">tests/chapter-9/9.3.3--event.sv:10</a>: Unsupported: fork statements
- initial fork
-         ^~~~
+%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-8" target="file-frame">tests/chapter-9/9.3.3--event.sv:8</a>: Unsupported: Verilog 1995 reserved word not implemented: event
+%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-8" target="file-frame">tests/chapter-9/9.3.3--event.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-10" target="file-frame">tests/chapter-9/9.3.3--event.sv:10</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
 %Warning-STMTDLY: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-13" target="file-frame">tests/chapter-9/9.3.3--event.sv:13</a>: Unsupported: Ignoring delay on this delayed statement.
-   #20;
-   ^
-                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-14" target="file-frame">tests/chapter-9/9.3.3--event.sv:14</a>: syntax error, unexpected -&gt;
-   -&gt;ev;
-   ^~
-%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-17" target="file-frame">tests/chapter-9/9.3.3--event.sv:17</a>: syntax error, unexpected &#39;@&#39;
-   @ev
-   ^
-%Error: Exiting due to 4 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.3--event.sv.html" target="file-frame">tests/chapter-9/9.3.3--event.sv</a>
+%Error: <a href="../../../tests/chapter-9/9.3.3--event.sv.html#l-20" target="file-frame">tests/chapter-9/9.3.3--event.sv:20</a>: Unsupported: Verilog 1995 reserved word not implemented: join
+%Error: Cannot continue
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.3--event.sv.html" target="file-frame">tests/chapter-9/9.3.3--event.sv</a>
 
 </pre>
 </body>

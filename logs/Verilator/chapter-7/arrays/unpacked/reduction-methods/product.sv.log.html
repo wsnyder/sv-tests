@@ -13,19 +13,13 @@ tags: 7.12.3 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/product.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/product.sv</a>
-time_elapsed: 0.096s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/product.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/product.sv:9</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
-                                                                                                            : ... In instance top
-byte b[] = { 1, 2, 3, 4 };
-     ^
-%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/product.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/product.sv:9</a>: ../V3Width.cpp:1344: LHS var should be size complete
-                                                                                                                            : ... In instance top
-byte b[] = { 1, 2, 3, 4 };
-           ^
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/product.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/product.sv</a>
+%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/product.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/product.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/product.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/product.sv</a>
 
 </pre>
 </body>

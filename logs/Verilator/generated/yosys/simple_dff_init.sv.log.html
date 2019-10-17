@@ -6,55 +6,28 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v</a>
-time_elapsed: 0.101s
+time_elapsed: 0.084s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:11</a>: Multiple top level modules
-                                                                                                           : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                           : ... Top module &#39;dff0_test&#39;
-module dff0_test(n1, n1_inv, clk);
-       ^~~~~~~~~
-                                                                                                           : ... Top module &#39;dff1_test&#39;
-module dff1_test(n1, n1_inv, clk);
-       ^~~~~~~~~
-                                                                                                           : ... Top module &#39;dff0a_test&#39;
-module dff0a_test(n1, n1_inv, clk);
-       ^~~~~~~~~~
-                                                                                                           : ... Top module &#39;dff1a_test&#39;
-module dff1a_test(n1, n1_inv, clk);
-       ^~~~~~~~~~
-                                                                                                           : ... Top module &#39;dff_test_997&#39;
-module dff_test_997 (y, clk, wire4);
-       ^~~~~~~~~~~~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-51" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:51</a>: Operator ASSIGNDLY expects 2 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;wire4&#39; generates 1 bits.
-                                                                                                        : ... In instance dff_test_997
-      reg10 &lt;= wire4;
-            ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-37" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:37</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;32&#39;h1&#39; generates 32 bits.
-                                                                                                        : ... In instance dff1a_test
-  reg n1 = 32&#39;d1;
-           ^~~~~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-26" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:26</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;32&#39;h0&#39; generates 32 bits.
-                                                                                                        : ... In instance dff0a_test
-  reg n1 = 32&#39;d0;
-           ^~~~~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:15</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;32&#39;h1&#39; generates 32 bits.
-                                                                                                        : ... In instance dff1_test
-  reg n1 = 32&#39;d1;
-           ^~~~~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:4</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;32&#39;h0&#39; generates 32 bits.
-                                                                                                       : ... In instance dff0_test
-  reg n1 = 32&#39;d0;
-           ^~~~~
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:11</a>: Unsupported: Multiple top level modules: dff1_test and dff0_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:11</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:22</a>: Unsupported: Multiple top level modules: dff0a_test and dff1_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:22</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:33</a>: Unsupported: Multiple top level modules: dff1a_test and dff0a_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:33</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-44" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:44</a>: Unsupported: Multiple top level modules: dff_test_997 and dff1a_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-44" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:44</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 8 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v</a>
 
 </pre>
 </body>

@@ -13,31 +13,18 @@ tags: 8.26.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
- interface class ihello;
-           ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:9</a>: syntax error, unexpected pure
-  pure virtual function void hello();
-  ^~~~
-%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
-  pure virtual function void hello();
-       ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
- endclass
- ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
-  obj = new;
-        ^~~
+%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8</a>: syntax error, unexpected interface
+%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-  obj = new;
-           ^
-%Error: Cannot continue
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
+%Error: Exiting due to 6 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
 
 </pre>
 </body>

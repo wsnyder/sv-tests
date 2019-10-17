@@ -13,32 +13,20 @@ tags: 8.25.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
- class par_cls #(int a = 25);
- ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
- class par_cls #(int a = 25);
-                     ^
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-11" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
- endclass
- ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-16" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
-  inst = new;
-         ^~~
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-11" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-16" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-16" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:16</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-  inst = new;
-            ^
 %Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-18" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:18</a>: syntax error, unexpected ::, expecting &#39;)&#39; or &#39;,&#39;
-  $display(par_cls::b);
-                  ^~
-                                                                                                                       : ... Perhaps &#39;par_cls&#39; is a package which needs to be predeclared? (IEEE 2017 26.3)
-%Error: Exiting due to 6 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-18" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:18</a>: Perhaps &#39;par_cls&#39; is a package which needs to be predeclared? (IEEE 2012 26.3)
+%Error: Exiting due to 7 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
 
 </pre>
 </body>

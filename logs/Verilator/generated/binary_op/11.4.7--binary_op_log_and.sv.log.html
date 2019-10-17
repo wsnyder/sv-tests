@@ -13,23 +13,14 @@ tags: 11.4.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op
 top_module: 
 files: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_and.sv.html" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_and.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_and.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_and.sv:12</a>: Logical Operator LOGAND expects 1 bit on the LHS, but LHS&#39;s VARREF &#39;a&#39; generates 32 bits.
-                                                                                                               : ... In instance top
-    c = a &amp;&amp; b;
-          ^~
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_and.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_and.sv:12</a>: Logical Operator LOGAND expects 1 bit on the RHS, but RHS&#39;s VARREF &#39;b&#39; generates 32 bits.
-                                                                                                               : ... In instance top
-    c = a &amp;&amp; b;
-          ^~
 %Warning-WIDTH: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_and.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_and.sv:12</a>: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS&#39;s LOGAND generates 1 bits.
-                                                                                                               : ... In instance top
-    c = a &amp;&amp; b;
-      ^
 
 </pre>
 </body>

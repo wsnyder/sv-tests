@@ -13,40 +13,11 @@ tags: 8.8
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv</a>
-time_elapsed: 0.004s
+time_elapsed: 0.006s
 </pre>
 <pre>
 
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-8" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:8</a>:2: error: language feature not yet supported
-	class super_cls;
-	^~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-10" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:10</a>:11: error: expected identifier
-		function new(int def = 3);
-		        ^
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-10" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:10</a>:12: error: expected statement
-		function new(int def = 3);
-		         ^~~
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-10" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:10</a>:27: error: expected declarator
-		function new(int def = 3);
-		                        ^
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-15" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:15</a>:2: error: language feature not yet supported
-	class test_cls #(int t = 12) extends super_cls;
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-17" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:17</a>:11: error: expected identifier
-		function new(int def = 42);
-		        ^
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-17" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:17</a>:12: error: expected statement
-		function new(int def = 42);
-		         ^~~
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-17" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:17</a>:28: error: expected declarator
-		function new(int def = 42);
-		                         ^
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-23" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:23</a>:2: error: use of undeclared identifier &#39;super_cls&#39;
-	super_cls super_obj;
-	^~~~~~~~~
-../..<a href="../../../tests/chapter-8/8.8--typed_constructor_param.sv.html#l-26" target="file-frame">tests/chapter-8/8.8--typed_constructor_param.sv:26</a>:22: error: language feature not yet supported
-	        super_obj = test_cls#(.t(23))::new(.def(41));
-	                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+error: no input files
 
 </pre>
 </body>

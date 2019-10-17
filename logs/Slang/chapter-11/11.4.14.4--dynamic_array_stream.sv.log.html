@@ -13,28 +13,11 @@ tags: 11.4.14.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv</a>
-time_elapsed: 0.004s
+time_elapsed: 0.006s
 </pre>
 <pre>
 
-../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-11" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:11</a>:12: error: dimension requires a constant range
-byte i_data[];
-           ^~
-../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-16" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:16</a>:12: error: dimension requires a constant range
-byte o_data[];
-           ^~
-../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-20" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:20</a>:10: error: dimension requires a constant range
-	byte pkt[$];
-	        ^~~
-../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-24" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:24</a>:11: error: language feature not yet supported
-	i_data = new[5];
-	         ^~~~~~
-../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-27" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:27</a>:8: error: language feature not yet supported
-	pkt = {&lt;&lt; byte{i_header, i_len, i_data, i_crc}};
-	      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../..<a href="../../../tests/chapter-11/11.4.14.4--dynamic_array_stream.sv.html#l-29" target="file-frame">tests/chapter-11/11.4.14.4--dynamic_array_stream.sv:29</a>:2: error: language feature not yet supported
-	{&lt;&lt; byte{o_header, o_len, o_data with [0 +: o_len], o_crc}} = pkt;
-	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+error: no input files
 
 </pre>
 </body>

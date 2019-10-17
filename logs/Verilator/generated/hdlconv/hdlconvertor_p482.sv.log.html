@@ -13,18 +13,17 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.094s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:3</a>: syntax error, unexpected clocking
-  clocking cb_with_input @(posedge clk);
-  ^~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:5</a>: syntax error, unexpected property
-    property p1;
-    ^~~~~~~~
-%Error: Exiting due to 2 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv</a>
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:25</a>: syntax error, unexpected assert, expecting cover
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:26</a>: syntax error, unexpected assert, expecting cover
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:27</a>: syntax error, unexpected assert, expecting cover
+%Error: Exiting due to 5 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv</a>
 
 </pre>
 </body>

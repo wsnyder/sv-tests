@@ -6,29 +6,22 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html" target="file-frame">third_party/tools/yosys/tests/simple/generate.v</a>
-time_elapsed: 0.298s
+time_elapsed: 0.024s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html" target="file-frame">third_party/tools/yosys/tests/simple/generate.v</a>
-Parsing SystemVerilog input from `<a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html" target="file-frame">third_party/tools/yosys/tests/simple/generate.v</a>&#39; to AST representation.
-Generating RTLIL representation for module `\gen_test1&#39;.
-Generating RTLIL representation for module `\gen_test2&#39;.
-Generating RTLIL representation for module `\gen_test3&#39;.
-Generating RTLIL representation for module `\gen_test4&#39;.
-Generating RTLIL representation for module `\gen_test5&#39;.
-Generating RTLIL representation for module `\gen_test6&#39;.
-Successfully finished Verilog frontend.
+1. Executing Verilog-2005 frontend.
+ERROR: Index in generate block prefix syntax at <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-110" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:110</a> is not constant!
 
 </pre>
 </body>

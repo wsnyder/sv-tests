@@ -13,61 +13,11 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v</a>
-time_elapsed: 0.005s
+time_elapsed: 0.006s
 </pre>
 <pre>
 
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-64" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:64</a>:11: error: identifier &#39;UCB_BUS_WIDTH&#39; used before its declaration
-   input [UCB_BUS_WIDTH-1:0] data;
-          ^~~~~~~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-50" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:50</a>:14: note: declared here
-   parameter UCB_BUS_WIDTH = 32;
-             ^
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-70" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:70</a>:12: error: identifier &#39;REG_WIDTH&#39; used before its declaration
-   output [REG_WIDTH+63:0]   indata_buf;
-           ^~~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-51" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:51</a>:14: note: declared here
-   parameter REG_WIDTH = 64;
-             ^
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-102" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:102</a>:4: error: unknown module &#39;dffrle_ns&#39;
-   dffrle_ns #(1) vld_d1_ff (.din(vld),
-   ^~~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-108" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:108</a>:4: error: unknown module &#39;dffe_ns&#39;
-   dffe_ns #(UCB_BUS_WIDTH) data_d1_ff (.din(data),
-   ^~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-113" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:113</a>:4: error: unknown module &#39;dffrl_ns&#39;
-   dffrl_ns #(1) stall_ff (.din(stall_a1),
-   ^~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-118" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:118</a>:4: error: unknown module &#39;dffrl_ns&#39;
-   dffrl_ns #(1) stall_d1_ff (.din(stall),
-   ^~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-136" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:136</a>:4: error: unknown module &#39;dffrle_ns&#39;
-   dffrle_ns #(1) vld_buf0_ff (.din(vld_d1),
-   ^~~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-142" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:142</a>:4: error: unknown module &#39;dffe_ns&#39;
-   dffe_ns #(UCB_BUS_WIDTH) data_buf0_ff (.din(data_d1),
-   ^~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-148" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:148</a>:4: error: unknown module &#39;dffrl_ns&#39;
-   dffrl_ns #(1) skid_buf1_en_ff (.din(skid_buf0_en),
-   ^~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-153" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:153</a>:4: error: unknown module &#39;dffrle_ns&#39;
-   dffrle_ns #(1) vld_buf1_ff (.din(vld_d1),
-   ^~~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-159" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:159</a>:4: error: unknown module &#39;dffe_ns&#39;
-   dffe_ns #(UCB_BUS_WIDTH) data_buf1_ff (.din(data_d1),
-   ^~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-175" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:175</a>:4: error: unknown module &#39;dffrl_ns&#39;
-   dffrl_ns #(1) skid_buf1_sel_ff (.din(skid_buf0_sel),
-   ^~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-195" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:195</a>:4: error: unknown module &#39;dffrle_ns&#39;
-   dffrle_ns #((REG_WIDTH+64)/UCB_BUS_WIDTH) indata_vec_ff (.din(indata_vec_next),
-   ^~~~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-204" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:204</a>:4: error: unknown module &#39;dffe_ns&#39;
-   dffe_ns #(REG_WIDTH+64) indata_buf_ff (.din(indata_buf_next),
-   ^~~~~~~
-../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_in.v.html#l-210" target="file-frame">third_party/tests/utd-sv/ucb_bus_in.v:210</a>:4: error: unknown module &#39;dffrle_ns&#39;
-   dffrle_ns #(1) indata_vec0_d1_ff (.din(indata_vec[0]),
-   ^~~~~~~~~
+error: no input files
 
 </pre>
 </body>

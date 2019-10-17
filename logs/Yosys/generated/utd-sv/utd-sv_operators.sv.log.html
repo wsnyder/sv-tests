@@ -6,40 +6,22 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/operators.v.html" target="file-frame">third_party/tests/utd-sv/operators.v</a>
-time_elapsed: 0.012s
+time_elapsed: 0.007s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tests/utd-sv/operators.v.html" target="file-frame">third_party/tests/utd-sv/operators.v</a>
-Parsing SystemVerilog input from `<a href="../../../../third_party/tests/utd-sv/operators.v.html" target="file-frame">third_party/tests/utd-sv/operators.v</a>&#39; to AST representation.
-Generating RTLIL representation for module `\tb_operators&#39;.
-<a href="../../../../third_party/tests/utd-sv/operators.v.html#l-9" target="file-frame">third_party/tests/utd-sv/operators.v:9</a>: Warning: Ignoring call to system task $monitor.
-Warning: wire &#39;\shifter&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-10" target="file-frame">third_party/tests/utd-sv/operators.v:10</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-12" target="file-frame">third_party/tests/utd-sv/operators.v:12</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-13" target="file-frame">third_party/tests/utd-sv/operators.v:13</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-14" target="file-frame">third_party/tests/utd-sv/operators.v:14</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-15" target="file-frame">third_party/tests/utd-sv/operators.v:15</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-16" target="file-frame">third_party/tests/utd-sv/operators.v:16</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-18" target="file-frame">third_party/tests/utd-sv/operators.v:18</a>.
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-19" target="file-frame">third_party/tests/utd-sv/operators.v:19</a>.
-GTE TEST 1
-GTE TEST 2
-GTE TEST 3
-GTE TEST 3
-Warning: wire &#39;\result&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-31" target="file-frame">third_party/tests/utd-sv/operators.v:31</a>.
-Warning: wire &#39;\shifter&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-33" target="file-frame">third_party/tests/utd-sv/operators.v:33</a>.
-Warning: wire &#39;\shifter&#39; is assigned in a block at <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-34" target="file-frame">third_party/tests/utd-sv/operators.v:34</a>.
-Successfully finished Verilog frontend.
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line <a href="../../../../third_party/tests/utd-sv/operators.v.html#l-33" target="file-frame">third_party/tests/utd-sv/operators.v:33</a>: syntax error, unexpected OP_NAND
 
 </pre>
 </body>

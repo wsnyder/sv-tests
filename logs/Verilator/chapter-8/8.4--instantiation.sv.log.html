@@ -13,31 +13,19 @@ tags: 8.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html" target="file-frame">tests/chapter-8/8.4--instantiation.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.092s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.4--instantiation.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
- class test_cls;
- ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.4--instantiation.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.4--instantiation.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
- class test_cls;
-               ^
-%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-10" target="file-frame">tests/chapter-8/8.4--instantiation.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
- endclass
- ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.4--instantiation.sv:15</a>: Unsupported: null expression
-  if(test_obj == null) test_obj = new;
-                 ^~~~
-%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.4--instantiation.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
-  if(test_obj == null) test_obj = new;
-                                  ^~~
-%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.4--instantiation.sv:15</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-  if(test_obj == null) test_obj = new;
-                                     ^
+%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-10" target="file-frame">tests/chapter-8/8.4--instantiation.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.4--instantiation.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: null
+%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.4--instantiation.sv:15</a>: syntax error, unexpected &#39;)&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.4--instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.4--instantiation.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: Exiting due to 6 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.4--instantiation.sv.html" target="file-frame">tests/chapter-8/8.4--instantiation.sv</a>
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.4--instantiation.sv.html" target="file-frame">tests/chapter-8/8.4--instantiation.sv</a>
 
 </pre>
 </body>

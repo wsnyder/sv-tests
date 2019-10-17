@@ -13,20 +13,15 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:10</a>: Unsupported: Interfaced port on top level module
-    MyInterface.submodule1 interfaceInstanceAtTop,
-                           ^~~~~~~~~~~~~~~~~~~~~~
-%Error: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:109</a>: Can&#39;t find definition of scope/variable: &#39;u_MyInterfaceFromTop&#39;
-                                                                                                                  : ... Suggested alternative: &#39;u_MyInterfaceFromTopDown&#39;
-  assign u_MyInterfaceFromTopDown.mysig_out = u_MyInterfaceFromTop.setting ? 10 :  20;
-                                              ^~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:109</a>: Can&#39;t find definition of scope/variable: u_MyInterfaceFromTop
 %Error: Exiting due to 2 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
 
 </pre>
 </body>

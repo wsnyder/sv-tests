@@ -13,14 +13,14 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p777.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p777.sv</a>
-time_elapsed: 0.036s
+time_elapsed: 0.034s
 </pre>
 <pre>
 
 module top1;
-	localparam [31:0] q_FALSE = 1;
-	localparam [31:0] FALSE = 0;
-	localparam [31:0] TRUE = 1;
+	localparam [31:0] q_FALSE = 32&#39;d1;
+	localparam [31:0] FALSE = 32&#39;d0;
+	localparam [31:0] TRUE = 32&#39;d1;
 	reg [31:0] myteeth;
 	initial begin
 		myteeth = q_FALSE;
@@ -28,10 +28,10 @@ module top1;
 	end
 endmodule
 module top2;
-	localparam [31:0] FALSE = 0;
-	localparam [31:0] TRUE = 1;
-	localparam [31:0] ORIGINAL = 0;
-	localparam [31:0] FALSE = 1;
+	localparam [31:0] FALSE = 32&#39;d0;
+	localparam [31:0] TRUE = 32&#39;d1;
+	localparam [31:0] ORIGINAL = 32&#39;d0;
+	localparam [31:0] FALSE = 32&#39;d1;
 	reg [31:0] myteeth;
 	initial myteeth = FALSE;
 endmodule

@@ -6,24 +6,24 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv</a>
-time_elapsed: 0.092s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv:3</a>: Operator AND expects 32 bits on the LHS, but LHS&#39;s VARREF &#39;w&#39; generates 10 bits.
-count_ones += w &amp; 1&#39;b1;
-                ^
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv:3</a>: Operator AND expects 32 bits on the RHS, but RHS&#39;s CONST &#39;1&#39;h1&#39; generates 1 bits.
-count_ones += w &amp; 1&#39;b1;
-                ^
+%Error: Duplicate declaration of cell: $unit
+%Error: ... Location of original declaration
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv</a>
 
 </pre>
 </body>

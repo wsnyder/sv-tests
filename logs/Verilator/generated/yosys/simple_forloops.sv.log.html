@@ -6,74 +6,22 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v</a>
-time_elapsed: 0.096s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:15</a>: Multiple top level modules
-                                                                                                           : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                           : ... Top module &#39;forloops01&#39;
-module forloops01 (input clk, a, b, output reg [3:0] p, q, x, y);
-       ^~~~~~~~~~
-                                                                                                           : ... Top module &#39;forloops02&#39;
-module forloops02 (input clk, a, b, output reg [3:0] q, x, output [3:0] y);
-       ^~~~~~~~~~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:19</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s SHIFTR generates 4 bits.
-                                                                                                        : ... In instance forloops02
-   q[k] = {~a, ~b, a, b} &gt;&gt; k[1:0];
-        ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:22</a>: Operator ADD expects 32 bits on the RHS, but RHS&#39;s REPLICATE generates 2 bits.
-                                                                                                        : ... In instance forloops02
-  x = k + {a, b};
-        ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:22</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s ADD generates 32 bits.
-                                                                                                        : ... In instance forloops02
-  x = k + {a, b};
-    ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:24</a>: Operator SUB expects 32 bits on the RHS, but RHS&#39;s REPLICATE generates 2 bits.
-                                                                                                        : ... In instance forloops02
- assign y = k - {a, b};
-              ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:24</a>: Operator ASSIGNW expects 4 bits on the Assign RHS, but Assign RHS&#39;s SUB generates 32 bits.
-                                                                                                        : ... In instance forloops02
- assign y = k - {a, b};
-          ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-5" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:5</a>: Operator XOR expects 64 bits on the LHS, but LHS&#39;s REPLICATE generates 2 bits.
-                                                                                                       : ... In instance forloops01
-   p[2*k +: 2] = {a, b} ^ {2{k}};
-                        ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-5" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:5</a>: Operator ASSIGN expects 2 bits on the Assign RHS, but Assign RHS&#39;s XOR generates 64 bits.
-                                                                                                       : ... In instance forloops01
-   p[2*k +: 2] = {a, b} ^ {2{k}};
-               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-6" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:6</a>: Operator ADD expects 32 bits on the RHS, but RHS&#39;s REPLICATE generates 2 bits.
-                                                                                                       : ... In instance forloops01
-  x &lt;= k + {a, b};
-         ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-6" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:6</a>: Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS&#39;s ADD generates 32 bits.
-                                                                                                       : ... In instance forloops01
-  x &lt;= k + {a, b};
-    ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:10</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s SHIFTR generates 4 bits.
-                                                                                                        : ... In instance forloops01
-   q[k] = {~a, ~b, a, b} &gt;&gt; k[1:0];
-        ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:11</a>: Operator SUB expects 32 bits on the RHS, but RHS&#39;s REPLICATE generates 2 bits.
-                                                                                                        : ... In instance forloops01
-  y = k - {a, b};
-        ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:11</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s SUB generates 32 bits.
-                                                                                                        : ... In instance forloops01
-  y = k - {a, b};
-    ^
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:15</a>: Unsupported: Multiple top level modules: forloops02 and forloops01
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v:15</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 2 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/forloops.v.html" target="file-frame">third_party/tools/yosys/tests/simple/forloops.v</a>
 
 </pre>
 </body>

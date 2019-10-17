@@ -13,37 +13,20 @@ tags: 8.24
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
- class test_cls;
- ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
- class test_cls;
-               ^
-%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-10" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:10</a>: syntax error, unexpected function, expecting interface or module or program
-  extern function void test_method(int val);
-         ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-11" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
- endclass
- ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-13" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:13</a>: syntax error, unexpected ::, expecting &#39;(&#39; or &#39;;&#39;
- function void test_cls::test_method(int val);
-                       ^~
-                                                                                              : ... Perhaps &#39;test_cls&#39; is a package which needs to be predeclared? (IEEE 2017 26.3)
-%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-21" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
-  test_obj = new;
-             ^~~
+%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-10" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
+%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-11" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-13" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:13</a>: syntax error, unexpected function
+%Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-21" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
 %Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-21" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:21</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-  test_obj = new;
-                ^
-%Error: Internal Error: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-7" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:7</a>: ../V3ParseSym.h:115: Symbols suggest ending TASK &#39;test_cls&#39; but parser thinks ending MODULE &#39;class_tb&#39;
-module class_tb ();
-       ^~~~~~~~
-                        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv</a>
+%Error: Exiting due to 7 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv</a>
 
 </pre>
 </body>

@@ -13,19 +13,13 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ctu_level_mon.v.html" target="file-frame">third_party/tests/utd-sv/ctu_level_mon.v</a>
-time_elapsed: 0.098s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tests/utd-sv/ctu_level_mon.v.html#l-52" target="file-frame">third_party/tests/utd-sv/ctu_level_mon.v:52</a>: Operator TASKREF &#39;finish_test&#39; expects 513 bits on the Function Argument, but Function Argument&#39;s CONST &#39;288&#39;h205369676e616c20746f67676c6573207768656e206e6f7420737570706f73656420746f&#39; generates 288 bits.
-                                                                                                 : ... In instance ctu_level_mon
-   finish_test(&#34; Signal toggles when not supposed to&#34;, mon_num);
-   ^~~~~~~~~~~
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../third_party/tests/utd-sv/ctu_level_mon.v.html#l-47" target="file-frame">third_party/tests/utd-sv/ctu_level_mon.v:47</a>: Logical Operator LOGNOT expects 1 bit on the LHS, but LHS&#39;s TESTPLUSARGS &#39;ctu_mon_off&#39; generates 32 bits.
-                                                                                                 : ... In instance ctu_level_mon
-if ( !$test$plusargs(&#34;ctu_mon_off&#34;)) begin
-     ^
 
 </pre>
 </body>

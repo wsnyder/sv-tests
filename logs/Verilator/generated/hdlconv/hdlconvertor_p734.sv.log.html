@@ -13,19 +13,15 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html#l-23" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv:23</a>: syntax error, unexpected &#39;[&#39;
-[size-1:0] out;
-^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv:25</a>: Unsupported: Ignoring delay on this delayed statement.
-#delay out = in;
-^
-                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv</a>
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv</a>
 
 </pre>
 </body>

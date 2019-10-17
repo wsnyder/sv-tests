@@ -6,24 +6,22 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 1
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err13.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err13.v</a>
-time_elapsed: 0.015s
+time_elapsed: 0.009s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err13.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err13.v</a>
-Parsing SystemVerilog input from `<a href="../../../../third_party/tools/yosys/tests/errors/syntax_err13.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err13.v</a>&#39; to AST representation.
-Generating RTLIL representation for module `\a&#39;.
-Successfully finished Verilog frontend.
+1. Executing Verilog-2005 frontend.
+ERROR: Parser error in line <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err13.v.html#l-1" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err13.v:1</a>: syntax error
 
 </pre>
 </body>

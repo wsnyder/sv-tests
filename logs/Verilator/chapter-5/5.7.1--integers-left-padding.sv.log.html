@@ -13,27 +13,15 @@ tags: 5.7.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv</a>
-time_elapsed: 0.092s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html#l-12" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv:12</a>: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39; generates 32 bits.
-                                                                                                        : ... In instance top
-    a = &#39;h x;    
-      ^
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html#l-14" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv:14</a>: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?bzzzzzzzzzzzzzzzzzzzzzzzzzzzz0011&#39; generates 32 bits.
-                                                                                                        : ... In instance top
-    c = &#39;h z3;   
-      ^
-%Warning-WIDTH: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html#l-17" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv:17</a>: Unsized constant being X/Z extended to 85 bits: ?32?bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                                                                                        : ... In instance top
-    f = &#39;hx;     
-        ^~~
-%Warning-WIDTH: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html#l-18" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv:18</a>: Unsized constant being X/Z extended to 85 bits: ?32?bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-                                                                                                        : ... In instance top
-    g = &#39;hz;     
-        ^~~
+%Warning-WIDTH: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html#l-17" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv:17</a>: Operator ASSIGN expects 85 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39; generates 32 bits.
+%Warning-WIDTH: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html#l-18" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv:18</a>: Operator ASSIGN expects 85 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz&#39; generates 32 bits.
 
 </pre>
 </body>

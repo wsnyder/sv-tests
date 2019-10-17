@@ -13,31 +13,20 @@ tags: 8.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member
 top_module: 
 files: <a href="../../../../tests/generic/member/class_member_test_9.sv.html" target="file-frame">tests/generic/member/class_member_test_9.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-7" target="file-frame">tests/generic/member/class_member_test_9.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
-class myclass;
-^~~~~
+%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-7" target="file-frame">tests/generic/member/class_member_test_9.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-7" target="file-frame">tests/generic/member/class_member_test_9.sv:7</a>: syntax error, unexpected IDENTIFIER
-class myclass;
-      ^~~~~~~
-%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_9.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;local&#39;
-extern local static task subtask(arg_type arg);
-       ^~~~~
+%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_9.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
+%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_9.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: local
 %Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_9.sv:8</a>: Unsupported: Static in this context
-extern local static task subtask(arg_type arg);
-             ^~~~~~
 %Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_9.sv:8</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
-extern local static task subtask(arg_type arg);
-                                          ^~~
-%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-9" target="file-frame">tests/generic/member/class_member_test_9.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
-endclass
-^~~~~~~~
-%Error: Exiting due to 6 error(s)
-        ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/member <a href="../../../../tests/generic/member/class_member_test_9.sv.html" target="file-frame">tests/generic/member/class_member_test_9.sv</a>
+%Error: <a href="../../../../tests/generic/member/class_member_test_9.sv.html#l-9" target="file-frame">tests/generic/member/class_member_test_9.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+%Error: Exiting due to 7 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/member <a href="../../../../tests/generic/member/class_member_test_9.sv.html" target="file-frame">tests/generic/member/class_member_test_9.sv</a>
 
 </pre>
 </body>

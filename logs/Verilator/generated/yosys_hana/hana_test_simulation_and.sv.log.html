@@ -6,441 +6,70 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/yosys_hana
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v</a> <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v</a>
-time_elapsed: 0.178s
+time_elapsed: 0.101s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:8</a>: Multiple top level modules
-                                                                                                                   : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                                   : ... Top module &#39;f1_test&#39;
-module f1_test(input [1:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;f2_test&#39;
-module f2_test(input [1:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;f3_test&#39;
-module f3_test(input [2:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;f4_test&#39;
-module f4_test(input [2:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;f5_test&#39;
-module f5_test(input [3:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;f6_test&#39;
-module f6_test(input [3:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;f7_test&#39;
-module f7_test(input [3:0] in, output out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;BUF&#39;
-module BUF (input in, output out);
-       ^~~
-                                                                                                                   : ... Top module &#39;TRIBUF&#39;
-module TRIBUF(input in, enable, output out);
-       ^~~~~~
-                                                                                                                   : ... Top module &#39;INV&#39;
-module INV(input in, output out);
-       ^~~
-                                                                                                                   : ... Top module &#39;AND2&#39;
-module AND2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;AND3&#39;
-module AND3 #(parameter SIZE = 3) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;AND4&#39;
-module AND4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;OR2&#39;
-module OR2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output out);
-       ^~~
-                                                                                                                   : ... Top module &#39;OR3&#39;
-module OR3 #(parameter SIZE = 3) (input [SIZE-1:0] in, output out);
-       ^~~
-                                                                                                                   : ... Top module &#39;OR4&#39;
-module OR4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output out);
-       ^~~
-                                                                                                                   : ... Top module &#39;NAND2&#39;
-module NAND2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;NAND3&#39;
-module NAND3 #(parameter SIZE = 3) (input [SIZE-1:0] in, output out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;NAND4&#39;
-module NAND4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;NOR2&#39;
-module NOR2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;NOR3&#39;
-module NOR3 #(parameter SIZE = 3) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;NOR4&#39;
-module NOR4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;XOR2&#39;
-module XOR2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;XOR3&#39;
-module XOR3 #(parameter SIZE = 3) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;XOR4&#39;
-module XOR4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;XNOR2&#39;
-module XNOR2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;XNOR3&#39;
-module XNOR3 #(parameter SIZE = 3) (input [SIZE-1:0] in, output out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;XNOR4&#39;
-module XNOR4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;DEC1&#39;
-module DEC1 (input in, enable, output reg [1:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;DEC2&#39;
-module DEC2 (input [1:0] in, input enable, output reg [3:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;DEC3&#39;
-module DEC3 (input [2:0] in, input enable, output reg [7:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;DEC4&#39;
-module DEC4 (input [3:0] in, input enable, output reg [15:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;DEC5&#39;
-module DEC5 (input [4:0] in, input enable, output reg [31:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;DEC6&#39;
-module DEC6 (input [5:0] in, input enable, output reg [63:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUX2&#39;
-module MUX2(input [1:0] in, input select, output reg out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUX4&#39;
-module MUX4(input [3:0] in, input [1:0] select, output reg out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUX8&#39;
-module MUX8(input [7:0] in, input [2:0] select, output reg out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUX16&#39;
-module MUX16(input [15:0] in, input [3:0] select, output reg out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;MUX32&#39;
-module MUX32(input [31:0] in, input [4:0] select, output reg out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;MUX64&#39;
-module MUX64(input [63:0] in, input [5:0] select, output reg out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;ADD1&#39;
-module ADD1(input in1, in2, cin, output out, cout);
-       ^~~~
-                                                                                                                   : ... Top module &#39;ADD2&#39;
-module ADD2 #(parameter SIZE = 2)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;ADD4&#39;
-module ADD4 #(parameter SIZE = 4)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;ADD8&#39;
-module ADD8 #(parameter SIZE = 8)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;ADD16&#39;
-module ADD16 #(parameter SIZE = 16)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;ADD32&#39;
-module ADD32 #(parameter SIZE = 32)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;ADD64&#39;
-module ADD64 #(parameter SIZE = 64)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;SUB1&#39;
-module SUB1(input in1, in2, cin, output out, cout);
-       ^~~~
-                                                                                                                   : ... Top module &#39;SUB2&#39;
-module SUB2 #(parameter SIZE = 2)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;SUB4&#39;
-module SUB4 #(parameter SIZE = 4)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;SUB8&#39;
-module SUB8 #(parameter SIZE = 8)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;SUB16&#39;
-module SUB16 #(parameter SIZE = 16)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;SUB32&#39;
-module SUB32 #(parameter SIZE = 32)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;SUB64&#39;
-module SUB64 #(parameter SIZE = 64)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;MUL1&#39;
-module MUL1 #(parameter SIZE = 1)(input in1, in2, output [2*SIZE-1:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUL2&#39;
-module MUL2 #(parameter SIZE = 2)(input [SIZE-1:0] in1, in2, output [2*SIZE-1:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUL4&#39;
-module MUL4 #(parameter SIZE = 4)(input [SIZE-1:0] in1, in2, output [2*SIZE-1:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUL8&#39;
-module MUL8 #(parameter SIZE = 8)(input [SIZE-1:0] in1, in2, output [2*SIZE-1:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;MUL16&#39;
-module MUL16 #(parameter SIZE = 16)(input [SIZE-1:0] in1, in2, output [2*SIZE-1:0] out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;MUL32&#39;
-module MUL32 #(parameter SIZE = 32)(input [SIZE-1:0] in1, in2, output [2*SIZE-1:0] out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;MUL64&#39;
-module MUL64 #(parameter SIZE = 64)(input [SIZE-1:0] in1, in2, output [2*SIZE-1:0] out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;DIV1&#39;
-module DIV1 #(parameter SIZE = 1)(input in1, in2, output out, rem);
-       ^~~~
-                                                                                                                   : ... Top module &#39;DIV2&#39;
-module DIV2 #(parameter SIZE = 2)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;DIV4&#39;
-module DIV4 #(parameter SIZE = 4)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;DIV8&#39;
-module DIV8 #(parameter SIZE = 8)(input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;DIV16&#39;
-module DIV16 #(parameter SIZE = 16)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;DIV32&#39;
-module DIV32 #(parameter SIZE = 32)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;DIV64&#39;
-module DIV64 #(parameter SIZE = 64)(input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;FF&#39;
-module FF (input d, clk, output reg q);
-       ^~
-                                                                                                                   : ... Top module &#39;RFF&#39;
-module RFF(input d, clk, reset, output reg q);
-       ^~~
-                                                                                                                   : ... Top module &#39;SFF&#39;
-module SFF(input d, clk, set, output reg q);
-       ^~~
-                                                                                                                   : ... Top module &#39;RSFF&#39;
-module RSFF(input d, clk, set, reset, output reg q);
-       ^~~~
-                                                                                                                   : ... Top module &#39;SRFF&#39;
-module SRFF(input d, clk, set, reset, output reg q);
-       ^~~~
-                                                                                                                   : ... Top module &#39;LATCH&#39;
-module LATCH(input d, enable, output reg q);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;RLATCH&#39;
-module RLATCH(input d, reset, enable, output reg q);
-       ^~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT1&#39;
-module LSHIFT1 #(parameter SIZE = 1)(input in, shift, val, output reg out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT2&#39;
-module LSHIFT2 #(parameter SIZE = 2)(input [SIZE-1:0] in, 
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT4&#39;
-module LSHIFT4 #(parameter SIZE = 4)(input [SIZE-1:0] in, 
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT8&#39;
-module LSHIFT8 #(parameter SIZE = 8)(input [SIZE-1:0] in, 
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT16&#39;
-module LSHIFT16 #(parameter SIZE = 16)(input [SIZE-1:0] in, 
-       ^~~~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT32&#39;
-module LSHIFT32 #(parameter SIZE = 32)(input [SIZE-1:0] in, 
-       ^~~~~~~~
-                                                                                                                   : ... Top module &#39;LSHIFT64&#39;
-module LSHIFT64 #(parameter SIZE = 64)(input [SIZE-1:0] in, 
-       ^~~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT1&#39;
-module RSHIFT1 #(parameter SIZE = 1)(input in, shift, val, output reg out);
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT2&#39;
-module RSHIFT2 #(parameter SIZE = 2)(input [SIZE-1:0] in, 
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT4&#39;
-module RSHIFT4 #(parameter SIZE = 4)(input [SIZE-1:0] in, 
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT8&#39;
-module RSHIFT8 #(parameter SIZE = 8)(input [SIZE-1:0] in, 
-       ^~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT16&#39;
-module RSHIFT16 #(parameter SIZE = 16)(input [SIZE-1:0] in, 
-       ^~~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT32&#39;
-module RSHIFT32 #(parameter SIZE = 32)(input [SIZE-1:0] in, 
-       ^~~~~~~~
-                                                                                                                   : ... Top module &#39;RSHIFT64&#39;
-module RSHIFT64 #(parameter SIZE = 64)(input [SIZE-1:0] in, 
-       ^~~~~~~~
-                                                                                                                   : ... Top module &#39;CMP1&#39;
-module CMP1 #(parameter SIZE = 1) (input in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;CMP2&#39;
-module CMP2 #(parameter SIZE = 2) (input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;CMP4&#39;
-module CMP4 #(parameter SIZE = 4) (input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;CMP8&#39;
-module CMP8 #(parameter SIZE = 8) (input [SIZE-1:0] in1, in2, 
-       ^~~~
-                                                                                                                   : ... Top module &#39;CMP16&#39;
-module CMP16 #(parameter SIZE = 16) (input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;CMP32&#39;
-module CMP32 #(parameter SIZE = 32) (input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;CMP64&#39;
-module CMP64 #(parameter SIZE = 64) (input [SIZE-1:0] in1, in2, 
-       ^~~~~
-                                                                                                                   : ... Top module &#39;VCC&#39;
-module VCC (output supply1 out);
-       ^~~
-                                                                                                                   : ... Top module &#39;GND&#39;
-module GND (output supply0 out);
-       ^~~
-                                                                                                                   : ... Top module &#39;INC1&#39;
-module INC1 #(parameter SIZE = 1) (input in, output [SIZE:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;INC2&#39;
-module INC2 #(parameter SIZE = 2) (input [SIZE-1:0] in, output [SIZE:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;INC4&#39;
-module INC4 #(parameter SIZE = 4) (input [SIZE-1:0] in, output [SIZE:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;INC8&#39;
-module INC8 #(parameter SIZE = 8) (input [SIZE-1:0] in, output [SIZE:0] out);
-       ^~~~
-                                                                                                                   : ... Top module &#39;INC16&#39;
-module INC16 #(parameter SIZE = 16) (input [SIZE-1:0] in, output [SIZE:0] out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;INC32&#39;
-module INC32 #(parameter SIZE = 32) (input [SIZE-1:0] in, output [SIZE:0] out);
-       ^~~~~
-                                                                                                                   : ... Top module &#39;INC64&#39;
-module INC64 #(parameter SIZE = 64) (input [SIZE-1:0] in, output [SIZE:0] out);
-       ^~~~~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-910" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:910</a>: Operator SHIFTL expects 64 bits on the LHS, but LHS&#39;s REPLICATE generates 63 bits.
-                                                                                                        : ... In instance RSHIFT64
-     out = out | ({SIZE-1 {1&#39;b1} } &lt;&lt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-899" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:899</a>: Operator SHIFTL expects 32 bits on the LHS, but LHS&#39;s REPLICATE generates 31 bits.
-                                                                                                        : ... In instance RSHIFT32
-     out = out | ({SIZE-1 {1&#39;b1} } &lt;&lt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-887" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:887</a>: Operator SHIFTL expects 16 bits on the LHS, but LHS&#39;s REPLICATE generates 15 bits.
-                                                                                                        : ... In instance RSHIFT16
-     out = out | ({SIZE-1 {1&#39;b1} } &lt;&lt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-875" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:875</a>: Operator SHIFTL expects 8 bits on the LHS, but LHS&#39;s REPLICATE generates 7 bits.
-                                                                                                        : ... In instance RSHIFT8
-     out = out | ({SIZE-1 {1&#39;b1} } &lt;&lt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-864" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:864</a>: Operator SHIFTL expects 4 bits on the LHS, but LHS&#39;s REPLICATE generates 3 bits.
-                                                                                                        : ... In instance RSHIFT4
-     out = out | ({SIZE-1 {1&#39;b1} } &lt;&lt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-851" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:851</a>: Operator SHIFTL expects 2 bits on the LHS, but LHS&#39;s REPLICATE generates 1 bits.
-                                                                                                        : ... In instance RSHIFT2
-     out = out | ({SIZE-1 {1&#39;b1} } &lt;&lt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-829" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:829</a>: Operator SHIFTR expects 64 bits on the LHS, but LHS&#39;s REPLICATE generates 63 bits.
-                                                                                                        : ... In instance LSHIFT64
-     out = out | ({SIZE-1 {1&#39;b1} } &gt;&gt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-819" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:819</a>: Operator SHIFTR expects 32 bits on the LHS, but LHS&#39;s REPLICATE generates 31 bits.
-                                                                                                        : ... In instance LSHIFT32
-     out = out | ({SIZE-1 {1&#39;b1} } &gt;&gt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-809" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:809</a>: Operator SHIFTR expects 16 bits on the LHS, but LHS&#39;s REPLICATE generates 15 bits.
-                                                                                                        : ... In instance LSHIFT16
-     out = out | ({SIZE-1 {1&#39;b1} } &gt;&gt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-799" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:799</a>: Operator SHIFTR expects 8 bits on the LHS, but LHS&#39;s REPLICATE generates 7 bits.
-                                                                                                        : ... In instance LSHIFT8
-     out = out | ({SIZE-1 {1&#39;b1} } &gt;&gt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-788" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:788</a>: Operator SHIFTR expects 4 bits on the LHS, but LHS&#39;s REPLICATE generates 3 bits.
-                                                                                                        : ... In instance LSHIFT4
-     out = out | ({SIZE-1 {1&#39;b1} } &gt;&gt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-778" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:778</a>: Operator SHIFTR expects 2 bits on the LHS, but LHS&#39;s REPLICATE generates 1 bits.
-                                                                                                        : ... In instance LSHIFT2
-     out = out | ({SIZE-1 {1&#39;b1} } &gt;&gt; (SIZE-1-shift));
-                                   ^~
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-601" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:601</a>: Operator SUB expects 65 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance SUB64
-assign {cout, out} = in1 - in2 - cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-595" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:595</a>: Operator SUB expects 33 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance SUB32
-assign {cout, out} = in1 - in2 - cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-588" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:588</a>: Operator SUB expects 17 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance SUB16
-assign {cout, out} = in1 - in2 - cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-581" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:581</a>: Operator SUB expects 9 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance SUB8
-assign {cout, out} = in1 - in2 - cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-574" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:574</a>: Operator SUB expects 5 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance SUB4
-assign {cout, out} = in1 - in2 - cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-567" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:567</a>: Operator SUB expects 3 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance SUB2
-assign {cout, out} = in1 - in2 - cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-554" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:554</a>: Operator ADD expects 65 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance ADD64
-assign {cout, out} = in1 + in2 + cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-548" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:548</a>: Operator ADD expects 33 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance ADD32
-assign {cout, out} = in1 + in2 + cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-541" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:541</a>: Operator ADD expects 17 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance ADD16
-assign {cout, out} = in1 + in2 + cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-534" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:534</a>: Operator ADD expects 9 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance ADD8
-assign {cout, out} = in1 + in2 + cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-527" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:527</a>: Operator ADD expects 5 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance ADD4
-assign {cout, out} = in1 + in2 + cin;
-                               ^
-%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-520" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:520</a>: Operator ADD expects 3 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
-                                                                                                        : ... In instance ADD2
-assign {cout, out} = in1 + in2 + cin;
-                               ^
-%Warning-COMBDLY: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-747" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:747</a>: Delayed assignments (&lt;=) in non-clocked (non flop or latch) block
-                                                                                                          : ... Suggest blocking assignments (=)
-     q &lt;= d;
-       ^~
-                  *** See the manual before disabling this,
-                  else you may end up with different sim results.
-%Warning-COMBDLY: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-754" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:754</a>: Delayed assignments (&lt;=) in non-clocked (non flop or latch) block
-                                                                                                          : ... Suggest blocking assignments (=)
-      q &lt;= 0;
-        ^~
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:8</a>: Unsupported: Multiple top level modules: f2_test and f1_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:8</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:13</a>: Unsupported: Multiple top level modules: f3_test and f2_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:13</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:18</a>: Unsupported: Multiple top level modules: f4_test and f3_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:18</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-23" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:23</a>: Unsupported: Multiple top level modules: f5_test and f4_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-23" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:23</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-28" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:28</a>: Unsupported: Multiple top level modules: f6_test and f5_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-28" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:28</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:33</a>: Unsupported: Multiple top level modules: f7_test and f6_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:33</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:19</a>: Unsupported: Multiple top level modules: BUF and f7_test
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:19</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-25" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:25</a>: Unsupported: Multiple top level modules: TRIBUF and BUF
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-25" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:25</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:31</a>: Unsupported: Multiple top level modules: INV and TRIBUF
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:31</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-37" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:37</a>: Unsupported: Multiple top level modules: AND2 and INV
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-37" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:37</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:43</a>: Unsupported: Multiple top level modules: AND3 and AND2
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:43</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-49" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:49</a>: Unsupported: Multiple top level modules: AND4 and AND3
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-49" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:49</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-55" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:55</a>: Unsupported: Multiple top level modules: OR2 and AND4
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-55" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:55</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-61" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:61</a>: Unsupported: Multiple top level modules: OR3 and OR2
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-61" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:61</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-67" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:67</a>: Unsupported: Multiple top level modules: OR4 and OR3
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-67" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:67</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-74" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:74</a>: Unsupported: Multiple top level modules: NAND2 and OR4
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-74" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:74</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-80" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:80</a>: Unsupported: Multiple top level modules: NAND3 and NAND2
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-80" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:80</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-86" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:86</a>: Unsupported: Multiple top level modules: NAND4 and NAND3
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-86" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:86</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-92" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:92</a>: Unsupported: Multiple top level modules: NOR2 and NAND4
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-92" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:92</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-98" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:98</a>: Unsupported: Multiple top level modules: NOR3 and NOR2
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-98" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:98</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-104" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:104</a>: Unsupported: Multiple top level modules: NOR4 and NOR3
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-104" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:104</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-111" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:111</a>: Unsupported: Multiple top level modules: XOR2 and NOR4
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-111" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:111</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-117" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:117</a>: Unsupported: Multiple top level modules: XOR3 and XOR2
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-117" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:117</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-123" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:123</a>: Unsupported: Multiple top level modules: XOR4 and XOR3
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-123" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:123</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-130" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:130</a>: Unsupported: Multiple top level modules: XNOR2 and XOR4
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html#l-130" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v:130</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to too many errors encountered; --error-limit=50
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/yosys_hana <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v</a> <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v</a>
 
 </pre>
 </body>

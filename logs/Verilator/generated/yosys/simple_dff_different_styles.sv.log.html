@@ -6,44 +6,34 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v</a>
-time_elapsed: 0.098s
+time_elapsed: 0.085s
 </pre>
 <pre>
 
-%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:9</a>: Multiple top level modules
-                                                                                                                      : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
-                                                                                                                      : ... Top module &#39;dff&#39;
-module dff(clk, d, q);
-       ^~~
-                                                                                                                      : ... Top module &#39;dffa&#39;
-module dffa(clk, arst, d, q);
-       ^~~~
-                                                                                                                      : ... Top module &#39;dffa1&#39;
-module dffa1(clk, arst, d, q);
-       ^~~~~
-                                                                                                                      : ... Top module &#39;dffa2&#39;
-module dffa2(clk, arst, d, q);
-       ^~~~~
-                                                                                                                      : ... Top module &#39;dffa3&#39;
-module dffa3(clk, arst, d, q);
-       ^~~~~
-                                                                                                                      : ... Top module &#39;dffa4&#39;
-module dffa4(clk, arst1, arst2, arst3, d, q);
-       ^~~~~
-                                                                                                                      : ... Top module &#39;dffsr1&#39;
-module dffsr1(clk, arst, d, q);
-       ^~~~~~
-                                                                                                                      : ... Top module &#39;dffsr2&#39;
-module dffsr2(clk, preset, clear, d, q);
-       ^~~~~~
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:9</a>: Unsupported: Multiple top level modules: dffa and dff
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:9</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-20" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:20</a>: Unsupported: Multiple top level modules: dffa1 and dffa
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-20" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:20</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:31</a>: Unsupported: Multiple top level modules: dffa2 and dffa1
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:31</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:42</a>: Unsupported: Multiple top level modules: dffa3 and dffa2
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:42</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-53" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:53</a>: Unsupported: Multiple top level modules: dffa4 and dffa3
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-53" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:53</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-72" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:72</a>: Unsupported: Multiple top level modules: dffsr1 and dffa4
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-72" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:72</a>: Fix, or use --top-module option to select which you want.
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-83" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:83</a>: Unsupported: Multiple top level modules: dffsr2 and dffsr1
+%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html#l-83" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v:83</a>: Fix, or use --top-module option to select which you want.
+%Error: Exiting due to 14 error(s)
+%Error: See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/dff_different_styles.v.html" target="file-frame">third_party/tools/yosys/tests/simple/dff_different_styles.v</a>
 
 </pre>
 </body>

@@ -6,21 +6,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test
 should_fail: 0
 tags: 5.6.4 5.7.1 5.7.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number
 top_module: 
 files: <a href="../../../../tests/generic/number/number_test_13.sv.html" target="file-frame">tests/generic/number/number_test_13.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../tests/generic/number/number_test_13.sv.html#l-7" target="file-frame">tests/generic/number/number_test_13.sv:7</a>: Operator VAR &#39;foo&#39; expects 32 bits on the Initial value, but Initial value&#39;s CONST &#39;4&#39;bxxxx&#39; generates 4 bits.
-parameter int foo = 4&#39;bxxxx;
-              ^~~
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Error: Duplicate declaration of cell: $unit
+%Error: ... Location of original declaration
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/number <a href="../../../../tests/generic/number/number_test_13.sv.html" target="file-frame">tests/generic/number/number_test_13.sv</a>
 
 </pre>
 </body>
