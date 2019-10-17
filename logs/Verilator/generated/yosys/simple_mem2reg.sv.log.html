@@ -6,30 +6,50 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v</a>
-time_elapsed: 0.089s
+time_elapsed: 0.102s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:22</a>: Unsupported: Multiple top level modules: mem2reg_test2 and mem2reg_test1
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:22</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-53" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:53</a>: Unsupported: Multiple top level modules: mem2reg_test3 and mem2reg_test2
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-53" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:53</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-64" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:64</a>: Unsupported: Multiple top level modules: mem2reg_test4 and mem2reg_test3
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-64" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:64</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-86" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:86</a>: Unsupported: Multiple top level modules: mem2reg_test5 and mem2reg_test4
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-86" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:86</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:97</a>: Unsupported: Multiple top level modules: mem2reg_test6 and mem2reg_test5
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:97</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 10 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:22</a>: Multiple top level modules
+                                                                                                          : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                          : ... Top module &#39;mem2reg_test1&#39;
+module mem2reg_test1(in_addr, in_data, out_addr, out_data);
+       ^~~~~~~~~~~~~
+                                                                                                          : ... Top module &#39;mem2reg_test2&#39;
+module mem2reg_test2(clk, reset, mode, addr, data);
+       ^~~~~~~~~~~~~
+                                                                                                          : ... Top module &#39;mem2reg_test3&#39;
+module mem2reg_test3( input clk, input [8:0] din_a, output reg [7:0] dout_a, output [7:0] dout_b);
+       ^~~~~~~~~~~~~
+                                                                                                          : ... Top module &#39;mem2reg_test4&#39;
+module mem2reg_test4(result1, result2, result3);
+       ^~~~~~~~~~~~~
+                                                                                                          : ... Top module &#39;mem2reg_test5&#39;
+module mem2reg_test5(input ctrl, output out);
+       ^~~~~~~~~~~~~
+                                                                                                          : ... Top module &#39;mem2reg_test6&#39;
+module mem2reg_test6 (din, dout);
+       ^~~~~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-38" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:38</a>: Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;i&#39; generates 32 bits.
+                                                                                                       : ... In instance mem2reg_test2
+   mem[i] &lt;= i;
+          ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:12</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?sh17&#39; generates 32 or 5 bits.
+                                                                                                       : ... In instance mem2reg_test1
+ array[1] = 23;
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:13</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?sh2a&#39; generates 32 or 6 bits.
+                                                                                                       : ... In instance mem2reg_test1
+ array[2] = 42;
+          ^
 
 </pre>
 </body>

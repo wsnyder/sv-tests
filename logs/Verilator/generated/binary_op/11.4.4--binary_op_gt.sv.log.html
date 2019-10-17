@@ -13,12 +13,15 @@ tags: 11.4.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op
 top_module: 
 files: <a href="../../../../tests/generated/binary_op/11.4.4--binary_op_gt.sv.html" target="file-frame">tests/generated/binary_op/11.4.4--binary_op_gt.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../tests/generated/binary_op/11.4.4--binary_op_gt.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.4--binary_op_gt.sv:12</a>: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS&#39;s GTS generates 1 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                          : ... In instance top
+    c = a &gt; b;
+      ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

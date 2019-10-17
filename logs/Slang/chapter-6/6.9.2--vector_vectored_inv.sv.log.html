@@ -13,11 +13,19 @@ tags: 6.9.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>
-time_elapsed: 0.005s
+time_elapsed: 0.006s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv:8</a>:7: error: expected declarator
+	logic vectored [15:0] a = 0;
+	     ^
+../..<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv:8</a>:8: error: expected member
+	logic vectored [15:0] a = 0;
+	      ^~~~~~~~
+../..<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html#l-10" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv:10</a>:9: error: use of undeclared identifier &#39;a&#39;
+	assign a[1] = 1;
+	       ^
 
 </pre>
 </body>

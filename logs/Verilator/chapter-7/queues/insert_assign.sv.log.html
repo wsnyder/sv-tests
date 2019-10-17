@@ -13,14 +13,19 @@ tags: 7.10.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
 files: <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html" target="file-frame">tests/chapter-7/queues/insert_assign.sv</a>
-time_elapsed: 0.094s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Error: <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html#l-9" target="file-frame">tests/chapter-7/queues/insert_assign.sv:9</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html#l-13" target="file-frame">tests/chapter-7/queues/insert_assign.sv:13</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html#l-9" target="file-frame">tests/chapter-7/queues/insert_assign.sv:9</a>: Unsupported: $ expression
+int q[$];
+      ^
+%Error: <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html#l-13" target="file-frame">tests/chapter-7/queues/insert_assign.sv:13</a>: Unsupported: $ expression
+ q = { q[0:1], 10, q[2:$] };  
+                       ^
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html" target="file-frame">tests/chapter-7/queues/insert_assign.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues <a href="../../../../tests/chapter-7/queues/insert_assign.sv.html" target="file-frame">tests/chapter-7/queues/insert_assign.sv</a>
 
 </pre>
 </body>

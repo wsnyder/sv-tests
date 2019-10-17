@@ -13,15 +13,19 @@ tags: 7.5.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+    arr = new [ 4 ];
+          ^~~
 %Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:12</a>: syntax error, unexpected &#39;[&#39;, expecting TYPE-IDENTIFIER
-%Error: Exiting due to 3 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>
+    arr = new [ 4 ];
+              ^
+%Error: Exiting due to 2 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>
 
 </pre>
 </body>

@@ -13,15 +13,27 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/hierarchy.v.html" target="file-frame">third_party/tools/yosys/tests/simple/hierarchy.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.092s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/hierarchy.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/simple/hierarchy.v:19</a>: Operator VAR &#39;d&#39; expects 8 bits on the Initial value, but Initial value&#39;s CONST &#39;3&#39;h7&#39; generates 3 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                         : ... In instance top.foo
+parameter [7:0] d = 0;
+                ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/hierarchy.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/hierarchy.v:22</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;a&#39; generates 4 bits.
+                                                                                                         : ... In instance top.foo
+assign y1 = a;
+          ^
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/hierarchy.v.html#l-23" target="file-frame">third_party/tools/yosys/tests/simple/hierarchy.v:23</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;b&#39; generates 4 bits.
+                                                                                                         : ... In instance top.foo
+assign y2 = b;
+          ^
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/hierarchy.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/hierarchy.v:24</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;c&#39; generates 3 bits.
+                                                                                                         : ... In instance top.foo
+assign y3 = c;
+          ^
 
 </pre>
 </body>

@@ -17,13 +17,21 @@ time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-8" target="file-frame">tests/chapter-8/8.18--var_protected.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-8" target="file-frame">tests/chapter-8/8.18--var_protected.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class a_cls;
+ ^~~~~
 %Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-8" target="file-frame">tests/chapter-8/8.18--var_protected.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
-%Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-9" target="file-frame">tests/chapter-8/8.18--var_protected.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: protected
-%Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-10" target="file-frame">tests/chapter-8/8.18--var_protected.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+ class a_cls;
+            ^
+%Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-9" target="file-frame">tests/chapter-8/8.18--var_protected.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;protected&#39;
+  protected int a_prot = 2;
+  ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.18--var_protected.sv.html#l-10" target="file-frame">tests/chapter-8/8.18--var_protected.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
 %Error: Exiting due to 4 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.18--var_protected.sv.html" target="file-frame">tests/chapter-8/8.18--var_protected.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.18--var_protected.sv.html" target="file-frame">tests/chapter-8/8.18--var_protected.sv</a>
 
 </pre>
 </body>

@@ -6,34 +6,72 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v</a>
-time_elapsed: 0.088s
+time_elapsed: 0.105s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:11</a>: Unsupported: Multiple top level modules: test02 and test01
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:11</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-17" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:17</a>: Unsupported: Multiple top level modules: test03 and test02
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-17" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:17</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:24</a>: Unsupported: Multiple top level modules: test04 and test03
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:24</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-46" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:46</a>: Unsupported: Multiple top level modules: test07 and test04
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-46" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:46</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-53" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:53</a>: Unsupported: Multiple top level modules: test08 and test07
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-53" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:53</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-60" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:60</a>: Unsupported: Multiple top level modules: test09 and test08
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-60" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:60</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-68" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:68</a>: Unsupported: Multiple top level modules: test10 and test09
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-68" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:68</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 14 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:11</a>: Multiple top level modules
+                                                                                                             : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                             : ... Top module &#39;test01&#39;
+module test01(a, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test02&#39;
+module test02(a, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test03&#39;
+module test03(a, b, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test04&#39;
+module test04(a, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test07&#39;
+module test07(a, b, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test08&#39;
+module test08(a, b, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test09&#39;
+module test09(a, b, c, y);
+       ^~~~~~
+                                                                                                             : ... Top module &#39;test10&#39;
+module test10(a, b, c, y);
+       ^~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-73" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:73</a>: Operator COND expects 3 bits on the Conditional True, but Conditional True&#39;s VARREF &#39;b&#39; generates 2 bits.
+                                                                                                          : ... In instance test10
+  assign y = ^(a ? b : c);
+                 ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-65" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:65</a>: Operator COND expects 4 bits on the Conditional True, but Conditional True&#39;s VARREF &#39;b&#39; generates 2 bits.
+                                                                                                          : ... In instance test09
+  assign y = a ? b : c;
+               ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-65" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:65</a>: Operator COND expects 4 bits on the Conditional False, but Conditional False&#39;s VARREF &#39;c&#39; generates 3 bits.
+                                                                                                          : ... In instance test09
+  assign y = a ? b : c;
+               ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-50" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:50</a>: Operator NEQ expects 3 bits on the LHS, but LHS&#39;s CONST &#39;2&#39;h3&#39; generates 2 bits.
+                                                                                                          : ... In instance test07
+  assign y = 2&#39;b11 != a+b;
+                   ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:21</a>: Operator EQ expects 3 bits on the RHS, but RHS&#39;s VARREF &#39;b&#39; generates 2 bits.
+                                                                                                          : ... In instance test03
+  assign y = ~(a &gt;&gt;&gt; 1) == b;
+                        ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:14</a>: Operator NOT expects 5 bits on the LHS, but LHS&#39;s VARREF &#39;a&#39; generates 4 bits.
+                                                                                                          : ... In instance test02
+  assign y = (~a) &gt;&gt; 1;
+              ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:8</a>: Operator ASSIGNW expects 4 bits on the Assign RHS, but Assign RHS&#39;s SHIFTR generates 8 bits.
+                                                                                                         : ... In instance test01
+  assign y = ~a &gt;&gt; 4;
+           ^
 
 </pre>
 </body>

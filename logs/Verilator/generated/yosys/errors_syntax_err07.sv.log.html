@@ -13,13 +13,15 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err07.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err07.v</a>
-time_elapsed: 0.088s
+time_elapsed: 0.092s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err07.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err07.v:4</a>: syntax error, unexpected INTEGER NUMBER, expecting &#39;,&#39; or &#39;;&#39;
+assign y = (4)55;
+              ^~
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err07.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err07.v</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err07.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err07.v</a>
 
 </pre>
 </body>

@@ -13,11 +13,22 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.012s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html#l-5" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v:5</a>:10: error: identifier &#39;n&#39; used before its declaration
+input [1:n] bus0, bus1, bus2, bus3;
+         ^
+../..<a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v:2</a>:11: note: declared here
+parameter n = 16;
+          ^
+../..<a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html#l-11" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v:11</a>:8: error: identifier &#39;n&#39; used before its declaration
+tri [1:n] busout = enable ? data : Zee;
+       ^
+../..<a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign2.v.html#l-2" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign2.v:2</a>:11: note: declared here
+parameter n = 16;
+          ^
 
 </pre>
 </body>

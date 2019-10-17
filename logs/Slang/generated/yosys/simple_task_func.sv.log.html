@@ -17,7 +17,120 @@ time_elapsed: 0.006s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:9</a>:1: error: language feature not yet supported
+input [3:0] s1, s2, s3;
+^~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:10</a>:13: error: use of undeclared identifier &#39;s1&#39;
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+            ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:10</a>:19: error: use of undeclared identifier &#39;s2&#39;
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+                  ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:10</a>:31: error: use of undeclared identifier &#39;s3&#39;
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+                              ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:18</a>:1: error: language feature not yet supported
+output [7:0] out;
+^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:19</a>:1: error: language feature not yet supported
+input [7:0] in;
+^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-20" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:20</a>:1: error: use of undeclared identifier &#39;out&#39;
+out = out + in;
+^~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-20" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:20</a>:7: error: use of undeclared identifier &#39;out&#39;
+out = out + in;
+      ^~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-20" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:20</a>:13: error: use of undeclared identifier &#39;in&#39;
+out = out + in;
+            ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:24</a>:6: error: too many arguments to subroutine call; expected 0 but 3 were provided
+	x = sum_shift(a, b, c);
+	    ^~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-25" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:25</a>:6: error: too many arguments to subroutine call; expected 0 but 3 were provided
+	y = sum_shift(a[7:4], b[5:2], c[3:0]);
+	    ^~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-26" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:26</a>:6: error: too many arguments to subroutine call; expected 0 but 3 were provided
+	z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+	    ^~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-26" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:26</a>:40: error: too many arguments to subroutine call; expected 0 but 3 were provided
+	z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+	                                      ^~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:29</a>:2: error: too many arguments to subroutine call; expected 0 but 2 were provided
+	add_to(w, x);
+	^~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:30</a>:2: error: too many arguments to subroutine call; expected 0 but 2 were provided
+	add_to(w, y);
+	^~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:31</a>:2: error: too many arguments to subroutine call; expected 0 but 2 were provided
+	add_to(w, z);
+	^~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-72" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:72</a>:18: error: too many arguments to subroutine call; expected 0 but 2 were provided
+	assign dout_a = test(din_a,din_b);
+	                ^~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-74" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:74</a>:3: error: language feature not yet supported
+		input [7:0] a;
+		^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-75" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:75</a>:3: error: language feature not yet supported
+		input [7:0] b;
+		^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-79" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:79</a>:15: error: use of undeclared identifier &#39;a&#39;
+				test[i] = a[i] &amp; b[i];
+				          ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-79" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:79</a>:22: error: use of undeclared identifier &#39;b&#39;
+				test[i] = a[i] &amp; b[i];
+				                 ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-90" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:90</a>:3: error: language feature not yet supported
+		input [7:0] i;
+		^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-93" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:93</a>:12: error: use of undeclared identifier &#39;i&#39;
+			test1 = i + p;
+			        ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:97</a>:3: error: language feature not yet supported
+		input [7:0] i;
+		^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-100" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:100</a>:12: error: use of undeclared identifier &#39;i&#39;
+			test2 = i + p2;
+			        ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-104" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:104</a>:3: error: language feature not yet supported
+		input [7:0] i;
+		^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-106" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:106</a>:12: error: use of undeclared identifier &#39;i&#39;
+			test3 = i + p;
+			        ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-110" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:110</a>:3: error: language feature not yet supported
+		input [7:0] i;
+		^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-115" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:115</a>:12: error: use of undeclared identifier &#39;i&#39;
+			test4 = i + p4;
+			        ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-118" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:118</a>:16: error: too many arguments to subroutine call; expected 0 but 1 were provided
+	assign out1 = test1(in);
+	              ^~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-119" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:119</a>:16: error: too many arguments to subroutine call; expected 0 but 1 were provided
+	assign out2 = test2(in);
+	              ^~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-120" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:120</a>:16: error: too many arguments to subroutine call; expected 0 but 1 were provided
+	assign out3 = test3(in);
+	              ^~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-121" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:121</a>:16: error: too many arguments to subroutine call; expected 0 but 1 were provided
+	assign out4 = test4(in);
+	              ^~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-133" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:133</a>:3: error: language feature not yet supported
+		output out;
+		^~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-134" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:134</a>:3: error: language feature not yet supported
+		input in;
+		^~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-135" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:135</a>:3: error: use of undeclared identifier &#39;out&#39;
+		out = in;
+		^~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-135" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:135</a>:9: error: use of undeclared identifier &#39;in&#39;
+		out = in;
+		      ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-139" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:139</a>:3: error: too many arguments to subroutine call; expected 0 but 2 were provided
+		myTask(data_out,data_in);
+		^~~~~~
 
 </pre>
 </body>

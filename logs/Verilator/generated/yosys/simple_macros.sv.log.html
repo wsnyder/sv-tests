@@ -6,24 +6,125 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html" target="file-frame">third_party/tools/yosys/tests/simple/macros.v</a>
-time_elapsed: 0.087s
+time_elapsed: 0.103s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:18</a>: Unsupported: Multiple top level modules: test_ifdef and test_def
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:18</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-240" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:240</a>: Unsupported: Multiple top level modules: test_comment_in_macro and test_ifdef
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-240" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:240</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 4 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html" target="file-frame">third_party/tools/yosys/tests/simple/macros.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:18</a>: Multiple top level modules
+                                                                                                         : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                         : ... Top module &#39;test_def&#39;
+module test_def(a, y);
+       ^~~~~~~~
+                                                                                                         : ... Top module &#39;test_ifdef&#39;
+module test_ifdef(a, y);
+       ^~~~~~~~~~
+                                                                                                         : ... Top module &#39;test_comment_in_macro&#39;
+module test_comment_in_macro ( din_a, dout_a );
+       ^~~~~~~~~~~~~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-37" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:37</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-44" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:44</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[1];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-51" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:51</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-60" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:60</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-70" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:70</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-79" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:79</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-92" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:92</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-99" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:99</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                      : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[1];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-108" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:108</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-112" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:112</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-119" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:119</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-127" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:127</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-140" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:140</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-147" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:147</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[1];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-154" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:154</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-163" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:163</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-173" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:173</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-182" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:182</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-195" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:195</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-202" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:202</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[1];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-211" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:211</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-215" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:215</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-222" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:222</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[0];
+                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/macros.v.html#l-230" target="file-frame">third_party/tools/yosys/tests/simple/macros.v:230</a>: Operator OR expects 32 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance test_ifdef
+   y = (y &lt;&lt; 1) | a[2];
+                ^
 
 </pre>
 </body>

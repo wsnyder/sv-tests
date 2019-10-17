@@ -13,11 +13,52 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>:4: error: unknown module &#39;dp_mux2es&#39;
+   dp_mux2es #(64) mux_shiftout(.dout(shft_alu_shift_out_e[63:0]), .in0(lshift1[63:0]),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-85" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:85</a>:4: error: unknown module &#39;dp_mux2es&#39;
+   dp_mux2es #(32) mux_rshift_extend(.dout(rshifterinput[63:32]),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-94" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:94</a>:4: error: unknown module &#39;mux4ds&#39;
+   mux4ds #(64) mux_right16(.dout(rshift16[63:0]),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-103" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:103</a>:4: error: unknown module &#39;mux4ds&#39;
+   mux4ds #(64) mux_right4(.dout(rshift4[63:0]),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-112" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:112</a>:4: error: unknown module &#39;mux4ds&#39;
+   mux4ds #(64) mux_right1(.dout(rshift1[63:0]),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-123" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:123</a>:4: error: unknown module &#39;dp_buffer&#39;
+   dp_buffer #(64) buf_rshiftin(.dout(rshifterinput_b1[63:0]), .in(rshifterinput[63:0]));
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-124" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:124</a>:4: error: unknown module &#39;dp_buffer&#39;
+   dp_buffer #(64) buf_rshift16(.dout(rshift16_b1[63:0]), .in(rshift16[63:0]));
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-125" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:125</a>:4: error: unknown module &#39;dp_buffer&#39;
+   dp_buffer #(64) buf_rshift4(.dout(rshift4_b1[63:0]), .in(rshift4[63:0]));
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-128" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:128</a>:4: error: unknown module &#39;mux4ds&#39;
+   mux4ds #(64) mux_left16(.dout(lshift16[63:0]),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-137" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:137</a>:4: error: unknown module &#39;mux4ds&#39;
+   mux4ds #(64) mux_left4(.dout(lshift4[63:0]),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-146" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:146</a>:4: error: unknown module &#39;mux4ds&#39;
+   mux4ds #(64) mux_left1(.dout(lshift1[63:0]),
+   ^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-157" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:157</a>:4: error: unknown module &#39;dp_buffer&#39;
+   dp_buffer #(64) buf_lshiftin(.dout(shifter_input_b1[63:0]), .in(shifter_input[63:0]));
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-158" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:158</a>:4: error: unknown module &#39;dp_buffer&#39;
+   dp_buffer #(64) buf_lshift16(.dout(lshift16_b1[63:0]), .in(lshift16[63:0]));
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-159" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:159</a>:4: error: unknown module &#39;dp_buffer&#39;
+   dp_buffer #(64) buf_lshift4(.dout(lshift4_b1[63:0]), .in(lshift4[63:0]));
+   ^~~~~~~~~
 
 </pre>
 </body>

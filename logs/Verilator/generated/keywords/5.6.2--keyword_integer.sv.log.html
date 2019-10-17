@@ -13,13 +13,15 @@ tags: 5.6.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords
 top_module: 
 files: <a href="../../../../tests/generated/keywords/5.6.2--keyword_integer.sv.html" target="file-frame">tests/generated/keywords/5.6.2--keyword_integer.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
 %Error: <a href="../../../../tests/generated/keywords/5.6.2--keyword_integer.sv.html#l-8" target="file-frame">tests/generated/keywords/5.6.2--keyword_integer.sv:8</a>: syntax error, unexpected integer, expecting IDENTIFIER or do or final
+    bit integer;
+        ^~~~~~~
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords <a href="../../../../tests/generated/keywords/5.6.2--keyword_integer.sv.html" target="file-frame">tests/generated/keywords/5.6.2--keyword_integer.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords <a href="../../../../tests/generated/keywords/5.6.2--keyword_integer.sv.html" target="file-frame">tests/generated/keywords/5.6.2--keyword_integer.sv</a>
 
 </pre>
 </body>

@@ -13,11 +13,22 @@ tags: 8.25
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv</a>
-time_elapsed: 0.005s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html#l-8" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv:8</a>:2: error: language feature not yet supported
+	class base_cls #(int b = 20);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html#l-12" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv:12</a>:2: error: language feature not yet supported
+	class ext_cls #(int e = 25) extends base_cls(5);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html#l-16" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv:16</a>:2: error: language feature not yet supported
+	ext_cls #(15) inst;
+	^~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.25--parametrized_class_extend.sv.html#l-19" target="file-frame">tests/chapter-8/8.25--parametrized_class_extend.sv:19</a>:10: error: language feature not yet supported
+		inst = new;
+		       ^~~
 
 </pre>
 </body>

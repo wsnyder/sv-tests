@@ -13,13 +13,19 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/scopes.v.html" target="file-frame">third_party/tools/yosys/tests/simple/scopes.v</a>
-time_elapsed: 0.093s
+time_elapsed: 0.100s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/scopes.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/simple/scopes.v:42</a>: Operator ADD expects 32 or 16 bits on the RHS, but RHS&#39;s VARREF &#39;a&#39; generates 4 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                      : ... In instance scopes_test_01
+    x = 77 + a;
+           ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/scopes.v.html#l-57" target="file-frame">third_party/tools/yosys/tests/simple/scopes.v:57</a>: Operator ADD expects 16 bits on the RHS, but RHS&#39;s VARREF &#39;k&#39; generates 4 bits.
+                                                                                                      : ... In instance scopes_test_01
+   y = y + k;
+         ^
 
 </pre>
 </body>

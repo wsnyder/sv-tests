@@ -6,24 +6,21 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Test
 should_fail: 0
 tags: 6.18
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef
 top_module: 
 files: <a href="../../../../tests/generic/typedef/typedef_test_24.sv.html" target="file-frame">tests/generic/typedef/typedef_test_24.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
 %Warning-UNPACKED: <a href="../../../../tests/generic/typedef/typedef_test_24.sv.html#l-7" target="file-frame">tests/generic/typedef/typedef_test_24.sv:7</a>: Unsupported: Unpacked struct/union
-%Warning-UNPACKED: Use &#34;/* verilator lint_off UNPACKED */&#34; and lint_on around source to disable this message.
-%Error: Duplicate declaration of cell: $unit
-%Error: ... Location of original declaration
-%Error: Exiting due to 1 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_24.sv.html" target="file-frame">tests/generic/typedef/typedef_test_24.sv</a>
+typedef struct {
+        ^~~~~~
+                   ... Use &#34;/* verilator lint_off UNPACKED */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

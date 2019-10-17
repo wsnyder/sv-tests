@@ -13,11 +13,19 @@ tags: 7.12.1 7.12 7.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-index.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-index.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-index.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-index.sv:9</a>:9: error: dimension requires a constant range
+string s[] = { &#34;hello&#34;, &#34;sad&#34;, &#34;world&#34; };
+        ^~
+../..<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-index.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-index.sv:10</a>:7: error: dimension requires a constant range
+int qi[$];
+      ^~~
+../..<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-index.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-index.sv:13</a>:7: error: language feature not yet supported
+	qi = s.find_index with ( item == &#34;world&#34; );
+	     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

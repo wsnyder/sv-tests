@@ -17,13 +17,27 @@ time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2</a>: syntax error, unexpected module
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>: Unsupported: extern module
+extern module m (a,b,c,d);
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2</a>: Unsupported: extern module
+extern module a #(parameter size = 8, parameter type TP = logic [7:0])
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:4</a>: syntax error, unexpected .*, expecting &#39;[&#39;
+module m (.*);
+          ^~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:8</a>: syntax error, unexpected .*, expecting &#39;[&#39;
-%Error: Exiting due to 4 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv</a>
+module a (.*);
+          ^~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:16</a>: syntax error, unexpected TYPE-IDENTIFIER, expecting IDENTIFIER
+module a #(parameter size = 8, parameter type TP = logic [7:0])
+                                              ^~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:16</a>: syntax error, unexpected &#39;)&#39;, expecting IDENTIFIER or do or final
+module a #(parameter size = 8, parameter type TP = logic [7:0])
+                                                              ^
+%Error: Exiting due to 6 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv</a>
 
 </pre>
 </body>

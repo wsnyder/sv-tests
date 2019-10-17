@@ -6,22 +6,42 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.096s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:11</a>: Unsupported: Multiple top level modules: select_bus and adder
-%Error-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:11</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:11</a>: Multiple top level modules
+                                                                                                                        : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                                        : ... Top module &#39;adder&#39;
+module adder (sum_out, carry_out, carry_in, ina, inb);
+       ^~~~~
+                                                                                                                        : ... Top module &#39;select_bus&#39;
+module select_bus(busout, bus0, bus1, bus2, bus3, enable, s);
+       ^~~~~~~~~~
+%Warning-LITENDIAN: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:14</a>: Little bit endian vector: MSB &lt; LSB of bit range: 1:16
+output [1:n] busout;
+       ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:15</a>: Little bit endian vector: MSB &lt; LSB of bit range: 1:16
+input [1:n] bus0, bus1, bus2, bus3;
+      ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:17</a>: Little bit endian vector: MSB &lt; LSB of bit range: 1:2
+input [1:2] s;
+      ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:18</a>: Little bit endian vector: MSB &lt; LSB of bit range: 1:16
+tri [1:n] data;
+    ^
+%Warning-WIDTH: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:8</a>: Operator ADD expects 5 bits on the RHS, but RHS&#39;s VARREF &#39;carry_in&#39; generates 1 bits.
+                                                                                                                    : ... In instance adder
+assign {carry_out, sum_out} = ina + inb + carry_in;
+                                        ^
 
 </pre>
 </body>

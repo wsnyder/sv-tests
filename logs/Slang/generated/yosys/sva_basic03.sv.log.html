@@ -13,11 +13,19 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.007s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>:2: error: language feature not yet supported
+	check_selA: assert property ( @(posedge clk) selA |=&gt; Q == $past(QA) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:8</a>:2: error: language feature not yet supported
+	check_selB: assert property ( @(posedge clk) selB |=&gt; Q == $past(QB) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:10</a>:2: error: language feature not yet supported
+	assume_not_11: assume property ( @(posedge clk) !(selA &amp; selB) );
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

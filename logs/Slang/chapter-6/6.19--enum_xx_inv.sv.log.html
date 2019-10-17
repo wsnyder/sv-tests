@@ -13,11 +13,16 @@ tags: 6.19
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv</a>
-time_elapsed: 0.008s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv:8</a>:25: error: redefinition of enum value 2&#39;b0
+	enum bit [1:0] {a=0, b=2&#39;bxx, c=1} val;
+	                       ^
+../..<a href="../../../tests/chapter-6/6.19--enum_xx_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.19--enum_xx_inv.sv:8</a>:20: note: previous definition here
+	enum bit [1:0] {a=0, b=2&#39;bxx, c=1} val;
+	                  ^
 
 </pre>
 </body>

@@ -13,11 +13,16 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v:10</a>:26: error: redefinition of &#39;Data_o&#39;
+  output [DataWidth-1:0] Data_o,
+                         ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v:13</a>:23: note: previous definition here
+  reg [DataWidth-1:0] Data_o;
+                      ^
 
 </pre>
 </body>

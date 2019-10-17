@@ -6,22 +6,26 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/mod-param-dec.v.html" target="file-frame">third_party/tests/utd-sv/mod-param-dec.v</a>
-time_elapsed: 0.086s
+time_elapsed: 0.092s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/mod-param-dec.v.html#l-9" target="file-frame">third_party/tests/utd-sv/mod-param-dec.v:9</a>: Unsupported: Multiple top level modules: mod_param_dec_2 and mod_param_dec_1
-%Error-MULTITOP: <a href="../../../../third_party/tests/utd-sv/mod-param-dec.v.html#l-9" target="file-frame">third_party/tests/utd-sv/mod-param-dec.v:9</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/mod-param-dec.v.html" target="file-frame">third_party/tests/utd-sv/mod-param-dec.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tests/utd-sv/mod-param-dec.v.html#l-9" target="file-frame">third_party/tests/utd-sv/mod-param-dec.v:9</a>: Multiple top level modules
+                                                                                                   : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                   : ... Top module &#39;mod_param_dec_1&#39;
+module mod_param_dec_1
+       ^~~~~~~~~~~~~~~
+                                                                                                   : ... Top module &#39;mod_param_dec_2&#39;
+module mod_param_dec_2
+       ^~~~~~~~~~~~~~~
 
 </pre>
 </body>

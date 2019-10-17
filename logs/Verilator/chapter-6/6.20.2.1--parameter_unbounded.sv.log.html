@@ -13,13 +13,16 @@ tags: 6.20.2.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.20.2.1--parameter_unbounded.sv.html" target="file-frame">tests/chapter-6/6.20.2.1--parameter_unbounded.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-6/6.20.2.1--parameter_unbounded.sv.html#l-8" target="file-frame">tests/chapter-6/6.20.2.1--parameter_unbounded.sv:8</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-6/6.20.2.1--parameter_unbounded.sv.html#l-8" target="file-frame">tests/chapter-6/6.20.2.1--parameter_unbounded.sv:8</a>: Unsupported: $ expression
+ parameter p = $;
+               ^
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.20.2.1--parameter_unbounded.sv.html" target="file-frame">tests/chapter-6/6.20.2.1--parameter_unbounded.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.20.2.1--parameter_unbounded.sv.html" target="file-frame">tests/chapter-6/6.20.2.1--parameter_unbounded.sv</a>
 
 </pre>
 </body>

@@ -17,7 +17,33 @@ time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-57" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:57</a>:11: error: identifier &#39;BUF_WIDTH&#39; used before its declaration
+   input [BUF_WIDTH-1:0] din;
+          ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-47" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:47</a>:14: note: declared here
+   parameter BUF_WIDTH = 64;      // width of the buffer
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-60" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:60</a>:12: error: identifier &#39;BUF_WIDTH&#39; used before its declaration
+   output [BUF_WIDTH-1:0] dout;
+           ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-47" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:47</a>:14: note: declared here
+   parameter BUF_WIDTH = 64;      // width of the buffer
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-95" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:95</a>:4: error: unknown module &#39;dffrle_ns&#39;
+   dffrle_ns buf1_older_ff (.din(~buf1_older),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-106" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:106</a>:4: error: unknown module &#39;dffrle_ns&#39;
+   dffrle_ns buf0_vld_ff (.din(wr_buf0),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-112" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:112</a>:4: error: unknown module &#39;dffrle_ns&#39;
+   dffrle_ns buf1_vld_ff (.din(wr_buf1),
+   ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-118" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:118</a>:4: error: unknown module &#39;dffe_ns&#39;
+   dffe_ns #(BUF_WIDTH) buf0_obj_ff (.din(din),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/dbl_buf.v.html#l-123" target="file-frame">third_party/tests/utd-sv/dbl_buf.v:123</a>:4: error: unknown module &#39;dffe_ns&#39;
+   dffe_ns #(BUF_WIDTH) buf1_obj_ff (.din(din),
+   ^~~~~~~
 
 </pre>
 </body>

@@ -13,11 +13,19 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v</a>
-time_elapsed: 0.011s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-2" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:2</a>:15: error: unknown system name &#39;$signed&#39;
+  assign x = -$signed({1&#39;b0, a});
+              ^~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:3</a>:14: error: unknown system name &#39;$signed&#39;
+  assign y = $signed({1&#39;b0, a}) + $signed({1&#39;b0, b});
+             ^~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:3</a>:35: error: unknown system name &#39;$signed&#39;
+  assign y = $signed({1&#39;b0, a}) + $signed({1&#39;b0, b});
+                                  ^~~~~~~
 
 </pre>
 </body>

@@ -13,12 +13,15 @@ tags: 11.10.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.10.3--empty_string.sv.html" target="file-frame">tests/chapter-11/11.10.3--empty_string.sv</a>
-time_elapsed: 0.106s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../tests/chapter-11/11.10.3--empty_string.sv.html#l-12" target="file-frame">tests/chapter-11/11.10.3--empty_string.sv:12</a>: Operator ASSIGN expects 112 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?1?h0&#39; generates 1 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                  : ... In instance top
+ a = &#34;&#34;;
+   ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

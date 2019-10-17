@@ -13,16 +13,22 @@ tags: 7.3.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged
 top_module: 
 files: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.096s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-9" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-15" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-16" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-9" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+union tagged packed {
+      ^~~~~~
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-15" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+    un = tagged v2 (10);
+         ^~~~~~
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-16" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+ un = tagged v1 (85);  
+      ^~~~~~
 %Error: Exiting due to 3 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>
 
 </pre>
 </body>

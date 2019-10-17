@@ -13,17 +13,19 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v</a>
-time_elapsed: 0.098s
+time_elapsed: 0.106s
 </pre>
 <pre>
 
-%Warning-UNOPTFLAT: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:12</a>: Signal unoptimizable: Feedback to clock or circular logic: uut_forgen02.carry
-%Warning-UNOPTFLAT: Use &#34;/* verilator lint_off UNOPTFLAT */&#34; and lint_on around source to disable this message.
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:12</a>:  uut_forgen02.carry
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:21</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-16" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:16</a>:  uut_forgen02.adder[1].D
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:24</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:12</a>:  uut_forgen02.carry
+%Warning-UNOPTFLAT: <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:12</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;uut_forgen02.carry&#39;
+wire [WIDTH-1:0] carry;
+                 ^~~~~
+                    ... Use &#34;/* verilator lint_off UNOPTFLAT */&#34; and lint_on around source to disable this message.
+                    <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:12</a>:      Example path: uut_forgen02.carry
+                    <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:21</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-16" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:16</a>:      Example path: uut_forgen02.adder[1].D
+                    <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:24</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/tools/yosys/tests/simple/forgen02.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/forgen02.v:12</a>:      Example path: uut_forgen02.carry
 
 </pre>
 </body>

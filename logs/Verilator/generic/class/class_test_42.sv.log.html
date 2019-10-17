@@ -13,19 +13,31 @@ tags: 6.15 8.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class
 top_module: 
 files: <a href="../../../../tests/generic/class/class_test_42.sv.html" target="file-frame">tests/generic/class/class_test_42.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.108s
 </pre>
 <pre>
 
-%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-7" target="file-frame">tests/generic/class/class_test_42.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-7" target="file-frame">tests/generic/class/class_test_42.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class macros_as_class_item;
+^~~~~
 %Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-7" target="file-frame">tests/generic/class/class_test_42.sv:7</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-8" target="file-frame">tests/generic/class/class_test_42.sv:8</a>: Define or directive not defined: `uvm_object_utils_begin
-%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-9" target="file-frame">tests/generic/class/class_test_42.sv:9</a>: Define or directive not defined: `uvm_object_utils
-%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-10" target="file-frame">tests/generic/class/class_test_42.sv:10</a>: Define or directive not defined: `uvm_object_utils_end
-%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-11" target="file-frame">tests/generic/class/class_test_42.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+class macros_as_class_item;
+      ^~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-8" target="file-frame">tests/generic/class/class_test_42.sv:8</a>: Define or directive not defined: &#39;`uvm_object_utils_begin&#39;
+ `uvm_object_utils_begin(foobar)
+ ^~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-9" target="file-frame">tests/generic/class/class_test_42.sv:9</a>: Define or directive not defined: &#39;`uvm_object_utils&#39;
+ `uvm_object_utils(blah)
+ ^~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-10" target="file-frame">tests/generic/class/class_test_42.sv:10</a>: Define or directive not defined: &#39;`uvm_object_utils_end&#39;
+ `uvm_object_utils_end
+ ^~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../tests/generic/class/class_test_42.sv.html#l-11" target="file-frame">tests/generic/class/class_test_42.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
 %Error: Exiting due to 6 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/class <a href="../../../../tests/generic/class/class_test_42.sv.html" target="file-frame">tests/generic/class/class_test_42.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/class <a href="../../../../tests/generic/class/class_test_42.sv.html" target="file-frame">tests/generic/class/class_test_42.sv</a>
 
 </pre>
 </body>

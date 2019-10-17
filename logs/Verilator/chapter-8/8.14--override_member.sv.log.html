@@ -17,23 +17,51 @@ time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-8" target="file-frame">tests/chapter-8/8.14--override_member.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-8" target="file-frame">tests/chapter-8/8.14--override_member.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class super_cls;
+ ^~~~~
 %Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-8" target="file-frame">tests/chapter-8/8.14--override_member.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
+ class super_cls;
+                ^
 %Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-11" target="file-frame">tests/chapter-8/8.14--override_member.sv:11</a>: syntax error, unexpected ++, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-13" target="file-frame">tests/chapter-8/8.14--override_member.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+   incs = ++s;
+          ^~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-13" target="file-frame">tests/chapter-8/8.14--override_member.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  function new(int def = 3);
+           ^~~
 %Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-13" target="file-frame">tests/chapter-8/8.14--override_member.sv:13</a>: syntax error, unexpected &#39;(&#39;, expecting &#39;[&#39;
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-16" target="file-frame">tests/chapter-8/8.14--override_member.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-18" target="file-frame">tests/chapter-8/8.14--override_member.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-18" target="file-frame">tests/chapter-8/8.14--override_member.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-24" target="file-frame">tests/chapter-8/8.14--override_member.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+  function new(int def = 3);
+               ^~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-16" target="file-frame">tests/chapter-8/8.14--override_member.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-18" target="file-frame">tests/chapter-8/8.14--override_member.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class test_cls extends super_cls;
+ ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-18" target="file-frame">tests/chapter-8/8.14--override_member.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+ class test_cls extends super_cls;
+                ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-24" target="file-frame">tests/chapter-8/8.14--override_member.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  function new(int def = 42);
+           ^~~
 %Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-24" target="file-frame">tests/chapter-8/8.14--override_member.sv:24</a>: syntax error, unexpected &#39;(&#39;, expecting &#39;[&#39;
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-25" target="file-frame">tests/chapter-8/8.14--override_member.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: super
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-25" target="file-frame">tests/chapter-8/8.14--override_member.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-28" target="file-frame">tests/chapter-8/8.14--override_member.sv:28</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-34" target="file-frame">tests/chapter-8/8.14--override_member.sv:34</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+  function new(int def = 42);
+               ^~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-25" target="file-frame">tests/chapter-8/8.14--override_member.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;super&#39;
+   super.new(def + 3);
+   ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-25" target="file-frame">tests/chapter-8/8.14--override_member.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+   super.new(def + 3);
+         ^~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-28" target="file-frame">tests/chapter-8/8.14--override_member.sv:28</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.14--override_member.sv.html#l-34" target="file-frame">tests/chapter-8/8.14--override_member.sv:34</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  test_obj = new(37);
+             ^~~
 %Error: Exiting due to 14 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.14--override_member.sv.html" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.14--override_member.sv.html" target="file-frame">tests/chapter-8/8.14--override_member.sv</a>
 
 </pre>
 </body>

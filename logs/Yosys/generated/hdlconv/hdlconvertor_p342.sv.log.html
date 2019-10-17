@@ -6,22 +6,24 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.010s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend.
-ERROR: Identifier `\a&#39; doesn&#39;t map to any signal at <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:5</a>!
+1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>
+Parsing SystemVerilog input from `<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>&#39; to AST representation.
+Generating RTLIL representation for module `\top&#39;.
+Successfully finished Verilog frontend.
 
 </pre>
 </body>

@@ -13,17 +13,27 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v</a>
-time_elapsed: 0.092s
+time_elapsed: 0.095s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-133" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:133</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or do or final
+   wire        logic;
+                    ^
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-259" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:259</a>: syntax error, unexpected logic, expecting IDENTIFIER or &#39;{&#39;
+   assign      logic = ~opf[8] &amp; ~opf[7] &amp; opf[6] &amp; opf[5];
+               ^~~~~
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-263" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:263</a>: syntax error, unexpected &#39;|&#39;, expecting &#34;&#39;{&#34;
+   assign illegal_vis_e = (visop_e &amp; ~(add | align | logic | siam | alignaddr) | 
+                                                           ^
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-265" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:265</a>: syntax error, unexpected &#39;&amp;&#39;, expecting &#34;&#39;{&#34;
+   assign rs1_check_nonzero_e = visop_e &amp; (siam | (logic &amp; (opf_log_zero | opf_log_one | opf_log_src2 | opf_log_not2)));
+                                                         ^
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html#l-266" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v:266</a>: syntax error, unexpected &#39;&amp;&#39;, expecting &#34;&#39;{&#34;
+   assign rs2_check_nonzero_e = visop_e &amp; logic &amp; (opf_log_zero | opf_log_one | opf_log_src1 | opf_log_not1);
+                                                ^
 %Error: Exiting due to 5 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ffu_ctl_visctl.v</a>
 
 </pre>
 </body>

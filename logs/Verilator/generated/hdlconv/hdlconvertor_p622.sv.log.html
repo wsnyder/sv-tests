@@ -13,28 +13,58 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:11</a>: syntax error, unexpected &#39;@&#39;
+forever @(posedge clk)
+        ^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:12</a>: Unsupported or unknown PLI call: $async$and$array
+$async$and$array(mem,{a1,a2,a3,a4,a5,a6,a7},{b1,b2,b3});
+^~~~~~~~~~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:24</a>: Unsupported or unknown PLI call: $async$and$plane
+$async$and$plane(mem,a[1:3],b[1:4]);
+^~~~~~~~~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-30" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:30</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+#10 a = 3&#39;b111;
+^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-31" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:31</a>: Unsupported: Use $display with %b format instead: $displayb
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+    ^~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-31" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:31</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-32" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:32</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 a = 3&#39;b000;
+^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-33" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:33</a>: Unsupported: Use $display with %b format instead: $displayb
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+    ^~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-33" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:33</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-34" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:34</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 a = 3&#39;bxxx;
+^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-35" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:35</a>: Unsupported: Use $display with %b format instead: $displayb
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+    ^~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-35" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:35</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:36</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 a = 3&#39;b101;
+^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-37" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:37</a>: Unsupported: Use $display with %b format instead: $displayb
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+    ^~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html#l-37" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv:37</a>: Unsupported: Ignoring delay on this delayed statement.
+#10 $displayb(a, &#34; -&gt; &#34;, b);
+^
 %Error: Exiting due to 7 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p622.sv</a>
 
 </pre>
 </body>

@@ -6,22 +6,29 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v</a>
-time_elapsed: 0.009s
+time_elapsed: 0.012s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend.
-ERROR: Assert `new_cell-&gt;children.at(0)-&gt;type == AST_CELLTYPE&#39; failed in frontends/ast/simplify.cc:1239.
+1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v</a>
+Parsing SystemVerilog input from `<a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v</a>&#39; to AST representation.
+Generating RTLIL representation for module `\driver&#39;.
+<a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html#l-5" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v:5</a>: Warning: Identifier `$array:0:4:\out&#39; is implicitly declared.
+<a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html#l-5" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v:5</a>: Warning: Identifier `$array:1:4:\out&#39; is implicitly declared.
+<a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html#l-5" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v:5</a>: Warning: Identifier `$array:2:4:\out&#39; is implicitly declared.
+<a href="../../../../third_party/tests/utd-sv/std-7.1.6-primitives.v.html#l-5" target="file-frame">third_party/tests/utd-sv/std-7.1.6-primitives.v:5</a>: Warning: Identifier `$array:3:4:\out&#39; is implicitly declared.
+Generating RTLIL representation for module `\busdriver_equiv&#39;.
+Successfully finished Verilog frontend.
 
 </pre>
 </body>

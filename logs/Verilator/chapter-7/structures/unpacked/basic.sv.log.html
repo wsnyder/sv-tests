@@ -13,12 +13,15 @@ tags: 7.2 7.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/structures/unpacked/basic.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/basic.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
 %Warning-UNPACKED: <a href="../../../../../tests/chapter-7/structures/unpacked/basic.sv.html#l-9" target="file-frame">tests/chapter-7/structures/unpacked/basic.sv:9</a>: Unsupported: Unpacked struct/union
-%Warning-UNPACKED: Use &#34;/* verilator lint_off UNPACKED */&#34; and lint_on around source to disable this message.
+                                                                                                       : ... In instance top
+struct {
+^~~~~~
+                   ... Use &#34;/* verilator lint_off UNPACKED */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

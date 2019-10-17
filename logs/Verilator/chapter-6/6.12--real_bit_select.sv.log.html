@@ -13,16 +13,24 @@ tags: 6.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
-time_elapsed: 0.087s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
 %Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Illegal bit or array select; type does not have a bit range, or bad dimension: type is real
+                                                                                         : ... In instance top
+ assign b = a[2];
+             ^
 %Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Expected integral (non-real) input to SEL
+                                                                                         : ... In instance top
+ assign b = a[2];
+            ^
 %Warning-REALCVT: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Implicit conversion of real to integer
-%Warning-REALCVT: Use &#34;/* verilator lint_off REALCVT */&#34; and lint_on around source to disable this message.
+ assign b = a[2];
+            ^
+                  ... Use &#34;/* verilator lint_off REALCVT */&#34; and lint_on around source to disable this message.
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
 
 </pre>
 </body>

@@ -13,15 +13,22 @@ tags: 6.6.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.095s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-8" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:8</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-14" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:14</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: nettype
-%Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-14" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: with
-%Error: Internal Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-7" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:7</a>: ../V3ParseSym.h:112: Symbols suggest ending FUNC &#39;real_sum&#39; but parser thinks ending MODULE &#39;top&#39;
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv</a>
+%Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-14" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:14</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;nettype&#39;
+ nettype real real_net with real_sum;
+ ^~~~~~~
+%Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-14" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;with&#39;
+ nettype real real_net with real_sum;
+                       ^~~~
+%Error: <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html#l-14" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv:14</a>: syntax error, unexpected IDENTIFIER, expecting &#39;,&#39; or &#39;;&#39;
+ nettype real real_net with real_sum;
+                            ^~~~~~~~
+%Error: Exiting due to 3 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.6.7--nettype_resolution_fn.sv.html" target="file-frame">tests/chapter-6/6.6.7--nettype_resolution_fn.sv</a>
 
 </pre>
 </body>

@@ -17,10 +17,16 @@ time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html#l-10" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv:10</a>: Unsupported: Member call on non-enum object &#39;VARREF &#39;a&#39;&#39; which is a &#39;BASICDTYPE &#39;string&#39;&#39;
-%Error: Internal Error: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html#l-10" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv:10</a>: ../V3Width.cpp:3104: Node has no type
-%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv</a>
+%Error: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html#l-10" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv:10</a>: Unsupported: built-in string method &#39;compare&#39;
+                                                                                          : ... In instance top
+ int c = a.compare(b);
+           ^~~~~~~
+%Error: Internal Error: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html#l-10" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv:10</a>: ../V3Width.cpp:3480: Node has no type
+                                                                                                          : ... In instance top
+ int c = a.compare(b);
+          ^
+                        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv</a>
 
 </pre>
 </body>

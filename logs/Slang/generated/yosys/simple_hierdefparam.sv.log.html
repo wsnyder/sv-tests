@@ -17,7 +17,15 @@ time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v:4</a>:12: warning: standalone generate block without loop or condition is not allowed in SystemVerilog [-Wnonstandard-generate]
+  generate begin:foo
+           ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v:7</a>:3: error: language feature not yet supported
+  defparam foo.mod_a.bar[0].mod_b.addvalue = 42;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/hierdefparam.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/hierdefparam.v:8</a>:3: error: language feature not yet supported
+  defparam foo.mod_a.bar[1].mod_b.addvalue = 43;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

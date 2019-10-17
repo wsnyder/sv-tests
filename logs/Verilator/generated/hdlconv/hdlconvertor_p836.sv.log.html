@@ -13,28 +13,36 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv</a>
-time_elapsed: 0.094s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:10</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+#(20 * p1) $finish;
+^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:12</a>: Unsupported: Ignoring delay on this delayed statement.
+always #p1 clock = ~clock;
+       ^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:13</a>: Unsupported: Ignoring delay on this delayed statement.
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>: Cannot find file containing module: d_edge_ff
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/d_edge_ff
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/d_edge_ff.v
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/d_edge_ff.sv
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       d_edge_ff
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       d_edge_ff.v
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       d_edge_ff.sv
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       obj_dir/d_edge_ff
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       obj_dir/d_edge_ff.v
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>:       obj_dir/d_edge_ff.sv
-%Error: Exiting due to 11 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv</a>
+always #p2 data = ~data;
+       ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv:6</a>: Cannot find file containing module: &#39;d_edge_ff&#39;
+d_edge_ff #p3 d_inst (q, clock, data);
+^~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/d_edge_ff
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/d_edge_ff.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/d_edge_ff.sv
+             d_edge_ff
+             d_edge_ff.v
+             d_edge_ff.sv
+             obj_dir/d_edge_ff
+             obj_dir/d_edge_ff.v
+             obj_dir/d_edge_ff.sv
+%Error: Exiting due to 1 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p836.sv</a>
 
 </pre>
 </body>

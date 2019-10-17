@@ -6,22 +6,30 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/i2c_master_tests.v.html" target="file-frame">third_party/tools/yosys/tests/simple/i2c_master_tests.v</a>
-time_elapsed: 0.085s
+time_elapsed: 0.081s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/i2c_master_tests.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/i2c_master_tests.v:29</a>: Unsupported: Multiple top level modules: i2c_test02 and i2c_test01
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/i2c_master_tests.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/i2c_master_tests.v:29</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/i2c_master_tests.v.html" target="file-frame">third_party/tools/yosys/tests/simple/i2c_master_tests.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/i2c_master_tests.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/i2c_master_tests.v:29</a>: Multiple top level modules
+                                                                                                                   : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                                   : ... Top module &#39;i2c_test01&#39;
+module i2c_test01(clk, rst, nReset, al);
+       ^~~~~~~~~~
+                                                                                                                   : ... Top module &#39;i2c_test02&#39;
+module i2c_test02(clk, slave_wait, clk_cnt, cmd, cmd_stop, cnt);
+       ^~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/i2c_master_tests.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/simple/i2c_master_tests.v:43</a>: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;clk_cnt&#39; generates 1 bits.
+                                                                                                                : ... In instance i2c_test02
+           cnt    &lt;= #1 clk_cnt;
+                  ^~
 
 </pre>
 </body>

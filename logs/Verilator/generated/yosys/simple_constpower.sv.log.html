@@ -13,13 +13,19 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v</a>
-time_elapsed: 0.107s
+time_elapsed: 0.121s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v:10</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s POWSS generates 32 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                          : ... In instance constpower
+  assign ys[i*8 + j*64 + 7 : i*8 + j*64] = $signed(i-4) ** $signed(j-4);
+                                         ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/constpower.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/constpower.v:11</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s POW generates 32 bits.
+                                                                                                          : ... In instance constpower
+  assign yu[i*8 + j*64 + 7 : i*8 + j*64] = $unsigned(i) ** $unsigned(j);
+                                         ^
 
 </pre>
 </body>

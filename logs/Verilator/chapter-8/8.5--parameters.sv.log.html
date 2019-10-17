@@ -13,18 +13,28 @@ tags: 8.5 8.25
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.5--parameters.sv.html" target="file-frame">tests/chapter-8/8.5--parameters.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.094s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-8" target="file-frame">tests/chapter-8/8.5--parameters.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-8" target="file-frame">tests/chapter-8/8.5--parameters.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class test_cls #(parameter a = 12);
+ ^~~~~
 %Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-8" target="file-frame">tests/chapter-8/8.5--parameters.sv:8</a>: syntax error, unexpected parameter, expecting &#39;)&#39;
-%Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-9" target="file-frame">tests/chapter-8/8.5--parameters.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-14" target="file-frame">tests/chapter-8/8.5--parameters.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+ class test_cls #(parameter a = 12);
+                  ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-9" target="file-frame">tests/chapter-8/8.5--parameters.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-14" target="file-frame">tests/chapter-8/8.5--parameters.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  test_obj = new;
+             ^~~
 %Error: <a href="../../../tests/chapter-8/8.5--parameters.sv.html#l-14" target="file-frame">tests/chapter-8/8.5--parameters.sv:14</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+  test_obj = new;
+                ^
 %Error: Exiting due to 5 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.5--parameters.sv.html" target="file-frame">tests/chapter-8/8.5--parameters.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.5--parameters.sv.html" target="file-frame">tests/chapter-8/8.5--parameters.sv</a>
 
 </pre>
 </body>

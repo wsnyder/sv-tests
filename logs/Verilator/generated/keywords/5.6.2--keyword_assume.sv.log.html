@@ -13,15 +13,15 @@ tags: 5.6.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords
 top_module: 
 files: <a href="../../../../tests/generated/keywords/5.6.2--keyword_assume.sv.html" target="file-frame">tests/generated/keywords/5.6.2--keyword_assume.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../../tests/generated/keywords/5.6.2--keyword_assume.sv.html#l-8" target="file-frame">tests/generated/keywords/5.6.2--keyword_assume.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
-%Error: <a href="../../../../tests/generated/keywords/5.6.2--keyword_assume.sv.html#l-8" target="file-frame">tests/generated/keywords/5.6.2--keyword_assume.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or do or final
-%Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords <a href="../../../../tests/generated/keywords/5.6.2--keyword_assume.sv.html" target="file-frame">tests/generated/keywords/5.6.2--keyword_assume.sv</a>
+%Error: <a href="../../../../tests/generated/keywords/5.6.2--keyword_assume.sv.html#l-8" target="file-frame">tests/generated/keywords/5.6.2--keyword_assume.sv:8</a>: syntax error, unexpected assume, expecting IDENTIFIER or do or final
+    bit assume;
+        ^~~~~~
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/keywords <a href="../../../../tests/generated/keywords/5.6.2--keyword_assume.sv.html" target="file-frame">tests/generated/keywords/5.6.2--keyword_assume.sv</a>
 
 </pre>
 </body>

@@ -13,23 +13,25 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/generate.v.html" target="file-frame">third_party/tests/utd-sv/generate.v</a>
-time_elapsed: 0.091s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>: Cannot find file containing module: memory
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/memory
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/memory.v
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/memory.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       memory
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       memory.v
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       memory.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       obj_dir/memory
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       obj_dir/memory.v
-%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>:       obj_dir/memory.sv
-%Error: Exiting due to 11 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/generate.v.html" target="file-frame">third_party/tests/utd-sv/generate.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/generate.v.html#l-7" target="file-frame">third_party/tests/utd-sv/generate.v:7</a>: Cannot find file containing module: &#39;memory&#39;
+      memory U (read, write, 
+      ^~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/memory
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/memory.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/memory.sv
+             memory
+             memory.v
+             memory.sv
+             obj_dir/memory
+             obj_dir/memory.v
+             obj_dir/memory.sv
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/generate.v.html" target="file-frame">third_party/tests/utd-sv/generate.v</a>
 
 </pre>
 </body>

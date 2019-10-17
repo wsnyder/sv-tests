@@ -13,11 +13,25 @@ tags: 8.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/member
 top_module: 
 files: <a href="../../../../tests/generic/member/class_member_test_50.sv.html" target="file-frame">tests/generic/member/class_member_test_50.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../tests/generic/member/class_member_test_50.sv.html#l-7" target="file-frame">tests/generic/member/class_member_test_50.sv:7</a>:1: error: language feature not yet supported
+class myclass;
+^~~~~~~~~~~~~~
+../..<a href="../../../../tests/generic/member/class_member_test_50.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_50.sv:8</a>:1: error: unexpected qualifiers on class member
+virtual hinterface.some_mod_port winterface;
+^
+../..<a href="../../../../tests/generic/member/class_member_test_50.sv.html#l-8" target="file-frame">tests/generic/member/class_member_test_50.sv:8</a>:9: error: expected member
+virtual hinterface.some_mod_port winterface;
+        ^~~~~~~~~~
+../..<a href="../../../../tests/generic/member/class_member_test_50.sv.html#l-10" target="file-frame">tests/generic/member/class_member_test_50.sv:10</a>:1: error: unexpected qualifiers on class member
+virtual disinterface#(.N(N)).some_mod_port blinterface;
+^
+../..<a href="../../../../tests/generic/member/class_member_test_50.sv.html#l-10" target="file-frame">tests/generic/member/class_member_test_50.sv:10</a>:9: error: expected member
+virtual disinterface#(.N(N)).some_mod_port blinterface;
+        ^~~~~~~~~~~~
 
 </pre>
 </body>

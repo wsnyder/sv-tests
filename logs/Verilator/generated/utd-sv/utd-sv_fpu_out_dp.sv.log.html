@@ -13,25 +13,31 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v</a>
-time_elapsed: 0.089s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>: Cannot find file containing module: clken_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       clken_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       clken_buf.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       clken_buf.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       obj_dir/clken_buf
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       obj_dir/clken_buf.v
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>:       obj_dir/clken_buf.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-185" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:185</a>: Cannot find file containing module: dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-196" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:196</a>: Cannot find file containing module: dff_s
-%Error: Exiting due to 13 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-112" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:112</a>: Cannot find file containing module: &#39;clken_buf&#39;
+clken_buf  ckbuf_out_dp (
+^~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/clken_buf.sv
+             clken_buf
+             clken_buf.v
+             clken_buf.sv
+             obj_dir/clken_buf
+             obj_dir/clken_buf.v
+             obj_dir/clken_buf.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-185" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:185</a>: Cannot find file containing module: &#39;dff_s&#39;
+dff_s #(8) i_fp_cpx_data_ca_84_77 (
+^~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html#l-196" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v:196</a>: Cannot find file containing module: &#39;dff_s&#39;
+dff_s #(77) i_fp_cpx_data_ca_76_0 (
+^~~~~
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/fpu_out_dp.v.html" target="file-frame">third_party/tests/utd-sv/fpu_out_dp.v</a>
 
 </pre>
 </body>

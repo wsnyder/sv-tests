@@ -13,18 +13,21 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.100s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>: syntax error, unexpected assert, expecting cover
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:8</a>: syntax error, unexpected assert, expecting cover
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:8</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:10</a>: syntax error, unexpected property, expecting cover
-%Error: Exiting due to 6 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv</a>
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+ check_selA: assert property ( @(posedge clk) selA |=&gt; Q == $past(QA) );
+                                                   ^~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:8</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+ check_selB: assert property ( @(posedge clk) selB |=&gt; Q == $past(QB) );
+                                                   ^~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:10</a>: syntax error, unexpected property, expecting &#39;#&#39; or final
+ assume_not_11: assume property ( @(posedge clk) !(selA &amp; selB) );
+                       ^~~~~~~~
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv</a>
 
 </pre>
 </body>

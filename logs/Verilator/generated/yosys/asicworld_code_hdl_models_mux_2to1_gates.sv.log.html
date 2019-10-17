@@ -13,14 +13,23 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.099s
 </pre>
 <pre>
 
-%Warning-IMPLICIT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:13</a>: Signal definition not found, creating implicitly: inv_sel
-%Warning-IMPLICIT: Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
-%Warning-IMPLICIT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:14</a>: Signal definition not found, creating implicitly: asel
-%Warning-IMPLICIT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:15</a>: Signal definition not found, creating implicitly: bsel
+%Warning-IMPLICIT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:13</a>: Signal definition not found, creating implicitly: &#39;inv_sel&#39;
+                                                                                                                                    : ... Suggested alternative: &#39;a_sel&#39;
+not U_inv (inv_sel,sel);
+           ^~~~~~~
+                   ... Use &#34;/* verilator lint_off IMPLICIT */&#34; and lint_on around source to disable this message.
+%Warning-IMPLICIT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:14</a>: Signal definition not found, creating implicitly: &#39;asel&#39;
+                                                                                                                                    : ... Suggested alternative: &#39;sel&#39;
+and U_anda (asel,a,inv_sel),
+            ^~~~
+%Warning-IMPLICIT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_mux_2to1_gates.v:15</a>: Signal definition not found, creating implicitly: &#39;bsel&#39;
+                                                                                                                                    : ... Suggested alternative: &#39;sel&#39;
+    U_andb (bsel,b,sel);
+            ^~~~
 
 </pre>
 </body>

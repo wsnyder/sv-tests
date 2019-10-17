@@ -13,30 +13,70 @@ tags: 8.26.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>
-time_elapsed: 0.092s
+time_elapsed: 0.105s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:8</a>: syntax error, unexpected interface
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:13</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: implements
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ interface class ihello;
+           ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:9</a>: syntax error, unexpected pure
+  pure virtual function void hello();
+  ^~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  pure virtual function void hello();
+       ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  pure virtual function void world();
+       ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+ virtual class vhello implements ihello;
+ ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ virtual class vhello implements ihello;
+         ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:13</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
+ virtual class vhello implements ihello;
+                      ^~~~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  virtual function void hello();
+  ^~~~~~~
 %Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:17</a>: syntax error, unexpected pure
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-20" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-20" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-21" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-24" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-29" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:29</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+  pure virtual function void world();
+  ^~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  pure virtual function void world();
+       ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-20" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class helloworld extends vhello;
+ ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-20" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+ class helloworld extends vhello;
+                  ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-21" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  virtual function void world();
+  ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-24" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-29" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:29</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  obj = new;
+        ^~~
 %Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-29" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:29</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-%Error: Exiting due to 18 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>
+  obj = new;
+           ^
+%Error: <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html#l-34" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv:34</a>: syntax error, unexpected endmodule
+endmodule
+^~~~~~~~~
+%Error: Cannot continue
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.7--partial_implementation.sv.html" target="file-frame">tests/chapter-8/8.26.7--partial_implementation.sv</a>
 
 </pre>
 </body>

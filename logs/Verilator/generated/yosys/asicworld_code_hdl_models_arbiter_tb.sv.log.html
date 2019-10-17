@@ -13,27 +13,53 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v</a>
-time_elapsed: 0.088s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:15</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
-%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:22</a>: Define or directive not defined: `outfile
+always #1 clk = ~clk;
+       ^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:22</a>: Define or directive not defined: &#39;`outfile&#39;
+  file = $fopen(`outfile);
+                ^~~~~~~~
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:22</a>: syntax error, unexpected &#39;)&#39;, expecting TYPE-IDENTIFIER
+  file = $fopen(`outfile);
+                        ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-23" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:23</a>: syntax error, unexpected &#39;@&#39;
+  repeat (5) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-25" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:25</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-27" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:27</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:29</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-32" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:32</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:35</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-38" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:38</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-40" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:40</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-42" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:42</a>: syntax error, unexpected &#39;@&#39;
+  repeat (1) @ (posedge clk);
+             ^
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:43</a>: Unsupported: Ignoring delay on this delayed statement.
+  #10 $finish;
+  ^
 %Error: Exiting due to 11 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v</a>
 
 </pre>
 </body>

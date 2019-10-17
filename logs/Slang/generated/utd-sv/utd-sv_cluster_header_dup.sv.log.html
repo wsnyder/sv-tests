@@ -13,11 +13,25 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v</a>
-time_elapsed: 0.016s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-53" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:53</a>:4: error: unknown module &#39;bw_u1_soffasr_2x&#39;
+   bw_u1_soffasr_2x sync_cluster_master ( // no scan hook-up
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-65" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:65</a>:4: error: unknown module &#39;bw_clk_cclk_scanlasr_2x&#39;
+   bw_clk_cclk_scanlasr_2x sync_cluster_slave ( // use scan lock-up latch
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-77" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:77</a>:11: error: language feature not yet supported
+   assign #10 rclk = gclk &amp; sync_enable;
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-79" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:79</a>:4: error: unknown module &#39;synchronizer_asr&#39;
+   synchronizer_asr rst_repeater (
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/cluster_header_dup.v.html#l-90" target="file-frame">third_party/tests/utd-sv/cluster_header_dup.v:90</a>:4: error: unknown module &#39;synchronizer_asr_dup&#39;
+   synchronizer_asr_dup dbginit_repeater (
+   ^~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

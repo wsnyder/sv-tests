@@ -13,17 +13,29 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv:9</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+#1 s1 = &#39;{1, 2+k};
+^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv:10</a>: Unsupported: Ignoring delay on this delayed statement.
+#1 $display( s1.x, s1.y);
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv:11</a>: Unsupported: Ignoring delay on this delayed statement.
+#1 s1 = &#39;{x:2, y:3+k};
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv:12</a>: Unsupported: Ignoring delay on this delayed statement.
+#1 $display( s1.x, s1.y);
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv:13</a>: Unsupported: Ignoring delay on this delayed statement.
+#1 $finish;
+^
 %Warning-UNPACKED: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p248.sv:2</a>: Unsupported: Unpacked struct/union
+typedef struct {
+        ^~~~~~
 
 </pre>
 </body>

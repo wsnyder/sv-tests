@@ -13,22 +13,46 @@ tags: 8.26.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html" target="file-frame">tests/chapter-8/8.26.2--implements.sv</a>
-time_elapsed: 0.096s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.2--implements.sv:8</a>: syntax error, unexpected interface
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.2--implements.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.2--implements.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.2--implements.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.2--implements.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.2--implements.sv:12</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: implements
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.2--implements.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.2--implements.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-21" target="file-frame">tests/chapter-8/8.26.2--implements.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.2--implements.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ interface class ihello;
+           ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.2--implements.sv:9</a>: syntax error, unexpected pure
+  pure virtual function void hello();
+  ^~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.2--implements.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  pure virtual function void hello();
+       ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.2--implements.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.2--implements.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class Hello implements ihello;
+ ^~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.2--implements.sv:12</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
+ class Hello implements ihello;
+             ^~~~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.2--implements.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+  virtual function void hello();
+  ^~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.2--implements.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-21" target="file-frame">tests/chapter-8/8.26.2--implements.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  obj = new;
+        ^~~
 %Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-21" target="file-frame">tests/chapter-8/8.26.2--implements.sv:21</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-%Error: Exiting due to 10 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.2--implements.sv.html" target="file-frame">tests/chapter-8/8.26.2--implements.sv</a>
+  obj = new;
+           ^
+%Error: <a href="../../../tests/chapter-8/8.26.2--implements.sv.html#l-24" target="file-frame">tests/chapter-8/8.26.2--implements.sv:24</a>: syntax error, unexpected endmodule
+endmodule
+^~~~~~~~~
+%Error: Cannot continue
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.2--implements.sv.html" target="file-frame">tests/chapter-8/8.26.2--implements.sv</a>
 
 </pre>
 </body>

@@ -6,30 +6,41 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html" target="file-frame">third_party/tools/yosys/tests/simple/generate.v</a>
-time_elapsed: 0.092s
+time_elapsed: 0.592s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:43</a>: Unsupported: Multiple top level modules: gen_test2 and gen_test1
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:43</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-70" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:70</a>: Unsupported: Multiple top level modules: gen_test3 and gen_test2
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-70" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:70</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:97</a>: Unsupported: Multiple top level modules: gen_test4 and gen_test3
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:97</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-118" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:118</a>: Unsupported: Multiple top level modules: gen_test5 and gen_test4
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-118" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:118</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-154" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:154</a>: Unsupported: Multiple top level modules: gen_test6 and gen_test5
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-154" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:154</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 10 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html" target="file-frame">third_party/tools/yosys/tests/simple/generate.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:43</a>: Multiple top level modules
+                                                                                                           : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                           : ... Top module &#39;gen_test1&#39;
+module gen_test1(clk, a, b, y);
+       ^~~~~~~~~
+                                                                                                           : ... Top module &#39;gen_test2&#39;
+module gen_test2(clk, a, b, y);
+       ^~~~~~~~~
+                                                                                                           : ... Top module &#39;gen_test3&#39;
+module gen_test3(a, b, sel, y, z);
+       ^~~~~~~~~
+                                                                                                           : ... Top module &#39;gen_test4&#39;
+module gen_test4(a, b);
+       ^~~~~~~~~
+                                                                                                           : ... Top module &#39;gen_test5&#39;
+module gen_test5(input_bits, out);
+       ^~~~~~~~~
+                                                                                                           : ... Top module &#39;gen_test6&#39;
+module gen_test6(output [3:0] o);
+       ^~~~~~~~~
+%Warning-CASEOVERLAP: <a href="../../../../third_party/tools/yosys/tests/simple/generate.v.html#l-56" target="file-frame">third_party/tools/yosys/tests/simple/generate.v:56</a>: Case values overlap (example pattern 0x7)
+   3&#39;b?11, 3&#39;b1?1, 3&#39;b11?:
+           ^~~~~~
 
 </pre>
 </body>

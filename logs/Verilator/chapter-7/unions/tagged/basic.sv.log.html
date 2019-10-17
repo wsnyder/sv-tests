@@ -13,17 +13,27 @@ tags: 7.3.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged
 top_module: 
 files: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html" target="file-frame">tests/chapter-7/unions/tagged/basic.sv</a>
-time_elapsed: 0.087s
+time_elapsed: 0.101s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-9" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-9" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+union tagged {
+      ^~~~~~
 %Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-10" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:10</a>: syntax error, unexpected void, expecting TYPE-IDENTIFIER
+ void invalid;
+ ^~~~
 %Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-12" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:12</a>: syntax error, unexpected &#39;}&#39;
-%Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-15" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: Internal Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-7" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:7</a>: ../V3ParseSym.h:112: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE &#39;top&#39;
-%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html" target="file-frame">tests/chapter-7/unions/tagged/basic.sv</a>
+} un;
+^
+%Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-15" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+ un = tagged valid (10);
+      ^~~~~~
+%Error: Internal Error: <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html#l-7" target="file-frame">tests/chapter-7/unions/tagged/basic.sv:7</a>: ../V3ParseSym.h:115: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE &#39;top&#39;
+module top ();
+       ^~~
+                        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged <a href="../../../../../tests/chapter-7/unions/tagged/basic.sv.html" target="file-frame">tests/chapter-7/unions/tagged/basic.sv</a>
 
 </pre>
 </body>

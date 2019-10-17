@@ -13,14 +13,18 @@ tags: 6.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>: Duplicate declaration of signal: v
-%Error: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-8" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:8</a>: ... Location of original declaration
+%Error: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>: Duplicate declaration of signal: &#39;v&#39;
+ wire v;
+      ^
+        <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-8" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:8</a>: ... Location of original declaration
+ reg v;
+     ^
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
 
 </pre>
 </body>
