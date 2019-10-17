@@ -13,11 +13,28 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html" target="file-frame">third_party/tests/utd-sv/c2i_buf.v</a>
-time_elapsed: 0.012s
+time_elapsed: 0.006s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-68" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:68</a>:11: error: identifier &#39;REG_WIDTH&#39; used before its declaration
+   input [REG_WIDTH+63:0]     c2i_packet;
+          ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-49" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:49</a>:14: note: declared here
+   parameter REG_WIDTH = 64;
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-73" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:73</a>:12: error: identifier &#39;IOB_UCB_WIDTH&#39; used before its declaration
+   output [IOB_UCB_WIDTH-1:0] iob_ucb_data;
+           ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-50" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:50</a>:14: note: declared here
+   parameter IOB_UCB_WIDTH = 32;
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-100" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:100</a>:4: error: unknown module &#39;dbl_buf&#39;
+   dbl_buf #(REG_WIDTH+64) dbl_buf (.rst_l(rst_l),
+   ^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/c2i_buf.v.html#l-109" target="file-frame">third_party/tests/utd-sv/c2i_buf.v:109</a>:4: error: unknown module &#39;ucb_bus_out&#39;
+   ucb_bus_out #(IOB_UCB_WIDTH,REG_WIDTH) ucb_bus_out (.rst_l(rst_l),
+   ^~~~~~~~~~~
 
 </pre>
 </body>

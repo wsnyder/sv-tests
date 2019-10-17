@@ -13,20 +13,34 @@ tags: 12.6.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-9" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-23" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:23</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: matches
-%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-24" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-9" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+ typedef union tagged {
+               ^~~~~~
+%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-23" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:23</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;matches&#39;
+ initial case (v) matches
+                  ^~~~~~~
+%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-24" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+  tagged a &#39;{.v, 0} : $display(&#34;a %d&#34;, v);
+  ^~~~~~
 %Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-24" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:24</a>: syntax error, unexpected &#34;&#39;{&#34;, expecting &#39;,&#39; or &#39;:&#39;
-%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-25" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-26" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:26</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
-%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-27" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:27</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: tagged
+  tagged a &#39;{.v, 0} : $display(&#34;a %d&#34;, v);
+           ^~
+%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-25" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+  tagged a &#39;{.v1, .v2} : $display(&#34;a %d %d&#34;, v1, v2);
+  ^~~~~~
+%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-26" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:26</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+  tagged b &#39;{.v1, .v2} : $display(&#34;b %d %d&#34;, v1, v2);
+  ^~~~~~
+%Error: <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html#l-27" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv:27</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+  tagged c &#39;{0, .v} : $display(&#34;c %d&#34;, v);
+  ^~~~~~
 %Error: Cannot continue
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12 <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12 <a href="../../../tests/chapter-12/12.6.1--case_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.1--case_pattern.sv</a>
 
 </pre>
 </body>

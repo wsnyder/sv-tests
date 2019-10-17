@@ -6,22 +6,25 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Test quering functions support on packed arrays
 should_fail: 0
 tags: 7.11 7.4.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/packed/querying-functions/size.sv.html" target="file-frame">tests/chapter-7/arrays/packed/querying-functions/size.sv</a>
-time_elapsed: 0.008s
+time_elapsed: 0.010s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend.
-ERROR: Can&#39;t resolve function name `\$size&#39; at <a href="../../../../../../tests/chapter-7/arrays/packed/querying-functions/size.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/packed/querying-functions/size.sv:12</a>.
+1. Executing Verilog-2005 frontend: <a href="../../../../../../tests/chapter-7/arrays/packed/querying-functions/size.sv.html" target="file-frame">tests/chapter-7/arrays/packed/querying-functions/size.sv</a>
+Parsing SystemVerilog input from `<a href="../../../../../../tests/chapter-7/arrays/packed/querying-functions/size.sv.html" target="file-frame">tests/chapter-7/arrays/packed/querying-functions/size.sv</a>&#39; to AST representation.
+Generating RTLIL representation for module `\top&#39;.
+:assert: (8 == 8)
+Successfully finished Verilog frontend.
 
 </pre>
 </body>

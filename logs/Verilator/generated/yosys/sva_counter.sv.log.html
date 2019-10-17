@@ -13,20 +13,30 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.089s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-12" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:12</a>: syntax error, unexpected disable, expecting clocking
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-14" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:14</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-15" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:15</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-16" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:16</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-19" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-21" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:21</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-22" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:22</a>: Unsupported or unknown PLI call: $past
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-25" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:25</a>: Unsupported or unknown PLI call: $past
-%Error: Exiting due to 8 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>
+ default disable iff (reset);
+         ^~~~~~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-14" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:14</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+ assert property (up |=&gt; cnt == $past(cnt) + 8&#39;d 1);
+                     ^~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-15" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:15</a>: syntax error, unexpected [*, expecting &#39;)&#39;
+ assert property (up [*2] |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
+                     ^~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-16" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:16</a>: syntax error, unexpected ##, expecting &#39;)&#39;
+ assert property (up ##1 up |=&gt; cnt == $past(cnt, 2) + 8&#39;d 2);
+                     ^~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-21" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:21</a>: syntax error, unexpected ##, expecting &#39;)&#39;
+ assert property (up ##1 down |=&gt; cnt == $past(cnt, 2));
+                     ^~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html#l-22" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv:22</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+ assert property (down |=&gt; cnt == $past(cnt) - 8&#39;d 1);
+                       ^~~
+%Error: Exiting due to 6 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/counter.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/counter.sv</a>
 
 </pre>
 </body>

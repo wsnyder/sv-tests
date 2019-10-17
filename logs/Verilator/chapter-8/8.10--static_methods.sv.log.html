@@ -13,23 +13,43 @@ tags: 8.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.10--static_methods.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.10--static_methods.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+ class test_cls;
+ ^~~~~
 %Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.10--static_methods.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
+ class test_cls;
+               ^
 %Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-9" target="file-frame">tests/chapter-8/8.10--static_methods.sv:9</a>: Unsupported: Static in this context
+  static int id = 0;
+  ^~~~~~
 %Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-10" target="file-frame">tests/chapter-8/8.10--static_methods.sv:10</a>: Unsupported: Static in this context
+  static function int next_id();
+  ^~~~~~
 %Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-10" target="file-frame">tests/chapter-8/8.10--static_methods.sv:10</a>: syntax error, unexpected function, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-13" target="file-frame">tests/chapter-8/8.10--static_methods.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-19" target="file-frame">tests/chapter-8/8.10--static_methods.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+  static function int next_id();
+         ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-13" target="file-frame">tests/chapter-8/8.10--static_methods.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+ endclass
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-19" target="file-frame">tests/chapter-8/8.10--static_methods.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  test_obj0 = new;
+              ^~~
 %Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-19" target="file-frame">tests/chapter-8/8.10--static_methods.sv:19</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-20" target="file-frame">tests/chapter-8/8.10--static_methods.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+  test_obj0 = new;
+                 ^
+%Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-20" target="file-frame">tests/chapter-8/8.10--static_methods.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+  test_obj1 = new;
+              ^~~
 %Error: <a href="../../../tests/chapter-8/8.10--static_methods.sv.html#l-20" target="file-frame">tests/chapter-8/8.10--static_methods.sv:20</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+  test_obj1 = new;
+                 ^
 %Error: Exiting due to 10 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.10--static_methods.sv.html" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.10--static_methods.sv.html" target="file-frame">tests/chapter-8/8.10--static_methods.sv</a>
 
 </pre>
 </body>

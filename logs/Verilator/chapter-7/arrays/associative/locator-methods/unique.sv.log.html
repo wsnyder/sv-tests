@@ -13,15 +13,19 @@ tags: 7.12.1 7.12 7.10 7.12.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>
-time_elapsed: 0.096s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv:10</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv:10</a>: Unsupported: $ expression
+int qi[$];
+       ^
 %Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv:13</a>: syntax error, unexpected unique
-%Error: Exiting due to 3 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>
+ qi = s.unique;
+        ^~~~~~
+%Error: Exiting due to 2 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/unique.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/unique.sv</a>
 
 </pre>
 </body>

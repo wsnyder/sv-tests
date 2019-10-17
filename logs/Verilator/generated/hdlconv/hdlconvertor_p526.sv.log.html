@@ -13,39 +13,94 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv</a>
-time_elapsed: 0.096s
+time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class B1;
+^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:1</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:3</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
+class B1;
+      ^~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:3</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint a { soft x &gt; 10 ; soft x &lt; 100 ; }
+^~~~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:3</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:3</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: soft
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:8</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: soft
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
+constraint a { soft x &gt; 10 ; soft x &lt; 100 ; }
+           ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:3</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint a { soft x &gt; 10 ; soft x &lt; 100 ; }
+               ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:3</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint a { soft x &gt; 10 ; soft x &lt; 100 ; }
+                             ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class D1 extends B1;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+class D1 extends B1;
+         ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint b { soft x inside {[5:9]} ; }
+^~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:8</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint b { soft x inside {[5:9]} ; }
+               ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class B2;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint c { soft y &gt; 10 ; }
+^~~~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:13</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:13</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: soft
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:18</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: soft
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:24</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: soft
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:27</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: constraint
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:27</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: soft
-%Error: Exiting due to 26 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv</a>
+constraint c { soft y &gt; 10 ; }
+           ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:13</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint c { soft y &gt; 10 ; }
+               ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class D2 extends B2;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+class D2 extends B2;
+         ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint d { soft y inside {[5:9]} ; }
+^~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:18</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint d { soft y inside {[5:9]} ; }
+               ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint e ;
+^~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint f { soft p1.x &lt; p2.x ; }
+^~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:24</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint f { soft p1.x &lt; p2.x ; }
+               ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:27</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;constraint&#39;
+constraint D2::e { soft y &gt; 100 ; }
+^~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv:27</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;soft&#39;
+constraint D2::e { soft y &gt; 100 ; }
+                   ^~~~
+%Error: Exiting due to 27 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p526.sv</a>
 
 </pre>
 </body>

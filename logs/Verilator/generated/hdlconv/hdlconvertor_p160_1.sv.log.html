@@ -13,34 +13,79 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+interface class PutImp#(type PUT_T = logic);
+          ^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:2</a>: syntax error, unexpected pure
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:2</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:3</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:5</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:6</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+    pure virtual function void put(PUT_T a);
+    ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:2</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+    pure virtual function void put(PUT_T a);
+         ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:3</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:5</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+interface class GetImp#(type GET_T = logic);
+          ^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:6</a>: syntax error, unexpected pure
+    pure virtual function GET_T get();
+    ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:6</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+    pure virtual function GET_T get();
+         ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class MyQueue #(type T = logic, int DEPTH = 1);
+^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:9</a>: syntax error, unexpected type, expecting &#39;)&#39;
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:10</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+class MyQueue #(type T = logic, int DEPTH = 1);
+                ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:10</a>: Unsupported: $ expression
+    T PipeQueue[$:DEPTH-1];
+                ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+    virtual function void deleteQ();
+    ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class Fifo #(type T = logic, int DEPTH = 1) extends MyQueue#(T, DEPTH)
+^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:16</a>: syntax error, unexpected type, expecting &#39;)&#39;
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:17</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: implements
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
+class Fifo #(type T = logic, int DEPTH = 1) extends MyQueue#(T, DEPTH)
+             ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+class Fifo #(type T = logic, int DEPTH = 1) extends MyQueue#(T, DEPTH)
+                                            ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:17</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
+    implements PutImp#(T), GetImp#(T);
+    ^~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+    virtual function void put(T a);
+    ^~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:18</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
+    virtual function void put(T a);
+                                ^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:19</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-21" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+        PipeQueue.push_back(a);
+                            ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-21" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+    virtual function T get();
+    ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
 %Error: Cannot continue
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_1.sv</a>
 
 </pre>
 </body>

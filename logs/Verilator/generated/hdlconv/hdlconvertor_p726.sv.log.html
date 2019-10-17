@@ -13,13 +13,15 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv</a>
-time_elapsed: 0.533s
+time_elapsed: 0.295s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv:14</a>: Can&#39;t find definition of &#39;x&#39; in dotted variable: s2.x
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv:14</a>: Can&#39;t find definition of &#39;x&#39; in dotted variable: &#39;s2.x&#39;
+s2.x = 1;
+   ^
 Segmentation fault (core dumped)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv</a>
 
 </pre>
 </body>

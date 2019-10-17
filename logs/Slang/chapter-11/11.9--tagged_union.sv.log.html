@@ -13,11 +13,22 @@ tags: 11.9
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.9--tagged_union.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-11/11.9--tagged_union.sv.html#l-17" target="file-frame">tests/chapter-11/11.9--tagged_union.sv:17</a>:6: error: language feature not yet supported
+	a = tagged Invalid;
+	    ^~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-11/11.9--tagged_union.sv.html#l-18" target="file-frame">tests/chapter-11/11.9--tagged_union.sv:18</a>:6: error: language feature not yet supported
+	b = tagged Valid(42);
+	    ^~~~~~~~~~~~
+../..<a href="../../../tests/chapter-11/11.9--tagged_union.sv.html#l-18" target="file-frame">tests/chapter-11/11.9--tagged_union.sv:18</a>:18: error: expected &#39;;&#39;
+	b = tagged Valid(42);
+	                ^
+../..<a href="../../../tests/chapter-11/11.9--tagged_union.sv.html#l-18" target="file-frame">tests/chapter-11/11.9--tagged_union.sv:18</a>:18: error: expected statement
+	b = tagged Valid(42);
+	                ^
 
 </pre>
 </body>

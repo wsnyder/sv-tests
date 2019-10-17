@@ -13,11 +13,16 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/memories
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/memories/issue00335.v.html" target="file-frame">third_party/tools/yosys/tests/memories/issue00335.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/memories/issue00335.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/memories/issue00335.v:8</a>:21: error: identifier &#39;SIZE&#39; used before its declaration
+             input [SIZE-1:0]  adr, 
+                    ^~~~
+../..<a href="../../../../third_party/tools/yosys/tests/memories/issue00335.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/memories/issue00335.v:11</a>:15: note: declared here
+   parameter  SIZE = 5; // Address size
+              ^
 
 </pre>
 </body>

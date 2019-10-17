@@ -13,25 +13,40 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv</a>
-time_elapsed: 0.087s
+time_elapsed: 0.099s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:4</a>: syntax error, unexpected &#39;[&#39;, expecting IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:5</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:8</a>: syntax error, unexpected &#39;=&#39;, expecting IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:15</a>: syntax error, unexpected &#39;=&#39;, expecting IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: alias
-%Error: Exiting due to 12 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv</a>
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:4</a>: Unsupported: alias statements
+alias bus16[11:0] = low12;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:5</a>: Unsupported: alias statements
+alias bus16[15:4] = high12;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:8</a>: Unsupported: alias statements
+alias bus16 = {high12, low12[3:0]};
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:9</a>: Unsupported: alias statements
+alias high12[7:0] = low12[11:4];
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:15</a>: Unsupported: alias statements
+alias rst = Reset = reset = RST;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:16</a>: Unsupported: alias statements
+alias clk = Clk = clock = CLK;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:17</a>: Unsupported: alias statements
+alias d = Data = data = D;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:18</a>: Unsupported: alias statements
+alias q = Q;
+^~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:19</a>: Unsupported: alias statements
+alias Q_ = q_bar = Q_Bar = qbar;
+^~~~~
+%Error: Exiting due to 9 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv</a>
 
 </pre>
 </body>

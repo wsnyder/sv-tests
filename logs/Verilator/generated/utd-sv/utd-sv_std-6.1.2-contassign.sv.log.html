@@ -13,12 +13,15 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign.v.html" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign.v</a>
-time_elapsed: 0.095s
+time_elapsed: 0.096s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tests/utd-sv/std-6.1.2-contassign.v.html#l-8" target="file-frame">third_party/tests/utd-sv/std-6.1.2-contassign.v:8</a>: Operator ADD expects 5 bits on the RHS, but RHS&#39;s VARREF &#39;carry_in&#39; generates 1 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                       : ... In instance adder
+assign {carry_out, sum_out} = ina + inb + carry_in;
+                                        ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

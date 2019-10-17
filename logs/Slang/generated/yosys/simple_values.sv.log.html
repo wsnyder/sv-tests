@@ -13,11 +13,25 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/values.v.html" target="file-frame">third_party/tools/yosys/tests/simple/values.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tools/yosys/tests/simple/values.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/values.v:8</a>:8: error: language feature not yet supported
+always @* begin
+       ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/values.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/values.v:22</a>:8: error: language feature not yet supported
+always @*
+       ^~
+../..<a href="../../../../third_party/tools/yosys/tests/simple/values.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/values.v:33</a>:20: warning: vector literal too large for the given number of bits [-Wliteral-overflow]
+		4&#39;b1001: y = 16&#39;h123abc;
+		                 ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/values.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/values.v:34</a>:20: warning: vector literal too large for the given number of bits [-Wliteral-overflow]
+		4&#39;b1010: y = 16&#39;o1234567;
+		                 ^
+../..<a href="../../../../third_party/tools/yosys/tests/simple/values.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/values.v:35</a>:20: warning: vector literal too large for the given number of bits [-Wliteral-overflow]
+		4&#39;b1011: y = 16&#39;d3456789;
+		                 ^
 
 </pre>
 </body>

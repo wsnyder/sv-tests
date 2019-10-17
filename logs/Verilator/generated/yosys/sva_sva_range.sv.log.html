@@ -13,16 +13,18 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv:7</a>: syntax error, unexpected assert
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv:8</a>: Unsupported: SystemVerilog 2009 reserved word not implemented: until
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html#l-12" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
-%Error: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html#l-15" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: assume
-%Error: Exiting due to 4 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv</a>
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv:8</a>: syntax error, unexpected ##, expecting &#39;)&#39;
+  a ##[*] b |=&gt; c until d
+    ^~
+%Error: <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html#l-8" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv:8</a>: Unsupported: SystemVerilog 2009 reserved word not implemented: &#39;until&#39;
+  a ##[*] b |=&gt; c until d
+                  ^~~~~
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/sva_range.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/sva_range.sv</a>
 
 </pre>
 </body>

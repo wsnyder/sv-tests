@@ -13,17 +13,20 @@ tags: 12.7.6
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-frame">tests/chapter-12/12.7.6--forever.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.092s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html#l-9" target="file-frame">tests/chapter-12/12.7.6--forever.sv:9</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
+%Error: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html#l-9" target="file-frame">tests/chapter-12/12.7.6--forever.sv:9</a>: Unsupported: fork statements
+  fork
+  ^~~~
 %Warning-STMTDLY: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html#l-13" target="file-frame">tests/chapter-12/12.7.6--forever.sv:13</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
-%Error: <a href="../../../tests/chapter-12/12.7.6--forever.sv.html#l-14" target="file-frame">tests/chapter-12/12.7.6--forever.sv:14</a>: Unsupported: Verilog 1995 reserved word not implemented: join
-%Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12 <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-frame">tests/chapter-12/12.7.6--forever.sv</a>
+   #100 disable loop;
+   ^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Error: Exiting due to 1 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12 <a href="../../../tests/chapter-12/12.7.6--forever.sv.html" target="file-frame">tests/chapter-12/12.7.6--forever.sv</a>
 
 </pre>
 </body>

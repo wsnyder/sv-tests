@@ -13,15 +13,256 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.102s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:7</a>: Unsupported: Multiple top level modules: partsel_test002 and partsel_test001
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:7</a>: Fix, or use --top-module option to select which you want.
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:7</a>: Multiple top level modules
+                                                                                                         : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                         : ... Top module &#39;partsel_test001&#39;
+module partsel_test001(input [2:0] idx, input [31:0] data, output [3:0] slice_up, slice_down);
+       ^~~~~~~~~~~~~~~
+                                                                                                         : ... Top module &#39;partsel_test002&#39;
+module partsel_test002 (
+       ^~~~~~~~~~~~~~~
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:10</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ input [0:7] b,
+       ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:13</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ output [0:7] x4, x5, x6,
+        ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:15</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ output [0:7] y4, y5, y6,
+        ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-17" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:17</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ output [0:7] z4, z5, z6,
+        ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:19</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ output [0:7] w4, w5, w6,
+        ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-21" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:21</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ output [0:7] q1, q2, q3, q4, q5, q6,
+        ^
+%Warning-LITENDIAN: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-23" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:23</a>: Little bit endian vector: MSB &lt; LSB of bit range: 0:7
+ output reg [0:7] r2
+            ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-28" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:28</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y1 = a[4 +: 3], y2 = a[4 +: 3] + b[4 +: 3], y3 = b[4 +: 3];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-28" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:28</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y1 = a[4 +: 3], y2 = a[4 +: 3] + b[4 +: 3], y3 = b[4 +: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-28" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:28</a>: Operator ADD expects 8 bits on the RHS, but RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y1 = a[4 +: 3], y2 = a[4 +: 3] + b[4 +: 3], y3 = b[4 +: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-28" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:28</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y1 = a[4 +: 3], y2 = a[4 +: 3] + b[4 +: 3], y3 = b[4 +: 3];
+                                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:29</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y4 = a[4 +: 3], y5 = a[4 +: 3] + b[4 +: 3], y6 = b[4 +: 3];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:29</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y4 = a[4 +: 3], y5 = a[4 +: 3] + b[4 +: 3], y6 = b[4 +: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:29</a>: Operator ADD expects 8 bits on the RHS, but RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y4 = a[4 +: 3], y5 = a[4 +: 3] + b[4 +: 3], y6 = b[4 +: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:29</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign y4 = a[4 +: 3], y5 = a[4 +: 3] + b[4 +: 3], y6 = b[4 +: 3];
+                                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:30</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z1 = a[4 -: 3], z2 = a[4 -: 3] + b[4 -: 3], z3 = b[4 -: 3];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:30</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z1 = a[4 -: 3], z2 = a[4 -: 3] + b[4 -: 3], z3 = b[4 -: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:30</a>: Operator ADD expects 8 bits on the RHS, but RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z1 = a[4 -: 3], z2 = a[4 -: 3] + b[4 -: 3], z3 = b[4 -: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:30</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z1 = a[4 -: 3], z2 = a[4 -: 3] + b[4 -: 3], z3 = b[4 -: 3];
+                                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:31</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z4 = a[4 -: 3], z5 = a[4 -: 3] + b[4 -: 3], z6 = b[4 -: 3];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:31</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z4 = a[4 -: 3], z5 = a[4 -: 3] + b[4 -: 3], z6 = b[4 -: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:31</a>: Operator ADD expects 8 bits on the RHS, but RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z4 = a[4 -: 3], z5 = a[4 -: 3] + b[4 -: 3], z6 = b[4 -: 3];
+                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:31</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+assign z4 = a[4 -: 3], z5 = a[4 -: 3] + b[4 -: 3], z6 = b[4 -: 3];
+                                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-32" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:32</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w1 = a[6:3], w2 = a[6:3] + b[3:6], w3 = b[3:6];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-32" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:32</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w1 = a[6:3], w2 = a[6:3] + b[3:6], w3 = b[3:6];
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-32" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:32</a>: Operator ADD expects 8 bits on the RHS, but RHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w1 = a[6:3], w2 = a[6:3] + b[3:6], w3 = b[3:6];
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-32" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:32</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w1 = a[6:3], w2 = a[6:3] + b[3:6], w3 = b[3:6];
+                                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:33</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w4 = a[6:3], w5 = a[6:3] + b[3:6], w6 = b[3:6];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:33</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w4 = a[6:3], w5 = a[6:3] + b[3:6], w6 = b[3:6];
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:33</a>: Operator ADD expects 8 bits on the RHS, but RHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w4 = a[6:3], w5 = a[6:3] + b[3:6], w6 = b[3:6];
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:33</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+assign w4 = a[6:3], w5 = a[6:3] + b[3:6], w6 = b[3:6];
+                                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Bit extraction of var[7:0] requires 3 bit index, not 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+                     ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+                                                  ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+                                                                    ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:34</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign p1 = a[s], p2 = b[s], p3 = a[s+2 +: 2], p4 = b[s+2 +: 2], p5 = a[s+2 -: 2], p6 = b[s+2 -: 2];
+                                                                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Bit extraction of var[7:0] requires 3 bit index, not 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+          ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 1 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+                     ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+                                                  ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+                                                                    ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:35</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 2 bits.
+                                                                                                       : ... In instance partsel_test002
+assign q1 = a[s], q2 = b[s], q3 = a[s+2 +: 2], q4 = b[s+2 +: 2], q5 = a[s+2 -: 2], q6 = b[s+2 -: 2];
+                                                                                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:43</a>: Operator XOR expects 8 bits on the LHS, but LHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+    r1[3:0] &lt;= r2[0:3] ^ x1;
+                       ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:43</a>: Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS&#39;s XOR generates 8 bits.
+                                                                                                       : ... In instance partsel_test002
+    r1[3:0] &lt;= r2[0:3] ^ x1;
+            ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-44" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:44</a>: Operator XOR expects 8 bits on the LHS, but LHS&#39;s SEL generates 4 bits.
+                                                                                                       : ... In instance partsel_test002
+    r2[4:7] &lt;= r1[7:4] ^ x4;
+                       ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-44" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:44</a>: Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS&#39;s XOR generates 8 bits.
+                                                                                                       : ... In instance partsel_test002
+    r2[4:7] &lt;= r1[7:4] ^ x4;
+            ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-47" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:47</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+    r1[2 +: 3] &lt;= r2[5 -: 3] + x1;
+                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-47" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:47</a>: Operator ASSIGNDLY expects 3 bits on the Assign RHS, but Assign RHS&#39;s ADD generates 8 bits.
+                                                                                                       : ... In instance partsel_test002
+    r1[2 +: 3] &lt;= r2[5 -: 3] + x1;
+               ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-48" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:48</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+    r2[3 +: 3] &lt;= r1[6 -: 3] + x4;
+                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-48" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:48</a>: Operator ASSIGNDLY expects 3 bits on the Assign RHS, but Assign RHS&#39;s ADD generates 8 bits.
+                                                                                                       : ... In instance partsel_test002
+    r2[3 +: 3] &lt;= r1[6 -: 3] + x4;
+               ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-51" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:51</a>: Operator SUB expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+    r1[6 -: 3] &lt;= r2[3 +: 3] - x1;
+                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-51" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:51</a>: Operator ASSIGNDLY expects 3 bits on the Assign RHS, but Assign RHS&#39;s SUB generates 8 bits.
+                                                                                                       : ... In instance partsel_test002
+    r1[6 -: 3] &lt;= r2[3 +: 3] - x1;
+               ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-52" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:52</a>: Operator SUB expects 8 bits on the LHS, but LHS&#39;s SEL generates 3 bits.
+                                                                                                       : ... In instance partsel_test002
+    r2[7 -: 3] &lt;= r1[4 +: 3] - x4;
+                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-52" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:52</a>: Operator ASSIGNDLY expects 3 bits on the Assign RHS, but Assign RHS&#39;s SUB generates 8 bits.
+                                                                                                       : ... In instance partsel_test002
+    r2[7 -: 3] &lt;= r1[4 +: 3] - x4;
+               ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-2" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:2</a>: Operator SHIFTL expects 6 bits on the LHS, but LHS&#39;s VARREF &#39;idx&#39; generates 3 bits.
+                                                                                                      : ... In instance partsel_test001
+wire [5:0] offset = idx &lt;&lt; 2;
+                        ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:3</a>: Bit extraction of var[31:0] requires 5 bit index, not 6 bits.
+                                                                                                      : ... In instance partsel_test001
+assign slice_up = data[offset +: 4];
+                      ^
+%Error-BLKANDNBLK: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-23" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:23</a>: Unsupported: Blocked and non-blocking assignments to same variable: &#39;r2&#39;
+ output reg [0:7] r2
+                  ^~
+%Error-BLKANDNBLK: <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html#l-22" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v:22</a>: Unsupported: Blocked and non-blocking assignments to same variable: &#39;r1&#39;
+ output reg [7:0] r1,
+                  ^~
 %Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/partsel.v.html" target="file-frame">third_party/tools/yosys/tests/simple/partsel.v</a>
 
 </pre>
 </body>

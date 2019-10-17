@@ -13,17 +13,25 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:3</a>: Unsupported: Verilog 1995 reserved word not implemented: wor
-%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:4</a>: Unsupported: Verilog 1995 reserved word not implemented: wand
-%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:15</a>: Unsupported: Verilog 1995 reserved word not implemented: wor
-%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-16" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:16</a>: Unsupported: Verilog 1995 reserved word not implemented: wand
+%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:3</a>: Unsupported: wor
+ output wor X;
+        ^~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:4</a>: Unsupported: wand
+ output wand Y;
+        ^~~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:15</a>: Unsupported: wor
+ output wor [3:0] X;
+        ^~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html#l-16" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v:16</a>: Unsupported: wand
+ output wand [3:0] Y;
+        ^~~~
 %Error: Exiting due to 4 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/wandwor.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wandwor.v</a>
 
 </pre>
 </body>

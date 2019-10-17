@@ -13,40 +13,51 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: forkjoin
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: forkjoin
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:9</a>: syntax error, unexpected task
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extern
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: forkjoin
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: ref
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: ref
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-28" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:28</a>: syntax error, unexpected end
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-32" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:32</a>: syntax error, unexpected IDENTIFIER, expecting &#34;&#39;{&#34;
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:36</a>: syntax error, unexpected &#39;.&#39;, expecting &#39;(&#39; or &#39;;&#39;
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:8</a>: Unsupported: extern forkjoin
+extern forkjoin task countSlaves();
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:9</a>: Unsupported: extern forkjoin
+extern forkjoin task Read (input logic [7:0] raddr);
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:10</a>: Unsupported: extern forkjoin
+extern forkjoin task Write (input logic [7:0] waddr);
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-21" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:21</a>: Unsupported: Modport import with prototype
+import task Read(input logic [7:0] raddr),
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-22" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:22</a>: syntax error, unexpected task
+task Write(input logic [7:0] waddr));
+^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-30" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:30</a>: Unsupported: virtual or generic interfaces
+module memMod #(parameter int minaddr=0, maxaddr=0) (interface a);
+                                                     ^~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-33" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:33</a>: syntax error, unexpected &#39;.&#39;, expecting &#39;(&#39; or &#39;;&#39;
+task a.countSlaves();
+      ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-34" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:34</a>: syntax error, unexpected ++, expecting IDENTIFIER
+a.slaves++;
+        ^~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-38" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:38</a>: syntax error, unexpected &#39;=&#39;, expecting IDENTIFIER
+avail = 0;
+      ^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-45" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:45</a>: syntax error, unexpected &#39;=&#39;, expecting IDENTIFIER
+avail = 0;
+      ^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-57" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:57</a>: Unsupported or unknown PLI call: $dist_uniform
+inst = instr&#39;($dist_uniform(seed, 0, 1));
+              ^~~~~~~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-58" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:58</a>: Unsupported or unknown PLI call: $dist_uniform
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-61" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:61</a>: syntax error, unexpected IDENTIFIER, expecting assert or cover
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-67" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:67</a>: syntax error, unexpected IDENTIFIER, expecting assert or cover
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-71" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:71</a>: syntax error, unexpected endmodule
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-75" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:75</a>: syntax error, unexpected &#39;.&#39;, expecting &#39;;&#39;
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-76" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:76</a>: syntax error, unexpected &#39;.&#39;, expecting &#39;;&#39;
-%Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-80" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:80</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
-%Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-82" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:82</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-83" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:83</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-84" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:84</a>: Unsupported: Ignoring delay on this delayed statement.
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-90" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:90</a>: syntax error, unexpected endmodule
-%Error: Cannot continue
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv</a>
+raddr = $dist_uniform(seed, 0, 3);
+        ^~~~~~~~~~~~~
+%Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html#l-30" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv:30</a>: ../V3ParseSym.h:115: Symbols suggest ending TASK &#39;a&#39; but parser thinks ending MODULE &#39;memMod&#39;
+module memMod #(parameter int minaddr=0, maxaddr=0) (interface a);
+       ^~~~~~
+                        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv</a>
 
 </pre>
 </body>

@@ -6,28 +6,107 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v</a>
-time_elapsed: 0.093s
+time_elapsed: 0.096s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-38" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:38</a>: Unsupported: Multiple top level modules: task_func_test02 and task_func_test01
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-38" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:38</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-71" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:71</a>: Unsupported: Multiple top level modules: task_func_test03 and task_func_test02
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-71" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:71</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-86" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:86</a>: Unsupported: Multiple top level modules: task_func_test04 and task_func_test03
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-86" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:86</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-127" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:127</a>: Unsupported: Multiple top level modules: task_func_test05 and task_func_test04
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-127" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:127</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 8 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-38" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:38</a>: Multiple top level modules
+                                                                                                            : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                            : ... Top module &#39;task_func_test01&#39;
+module task_func_test01(clk, a, b, c, x, y, z, w);
+       ^~~~~~~~~~~~~~~~
+                                                                                                            : ... Top module &#39;task_func_test02&#39;
+module task_func_test02(clk, a, b, c, x, y, z, w);
+       ^~~~~~~~~~~~~~~~
+                                                                                                            : ... Top module &#39;task_func_test03&#39;
+module task_func_test03(input [7:0] din_a, input [7:0] din_b, output [7:0] dout_a);
+       ^~~~~~~~~~~~~~~~
+                                                                                                            : ... Top module &#39;task_func_test04&#39;
+module task_func_test04(input [7:0] in, output [7:0] out1, out2, out3, out4);
+       ^~~~~~~~~~~~~~~~
+                                                                                                            : ... Top module &#39;task_func_test05&#39;
+module task_func_test05(data_in,data_out,clk);
+       ^~~~~~~~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-45" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:45</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;s1&#39; generates 4 bits.
+                                                                                                         : ... In instance task_func_test02
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+               ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-45" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:45</a>: Operator SHIFTL expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;s2&#39; generates 4 bits.
+                                                                                                         : ... In instance task_func_test02
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+                     ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-45" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:45</a>: Operator SHIFTL expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;s3&#39; generates 4 bits.
+                                                                                                         : ... In instance task_func_test02
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+                                 ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-57" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:57</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s VARREF &#39;a&#39; generates 8 bits.
+                                                                                                         : ... In instance task_func_test02
+ x = sum_shift(a, b, c);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-57" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:57</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s VARREF &#39;b&#39; generates 8 bits.
+                                                                                                         : ... In instance task_func_test02
+ x = sum_shift(a, b, c);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-57" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:57</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s VARREF &#39;c&#39; generates 8 bits.
+                                                                                                         : ... In instance task_func_test02
+ x = sum_shift(a, b, c);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-59" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:59</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s SEL generates 1 bits.
+                                                                                                         : ... In instance task_func_test02
+ z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-59" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:59</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s SEL generates 2 bits.
+                                                                                                         : ... In instance task_func_test02
+ z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-59" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:59</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s SHIFTR generates 8 bits.
+                                                                                                         : ... In instance task_func_test02
+ z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:10</a>: Operator ADD expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;s1&#39; generates 4 bits.
+                                                                                                         : ... In instance task_func_test01
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+               ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:10</a>: Operator SHIFTL expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;s2&#39; generates 4 bits.
+                                                                                                         : ... In instance task_func_test01
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+                     ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:10</a>: Operator SHIFTL expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;s3&#39; generates 4 bits.
+                                                                                                         : ... In instance task_func_test01
+sum_shift = s1 + (s2 &lt;&lt; 2) + (s3 &lt;&lt; 4);
+                                 ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:24</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s VARREF &#39;a&#39; generates 8 bits.
+                                                                                                         : ... In instance task_func_test01
+ x = sum_shift(a, b, c);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:24</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s VARREF &#39;b&#39; generates 8 bits.
+                                                                                                         : ... In instance task_func_test01
+ x = sum_shift(a, b, c);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-24" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:24</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s VARREF &#39;c&#39; generates 8 bits.
+                                                                                                         : ... In instance task_func_test01
+ x = sum_shift(a, b, c);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-26" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:26</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s SEL generates 1 bits.
+                                                                                                         : ... In instance task_func_test01
+ z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-26" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:26</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s SEL generates 2 bits.
+                                                                                                         : ... In instance task_func_test01
+ z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+     ^~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/task_func.v.html#l-26" target="file-frame">third_party/tools/yosys/tests/simple/task_func.v:26</a>: Operator FUNCREF &#39;sum_shift&#39; expects 4 bits on the Function Argument, but Function Argument&#39;s SHIFTR generates 8 bits.
+                                                                                                         : ... In instance task_func_test01
+ z = sum_shift(a[0], b[5:4], c &gt;&gt; 5) ^ sum_shift(1, 2, 3);
+     ^~~~~~~~~
 
 </pre>
 </body>

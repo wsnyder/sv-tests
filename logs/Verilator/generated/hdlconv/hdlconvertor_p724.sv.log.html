@@ -13,18 +13,25 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:6</a>: syntax error, unexpected assert
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:8</a>: syntax error, unexpected assert, expecting cover
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:36</a>: Unsupported: Static in this context
+static logic f;
+^~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-45" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:45</a>: Unsupported: Static in this context
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-54" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:54</a>: syntax error, unexpected assert
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-58" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:58</a>: syntax error, unexpected assert, expecting cover
+static logic f;
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-54" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:54</a>: syntax error, unexpected |-&gt;, expecting &#39;)&#39;
+assert property(@(posedge clk) a |-&gt; b) else  
+                                 ^~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html#l-58" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv:58</a>: syntax error, unexpected &#39;(&#39;, expecting &#39;#&#39; or final or property
+A5: assert(d);
+           ^
 %Error: Cannot continue
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p724.sv</a>
 
 </pre>
 </body>

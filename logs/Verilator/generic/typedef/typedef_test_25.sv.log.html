@@ -13,16 +13,24 @@ tags: 6.18
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef
 top_module: 
 files: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html" target="file-frame">tests/generic/typedef/typedef_test_25.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-8" target="file-frame">tests/generic/typedef/typedef_test_25.sv:8</a>: Can&#39;t find definition of variable: A
-%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-9" target="file-frame">tests/generic/typedef/typedef_test_25.sv:9</a>: Can&#39;t find definition of variable: D
-%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-11" target="file-frame">tests/generic/typedef/typedef_test_25.sv:11</a>: Can&#39;t find definition of variable: E
-%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-13" target="file-frame">tests/generic/typedef/typedef_test_25.sv:13</a>: Can&#39;t find definition of variable: M
+%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-8" target="file-frame">tests/generic/typedef/typedef_test_25.sv:8</a>: Can&#39;t find definition of variable: &#39;A&#39;
+  reg  [A-1:0] addr;
+        ^
+%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-9" target="file-frame">tests/generic/typedef/typedef_test_25.sv:9</a>: Can&#39;t find definition of variable: &#39;D&#39;
+  reg [D-1:0] data;
+       ^
+%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-11" target="file-frame">tests/generic/typedef/typedef_test_25.sv:11</a>: Can&#39;t find definition of variable: &#39;E&#39;
+  reg  [E-1:0] ecc;
+        ^
+%Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-13" target="file-frame">tests/generic/typedef/typedef_test_25.sv:13</a>: Can&#39;t find definition of variable: &#39;M&#39;
+  reg   [M-1:0] mask;
+         ^
 %Error: Exiting due to 4 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html" target="file-frame">tests/generic/typedef/typedef_test_25.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html" target="file-frame">tests/generic/typedef/typedef_test_25.sv</a>
 
 </pre>
 </body>

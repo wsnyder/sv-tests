@@ -6,24 +6,35 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v</a>
-time_elapsed: 0.089s
+time_elapsed: 0.094s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html#l-56" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v:56</a>: Unsupported: Multiple top level modules: default_cases and usb_tx_phy
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html#l-56" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v:56</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html#l-76" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v:76</a>: Unsupported: Multiple top level modules: select_leaves and default_cases
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html#l-76" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v:76</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 4 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html#l-56" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v:56</a>: Multiple top level modules
+                                                                                                          : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                          : ... Top module &#39;usb_tx_phy&#39;
+module usb_tx_phy(clk, rst, DataOut_i, TxValid_i, hold_reg);
+       ^~~~~~~~~~
+                                                                                                          : ... Top module &#39;default_cases&#39;
+module default_cases(a, y);
+       ^~~~~~~~~~~~~
+                                                                                                          : ... Top module &#39;select_leaves&#39;
+module select_leaves(input R, C, D, output reg Q);
+       ^~~~~~~~~~~~~
+%Warning-COMBDLY: <a href="../../../../third_party/tools/yosys/tests/simple/muxtree.v.html#l-61" target="file-frame">third_party/tools/yosys/tests/simple/muxtree.v:61</a>: Delayed assignments (&lt;=) in non-clocked (non flop or latch) block
+                                                                                                         : ... Suggest blocking assignments (=)
+always @* begin
+^~~~~~
+                  *** See the manual before disabling this,
+                  else you may end up with different sim results.
 
 </pre>
 </body>

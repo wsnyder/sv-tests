@@ -13,11 +13,16 @@ tags: 5.7.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.7.1--integers-unsized-illegal.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-unsized-illegal.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-5/5.7.1--integers-unsized-illegal.sv.html#l-11" target="file-frame">tests/chapter-5/5.7.1--integers-unsized-illegal.sv:11</a>:10: error: expected &#39;;&#39;
+    a = 4af; // is illegal (hexadecimal format requires &#39;h)
+         ^
+../..<a href="../../../tests/chapter-5/5.7.1--integers-unsized-illegal.sv.html#l-11" target="file-frame">tests/chapter-5/5.7.1--integers-unsized-illegal.sv:11</a>:10: error: use of undeclared identifier &#39;af&#39;
+    a = 4af; // is illegal (hexadecimal format requires &#39;h)
+         ^~
 
 </pre>
 </body>

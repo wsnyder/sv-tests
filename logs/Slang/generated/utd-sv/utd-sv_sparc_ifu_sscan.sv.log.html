@@ -13,11 +13,22 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:1: error: unknown module &#39;dff_s&#39;
+dff_s #(1) snap_inst0(.q(snap_f), .din(ctu_sscan_snap), .clk(rclk), .se(se), .si(), .so());
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-53" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:53</a>:1: error: unknown module &#39;dffe_s&#39;
+dffe_s #(94) snap_inst1(.q(snap_data_f), .din(snap_data), .clk(rclk), .en(snap_f), .se(se), .si(), .so());
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-60" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:60</a>:1: error: unknown module &#39;dff_s&#39;
+dff_s #(94) snap_inst2(.q(snap_data_ff), .din(snap_data_f), .clk(ctu_tck), .se(ctu_sscan_se), 
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-66" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:66</a>:1: error: unknown module &#39;sink&#39;
+sink #(94) s0(.in (snap_data_ff));
+^~~~
 
 </pre>
 </body>

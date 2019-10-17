@@ -13,79 +13,188 @@ tags: fx68k
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k
 top_module: 
 files: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
-time_elapsed: 0.977s
+time_elapsed: 1.375s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-467" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:467</a>: Operator COND expects 9 bits on the Conditional True, but Conditional True&#39;s CONST &#39;4&#39;h6&#39; generates 4 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   htemp = { 1&#39;b0, binResult} + (lowC  ? 4&#39;h6 : 4&#39;h0);
+                                       ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-467" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:467</a>: Operator COND expects 9 bits on the Conditional False, but Conditional False&#39;s CONST &#39;4&#39;h0&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   htemp = { 1&#39;b0, binResult} + (lowC  ? 4&#39;h6 : 4&#39;h0);
+                                       ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-468" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:468</a>: Operator COND expects 5 bits on the Conditional True, but Conditional True&#39;s CONST &#39;4&#39;h6&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   hNib  = htemp[8:4] + (highC ? 4&#39;h6 : 4&#39;h0);
+                               ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-468" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:468</a>: Operator COND expects 5 bits on the Conditional False, but Conditional False&#39;s CONST &#39;4&#39;h0&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   hNib  = htemp[8:4] + (highC ? 4&#39;h6 : 4&#39;h0);
+                               ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-472" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:472</a>: Operator COND expects 9 bits on the Conditional True, but Conditional True&#39;s CONST &#39;4&#39;h6&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   htemp = { 1&#39;b0, binResult} - (lowC  ? 4&#39;h6 : 4&#39;h0);
+                                       ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-472" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:472</a>: Operator COND expects 9 bits on the Conditional False, but Conditional False&#39;s CONST &#39;4&#39;h0&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   htemp = { 1&#39;b0, binResult} - (lowC  ? 4&#39;h6 : 4&#39;h0);
+                                       ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-473" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:473</a>: Operator COND expects 5 bits on the Conditional True, but Conditional True&#39;s CONST &#39;4&#39;h6&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   hNib  = htemp[8:4] - (highC ? 4&#39;h6 : 4&#39;h0);
+                               ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-473" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:473</a>: Operator COND expects 5 bits on the Conditional False, but Conditional False&#39;s CONST &#39;4&#39;h0&#39; generates 4 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu.aluCorf
+   hNib  = htemp[8:4] - (highC ? 4&#39;h6 : 4&#39;h0);
+                               ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-278" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:278</a>: Operator ADD expects 17 bits on the LHS, but LHS&#39;s REPLICATE generates 9 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+    rtemp = bAdd ? { 1&#39;b0, inpb[7:0]} + { 1&#39;b0, inpa[7:0]} + cin:
+                                      ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-278" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:278</a>: Operator ADD expects 17 bits on the RHS, but RHS&#39;s REPLICATE generates 9 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+    rtemp = bAdd ? { 1&#39;b0, inpb[7:0]} + { 1&#39;b0, inpa[7:0]} + cin:
+                                      ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-278" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:278</a>: Operator ADD expects 17 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+    rtemp = bAdd ? { 1&#39;b0, inpb[7:0]} + { 1&#39;b0, inpa[7:0]} + cin:
+                                                           ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-279" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:279</a>: Operator SUB expects 17 bits on the LHS, but LHS&#39;s REPLICATE generates 9 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+        { 1&#39;b0, inpb[7:0] } - { 1&#39;b0, inpa[7:0]} - cin;
+                            ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-279" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:279</a>: Operator SUB expects 17 bits on the RHS, but RHS&#39;s REPLICATE generates 9 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+        { 1&#39;b0, inpb[7:0] } - { 1&#39;b0, inpa[7:0]} - cin;
+                            ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-279" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:279</a>: Operator SUB expects 17 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+        { 1&#39;b0, inpb[7:0] } - { 1&#39;b0, inpa[7:0]} - cin;
+                                                 ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-284" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:284</a>: Operator ADD expects 17 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+    rtemp = bAdd ? { 1&#39;b0, inpb } + { 1&#39;b0, inpa} + cin:
+                                                  ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-285" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:285</a>: Operator SUB expects 17 bits on the RHS, but RHS&#39;s VARREF &#39;cin&#39; generates 1 bits.
+                                                                                             : ... In instance fx68k.excUnit.alu
+        { 1&#39;b0, inpb } - { 1&#39;b0, inpa} - cin;
+                                       ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1904" target="file-frame">third_party/cores/fx68k/fx68k.sv:1904</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;i&#39; generates 32 bits.
+                                                                                           : ... In instance fx68k.excUnit.rmPren
+             hbit = i;
+                  ^
 %Warning-UNPACKED: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-41" target="file-frame">third_party/cores/fx68k/fx68k.sv:41</a>: Unsupported: Unpacked struct/union
+                                                                                            : ... In instance fx68k
+typedef struct {
+        ^~~~~~
 %Warning-UNPACKED: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-66" target="file-frame">third_party/cores/fx68k/fx68k.sv:66</a>: Unsupported: Unpacked struct/union
+                                                                                            : ... In instance fx68k
+typedef struct {
+        ^~~~~~
 %Warning-UNPACKED: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-49" target="file-frame">third_party/cores/fx68k/fx68k.sv:49</a>: Unsupported: Unpacked struct/union
+                                                                                            : ... In instance fx68k
+typedef struct {
+        ^~~~~~
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2371" target="file-frame">third_party/cores/fx68k/fx68k.sv:2371</a>: Operator AND expects 32 bits on the LHS, but LHS&#39;s SEL generates 1 bits.
+                                                                                           : ... In instance fx68k.busControl
+   else if( Clks.enPhi2 &amp; bcComplete &amp; ~SRMC_RES)
+                        ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2371" target="file-frame">third_party/cores/fx68k/fx68k.sv:2371</a>: Operator AND expects 32 bits on the RHS, but RHS&#39;s VARREF &#39;bcComplete&#39; generates 1 bits.
+                                                                                           : ... In instance fx68k.busControl
+   else if( Clks.enPhi2 &amp; bcComplete &amp; ~SRMC_RES)
+                        ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2371" target="file-frame">third_party/cores/fx68k/fx68k.sv:2371</a>: Logical Operator IF expects 1 bit on the If, but If&#39;s AND generates 32 bits.
+                                                                                           : ... In instance fx68k.busControl
+   else if( Clks.enPhi2 &amp; bcComplete &amp; ~SRMC_RES)
+        ^~
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2116" target="file-frame">third_party/cores/fx68k/fx68k.sv:2116</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s REPLICATE generates 2 bits.
+                                                                                           : ... In instance fx68k.sequencer
+   tvn = { 1&#39;b1, rExcAdrErr};
+       ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1815" target="file-frame">third_party/cores/fx68k/fx68k.sv:1815</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 3 bits.
+                                                                                           : ... In instance fx68k.uaddrDecode
+ default:   eaDecode = eaBits[5:3];       
+                     ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1226" target="file-frame">third_party/cores/fx68k/fx68k.sv:1226</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;1&#39;bx&#39; generates 1 bits.
+                                                                                           : ... In instance fx68k.excUnit
+   rxReg = 1&#39;bX;
+         ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1231" target="file-frame">third_party/cores/fx68k/fx68k.sv:1231</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;1&#39;bx&#39; generates 1 bits.
+                                                                                           : ... In instance fx68k.excUnit
+   rxReg = 1&#39;bX;
+         ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1236" target="file-frame">third_party/cores/fx68k/fx68k.sv:1236</a>: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;1&#39;bx&#39; generates 1 bits.
+                                                                                           : ... In instance fx68k.excUnit
+   rxReg = 1&#39;bX;
+         ^
 %Warning-WIDTH: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1480" target="file-frame">third_party/cores/fx68k/fx68k.sv:1480</a>: Operator ADD expects 16 bits on the RHS, but RHS&#39;s SEL generates 1 bits.
-%Warning-INITIALDLY: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1165" target="file-frame">third_party/cores/fx68k/fx68k.sv:1165</a>: Delayed assignments (&lt;=) in initial or final block; suggest blocking assignments (=).
-%Warning-INITIALDLY: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1166" target="file-frame">third_party/cores/fx68k/fx68k.sv:1166</a>: Delayed assignments (&lt;=) in initial or final block; suggest blocking assignments (=).
-%Error-BLKANDNBLK: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>: Unsupported: Blocked and non-blocking assignments to same variable: fx68k.Nanod
-%Warning-MULTIDRIVEN: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>: Signal has multiple driving blocks with different clocking: fx68k.Nanod
-%Warning-MULTIDRIVEN: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-874" target="file-frame">third_party/cores/fx68k/fx68k.sv:874</a>: ... Location of first driving block
-%Warning-MULTIDRIVEN: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-719" target="file-frame">third_party/cores/fx68k/fx68k.sv:719</a>: ... Location of other driving block
-%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-459" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:459</a>: Signal unoptimizable: Feedback to clock or circular logic: fx68k.excUnit.alu.aluCorf.htemp
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-459" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:459</a>:  fx68k.excUnit.alu.aluCorf.htemp
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-463" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:463</a>:  ALWAYS
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-463" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:463</a>:  fx68k.excUnit.alu.aluCorf.highC
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-465" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:465</a>:  ALWAYS
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-459" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:459</a>:  fx68k.excUnit.alu.aluCorf.htemp
-%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>: Signal unoptimizable: Feedback to clock or circular logic: fx68k.nDecoder.isPcRel
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>:  fx68k.nDecoder.isPcRel
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-863" target="file-frame">third_party/cores/fx68k/fx68k.sv:863</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:  fx68k.Nanod
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>:  fx68k.nDecoder.isPcRel
-%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>: Signal unoptimizable: Feedback to clock or circular logic: fx68k.Clks
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:  fx68k.Clks
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2218" target="file-frame">third_party/cores/fx68k/fx68k.sv:2218</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2218" target="file-frame">third_party/cores/fx68k/fx68k.sv:2218</a>:  fx68k.busArbiter.__Vsenitemexpr1
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2220" target="file-frame">third_party/cores/fx68k/fx68k.sv:2220</a>:  ACTIVE
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2220" target="file-frame">third_party/cores/fx68k/fx68k.sv:2220</a>:  ASSIGNPRE
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2160" target="file-frame">third_party/cores/fx68k/fx68k.sv:2160</a>:  __Vdly__fx68k.busArbiter.dmaPhase
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2219" target="file-frame">third_party/cores/fx68k/fx68k.sv:2219</a>:  ALWAYS
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:  fx68k.Clks
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-153" target="file-frame">third_party/cores/fx68k/fx68k.sv:153</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:  fx68k.Clks
-%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-276" target="file-frame">third_party/cores/fx68k/fx68k.sv:276</a>: Signal unoptimizable: Feedback to clock or circular logic: fx68k.Irdecod
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-276" target="file-frame">third_party/cores/fx68k/fx68k.sv:276</a>:  fx68k.Irdecod
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-937" target="file-frame">third_party/cores/fx68k/fx68k.sv:937</a>:  ALWAYS
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-276" target="file-frame">third_party/cores/fx68k/fx68k.sv:276</a>:  fx68k.Irdecod
-%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>: Signal unoptimizable: Feedback to clock or circular logic: fx68k.Nanod
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:  fx68k.Nanod
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-766" target="file-frame">third_party/cores/fx68k/fx68k.sv:766</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:  fx68k.Nanod
+                                                                                           : ... In instance fx68k.excUnit
+ wire [31:0] auResult = {Dbh + auInpMux[31:16] + aulow[16], aulow[15:0]};
+                                               ^
+%Warning-INITIALDLY: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1165" target="file-frame">third_party/cores/fx68k/fx68k.sv:1165</a>: Delayed assignments (&lt;=) in initial or final block
+                                                                                                : ... Suggest blocking assignments (=)
+   regs68L[i] &lt;= &#39;0;
+          ^
+%Warning-INITIALDLY: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-1166" target="file-frame">third_party/cores/fx68k/fx68k.sv:1166</a>: Delayed assignments (&lt;=) in initial or final block
+                                                                                                : ... Suggest blocking assignments (=)
+   regs68H[i] &lt;= &#39;0;
+          ^
+%Error-BLKANDNBLK: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>: Unsupported: Blocked and non-blocking assignments to same variable: &#39;fx68k.Nanod&#39;
+ s_nanod Nanod;
+         ^~~~~
+%Warning-MULTIDRIVEN: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>: Signal has multiple driving blocks with different clocking: &#39;fx68k.Nanod&#39;
+                      <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-874" target="file-frame">third_party/cores/fx68k/fx68k.sv:874</a>: ... Location of first driving block
+   Nanod.rxl2db &lt;= Nanod.reg2dbl &amp; !dblSpecial &amp; nanoLatch[ NANO_RXL_DBL];
+   ^~~~~
+                      <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-719" target="file-frame">third_party/cores/fx68k/fx68k.sv:719</a>: ... Location of other driving block
+   Nanod.auClkEn &lt;= !nanoLatch[ NANO_AUCLKEN];
+   ^~~~~
+%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-459" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:459</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;fx68k.excUnit.alu.aluCorf.htemp&#39;
+ reg [8:0] htemp;
+           ^~~~~
+                    <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-459" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:459</a>:      Example path: fx68k.excUnit.alu.aluCorf.htemp
+                    <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-463" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:463</a>:      Example path: ALWAYS
+                    <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-463" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:463</a>:      Example path: fx68k.excUnit.alu.aluCorf.highC
+                    <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-465" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:465</a>:      Example path: ALWAYS
+                    <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-459" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:459</a>:      Example path: fx68k.excUnit.alu.aluCorf.htemp
+%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;fx68k.nDecoder.isPcRel&#39;
+ wire isPcRel = Irdecod.isPcRel &amp; !Nanod.rz;
+      ^~~~~~~
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>:      Example path: fx68k.nDecoder.isPcRel
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-863" target="file-frame">third_party/cores/fx68k/fx68k.sv:863</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:      Example path: fx68k.Nanod
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-857" target="file-frame">third_party/cores/fx68k/fx68k.sv:857</a>:      Example path: fx68k.nDecoder.isPcRel
+%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;fx68k.Clks&#39;
+ s_clks Clks;
+        ^~~~
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:      Example path: fx68k.Clks
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2218" target="file-frame">third_party/cores/fx68k/fx68k.sv:2218</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2218" target="file-frame">third_party/cores/fx68k/fx68k.sv:2218</a>:      Example path: fx68k.busArbiter.__Vsenitemexpr1
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2220" target="file-frame">third_party/cores/fx68k/fx68k.sv:2220</a>:      Example path: ACTIVE
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2220" target="file-frame">third_party/cores/fx68k/fx68k.sv:2220</a>:      Example path: ASSIGNPRE
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2160" target="file-frame">third_party/cores/fx68k/fx68k.sv:2160</a>:      Example path: __Vdly__fx68k.busArbiter.dmaPhase
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-2218" target="file-frame">third_party/cores/fx68k/fx68k.sv:2218</a>:      Example path: ALWAYS
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:      Example path: fx68k.Clks
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-153" target="file-frame">third_party/cores/fx68k/fx68k.sv:153</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-151" target="file-frame">third_party/cores/fx68k/fx68k.sv:151</a>:      Example path: fx68k.Clks
+%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-276" target="file-frame">third_party/cores/fx68k/fx68k.sv:276</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;fx68k.Irdecod&#39;
+ s_irdecod Irdecod;
+           ^~~~~~~
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-276" target="file-frame">third_party/cores/fx68k/fx68k.sv:276</a>:      Example path: fx68k.Irdecod
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-937" target="file-frame">third_party/cores/fx68k/fx68k.sv:937</a>:      Example path: ALWAYS
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-276" target="file-frame">third_party/cores/fx68k/fx68k.sv:276</a>:      Example path: fx68k.Irdecod
+%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;fx68k.Nanod&#39;
+ s_nanod Nanod;
+         ^~~~~
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:      Example path: fx68k.Nanod
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-766" target="file-frame">third_party/cores/fx68k/fx68k.sv:766</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-274" target="file-frame">third_party/cores/fx68k/fx68k.sv:274</a>:      Example path: fx68k.Nanod
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
 
 </pre>
 </body>

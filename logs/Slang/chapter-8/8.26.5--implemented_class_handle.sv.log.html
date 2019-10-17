@@ -13,11 +13,25 @@ tags: 8.26.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.007s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv:8</a>:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv:12</a>:2: error: language feature not yet supported
+	class Hello implements ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv:18</a>:2: error: use of undeclared identifier &#39;Hello&#39;
+	Hello obj;
+	^~~~~
+../..<a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html#l-19" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv:19</a>:2: error: use of undeclared identifier &#39;ihello&#39;
+	ihello iobj;
+	^~~~~~
+../..<a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv:22</a>:9: error: language feature not yet supported
+		obj = new;
+		      ^~~
 
 </pre>
 </body>

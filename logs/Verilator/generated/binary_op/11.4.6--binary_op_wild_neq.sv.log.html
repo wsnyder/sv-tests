@@ -13,13 +13,16 @@ tags: 11.4.6
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op
 top_module: 
 files: <a href="../../../../tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv.html" target="file-frame">tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.088s
 </pre>
 <pre>
 
-%Error: Internal Error: <a href="../../../../tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv:12</a>: ../V3Width.cpp:3316: Node needs sign change, but bad case: NEQWILD 0x555d2a306360 &lt;e45&gt; {d12} @dt=0x555d2a30ceb0@(G/nw1)
-%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op <a href="../../../../tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv.html" target="file-frame">tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv</a>
+%Error: Internal Error: <a href="../../../../tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv:12</a>: ../V3Width.cpp:3706: Node needs sign change, but bad case: NEQWILD 0x55da2afe0df0 &lt;e45&gt; {c12} @dt=0x55da2afe9ad0@(G/nw1)
+                                                                                                                        : ... In instance top
+    c = a !=? b;
+          ^~~
+                        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op <a href="../../../../tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv.html" target="file-frame">tests/generated/binary_op/11.4.6--binary_op_wild_neq.sv</a>
 
 </pre>
 </body>

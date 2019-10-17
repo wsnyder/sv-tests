@@ -17,22 +17,30 @@ time_elapsed: 0.087s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>: Cannot find file containing module: dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.v
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       dff_s.v
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       dff_s.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       obj_dir/dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       obj_dir/dff_s.v
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>:       obj_dir/dff_s.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-53" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:53</a>: Cannot find file containing module: dffe_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-60" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:60</a>: Cannot find file containing module: dff_s
-%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-66" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:66</a>: Cannot find file containing module: sink
-%Error: Exiting due to 14 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-49" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:49</a>: Cannot find file containing module: &#39;dff_s&#39;
+dff_s #(1) snap_inst0(.q(snap_f), .din(ctu_sscan_snap), .clk(rclk), .se(se), .si(), .so());
+^~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_s.sv
+             dff_s
+             dff_s.v
+             dff_s.sv
+             obj_dir/dff_s
+             obj_dir/dff_s.v
+             obj_dir/dff_s.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-53" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:53</a>: Cannot find file containing module: &#39;dffe_s&#39;
+dffe_s #(94) snap_inst1(.q(snap_data_f), .din(snap_data), .clk(rclk), .en(snap_f), .se(se), .si(), .so());
+^~~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-60" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:60</a>: Cannot find file containing module: &#39;dff_s&#39;
+dff_s #(94) snap_inst2(.q(snap_data_ff), .din(snap_data_f), .clk(ctu_tck), .se(ctu_sscan_se), 
+^~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html#l-66" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v:66</a>: Cannot find file containing module: &#39;sink&#39;
+sink #(94) s0(.in (snap_data_ff));
+^~~~
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_ifu_sscan.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ifu_sscan.v</a>
 
 </pre>
 </body>

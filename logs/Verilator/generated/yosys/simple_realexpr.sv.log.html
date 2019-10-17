@@ -13,17 +13,65 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v</a>
-time_elapsed: 0.097s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:15</a>: Unsupported: Multiple top level modules: demo_002 and demo_001
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:15</a>: Fix, or use --top-module option to select which you want.
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:30</a>: Unsupported: Multiple top level modules: demo_004 and demo_002
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:30</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 4 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:15</a>: Multiple top level modules
+                                                                                                           : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                           : ... Top module &#39;demo_001&#39;
+module demo_001(y1, y2, y3, y4);
+       ^~~~~~~~
+                                                                                                           : ... Top module &#39;demo_002&#39;
+module demo_002(y0, y1, y2, y3);
+       ^~~~~~~~
+                                                                                                           : ... Top module &#39;demo_004&#39;
+module demo_004(output A, B, C, D);
+       ^~~~~~~~
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:4</a>: Implicit conversion of real to integer
+ localparam [7:0] p1 = 123.45;
+                       ^~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-27" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:27</a>: Operator ITORD expects 32 bits on the LHS, but LHS&#39;s CONST &#39;64&#39;h312e303030303030&#39; generates 64 bits.
+                                                                                                        : ... In instance demo_004.demo_real
+ assign B = (p!=&#34;1.000000&#34;);
+                ^~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:18</a>: Operator ITORD expects 32 bits on the LHS, but LHS&#39;s CONST &#39;1&#39;bx&#39; generates 1 bits.
+                                                                                                        : ... In instance demo_002
+ assign y0 = 1&#39;bx &gt;= (-1 * -1.17);
+             ^~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:18</a>: Operator ASSIGNW expects 64 bits on the Assign RHS, but Assign RHS&#39;s GTED generates 1 bits.
+                                                                                                        : ... In instance demo_002
+ assign y0 = 1&#39;bx &gt;= (-1 * -1.17);
+           ^
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-19" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:19</a>: Implicit conversion of real to integer
+ assign y1 = 1 ?  1 ?  -1 : &#39;d0 : 0.0;
+               ^
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-20" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:20</a>: Implicit conversion of real to integer
+ assign y2 = 1 ? -1 :   1 ? &#39;d0 : 0.0;
+               ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:4</a>: Operator VAR &#39;p1&#39; expects 8 bits on the Initial value, but Initial value&#39;s CONST &#39;32&#39;h7b&#39; generates 32 bits.
+                                                                                                       : ... In instance demo_001
+ localparam [7:0] p1 = 123.45;
+                  ^~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:9</a>: Operator ITORD expects 32 bits on the LHS, but LHS&#39;s VARREF &#39;p1&#39; generates 8 bits.
+                                                                                                       : ... In instance demo_001
+ assign y1 = p1 + 0.2;
+             ^~
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-9" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:9</a>: Implicit conversion of real to integer
+ assign y1 = p1 + 0.2;
+                ^
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-10" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:10</a>: Implicit conversion of real to integer
+ assign y2 = p2 + 0.2;
+                ^
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-11" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:11</a>: Implicit conversion of real to integer
+ assign y3 = p3 + 0.2;
+                ^
+%Warning-REALCVT: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-12" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:12</a>: Implicit conversion of real to integer
+ assign y4 = p4 + 0.2;
+                ^
+%Error: Internal Error: ../V3Number.cpp:706: toUInt with 4-state 32&#39;bx
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v</a>
 
 </pre>
 </body>

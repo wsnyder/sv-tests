@@ -13,18 +13,28 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.096s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: randsequence
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;randsequence&#39;
+ randsequence( bin_op )
+ ^~~~~~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:5</a>: syntax error, unexpected void
+  void bin_op : value operator value  
+  ^~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:8</a>: syntax error, unexpected IDENTIFIER, expecting &#34;&#39;{&#34;
+  bit [7:0] value : { return $urandom; } ;
+            ^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:8</a>: Unsupported or unknown PLI call: $urandom
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endsequence
+  bit [7:0] value : { return $urandom; } ;
+                             ^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endsequence&#39;
+ endsequence
+ ^~~~~~~~~~~
 %Error: Exiting due to 5 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv</a>
 
 </pre>
 </body>

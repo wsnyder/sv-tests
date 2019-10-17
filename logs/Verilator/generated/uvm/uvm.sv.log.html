@@ -13,64 +13,319 @@ tags: uvm
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/uvm/src
 top_module: 
 files: <a href="../../../../third_party/tests/uvm/src/uvm.sv.html" target="file-frame">third_party/tests/uvm/src/uvm.sv</a>
-time_elapsed: 0.118s
+time_elapsed: 0.366s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_field_op.svh.html#l-36" target="file-frame">third_party/tests/uvm/src/base/uvm_field_op.svh:36</a>: Expecting ) or , to end argument list for define reference. Found: STRIFY
-%Error: <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: `&#34; not terminated at EOF
-%Error: <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: `ifdef not terminated at EOF
-%Error: <a href="../../../../third_party/tests/uvm/src/dpi/uvm_hdl.svh.html#l-92" target="file-frame">third_party/tests/uvm/src/dpi/uvm_hdl.svh:92</a>: syntax error, unexpected void
 %Warning-STMTDLY: <a href="../../../../third_party/tests/uvm/src/dpi/uvm_hdl.svh.html#l-97" target="file-frame">third_party/tests/uvm/src/dpi/uvm_hdl.svh:97</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
-%Error: <a href="../../../../third_party/tests/uvm/src/dpi/uvm_hdl.svh.html#l-98" target="file-frame">third_party/tests/uvm/src/dpi/uvm_hdl.svh:98</a>: syntax error, unexpected void
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-30" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:30</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_object_globals.svh.html#l-716" target="file-frame">third_party/tests/uvm/src/base/uvm_object_globals.svh:716</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_object_globals.svh.html#l-717" target="file-frame">third_party/tests/uvm/src/base/uvm_object_globals.svh:717</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-45" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:45</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-45" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:45</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-46" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:46</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-52" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:52</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-54" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:54</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-55" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:55</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-57" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:57</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+    #force_time;
+    ^
+                  <a href="../../../../third_party/tests/uvm/src/dpi/uvm_dpi.svh.html#l-41" target="file-frame">third_party/tests/uvm/src/dpi/uvm_dpi.svh:41</a>: ... note: In file included from uvm_dpi.svh
+                  <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-31" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:31</a>: ... note: In file included from uvm_pkg.sv
+                  <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-30" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:30</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+  typedef class uvm_cmdline_processor;
+          ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_object_globals.svh.html#l-716" target="file-frame">third_party/tests/uvm/src/base/uvm_object_globals.svh:716</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_object_wrapper;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-39" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:39</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_object_globals.svh.html#l-717" target="file-frame">third_party/tests/uvm/src/base/uvm_object_globals.svh:717</a>: Unsupported: $ expression
+uvm_object_wrapper uvm_deferred_init[$];
+                                     ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-39" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:39</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-45" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:45</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+virtual class uvm_void;
+^~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-45" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:45</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+virtual class uvm_void;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-45" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:45</a>: syntax error, unexpected IDENTIFIER
+virtual class uvm_void;
+              ^~~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-46" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:46</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-52" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:52</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_object;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-54" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:54</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_coreservice_t;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-55" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:55</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_factory;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-57" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:57</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_config_db;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-60" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:60</a>: syntax error, unexpected &#39;#&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-63" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:63</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-64" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:64</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-65" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:65</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-66" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:66</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+typedef uvm_config_db#(uvm_object) m_uvm_config_obj_misc;
+                     ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-63" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:63</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_comparer ;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-64" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:64</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_packer ;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-65" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:65</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_recorder ;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-66" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:66</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_printer ;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-74" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:74</a>: Unsupported or unknown PLI call: $urandom
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-84" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:84</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+int unsigned uvm_global_random_seed = $urandom;
+                                      ^~~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-84" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:84</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class uvm_seed_map;
+^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-84" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:84</a>: syntax error, unexpected IDENTIFIER
+class uvm_seed_map;
+      ^~~~~~~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-85" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:85</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
+  int unsigned seed_table [string];
+                                 ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-86" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:86</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-87" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:87</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+  int unsigned count [string];
+                            ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-87" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:87</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-115" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:115</a>: syntax error, unexpected --, expecting TYPE-IDENTIFIER
+    c = uvm_instance_scope[--pos];
+                           ^~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-164" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:164</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-170" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:170</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+  uvm_seed_map seed_map;
+               ^~~~~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-170" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:170</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+    uvm_random_seed_table_lookup[inst_id] = new;
+                                            ^~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-170" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:170</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-196" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:196</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: null
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-196" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:196</a>: syntax error, unexpected &#39;)&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-383" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:383</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-384" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:384</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-385" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:385</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-502" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:502</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: ref
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-502" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:502</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-27" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:27</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-28" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:28</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-29" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:29</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-30" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:30</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-31" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:31</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+    uvm_random_seed_table_lookup[inst_id] = new;
+                                               ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-196" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:196</a>: Unsupported: null expression
+  if (v == null)
+           ^~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-383" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:383</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_component;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-384" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:384</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_root;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-385" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:385</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_report_object;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_misc.svh.html#l-502" target="file-frame">third_party/tests/uvm/src/base/uvm_misc.svh:502</a>: Unsupported: $ expression
+function automatic string m_uvm_string_queue_join(ref string i[$]);
+                                                               ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-40" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:40</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-27" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:27</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_factory;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-27" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:27</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
+typedef class uvm_factory;
+                         ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-28" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:28</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_default_factory;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-29" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:29</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_report_server;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-30" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:30</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_default_report_server;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-31" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:31</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_root;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-31" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:31</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-32" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:32</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-33" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:33</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-34" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:34</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+typedef class uvm_root;
+                      ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-32" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:32</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_visitor;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-33" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:33</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_component_name_check_visitor;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-34" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:34</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_component;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-34" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:34</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-35" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:35</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+typedef class uvm_component;
+                           ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-35" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:35</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_comparer;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-35" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:35</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
-%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-36" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:36</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+typedef class uvm_comparer;
+                          ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-36" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:36</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_copier;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-37" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:37</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_packer;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-37" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:37</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
+typedef class uvm_packer;
+                        ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-38" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:38</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_printer;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-38" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:38</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
+typedef class uvm_printer;
+                         ^
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
+%Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_coreservice.svh.html#l-39" target="file-frame">third_party/tests/uvm/src/base/uvm_coreservice.svh:39</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+typedef class uvm_table_printer;
+        ^~~~~
+        <a href="../../../../third_party/tests/uvm/src/base/uvm_base.svh.html#l-42" target="file-frame">third_party/tests/uvm/src/base/uvm_base.svh:42</a>: ... note: In file included from uvm_base.svh
+        <a href="../../../../third_party/tests/uvm/src/uvm_pkg.sv.html#l-32" target="file-frame">third_party/tests/uvm/src/uvm_pkg.sv:32</a>: ... note: In file included from uvm_pkg.sv
+        <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: ... note: In file included from uvm.sv
 %Error: Exiting due to too many errors encountered; --error-limit=50
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/uvm/src <a href="../../../../third_party/tests/uvm/src/uvm.sv.html" target="file-frame">third_party/tests/uvm/src/uvm.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/uvm/src <a href="../../../../third_party/tests/uvm/src/uvm.sv.html" target="file-frame">third_party/tests/uvm/src/uvm.sv</a>
 
 </pre>
 </body>

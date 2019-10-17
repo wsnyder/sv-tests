@@ -13,11 +13,19 @@ tags: 8.26.6.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.008s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv:8</a>:2: error: language feature not yet supported
+	interface class ic1#(type T = logic);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv:12</a>:2: error: language feature not yet supported
+	interface class ic2#(type T = logic);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict.sv:16</a>:2: error: language feature not yet supported
+	interface class ic3#(type TYPE = logic) extends ic1#(TYPE), ic2#(TYPE);
+	^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

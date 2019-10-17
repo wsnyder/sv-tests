@@ -13,11 +13,16 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/std-3.11.1-parameters.v.html" target="file-frame">third_party/tests/utd-sv/std-3.11.1-parameters.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/std-3.11.1-parameters.v.html#l-13" target="file-frame">third_party/tests/utd-sv/std-3.11.1-parameters.v:13</a>:11: error: redefinition of &#39;newconst&#39; with a different type: &#39;int&#39; vs &#39;bit[2:0]&#39;
+parameter newconst = 4;
+          ^
+../..<a href="../../../../third_party/tests/utd-sv/std-3.11.1-parameters.v.html#l-12" target="file-frame">third_party/tests/utd-sv/std-3.11.1-parameters.v:12</a>:11: note: previous definition here
+parameter newconst = 3&#39;h4;
+          ^
 
 </pre>
 </body>

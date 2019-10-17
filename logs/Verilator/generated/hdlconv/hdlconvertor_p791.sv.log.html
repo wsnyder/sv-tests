@@ -13,17 +13,19 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv</a>
-time_elapsed: 0.096s
+time_elapsed: 0.099s
 </pre>
 <pre>
 
-%Warning-UNOPTFLAT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10</a>: Signal unoptimizable: Feedback to clock or circular logic: addergen1.c
-%Warning-UNOPTFLAT: Use &#34;/* verilator lint_off UNOPTFLAT */&#34; and lint_on around source to disable this message.
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10</a>:  addergen1.c
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:19</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:15</a>:  addergen1.bitnum[0].t3
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:20</a>:  ASSIGNW
-%Warning-UNOPTFLAT:      Example path: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10</a>:  addergen1.c
+%Warning-UNOPTFLAT: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;addergen1.c&#39;
+[SIZE :0] c;
+          ^
+                    ... Use &#34;/* verilator lint_off UNOPTFLAT */&#34; and lint_on around source to disable this message.
+                    <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10</a>:      Example path: addergen1.c
+                    <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:19</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:15</a>:      Example path: addergen1.bitnum[0].t3
+                    <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:20</a>:      Example path: ASSIGNW
+                    <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p791.sv:10</a>:      Example path: addergen1.c
 
 </pre>
 </body>

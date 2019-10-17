@@ -13,12 +13,15 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/subbytes.v.html" target="file-frame">third_party/tools/yosys/tests/simple/subbytes.v</a>
-time_elapsed: 0.093s
+time_elapsed: 0.095s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/subbytes.v.html#l-67" target="file-frame">third_party/tools/yosys/tests/simple/subbytes.v:67</a>: Logical Operator IF expects 1 bit on the If, but If&#39;s VARREF &#39;state&#39; generates 2 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                        : ... In instance subbytes_00
+ if (state) begin
+ ^~
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

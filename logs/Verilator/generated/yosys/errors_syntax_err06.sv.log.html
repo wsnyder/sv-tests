@@ -13,12 +13,14 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err06.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err06.v</a>
-time_elapsed: 0.088s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
 %Warning-ENDLABEL: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err06.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err06.v:4</a>: End label &#39;label2&#39; does not match begin label &#39;label1&#39;
-%Warning-ENDLABEL: Use &#34;/* verilator lint_off ENDLABEL */&#34; and lint_on around source to disable this message.
+end: label2
+     ^~~~~~
+                   ... Use &#34;/* verilator lint_off ENDLABEL */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

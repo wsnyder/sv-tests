@@ -13,25 +13,31 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>: Cannot find file containing module: dffrl_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns.v
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       dffrl_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       dffrl_ns.v
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       dffrl_ns.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       obj_dir/dffrl_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       obj_dir/dffrl_ns.v
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:       obj_dir/dffrl_ns.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-108" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:108</a>: Cannot find file containing module: dffrl_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-117" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:117</a>: Cannot find file containing module: dff_ns
-%Error: Exiting due to 13 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>: Cannot find file containing module: &#39;dffrl_ns&#39;
+   dffrl_ns #(1) stall_d1_ff (.din(stall),
+   ^~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dffrl_ns.sv
+             dffrl_ns
+             dffrl_ns.v
+             dffrl_ns.sv
+             obj_dir/dffrl_ns
+             obj_dir/dffrl_ns.v
+             obj_dir/dffrl_ns.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-108" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:108</a>: Cannot find file containing module: &#39;dffrl_ns&#39;
+   dffrl_ns #((REG_WIDTH+64)/UCB_BUS_WIDTH) outdata_vec_ff (.din(outdata_vec_next),
+   ^~~~~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-117" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:117</a>: Cannot find file containing module: &#39;dff_ns&#39;
+   dff_ns #(REG_WIDTH+64) outdata_buf_ff (.din(outdata_buf_next),
+   ^~~~~~
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v</a>
 
 </pre>
 </body>

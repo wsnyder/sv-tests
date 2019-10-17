@@ -13,11 +13,43 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-58" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:58</a>:12: error: identifier &#39;UCB_BUS_WIDTH&#39; used before its declaration
+   output [UCB_BUS_WIDTH-1:0] 		data;
+           ^~~~~~~~~~~~~      		
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-47" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:47</a>:14: note: declared here
+   parameter UCB_BUS_WIDTH = 32;
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-64" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:64</a>:11: error: identifier &#39;REG_WIDTH&#39; used before its declaration
+   input [REG_WIDTH+63:0] 		outdata_buf_in;
+          ^~~~~~~~~       		
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-48" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:48</a>:14: note: declared here
+   parameter REG_WIDTH = 64;            // maximum data bits that needs to
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-65" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:65</a>:12: error: identifier &#39;REG_WIDTH&#39; used before its declaration
+   input [(REG_WIDTH+64)/UCB_BUS_WIDTH-1:0] outdata_vec_in;
+           ^~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-48" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:48</a>:14: note: declared here
+   parameter REG_WIDTH = 64;            // maximum data bits that needs to
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-65" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:65</a>:26: error: identifier &#39;UCB_BUS_WIDTH&#39; used before its declaration
+   input [(REG_WIDTH+64)/UCB_BUS_WIDTH-1:0] outdata_vec_in;
+                         ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-47" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:47</a>:14: note: declared here
+   parameter UCB_BUS_WIDTH = 32;
+             ^
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-88" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:88</a>:4: error: unknown module &#39;dffrl_ns&#39;
+   dffrl_ns #(1) stall_d1_ff (.din(stall),
+   ^~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-108" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:108</a>:4: error: unknown module &#39;dffrl_ns&#39;
+   dffrl_ns #((REG_WIDTH+64)/UCB_BUS_WIDTH) outdata_vec_ff (.din(outdata_vec_next),
+   ^~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/ucb_bus_out.v.html#l-117" target="file-frame">third_party/tests/utd-sv/ucb_bus_out.v:117</a>:4: error: unknown module &#39;dff_ns&#39;
+   dff_ns #(REG_WIDTH+64) outdata_buf_ff (.din(outdata_buf_next),
+   ^~~~~~
 
 </pre>
 </body>

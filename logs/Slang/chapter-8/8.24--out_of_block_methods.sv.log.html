@@ -13,11 +13,22 @@ tags: 8.24
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-8" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:8</a>:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-15" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:15</a>:3: error: use of undeclared identifier &#39;a&#39;
+		a += val;
+		^
+../..<a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-18" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:18</a>:2: error: &#39;test_cls&#39; is not a type
+	test_cls test_obj;
+	^~~~~~~~
+../..<a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-21" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:21</a>:14: error: language feature not yet supported
+		test_obj = new;
+		           ^~~
 
 </pre>
 </body>

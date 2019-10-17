@@ -13,11 +13,16 @@ tags: 7.10.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
 files: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html" target="file-frame">tests/chapter-7/queues/delete_assign.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.008s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-9" target="file-frame">tests/chapter-7/queues/delete_assign.sv:9</a>:6: error: dimension requires a constant range
+int q[$];
+     ^~~
+../..<a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-19" target="file-frame">tests/chapter-7/queues/delete_assign.sv:19</a>:6: error: language feature not yet supported
+	q = {}; // q.delete
+	    ^~
 
 </pre>
 </body>

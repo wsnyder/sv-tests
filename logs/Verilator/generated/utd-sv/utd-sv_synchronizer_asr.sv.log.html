@@ -13,25 +13,31 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v</a>
-time_elapsed: 0.088s
+time_elapsed: 0.086s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>: Cannot find file containing module: bw_u1_soffasr_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_soffasr_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_soffasr_2x.v
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_soffasr_2x.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       bw_u1_soffasr_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       bw_u1_soffasr_2x.v
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       bw_u1_soffasr_2x.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       obj_dir/bw_u1_soffasr_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       obj_dir/bw_u1_soffasr_2x.v
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>:       obj_dir/bw_u1_soffasr_2x.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-52" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:52</a>: Cannot find file containing module: bw_u1_scanl_2x
-%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-58" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:58</a>: Cannot find file containing module: bw_u1_soffasr_2x
-%Error: Exiting due to 13 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-42" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:42</a>: Cannot find file containing module: &#39;bw_u1_soffasr_2x&#39;
+   bw_u1_soffasr_2x repeater (
+   ^~~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_soffasr_2x
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_soffasr_2x.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/bw_u1_soffasr_2x.sv
+             bw_u1_soffasr_2x
+             bw_u1_soffasr_2x.v
+             bw_u1_soffasr_2x.sv
+             obj_dir/bw_u1_soffasr_2x
+             obj_dir/bw_u1_soffasr_2x.v
+             obj_dir/bw_u1_soffasr_2x.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-52" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:52</a>: Cannot find file containing module: &#39;bw_u1_scanl_2x&#39;
+   bw_u1_scanl_2x lockup (
+   ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html#l-58" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v:58</a>: Cannot find file containing module: &#39;bw_u1_soffasr_2x&#39;
+   bw_u1_soffasr_2x syncff (
+   ^~~~~~~~~~~~~~~~
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/synchronizer_asr.v.html" target="file-frame">third_party/tests/utd-sv/synchronizer_asr.v</a>
 
 </pre>
 </body>

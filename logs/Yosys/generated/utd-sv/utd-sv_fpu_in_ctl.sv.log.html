@@ -6,27 +6,22 @@
 </head>
 <body>
 <h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>
-time_elapsed: 0.042s
+time_elapsed: 0.021s
 </pre>
 <pre>
 
 
 -- Executing script file `scr.ys&#39; --
 
-1. Executing Verilog-2005 frontend.
-Parsing SystemVerilog input from `<a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>&#39; to AST representation.
-Generating RTLIL representation for module `\fpu_in_ctl&#39;.
-Warning: Identifier `\in_ctl_rst_l&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-201" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:201</a>.
-Warning: Identifier `\inq_adda_dly&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-820" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:820</a>.
-Warning: Identifier `\inq_mula_dly&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-833" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:833</a>.
-Successfully finished Verilog frontend.
+1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>
+<a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-514" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:514</a>: ERROR: syntax error, unexpected TOK_CONSTVAL, expecting &#39;(&#39;
 
 </pre>
 </body>

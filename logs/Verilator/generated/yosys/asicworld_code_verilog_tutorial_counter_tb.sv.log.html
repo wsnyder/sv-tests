@@ -13,34 +13,68 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v</a>
-time_elapsed: 0.089s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:30</a>: Unsupported: Verilog 1995 reserved word not implemented: event
-%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:30</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
-%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:31</a>: Unsupported: Verilog 1995 reserved word not implemented: event
-%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:34</a>: Define or directive not defined: `outfile
+%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-30" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:30</a>: Unsupported: event data types
+event reset_enable;
+^~~~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:31</a>: Unsupported: event data types
+event terminate_sim;
+^~~~~
+%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:34</a>: Define or directive not defined: &#39;`outfile&#39;
+ file = $fopen(`outfile);
+               ^~~~~~~~
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:34</a>: syntax error, unexpected &#39;)&#39;, expecting TYPE-IDENTIFIER
+ file = $fopen(`outfile);
+                       ^
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-37" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:37</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+  #5 clk = !clk;
+  ^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-40" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:40</a>: syntax error, unexpected &#39;@&#39;
+@ (terminate_sim)  begin
+^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-43" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:43</a>: syntax error, unexpected $fdisplay
+   $fdisplay (file, &#34;Simulation Result : PASSED&#34;);
+   ^~~~~~~~~
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-46" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:46</a>: syntax error, unexpected $fdisplay
-%Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-54" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:54</a>: Unsupported: Verilog 1995 reserved word not implemented: event
+   $fdisplay (file, &#34;Simulation Result : FAILED&#34;);
+   ^~~~~~~~~
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-58" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:58</a>: syntax error, unexpected &#39;@&#39;
+ @ (reset_enable);
+ ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-62" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:62</a>: syntax error, unexpected &#39;@&#39;
+ @ (negedge clk)
+ ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-65" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:65</a>: syntax error, unexpected -&gt;
+ -&gt; reset_done;
+ ^~
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-69" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:69</a>: syntax error, unexpected -&gt;
+  #10 -&gt; reset_enable;
+      ^~
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-69" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:69</a>: Unsupported: Ignoring delay on this delayed statement.
+  #10 -&gt; reset_enable;
+  ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-75" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:75</a>: syntax error, unexpected &#39;@&#39;
+   @ (negedge clk);
+   ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-78" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:78</a>: syntax error, unexpected -&gt;
+  #5 -&gt; terminate_sim;
+     ^~
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-78" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:78</a>: Unsupported: Ignoring delay on this delayed statement.
+  #5 -&gt; terminate_sim;
+  ^
 %Error: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:97</a>: syntax error, unexpected -&gt;
+  #5 -&gt; terminate_sim;
+     ^~
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html#l-97" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v:97</a>: Unsupported: Ignoring delay on this delayed statement.
-%Error: Exiting due to 16 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v</a>
+  #5 -&gt; terminate_sim;
+  ^
+%Error: Exiting due to 14 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_counter_tb.v</a>
 
 </pre>
 </body>

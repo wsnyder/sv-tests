@@ -13,13 +13,15 @@ tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.093s
 </pre>
 <pre>
 
-%Error: Internal Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv:20</a>: ../V3EmitC.cpp:758: Unknown node type reached emitter: SLICESEL
-%Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv</a>
+%Error: Internal Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv:20</a>: ../V3EmitC.cpp:868: Unknown node type reached emitter: SLICESEL
+ $display(&#34;:assert: (%d == 1)&#34;, (arr_a[7:4] == arr_b[3:0]));
+                                      ^
+                        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv</a>
 
 </pre>
 </body>

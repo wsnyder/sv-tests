@@ -18,7 +18,10 @@ time_elapsed: 0.091s
 <pre>
 
 %Warning-WIDTH: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv.html#l-14" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_inv.sv:14</a>: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS&#39;s STREAML generates 96 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                         : ... In instance top
+ int d = {&lt;&lt;{a, b, c}};
+          ^~
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

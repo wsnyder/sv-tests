@@ -13,11 +13,19 @@ tags: 8.26.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:8</a>:2: error: language feature not yet supported
+	interface class ihello;
+	^~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:12</a>:2: error: use of undeclared identifier &#39;ihello&#39;
+	ihello obj;
+	^~~~~~
+../..<a href="../../../tests/chapter-8/8.26.5--invalid_interface_instantiation.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.5--invalid_interface_instantiation.sv:15</a>:9: error: language feature not yet supported
+		obj = new;
+		      ^~~
 
 </pre>
 </body>

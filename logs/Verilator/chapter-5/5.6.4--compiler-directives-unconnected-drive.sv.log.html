@@ -13,14 +13,19 @@ tags: 5.6.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.092s
 </pre>
 <pre>
 
-%Error: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html#l-9" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv:9</a>: Define or directive not defined: `unconnected_drive
-%Error: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html#l-9" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv:9</a>: Unsupported: Verilog 1995 reserved word not implemented: pull1
+%Error: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html#l-9" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv:9</a>: Define or directive not defined: &#39;`unconnected_drive&#39;
+                                                                                                               : ... Suggested alternative: &#39;`nounconnected_drive&#39;
+`unconnected_drive pull1
+^~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html#l-9" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv:9</a>: syntax error, unexpected STRENGTH keyword (strong1/etc)
+`unconnected_drive pull1
+                   ^~~~~
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5 <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5 <a href="../../../tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-unconnected-drive.sv</a>
 
 </pre>
 </body>

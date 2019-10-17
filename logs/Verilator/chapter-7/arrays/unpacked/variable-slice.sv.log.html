@@ -13,13 +13,20 @@ tags: 7.4.3 7.4.6
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
 %Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-22" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:22</a>: Illegal +: or -: select; type already selected, or bad dimension: type is UNPACKARRAYDTYPE
-%Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
+                                                                                                  : ... In instance top
+ arr_b[4+:c] = arr_a[1+:c];
+      ^
+%Error: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-22" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:22</a>: Illegal +: or -: select; type already selected, or bad dimension: type is UNPACKARRAYDTYPE
+                                                                                                  : ... In instance top
+ arr_b[4+:c] = arr_a[1+:c];
+                    ^
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
 
 </pre>
 </body>

@@ -13,17 +13,25 @@ tags: 7.5.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+    arr = new [ 16 ];
+          ^~~
 %Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:12</a>: syntax error, unexpected &#39;[&#39;, expecting TYPE-IDENTIFIER
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: new
+    arr = new [ 16 ];
+              ^
+%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+    arr = new [ 8 ];
+          ^~~
 %Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv:14</a>: syntax error, unexpected &#39;[&#39;, expecting TYPE-IDENTIFIER
-%Error: Exiting due to 5 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv</a>
+    arr = new [ 8 ];
+              ^
+%Error: Exiting due to 4 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic <a href="../../../../../tests/chapter-7/arrays/dynamic/op-size.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-size.sv</a>
 
 </pre>
 </body>

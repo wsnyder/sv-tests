@@ -13,12 +13,15 @@ tags: 11.4.14.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_pad.sv.html" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_pad.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.100s
 </pre>
 <pre>
 
 %Warning-WIDTH: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_pad.sv.html#l-14" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_pad.sv:14</a>: Operator ASSIGN expects 128 bits on the Assign RHS, but Assign RHS&#39;s STREAML generates 96 bits.
-%Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+                                                                                                         : ... In instance top
+ bit [127:0] d = {&lt;&lt;{a, b, c}};
+                  ^~
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
 
 </pre>
 </body>

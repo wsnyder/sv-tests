@@ -18,8 +18,10 @@ time_elapsed: 0.088s
 <pre>
 
 %Error: <a href="../../../../tests/generic/typedef/typedef_test_6.sv.html#l-7" target="file-frame">tests/generic/typedef/typedef_test_6.sv:7</a>: syntax error, unexpected IDENTIFIER, expecting TYPE-IDENTIFIER
+typedef struct { int i; bool b; } mystruct;
+                        ^~~~
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_6.sv.html" target="file-frame">tests/generic/typedef/typedef_test_6.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_6.sv.html" target="file-frame">tests/generic/typedef/typedef_test_6.sv</a>
 
 </pre>
 </body>

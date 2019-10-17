@@ -6,22 +6,54 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v</a>
-time_elapsed: 0.091s
+time_elapsed: 0.103s
 </pre>
 <pre>
 
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:7</a>: Unsupported: Multiple top level modules: wreduce_test1 and wreduce_test0
-%Error-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:7</a>: Fix, or use --top-module option to select which you want.
-%Error: Exiting due to 2 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v</a>
+%Warning-MULTITOP: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-7" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:7</a>: Multiple top level modules
+                                                                                                         : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                         : ... Top module &#39;wreduce_test0&#39;
+module wreduce_test0(input [7:0] a, b, output [15:0] x, y, z);
+       ^~~~~~~~~~~~~
+                                                                                                         : ... Top module &#39;wreduce_test1&#39;
+module wreduce_test1(input [31:0] a, b, output [7:0] x, y, z, w);
+       ^~~~~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:8</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SUB generates 32 bits.
+                                                                                                      : ... In instance wreduce_test1
+  assign x = a - b, y = a * b, z = a &gt;&gt; b, w = a &lt;&lt; b;
+           ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:8</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s MUL generates 32 bits.
+                                                                                                      : ... In instance wreduce_test1
+  assign x = a - b, y = a * b, z = a &gt;&gt; b, w = a &lt;&lt; b;
+                      ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:8</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SHIFTR generates 32 bits.
+                                                                                                      : ... In instance wreduce_test1
+  assign x = a - b, y = a * b, z = a &gt;&gt; b, w = a &lt;&lt; b;
+                                 ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:8</a>: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS&#39;s SHIFTL generates 32 bits.
+                                                                                                      : ... In instance wreduce_test1
+  assign x = a - b, y = a * b, z = a &gt;&gt; b, w = a &lt;&lt; b;
+                                             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-2" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:2</a>: Operator NEGATE expects 16 bits on the LHS, but LHS&#39;s SIGNED generates 9 bits.
+                                                                                                      : ... In instance wreduce_test0
+  assign x = -$signed({1&#39;b0, a});
+             ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:3</a>: Operator ADD expects 16 bits on the LHS, but LHS&#39;s SIGNED generates 9 bits.
+                                                                                                      : ... In instance wreduce_test0
+  assign y = $signed({1&#39;b0, a}) + $signed({1&#39;b0, b});
+                                ^
+%Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/wreduce.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/simple/wreduce.v:3</a>: Operator ADD expects 16 bits on the RHS, but RHS&#39;s SIGNED generates 9 bits.
+                                                                                                      : ... In instance wreduce_test0
+  assign y = $signed({1&#39;b0, a}) + $signed({1&#39;b0, b});
+                                ^
 
 </pre>
 </body>

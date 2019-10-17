@@ -13,11 +13,91 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/spu_mald.v.html" target="file-frame">third_party/tests/utd-sv/spu_mald.v</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-112" target="file-frame">third_party/tests/utd-sv/spu_mald.v:112</a>:1: error: unknown module &#39;dffre_s&#39;
+dffre_s    #(1) spu_mald_done_ff (
+^~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-128" target="file-frame">third_party/tests/utd-sv/spu_mald.v:128</a>:1: error: unknown module &#39;dff_s&#39;
+dff_s    #(1) idle_state_ff (
+^~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-133" target="file-frame">third_party/tests/utd-sv/spu_mald.v:133</a>:1: error: unknown module &#39;dffr_s&#39;
+dffr_s  #(1) ldreq_state_ff (
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-138" target="file-frame">third_party/tests/utd-sv/spu_mald.v:138</a>:1: error: unknown module &#39;dffr_s&#39;
+dffr_s  #(1) wait4ln_state_ff (
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-143" target="file-frame">third_party/tests/utd-sv/spu_mald.v:143</a>:1: error: unknown module &#39;dffr_s&#39;
+dffr_s  #(1) mamemwr_state_ff (
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-148" target="file-frame">third_party/tests/utd-sv/spu_mald.v:148</a>:1: error: unknown module &#39;dffr_s&#39;
+dffr_s  #(1) chk4mpa1maddr0_state_ff (
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-161" target="file-frame">third_party/tests/utd-sv/spu_mald.v:161</a>:24: error: use of undeclared identifier &#39;cur_chk4mpa1maddr0_state&#39;
+assign spu_mald_done = cur_chk4mpa1maddr0_state &amp; ~len_neqz;
+                       ^~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-163" target="file-frame">third_party/tests/utd-sv/spu_mald.v:163</a>:9: error: use of undeclared identifier &#39;nxt_idle_state&#39;
+assign  nxt_idle_state = (
+        ^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-166" target="file-frame">third_party/tests/utd-sv/spu_mald.v:166</a>:27: error: use of undeclared identifier &#39;cur_idle_state&#39;
+                         (cur_idle_state &amp; ~start_ldop));
+                          ^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-172" target="file-frame">third_party/tests/utd-sv/spu_mald.v:172</a>:9: error: use of undeclared identifier &#39;nxt_ldreq_state&#39;
+assign  nxt_ldreq_state = (
+        ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-173" target="file-frame">third_party/tests/utd-sv/spu_mald.v:173</a>:5: error: use of undeclared identifier &#39;cur_chk4mpa1maddr0_state&#39;
+			(cur_chk4mpa1maddr0_state &amp; ~spu_maaddr_mpa1maddr0 &amp; len_neqz) |
+			 ^~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-174" target="file-frame">third_party/tests/utd-sv/spu_mald.v:174</a>:26: error: use of undeclared identifier &#39;cur_idle_state&#39;
+                        (cur_idle_state &amp; start_ldop) |
+                         ^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-175" target="file-frame">third_party/tests/utd-sv/spu_mald.v:175</a>:26: error: use of undeclared identifier &#39;cur_ldreq_state&#39;
+                        (cur_ldreq_state &amp; ~ldreq_ack));
+                         ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-177" target="file-frame">third_party/tests/utd-sv/spu_mald.v:177</a>:26: error: use of undeclared identifier &#39;cur_mamemwr_state&#39;
+assign spu_mald_rstln = (cur_mamemwr_state &amp; ld_inprog &amp; len_neqz) | local_stxa_abort |
+                         ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-184" target="file-frame">third_party/tests/utd-sv/spu_mald.v:184</a>:31: error: use of undeclared identifier &#39;cur_ldreq_state&#39;
+assign tr2wait4ln_frm_ldreq = cur_ldreq_state &amp; ldreq_ack ;
+                              ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-186" target="file-frame">third_party/tests/utd-sv/spu_mald.v:186</a>:8: error: use of undeclared identifier &#39;nxt_wait4ln_state&#39;
+assign nxt_wait4ln_state = (
+       ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-188" target="file-frame">third_party/tests/utd-sv/spu_mald.v:188</a>:26: error: use of undeclared identifier &#39;cur_wait4ln_state&#39;
+                        (cur_wait4ln_state &amp; ~ln_received));
+                         ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-193" target="file-frame">third_party/tests/utd-sv/spu_mald.v:193</a>:31: error: use of undeclared identifier &#39;cur_wait4ln_state&#39;
+wire tr2mamemwr_frm_wait4ln = cur_wait4ln_state &amp; ln_received;
+                              ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-194" target="file-frame">third_party/tests/utd-sv/spu_mald.v:194</a>:38: error: use of undeclared identifier &#39;cur_chk4mpa1maddr0_state&#39;
+wire tr2mamemwr_frm_chk4mpa1maddr0 = cur_chk4mpa1maddr0_state &amp; spu_maaddr_mpa1maddr0 &amp; len_neqz;
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-201" target="file-frame">third_party/tests/utd-sv/spu_mald.v:201</a>:1: error: unknown module &#39;dffr_s&#39;
+dffr_s    #(1) wen_dly_ff (
+^~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-207" target="file-frame">third_party/tests/utd-sv/spu_mald.v:207</a>:8: error: use of undeclared identifier &#39;nxt_mamemwr_state&#39;
+assign nxt_mamemwr_state = ( mald_memwen_dly );
+       ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-214" target="file-frame">third_party/tests/utd-sv/spu_mald.v:214</a>:8: error: use of undeclared identifier &#39;nxt_chk4mpa1maddr0_state&#39;
+assign nxt_chk4mpa1maddr0_state = (
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-215" target="file-frame">third_party/tests/utd-sv/spu_mald.v:215</a>:26: error: use of undeclared identifier &#39;cur_mamemwr_state&#39;
+                        (cur_mamemwr_state) );
+                         ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-221" target="file-frame">third_party/tests/utd-sv/spu_mald.v:221</a>:26: error: use of undeclared identifier &#39;nxt_mamemwr_state&#39;
+assign spu_mald_memwen = nxt_mamemwr_state;
+                         ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-223" target="file-frame">third_party/tests/utd-sv/spu_mald.v:223</a>:34: error: use of undeclared identifier &#39;cur_mamemwr_state&#39;
+assign spu_mald_maaddr_addrinc = cur_mamemwr_state;
+                                 ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-225" target="file-frame">third_party/tests/utd-sv/spu_mald.v:225</a>:31: error: use of undeclared identifier &#39;cur_mamemwr_state&#39;
+assign spu_mald_mpa_addrinc = cur_mamemwr_state ;
+                              ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/utd-sv/spu_mald.v.html#l-229" target="file-frame">third_party/tests/utd-sv/spu_mald.v:229</a>:25: error: use of undeclared identifier &#39;cur_ldreq_state&#39;
+assign spu_mald_ldreq = cur_ldreq_state ;
+                        ^~~~~~~~~~~~~~~
 
 </pre>
 </body>

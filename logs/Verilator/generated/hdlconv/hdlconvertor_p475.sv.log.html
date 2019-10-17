@@ -13,19 +13,27 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv</a>
-time_elapsed: 0.092s
+time_elapsed: 0.090s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:2</a>: syntax error, unexpected disable, expecting clocking
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:9</a>: syntax error, unexpected assert, expecting cover
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:12</a>: syntax error, unexpected assert, expecting cover
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:15</a>: syntax error, unexpected assert, expecting cover
+default disable iff rst;
+        ^~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:12</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+a3 : assert property (@(posedge clk) a |=&gt; b);
+                                       ^~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:15</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+a4 : assert property (@(posedge clk) disable iff (1&#39;b0) a |=&gt; b);
+                                                          ^~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:18</a>: syntax error, unexpected property
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:24</a>: syntax error, unexpected assert, expecting cover
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:26</a>: syntax error, unexpected assert, expecting cover
-%Error: Exiting due to 7 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv</a>
+property p2;
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv:26</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
+a7 : assert property (@ (posedge clk) a |=&gt; b);
+                                        ^~~
+%Error: Exiting due to 5 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv</a>
 
 </pre>
 </body>

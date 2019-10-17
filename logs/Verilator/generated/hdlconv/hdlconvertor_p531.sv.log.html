@@ -13,24 +13,46 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv</a>
-time_elapsed: 0.092s
+time_elapsed: 0.089s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class C1;
+^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:1</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:3</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
+class C1;
+      ^~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:3</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:4</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+class C2;
+^~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:4</a>: syntax error, unexpected IDENTIFIER
+class C2;
+      ^~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:7</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
+task doit(C1 f, integer x, integer z);
+             ^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:7</a>: syntax error, unexpected integer, expecting IDENTIFIER or do or final
+task doit(C1 f, integer x, integer z);
+                           ^~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:9</a>: syntax error, unexpected IDENTIFIER
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: randomize
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: with
-%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: endclass
+result = f.randomize() with {x &lt; y + z;};
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;randomize&#39;
+result = f.randomize() with {x &lt; y + z;};
+           ^~~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;with&#39;
+result = f.randomize() with {x &lt; y + z;};
+                       ^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
 %Error: Exiting due to 11 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv</a>
 
 </pre>
 </body>

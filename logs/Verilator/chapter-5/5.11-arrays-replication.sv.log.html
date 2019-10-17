@@ -6,17 +6,19 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Basic arrays test
 should_fail: 0
 tags: 5.11
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.11-arrays-replication.sv.html" target="file-frame">tests/chapter-5/5.11-arrays-replication.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.290s
 </pre>
 <pre>
 
+%Error: Verilator internal fault, sorry.  Consider trying --debug --gdbbt
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5 <a href="../../../tests/chapter-5/5.11-arrays-replication.sv.html" target="file-frame">tests/chapter-5/5.11-arrays-replication.sv</a>
 
 </pre>
 </body>

@@ -13,27 +13,37 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v</a>
-time_elapsed: 0.094s
+time_elapsed: 0.097s
 </pre>
 <pre>
 
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>: Cannot find file containing module: dff_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>: Looked in:
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_ns.v
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_ns.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       dff_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       dff_ns.v
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       dff_ns.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       obj_dir/dff_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       obj_dir/dff_ns.v
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>:       obj_dir/dff_ns.sv
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-116" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:116</a>: Cannot find file containing module: dff_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-121" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:121</a>: Cannot find file containing module: dff_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-133" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:133</a>: Cannot find file containing module: dffe_ns
-%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-148" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:148</a>: Cannot find file containing module: dffe_ns
-%Error: Exiting due to 15 error(s)
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v</a>
+%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-109" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:109</a>: Cannot find file containing module: &#39;dff_ns&#39;
+   dff_ns #(8) iob_cpx_req_cq_ff (.din(iob_cpx_req_next),
+   ^~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_ns
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_ns.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/dff_ns.sv
+             dff_ns
+             dff_ns.v
+             dff_ns.sv
+             obj_dir/dff_ns
+             obj_dir/dff_ns.v
+             obj_dir/dff_ns.sv
+%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-116" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:116</a>: Cannot find file containing module: &#39;dff_ns&#39;
+   dff_ns #(145) iob_cpx_data_cq_ff (.din(iob_cpx_data_next),
+   ^~~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-121" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:121</a>: Cannot find file containing module: &#39;dff_ns&#39;
+   dff_ns #(145) iob_cpx_data_ca_ff (.din(iob_cpx_data_cq),
+   ^~~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-133" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:133</a>: Cannot find file containing module: &#39;dffe_ns&#39;
+   dffe_ns #(153) int_buf_dout_d1_ff (.din(int_buf_dout),
+   ^~~~~~~
+%Error: <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html#l-148" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v:148</a>: Cannot find file containing module: &#39;dffe_ns&#39;
+   dffe_ns #(153) io_buf_dout_d1_ff (.din(io_buf_dout),
+   ^~~~~~~
+%Error: Exiting due to 5 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/i2c_fdp.v.html" target="file-frame">third_party/tests/utd-sv/i2c_fdp.v</a>
 
 </pre>
 </body>

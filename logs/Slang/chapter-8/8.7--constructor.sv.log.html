@@ -13,11 +13,25 @@ tags: 8.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.7--constructor.sv.html" target="file-frame">tests/chapter-8/8.7--constructor.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-8/8.7--constructor.sv.html#l-8" target="file-frame">tests/chapter-8/8.7--constructor.sv:8</a>:2: error: language feature not yet supported
+	class test_cls;
+	^~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-8/8.7--constructor.sv.html#l-10" target="file-frame">tests/chapter-8/8.7--constructor.sv:10</a>:11: error: expected identifier
+		function new();
+		        ^
+../..<a href="../../../tests/chapter-8/8.7--constructor.sv.html#l-10" target="file-frame">tests/chapter-8/8.7--constructor.sv:10</a>:12: error: expected statement
+		function new();
+		         ^~~
+../..<a href="../../../tests/chapter-8/8.7--constructor.sv.html#l-16" target="file-frame">tests/chapter-8/8.7--constructor.sv:16</a>:3: error: use of undeclared identifier &#39;test_cls&#39;
+		test_cls test_obj = new;
+		^~~~~~~~
+../..<a href="../../../tests/chapter-8/8.7--constructor.sv.html#l-16" target="file-frame">tests/chapter-8/8.7--constructor.sv:16</a>:23: error: language feature not yet supported
+		test_cls test_obj = new;
+		                    ^~~
 
 </pre>
 </body>

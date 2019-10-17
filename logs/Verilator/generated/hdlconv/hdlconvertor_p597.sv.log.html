@@ -13,25 +13,47 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv</a>
-time_elapsed: 0.096s
+time_elapsed: 0.091s
 </pre>
 <pre>
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:3</a>: Unsupported or unknown PLI call: $timeformat
+$timeformat(-9, 5, &#34; ns&#34;, 10);
+^~~~~~~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:11</a>: Unsupported: $fopen with multichannel descriptor.  Add ,&#34;w&#34; as second argument to open a file descriptor.
+file = $fopen(&#34;a1.dat&#34;);
+       ^~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:12</a>: Unsupported or unknown PLI call: $fmonitor
+#00000000 $fmonitor(file,&#34;%m: %t in1=%d o1=%h&#34;, $realtime,in1,o1);
+          ^~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:12</a>: Unsupported: Ignoring delay on this delayed statement.
-%Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+#00000000 $fmonitor(file,&#34;%m: %t in1=%d o1=%h&#34;, $realtime,in1,o1);
+^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:13</a>: Unsupported: Ignoring delay on this delayed statement.
+#10000000 in1 = 0;
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:14</a>: Unsupported: Ignoring delay on this delayed statement.
+#10000000 in1 = 1;
+^
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-23" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:23</a>: Unsupported: $fopen with multichannel descriptor.  Add ,&#34;w&#34; as second argument to open a file descriptor.
+file2=$fopen(&#34;a2.dat&#34;);
+      ^~~~~~
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:24</a>: Unsupported or unknown PLI call: $fmonitor
+#00000 $fmonitor(file2,&#34;%m: %t in2=%d o2=%h&#34;,$realtime,in2,o2);
+       ^~~~~~~~~
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:24</a>: Unsupported: Ignoring delay on this delayed statement.
+#00000 $fmonitor(file2,&#34;%m: %t in2=%d o2=%h&#34;,$realtime,in2,o2);
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:25</a>: Unsupported: Ignoring delay on this delayed statement.
+#10000 in2 = 0;
+^
 %Warning-STMTDLY: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv:26</a>: Unsupported: Ignoring delay on this delayed statement.
+#10000 in2 = 1;
+^
 %Error: Exiting due to 5 error(s)
-%Error: See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv</a>
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv</a>
 
 </pre>
 </body>

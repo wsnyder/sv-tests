@@ -13,11 +13,13 @@ tags: 6.19
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.19--enum_xx_inv_order.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv_order.sv</a>
-time_elapsed: 0.007s
+time_elapsed: 0.004s
 </pre>
 <pre>
 
-error: no input files
+../..<a href="../../../tests/chapter-6/6.19--enum_xx_inv_order.sv.html#l-8" target="file-frame">tests/chapter-6/6.19--enum_xx_inv_order.sv:8</a>:35: error: cannot increment previous value 32&#39;sbxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx because it has unknown bits
+	enum integer {a=0, b={32{1&#39;bx}}, c} val;
+	                     ~~~~~~~~~~  ^
 
 </pre>
 </body>
