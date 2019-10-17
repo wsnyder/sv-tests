@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test status of persistence of references to elements of queue
 should_fail: 0
 tags: 7.10.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
 files: <a href="../../../../tests/chapter-7/queues/persistence.sv.html" target="file-frame">tests/chapter-7/queues/persistence.sv</a>
-time_elapsed: 0.087s
-
+time_elapsed: 0.091s
+</pre>
+<pre>
 
 %Error: <a href="../../../../tests/chapter-7/queues/persistence.sv.html#l-9" target="file-frame">tests/chapter-7/queues/persistence.sv:9</a>: syntax error, unexpected $undefined, expecting TYPE-IDENTIFIER
 %Error: <a href="../../../../tests/chapter-7/queues/persistence.sv.html#l-11" target="file-frame">tests/chapter-7/queues/persistence.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: ref
@@ -21,5 +27,5 @@ time_elapsed: 0.087s
 %Error: Exiting due to 3 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues <a href="../../../../tests/chapter-7/queues/persistence.sv.html" target="file-frame">tests/chapter-7/queues/persistence.sv</a>
 
-
 </pre>
+</body>

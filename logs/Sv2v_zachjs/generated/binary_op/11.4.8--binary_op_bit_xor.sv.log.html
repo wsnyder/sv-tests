@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: ^ operator test
 should_fail: 0
 tags: 11.4.8
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op
 top_module: 
 files: <a href="../../../../tests/generated/binary_op/11.4.8--binary_op_bit_xor.sv.html" target="file-frame">tests/generated/binary_op/11.4.8--binary_op_bit_xor.sv</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.036s
+</pre>
+<pre>
 
 module top;
 	wire signed [31:0] a = 12;
@@ -18,5 +24,5 @@ module top;
 	initial c = (a ^ b);
 endmodule
 
-
 </pre>
+</body>

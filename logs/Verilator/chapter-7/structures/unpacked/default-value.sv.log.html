@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test unpacked structures members default value support
 should_fail: 0
 tags: 7.2.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv</a>
-time_elapsed: 0.316s
-
+time_elapsed: 0.286s
+</pre>
+<pre>
 
 %Error: <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html#l-12" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv:12</a>: Unsupported: Initial values in struct/union members.
 %Error: Verilator internal fault, sorry.  Consider trying --debug --gdbbt
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv</a>
 
-
 </pre>
+</body>

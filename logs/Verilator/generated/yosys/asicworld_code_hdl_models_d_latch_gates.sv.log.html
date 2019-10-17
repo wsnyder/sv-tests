@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asi
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v</a>
 time_elapsed: 0.091s
-
+</pre>
+<pre>
 
 %Warning-UNOPT: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v:3</a>: Signal unoptimizable: Feedback to public clock or circular logic: q_bar
 %Warning-UNOPT: Use &#34;/* verilator lint_off UNOPT */&#34; and lint_on around source to disable this message.
@@ -19,5 +25,5 @@ time_elapsed: 0.091s
 %Warning-UNOPT:      Example path: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v:13</a>:  ASSIGNW
 %Warning-UNOPT:      Example path: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v.html#l-3" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_d_latch_gates.v:3</a>:  q_bar
 
-
 </pre>
+</body>

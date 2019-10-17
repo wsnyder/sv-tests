@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: A module testing case statement
 should_fail: 0
 tags: 12.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.5--case.sv.html" target="file-frame">tests/chapter-12/12.5--case.sv</a>
-time_elapsed: 0.029s
-
+time_elapsed: 0.026s
+</pre>
+<pre>
 
 module case_tb;
 	wire [3:0] a = 0;
@@ -22,5 +28,5 @@ module case_tb;
 	endcase
 endmodule
 
-
 </pre>
+</body>

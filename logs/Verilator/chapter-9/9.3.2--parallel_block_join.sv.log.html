@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: parallel block check
 should_fail: 0
 tags: 9.3.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join.sv.html" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join.sv</a>
-time_elapsed: 0.087s
-
+time_elapsed: 0.093s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join.sv:12</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
 %Error: <a href="../../../tests/chapter-9/9.3.2--parallel_block_join.sv.html#l-14" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join.sv:14</a>: syntax error, unexpected &#39;=&#39;, expecting IDENTIFIER
@@ -18,5 +24,5 @@ time_elapsed: 0.087s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.2--parallel_block_join.sv.html" target="file-frame">tests/chapter-9/9.3.2--parallel_block_join.sv</a>
 
-
 </pre>
+</body>

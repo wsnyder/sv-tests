@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: $signed() test
 should_fail: 0
 tags: 11.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.7--signed_func.sv.html" target="file-frame">tests/chapter-11/11.7--signed_func.sv</a>
-time_elapsed: 0.218s
-
+time_elapsed: 0.205s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -21,5 +27,5 @@ WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-11/11.7--signed_func.sv.h
 PARSE_ERROR <a href="../../../tests/chapter-11/11.7--signed_func.sv.html" target="file-frame">tests/chapter-11/11.7--signed_func.sv</a>::9 error in parsing: (syntax error, unexpected vSIGNED, expecting vSYMBOL_ID or &#39;#&#39;)
 logic signed [7:0] a;
 
-
 </pre>
+</body>

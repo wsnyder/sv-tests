@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: implicit declaration in continuous assignment tests
 should_fail: 0
 tags: 6.10
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.10--implicit_continuous_assignment.sv.html" target="file-frame">tests/chapter-6/6.10--implicit_continuous_assignment.sv</a>
 time_elapsed: 0.009s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -20,5 +26,5 @@ Generating RTLIL representation for module `\top&#39;.
 Warning: Identifier `\c&#39; is implicitly declared at <a href="../../../tests/chapter-6/6.10--implicit_continuous_assignment.sv.html#l-11" target="file-frame">tests/chapter-6/6.10--implicit_continuous_assignment.sv:11</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

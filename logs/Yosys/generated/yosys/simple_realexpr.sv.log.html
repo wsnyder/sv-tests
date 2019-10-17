@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sim
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v</a>
 time_elapsed: 0.011s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -30,5 +36,5 @@ Generating RTLIL representation for module `\demo_004&#39;.
 Warning: Replacing floating point parameter demo_real.$1 = 1.000000 with string at <a href="../../../../third_party/tools/yosys/tests/simple/realexpr.v.html#l-31" target="file-frame">third_party/tools/yosys/tests/simple/realexpr.v:31</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

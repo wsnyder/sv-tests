@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/flop_rptrs_xc7.v.html" target="file-frame">third_party/tests/utd-sv/flop_rptrs_xc7.v</a>
-time_elapsed: 0.101s
-
+time_elapsed: 0.093s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/utd-sv/flop_rptrs_xc7.v.html#l-83" target="file-frame">third_party/tests/utd-sv/flop_rptrs_xc7.v:83</a>: Cannot find file containing module: bw_u1_ckbuf_33x
 %Error: <a href="../../../../third_party/tests/utd-sv/flop_rptrs_xc7.v.html#l-83" target="file-frame">third_party/tests/utd-sv/flop_rptrs_xc7.v:83</a>: Looked in:
@@ -64,5 +70,5 @@ time_elapsed: 0.101s
 %Error: Exiting due to too many errors encountered; --error-limit=50
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/flop_rptrs_xc7.v.html" target="file-frame">third_party/tests/utd-sv/flop_rptrs_xc7.v</a>
 
-
 </pre>
+</body>

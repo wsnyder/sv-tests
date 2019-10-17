@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: class extending abstract class
 should_fail: 0
 tags: 8.21
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.21--abstract_class.sv.html" target="file-frame">tests/chapter-8/8.21--abstract_class.sv</a>
-time_elapsed: 0.089s
-
+time_elapsed: 0.088s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-8/8.21--abstract_class.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: virtual
 %Error: <a href="../../../tests/chapter-8/8.21--abstract_class.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
@@ -26,5 +32,5 @@ time_elapsed: 0.089s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.21--abstract_class.sv.html" target="file-frame">tests/chapter-8/8.21--abstract_class.sv</a>
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Test multidimensional arrays
 should_fail: 0
 tags: 7.4.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/multidimensional/basic.sv.html" target="file-frame">tests/chapter-7/arrays/multidimensional/basic.sv</a>
-time_elapsed: 0.036s
-
+time_elapsed: 0.026s
+</pre>
+<pre>
 
 module top;
 	wire [31:0] arr [1:10];
@@ -17,5 +23,5 @@ module top;
 	wire [36:7] arr2 [1:7][1:8];
 endmodule
 
-
 </pre>
+</body>

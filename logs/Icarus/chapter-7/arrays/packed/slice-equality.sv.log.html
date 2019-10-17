@@ -1,17 +1,23 @@
-<pre>
-<h3>
-<a href="http://iverilog.icarus.com/" target="_blank">icarus</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-failed">
 description: Test packed arrays operations support (slice equality)
 should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/packed/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/packed/slice-equality.sv</a>
-time_elapsed: 0.004s
-
+time_elapsed: 0.007s
+</pre>
+<pre>
 
 iverilog: invalid option -- &#39;i&#39;
 
-
 </pre>
+</body>

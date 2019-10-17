@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/extnets.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/extnets.sv</a>
-time_elapsed: 0.011s
-
+time_elapsed: 0.010s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -26,5 +32,5 @@ Generating RTLIL representation for module `\B&#39;.
 Warning: Identifier `\A.y&#39; is implicitly declared at <a href="../../../../third_party/tools/yosys/tests/sva/extnets.sv.html#l-21" target="file-frame">third_party/tools/yosys/tests/sva/extnets.sv:21</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

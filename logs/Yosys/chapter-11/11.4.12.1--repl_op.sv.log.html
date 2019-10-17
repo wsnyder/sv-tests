@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: replication operator test
 should_fail: 0
 tags: 11.4.12.1
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.12.1--repl_op.sv.html" target="file-frame">tests/chapter-11/11.4.12.1--repl_op.sv</a>
 time_elapsed: 0.009s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -19,5 +25,5 @@ Parsing SystemVerilog input from `<a href="../../../tests/chapter-11/11.4.12.1--
 Generating RTLIL representation for module `\top&#39;.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

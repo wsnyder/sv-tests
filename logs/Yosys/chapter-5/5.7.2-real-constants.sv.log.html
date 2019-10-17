@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Examples of real literal constants
 should_fail: 0
 tags: 5.7.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.7.2-real-constants.sv.html" target="file-frame">tests/chapter-5/5.7.2-real-constants.sv</a>
-time_elapsed: 0.010s
-
+time_elapsed: 0.009s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -28,5 +34,5 @@ Warning: converting real value 2.900000e-01 to binary 0 at <a href="../../../tes
 Warning: converting real value 2.361238e-10 to binary 0 at <a href="../../../tests/chapter-5/5.7.2-real-constants.sv.html#l-19" target="file-frame">tests/chapter-5/5.7.2-real-constants.sv:19</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

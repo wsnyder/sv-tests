@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Examples of time literals
 should_fail: 0
 tags: 5.8
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.8-time-literals.sv.html" target="file-frame">tests/chapter-5/5.8-time-literals.sv</a>
 time_elapsed: 0.090s
-
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-5/5.8-time-literals.sv.html#l-14" target="file-frame">tests/chapter-5/5.8-time-literals.sv:14</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
 %Error: <a href="../../../tests/chapter-5/5.8-time-literals.sv.html#l-15" target="file-frame">tests/chapter-5/5.8-time-literals.sv:15</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
@@ -21,5 +27,5 @@ time_elapsed: 0.090s
 %Error: Exiting due to 7 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5 <a href="../../../tests/chapter-5/5.8-time-literals.sv.html" target="file-frame">tests/chapter-5/5.8-time-literals.sv</a>
 
-
 </pre>
+</body>

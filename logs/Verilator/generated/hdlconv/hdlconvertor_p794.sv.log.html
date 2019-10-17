@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv</a>
-time_elapsed: 0.092s
-
+time_elapsed: 0.097s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv:24</a>: Can&#39;t find definition of scope/variable: word
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv:24</a>: Can&#39;t find definition of &#39;p&#39; in dotted scope/variable: __BRA__??__KET__.p
@@ -50,5 +56,5 @@ time_elapsed: 0.092s
 %Error: Exiting due to 24 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc &#39;-I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p794.sv</a>
 
-
 </pre>
+</body>

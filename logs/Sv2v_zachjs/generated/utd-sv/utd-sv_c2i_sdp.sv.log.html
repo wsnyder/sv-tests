@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/c2i_sdp.v.html" target="file-frame">third_party/tests/utd-sv/c2i_sdp.v</a>
-time_elapsed: 0.080s
-
+time_elapsed: 0.066s
+</pre>
+<pre>
 
 module c2i_sdp (
 	pcx_packet,
@@ -64,5 +70,5 @@ module c2i_sdp (
 	assign c2i_rd_nack_packet = {9&#39;b0, 40&#39;b0, 3&#39;b0, c2i_packet[11:10], c2i_packet[9:4], nack_packet_type};
 endmodule
 
-
 </pre>
+</body>

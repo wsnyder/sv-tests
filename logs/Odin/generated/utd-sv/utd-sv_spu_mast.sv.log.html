@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/spu_mast.v.html" target="file-frame">third_party/tests/utd-sv/spu_mast.v</a>
-time_elapsed: 0.231s
-
+time_elapsed: 0.208s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -38,5 +44,5 @@ WARNING (8)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/spu_mas
 
 wire rd_cntr_rst = state_reset | streq_ack_dly | start_stop;
 
-
 </pre>
+</body>

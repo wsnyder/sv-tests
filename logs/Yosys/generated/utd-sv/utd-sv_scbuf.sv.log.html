@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/scbuf.v.html" target="file-frame">third_party/tests/utd-sv/scbuf.v</a>
-time_elapsed: 0.153s
-
+time_elapsed: 0.142s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -70,5 +76,5 @@ Warning: Identifier `\manual_scan_10a&#39; is implicitly declared at <a href="..
 Warning: Identifier `\manual_scan_11a&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/scbuf.v.html#l-1639" target="file-frame">third_party/tests/utd-sv/scbuf.v:1639</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

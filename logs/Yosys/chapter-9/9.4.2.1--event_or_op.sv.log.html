@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: event or operator
 should_fail: 0
 tags: 9.4.2.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.4.2.1--event_or_op.sv.html" target="file-frame">tests/chapter-9/9.4.2.1--event_or_op.sv</a>
-time_elapsed: 0.010s
-
+time_elapsed: 0.008s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -22,5 +28,5 @@ compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

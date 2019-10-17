@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: encapsulation test
 should_fail: 1
 tags: 8.18
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation
 top_module: 
 files: <a href="../../../../tests/generated/encapsulation/8.18--inherited_local_from_outside.sv.html" target="file-frame">tests/generated/encapsulation/8.18--inherited_local_from_outside.sv</a>
-time_elapsed: 0.096s
-
+time_elapsed: 0.090s
+</pre>
+<pre>
 
 %Error: <a href="../../../../tests/generated/encapsulation/8.18--inherited_local_from_outside.sv.html#l-8" target="file-frame">tests/generated/encapsulation/8.18--inherited_local_from_outside.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../../tests/generated/encapsulation/8.18--inherited_local_from_outside.sv.html#l-8" target="file-frame">tests/generated/encapsulation/8.18--inherited_local_from_outside.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
@@ -27,5 +33,5 @@ time_elapsed: 0.096s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/encapsulation <a href="../../../../tests/generated/encapsulation/8.18--inherited_local_from_outside.sv.html" target="file-frame">tests/generated/encapsulation/8.18--inherited_local_from_outside.sv</a>
 
-
 </pre>
+</body>

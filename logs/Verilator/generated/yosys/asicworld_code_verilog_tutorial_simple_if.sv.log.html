@@ -1,20 +1,26 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_if.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_if.v</a>
-time_elapsed: 0.092s
-
+time_elapsed: 0.094s
+</pre>
+<pre>
 
 %Warning-COMBDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_if.v.html#l-8" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_simple_if.v:8</a>: Delayed assignments (&lt;=) in non-clocked (non flop or latch) block; suggest blocking assignments (=).
 %Warning-COMBDLY: Use &#34;/* verilator lint_off COMBDLY */&#34; and lint_on around source to disable this message.
 %Warning-COMBDLY: *** See the manual before disabling this,
 %Warning-COMBDLY: else you may end up with different sim results.
 
-
 </pre>
+</body>

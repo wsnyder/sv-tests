@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v</a>
-time_elapsed: 0.091s
-
+time_elapsed: 0.088s
+</pre>
+<pre>
 
 %Warning-STMTDLY: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html#l-15" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v:15</a>: Unsupported: Ignoring delay on this delayed statement.
 %Warning-STMTDLY: Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
@@ -29,5 +35,5 @@ time_elapsed: 0.091s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_arbiter_tb.v</a>
 
-
 </pre>
+</body>

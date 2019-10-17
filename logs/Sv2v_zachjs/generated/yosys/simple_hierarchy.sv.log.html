@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/hierarchy.v.html" target="file-frame">third_party/tools/yosys/tests/simple/hierarchy.v</a>
-time_elapsed: 0.039s
-
+time_elapsed: 0.026s
+</pre>
+<pre>
 
 (* top *) module top (
 	a,
@@ -59,5 +65,5 @@ endmodule
 	assign y4 = d;
 endmodule
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test
 should_fail: 0
 tags: 8.3 8.26
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/iface
 top_module: 
 files: <a href="../../../../tests/generic/iface/iface_class_test_5.sv.html" target="file-frame">tests/generic/iface/iface_class_test_5.sv</a>
-time_elapsed: 0.095s
-
+time_elapsed: 0.090s
+</pre>
+<pre>
 
 %Error: <a href="../../../../tests/generic/iface/iface_class_test_5.sv.html#l-7" target="file-frame">tests/generic/iface/iface_class_test_5.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../../tests/generic/iface/iface_class_test_5.sv.html#l-7" target="file-frame">tests/generic/iface/iface_class_test_5.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: extends
@@ -19,5 +25,5 @@ time_elapsed: 0.095s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface <a href="../../../../tests/generic/iface/iface_class_test_5.sv.html" target="file-frame">tests/generic/iface/iface_class_test_5.sv</a>
 
-
 </pre>
+</body>

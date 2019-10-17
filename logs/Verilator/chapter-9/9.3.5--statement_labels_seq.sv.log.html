@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: sequential block labels check
 should_fail: 0
 tags: 9.3.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.5--statement_labels_seq.sv.html" target="file-frame">tests/chapter-9/9.3.5--statement_labels_seq.sv</a>
-time_elapsed: 0.092s
-
+time_elapsed: 0.096s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-9/9.3.5--statement_labels_seq.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.5--statement_labels_seq.sv:12</a>: syntax error, unexpected begin, expecting assert or cover
 %Error: Cannot continue
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.5--statement_labels_seq.sv.html" target="file-frame">tests/chapter-9/9.3.5--statement_labels_seq.sv</a>
 
-
 </pre>
+</body>

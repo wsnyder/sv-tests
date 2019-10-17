@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html" target="file-frame">third_party/tests/utd-sv/spu_maexp.v</a>
-time_elapsed: 0.017s
-
+time_elapsed: 0.015s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -30,5 +36,5 @@ Warning: Identifier `\nxt_esmax_state&#39; is implicitly declared at <a href="..
 Warning: Identifier `\cur_esmax_state&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/spu_maexp.v.html#l-159" target="file-frame">third_party/tests/utd-sv/spu_maexp.v:159</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

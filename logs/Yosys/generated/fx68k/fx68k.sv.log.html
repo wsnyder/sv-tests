@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
 description: Full fx68k core test
 should_fail: 0
 tags: fx68k
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k
 top_module: 
 files: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.024s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -17,5 +23,5 @@ time_elapsed: 0.026s
 1. Executing Verilog-2005 frontend.
 ERROR: Parser error in line <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-41" target="file-frame">third_party/cores/fx68k/fx68k.sv:41</a>: syntax error, unexpected TOK_ID
 
-
 </pre>
+</body>

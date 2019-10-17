@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
 description: Test packed arrays operations support (R&amp;W slice)
 should_fail: 0
 tags: 7.4.3
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/packed/slice.sv.html" target="file-frame">tests/chapter-7/arrays/packed/slice.sv</a>
 time_elapsed: 0.009s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -17,5 +23,5 @@ time_elapsed: 0.009s
 1. Executing Verilog-2005 frontend.
 ERROR: System task `$display&#39; called with invalid/unsupported format specifier at <a href="../../../../../tests/chapter-7/arrays/packed/slice.sv.html#l-15" target="file-frame">tests/chapter-7/arrays/packed/slice.sv:15</a>.
 
-
 </pre>
+</body>

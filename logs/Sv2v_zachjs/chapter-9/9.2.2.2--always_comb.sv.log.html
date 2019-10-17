@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: always_comb check
 should_fail: 0
 tags: 9.2.2.2
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.2.2.2--always_comb.sv.html" target="file-frame">tests/chapter-9/9.2.2.2--always_comb.sv</a>
 time_elapsed: 0.026s
-
+</pre>
+<pre>
 
 module always_tb;
 	wire a = 0;
@@ -17,5 +23,5 @@ module always_tb;
 	always @(*) b = ~a;
 endmodule
 
-
 </pre>
+</body>

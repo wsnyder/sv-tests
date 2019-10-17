@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: type operator tests
 should_fail: 0
 tags: 6.23
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.23--type_op.sv.html" target="file-frame">tests/chapter-6/6.23--type_op.sv</a>
-time_elapsed: 0.210s
-
+time_elapsed: 0.209s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -25,5 +31,5 @@ PARSE_ERROR <a href="../../../tests/chapter-6/6.23--type_op.sv.html" target="fil
 PARSE_ERROR <a href="../../../tests/chapter-6/6.23--type_op.sv.html" target="file-frame">tests/chapter-6/6.23--type_op.sv</a>::10 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;;&#39; or &#39;,&#39;)
 	var type(a+b) c;
 
-
 </pre>
+</body>

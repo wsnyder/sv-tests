@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: stream reordering test
 should_fail: 0
 tags: 11.4.14.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.14.2--reorder_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.2--reorder_stream.sv</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.029s
+</pre>
+<pre>
 
 module top;
 	wire signed [31:0] a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
@@ -29,5 +35,5 @@ module top;
 	end
 endmodule
 
-
 </pre>
+</body>

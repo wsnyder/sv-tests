@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: supply0 net test
 should_fail: 0
 tags: 6.6.6
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets
 top_module: 
 files: <a href="../../../../tests/generated/nets/6.6.6--net_supply0.sv.html" target="file-frame">tests/generated/nets/6.6.6--net_supply0.sv</a>
-time_elapsed: 0.231s
-
+time_elapsed: 0.215s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -24,5 +30,5 @@ supply0 v;
 PARSE_ERROR <a href="../../../../tests/generated/nets/6.6.6--net_supply0.sv.html" target="file-frame">tests/generated/nets/6.6.6--net_supply0.sv</a>::8 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
 supply0 v;
 
-
 </pre>
+</body>

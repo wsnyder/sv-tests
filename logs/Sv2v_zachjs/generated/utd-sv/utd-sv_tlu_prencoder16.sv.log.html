@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/tlu_prencoder16.v.html" target="file-frame">third_party/tests/utd-sv/tlu_prencoder16.v</a>
-time_elapsed: 0.036s
-
+time_elapsed: 0.046s
+</pre>
+<pre>
 
 module tlu_prencoder16 (
 	din,
@@ -39,5 +45,5 @@ module tlu_prencoder16 (
 	assign dout[0] = (((((((onehot[0] | onehot[2]) | onehot[4]) | onehot[6]) | onehot[8]) | onehot[10]) | onehot[12]) | onehot[14]);
 endmodule
 
-
 </pre>
+</body>

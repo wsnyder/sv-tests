@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: A simple module that should fail during parsing
 should_fail: 1
 tags: sanity
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests
 top_module: 
 files: <a href="../../tests/sanity.sv.html" target="file-frame">tests/sanity.sv</a>
-time_elapsed: 0.010s
-
+time_elapsed: 0.009s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -38,11 +44,11 @@ Performing Partial Map to target device
 Outputting the netlist to the specified output format
 Successful High-level synthesis by Odin
 	Blif file available at  odin.blif
-	Ran in 3.2ms
+	Ran in 2.8ms
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 Odin ran with exit status: 0
-Odin II took 0.00 seconds (max_rss 8.7 MiB)
-
+Odin II took 0.00 seconds (max_rss 8.6 MiB)
 
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Automatic left padding of literal constant numbers
 should_fail: 0
 tags: 5.7.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv</a>
-time_elapsed: 0.011s
-
+time_elapsed: 0.010s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -22,5 +28,5 @@ Warning: Yosys has only limited support for tri-state logic at the moment. (<a h
 Generating RTLIL representation for module `\top&#39;.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

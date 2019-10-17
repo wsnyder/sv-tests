@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: parallel block labels check
 should_fail: 0
 tags: 9.3.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv.html" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>
-time_elapsed: 0.092s
-
+time_elapsed: 0.088s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv.html#l-12" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv:12</a>: Unsupported: Verilog 1995 reserved word not implemented: fork
 %Error: <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv.html#l-13" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv:13</a>: syntax error, unexpected IDENTIFIER, expecting assert or cover
@@ -18,5 +24,5 @@ time_elapsed: 0.092s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.3.5--statement_labels_par.sv.html" target="file-frame">tests/chapter-9/9.3.5--statement_labels_par.sv</a>
 
-
 </pre>
+</body>

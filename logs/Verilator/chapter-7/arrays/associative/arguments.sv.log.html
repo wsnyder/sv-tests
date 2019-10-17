@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test passing associative array as arugments support
 should_fail: 0
 tags: 7.9.10 7.8
@@ -9,12 +14,13 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associativ
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/associative/arguments.sv.html" target="file-frame">tests/chapter-7/arrays/associative/arguments.sv</a>
 time_elapsed: 0.088s
-
+</pre>
+<pre>
 
 %Error: <a href="../../../../../tests/chapter-7/arrays/associative/arguments.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/arguments.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
 %Error: <a href="../../../../../tests/chapter-7/arrays/associative/arguments.sv.html#l-11" target="file-frame">tests/chapter-7/arrays/associative/arguments.sv:11</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
 %Error: Cannot continue
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative <a href="../../../../../tests/chapter-7/arrays/associative/arguments.sv.html" target="file-frame">tests/chapter-7/arrays/associative/arguments.sv</a>
 
-
 </pre>
+</body>

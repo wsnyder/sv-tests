@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: Integer literal constants
 should_fail: 0
 tags: 5.7.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.7.1--integers-sized.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-sized.sv</a>
-time_elapsed: 0.225s
-
+time_elapsed: 0.205s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -21,5 +27,5 @@ WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-5/5.7.1--integers-sized.s
 PARSE_ERROR <a href="../../../tests/chapter-5/5.7.1--integers-sized.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-sized.sv</a>::8 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
   logic  [3:0] a;
 
-
 </pre>
+</body>

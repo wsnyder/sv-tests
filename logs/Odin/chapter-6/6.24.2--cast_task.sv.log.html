@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: $cast task
 should_fail: 0
 tags: 6.24.2 8.16
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target="file-frame">tests/chapter-6/6.24.2--cast_task.sv</a>
-time_elapsed: 0.223s
-
+time_elapsed: 0.211s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -23,5 +29,5 @@ PARSE_ERROR <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target=
 PARSE_ERROR <a href="../../../tests/chapter-6/6.24.2--cast_task.sv.html" target="file-frame">tests/chapter-6/6.24.2--cast_task.sv</a>::10 error in parsing: (syntax error, unexpected &#39;.&#39;, expecting &#39;)&#39;)
 		$cast(a, 2.1 * 3.7);
 
-
 </pre>
+</body>

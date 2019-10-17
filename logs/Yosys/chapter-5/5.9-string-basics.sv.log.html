@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Basic string example
 should_fail: 0
 tags: 5.9 5.3
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.9-string-basics.sv.html" target="file-frame">tests/chapter-5/5.9-string-basics.sv</a>
 time_elapsed: 0.009s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -20,5 +26,5 @@ Generating RTLIL representation for module `\top&#39;.
 one line
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
-time_elapsed: 0.094s
-
+time_elapsed: 0.089s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-10" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:10</a>: Unsupported: Interfaced port on top level module
 %Error: <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html#l-109" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv:109</a>: Can&#39;t find definition of scope/variable: u_MyInterfaceFromTop
@@ -17,5 +23,5 @@ time_elapsed: 0.094s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/svinterfaces <a href="../../../../third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv.html" target="file-frame">third_party/tools/yosys/tests/svinterfaces/svinterface_at_top.sv</a>
 
-
 </pre>
+</body>

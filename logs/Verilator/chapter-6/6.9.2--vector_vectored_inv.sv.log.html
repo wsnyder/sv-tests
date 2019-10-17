@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: vectored vector invalid access tests
 should_fail: 1
 tags: 6.9.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>
-time_elapsed: 0.090s
-
+time_elapsed: 0.089s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv:8</a>: syntax error, unexpected vectored, expecting IDENTIFIER or do or final
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>
 
-
 </pre>
+</body>

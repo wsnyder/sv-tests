@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/c2i_sdp.v.html" target="file-frame">third_party/tests/utd-sv/c2i_sdp.v</a>
-time_elapsed: 0.093s
-
+time_elapsed: 0.096s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/utd-sv/c2i_sdp.v.html#l-106" target="file-frame">third_party/tests/utd-sv/c2i_sdp.v:106</a>: Cannot find file containing module: dffe_ns
 %Error: <a href="../../../../third_party/tests/utd-sv/c2i_sdp.v.html#l-106" target="file-frame">third_party/tests/utd-sv/c2i_sdp.v:106</a>: Looked in:
@@ -25,5 +31,5 @@ time_elapsed: 0.093s
 %Error: Exiting due to 11 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/c2i_sdp.v.html" target="file-frame">third_party/tests/utd-sv/c2i_sdp.v</a>
 
-
 </pre>
+</body>

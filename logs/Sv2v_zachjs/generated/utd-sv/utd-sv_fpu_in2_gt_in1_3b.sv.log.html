@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_in2_gt_in1_3b.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in2_gt_in1_3b.v</a>
 time_elapsed: 0.026s
-
+</pre>
+<pre>
 
 module fpu_in2_gt_in1_3b (
 	din1,
@@ -29,5 +35,5 @@ module fpu_in2_gt_in1_3b (
 	assign din2_gt_din1 = (((!din1[2] &amp;&amp; din2[2]) || ((din2_eq_din1[2] &amp;&amp; !din1[1]) &amp;&amp; din2[1])) || ((&amp;din2_eq_din1[2:1] &amp;&amp; !din1[0]) &amp;&amp; din2[0]));
 endmodule
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv</a>
-time_elapsed: 0.009s
-
+time_elapsed: 0.013s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -18,5 +24,5 @@ time_elapsed: 0.009s
 Parsing SystemVerilog input from `<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p730.sv</a>&#39; to AST representation.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html" target="file-frame">third_party/tests/utd-sv/efc_lib.v</a>
-time_elapsed: 0.095s
-
+time_elapsed: 0.093s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: Cannot find file containing module: bw_u1_scanlg_2x
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: Looked in:
@@ -22,8 +28,8 @@ time_elapsed: 0.095s
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       obj_dir/bw_u1_scanlg_2x
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       obj_dir/bw_u1_scanlg_2x.v
 %Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>:       obj_dir/bw_u1_scanlg_2x.sv
-%Error: Internal Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: ../V3Width.cpp:2475: Visit function missing? Widthed expectation for this node: PARSEREF 0x55ecba787270 &lt;e76&gt; {d48}  SIZE [TEXT]
+%Error: Internal Error: <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html#l-48" target="file-frame">third_party/tests/utd-sv/efc_lib.v:48</a>: ../V3Width.cpp:2475: Visit function missing? Widthed expectation for this node: PARSEREF 0x555a8ad41270 &lt;e76&gt; {d48}  SIZE [TEXT]
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/efc_lib.v.html" target="file-frame">third_party/tests/utd-sv/efc_lib.v</a>
 
-
 </pre>
+</body>

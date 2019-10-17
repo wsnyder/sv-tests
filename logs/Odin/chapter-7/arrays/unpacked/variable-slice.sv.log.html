@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: Test packed arrays operations support (Variable slice)
 should_fail: 0
 tags: 7.4.3 7.4.6
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
-time_elapsed: 0.220s
-
+time_elapsed: 0.212s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -23,5 +29,5 @@ bit arr_a [7:0];
 PARSE_ERROR <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>::10 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting &#39;(&#39;)
 bit arr_b [7:0];
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv</a>
-time_elapsed: 0.009s
-
+time_elapsed: 0.011s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -19,5 +25,5 @@ Parsing SystemVerilog input from `<a href="../../../../third_party/tests/hdlconv
 Warning: Yosys has only limited support for tri-state logic at the moment. (<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:13</a>)
 ERROR: Parser error in line <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p234.sv:18</a>: syntax error, unexpected &#39;[&#39;, expecting TOK_ID or &#39;#&#39;
 
-
 </pre>
+</body>

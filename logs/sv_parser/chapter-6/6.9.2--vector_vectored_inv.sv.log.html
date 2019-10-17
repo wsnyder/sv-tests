@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/dalance/sv-parser" target="_blank">sv-parser</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/dalance/sv-parser" target="_blank">sv-parser</a></h3>
+<pre class="test-passed">
 description: vectored vector invalid access tests
 should_fail: 1
 tags: 6.9.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>
-time_elapsed: 0.009s
-
+time_elapsed: 0.008s
+</pre>
+<pre>
 
 parse failed: &#34;<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv</a>&#34;
  <a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.sv.html#l-8" target="file-frame">tests/chapter-6/6.9.2--vector_vectored_inv.sv:8</a>:2
@@ -17,5 +23,5 @@ parse failed: &#34;<a href="../../../tests/chapter-6/6.9.2--vector_vectored_inv.
 8 | 	logic vectored [15:0] a = 0;
   |  ^
 
-
 </pre>
+</body>

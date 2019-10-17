@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: parametrized class invalid scope resolution
 should_fail: 1
 tags: 8.25.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
-time_elapsed: 0.096s
-
+time_elapsed: 0.088s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: class
 %Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
@@ -22,5 +28,5 @@ time_elapsed: 0.096s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-passed">
 description: Test packed arrays operations support (Variable slice)
 should_fail: 1
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
-time_elapsed: 0.233s
-
+time_elapsed: 0.213s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -21,5 +27,5 @@ WARNING (2)::ARG_ERROR <a href="../../../../../tests/chapter-7/arrays/packed/var
 PARSE_ERROR <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>::9 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
 bit [7:0] arr_a;
 
-
 </pre>
+</body>

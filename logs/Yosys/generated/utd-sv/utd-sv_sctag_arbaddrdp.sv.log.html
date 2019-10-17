@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_arbaddrdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_arbaddrdp.v</a>
-time_elapsed: 0.031s
-
+time_elapsed: 0.032s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -22,5 +28,5 @@ Warning: Identifier `\clk_idx_hold&#39; is implicitly declared at <a href="../..
 Warning: Identifier `\clk_addr_c12&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/sctag_arbaddrdp.v.html#l-614" target="file-frame">third_party/tests/utd-sv/sctag_arbaddrdp.v:614</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

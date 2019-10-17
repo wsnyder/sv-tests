@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_tagdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_tagdp.v</a>
-time_elapsed: 0.214s
-
+time_elapsed: 0.204s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -24,5 +30,5 @@ ERROR (4)::NETLIST_ERROR <a href="../../../../third_party/tests/utd-sv/sctag_tag
 clken_buf  clk_buf  (.clk(clk_1), .rclk(rclk), .enb_l(sehold), .tmb_l(~se));
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/ast_elaborate.cpp]build_hierarchy::988 
 
-
 </pre>
+</body>

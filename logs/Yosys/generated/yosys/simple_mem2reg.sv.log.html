@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.027s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -27,5 +33,5 @@ Warning: Replacing memory \dout_array with list of registers. See <a href="../..
 Warning: Replacing memory \din_array with list of registers. See <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-108" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:108</a>, <a href="../../../../third_party/tools/yosys/tests/simple/mem2reg.v.html#l-105" target="file-frame">third_party/tools/yosys/tests/simple/mem2reg.v:105</a>
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

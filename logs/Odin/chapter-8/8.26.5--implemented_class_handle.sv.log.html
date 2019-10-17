@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: it should be possible to assign object handle to a variable of an implemented class type
 should_fail: 0
 tags: 8.26.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv</a>
-time_elapsed: 0.223s
-
+time_elapsed: 0.208s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -29,5 +35,5 @@ PARSE_ERROR <a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.s
 PARSE_ERROR <a href="../../../tests/chapter-8/8.26.5--implemented_class_handle.sv.html" target="file-frame">tests/chapter-8/8.26.5--implemented_class_handle.sv</a>::19 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
 	ihello iobj;
 
-
 </pre>
+</body>

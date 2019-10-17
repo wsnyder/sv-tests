@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: wand net test
 should_fail: 0
 tags: 6.6.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets
 top_module: 
 files: <a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv</a>
-time_elapsed: 0.094s
-
+time_elapsed: 0.087s
+</pre>
+<pre>
 
 %Error: <a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html#l-8" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv:8</a>: Unsupported: Verilog 1995 reserved word not implemented: wand
 %Error: <a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html#l-8" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
@@ -17,5 +23,5 @@ time_elapsed: 0.094s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/nets <a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv</a>
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: ~^ operator test
 should_fail: 0
 tags: 11.4.9
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op
 top_module: 
 files: <a href="../../../../tests/generated/unary_op/11.4.9--unary_op_xnor_1.sv.html" target="file-frame">tests/generated/unary_op/11.4.9--unary_op_xnor_1.sv</a>
-time_elapsed: 0.221s
-
+time_elapsed: 0.206s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -23,5 +29,5 @@ int a = 12;
 PARSE_ERROR <a href="../../../../tests/generated/unary_op/11.4.9--unary_op_xnor_1.sv.html" target="file-frame">tests/generated/unary_op/11.4.9--unary_op_xnor_1.sv</a>::9 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
 int b = 5;
 
-
 </pre>
+</body>

@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Test memories support
 should_fail: 0
 tags: 7.4.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/memories
 top_module: 
 files: <a href="../../../../tests/chapter-7/memories/basic.sv.html" target="file-frame">tests/chapter-7/memories/basic.sv</a>
-time_elapsed: 0.016s
-
+time_elapsed: 0.026s
+</pre>
+<pre>
 
 module top;
 	wire [7:0] mem [0:255];
 endmodule
 
-
 </pre>
+</body>

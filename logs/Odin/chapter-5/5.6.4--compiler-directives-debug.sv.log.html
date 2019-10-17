@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: Debugging compiler directives
 should_fail: 0
 tags: 5.6.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.6.4--compiler-directives-debug.sv.html" target="file-frame">tests/chapter-5/5.6.4--compiler-directives-debug.sv</a>
-time_elapsed: 0.222s
-
+time_elapsed: 0.210s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -22,5 +28,5 @@ ERROR (3)::PARSE_ERROR <a href="../../../tests/chapter-5/5.6.4--compiler-directi
   initial $display(&#34;At %s @ %d\n&#34;, `__FILE__, `__LINE__);
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/verilog_flex.l]load_define::736 
 
-
 </pre>
+</body>

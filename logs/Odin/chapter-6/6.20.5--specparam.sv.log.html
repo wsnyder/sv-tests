@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: specparam tests
 should_fail: 0
 tags: 6.20.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.20.5--specparam.sv.html" target="file-frame">tests/chapter-6/6.20.5--specparam.sv</a>
-time_elapsed: 0.221s
-
+time_elapsed: 0.208s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -21,5 +27,5 @@ WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-6/6.20.5--specparam.sv.ht
 PARSE_ERROR <a href="../../../tests/chapter-6/6.20.5--specparam.sv.html" target="file-frame">tests/chapter-6/6.20.5--specparam.sv</a>::8 error in parsing: (syntax error, unexpected vSPECPARAM)
 	specparam delay = 50;
 
-
 </pre>
+</body>

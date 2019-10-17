@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
 description: triand net test
 should_fail: 0
 tags: 6.6.3
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets
 top_module: 
 files: <a href="../../../../tests/generated/nets/6.6.3--net_triand.sv.html" target="file-frame">tests/generated/nets/6.6.3--net_triand.sv</a>
 time_elapsed: 0.008s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -17,5 +23,5 @@ time_elapsed: 0.008s
 1. Executing Verilog-2005 frontend.
 ERROR: Parser error in line <a href="../../../../tests/generated/nets/6.6.3--net_triand.sv.html#l-8" target="file-frame">tests/generated/nets/6.6.3--net_triand.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39; or &#39;[&#39;
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_part_add32.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ffu_part_add32.v</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.025s
+</pre>
+<pre>
 
 module sparc_ffu_part_add32 (
 	z,
@@ -30,5 +36,5 @@ module sparc_ffu_part_add32 (
 	assign z[31:16] = ((a[31:16] + b[31:16]) + {15&#39;b0, cin16});
 endmodule
 
-
 </pre>
+</body>

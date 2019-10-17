@@ -1,20 +1,26 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: string.compare()  tests
 should_fail: 0
 tags: 6.16.6
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv</a>
-time_elapsed: 0.091s
-
+time_elapsed: 0.088s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html#l-10" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv:10</a>: Unsupported: Member call on non-enum object &#39;VARREF &#39;a&#39;&#39; which is a &#39;BASICDTYPE &#39;string&#39;&#39;
 %Error: Internal Error: <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html#l-10" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv:10</a>: ../V3Width.cpp:3104: Node has no type
 %Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.16.6--string_compare.sv.html" target="file-frame">tests/chapter-6/6.16.6--string_compare.sv</a>
 
-
 </pre>
+</body>

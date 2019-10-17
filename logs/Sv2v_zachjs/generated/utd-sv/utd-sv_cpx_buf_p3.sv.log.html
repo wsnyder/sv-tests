@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/cpx_buf_p3.v.html" target="file-frame">third_party/tests/utd-sv/cpx_buf_p3.v</a>
-time_elapsed: 0.126s
-
+time_elapsed: 0.100s
+</pre>
+<pre>
 
 module cpx_buf_p3 (
 	scache3_cpx_req_bufp3_cq,
@@ -450,5 +456,5 @@ module cpx_buf_p3 (
 	assign arbcp7_cpxdp_shift_bufp3_cx_l_2 = ~arbcp7_cpxdp_shift_arbbf_cx_2;
 endmodule
 
-
 </pre>
+</body>

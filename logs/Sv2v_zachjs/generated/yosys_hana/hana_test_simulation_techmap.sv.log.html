@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/yosys_hana
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_techmap.v.html" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_techmap.v</a> <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v</a>
-time_elapsed: 0.736s
-
+time_elapsed: 0.548s
+</pre>
+<pre>
 
 module f1_test (
 	in,
@@ -1850,5 +1856,5 @@ module INC64 (
 	assign out = (in + 1);
 endmodule
 
-
 </pre>
+</body>

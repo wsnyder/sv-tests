@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test support of unpacked arrays reduction method xor
 should_fail: 0
 tags: 7.12.3 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv</a>
-time_elapsed: 0.096s
-
+time_elapsed: 0.087s
+</pre>
+<pre>
 
 %Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting TYPE-IDENTIFIER
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv</a>
 
-
 </pre>
+</body>

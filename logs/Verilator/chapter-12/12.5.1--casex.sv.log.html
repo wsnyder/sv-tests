@@ -1,18 +1,24 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: A module testing casex statement
 should_fail: 0
 tags: 12.5.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.5.1--casex.sv.html" target="file-frame">tests/chapter-12/12.5.1--casex.sv</a>
-time_elapsed: 0.096s
-
+time_elapsed: 0.091s
+</pre>
+<pre>
 
 %Warning-CASEX: <a href="../../../tests/chapter-12/12.5.1--casex.sv.html#l-11" target="file-frame">tests/chapter-12/12.5.1--casex.sv:11</a>: Suggest casez (with ?&#39;s) in place of casex (with X&#39;s)
 %Warning-CASEX: Use &#34;/* verilator lint_off CASEX */&#34; and lint_on around source to disable this message.
 
-
 </pre>
+</body>

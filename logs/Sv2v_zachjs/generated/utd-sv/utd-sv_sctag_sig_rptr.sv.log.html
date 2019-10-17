@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_sig_rptr.v.html" target="file-frame">third_party/tests/utd-sv/sctag_sig_rptr.v</a>
-time_elapsed: 0.031s
-
+time_elapsed: 0.015s
+</pre>
+<pre>
 
 module sctag_sig_rptr (
 	fast_sig_buf,
@@ -20,5 +26,5 @@ module sctag_sig_rptr (
 	assign fast_sig_buf = fast_sig;
 endmodule
 
-
 </pre>
+</body>

@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Special characters in strings
 should_fail: 0
 tags: 5.9.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.9.1-string-special-chars.sv.html" target="file-frame">tests/chapter-5/5.9.1-string-special-chars.sv</a>
-time_elapsed: 0.016s
-
+time_elapsed: 0.024s
+</pre>
+<pre>
 
 module top;
 	initial begin
@@ -25,5 +31,5 @@ module top;
 	end
 endmodule
 
-
 </pre>
+</body>

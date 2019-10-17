@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_cnt_lead0_lvl3.v.html" target="file-frame">third_party/tests/utd-sv/fpu_cnt_lead0_lvl3.v</a>
-time_elapsed: 0.035s
-
+time_elapsed: 0.024s
+</pre>
+<pre>
 
 module fpu_cnt_lead0_lvl3 (
 	din_15_8_eq_0,
@@ -47,5 +53,5 @@ module fpu_cnt_lead0_lvl3 (
 	assign lead0_16b_0 = ((!din_15_8_eq_0 &amp;&amp; lead0_8b_0_hi) || (din_15_8_eq_0 &amp;&amp; lead0_8b_0_lo));
 endmodule
 
-
 </pre>
+</body>

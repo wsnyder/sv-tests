@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test
 should_fail: 0
 tags: 5.6.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc
 top_module: 
 files: <a href="../../../../tests/generic/preproc/preproc_test_4.sv.html" target="file-frame">tests/generic/preproc/preproc_test_4.sv</a>
-time_elapsed: 0.086s
-
+time_elapsed: 0.089s
+</pre>
+<pre>
 
 %Error: No top level module found
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc <a href="../../../../tests/generic/preproc/preproc_test_4.sv.html" target="file-frame">tests/generic/preproc/preproc_test_4.sv</a>
 
-
 </pre>
+</body>

@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
 description: Test dynamic arrays support
 should_fail: 0
 tags: 7.5
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/dynamic/basic.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/basic.sv</a>
 time_elapsed: 0.008s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -17,5 +23,5 @@ time_elapsed: 0.008s
 1. Executing Verilog-2005 frontend.
 ERROR: Parser error in line <a href="../../../../../tests/chapter-7/arrays/dynamic/basic.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/dynamic/basic.sv:9</a>: syntax error, unexpected &#39;]&#39;
 
-
 </pre>
+</body>

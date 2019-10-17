@@ -1,20 +1,26 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: A module testing repeat loop
 should_fail: 0
 tags: 12.7.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.7.2--repeat.sv.html" target="file-frame">tests/chapter-12/12.7.2--repeat.sv</a>
-time_elapsed: 0.016s
-
+time_elapsed: 0.029s
+</pre>
+<pre>
 
 module repeat_tb;
 	wire signed [31:0] a = 128;
 	initial repeat (a) $display(&#34;repeat&#34;);
 endmodule
 
-
 </pre>
+</body>

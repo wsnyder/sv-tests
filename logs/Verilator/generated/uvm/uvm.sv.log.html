@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: UVM test
 should_fail: 0
 tags: uvm
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/uvm/src
 top_module: 
 files: <a href="../../../../third_party/tests/uvm/src/uvm.sv.html" target="file-frame">third_party/tests/uvm/src/uvm.sv</a>
-time_elapsed: 0.116s
-
+time_elapsed: 0.118s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/uvm/src/base/uvm_field_op.svh.html#l-36" target="file-frame">third_party/tests/uvm/src/base/uvm_field_op.svh:36</a>: Expecting ) or , to end argument list for define reference. Found: STRIFY
 %Error: <a href="../../../../third_party/tests/uvm/src/uvm.sv.html#l-26" target="file-frame">third_party/tests/uvm/src/uvm.sv:26</a>: `&#34; not terminated at EOF
@@ -66,5 +72,5 @@ time_elapsed: 0.116s
 %Error: Exiting due to too many errors encountered; --error-limit=50
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/uvm/src <a href="../../../../third_party/tests/uvm/src/uvm.sv.html" target="file-frame">third_party/tests/uvm/src/uvm.sv</a>
 
-
 </pre>
+</body>

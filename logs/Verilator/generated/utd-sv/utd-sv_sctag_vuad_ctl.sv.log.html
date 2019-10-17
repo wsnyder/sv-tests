@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_vuad_ctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_vuad_ctl.v</a>
 time_elapsed: 0.097s
-
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuad_ctl.v.html#l-191" target="file-frame">third_party/tests/utd-sv/sctag_vuad_ctl.v:191</a>: Cannot find file containing module: clken_buf
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_vuad_ctl.v.html#l-191" target="file-frame">third_party/tests/utd-sv/sctag_vuad_ctl.v:191</a>: Looked in:
@@ -31,5 +37,5 @@ time_elapsed: 0.097s
 %Error: Exiting due to 17 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sctag_vuad_ctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_vuad_ctl.v</a>
 
-
 </pre>
+</body>

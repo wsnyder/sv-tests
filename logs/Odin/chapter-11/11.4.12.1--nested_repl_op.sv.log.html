@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: nested replication operator test
 should_fail: 0
 tags: 11.4.12.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.12.1--nested_repl_op.sv.html" target="file-frame">tests/chapter-11/11.4.12.1--nested_repl_op.sv</a>
-time_elapsed: 0.221s
-
+time_elapsed: 0.206s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -21,5 +27,5 @@ WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-11/11.4.12.1--nested_repl
 PARSE_ERROR <a href="../../../tests/chapter-11/11.4.12.1--nested_repl_op.sv.html" target="file-frame">tests/chapter-11/11.4.12.1--nested_repl_op.sv</a>::9 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
 bit [15:0] a;
 
-
 </pre>
+</body>

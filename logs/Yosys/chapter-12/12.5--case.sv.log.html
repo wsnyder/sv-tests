@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: A module testing case statement
 should_fail: 0
 tags: 12.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.5--case.sv.html" target="file-frame">tests/chapter-12/12.5--case.sv</a>
-time_elapsed: 0.010s
-
+time_elapsed: 0.009s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -19,5 +25,5 @@ Parsing SystemVerilog input from `<a href="../../../tests/chapter-12/12.5--case.
 Generating RTLIL representation for module `\case_tb&#39;.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

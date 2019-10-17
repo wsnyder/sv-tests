@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://iverilog.icarus.com/" target="_blank">icarus</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-failed">
 description: Test
 should_fail: 0
 tags: 8.3 8.26
@@ -9,9 +14,10 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/iface
 top_module: 
 files: <a href="../../../../tests/generic/iface/iface_class_test_1.sv.html" target="file-frame">tests/generic/iface/iface_class_test_1.sv</a>
 time_elapsed: 0.004s
-
+</pre>
+<pre>
 
 iverilog: invalid option -- &#39;i&#39;
 
-
 </pre>
+</body>

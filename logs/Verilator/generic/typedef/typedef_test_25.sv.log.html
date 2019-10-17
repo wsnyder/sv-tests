@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test
 should_fail: 0
 tags: 6.18
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef
 top_module: 
 files: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html" target="file-frame">tests/generic/typedef/typedef_test_25.sv</a>
 time_elapsed: 0.089s
-
+</pre>
+<pre>
 
 %Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-8" target="file-frame">tests/generic/typedef/typedef_test_25.sv:8</a>: Can&#39;t find definition of variable: A
 %Error: <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html#l-9" target="file-frame">tests/generic/typedef/typedef_test_25.sv:9</a>: Can&#39;t find definition of variable: D
@@ -18,5 +24,5 @@ time_elapsed: 0.089s
 %Error: Exiting due to 4 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_25.sv.html" target="file-frame">tests/generic/typedef/typedef_test_25.sv</a>
 
-
 </pre>
+</body>

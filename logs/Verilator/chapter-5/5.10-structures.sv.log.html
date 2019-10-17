@@ -1,20 +1,26 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Structure assignment tests
 should_fail: 0
 tags: 5.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.10-structures.sv.html" target="file-frame">tests/chapter-5/5.10-structures.sv</a>
-time_elapsed: 0.092s
-
+time_elapsed: 0.090s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-5/5.10-structures.sv.html#l-18" target="file-frame">tests/chapter-5/5.10-structures.sv:18</a>: syntax error, unexpected int, expecting FLOATING-POINT NUMBER or IDENTIFIER or INTEGER NUMBER or default
 %Error: <a href="../../../tests/chapter-5/5.10-structures.sv.html#l-20" target="file-frame">tests/chapter-5/5.10-structures.sv:20</a>: syntax error, unexpected &#39;:&#39;, expecting &#34;&#39;{&#34;
 %Error: Exiting due to 2 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5 <a href="../../../tests/chapter-5/5.10-structures.sv.html" target="file-frame">tests/chapter-5/5.10-structures.sv</a>
 
-
 </pre>
+</body>

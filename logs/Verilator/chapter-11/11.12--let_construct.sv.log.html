@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: let construct test
 should_fail: 0
 tags: 11.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.12--let_construct.sv.html" target="file-frame">tests/chapter-11/11.12--let_construct.sv</a>
-time_elapsed: 0.091s
-
+time_elapsed: 0.099s
+</pre>
+<pre>
 
 %Error: <a href="../../../tests/chapter-11/11.12--let_construct.sv.html#l-14" target="file-frame">tests/chapter-11/11.12--let_construct.sv:14</a>: Unsupported: SystemVerilog 2009 reserved word not implemented: let
 %Error: <a href="../../../tests/chapter-11/11.12--let_construct.sv.html#l-14" target="file-frame">tests/chapter-11/11.12--let_construct.sv:14</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
@@ -17,5 +23,5 @@ time_elapsed: 0.091s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11 <a href="../../../tests/chapter-11/11.12--let_construct.sv.html" target="file-frame">tests/chapter-11/11.12--let_construct.sv</a>
 
-
 </pre>
+</body>

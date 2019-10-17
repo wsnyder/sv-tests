@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: casez statement with priority
 should_fail: 0
 tags: 12.5.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase
 top_module: 
 files: <a href="../../../../tests/generated/uniquecase/12.5.3--priority_casez.sv.html" target="file-frame">tests/generated/uniquecase/12.5.3--priority_casez.sv</a>
-time_elapsed: 0.224s
-
+time_elapsed: 0.208s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -26,5 +32,5 @@ PARSE_ERROR <a href="../../../../tests/generated/uniquecase/12.5.3--priority_cas
 ERROR (5)::PARSE_ERROR Parser found (1) errors in your syntax, exiting
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/odin_error.cpp]verify_delayed_error::30 
 
-
 </pre>
+</body>

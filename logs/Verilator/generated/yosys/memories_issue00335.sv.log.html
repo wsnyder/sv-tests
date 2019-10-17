@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
@@ -9,10 +14,11 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/mem
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/memories/issue00335.v.html" target="file-frame">third_party/tools/yosys/tests/memories/issue00335.v</a>
 time_elapsed: 0.095s
-
+</pre>
+<pre>
 
 %Warning-INITIALDLY: <a href="../../../../third_party/tools/yosys/tests/memories/issue00335.v.html#l-18" target="file-frame">third_party/tools/yosys/tests/memories/issue00335.v:18</a>: Delayed assignments (&lt;=) in initial or final block; suggest blocking assignments (=).
 %Warning-INITIALDLY: Use &#34;/* verilator lint_off INITIALDLY */&#34; and lint_on around source to disable this message.
 
-
 </pre>
+</body>

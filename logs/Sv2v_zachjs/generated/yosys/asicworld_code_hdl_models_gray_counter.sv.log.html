@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_hdl_models_gray_counter.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_hdl_models_gray_counter.v</a>
-time_elapsed: 0.016s
-
+time_elapsed: 0.034s
+</pre>
+<pre>
 
 module gray_counter (
 	out,
@@ -31,5 +37,5 @@ module gray_counter (
 	assign out = {count[7], (count[7] ^ count[6]), (count[6] ^ count[5]), (count[5] ^ count[4]), (count[4] ^ count[3]), (count[3] ^ count[2]), (count[2] ^ count[1]), (count[1] ^ count[0])};
 endmodule
 
-
 </pre>
+</body>

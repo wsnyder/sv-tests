@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ctu_mask_id.v.html" target="file-frame">third_party/tests/utd-sv/ctu_mask_id.v</a>
-time_elapsed: 0.035s
-
+time_elapsed: 0.016s
+</pre>
+<pre>
 
 module ctu_mask_id (mask_id);
 	output [3:0] mask_id;
@@ -23,5 +29,5 @@ module ctu_mask_id (mask_id);
 	assign mask_id[3] = ((((((((id3_m[1] ^ id3_m[2]) ^ id3_m[3]) ^ id3_m[4]) ^ id3_m[5]) ^ id3_m[6]) ^ id3_m[7]) ^ id3_m[8]) ^ id3_m[9]);
 endmodule
 
-
 </pre>
+</body>

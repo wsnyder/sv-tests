@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/pad_jbusr.v.html" target="file-frame">third_party/tests/utd-sv/pad_jbusr.v</a>
-time_elapsed: 0.110s
-
+time_elapsed: 0.102s
+</pre>
+<pre>
 
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_jbusr.v.html#l-388" target="file-frame">third_party/tests/utd-sv/pad_jbusr.v:388</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: ref
 %Error: <a href="../../../../third_party/tests/utd-sv/pad_jbusr.v.html#l-388" target="file-frame">third_party/tests/utd-sv/pad_jbusr.v:388</a>: syntax error, unexpected &#39;(&#39;
@@ -31,5 +37,5 @@ time_elapsed: 0.110s
 %Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/pad_jbusr.v.html" target="file-frame">third_party/tests/utd-sv/pad_jbusr.v</a>
 
-
 </pre>
+</body>

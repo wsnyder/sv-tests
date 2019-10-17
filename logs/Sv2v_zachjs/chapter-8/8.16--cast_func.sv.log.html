@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: $cast function test
 should_fail: 0
 tags: 8.16
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-frame">tests/chapter-8/8.16--cast_func.sv</a>
-time_elapsed: 0.040s
-
+time_elapsed: 0.016s
+</pre>
+<pre>
 
 module class_tb;
 	initial begin : sv2v_autoblock_1
@@ -20,5 +26,5 @@ module class_tb;
 	end
 endmodule
 
-
 </pre>
+</body>

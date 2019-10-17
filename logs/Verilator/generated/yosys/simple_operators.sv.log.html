@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/operators.v.html" target="file-frame">third_party/tools/yosys/tests/simple/operators.v</a>
-time_elapsed: 0.104s
-
+time_elapsed: 0.102s
+</pre>
+<pre>
 
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/operators.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/simple/operators.v:14</a>: Operator SHIFTL expects 8 bits on the LHS, but LHS&#39;s VARREF &#39;u1&#39; generates 4 bits.
 %Warning-WIDTH: Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
@@ -115,5 +121,5 @@ time_elapsed: 0.104s
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/operators.v.html#l-117" target="file-frame">third_party/tools/yosys/tests/simple/operators.v:117</a>: Operator COND expects 8 bits on the Conditional True, but Conditional True&#39;s VARREF &#39;s1&#39; generates 4 bits.
 %Warning-WIDTH: <a href="../../../../third_party/tools/yosys/tests/simple/operators.v.html#l-117" target="file-frame">third_party/tools/yosys/tests/simple/operators.v:117</a>: Operator COND expects 8 bits on the Conditional False, but Conditional False&#39;s VARREF &#39;s2&#39; generates 4 bits.
 
-
 </pre>
+</body>

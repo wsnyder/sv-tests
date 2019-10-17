@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/pcx_buf_p0.v.html" target="file-frame">third_party/tests/utd-sv/pcx_buf_p0.v</a>
-time_elapsed: 0.038s
-
+time_elapsed: 0.036s
+</pre>
+<pre>
 
 module pcx_buf_p0 (
 	pcx_spc0_grant_bufp0_pa,
@@ -40,5 +46,5 @@ module pcx_buf_p0 (
 	assign spc1_pcx_atom_bufp0_pq = ~spc1_pcx_atom_bufpt_pq_l;
 endmodule
 
-
 </pre>
+</body>

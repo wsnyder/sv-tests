@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: Tests imported from yosys
 should_fail: 0
 tags: yosys
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/yosys_hana
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_seq.v.html" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_seq.v</a> <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v</a>
 time_elapsed: 0.217s
-
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -27,5 +33,5 @@ module GND (output supply0 out);
 ERROR (5)::PARSE_ERROR Parser found (2) errors in your syntax, exiting
 Assertion failed()@[/home/travis/build/SymbiFlow/sv-tests/third_party/tools/odin_ii/ODIN_II/SRC/odin_error.cpp]verify_delayed_error::30 
 
-
 </pre>
+</body>

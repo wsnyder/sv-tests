@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: invalid stream unpack test
 should_fail: 1
 tags: 11.4.14.3
@@ -9,11 +14,12 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv.html" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_inv.sv</a>
 time_elapsed: 0.026s
-
+</pre>
+<pre>
 
 zachjs-sv2v: negative repeat count: {-64 {1&#39;b0}}
 CallStack (from HasCallStack):
   error, called at src/Language/SystemVerilog/AST/Expr.hs:182:22 in main:Language.SystemVerilog.AST.Expr
 
-
 </pre>
+</body>

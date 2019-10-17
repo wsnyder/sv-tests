@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: A module testing if-else-if statement
 should_fail: 0
 tags: 12.4.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.4.1--if_else_if.sv.html" target="file-frame">tests/chapter-12/12.4.1--if_else_if.sv</a>
-time_elapsed: 0.027s
-
+time_elapsed: 0.016s
+</pre>
+<pre>
 
 module if_tb;
 	wire a = 0;
@@ -24,5 +30,5 @@ module if_tb;
 		b = 0;
 endmodule
 
-
 </pre>
+</body>

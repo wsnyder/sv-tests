@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/ccx_arb_atomq.v.html" target="file-frame">third_party/tests/utd-sv/ccx_arb_atomq.v</a>
-time_elapsed: 0.037s
-
+time_elapsed: 0.045s
+</pre>
+<pre>
 
 module ccx_arb_atomq (
 	q0_dataout,
@@ -56,5 +62,5 @@ module ccx_arb_atomq (
 	assign q0_dataout = (~reset_d1 ? q0_data_out : 1&#39;b0);
 endmodule
 
-
 </pre>
+</body>

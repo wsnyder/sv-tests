@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: A module testing break statement
 should_fail: 0
 tags: 12.8
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
 top_module: 
 files: <a href="../../../tests/chapter-12/12.8--break.sv.html" target="file-frame">tests/chapter-12/12.8--break.sv</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.016s
+</pre>
+<pre>
 
 module jump_tb;
 	initial begin : sv2v_autoblock_1
@@ -30,5 +36,5 @@ module jump_tb;
 	end
 endmodule
 
-
 </pre>
+</body>

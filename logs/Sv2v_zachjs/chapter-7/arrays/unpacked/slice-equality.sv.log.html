@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: Test unpacked arrays operations support (slice equality)
 should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice-equality.sv</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.036s
+</pre>
+<pre>
 
 module top;
 	reg [7:0] arr_a;
@@ -24,5 +30,5 @@ module top;
 	end
 endmodule
 
-
 </pre>
+</body>

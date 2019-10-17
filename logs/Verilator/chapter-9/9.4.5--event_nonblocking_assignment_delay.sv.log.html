@@ -1,18 +1,24 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
 description: event non blk assignment delay
 should_fail: 0
 tags: 9.4.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.4.5--event_nonblocking_assignment_delay.sv.html" target="file-frame">tests/chapter-9/9.4.5--event_nonblocking_assignment_delay.sv</a>
-time_elapsed: 0.094s
-
+time_elapsed: 0.088s
+</pre>
+<pre>
 
 %Warning-INITIALDLY: <a href="../../../tests/chapter-9/9.4.5--event_nonblocking_assignment_delay.sv.html#l-12" target="file-frame">tests/chapter-9/9.4.5--event_nonblocking_assignment_delay.sv:12</a>: Delayed assignments (&lt;=) in initial or final block; suggest blocking assignments (=).
 %Warning-INITIALDLY: Use &#34;/* verilator lint_off INITIALDLY */&#34; and lint_on around source to disable this message.
 
-
 </pre>
+</body>

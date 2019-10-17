@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Assing attributes to an operator
 should_fail: 0
 tags: 5.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
 files: <a href="../../../tests/chapter-5/5.12-attributes-operator.sv.html" target="file-frame">tests/chapter-5/5.12-attributes-operator.sv</a>
-time_elapsed: 0.010s
-
+time_elapsed: 0.013s
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -19,5 +25,5 @@ Parsing SystemVerilog input from `<a href="../../../tests/chapter-5/5.12-attribu
 Generating RTLIL representation for module `\top&#39;.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

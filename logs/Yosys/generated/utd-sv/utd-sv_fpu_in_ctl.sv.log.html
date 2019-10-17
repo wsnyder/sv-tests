@@ -1,7 +1,12 @@
-<pre>
-<h3>
-<a href="http://www.clifford.at/yosys/" target="_blank">yosys</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
 description: Tests imported from utd-sv
 should_fail: 0
 tags: utd-sv
@@ -9,7 +14,8 @@ incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v</a>
 time_elapsed: 0.042s
-
+</pre>
+<pre>
 
 
 -- Executing script file `scr.ys&#39; --
@@ -22,5 +28,5 @@ Warning: Identifier `\inq_adda_dly&#39; is implicitly declared at <a href="../..
 Warning: Identifier `\inq_mula_dly&#39; is implicitly declared at <a href="../../../../third_party/tests/utd-sv/fpu_in_ctl.v.html#l-833" target="file-frame">third_party/tests/utd-sv/fpu_in_ctl.v:833</a>.
 Successfully finished Verilog frontend.
 
-
 </pre>
+</body>

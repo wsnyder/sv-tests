@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: access interface class type with scope resolution operator
 should_fail: 0
 tags: 8.26.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>
-time_elapsed: 0.220s
-
+time_elapsed: 0.213s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -29,5 +35,5 @@ PARSE_ERROR <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.
 PARSE_ERROR <a href="../../../tests/chapter-8/8.26.3--type_access_implements.sv.html" target="file-frame">tests/chapter-8/8.26.3--type_access_implements.sv</a>::16 error in parsing: (syntax error, unexpected vENDFUNCTION)
 		endfunction
 
-
 </pre>
+</body>

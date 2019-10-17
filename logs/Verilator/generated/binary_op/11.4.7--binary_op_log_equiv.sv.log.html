@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: &lt;-&gt; operator test
 should_fail: 0
 tags: 11.4.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op
 top_module: 
 files: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv.html" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv</a>
-time_elapsed: 0.086s
-
+time_elapsed: 0.092s
+</pre>
+<pre>
 
 %Error: <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv.html#l-12" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv:12</a>: syntax error, unexpected -&gt;, expecting TYPE-IDENTIFIER
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op <a href="../../../../tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv.html" target="file-frame">tests/generated/binary_op/11.4.7--binary_op_log_equiv.sv</a>
 
-
 </pre>
+</body>

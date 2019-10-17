@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
 description: implicit port connection tests
 should_fail: 0
 tags: 6.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.10--implicit_port_connection.sv.html" target="file-frame">tests/chapter-6/6.10--implicit_port_connection.sv</a>
-time_elapsed: 0.026s
-
+time_elapsed: 0.028s
+</pre>
+<pre>
 
 module top;
 	wire a = 1;
@@ -33,5 +39,5 @@ module test (
 	assign c = (a | b);
 endmodule
 
-
 </pre>
+</body>

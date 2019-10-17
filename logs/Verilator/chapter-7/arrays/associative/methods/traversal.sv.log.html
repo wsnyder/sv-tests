@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: Test support of associative arrays methods
 should_fail: 0
 tags: 7.9.8 7.9
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods
 top_module: 
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/methods/traversal.sv.html" target="file-frame">tests/chapter-7/arrays/associative/methods/traversal.sv</a>
-time_elapsed: 0.089s
-
+time_elapsed: 0.087s
+</pre>
+<pre>
 
 %Error: <a href="../../../../../../tests/chapter-7/arrays/associative/methods/traversal.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/methods/traversal.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
 %Error: Exiting due to 1 error(s)
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/methods <a href="../../../../../../tests/chapter-7/arrays/associative/methods/traversal.sv.html" target="file-frame">tests/chapter-7/arrays/associative/methods/traversal.sv</a>
 
-
 </pre>
+</body>

@@ -1,19 +1,25 @@
-<pre>
-<h3>
-<a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
 description: inside operator test
 should_fail: 0
 tags: 11.4.13
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html" target="file-frame">tests/chapter-11/11.4.13--set_member.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.089s
+</pre>
+<pre>
 
-
-%Error: Internal Error: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html#l-15" target="file-frame">tests/chapter-11/11.4.13--set_member.sv:15</a>: ../V3Width.cpp:3316: Node needs sign change, but bad case: EQWILD 0x55e0d2fd1af0 &lt;e145#&gt; {d15} @dt=0x55e0d2fd64b0@(G/nw1)
+%Error: Internal Error: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html#l-15" target="file-frame">tests/chapter-11/11.4.13--set_member.sv:15</a>: ../V3Width.cpp:3316: Node needs sign change, but bad case: EQWILD 0x561f334e8af0 &lt;e145#&gt; {d15} @dt=0x561f334ed4b0@(G/nw1)
 %Error: Internal Error: See the manual and http://www.veripool.org/verilator for more assistance.
 %Error: Command Failed /usr/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11 <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html" target="file-frame">tests/chapter-11/11.4.13--set_member.sv</a>
 
-
 </pre>
+</body>

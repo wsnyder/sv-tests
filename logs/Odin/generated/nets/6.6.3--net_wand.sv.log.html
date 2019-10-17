@@ -1,15 +1,21 @@
-<pre>
-<h3>
-<a href="https://verilogtorouting.org/" target="_blank">odin</a>
-</h3>
+<head>
+  <style>
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
 description: wand net test
 should_fail: 0
 tags: 6.6.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/nets
 top_module: 
 files: <a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv</a>
-time_elapsed: 0.232s
-
+time_elapsed: 0.213s
+</pre>
+<pre>
 
 --------------
 Odin has decided you MAY fail ... :
@@ -19,5 +25,5 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 WARNING (2)::ARG_ERROR <a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv</a>::1 File (<a href="../../../../tests/generated/nets/6.6.3--net_wand.sv.html" target="file-frame">tests/generated/nets/6.6.3--net_wand.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
 
-
 </pre>
+</body>
