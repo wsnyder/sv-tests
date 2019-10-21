@@ -1,5 +1,6 @@
 <head>
   <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
     .test-failed { background-color: #ffaaaa; }
     .test-passed { background-color: #aaffaa; }
   </style>
@@ -13,9 +14,9 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v</a>
-time_elapsed: 0.012s
+time_elapsed: 0.005s
 </pre>
-<pre>
+<pre class="log">
 
 ../..<a href="../../../../third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v.html#l-29" target="file-frame">third_party/tools/yosys/tests/asicworld/code_tidbits_fsm_using_function.v:29</a>:21: error: too many arguments to subroutine call; expected 0 but 3 were provided
 assign next_state = fsm_function(state, req_0, req_1);

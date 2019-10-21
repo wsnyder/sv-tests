@@ -1,5 +1,6 @@
 <head>
   <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
     .test-failed { background-color: #ffaaaa; }
     .test-passed { background-color: #aaffaa; }
   </style>
@@ -13,9 +14,9 @@ tags: 11.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/unary_op
 top_module: 
 files: <a href="../../../../tests/generated/unary_op/11.3--unary_op_not_log.sv.html" target="file-frame">tests/generated/unary_op/11.3--unary_op_not_log.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.082s
 </pre>
-<pre>
+<pre class="log">
 
 %Warning-WIDTH: <a href="../../../../tests/generated/unary_op/11.3--unary_op_not_log.sv.html#l-11" target="file-frame">tests/generated/unary_op/11.3--unary_op_not_log.sv:11</a>: Logical Operator LOGNOT expects 1 bit on the LHS, but LHS&#39;s VARREF &#39;b&#39; generates 32 bits.
                                                                                                            : ... In instance top

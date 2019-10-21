@@ -1,5 +1,6 @@
 <head>
   <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
     .test-failed { background-color: #ffaaaa; }
     .test-passed { background-color: #aaffaa; }
   </style>
@@ -13,9 +14,9 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/scbuf_rdmard.v.html" target="file-frame">third_party/tests/utd-sv/scbuf_rdmard.v</a>
-time_elapsed: 0.105s
+time_elapsed: 0.099s
 </pre>
-<pre>
+<pre class="log">
 
 %Error: <a href="../../../../third_party/tests/utd-sv/scbuf_rdmard.v.html#l-97" target="file-frame">third_party/tests/utd-sv/scbuf_rdmard.v:97</a>: Cannot find file containing module: &#39;clken_buf&#39;
 clken_buf  clk_buf_ctag  (.clk(en_clk_ctag),                .rclk(rclk),

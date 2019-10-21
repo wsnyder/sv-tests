@@ -1,5 +1,6 @@
 <head>
   <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
     .test-failed { background-color: #ffaaaa; }
     .test-passed { background-color: #aaffaa; }
   </style>
@@ -13,11 +14,11 @@ tags: 11.4.13
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
 files: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html" target="file-frame">tests/chapter-11/11.4.13--set_member.sv</a>
-time_elapsed: 0.100s
+time_elapsed: 0.097s
 </pre>
-<pre>
+<pre class="log">
 
-%Error: Internal Error: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html#l-15" target="file-frame">tests/chapter-11/11.4.13--set_member.sv:15</a>: ../V3Width.cpp:3706: Node needs sign change, but bad case: EQWILD 0x55d9eca8f8a0 &lt;e149#&gt; {c15} @dt=0x55d9eca95a60@(G/nw1)
+%Error: Internal Error: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html#l-15" target="file-frame">tests/chapter-11/11.4.13--set_member.sv:15</a>: ../V3Width.cpp:3706: Node needs sign change, but bad case: EQWILD 0x560c1d78d8a0 &lt;e149#&gt; {c15} @dt=0x560c1d793a60@(G/nw1)
                                                                                                         : ... In instance top
  a = b inside {c, d};
                ^

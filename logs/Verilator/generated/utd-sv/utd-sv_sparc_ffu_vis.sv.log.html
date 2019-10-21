@@ -1,5 +1,6 @@
 <head>
   <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
     .test-failed { background-color: #ffaaaa; }
     .test-passed { background-color: #aaffaa; }
   </style>
@@ -13,9 +14,9 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_vis.v.html" target="file-frame">third_party/tests/utd-sv/sparc_ffu_vis.v</a>
-time_elapsed: 0.096s
+time_elapsed: 0.099s
 </pre>
-<pre>
+<pre class="log">
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_ffu_vis.v.html#l-111" target="file-frame">third_party/tests/utd-sv/sparc_ffu_vis.v:111</a>: Cannot find file containing module: &#39;dp_buffer&#39;
    dp_buffer #(64) align_rs1_buf(.dout(align_rs1[63:0]), .in(dp_vis_rs1_data[63:0]));
