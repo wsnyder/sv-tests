@@ -11,14 +11,31 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv</a>
-time_elapsed: 0.014s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:17</a>:23: error: language feature not yet supported
+module complex_ports( {c,d}, .e(f) );
+                      ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:17</a>:30: error: language feature not yet supported
+module complex_ports( {c,d}, .e(f) );
+                             ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:20</a>:21: error: port &#39;a&#39; has no I/O member declaration
+module split_ports (a[7:4], a[3:0]);
+                    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:20</a>:29: error: port &#39;a&#39; has no I/O member declaration
+module split_ports (a[7:4], a[3:0]);
+                            ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-23" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:23</a>:19: error: language feature not yet supported
+module same_port (.a(i), .b(i));
+                  ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-23" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:23</a>:26: error: language feature not yet supported
+module same_port (.a(i), .b(i));
+                         ^~~~~
 
 </pre>
 </body>

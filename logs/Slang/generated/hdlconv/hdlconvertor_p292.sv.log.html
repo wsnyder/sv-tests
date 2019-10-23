@@ -11,14 +11,25 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv:2</a>:1: error: language feature not yet supported
+let valid_arb(request, valid, override) = |(request &amp; valid) || override;
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv:2</a>:41: error: expected expression
+let valid_arb(request, valid, override) = |(request &amp; valid) || override;
+                                        ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv:2</a>:73: error: expected &#39;=&#39;
+let valid_arb(request, valid, override) = |(request &amp; valid) || override;
+                                                                        ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv:14</a>:5: error: use of undeclared identifier &#39;valid_arb&#39;
+if (valid_arb(.request(req), .valid(vld), .override(ovr))) begin
+    ^~~~~~~~~
 
 </pre>
 </body>

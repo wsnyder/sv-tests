@@ -11,14 +11,46 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.007s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:13</a>:1: error: expected member
+and g1(a, b, c);
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:17</a>:1: error: expected member
+or g1(a, b, c);
+^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-31" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:31</a>:1: error: expected member
+xor g1(a, b, c); // XOR with hierarchical name test.u1.g1
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:36</a>:1: error: expected member
+xnor g1(a, b, c); // XNOR with hierarchical name test.u1.g1
+^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-47" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:47</a>:8: error: identifier &#39;a_width&#39; used before its declaration
+input [a_width-1:0] a;
+       ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-43" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:43</a>:11: note: declared here
+parameter a_width = 8, b_width = 8;
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-48" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:48</a>:8: error: identifier &#39;b_width&#39; used before its declaration
+input [b_width-1:0] b;
+       ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-43" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:43</a>:24: note: declared here
+parameter a_width = 8, b_width = 8;
+                       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-49" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:49</a>:9: error: identifier &#39;product_width&#39; used before its declaration
+output [product_width-1:0] product;
+        ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-44" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:44</a>:12: note: declared here
+localparam product_width = a_width+b_width;
+           ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv.html#l-56" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv:56</a>:1: error: unknown module &#39;WALLACE_multiplier&#39;
+WALLACE_multiplier #(a_width,b_width) u1(a, b, product);
+^~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

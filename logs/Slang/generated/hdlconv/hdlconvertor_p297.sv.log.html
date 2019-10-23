@@ -11,14 +11,28 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.007s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:7</a>:17: error: unknown system name &#39;$past&#39;
+    a1: assert(($past(a))); // Illegal: no clock can be inferred
+                ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:8</a>:17: error: unknown system name &#39;$past&#39;
+    a2: assert(($past(a,,,@(posedge clock))));
+                ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:8</a>:43: error: expected expression
+    a2: assert(($past(a,,,@(posedge clock))));
+                                          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:9</a>:17: error: unknown system name &#39;$sampled&#39;
+    a3: assert(($sampled (a)));
+                ^~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv:11</a>:3: error: language feature not yet supported
+  a4: assert property(@(posedge clock)($past(a)));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

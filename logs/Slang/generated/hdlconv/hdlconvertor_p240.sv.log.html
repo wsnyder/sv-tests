@@ -11,14 +11,28 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.007s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv:4</a>:14: error: language feature not yet supported
+initial a &lt;= #4 0;
+             ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv:5</a>:14: error: language feature not yet supported
+initial a &lt;= #4 1;
+             ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv:15</a>:17: error: language feature not yet supported
+initial #8 a &lt;= #8 1;
+                ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv:16</a>:18: error: language feature not yet supported
+initial #12 a &lt;= #4 0;
+                 ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p240.sv:25</a>:7: error: language feature not yet supported
+r1 &lt;= # (i*10) i[0];
+      ^~~~~~~~~~~~~
 
 </pre>
 </body>

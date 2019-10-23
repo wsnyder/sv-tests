@@ -11,14 +11,37 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.004s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:3</a>:3: error: language feature not yet supported
+  clocking cb_with_input @(posedge clk);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:10</a>:3: error: language feature not yet supported
+  clocking cb_without_input @(posedge clk);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:16</a>:3: error: language feature not yet supported
+  property p1;
+  ^~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:20</a>:3: error: language feature not yet supported
+  property p2;
+  ^~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:24</a>:3: error: language feature not yet supported
+  a1: assert property (p1);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:25</a>:3: error: language feature not yet supported
+  a2: assert property (cb_with_input.p1);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:26</a>:3: error: language feature not yet supported
+  a3: assert property (p2);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv.html#l-27" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p482.sv:27</a>:3: error: language feature not yet supported
+  a4: assert property (cb_without_input.p1);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

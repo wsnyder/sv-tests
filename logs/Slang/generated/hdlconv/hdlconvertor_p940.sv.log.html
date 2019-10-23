@@ -11,14 +11,55 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv</a>
-time_elapsed: 0.011s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:1</a>:1: error: language feature not yet supported
+export &#34;DPI-C&#34; f_plus = function \f+ ; // &#34;f+&#34; exported as &#34;f_plus&#34;             
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:2</a>:1: error: language feature not yet supported
+export &#34;DPI-C&#34; function f; // &#34;f&#34; exported under its own name                   
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:3</a>:7: error: expected package import
+import &#34;DPI-C&#34; init_1 = function void \init[1] (); // &#34;init_1&#34; is a linkage name
+      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:3</a>:8: error: expected member
+import &#34;DPI-C&#34; init_1 = function void \init[1] (); // &#34;init_1&#34; is a linkage name
+       ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:7: error: expected package import
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:8: error: expected statement
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+       ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:16: error: use of undeclared identifier &#39;begin&#39;
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+               ^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:24: error: expected &#39;;&#39;
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:25: error: expected expression
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                        ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:25: error: expected statement
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                        ^~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:34: error: expected expression
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                                 ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:38: error: expected &#39;;&#39;
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                                     ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:39: error: use of undeclared identifier &#39;init[2]&#39;
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                                      ^~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p940.sv:4</a>:51: error: expected &#39;endfunction&#39;
+import &#34;DPI-C&#34; \begin = function void \init[2] (); // &#34;begin&#34; is a linkage name 
+                                                  ^
 
 </pre>
 </body>

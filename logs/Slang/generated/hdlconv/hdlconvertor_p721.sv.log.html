@@ -11,14 +11,40 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv</a>
-time_elapsed: 0.015s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>:1: error: expected member
+extern module m (a,b,c,d);
+^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>:18: error: port &#39;a&#39; has no I/O member declaration
+extern module m (a,b,c,d);
+                 ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>:20: error: port &#39;b&#39; has no I/O member declaration
+extern module m (a,b,c,d);
+                   ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>:22: error: port &#39;c&#39; has no I/O member declaration
+extern module m (a,b,c,d);
+                     ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:1</a>:24: error: port &#39;d&#39; has no I/O member declaration
+extern module m (a,b,c,d);
+                       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:2</a>:1: error: expected member
+extern module a #(parameter size = 8, parameter type TP = logic [7:0])
+^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:4</a>:10: error: language feature not yet supported
+module m (.*);
+         ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:8</a>:10: error: language feature not yet supported
+module a (.*);
+         ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p721.sv:18</a>:10: error: expected &#39;endmodule&#39;
+endmodule
+         ^
 
 </pre>
 </body>

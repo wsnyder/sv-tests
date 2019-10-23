@@ -11,14 +11,61 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv</a>
-time_elapsed: 0.011s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:9</a>:1: error: language feature not yet supported
+property toggles(bit x, y);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:12</a>:1: error: language feature not yet supported
+a2: assert property (@(posedge clock) toggles(c, d));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:18</a>:1: error: language feature not yet supported
+let p1(x) = $past(x);
+^~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:18</a>:11: error: expected expression
+let p1(x) = $past(x);
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:18</a>:21: error: expected &#39;=&#39;
+let p1(x) = $past(x);
+                    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19</a>:1: error: language feature not yet supported
+let p2(x) = $past(x,,,@(posedge clock));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19</a>:11: error: expected expression
+let p2(x) = $past(x,,,@(posedge clock));
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19</a>:39: error: expected expression
+let p2(x) = $past(x,,,@(posedge clock));
+                                      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:19</a>:40: error: expected &#39;=&#39;
+let p2(x) = $past(x,,,@(posedge clock));
+                                       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:20</a>:1: error: language feature not yet supported
+let s(x) = $sampled(x);
+^~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:20</a>:10: error: expected expression
+let s(x) = $sampled(x);
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:20</a>:23: error: expected &#39;=&#39;
+let s(x) = $sampled(x);
+                      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-22" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:22</a>:12: error: use of undeclared identifier &#39;p1&#39;
+a1: assert(p1(a));
+           ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-23" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:23</a>:12: error: use of undeclared identifier &#39;p2&#39;
+a2: assert(p2(a));
+           ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:24</a>:12: error: use of undeclared identifier &#39;s&#39;
+a3: assert(s(a));
+           ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p296.sv:26</a>:1: error: language feature not yet supported
+a4: assert property(@(posedge clock) p1(a));
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 </pre>
 </body>

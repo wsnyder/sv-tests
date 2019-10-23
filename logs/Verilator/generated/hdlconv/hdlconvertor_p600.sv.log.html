@@ -11,10 +11,10 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.100s
 </pre>
 <pre class="log">
 
@@ -24,7 +24,7 @@ typedef struct {node A,B;} AB_t;
 %Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv:15</a>: ../V3ParseSym.h:115: Symbols suggest ending STRUCTDTYPE but parser thinks ending MODULE &#39;top&#39;
 module top;
        ^~~
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p600.sv</a>
 
 </pre>
 </body>

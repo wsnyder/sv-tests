@@ -11,14 +11,25 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.005s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv:1</a>:1: error: language feature not yet supported
+class C #(int p = 1, type T = int);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv:4</a>:10: error: &#39;C&#39; recursively depends on its own definition
+function C::T C::f();
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv:4</a>:15: note: declared here
+function C::T C::f();
+              ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p193_2.sv:5</a>:8: error: use of undeclared identifier &#39;p&#39;
+return p + C::p;
+       ^
 
 </pre>
 </body>

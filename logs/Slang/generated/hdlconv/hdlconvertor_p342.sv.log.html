@@ -11,14 +11,28 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.007s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:3</a>:1: error: unknown module &#39;bus_A&#39;
+bus_A a (phi1);
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:4</a>:1: error: unknown module &#39;bus_B&#39;
+bus_B b (phi2);
+^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:5</a>:1: error: unknown module &#39;test&#39;
+test main (a, b);
+^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:6</a>:1: error: unknown module &#39;cpu&#39;
+cpu cpu1 (a);
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p342.sv:7</a>:1: error: unknown module &#39;mem&#39;
+mem mem1 (b);
+^~~
 
 </pre>
 </body>

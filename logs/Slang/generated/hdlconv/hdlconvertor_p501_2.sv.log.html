@@ -11,14 +11,118 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv</a>
-time_elapsed: 0.011s
+time_elapsed: 0.005s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:3</a>:1: error: expected member
+checker assert_window1 (
+^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:4</a>:19: error: expected identifier
+  logic test_expr,
+                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:6</a>:3: error: expected declarator
+  untyped start_event, // Window opens at the completion of the start_event
+  ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:6</a>:10: error: expected &#39;,&#39;
+  untyped start_event, // Window opens at the completion of the start_event
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:6</a>:23: error: expected identifier
+  untyped start_event, // Window opens at the completion of the start_event
+                      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:7</a>:3: error: expected declarator
+  untyped end_event,
+  ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:7</a>:10: error: expected &#39;,&#39;
+  untyped end_event,
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:7</a>:21: error: expected identifier
+  untyped end_event,
+                    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9</a>:3: error: expected declarator
+  event clock = $inferred_clock,
+  ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9</a>:8: error: expected &#39;,&#39;
+  event clock = $inferred_clock,
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9</a>:17: error: unknown system name &#39;$inferred_clock&#39;
+  event clock = $inferred_clock,
+                ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:9</a>:33: error: expected identifier
+  event clock = $inferred_clock,
+                                ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10</a>:3: error: expected declarator
+  logic reset = $inferred_disable,
+  ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10</a>:8: error: expected &#39;,&#39;
+  logic reset = $inferred_disable,
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10</a>:17: error: unknown system name &#39;$inferred_disable&#39;
+  logic reset = $inferred_disable,
+                ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:10</a>:35: error: expected identifier
+  logic reset = $inferred_disable,
+                                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:11</a>:3: error: expected declarator
+  string error_msg = &#34;violation&#34;,
+  ^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:11</a>:9: error: expected &#39;,&#39;
+  string error_msg = &#34;violation&#34;,
+        ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:12</a>:3: error: redefinition of &#39;coverage_level&#39; as different kind of symbol
+  coverage_level clevel = cover_all // This argument should be bound to an
+  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:1</a>:40: note: previous definition here
+typedef enum { cover_none, cover_all } coverage_level;
+                                       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:12</a>:17: error: expected &#39;,&#39;
+  coverage_level clevel = cover_all // This argument should be bound to an
+                ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:14</a>:1: error: expected declarator
+);
+^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:16</a>:3: error: language feature not yet supported
+  default clocking @clock; endclocking
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:16</a>:19: error: expected identifier
+  default clocking @clock; endclocking
+                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:17</a>:3: error: expected member
+  default disable iff reset;
+  ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-32" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:32</a>:3: error: language feature not yet supported
+  property p_window;
+  ^~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-33" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:33</a>:43: error: expected expression
+    start_event &amp;&amp; !window |=&gt; test_expr[+] ##0 end_event;
+                                          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:36</a>:3: error: language feature not yet supported
+  a_window: assert property (p_window) else $error(error_msg);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-38" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:38</a>:16: error: expression is not constant
+  generate if (clevel != cover_none) begin : cover_b
+               ^~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-38" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:38</a>:16: note: reference to non-constant variable &#39;clevel&#39; is not allowed in a constant expression
+  generate if (clevel != cover_none) begin : cover_b
+               ^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:12</a>:18: note: declared here
+  coverage_level clevel = cover_all // This argument should be bound to an
+                 ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-43" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:43</a>:35: error: expected expression
+      ##1 (!end_event &amp;&amp; window) [*]
+                                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-43" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:43</a>:36: error: expected expression
+      ##1 (!end_event &amp;&amp; window) [*]
+                                   ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-45" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:45</a>:7: error: expected expression
+      ) $display(&#34;window covered&#34;);
+      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv.html#l-48" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv:48</a>:1: error: expected member
+endchecker : assert_window1
+^~~~~~~~~~
 
 </pre>
 </body>

@@ -11,14 +11,40 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv</a>
-time_elapsed: 0.014s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:6</a>:1: error: expected member
+not #5 n1 (ndata, data);
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:7</a>:1: error: expected member
+nand #(3,5) n2 (wa, data, clock),
+^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:9</a>:1: error: expected member
+nand #(12,15) n4 (q, nq, wa),
+^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:11</a>:1: error: expected member
+bufif1 #(3,7,13)  q_drive (qout, q, enable),
+^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>:15: error: port &#39;io1&#39; has no I/O member declaration
+module iobuf (io1, io2, dir);
+              ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>:20: error: port &#39;io2&#39; has no I/O member declaration
+module iobuf (io1, io2, dir);
+                   ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:16</a>:25: error: port &#39;dir&#39; has no I/O member declaration
+module iobuf (io1, io2, dir);
+                        ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:17</a>:1: error: expected member
+bufif0
+^~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p825.sv:19</a>:1: error: expected member
+bufif1
+^~~~~~
 
 </pre>
 </body>

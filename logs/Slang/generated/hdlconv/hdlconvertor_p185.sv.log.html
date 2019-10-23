@@ -11,14 +11,31 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.007s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv:1</a>:1: error: language feature not yet supported
+class BasePacket;
+^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv:12</a>:1: error: language feature not yet supported
+class My_Packet extends BasePacket;
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv:24</a>:2: error: use of undeclared identifier &#39;BasePacket&#39;
+	BasePacket P1 = new;
+	^~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html#l-24" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv:24</a>:18: error: language feature not yet supported
+	BasePacket P1 = new;
+	                ^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv:25</a>:2: error: use of undeclared identifier &#39;My_Packet&#39;
+	My_Packet P2 = new;
+	^~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv:25</a>:17: error: language feature not yet supported
+	My_Packet P2 = new;
+	               ^~~
 
 </pre>
 </body>

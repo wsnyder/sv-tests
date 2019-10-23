@@ -11,14 +11,19 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv</a>
-time_elapsed: 0.013s
+time_elapsed: 0.005s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv:12</a>:15: error: unknown interface &#39;interface&#39;
+module memMod(interface a); // Uses any interface
+              ^~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p761.sv:20</a>:15: error: unknown interface &#39;interface&#39;
+module cpuMod(interface b);
+              ^~~~~~~~~
 
 </pre>
 </body>

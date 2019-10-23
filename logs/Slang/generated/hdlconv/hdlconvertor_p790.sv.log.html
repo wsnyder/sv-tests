@@ -11,14 +11,52 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.007s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:4</a>:9: error: identifier &#39;SIZE&#39; used before its declaration
+output [SIZE-1:0] bin;
+        ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:2</a>:11: note: declared here
+parameter SIZE = 8;
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:5</a>:8: error: identifier &#39;SIZE&#39; used before its declaration
+input [SIZE-1:0] gray;
+       ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:2</a>:11: note: declared here
+parameter SIZE = 8;
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-19" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:19</a>:9: error: identifier &#39;SIZE&#39; used before its declaration
+output [SIZE-1:0] sum;
+        ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:18</a>:11: note: declared here
+parameter SIZE = 4;
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-22" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:22</a>:8: error: identifier &#39;SIZE&#39; used before its declaration
+input [SIZE-1:0] a, b;
+       ^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:18</a>:11: note: declared here
+parameter SIZE = 4;
+          ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-33" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:33</a>:1: error: expected member
+xor g1 ( t[1][i],
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:36</a>:1: error: expected member
+xor g2 ( sum[i], t[1][i],
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-38" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:38</a>:1: error: expected member
+and g3 ( t[2][i],
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-41" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:41</a>:1: error: expected member
+and g4 ( t[3][i], t[1][i],
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv.html#l-43" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv:43</a>:1: error: expected member
+or
+^~
 
 </pre>
 </body>

@@ -11,14 +11,73 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.008s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:3</a>:1: error: language feature not yet supported
+covergroup p_cg with function sample(bit a, int x);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:3: error: expected member
+  cross x, a;
+  ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:10: error: expected expression
+  cross x, a;
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:10: error: expected &#39;:&#39;
+  cross x, a;
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:10: error: expected &#39;;&#39;
+  cross x, a;
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:10: error: expected member
+  cross x, a;
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:13: error: expected expression
+  cross x, a;
+            ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:5</a>:13: error: expected &#39;:&#39;
+  cross x, a;
+            ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:8</a>:1: error: use of undeclared identifier &#39;p_cg&#39;
+p_cg cg1 = new;
+^~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:8</a>:12: error: language feature not yet supported
+p_cg cg1 = new;
+           ^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:10</a>:1: error: language feature not yet supported
+property p1;
+^~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:12</a>:19: error: expected &#39;)&#39;
+  @(posedge clk)(a, x = b) ##1 (c, cg1.sample(a, x));
+                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:12</a>:19: error: expected member
+  @(posedge clk)(a, x = b) ##1 (c, cg1.sample(a, x));
+                  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:13</a>:1: error: expected member
+endproperty : p1
+^~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:13</a>:15: error: &#39;p1&#39; is not a type
+endproperty : p1
+              ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:13</a>:15: error: &#39;p1&#39; recursively depends on its own definition
+endproperty : p1
+              ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:15</a>:21: note: declared here
+c1: cover property (p1);
+                    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:15</a>:3: error: expected declarator
+c1: cover property (p1);
+  ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:15</a>:21: error: expected &#39;,&#39;
+c1: cover property (p1);
+                    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p584.sv:15</a>:23: error: expected declarator
+c1: cover property (p1);
+                      ^
 
 </pre>
 </body>

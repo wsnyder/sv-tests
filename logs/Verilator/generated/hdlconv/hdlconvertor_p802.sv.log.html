@@ -11,10 +11,10 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv</a>
-time_elapsed: 0.093s
+time_elapsed: 0.097s
 </pre>
 <pre class="log">
 
@@ -34,20 +34,20 @@ module MxN_pipeline(in, out, clk);
 DFF dff[bits-1:0] (q, d, clk);  
 ^~~
         ... Looked in:
-             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/DFF
-             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/DFF.v
-             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*/DFF.sv
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/DFF
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/DFF.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/DFF.sv
              DFF
              DFF.v
              DFF.sv
              obj_dir/DFF
              obj_dir/DFF.v
              obj_dir/DFF.sv
-%Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html#l-29" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv:29</a>: ../V3Width.cpp:2794: Visit function missing? Widthed expectation for this node: PARSEREF 0x55fe807207d0 &lt;e519&gt; {c29}  bits [TEXT]
+%Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html#l-29" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv:29</a>: ../V3Width.cpp:2794: Visit function missing? Widthed expectation for this node: PARSEREF 0x55c83ca71830 &lt;e519&gt; {c29}  bits [TEXT]
                                                                                                                              : ... In instance MxN_pipeline.p
 DFF dff[bits-1:0] (q, d, clk);  
         ^~~~
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/\* <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv</a>
 
 </pre>
 </body>

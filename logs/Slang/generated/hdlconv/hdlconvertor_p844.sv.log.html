@@ -11,14 +11,73 @@
 description: Tests imported from hdlconv
 should_fail: 0
 tags: hdlconv
-incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv</a>
-time_elapsed: 0.011s
+time_elapsed: 0.006s
 </pre>
 <pre class="log">
 
-error: include directory &#39;/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/*&#39; does not exist
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:4</a>:1: error: expected member
+xor x1 (out, a, b);
+^~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:5</a>:1: error: expected member
+specify
+^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:7</a>:1: error: expected member
+specparam invertrise = 3, invertfall = 4;
+^~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:5: error: expression is not constant
+if (a) (b =&gt; out) = (invertrise, invertfall);
+    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:5: note: reference to non-constant variable &#39;a&#39; is not allowed in a constant expression
+if (a) (b =&gt; out) = (invertrise, invertfall);
+    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:7: note: declared here
+input a, b;
+      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:8</a>:8: error: expected member
+if (a) (b =&gt; out) = (invertrise, invertfall);
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:5: error: expression is not constant
+if (b) (a =&gt; out) = (invertrise, invertfall);
+    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:5: note: reference to non-constant variable &#39;b&#39; is not allowed in a constant expression
+if (b) (a =&gt; out) = (invertrise, invertfall);
+    ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:10: note: declared here
+input a, b;
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-9" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:9</a>:8: error: expected member
+if (b) (a =&gt; out) = (invertrise, invertfall);
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:5: error: expression is not constant
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
+    ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:6: note: reference to non-constant variable &#39;a&#39; is not allowed in a constant expression
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
+     ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:7: note: declared here
+input a, b;
+      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-10" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:10</a>:8: error: expected member
+if (~a)(b =&gt; out) = (noninvrise, noninvfall);
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:5: error: expression is not constant
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
+    ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:6: note: reference to non-constant variable &#39;b&#39; is not allowed in a constant expression
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
+     ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:2</a>:10: note: declared here
+input a, b;
+         ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:11</a>:8: error: expected member
+if (~b)(a =&gt; out) = (noninvrise, noninvfall);
+       ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p844.sv:12</a>:1: error: expected member
+endspecify
+^~~~~~~~~~
 
 </pre>
 </body>
