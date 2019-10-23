@@ -54,7 +54,6 @@ utd-sv_cpx_dp0,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/cp
 utd-sv_sparc_exu_ecl_divcntl,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sparc_exu_ecl_divcntl.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_tlu_prencoder16,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/tlu_prencoder16.v,utd-sv,True,True,True,True,True,True,True,True
 utd-sv_ctu_bottom_rptr,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ctu_bottom_rptr.v,utd-sv,False,True,False,True,False,True,True,True
-utd-sv_pad_jbusr,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pad_jbusr.v,utd-sv,False,True,False,True,False,False,False,False
 utd-sv_sctag_dirrep,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sctag_dirrep.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_sctag_retbuf,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/sctag_retbuf.v,utd-sv,True,True,True,True,True,True,True,True
 utd-sv_fpu_in2_gt_in1_3to1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_in2_gt_in1_3to1.v,utd-sv,True,True,True,True,True,True,True,True
@@ -187,7 +186,6 @@ utd-sv_bw_r_l2d,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/b
 utd-sv_spu_maexp,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/spu_maexp.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_fpu_rptr_min_global,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_rptr_min_global.v,utd-sv,True,True,True,True,False,True,True,True
 utd-sv_cpx_dp6,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/cpx_dp6.v,utd-sv,False,True,False,True,False,True,True,True
-utd-sv_fpu_in_ctl,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/fpu_in_ctl.v,utd-sv,False,False,False,False,False,False,True,False
 utd-sv_ccx,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ccx.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_pcx_buf_pdr_even,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_buf_pdr_even.v,utd-sv,True,True,True,True,True,True,True,True
 utd-sv_ctu_top_rptr,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ctu_top_rptr.v,utd-sv,False,True,False,True,False,True,True,True
@@ -214,7 +212,6 @@ utd-sv_lsu_rrobin_picker2,/home/travis/build/SymbiFlow/sv-tests/third_party/test
 utd-sv_lsu_qdp1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/lsu_qdp1.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_pcx_buf_p4_even,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_buf_p4_even.v,utd-sv,True,True,True,True,True,True,True,True
 utd-sv_ucb_bus_in,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/ucb_bus_in.v,utd-sv,False,False,False,True,False,True,True,True
-utd-sv_pad_jbusl,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pad_jbusl.v,utd-sv,False,True,False,True,False,False,False,False
 utd-sv_pcx_buf_pt1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_buf_pt1.v,utd-sv,False,True,False,True,False,True,True,True
 utd-sv_pcx_buf_p3,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/pcx_buf_p3.v,utd-sv,True,True,True,True,True,True,True,True
 utd-sv_iob_jbi_rptr_1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv/iob_jbi_rptr_1.v,utd-sv,True,True,True,True,True,True,True,True
