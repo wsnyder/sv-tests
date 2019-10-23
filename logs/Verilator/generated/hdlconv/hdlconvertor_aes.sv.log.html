@@ -1,0 +1,86 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v</a>
+time_elapsed: 0.110s
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-226" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:226</a>: Cannot find file containing module: &#39;aes_key_expand_128&#39;
+aes_key_expand_128 u0(
+^~~~~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/aes_key_expand_128
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/aes_key_expand_128.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/aes_key_expand_128.sv
+             aes_key_expand_128
+             aes_key_expand_128.v
+             aes_key_expand_128.sv
+             obj_dir/aes_key_expand_128
+             obj_dir/aes_key_expand_128.v
+             obj_dir/aes_key_expand_128.sv
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-235" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:235</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us00( .a( sa00 ), .d( sa00_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-236" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:236</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us01( .a( sa01 ), .d( sa01_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-237" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:237</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us02( .a( sa02 ), .d( sa02_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-238" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:238</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us03( .a( sa03 ), .d( sa03_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-239" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:239</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us10( .a( sa10 ), .d( sa10_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-240" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:240</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us11( .a( sa11 ), .d( sa11_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-241" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:241</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us12( .a( sa12 ), .d( sa12_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-242" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:242</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us13( .a( sa13 ), .d( sa13_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-243" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:243</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us20( .a( sa20 ), .d( sa20_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-244" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:244</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us21( .a( sa21 ), .d( sa21_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-245" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:245</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us22( .a( sa22 ), .d( sa22_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-246" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:246</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us23( .a( sa23 ), .d( sa23_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-247" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:247</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us30( .a( sa30 ), .d( sa30_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-248" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:248</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us31( .a( sa31 ), .d( sa31_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-249" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:249</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us32( .a( sa32 ), .d( sa32_sub ));
+^~~~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-250" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:250</a>: Cannot find file containing module: &#39;aes_sbox&#39;
+aes_sbox us33( .a( sa33 ), .d( sa33_sub ));
+^~~~~~~~
+%Error: Exiting due to 17 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v</a>
+
+</pre>
+</body>

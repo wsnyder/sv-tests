@@ -1,0 +1,38 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v</a>
+time_elapsed: 0.105s
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v.html#l-370" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v:370</a>: Cannot find file containing module: &#39;mem_data&#39;
+mem_data mem_dta_fifo_rx(
+^~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/mem_data
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/mem_data.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/mem_data.sv
+             mem_data
+             mem_data.v
+             mem_data.sv
+             obj_dir/mem_data
+             obj_dir/mem_data.v
+             obj_dir/mem_data.sv
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v</a>
+
+</pre>
+</body>

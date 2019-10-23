@@ -1,0 +1,56 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>
+time_elapsed: 0.253s
+</pre>
+<pre class="log">
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::17 error in parsing: (syntax error, unexpected vDELAY_ID)
+always #1 clk = ~clk;
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::28 error in parsing: (syntax error, unexpected vDELAY_ID)
+  #10 rst = 0;
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::29 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::31 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::33 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::36 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::39 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::42 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::44 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+PARSE_ERROR <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>::46 Unsuported token
+  repeat (1) @ (posedge clk);
+  ^~~~
+
+</pre>
+</body>

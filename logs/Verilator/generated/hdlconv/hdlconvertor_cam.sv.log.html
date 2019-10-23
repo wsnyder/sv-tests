@@ -1,0 +1,28 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/cam.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/cam.v</a>
+time_elapsed: 0.107s
+</pre>
+<pre class="log">
+
+%Warning-WIDTH: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/cam.v.html#l-41" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/cam.v:41</a>: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;i&#39; generates 32 bits.
+                                                                                                           : ... In instance cam
+      cam_addr_combo  = i;
+                      ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+
+</pre>
+</body>

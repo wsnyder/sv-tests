@@ -859,6 +859,7 @@ hdlconvertor_p342,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p568,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p568.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p201,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p201.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p174_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p174_2.sv,hdlconv,False,True,False,False,False,True,True,False
+hdlconvertor_sram,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/sram.v,hdlconv,True,False,True,True,False,True,True,True
 hdlconvertor_p531,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p531.sv,hdlconv,False,True,False,False,False,False,False,False
 hdlconvertor_p623,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p623.sv,hdlconv,False,True,True,False,False,True,True,True
 hdlconvertor_p181_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p181_2.sv,hdlconv,False,True,False,False,False,True,True,False
@@ -884,6 +885,7 @@ hdlconvertor_p49,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconv
 hdlconvertor_p229_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p229_2.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p295,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p718,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p718.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_pri_encoder_using_if,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/pri_encoder_using_if.v,hdlconv,True,True,True,True,False,True,True,True
 hdlconvertor_p774,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p774.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p597,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p597.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p772,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p772.sv,hdlconv,False,False,False,False,False,True,False,False
@@ -896,11 +898,16 @@ hdlconvertor_p762,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p599,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p599.sv,hdlconv,False,True,True,False,False,True,True,False
 hdlconvertor_p229,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p229.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p328,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p328.sv,hdlconv,False,True,True,False,False,True,True,True
+hdlconvertor_dff_async_reset,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/dff_async_reset.v,hdlconv,True,True,True,True,True,True,True,True
+hdlconvertor_macro,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/macro.v,hdlconv,True,False,True,False,False,False,True,False
+hdlconvertor_decoder_using_case,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/decoder_using_case.v,hdlconv,True,True,True,True,False,True,True,True
 hdlconvertor_p278,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p278.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p511,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p511.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p185,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p185.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p779,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p779.sv,hdlconv,False,True,True,False,False,True,False,True
+hdlconvertor_include,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/include.v,hdlconv,True,True,True,True,False,True,True,True
 hdlconvertor_p181,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p181.sv,hdlconv,False,True,False,False,False,True,True,False
+hdlconvertor_arbiter,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/arbiter.v,hdlconv,True,True,True,True,True,True,True,True
 hdlconvertor_p501_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501_2.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p76,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p76.sv,hdlconv,True,True,False,False,False,True,False,False
 hdlconvertor_p494_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p494_2.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -910,6 +917,7 @@ hdlconvertor_p172,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p341,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p341.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p143,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p143.sv,hdlconv,True,True,False,False,False,True,False,False
 hdlconvertor_p297,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p297.sv,hdlconv,False,False,False,False,True,True,False,False
+hdlconvertor_uart,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/uart.v,hdlconv,True,True,True,True,False,True,True,True
 hdlconvertor_p253,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p478,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p478.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p633,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p633.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -922,6 +930,7 @@ hdlconvertor_p537,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p790,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p790.sv,hdlconv,False,False,True,True,False,True,True,True
 hdlconvertor_p84,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p84.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p138,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p138.sv,hdlconv,False,True,False,False,False,True,True,False
+hdlconvertor_cam,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/cam.v,hdlconv,False,True,True,True,False,True,True,True
 hdlconvertor_p608,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p608.sv,hdlconv,False,False,True,True,False,True,False,True
 hdlconvertor_p884,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p884.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p90,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p90.sv,hdlconv,True,True,False,False,False,True,False,False
@@ -931,6 +940,7 @@ hdlconvertor_p766,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p190,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p190.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p770,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p770.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p176,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p176.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_ram_sp_sr_sw,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/ram_sp_sr_sw.v,hdlconv,False,True,True,True,False,True,True,True
 hdlconvertor_p700,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p728,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p728.sv,hdlconv,True,False,True,False,False,True,True,True
 hdlconvertor_p501,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p501.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -966,6 +976,7 @@ hdlconvertor_p160_1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlc
 hdlconvertor_p188,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p188.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p621,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p621.sv,hdlconv,False,True,False,False,True,True,True,True
 hdlconvertor_p594,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p594.sv,hdlconv,False,False,False,False,False,True,False,True
+hdlconvertor_define,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/define.v,hdlconv,True,False,True,True,False,True,True,True
 hdlconvertor_p372,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p372.sv,hdlconv,False,True,True,False,True,True,False,False
 hdlconvertor_p832,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p832.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p332,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p332.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -975,11 +986,13 @@ hdlconvertor_p230,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p780,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p780.sv,hdlconv,True,True,True,False,False,True,True,True
 hdlconvertor_p475,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p475.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p793,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p793.sv,hdlconv,False,False,False,True,False,True,False,True
+hdlconvertor_aes,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/aes.v,hdlconv,False,True,False,True,False,True,True,True
 hdlconvertor_p758,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p758.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p760,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p760.sv,hdlconv,False,False,False,True,False,True,False,False
 hdlconvertor_p126,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p126.sv,hdlconv,True,True,False,False,False,True,False,False
 hdlconvertor_p95,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p95.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p191,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p191.sv,hdlconv,False,True,False,False,False,True,False,False
+hdlconvertor_dlatch_reset,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/dlatch_reset.v,hdlconv,True,True,True,True,True,True,True,True
 hdlconvertor_p184,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p184.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p521,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p521.sv,hdlconv,True,True,True,False,False,True,True,True
 hdlconvertor_p179,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p179.sv,hdlconv,False,False,False,False,False,True,False,False
@@ -988,6 +1001,7 @@ hdlconvertor_p198,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p175,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p175.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p578,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p578.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p469,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p469.sv,hdlconv,False,False,False,False,False,True,False,False
+hdlconvertor_parity_using_function2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/parity_using_function2.v,hdlconv,False,True,False,True,False,True,False,True
 hdlconvertor_p202,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p202.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p180_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p180_2.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p629,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p629.sv,hdlconv,True,True,True,False,False,True,True,True
@@ -995,6 +1009,7 @@ hdlconvertor_p194,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p508,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p508.sv,hdlconv,True,True,True,False,False,True,True,True
 hdlconvertor_p736,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p736.sv,hdlconv,False,True,False,True,False,True,True,True
 hdlconvertor_p141,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p141.sv,hdlconv,False,True,False,False,False,True,True,False
+hdlconvertor_rom_using_file,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/rom_using_file.v,hdlconv,False,True,True,False,False,True,True,True
 hdlconvertor_p560,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p560.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p243,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p243.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p88,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p88.sv,hdlconv,True,True,True,False,False,True,False,True
@@ -1002,6 +1017,7 @@ hdlconvertor_p188_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlc
 hdlconvertor_p87,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p87.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p573,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p573.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p239,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p239.sv,hdlconv,False,False,False,False,False,True,True,False
+hdlconvertor_pri_encoder_using_assign,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/pri_encoder_using_assign.v,hdlconv,True,True,True,True,True,True,True,True
 hdlconvertor_p552,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p552.sv,hdlconv,False,False,False,False,False,False,False,False
 hdlconvertor_p347,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p347.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p516,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p516.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -1012,6 +1028,8 @@ hdlconvertor_p510,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p754,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p754.sv,hdlconv,True,False,True,False,False,True,False,False
 hdlconvertor_p735,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p735.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p706,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p706.sv,hdlconv,False,False,False,False,False,True,False,False
+hdlconvertor_directive_verilogpp,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/directive_verilogpp.v,hdlconv,False,False,False,False,False,False,True,True
+hdlconvertor_ram_sp_ar_sw,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v,hdlconv,False,True,True,True,False,True,True,True
 hdlconvertor_p522,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p522.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p782,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p782.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p556,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p556.sv,hdlconv,False,True,False,False,False,True,False,False
@@ -1062,6 +1080,7 @@ hdlconvertor_crc_functions,/home/travis/build/SymbiFlow/sv-tests/third_party/tes
 hdlconvertor_p496,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p496.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p338,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p338.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p140,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p140.sv,hdlconv,True,True,False,True,False,True,True,True
+hdlconvertor_aFifo,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/aFifo.v,hdlconv,False,False,False,True,False,True,True,True
 hdlconvertor_p454,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p454.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p734,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p734.sv,hdlconv,False,True,False,False,False,True,False,True
 hdlconvertor_p757,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p757.sv,hdlconv,False,False,False,False,False,True,False,False
@@ -1071,6 +1090,7 @@ hdlconvertor_p197,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p612,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p612.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p495,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p495.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p704,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p704.sv,hdlconv,True,True,False,False,True,True,False,False
+hdlconvertor_arbiter_tb,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v,hdlconv,False,True,False,False,False,True,True,True
 hdlconvertor_p703,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p703.sv,hdlconv,True,True,False,False,False,True,False,False
 hdlconvertor_p147,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p147.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p284,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p284.sv,hdlconv,True,True,True,False,False,True,True,True
@@ -1083,8 +1103,10 @@ hdlconvertor_p158,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p753_1,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012/p753_1.sv,hdlconv,False,False,True,True,False,True,True,True
 hdlconvertor_p833,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p833.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p184_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p184_2.sv,hdlconv,False,True,False,False,False,True,True,False
+hdlconvertor_lfsr_updown_tb,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/lfsr_updown_tb.v,hdlconv,False,True,False,False,False,True,True,True
 hdlconvertor_p723,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p723.sv,hdlconv,False,True,False,False,False,True,True,True
 hdlconvertor_p726,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p726.sv,hdlconv,False,False,False,False,False,True,False,True
+hdlconvertor_timescale,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/timescale.v,hdlconv,True,False,False,True,False,True,True,True
 hdlconvertor_p783,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p783.sv,hdlconv,False,True,True,False,False,True,False,True
 hdlconvertor_p765,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p765.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p85,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p85.sv,hdlconv,True,True,True,False,False,True,False,True
@@ -1096,6 +1118,7 @@ hdlconvertor_p716,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p490,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p490.sv,hdlconv,False,True,False,False,False,True,False,False
 hdlconvertor_p289,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv,hdlconv,True,True,True,False,False,True,True,True
 hdlconvertor_p713,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p713.sv,hdlconv,False,True,False,True,True,True,True,True
+hdlconvertor_adder_implicit,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v,hdlconv,False,True,False,True,False,True,True,True
 hdlconvertor_p242,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p242.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p707,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p707.sv,hdlconv,True,True,True,True,False,True,False,True
 hdlconvertor_p776,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p776.sv,hdlconv,True,False,False,False,False,True,False,True
@@ -1119,6 +1142,7 @@ hdlconvertor_p102,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlcon
 hdlconvertor_p130,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p130.sv,hdlconv,True,False,True,False,False,True,False,True
 hdlconvertor_p334,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p334.sv,hdlconv,False,False,False,False,False,True,False,False
 hdlconvertor_p759,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p759.sv,hdlconv,False,False,False,False,False,True,False,False
+hdlconvertor_fifo_rx,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/fifo_rx.v,hdlconv,False,True,False,True,False,True,True,True
 hdlconvertor_p777,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p777.sv,hdlconv,False,True,True,False,False,True,False,True
 hdlconvertor_p834,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p834.sv,hdlconv,False,True,False,False,False,True,True,False
 hdlconvertor_p492,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p492.sv,hdlconv,False,True,False,False,False,True,False,False

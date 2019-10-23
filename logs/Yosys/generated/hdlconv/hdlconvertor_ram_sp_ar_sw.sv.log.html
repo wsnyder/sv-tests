@@ -1,0 +1,34 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v</a>
+time_elapsed: 0.015s
+</pre>
+<pre class="log">
+
+
+-- Executing script file `scr.ys&#39; --
+
+1. Executing Verilog-2005 frontend: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v</a>
+Parsing SystemVerilog input from `<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v</a>&#39; to AST representation.
+Warning: Yosys has only limited support for tri-state logic at the moment. (<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v.html#l-39" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v:39</a>)
+Generating RTLIL representation for module `\ram_sp_ar_sw&#39;.
+Note: Assuming pure combinatorial block at <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v.html#l-52" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/ram_sp_ar_sw.v:52</a> in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+</pre>
+</body>

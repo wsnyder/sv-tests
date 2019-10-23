@@ -1,0 +1,55 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/decoder_using_case.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/decoder_using_case.v</a>
+time_elapsed: 0.026s
+</pre>
+<pre class="log">
+
+module decoder_using_case (
+	binary_in,
+	decoder_out,
+	enable
+);
+	input [3:0] binary_in;
+	input enable;
+	output [15:0] decoder_out;
+	reg [15:0] decoder_out;
+	always @(enable or binary_in) begin
+		decoder_out = 0;
+		if (enable)
+			case (binary_in)
+				4&#39;h0: decoder_out = 16&#39;h0001;
+				4&#39;h1: decoder_out = 16&#39;h0002;
+				4&#39;h2: decoder_out = 16&#39;h0004;
+				4&#39;h3: decoder_out = 16&#39;h0008;
+				4&#39;h4: decoder_out = 16&#39;h0010;
+				4&#39;h5: decoder_out = 16&#39;h0020;
+				4&#39;h6: decoder_out = 16&#39;h0040;
+				4&#39;h7: decoder_out = 16&#39;h0080;
+				4&#39;h8: decoder_out = 16&#39;h0100;
+				4&#39;h9: decoder_out = 16&#39;h0200;
+				4&#39;hA: decoder_out = 16&#39;h0400;
+				4&#39;hB: decoder_out = 16&#39;h0800;
+				4&#39;hC: decoder_out = 16&#39;h1000;
+				4&#39;hD: decoder_out = 16&#39;h2000;
+				4&#39;hE: decoder_out = 16&#39;h4000;
+				4&#39;hF: decoder_out = 16&#39;h8000;
+			endcase
+	end
+endmodule
+
+</pre>
+</body>

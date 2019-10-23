@@ -1,0 +1,29 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v</a>
+time_elapsed: 0.008s
+</pre>
+<pre class="log">
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html#l-20" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v:20</a>:3: error: unknown system name &#39;$dumpfile&#39;
+  $dumpfile (&#34;arbiter.vcd&#34;);
+  ^~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v.html#l-21" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/arbiter_tb.v:21</a>:3: error: unknown system name &#39;$dumpvars&#39;
+  $dumpvars();
+  ^~~~~~~~~
+
+</pre>
+</body>

@@ -1,0 +1,37 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/rom_using_file.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/rom_using_file.v</a>
+time_elapsed: 0.026s
+</pre>
+<pre class="log">
+
+module rom_using_file (
+	address,
+	data,
+	read_en,
+	ce
+);
+	input [7:0] address;
+	output [7:0] data;
+	input read_en;
+	input ce;
+	wire [7:0] mem [0:255];
+	assign data = ((ce &amp;&amp; read_en) ? mem[address] : 8&#39;b0);
+	initial $readmemb(&#34;memory.list&#34;, mem);
+endmodule
+
+</pre>
+</body>

@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v</a>
+time_elapsed: 0.101s
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v.html#l-40" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v:40</a>: Cannot find file containing module: &#39;addbit&#39;
+addbit u0 (
+^~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/addbit
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/addbit.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog/addbit.sv
+             addbit
+             addbit.v
+             addbit.sv
+             obj_dir/addbit
+             obj_dir/addbit.v
+             obj_dir/addbit.sv
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v.html#l-48" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v:48</a>: Cannot find file containing module: &#39;addbit&#39;
+addbit u1 (
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v.html#l-56" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v:56</a>: Cannot find file containing module: &#39;addbit&#39;
+addbit u2 (
+^~~~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v.html#l-64" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v:64</a>: Cannot find file containing module: &#39;addbit&#39;
+addbit u3 (
+^~~~~~
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/adder_implicit.v</a>
+
+</pre>
+</body>

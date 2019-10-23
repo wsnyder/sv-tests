@@ -1,0 +1,272 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
+top_module: 
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v</a>
+time_elapsed: 0.011s
+</pre>
+<pre class="log">
+
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-105" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:105</a>:19: error: language feature not yet supported
+	if(!rst)	dcnt &lt;= #1 4&#39;h0;
+	        	        ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-107" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:107</a>:18: error: language feature not yet supported
+	if(ld)		dcnt &lt;= #1 4&#39;hb;
+	      		        ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-109" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:109</a>:20: error: language feature not yet supported
+	if(|dcnt)	dcnt &lt;= #1 dcnt - 4&#39;h1;
+	         	        ^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-111" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:111</a>:31: error: language feature not yet supported
+always @(posedge clk) done &lt;= #1 !(|dcnt[3:1]) &amp; dcnt[0] &amp; !ld;
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-112" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:112</a>:43: error: language feature not yet supported
+always @(posedge clk) if(ld) text_in_r &lt;= #1 text_in;
+                                          ^~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-113" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:113</a>:31: error: language feature not yet supported
+always @(posedge clk) ld_r &lt;= #1 ld;
+                              ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-120" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:120</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa33 &lt;= #1 ld_r ? text_in_r[007:000] ^ w3[07:00] : sa33_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-121" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:121</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa23 &lt;= #1 ld_r ? text_in_r[015:008] ^ w3[15:08] : sa23_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-122" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:122</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa13 &lt;= #1 ld_r ? text_in_r[023:016] ^ w3[23:16] : sa13_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-123" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:123</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa03 &lt;= #1 ld_r ? text_in_r[031:024] ^ w3[31:24] : sa03_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-124" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:124</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa32 &lt;= #1 ld_r ? text_in_r[039:032] ^ w2[07:00] : sa32_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-125" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:125</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa22 &lt;= #1 ld_r ? text_in_r[047:040] ^ w2[15:08] : sa22_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-126" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:126</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa12 &lt;= #1 ld_r ? text_in_r[055:048] ^ w2[23:16] : sa12_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-127" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:127</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa02 &lt;= #1 ld_r ? text_in_r[063:056] ^ w2[31:24] : sa02_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-128" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:128</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa31 &lt;= #1 ld_r ? text_in_r[071:064] ^ w1[07:00] : sa31_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-129" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:129</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa21 &lt;= #1 ld_r ? text_in_r[079:072] ^ w1[15:08] : sa21_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-130" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:130</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa11 &lt;= #1 ld_r ? text_in_r[087:080] ^ w1[23:16] : sa11_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-131" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:131</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa01 &lt;= #1 ld_r ? text_in_r[095:088] ^ w1[31:24] : sa01_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-132" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:132</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa30 &lt;= #1 ld_r ? text_in_r[103:096] ^ w0[07:00] : sa30_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-133" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:133</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa20 &lt;= #1 ld_r ? text_in_r[111:104] ^ w0[15:08] : sa20_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-134" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:134</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa10 &lt;= #1 ld_r ? text_in_r[119:112] ^ w0[23:16] : sa10_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-135" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:135</a>:31: error: language feature not yet supported
+always @(posedge clk)	sa00 &lt;= #1 ld_r ? text_in_r[127:120] ^ w0[31:24] : sa00_next;
+                     	        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-158" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:158</a>:48: error: too many arguments to subroutine call; expected 0 but 4 were provided
+assign {sa00_mc, sa10_mc, sa20_mc, sa30_mc}  = mix_col(sa00_sr,sa10_sr,sa20_sr,sa30_sr);
+                                               ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-159" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:159</a>:48: error: too many arguments to subroutine call; expected 0 but 4 were provided
+assign {sa01_mc, sa11_mc, sa21_mc, sa31_mc}  = mix_col(sa01_sr,sa11_sr,sa21_sr,sa31_sr);
+                                               ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-160" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:160</a>:48: error: too many arguments to subroutine call; expected 0 but 4 were provided
+assign {sa02_mc, sa12_mc, sa22_mc, sa32_mc}  = mix_col(sa02_sr,sa12_sr,sa22_sr,sa32_sr);
+                                               ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-161" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:161</a>:48: error: too many arguments to subroutine call; expected 0 but 4 were provided
+assign {sa03_mc, sa13_mc, sa23_mc, sa33_mc}  = mix_col(sa03_sr,sa13_sr,sa23_sr,sa33_sr);
+                                               ^~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-184" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:184</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[127:120] &lt;= #1 sa00_sr ^ w0[31:24];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-185" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:185</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[095:088] &lt;= #1 sa01_sr ^ w1[31:24];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-186" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:186</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[063:056] &lt;= #1 sa02_sr ^ w2[31:24];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-187" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:187</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[031:024] &lt;= #1 sa03_sr ^ w3[31:24];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-188" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:188</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[119:112] &lt;= #1 sa10_sr ^ w0[23:16];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-189" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:189</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[087:080] &lt;= #1 sa11_sr ^ w1[23:16];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-190" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:190</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[055:048] &lt;= #1 sa12_sr ^ w2[23:16];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-191" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:191</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[023:016] &lt;= #1 sa13_sr ^ w3[23:16];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-192" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:192</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[111:104] &lt;= #1 sa20_sr ^ w0[15:08];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-193" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:193</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[079:072] &lt;= #1 sa21_sr ^ w1[15:08];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-194" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:194</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[047:040] &lt;= #1 sa22_sr ^ w2[15:08];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-195" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:195</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[015:008] &lt;= #1 sa23_sr ^ w3[15:08];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-196" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:196</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[103:096] &lt;= #1 sa30_sr ^ w0[07:00];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-197" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:197</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[071:064] &lt;= #1 sa31_sr ^ w1[07:00];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-198" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:198</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[039:032] &lt;= #1 sa32_sr ^ w2[07:00];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-199" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:199</a>:44: error: language feature not yet supported
+always @(posedge clk) text_out[007:000] &lt;= #1 sa33_sr ^ w3[07:00];
+                                           ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-207" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:207</a>:1: error: language feature not yet supported
+input	[7:0]	s0,s1,s2,s3;
+^~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-210" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:210</a>:16: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[31:24]=xtime(s0)^xtime(s1)^s1^s2^s3;
+               ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-210" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:210</a>:26: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[31:24]=xtime(s0)^xtime(s1)^s1^s2^s3;
+                         ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-210" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:210</a>:36: error: use of undeclared identifier &#39;s1&#39;
+mix_col[31:24]=xtime(s0)^xtime(s1)^s1^s2^s3;
+                                   ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-210" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:210</a>:39: error: use of undeclared identifier &#39;s2&#39;
+mix_col[31:24]=xtime(s0)^xtime(s1)^s1^s2^s3;
+                                      ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-210" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:210</a>:42: error: use of undeclared identifier &#39;s3&#39;
+mix_col[31:24]=xtime(s0)^xtime(s1)^s1^s2^s3;
+                                         ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-211" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:211</a>:16: error: use of undeclared identifier &#39;s0&#39;
+mix_col[23:16]=s0^xtime(s1)^xtime(s2)^s2^s3;
+               ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-211" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:211</a>:19: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[23:16]=s0^xtime(s1)^xtime(s2)^s2^s3;
+                  ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-211" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:211</a>:29: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[23:16]=s0^xtime(s1)^xtime(s2)^s2^s3;
+                            ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-211" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:211</a>:39: error: use of undeclared identifier &#39;s2&#39;
+mix_col[23:16]=s0^xtime(s1)^xtime(s2)^s2^s3;
+                                      ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-211" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:211</a>:42: error: use of undeclared identifier &#39;s3&#39;
+mix_col[23:16]=s0^xtime(s1)^xtime(s2)^s2^s3;
+                                         ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-212" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:212</a>:16: error: use of undeclared identifier &#39;s0&#39;
+mix_col[15:08]=s0^s1^xtime(s2)^xtime(s3)^s3;
+               ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-212" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:212</a>:19: error: use of undeclared identifier &#39;s1&#39;
+mix_col[15:08]=s0^s1^xtime(s2)^xtime(s3)^s3;
+                  ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-212" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:212</a>:22: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[15:08]=s0^s1^xtime(s2)^xtime(s3)^s3;
+                     ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-212" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:212</a>:32: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[15:08]=s0^s1^xtime(s2)^xtime(s3)^s3;
+                               ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-212" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:212</a>:42: error: use of undeclared identifier &#39;s3&#39;
+mix_col[15:08]=s0^s1^xtime(s2)^xtime(s3)^s3;
+                                         ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-213" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:213</a>:16: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[07:00]=xtime(s0)^s0^s1^s2^xtime(s3);
+               ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-213" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:213</a>:26: error: use of undeclared identifier &#39;s0&#39;
+mix_col[07:00]=xtime(s0)^s0^s1^s2^xtime(s3);
+                         ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-213" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:213</a>:29: error: use of undeclared identifier &#39;s1&#39;
+mix_col[07:00]=xtime(s0)^s0^s1^s2^xtime(s3);
+                            ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-213" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:213</a>:32: error: use of undeclared identifier &#39;s2&#39;
+mix_col[07:00]=xtime(s0)^s0^s1^s2^xtime(s3);
+                               ^~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-213" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:213</a>:35: error: too many arguments to subroutine call; expected 0 but 1 were provided
+mix_col[07:00]=xtime(s0)^s0^s1^s2^xtime(s3);
+                                  ^~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-218" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:218</a>:1: error: language feature not yet supported
+input [7:0] b; xtime={b[6:0],1&#39;b0}^(8&#39;h1b&amp;{8{b[7]}});
+^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-218" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:218</a>:23: error: use of undeclared identifier &#39;b&#39;
+input [7:0] b; xtime={b[6:0],1&#39;b0}^(8&#39;h1b&amp;{8{b[7]}});
+                      ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-218" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:218</a>:46: error: use of undeclared identifier &#39;b&#39;
+input [7:0] b; xtime={b[6:0],1&#39;b0}^(8&#39;h1b&amp;{8{b[7]}});
+                                             ^
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-226" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:226</a>:1: error: unknown module &#39;aes_key_expand_128&#39;
+aes_key_expand_128 u0(
+^~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-235" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:235</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us00(	.a(	sa00	), .d(	sa00_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-236" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:236</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us01(	.a(	sa01	), .d(	sa01_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-237" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:237</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us02(	.a(	sa02	), .d(	sa02_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-238" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:238</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us03(	.a(	sa03	), .d(	sa03_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-239" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:239</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us10(	.a(	sa10	), .d(	sa10_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-240" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:240</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us11(	.a(	sa11	), .d(	sa11_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-241" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:241</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us12(	.a(	sa12	), .d(	sa12_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-242" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:242</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us13(	.a(	sa13	), .d(	sa13_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-243" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:243</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us20(	.a(	sa20	), .d(	sa20_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-244" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:244</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us21(	.a(	sa21	), .d(	sa21_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-245" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:245</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us22(	.a(	sa22	), .d(	sa22_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-246" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:246</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us23(	.a(	sa23	), .d(	sa23_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-247" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:247</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us30(	.a(	sa30	), .d(	sa30_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-248" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:248</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us31(	.a(	sa31	), .d(	sa31_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-249" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:249</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us32(	.a(	sa32	), .d(	sa32_sub	));
+^~~~~~~~      	   	    	      	        	
+../..<a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-250" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:250</a>:1: error: unknown module &#39;aes_sbox&#39;
+aes_sbox us33(	.a(	sa33	), .d(	sa33_sub	));
+^~~~~~~~      	   	    	      	        	
+
+</pre>
+</body>
