@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v</a>
+time_elapsed: 0.023s
+</pre>
+<pre class="log">
+user_time: 0.004338
+system_time: 0.018494999999999998
+ram_usage: 9776
+
+module bsg_expand_bitmask (
+	i,
+	o
+);
+	parameter in_width_p = &#34;inv&#34;;
+	parameter expand_p = &#34;inv&#34;;
+	input [(in_width_p - 1):0] i;
+	output reg [((in_width_p * expand_p) - 1):0] o;
+	always @(*) begin : sv2v_autoblock_1
+		integer k;
+		for (k = 0; (k &lt; in_width_p); k = (k + 1))
+			o[(expand_p * k)+:expand_p] = {expand_p {i[k]}};
+	end
+endmodule
+
+</pre>
+</body>

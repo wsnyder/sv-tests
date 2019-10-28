@@ -1,0 +1,56 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.004723
+system_time: 0.0
+ram_usage: 8420
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-53" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:53</a>:42: error: replication constant can only be zero inside of a concatenation
+                                    = { ((width_p+1) &gt;&gt; 1) { (2&#39;b10) } };
+                                         ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-61" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:61</a>:71: error: cannot select range of 4 elements from array of type &#39;logic[1:0]&#39;
+     assign out_snoop_valid_data = { in_snoop_valid_data_i[(width_p)-:4], 1&#39;b0};
+                                                                      ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-157" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:157</a>:33: error: unknown macro or compiler directive &#39;`BSG_MAX&#39;
+   localparam counter_bits_lp = `BSG_MAX(counter_min_bits_lp,(width_p+1)*2+1);
+                                ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-157" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:157</a>:78: error: expected expression
+   localparam counter_bits_lp = `BSG_MAX(counter_min_bits_lp,(width_p+1)*2+1);
+                                                                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-195" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:195</a>:46: error: replication constant can only be zero inside of a concatenation
+             out_override_valid_data_r &lt;= { (width_p+1)  {1&#39;b0} };
+                                             ^~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-232" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:232</a>:4: error: unknown module &#39;bsg_launch_sync_sync&#39;
+   bsg_launch_sync_sync #(.width_p(1)) out_to_core_lss
+   ^~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-249" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:249</a>:4: error: unknown module &#39;bsg_launch_sync_sync&#39;
+   bsg_launch_sync_sync #(.width_p(3)) out_to_in_lss
+   ^~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-263" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:263</a>:42: error: replication constant can only be zero inside of a concatenation
+                                    = { ((width_p+1) &gt;&gt; 1) { (2&#39;b10) } };
+                                         ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-272" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:272</a>:65: error: value must be positive
+        out_override_valid_data_n = { 1&#39;b0, inactive_pattern[0+:width_p] };
+                                                                ^~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v.html#l-314" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_slave.v:314</a>:47: error: replication constant can only be zero inside of a concatenation
+               out_override_valid_data_n = { (width_p+1) { out_rot_r[7] } };
+                                              ^~~~~~~~~
+
+</pre>
+</body>

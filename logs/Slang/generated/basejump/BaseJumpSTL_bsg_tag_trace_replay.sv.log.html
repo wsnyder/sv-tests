@@ -1,0 +1,53 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.004026
+system_time: 0.0
+ram_usage: 8396
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:55</a>:15: error: unknown macro or compiler directive &#39;`BSG_MAX&#39;
+    , output [`BSG_MAX(1,num_masters_p)-1:0] en_r_o
+              ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:71</a>:42: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    localparam lg_max_payload_width_lp = `BSG_SAFE_CLOG2(max_payload_width_p + 1);
+                                         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:71</a>:82: error: expected expression
+    localparam lg_max_payload_width_lp = `BSG_SAFE_CLOG2(max_payload_width_p + 1);
+                                                                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-74" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:74</a>:5: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    `declare_bsg_tag_header_s(num_clients_p, lg_max_payload_width_lp);
+    ^
+../../home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag/bsg_tag.vh:50:14: note: expanded from macro &#39;declare_bsg_tag_header_s&#39;
+      logic [`BSG_SAFE_CLOG2((PARAM_els))-1:0]       nodeID;                \
+             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-83" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:83</a>:5: error: unknown module &#39;bsg_fsb_node_trace_replay&#39;
+    bsg_fsb_node_trace_replay #( .ring_width_p(trace_ring_width_lp)
+    ^~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-113" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:113</a>:65: error: cannot select range of 1:-1 from array of type &#39;logic[6:0]&#39;
+    wire [bsg_tag_header_width_lp-1:0]   header_n  = tr_data_lo[max_payload_width_p+:bsg_tag_header_width_lp];
+                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-114" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:114</a>:68: error: value must be positive
+    wire [max_payload_width_p-1:0]       payload_n = tr_data_lo[0+:max_payload_width_p];
+                                                                   ^~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-121" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:121</a>:5: error: unknown module &#39;bsg_parallel_in_serial_out&#39;
+    bsg_parallel_in_serial_out #( .width_p(1)
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

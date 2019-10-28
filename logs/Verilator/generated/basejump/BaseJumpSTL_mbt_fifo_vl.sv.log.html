@@ -1,0 +1,46 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/common/mbt_fifo_vl.v.html" target="file-frame">third_party/cores/basejump_stl/common/mbt_fifo_vl.v</a>
+time_elapsed: 0.091s
+</pre>
+<pre class="log">
+user_time: 0.079111
+system_time: 0.012317
+ram_usage: 11688
+
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/common/mbt_fifo_vl.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/common/mbt_fifo_vl.v:73</a>: Operator ADD expects 3 bits on the RHS, but RHS&#39;s VARREF &#39;deque&#39; generates 1 bits.
+                                                                                                            : ... In instance mbt_fifo_vl
+   rptr_r  &lt;= rptr_r  + deque;
+                      ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/common/mbt_fifo_vl.v.html#l-74" target="file-frame">third_party/cores/basejump_stl/common/mbt_fifo_vl.v:74</a>: Operator ADD expects 3 bits on the RHS, but RHS&#39;s VARREF &#39;enque&#39; generates 1 bits.
+                                                                                                            : ... In instance mbt_fifo_vl
+   wptr_r  &lt;= wptr_r  + enque;
+                      ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/common/mbt_fifo_vl.v.html#l-75" target="file-frame">third_party/cores/basejump_stl/common/mbt_fifo_vl.v:75</a>: Operator ADD expects 4 bits on the RHS, but RHS&#39;s VARREF &#39;enque&#39; generates 1 bits.
+                                                                                                            : ... In instance mbt_fifo_vl
+      count_r &lt;= count_r + enque - deque;
+                         ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/common/mbt_fifo_vl.v.html#l-75" target="file-frame">third_party/cores/basejump_stl/common/mbt_fifo_vl.v:75</a>: Operator SUB expects 4 bits on the RHS, but RHS&#39;s VARREF &#39;deque&#39; generates 1 bits.
+                                                                                                            : ... In instance mbt_fifo_vl
+      count_r &lt;= count_r + enque - deque;
+                                 ^
+%Warning-SYMRSVDWORD: <a href="../../../../third_party/cores/basejump_stl/common/mbt_fifo_vl.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/common/mbt_fifo_vl.v:25</a>: Symbol matches C++ common word: &#39;deque&#39;
+ input deque, 
+       ^~~~~
+
+</pre>
+</body>

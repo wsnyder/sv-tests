@@ -1,0 +1,48 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dmc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v</a>
+time_elapsed: 2.180s
+</pre>
+<pre class="log">
+user_time: 1.9135149999999999
+system_time: 0.266431
+ram_usage: 376592
+
+%Warning-MULTITOP: <a href="../../../../third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v.html#l-179" target="file-frame">third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v:179</a>: Multiple top level modules
+                                                                                                                 : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... Use &#34;/* verilator lint_off MULTITOP */&#34; and lint_on around source to disable this message.
+                                                                                                                 : ... Top module &#39;tx_byte_slice&#39;
+module tx_byte_slice
+       ^~~~~~~~~~~~~
+                                                                                                                 : ... Top module &#39;rx_byte_slice&#39;
+module rx_byte_slice
+       ^~~~~~~~~~~~~
+                                                                                                                 : ... Top module &#39;bsg_dmc_phy&#39;
+module bsg_dmc_phy #
+       ^~~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v.html#l-477" target="file-frame">third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v:477</a>: Operator LT expects 32 bits on the RHS, but RHS&#39;s VARREF &#39;dq_group_lp&#39; generates 24 bits.
+                                                                                                              : ... In instance bsg_dmc_phy
+    for(i=0;i&lt;dq_group_lp;i=i+1) begin: one_byte
+             ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v.html#l-477" target="file-frame">third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v:477</a>: Loop unrolling took too long; probably this is an infinite loop, or set --unroll-count above 1024
+                                                                                                      : ... In instance bsg_dmc_phy
+    for(i=0;i&lt;dq_group_lp;i=i+1) begin: one_byte
+    ^~~
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dmc <a href="../../../../third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dmc/bsg_dmc_phy.v</a>
+
+</pre>
+</body>

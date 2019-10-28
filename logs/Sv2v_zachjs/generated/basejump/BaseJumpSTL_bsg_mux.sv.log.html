@@ -1,0 +1,42 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mux.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mux.v</a>
+time_elapsed: 0.041s
+</pre>
+<pre class="log">
+user_time: 0.036206999999999996
+system_time: 0.0046819999999999995
+ram_usage: 9692
+
+module bsg_mux (
+	data_i,
+	sel_i,
+	data_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter els_p = 1;
+	parameter harden_p = 0;
+	parameter balanced_p = 0;
+	parameter lg_els_lp = ((els_p == 1) ? 1 : $clog2(els_p));
+	input [(((els_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? (((((els_p - 1) &gt;= 0) ? els_p : (2 - els_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : (((((els_p - 1) &gt;= 0) ? els_p : (2 - els_p)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))) : (((width_p - 1) &gt;= 0) ? ((((0 &gt;= (els_p - 1)) ? (2 - els_p) : els_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((els_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) - 1)) : ((((0 &gt;= (els_p - 1)) ? (2 - els_p) : els_p) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + (((width_p - 1) + ((els_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p))) - 1)))):(((els_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) : (((width_p - 1) &gt;= 0) ? ((els_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) : ((width_p - 1) + ((els_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)))))] data_i;
+	input [(lg_els_lp - 1):0] sel_i;
+	output [(width_p - 1):0] data_o;
+	assign data_o = data_i[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((((els_p - 1) &gt;= 0) ? sel_i : (0 - (sel_i - (els_p - 1)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))];
+	initial ;
+endmodule
+
+</pre>
+</body>

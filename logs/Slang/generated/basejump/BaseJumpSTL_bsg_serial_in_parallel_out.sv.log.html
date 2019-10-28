@@ -1,0 +1,41 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.0034679999999999997
+system_time: 0.0
+ram_usage: 8444
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html#l-64" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v:64</a>:29: error: cannot refer to element -2 of array of type &#39;logic[2:0]&#39;
+  assign ready_o = ~valid_r[els_p-1];
+                            ^~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v:71</a>:16: error: value must be positive
+    valid_n = (double_els_lp) &#39; (valid_r);
+               ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v:73</a>:18: error: value must be positive
+	  data_n[els_p+:els_p] = 0;
+	                ^~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html#l-81" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v:81</a>:23: error: endianness of selection must match declared range (type is &#39;logic[3:0]&#39;)
+    valid_o = valid_n[out_els_p-1:0];
+                      ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html#l-88" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v:88</a>:35: error: value must be positive
+	  valid_nn = valid_n[yumi_cnt_i+:els_p];
+	                                 ^~~~~
+
+</pre>
+</body>

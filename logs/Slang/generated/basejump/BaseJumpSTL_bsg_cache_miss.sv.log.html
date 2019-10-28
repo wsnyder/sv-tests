@@ -1,0 +1,86 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v</a>
+time_elapsed: 0.007s
+</pre>
+<pre class="log">
+user_time: 0.007362
+system_time: 0.0
+ram_usage: 8380
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:11</a>:10: error: unknown package &#39;bsg_cache_pkg&#39;
+  import bsg_cache_pkg::*;
+         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:18</a>:42: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_block_size_in_words_lp=`BSG_SAFE_CLOG2(block_size_in_words_p)
+                                         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:19</a>:5: error: expected expression
+    ,parameter lg_sets_lp=`BSG_SAFE_CLOG2(sets_p)
+    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:19</a>:27: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_sets_lp=`BSG_SAFE_CLOG2(sets_p)
+                          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:20</a>:5: error: expected expression
+    ,parameter lg_data_mask_width_lp=`BSG_SAFE_CLOG2(data_width_p&gt;&gt;3)
+    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:20</a>:38: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_data_mask_width_lp=`BSG_SAFE_CLOG2(data_width_p&gt;&gt;3)
+                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:21</a>:5: error: expected expression
+    ,parameter tag_width_lp=(addr_width_p-lg_data_mask_width_lp-lg_sets_lp-lg_block_size_in_words_lp)
+    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:22</a>:34: error: unknown macro or compiler directive &#39;`bsg_cache_tag_info_width&#39;
+    ,parameter tag_info_width_lp=`bsg_cache_tag_info_width(tag_width_lp)
+                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:23</a>:5: error: expected expression
+    ,parameter lg_ways_lp=`BSG_SAFE_CLOG2(ways_p)
+    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:23</a>:27: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_ways_lp=`BSG_SAFE_CLOG2(ways_p)
+                          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-24" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:24</a>:5: error: expected expression
+    ,parameter stat_info_width_lp=`bsg_cache_stat_info_width(ways_p)
+    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-24" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:24</a>:35: error: unknown macro or compiler directive &#39;`bsg_cache_stat_info_width&#39;
+    ,parameter stat_info_width_lp=`bsg_cache_stat_info_width(ways_p)
+                                  ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:25</a>:3: error: expected expression
+  )
+  ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-85" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:85</a>:3: error: unknown macro or compiler directive &#39;`declare_bsg_cache_tag_info_s&#39;
+  `declare_bsg_cache_tag_info_s(tag_width_lp);
+  ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-86" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:86</a>:3: error: unknown macro or compiler directive &#39;`declare_bsg_cache_stat_info_s&#39;
+  `declare_bsg_cache_stat_info_s(ways_p);
+  ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-105" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:105</a>:3: error: unknown module &#39;bsg_priority_encode&#39;
+  bsg_priority_encode #(
+  ^~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-118" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:118</a>:3: error: unknown module &#39;bsg_lru_pseudo_tree_encode&#39;
+  bsg_lru_pseudo_tree_encode #(
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-179" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:179</a>:3: error: unknown module &#39;bsg_lru_pseudo_tree_decode&#39;
+  bsg_lru_pseudo_tree_decode #(
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-191" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:191</a>:3: error: unknown module &#39;bsg_priority_encode&#39;
+  bsg_priority_encode #(
+  ^~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-203" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:203</a>:3: error: unknown module &#39;bsg_decode&#39;
+  bsg_decode #(
+  ^~~~~~~~~~
+
+</pre>
+</body>

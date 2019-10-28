@@ -1,0 +1,53 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_wait_cycles.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_wait_cycles.v</a>
+time_elapsed: 0.019s
+</pre>
+<pre class="log">
+user_time: 0.0091
+system_time: 0.009901
+ram_usage: 9560
+
+module bsg_wait_cycles (
+	clk_i,
+	reset_i,
+	activate_i,
+	ready_r_o
+);
+	parameter cycles_p = &#34;inv&#34;;
+	input clk_i;
+	input reset_i;
+	input activate_i;
+	output reg ready_r_o;
+	reg [($clog2((cycles_p + 1)) - 1):0] ctr_r;
+	reg [($clog2((cycles_p + 1)) - 1):0] ctr_n;
+	always @(posedge clk_i) begin
+		ctr_r &lt;= ctr_n;
+		ready_r_o &lt;= (ctr_n == cycles_p);
+	end
+	always @(*) begin
+		ctr_n = ctr_r;
+		if (reset_i)
+			ctr_n = cycles_p;
+		else if (activate_i)
+			ctr_n = 0;
+		else if ((ctr_r != cycles_p))
+			ctr_n = (ctr_r + 1&#39;b1);
+	end
+endmodule
+
+</pre>
+</body>

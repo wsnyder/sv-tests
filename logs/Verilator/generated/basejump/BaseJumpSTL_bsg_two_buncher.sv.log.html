@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v</a>
+time_elapsed: 0.094s
+</pre>
+<pre class="log">
+user_time: 0.086001
+system_time: 0.007587999999999999
+ram_usage: 11700
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v:26</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input  [width_p-1:0]   data_i
+             ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v:30</a>: Little bit endian vector: MSB &lt; LSB of bit range: -3:0
+    , output [width_p*2-1:0] data_o
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html#l-35" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v:35</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   logic [width_p-1:0] data_r,   data_n;
+         ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html#l-60" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v:60</a>: Operator ASSIGNW expects 4 bits on the Assign RHS, but Assign RHS&#39;s REPLICATE generates 6 bits.
+                                                                                                                      : ... In instance bsg_two_buncher
+   assign data_o  = { data_i,             data_v_r ? data_r : data_i };
+                  ^
+
+</pre>
+</body>

@@ -1,0 +1,29 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v</a>
+time_elapsed: 0.010s
+</pre>
+<pre class="log">
+user_time: 0.002169
+system_time: 0.007751999999999999
+ram_usage: 8408
+
+<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html#l-51" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v:51</a>: warning: macro BSG_SAFE_CLOG2 undefined (and assumed null) at this point.
+<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v:97</a>: warning: System task ($display) cannot be synthesized in an always_ff process.
+<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html#l-99" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v:99</a>: warning: System task ($display) cannot be synthesized in an always_ff process.
+
+</pre>
+</body>

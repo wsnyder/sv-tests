@@ -1,0 +1,38 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.0033
+ram_usage: 8408
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html#l-67" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v:67</a>:56: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                            , lg_credit_decimation_p = `BSG_MIN(lg_remote_credits_lp,4)
+                                                       ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html#l-68" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v:68</a>:29: error: expected expression
+                            , tag_width_lp           = $clog2(num_in_p+1)
+                            ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html#l-123" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v:123</a>:4: error: unknown module &#39;bsg_channel_tunnel_out&#39;
+   bsg_channel_tunnel_out #(.width_p                (width_p)
+   ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html#l-145" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v:145</a>:4: error: unknown module &#39;bsg_channel_tunnel_in&#39;
+   bsg_channel_tunnel_in #(.width_p                (width_p  )
+   ^~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

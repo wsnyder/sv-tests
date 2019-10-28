@@ -1,0 +1,121 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v</a>
+time_elapsed: 0.092s
+</pre>
+<pre class="log">
+user_time: 0.06537
+system_time: 0.026747
+ram_usage: 11732
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-9" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:9</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+  import bsg_cache_pkg::*;
+         ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:11</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    , parameter addr_width_p=&#34;inv&#34;
+      ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-12" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:12</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    , parameter data_width_p=&#34;inv&#34;
+      ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-13" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:13</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    , parameter block_size_in_words_p=&#34;inv&#34;
+      ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:15</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    , parameter dram_ctrl_burst_len_p=&#34;inv&#34;
+      ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:17</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam mask_width_lp=(data_width_p&gt;&gt;3)
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:18</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam lg_num_cache_lp=`BSG_SAFE_CLOG2(num_cache_p)
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:18</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    , localparam lg_num_cache_lp=`BSG_SAFE_CLOG2(num_cache_p)
+                                 ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:19</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam dram_ctrl_addr_width_lp=(addr_width_p+lg_num_cache_lp)
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:20</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam dma_pkt_width_lp=`bsg_cache_dma_pkt_width(addr_width_p)
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:20</a>: Define or directive not defined: &#39;`bsg_cache_dma_pkt_width&#39;
+    , localparam dma_pkt_width_lp=`bsg_cache_dma_pkt_width(addr_width_p)
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:21</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam num_req_lp=(block_size_in_words_p/dram_ctrl_burst_len_p)
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:22</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+  )
+  ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:32</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic [num_cache_p-1:0][data_width_p-1:0] dma_data_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:33</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic [num_cache_p-1:0] dma_data_v_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-34" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:34</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    , input [num_cache_p-1:0] dma_data_ready_i
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-41" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:41</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic app_en_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:42</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    , input app_rdy_i
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:44</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic [dram_ctrl_addr_width_lp-1:0] app_addr_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:46</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic app_wdf_wren_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-47" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:47</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    , input app_wdf_rdy_i
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-49" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:49</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic [mask_width_lp-1:0] app_wdf_mask_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-50" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:50</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic app_wdf_end_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-52" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:52</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    , input app_rd_data_valid_i
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-59" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:59</a>: Define or directive not defined: &#39;`declare_bsg_cache_dma_pkt_s&#39;
+  `declare_bsg_cache_dma_pkt_s(addr_width_p);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-65" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:65</a>: syntax error, unexpected IDENTIFIER
+  bsg_round_robin_n_to_1 #(
+  ^~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-88" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:88</a>: syntax error, unexpected IDENTIFIER
+  bsg_cache_to_dram_ctrl_rx #(
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-115" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:115</a>: syntax error, unexpected IDENTIFIER
+  bsg_cache_to_dram_ctrl_tx #(
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-146" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:146</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+  logic [`BSG_SAFE_CLOG2(num_req_lp)-1:0] req_cnt_r, req_cnt_n;
+         ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-148" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:148</a>: syntax error, unexpected always_comb
+  always_comb begin
+  ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-183" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:183</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+          ? addr_r + (1 &lt;&lt; `BSG_SAFE_CLOG2(dram_ctrl_burst_len_p*data_width_p/8))
+                           ^~~~~~~~~~~~~~~
+%Error: Exiting due to 31 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v</a>
+
+</pre>
+</body>

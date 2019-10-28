@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v</a>
+time_elapsed: 0.087s
+</pre>
+<pre class="log">
+user_time: 0.07892199999999999
+system_time: 0.008034
+ram_usage: 11844
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v:40</a>: Define or directive not defined: &#39;`BSG_CDIV&#39;
+  localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+                                ^~~~~~~~~
+        <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v.html#l-64" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v:64</a>: ... note: In file included from bsg_wormhole_router_adapter.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v:40</a>: syntax error, unexpected &#39;,&#39;
+  localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+                                                                      ^
+        <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v.html#l-64" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v:64</a>: ... note: In file included from bsg_wormhole_router_adapter.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html#l-41" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v:41</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+  localparam protocol_len_lp  = `BSG_SAFE_CLOG2(max_num_flits_lp);
+                                ^~~~~~~~~~~~~~~
+        <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v.html#l-64" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v:64</a>: ... note: In file included from bsg_wormhole_router_adapter.v
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v</a>
+
+</pre>
+</body>

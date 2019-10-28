@@ -1,0 +1,88 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v</a>
+time_elapsed: 0.077s
+</pre>
+<pre class="log">
+user_time: 0.072587
+system_time: 0.004273
+ram_usage: 11668
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:10</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+import bsg_noc_pkg::Dirs
+       ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:17</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+   ,parameter y_cord_width_p = -1
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:18</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+   ,parameter dirs_lp       = 5
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:19</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+   ,parameter stub_p        = { dirs_lp {1&#39;b0} }   
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:21</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+   ,parameter XY_order_p    = 1
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:22</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+ )
+ ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:42</a>: syntax error, unexpected genvar
+   genvar            i, j;
+   ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-214" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:214</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+import bsg_noc_pkg::Dirs
+       ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-222" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:222</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+        ,parameter x_cord_width_p = -1
+         ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-223" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:223</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+        ,parameter y_cord_width_p = -1
+         ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-224" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:224</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+        ,parameter debug_p       = 0
+         ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-225" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:225</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+        ,parameter dirs_lp       = 5
+         ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-226" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:226</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+        ,parameter stub_p        = { dirs_lp {1&#39;b0} }   
+         ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-227" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:227</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+        ,parameter XY_order_p    = 1
+         ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-228" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:228</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+        )
+        ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-238" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:238</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+     ,input   [dirs_lp-1:0]               ready_i  
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-242" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:242</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+     ,input   [x_cord_width_p-1:0] my_x_i            
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-254" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:254</a>: syntax error, unexpected genvar
+   genvar                               i;
+   ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-264" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:264</a>: syntax error, unexpected IDENTIFIER
+   bsg_mesh_router_dor_decoder  #( .x_cord_width_p  (x_cord_width_p)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-308" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v:308</a>: syntax error, unexpected if
+   if( XY_order_p == 1) begin
+   ^~
+%Error: Exiting due to 20 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_mesh_router.v</a>
+
+</pre>
+</body>

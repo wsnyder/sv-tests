@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.00396
+ram_usage: 8384
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v.html#l-1" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v:1</a>:10: error: could not find or open include file
+`include &#34;bsg_defines.v&#34;
+         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v:11</a>:33: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+    , parameter counter_width_p=`BSG_MIN(payload_width_p,16)
+                                ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v.html#l-13" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_trace_replay.v:13</a>:5: error: expected expression
+    , parameter opcode_width_lp = 4
+    ^
+
+</pre>
+</body>

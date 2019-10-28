@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v</a>
+time_elapsed: 0.006s
+</pre>
+<pre class="log">
+user_time: 0.0058909999999999995
+system_time: 0.0
+ram_usage: 8484
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v:19</a>:10: error: could not find or open include file
+`include &#34;bsg_defines.v&#34;
+         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html#l-86" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v:86</a>:7: error: unknown module &#39;bsg_two_fifo&#39;
+      bsg_two_fifo #(.width_p(flit_width_p)) twofer
+      ^~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html#l-98" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v:98</a>:49: error: cannot select range of 13819117:0 from array of type &#39;logic[6909557:0]&#39;
+      assign concentrated_hdr = fifo_data_lo[i][$bits(bsg_wormhole_concentrator_header_s)-1:0];
+                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html#l-100" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v:100</a>:7: error: unknown module &#39;bsg_wormhole_router_input_control&#39;
+      bsg_wormhole_router_input_control #(.output_dirs_p(1), .payload_len_bits_p($bits(concentrated_hdr.len))) wic
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html#l-116" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v:116</a>:3: error: unknown module &#39;bsg_wormhole_router_output_control&#39;
+  bsg_wormhole_router_output_control #(.input_dirs_p(num_in_p)) woc
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v.html#l-128" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_in.v:128</a>:3: error: unknown module &#39;bsg_mux_one_hot&#39;
+  bsg_mux_one_hot #(.width_p(flit_width_p)
+  ^~~~~~~~~~~~~~~
+
+</pre>
+</body>

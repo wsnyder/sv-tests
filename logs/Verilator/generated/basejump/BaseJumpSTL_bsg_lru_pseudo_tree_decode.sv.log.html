@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v</a>
+time_elapsed: 0.090s
+</pre>
+<pre class="log">
+user_time: 0.078953
+system_time: 0.011337
+ram_usage: 11556
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:15</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    ,localparam lg_ways_lp = `BSG_SAFE_CLOG2(ways_p)
+                             ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:30</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+     assign mask_o[i] = mask_o[(i-1)/2] &amp; ~way_id_i[lg_ways_lp-`BSG_SAFE_CLOG2(i+2)+1];
+                                                               ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:33</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+     assign mask_o[i] = mask_o[(i-2)/2] &amp; way_id_i[lg_ways_lp-`BSG_SAFE_CLOG2(i+2)+1];
+                                                              ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-37" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:37</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+   assign data_o[i] = mask_o[i] &amp; ~way_id_i[lg_ways_lp-`BSG_SAFE_CLOG2(i+2)];
+                                                       ^~~~~~~~~~~~~~~
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v</a>
+
+</pre>
+</body>

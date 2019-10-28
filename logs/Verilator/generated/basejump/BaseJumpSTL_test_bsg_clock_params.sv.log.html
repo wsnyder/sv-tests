@@ -1,0 +1,37 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v</a>
+time_elapsed: 0.085s
+</pre>
+<pre class="log">
+user_time: 0.077306
+system_time: 0.007828
+ram_usage: 11744
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html#l-43" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v:43</a>: syntax error, unexpected initial
+ initial begin
+ ^~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v:44</a>: Unsupported or unknown PLI call: $vcdpluson
+      $vcdpluson;
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v:45</a>: Unsupported or unknown PLI call: $vcdplusmemon
+      $vcdplusmemon;
+      ^~~~~~~~~~~~~
+%Error: Exiting due to 3 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v</a>
+
+</pre>
+</body>

@@ -1,0 +1,55 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v</a>
+time_elapsed: 0.089s
+</pre>
+<pre class="log">
+user_time: 0.06580799999999999
+system_time: 0.022727
+ram_usage: 11704
+
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:40</a>: Operator EQ expects 24 bits on the LHS, but LHS&#39;s VARREF &#39;test_index_r&#39; generates 23 bits.
+                                                                                                                                                     : ... In instance bsg_source_sync_channel_control_master_master
+   wire final_test = (test_index_r == tests_p);
+                                   ^~
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:42</a>: Cannot find file containing module: &#39;bsg_wait_cycles&#39;
+   bsg_wait_cycles #(.cycles_p(prepare_cycles_p)) bwc
+   ^~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_wait_cycles
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_wait_cycles.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_wait_cycles.sv
+             bsg_wait_cycles
+             bsg_wait_cycles.v
+             bsg_wait_cycles.sv
+             obj_dir/bsg_wait_cycles
+             obj_dir/bsg_wait_cycles.v
+             obj_dir/bsg_wait_cycles.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-62" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:62</a>: Cannot find file containing module: &#39;bsg_wait_cycles&#39;
+   bsg_wait_cycles #(.cycles_p(timeout_cycles_p)) bwc2
+   ^~~~~~~~~~~~~~~
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-116" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:116</a>: Operator ASSIGN expects 23 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;tests_p&#39; generates 24 bits.
+                                                                                                                                                      : ... In instance bsg_source_sync_channel_control_master_master
+                           test_index_n = tests_p;
+                                        ^
+%Error: Internal Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-28" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:28</a>: ../V3WidthSel.cpp:323: Array extraction with width miscomputed -857797414/6909559
+   logic [tests_p+1-1:0][link_channels_p-1:0] test_scoreboard_r;
+         ^
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v</a>
+
+</pre>
+</body>

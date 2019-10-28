@@ -1,0 +1,98 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v</a>
+time_elapsed: 0.075s
+</pre>
+<pre class="log">
+user_time: 0.06615399999999999
+system_time: 0.009229
+ram_usage: 11028
+
+module bsg_fsb_murn_gateway (
+	clk_i,
+	reset_i,
+	v_i,
+	data_i,
+	ready_o,
+	v_o,
+	ready_i,
+	node_en_r_o,
+	node_reset_r_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter id_p = &#34;inv&#34;;
+	parameter id_width_p = &#34;inv&#34;;
+	parameter enabled_at_start_p = 0;
+	parameter snoop_p = 0;
+	input clk_i;
+	input reset_i;
+	input v_i;
+	input [(width_p - 1):0] data_i;
+	output ready_o;
+	output v_o;
+	input ready_i;
+	output node_en_r_o;
+	output node_reset_r_o;
+	localparam fsb_pkt_data_width_lp = (((width_p - (2 * id_width_p)) - 7) - 1);
+	generate
+		if ((snoop_p &amp; enabled_at_start_p)) begin
+			assign v_o = v_i;
+			assign ready_o = ready_i;
+			assign node_reset_r_o = reset_i;
+			assign node_en_r_o = 1&#39;b1;
+			wire stop_lint_unused_warning = (clk_i | |data_i);
+		end
+		else begin
+			reg node_en_r;
+			reg node_en_n;
+			reg node_reset_r;
+			reg node_reset_n;
+			assign node_en_r_o = node_en_r;
+			assign node_reset_r_o = node_reset_r;
+			wire [(((((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + 8) + (((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p))) + (((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp))) - 1):0] data_RPT;
+			assign data_RPT = data_i;
+			wire id_match = (data_RPT[((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + (1 + (7 + ((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + ((((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp)) + -1))))):(1 + (7 + ((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + (((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp)))))] == id_p);
+			wire for_this_node = (v_i &amp; (id_match | snoop_p));
+			wire for_switch = (((~(snoop_p &amp; node_en_r) &amp; v_i) &amp; id_match) &amp; (data_RPT[(1 + (7 + ((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + ((((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp)) + -1)))):(7 + ((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + (((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp))))] == 1&#39;b1));
+			assign v_o = ((node_en_r &amp; for_this_node) &amp; ~for_switch);
+			assign ready_o = (v_i &amp; (((~node_en_r | ready_i) | for_switch) | ~for_this_node));
+			always @(posedge clk_i) node_en_r &lt;= (reset_i ? (enabled_at_start_p != 0) : node_en_n);
+			if (enabled_at_start_p) always @(posedge clk_i) node_reset_r &lt;= reset_i;
+			else begin
+				always @(posedge clk_i)
+					if (reset_i)
+						node_reset_r &lt;= 1&#39;b1;
+					else
+						node_reset_r &lt;= node_reset_n;
+			end
+			always @(*) begin
+				node_en_n = node_en_r;
+				node_reset_n = node_reset_r;
+				if (for_switch)
+					case (data_RPT[(7 + ((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + ((((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp)) + -1))):((((id_width_p - 1) &gt;= 0) ? id_width_p : (2 - id_width_p)) + (((fsb_pkt_data_width_lp - 1) &gt;= 0) ? fsb_pkt_data_width_lp : (2 - fsb_pkt_data_width_lp)))])
+						RNENABLE_CMD: node_en_n = 1&#39;b1;
+						RNDISABLE_CMD: node_en_n = 1&#39;b0;
+						RNRESET_ENABLE_CMD: node_reset_n = 1&#39;b1;
+						RNRESET_DISABLE_CMD: node_reset_n = 1&#39;b0;
+						default: ;
+					endcase
+			end
+		end
+	endgenerate
+endmodule
+
+</pre>
+</body>

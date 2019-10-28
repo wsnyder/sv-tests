@@ -1,0 +1,53 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mux_one_hot.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mux_one_hot.v</a>
+time_elapsed: 0.028s
+</pre>
+<pre class="log">
+user_time: 0.016264
+system_time: 0.01214
+ram_usage: 10504
+
+module bsg_mux_one_hot (
+	data_i,
+	sel_one_hot_i,
+	data_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter els_p = 1;
+	parameter harden_p = 1;
+	input [(((els_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? (((((els_p - 1) &gt;= 0) ? els_p : (2 - els_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : (((((els_p - 1) &gt;= 0) ? els_p : (2 - els_p)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))) : (((width_p - 1) &gt;= 0) ? ((((0 &gt;= (els_p - 1)) ? (2 - els_p) : els_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((els_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) - 1)) : ((((0 &gt;= (els_p - 1)) ? (2 - els_p) : els_p) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + (((width_p - 1) + ((els_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p))) - 1)))):(((els_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) : (((width_p - 1) &gt;= 0) ? ((els_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) : ((width_p - 1) + ((els_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)))))] data_i;
+	input [(els_p - 1):0] sel_one_hot_i;
+	output [(width_p - 1):0] data_o;
+	wire [(((els_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? (((((els_p - 1) &gt;= 0) ? els_p : (2 - els_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : (((((els_p - 1) &gt;= 0) ? els_p : (2 - els_p)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))) : (((width_p - 1) &gt;= 0) ? ((((0 &gt;= (els_p - 1)) ? (2 - els_p) : els_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((els_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) - 1)) : ((((0 &gt;= (els_p - 1)) ? (2 - els_p) : els_p) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + (((width_p - 1) + ((els_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p))) - 1)))):(((els_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) : (((width_p - 1) &gt;= 0) ? ((els_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) : ((width_p - 1) + ((els_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)))))] data_masked;
+	genvar i;
+	genvar j;
+	generate
+		for (i = 0; (i &lt; els_p); i = (i + 1)) begin : mask
+			assign data_masked[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((((els_p - 1) &gt;= 0) ? i : (0 - (i - (els_p - 1)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = (data_i[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((((els_p - 1) &gt;= 0) ? i : (0 - (i - (els_p - 1)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] &amp; {width_p {sel_one_hot_i[i]}});
+		end
+	endgenerate
+	generate
+		for (i = 0; (i &lt; width_p); i = (i + 1)) begin : reduce
+			wire [(els_p - 1):0] gather;
+			for (j = 0; (j &lt; els_p); j = (j + 1)) assign gather[j] = data_masked[(((((els_p - 1) &gt;= 0) ? j : (0 - (j - (els_p - 1)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? i : (0 - (i - (width_p - 1)))))];
+			assign data_o[i] = |gather;
+		end
+	endgenerate
+endmodule
+
+</pre>
+</body>

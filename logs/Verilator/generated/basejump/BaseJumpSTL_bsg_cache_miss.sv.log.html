@@ -1,0 +1,166 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v</a>
+time_elapsed: 0.092s
+</pre>
+<pre class="log">
+user_time: 0.076958
+system_time: 0.014596
+ram_usage: 11652
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:11</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+  import bsg_cache_pkg::*;
+         ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-13" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:13</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter data_width_p=&#34;inv&#34;
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:14</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter block_size_in_words_p=&#34;inv&#34;
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:15</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter sets_p=&#34;inv&#34;
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-16" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:16</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter ways_p=&#34;inv&#34;
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:18</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter lg_block_size_in_words_lp=`BSG_SAFE_CLOG2(block_size_in_words_p)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:18</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_block_size_in_words_lp=`BSG_SAFE_CLOG2(block_size_in_words_p)
+                                         ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:19</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter lg_sets_lp=`BSG_SAFE_CLOG2(sets_p)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:19</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_sets_lp=`BSG_SAFE_CLOG2(sets_p)
+                          ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:20</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter lg_data_mask_width_lp=`BSG_SAFE_CLOG2(data_width_p&gt;&gt;3)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:20</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_data_mask_width_lp=`BSG_SAFE_CLOG2(data_width_p&gt;&gt;3)
+                                     ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:21</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter tag_width_lp=(addr_width_p-lg_data_mask_width_lp-lg_sets_lp-lg_block_size_in_words_lp)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:22</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter tag_info_width_lp=`bsg_cache_tag_info_width(tag_width_lp)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:22</a>: Define or directive not defined: &#39;`bsg_cache_tag_info_width&#39;
+    ,parameter tag_info_width_lp=`bsg_cache_tag_info_width(tag_width_lp)
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:23</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter lg_ways_lp=`BSG_SAFE_CLOG2(ways_p)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:23</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    ,parameter lg_ways_lp=`BSG_SAFE_CLOG2(ways_p)
+                          ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-24" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:24</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    ,parameter stat_info_width_lp=`bsg_cache_stat_info_width(ways_p)
+     ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-24" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:24</a>: Define or directive not defined: &#39;`bsg_cache_stat_info_width&#39;
+    ,parameter stat_info_width_lp=`bsg_cache_stat_info_width(ways_p)
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:25</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+  )
+  ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:55</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [addr_width_p-1:0] dma_addr_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-56" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:56</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    ,input dma_done_i
+     ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-63" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:63</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic stat_mem_w_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-64" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:64</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [lg_sets_lp-1:0] stat_mem_addr_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-65" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:65</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [stat_info_width_lp-1:0] stat_mem_data_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-66" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:66</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [stat_info_width_lp-1:0] stat_mem_w_mask_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-69" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:69</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic tag_mem_v_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-70" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:70</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic tag_mem_w_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:71</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [lg_sets_lp-1:0] tag_mem_addr_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-72" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:72</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [ways_p-1:0][tag_info_width_lp-1:0] tag_mem_data_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:73</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [ways_p-1:0][tag_info_width_lp-1:0] tag_mem_w_mask_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-76" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:76</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic done_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-77" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:77</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic recover_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-78" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:78</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    ,output logic [lg_ways_lp-1:0] chosen_way_o
+     ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:80</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    ,input ack_i
+     ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-85" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:85</a>: Define or directive not defined: &#39;`declare_bsg_cache_tag_info_s&#39;
+  `declare_bsg_cache_tag_info_s(tag_width_lp);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-86" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:86</a>: Define or directive not defined: &#39;`declare_bsg_cache_stat_info_s&#39;
+  `declare_bsg_cache_stat_info_s(ways_p);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-105" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:105</a>: syntax error, unexpected IDENTIFIER
+  bsg_priority_encode #(
+  ^~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-118" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:118</a>: syntax error, unexpected IDENTIFIER
+  bsg_lru_pseudo_tree_encode #(
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-150" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:150</a>: syntax error, unexpected assign
+  assign goto_flush_op = decode_v_i.tagfl_op| decode_v_i.ainv_op| decode_v_i.afl_op| decode_v_i.aflinv_op;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-158" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:158</a>: syntax error, unexpected assign
+  assign addr_index_v
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-179" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:179</a>: syntax error, unexpected IDENTIFIER
+  bsg_lru_pseudo_tree_decode #(
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-191" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:191</a>: syntax error, unexpected IDENTIFIER
+  bsg_priority_encode #(
+  ^~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-203" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:203</a>: syntax error, unexpected IDENTIFIER
+  bsg_decode #(
+  ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-285" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:285</a>: syntax error, unexpected IDENTIFIER
+        for (integer i = 0; i &lt; ways_p; i++) begin
+                            ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-325" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:325</a>: syntax error, unexpected IDENTIFIER
+        for (integer i = 0; i &lt; ways_p; i++) begin
+                            ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html#l-348" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v:348</a>: syntax error, unexpected IDENTIFIER
+        for (integer i = 0; i &lt; ways_p; i++) begin
+                            ^
+%Error: Exiting due to 46 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_miss.v</a>
+
+</pre>
+</body>

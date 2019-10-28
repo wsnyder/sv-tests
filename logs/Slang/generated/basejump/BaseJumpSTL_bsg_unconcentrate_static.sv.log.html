@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.003659
+ram_usage: 8484
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-4" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:4</a>:46: error: unknown macro or compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+                                  , width_lp=`BSG_COUNTONES_SYNTH(pattern_els_p)
+                                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-5" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:5</a>:34: error: expected expression
+                                 )
+                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:14</a>:20: error: unknown macro or compiler directive &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+     assign o[0] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+                   ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:14</a>:50: error: expected expression
+     assign o[0] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+                                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:19</a>:32: error: unknown macro or compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+               assign o[j] = i[`BSG_COUNTONES_SYNTH(pattern_els_p[j-1:0])];
+                               ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:21</a>:30: error: unknown macro or compiler directive &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+               assign o[j] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:21</a>:60: error: expected expression
+               assign o[j] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+                                                           ^
+
+</pre>
+</body>

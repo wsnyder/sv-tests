@@ -1,0 +1,41 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator.v</a>
+time_elapsed: 0.090s
+</pre>
+<pre class="log">
+user_time: 0.076483
+system_time: 0.01329
+ram_usage: 11636
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator.v:19</a>: Cannot find include file: bsg_defines.v
+`include &#34;bsg_defines.v&#34; 
+         ^~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_defines.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_defines.v.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_defines.v.sv
+             bsg_defines.v
+             bsg_defines.v.v
+             bsg_defines.v.sv
+             obj_dir/bsg_defines.v
+             obj_dir/bsg_defines.v.v
+             obj_dir/bsg_defines.v.sv
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator.v</a>
+
+</pre>
+</body>

@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.002983
+system_time: 0.0
+ram_usage: 8496
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:10</a>:48: error: unknown macro or compiler directive &#39;`BSG_WIDTH&#39;
+                                               `BSG_WIDTH(credit_max_val_p)
+                                               ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:11</a>:44: error: expected expression
+                                           )                           
+                                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:25</a>:28: error: unknown macro or compiler directive &#39;`BSG_WIDTH&#39;
+localparam step_width_lp = `BSG_WIDTH(decimation_p);
+                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:25</a>:52: error: expected expression
+localparam step_width_lp = `BSG_WIDTH(decimation_p);
+                                                   ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-37" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:37</a>:44: error: unknown system name &#39;$unsigned&#39;
+assign up      = credit_i ? step_width_lp&#39;($unsigned(decimation_p)) : step_width_lp&#39;(0);
+                                           ^~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:44</a>:1: error: unknown module &#39;bsg_counter_up_down_variable&#39;
+bsg_counter_up_down_variable #( .max_val_p(credit_max_val_p)  
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.003493
+system_time: 0.0
+ram_usage: 8412
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:42</a>:4: error: unknown module &#39;bsg_wait_cycles&#39;
+   bsg_wait_cycles #(.cycles_p(prepare_cycles_p)) bwc
+   ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-62" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:62</a>:4: error: unknown module &#39;bsg_wait_cycles&#39;
+   bsg_wait_cycles #(.cycles_p(timeout_cycles_p)) bwc2
+   ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v.html#l-77" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master_master.v:77</a>:34: error: value must be positive
+          test_scoreboard_r &lt;= { link_channels_p*(tests_p+1) {  1&#39;b0 } };
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

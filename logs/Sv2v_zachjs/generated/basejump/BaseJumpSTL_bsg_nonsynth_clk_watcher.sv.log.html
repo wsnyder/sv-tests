@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_clk_gen
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_clk_gen/bsg_nonsynth_clk_watcher.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_clk_gen/bsg_nonsynth_clk_watcher.v</a>
+time_elapsed: 0.028s
+</pre>
+<pre class="log">
+user_time: 0.011124
+system_time: 0.016686
+ram_usage: 9992
+
+module bsg_nonsynth_clk_watcher (clk_i);
+	parameter tolerance_p = 0;
+	input clk_i;
+	reg signed [63:0] my_ticks_posedge = 0;
+	reg signed [63:0] my_ticks_negedge = 0;
+	reg signed [63:0] last_posedge = -1;
+	reg signed [63:0] last_negedge = -1;
+	reg signed [63:0] cycles_posedge = -1;
+	reg signed [63:0] cycles_negedge = -1;
+	reg signed [63:0] temp_time;
+	always @(posedge clk_i) begin
+		temp_time = $time;
+		if ((((temp_time - my_ticks_negedge) &gt; (last_posedge + tolerance_p)) || ((temp_time - my_ticks_negedge) &lt; (last_posedge - tolerance_p)))) begin
+			if ((cycles_posedge != -1))
+				$write(&#34;## clock_watcher {                                                                                POSEDGE offset (after %-8d cycles) %-7d ps (n/p phase ratio=%2.3f)} (%m)\n&#34;, cycles_posedge, ($time - my_ticks_negedge), (real&#39;(last_negedge) / real&#39;(($time - my_ticks_negedge))));
+			cycles_posedge = 0;
+			last_posedge = ($time - my_ticks_negedge);
+		end
+		else
+			cycles_posedge = (cycles_posedge + 1);
+		my_ticks_posedge = $time;
+	end
+	always @(negedge clk_i) begin
+		temp_time = $time;
+		if ((((temp_time - my_ticks_posedge) &gt; (last_negedge + tolerance_p)) || ((temp_time - my_ticks_posedge) &lt; (last_negedge - tolerance_p)))) begin
+			if ((cycles_negedge != -1))
+				$write(&#34;## clock_watcher { NEGEDGE offset (after %-7d cycles) %-7d ps (p/n phase ratio=%2.3f)} (%m)\n&#34;, cycles_negedge, ($time - my_ticks_posedge), (real&#39;(last_posedge) / real&#39;(($time - my_ticks_posedge))));
+			cycles_negedge = 0;
+			last_negedge = ($time - my_ticks_posedge);
+		end
+		else
+			cycles_negedge = (cycles_negedge + 1);
+		my_ticks_negedge = $time;
+	end
+endmodule
+
+</pre>
+</body>

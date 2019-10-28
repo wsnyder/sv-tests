@@ -1,0 +1,267 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_idiv_iterative_controller.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_idiv_iterative_controller.v</a>
+time_elapsed: 0.188s
+</pre>
+<pre class="log">
+user_time: 0.135827
+system_time: 0.052237
+ram_usage: 11544
+
+module bsg_idiv_iterative_controller (
+	clk_i,
+	reset_i,
+	v_i,
+	ready_o,
+	zero_divisor_i,
+	signed_div_r_i,
+	adder_result_is_neg_i,
+	opA_is_neg_i,
+	opC_is_neg_i,
+	opA_sel_o,
+	opA_ld_o,
+	opA_inv_o,
+	opA_clr_l_o,
+	opB_sel_o,
+	opB_ld_o,
+	opB_inv_o,
+	opB_clr_l_o,
+	opC_sel_o,
+	opC_ld_o,
+	latch_inputs_o,
+	adder_cin_o,
+	v_o,
+	yumi_i
+);
+	localparam [5:0] WAIT = 0;
+	localparam [5:0] START = 1;
+	localparam [5:0] CALC5 = 10;
+	localparam [5:0] CALC6 = 11;
+	localparam [5:0] CALC7 = 12;
+	localparam [5:0] CALC8 = 13;
+	localparam [5:0] CALC9 = 14;
+	localparam [5:0] CALC10 = 15;
+	localparam [5:0] CALC11 = 16;
+	localparam [5:0] CALC12 = 17;
+	localparam [5:0] CALC13 = 18;
+	localparam [5:0] CALC14 = 19;
+	localparam [5:0] NEG0 = 2;
+	localparam [5:0] CALC15 = 20;
+	localparam [5:0] CALC16 = 21;
+	localparam [5:0] CALC17 = 22;
+	localparam [5:0] CALC18 = 23;
+	localparam [5:0] CALC19 = 24;
+	localparam [5:0] CALC20 = 25;
+	localparam [5:0] CALC21 = 26;
+	localparam [5:0] CALC22 = 27;
+	localparam [5:0] CALC23 = 28;
+	localparam [5:0] CALC24 = 29;
+	localparam [5:0] NEG1 = 3;
+	localparam [5:0] CALC25 = 30;
+	localparam [5:0] CALC26 = 31;
+	localparam [5:0] CALC27 = 32;
+	localparam [5:0] CALC28 = 33;
+	localparam [5:0] CALC29 = 34;
+	localparam [5:0] CALC30 = 35;
+	localparam [5:0] CALC31 = 36;
+	localparam [5:0] CALC32 = 37;
+	localparam [5:0] REPAIR = 38;
+	localparam [5:0] REMAIN = 39;
+	localparam [5:0] SHIFT = 4;
+	localparam [5:0] QUOT = 40;
+	localparam [5:0] DONE = 41;
+	localparam [5:0] CALC0 = 5;
+	localparam [5:0] CALC1 = 6;
+	localparam [5:0] CALC2 = 7;
+	localparam [5:0] CALC3 = 8;
+	localparam [5:0] CALC4 = 9;
+	input clk_i;
+	input reset_i;
+	input v_i;
+	output ready_o;
+	input zero_divisor_i;
+	input signed_div_r_i;
+	input adder_result_is_neg_i;
+	input opA_is_neg_i;
+	input opC_is_neg_i;
+	output reg opA_sel_o;
+	output reg opA_ld_o;
+	output reg opA_inv_o;
+	output reg opA_clr_l_o;
+	output reg [2:0] opB_sel_o;
+	output reg opB_ld_o;
+	output reg opB_inv_o;
+	output reg opB_clr_l_o;
+	output reg [2:0] opC_sel_o;
+	output reg opC_ld_o;
+	output reg latch_inputs_o;
+	output reg adder_cin_o;
+	output wire v_o;
+	input yumi_i;
+	reg q_neg;
+	reg r_neg;
+	reg neg_ld;
+	reg add_neg_last;
+	reg [5:0] state;
+	reg [5:0] next_state;
+	always @(posedge clk_i) begin
+		add_neg_last &lt;= adder_result_is_neg_i;
+		if (neg_ld) begin
+			q_neg &lt;= ((opA_is_neg_i ^ opC_is_neg_i) &amp; signed_div_r_i);
+			r_neg &lt;= (opC_is_neg_i &amp; signed_div_r_i);
+		end
+	end
+	always @(posedge clk_i)
+		if (reset_i)
+			state &lt;= WAIT;
+		else
+			state &lt;= next_state;
+	always @(*) begin
+		opA_sel_o = 1&#39;b0;
+		opA_ld_o = 1&#39;b0;
+		opA_inv_o = !add_neg_last;
+		opA_clr_l_o = 1&#39;b1;
+		opB_sel_o = 3&#39;b001;
+		opB_ld_o = 1&#39;b1;
+		opB_inv_o = 1&#39;b0;
+		opB_clr_l_o = 1&#39;b1;
+		opC_sel_o = 3&#39;b001;
+		opC_ld_o = 1&#39;b1;
+		adder_cin_o = !add_neg_last;
+		neg_ld = 1&#39;b0;
+		latch_inputs_o = 1&#39;b0;
+		next_state = WAIT;
+		case (state)
+			WAIT: begin
+				if (v_i)
+					next_state = START;
+				latch_inputs_o = 1&#39;b1;
+			end
+			START: begin
+				next_state = NEG0;
+				opA_ld_o = 1&#39;b1;
+				opC_ld_o = 1&#39;b1;
+				opA_sel_o = 1&#39;b1;
+				opC_sel_o = 3&#39;b100;
+				opB_ld_o = 1&#39;b0;
+			end
+			NEG0: begin
+				next_state = NEG1;
+				opA_inv_o = 1&#39;b1;
+				opB_clr_l_o = 1&#39;b0;
+				opB_sel_o = 3&#39;b100;
+				opC_ld_o = 1&#39;b0;
+				neg_ld = 1&#39;b1;
+				adder_cin_o = 1&#39;b1;
+				opA_ld_o = (opA_is_neg_i &amp; signed_div_r_i);
+			end
+			NEG1: begin
+				next_state = SHIFT;
+				opA_clr_l_o = 1&#39;b0;
+				opB_inv_o = 1&#39;b1;
+				opB_ld_o = 1&#39;b0;
+				opC_sel_o = 3&#39;b010;
+				adder_cin_o = 1&#39;b1;
+				opC_ld_o = (opC_is_neg_i &amp; signed_div_r_i);
+			end
+			SHIFT: begin
+				next_state = CALC0;
+				opA_clr_l_o = 1&#39;b0;
+				opB_clr_l_o = 1&#39;b0;
+				adder_cin_o = 1&#39;b0;
+			end
+			CALC0: next_state = CALC1;
+			CALC1: next_state = CALC2;
+			CALC2: next_state = CALC3;
+			CALC3: next_state = CALC4;
+			CALC4: next_state = CALC5;
+			CALC5: next_state = CALC6;
+			CALC6: next_state = CALC7;
+			CALC7: next_state = CALC8;
+			CALC8: next_state = CALC9;
+			CALC9: next_state = CALC10;
+			CALC10: next_state = CALC11;
+			CALC11: next_state = CALC12;
+			CALC12: next_state = CALC13;
+			CALC13: next_state = CALC14;
+			CALC14: next_state = CALC15;
+			CALC15: next_state = CALC16;
+			CALC16: next_state = CALC17;
+			CALC17: next_state = CALC18;
+			CALC18: next_state = CALC19;
+			CALC19: next_state = CALC20;
+			CALC20: next_state = CALC21;
+			CALC21: next_state = CALC22;
+			CALC22: next_state = CALC23;
+			CALC23: next_state = CALC24;
+			CALC24: next_state = CALC25;
+			CALC25: next_state = CALC26;
+			CALC26: next_state = CALC27;
+			CALC27: next_state = CALC28;
+			CALC28: next_state = CALC29;
+			CALC29: next_state = CALC30;
+			CALC30: next_state = CALC31;
+			CALC31: next_state = CALC32;
+			CALC32: begin
+				next_state = REPAIR;
+				opB_sel_o = 3&#39;b010;
+			end
+			REPAIR: begin
+				next_state = REMAIN;
+				opA_inv_o = 1&#39;b0;
+				opB_sel_o = 3&#39;b010;
+				opC_ld_o = 1&#39;b0;
+				adder_cin_o = 1&#39;b0;
+				opB_ld_o = add_neg_last;
+			end
+			REMAIN: begin
+				next_state = (zero_divisor_i ? DONE : QUOT);
+				opA_ld_o = 1&#39;b1;
+				opA_clr_l_o = 1&#39;b0;
+				opB_sel_o = 3&#39;b100;
+				opC_ld_o = 1&#39;b0;
+				opB_inv_o = r_neg;
+				adder_cin_o = r_neg;
+			end
+			QUOT: begin
+				if (yumi_i)
+					next_state = WAIT;
+				else
+					next_state = DONE;
+				opA_clr_l_o = 1&#39;b0;
+				opB_inv_o = 1&#39;b1;
+				opB_ld_o = 1&#39;b0;
+				opC_sel_o = 3&#39;b010;
+				adder_cin_o = 1&#39;b1;
+				opC_ld_o = q_neg;
+			end
+			DONE: begin
+				if (yumi_i)
+					next_state = WAIT;
+				else
+					next_state = DONE;
+				opA_ld_o = 1&#39;b0;
+				opB_ld_o = 1&#39;b0;
+				opC_ld_o = 1&#39;b0;
+			end
+		endcase
+	end
+	assign ready_o = (state == WAIT);
+	assign v_o = (state == DONE);
+endmodule
+
+</pre>
+</body>

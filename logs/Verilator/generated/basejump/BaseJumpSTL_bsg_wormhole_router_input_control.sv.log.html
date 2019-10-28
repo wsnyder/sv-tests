@@ -1,0 +1,58 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v</a>
+time_elapsed: 0.086s
+</pre>
+<pre class="log">
+user_time: 0.071724
+system_time: 0.01428
+ram_usage: 11596
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html#l-5" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v:5</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input [output_dirs_p-1:0]      fifo_decoded_dest_i
+            ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html#l-6" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v:6</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input [payload_len_bits_p-1:0] fifo_payload_len_i
+            ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v:15</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [output_dirs_p-1:0] reqs_o
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v:23</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   wire [payload_len_bits_p-1:0] payload_ctr_r;
+        ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html#l-24" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v:24</a>: Logical Operator LOGNOT expects 1 bit on the LHS, but LHS&#39;s VARREF &#39;payload_ctr_r&#39; generates 3 bits.
+                                                                                                                                   : ... In instance bsg_wormhole_router_input_control
+   wire                       counter_expired    = (!payload_ctr_r);
+                                                    ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v:27</a>: Cannot find file containing module: &#39;bsg_counter_set_down&#39;
+   bsg_counter_set_down #(.width_p(payload_len_bits_p), .set_and_down_exclusive_p(1&#39;b1)) ctr
+   ^~~~~~~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_counter_set_down
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_counter_set_down.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_counter_set_down.sv
+             bsg_counter_set_down
+             bsg_counter_set_down.v
+             bsg_counter_set_down.sv
+             obj_dir/bsg_counter_set_down
+             obj_dir/bsg_counter_set_down.v
+             obj_dir/bsg_counter_set_down.sv
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v</a>
+
+</pre>
+</body>

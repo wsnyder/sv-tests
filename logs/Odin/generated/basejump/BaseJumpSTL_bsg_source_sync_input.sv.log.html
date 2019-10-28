@@ -1,0 +1,82 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>
+time_elapsed: 0.007s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.006932
+ram_usage: 8388
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::100 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+   logic [channel_width_p-1:0]   core_data_0,  core_data_1
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::103 error in parsing: (syntax error, unexpected &#39;,&#39;, expecting &#39;(&#39;)
+   logic                         core_valid_0, core_valid_1
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::172 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   logic  io_trigger_line_r;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::218 error in parsing: (syntax error, unexpected vELSE, expecting &#39;;&#39;)
+       else $error(&#34;attempt to enque on full async fifo&#34;);
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::255 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   logic  core_sent_0_want_to_send_1_r;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::329 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+   logic [lg_fifo_depth_p+1-1:0] core_credits_gray_r_iosync
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::348 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
+   always_comb io_credits_sent_r_p1 = io_credits_sent_r+1;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::349 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
+   always_comb io_credits_sent_r_p2 = io_credits_sent_r+2;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::386 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+   logic [lg_fifo_depth_p+1-1:0] io_credits_sent_p1_r_gray;
+WARNING (11)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::143 Could not resolve initial assignment to a constant value, skipping
+
+                                 : io_data_0_r;
+WARNING (12)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::147 Could not resolve initial assignment to a constant value, skipping
+
+                                 : io_data_1_r;
+WARNING (13)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::177 Could not resolve initial assignment to a constant value, skipping
+
+                          : io_trigger_mode_0;
+WARNING (14)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::179 Could not resolve initial assignment to a constant value, skipping
+
+   wire io_trigger_mode_active = (| io_trigger_count_r);
+WARNING (15)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::212 Could not resolve initial assignment to a constant value, skipping
+
+               : (io_valid_0_r | io_valid_1_r);     // enque if either valid bit set
+WARNING (16)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::262 Could not resolve initial assignment to a constant value, skipping
+
+                              : core_data_0;
+WARNING (17)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::264 Could not resolve initial assignment to a constant value, skipping
+
+   wire core_valid_o_pre_twofer = core_valid_o_tmp; // remove inout warning from lint
+WARNING (18)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::294 Could not resolve initial assignment to a constant value, skipping
+
+   wire core_transfer_success = core_valid_o_tmp &amp; core_twofer_ready;
+WARNING (19)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::393 Could not resolve initial assignment to a constant value, skipping
+
+   wire empty_1 = (core_credits_gray_r_iosync != io_credits_sent_p1_r_gray);
+WARNING (20)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::394 Could not resolve initial assignment to a constant value, skipping
+
+   wire empty_0 = (core_credits_gray_r_iosync != io_credits_sent_r_gray);
+ERROR (21)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>::161 Can&#39;t find module name bsg_sync_sync
+    );
+Assertion failed()@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/ast_elaborate.cpp]build_hierarchy::988 
+
+</pre>
+</body>

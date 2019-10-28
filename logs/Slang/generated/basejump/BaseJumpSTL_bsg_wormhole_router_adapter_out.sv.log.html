@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.002665
+system_time: 0.002665
+ram_usage: 8484
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:45</a>:33: error: unknown macro or compiler directive &#39;`BSG_CDIV&#39;
+  localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+                                ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:45</a>:86: error: expected expression
+  localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+                                                                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:46</a>:33: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  localparam protocol_len_lp  = `BSG_SAFE_CLOG2(max_num_flits_lp);
+                                ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:46</a>:66: error: expected expression
+  localparam protocol_len_lp  = `BSG_SAFE_CLOG2(max_num_flits_lp);
+                                                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-48" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:48</a>:3: error: unknown module &#39;bsg_serial_in_parallel_out_dynamic&#39;
+  bsg_serial_in_parallel_out_dynamic
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-74" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:74</a>:3: error: unknown module &#39;bsg_dff_reset_en&#39;
+  bsg_dff_reset_en
+  ^~~~~~~~~~~~~~~~
+
+</pre>
+</body>

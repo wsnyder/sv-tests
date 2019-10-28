@@ -1,0 +1,38 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v</a>
+time_elapsed: 0.091s
+</pre>
+<pre class="log">
+user_time: 0.07403
+system_time: 0.01669
+ram_usage: 11604
+
+%Warning-STMTDLY: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:30</a>: Unsupported: Ignoring delay on this delayed statement.
+    forever #(clock_period/2.0) clk_lo = ~clk_lo;
+            ^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:27</a>: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS&#39;s VARREF &#39;default_clk_per_p&#39; generates 24 bits.
+                                                                                                                                 : ... In instance bsg_nonsynth_clock_gen_plusarg
+    integer clock_period = default_clk_per_p;
+                           ^~~~~~~~~~~~~~~~~
+%Warning-INFINITELOOP: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:30</a>: Infinite loop (condition always true)
+                                                                                                                                        : ... In instance bsg_nonsynth_clock_gen_plusarg
+    forever #(clock_period/2.0) clk_lo = ~clk_lo;
+    ^~~~~~~
+
+</pre>
+</body>

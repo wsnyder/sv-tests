@@ -1,0 +1,51 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v</a>
+time_elapsed: 0.015s
+</pre>
+<pre class="log">
+user_time: 0.006532
+system_time: 0.008690999999999999
+ram_usage: 9608
+
+module bsg_priority_encode_one_hot_out (
+	i,
+	o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter lo_to_hi_p = &#34;inv&#34;;
+	input [(width_p - 1):0] i;
+	output [(width_p - 1):0] o;
+	wire [(width_p - 1):0] scan_lo;
+	generate
+		if ((width_p == 1)) assign o = i;
+		else begin
+			bsg_scan #(
+				.width_p(width_p),
+				.or_p(1),
+				.lo_to_hi_p(lo_to_hi_p)
+			) scan(
+				.i(i),
+				.o(scan_lo)
+			);
+			if (lo_to_hi_p) assign o = (scan_lo &amp; {~scan_lo[(width_p - 2):0], 1&#39;b1});
+			else assign o = (scan_lo &amp; {1&#39;b1, ~scan_lo[(width_p - 1):1]});
+		end
+	endgenerate
+endmodule
+
+</pre>
+</body>

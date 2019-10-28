@@ -1,0 +1,42 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>
+time_elapsed: 0.006s
+</pre>
+<pre class="log">
+user_time: 0.004091
+system_time: 0.0023829999999999997
+ram_usage: 8436
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>::46 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   string  read_line;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>::50 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   logic                    eof;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>::51 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   logic                    next_line_r;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>::54 error in parsing: (syntax error, unexpected &#39;=&#39;, expecting &#39;(&#39;)
+   string 			  filename_path = filename_p;
+ERROR (6)::PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>::169 While statements are NOT supported
+                    end
+Assertion failed()@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/parse_making_ast.cpp]newWhile::1193 
+
+</pre>
+</body>

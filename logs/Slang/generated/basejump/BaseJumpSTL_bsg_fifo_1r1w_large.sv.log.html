@@ -1,0 +1,53 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.004027
+ram_usage: 8428
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-147" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:147</a>:4: error: unknown module &#39;bsg_serial_in_parallel_out&#39;
+   bsg_serial_in_parallel_out #(.width_p(width_p)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-169" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:169</a>:4: error: unknown module &#39;bsg_fifo_1rw_large&#39;
+   bsg_fifo_1rw_large #(.width_p(width_p*2)
+   ^~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-231" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:231</a>:4: error: unknown module &#39;bsg_thermometer_count&#39;
+   bsg_thermometer_count #(.width_p(2)) thermo(.i(little_ready &amp; bypass_vector)
+   ^~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-238" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:238</a>:4: error: unknown module &#39;bsg_round_robin_2_to_2&#39;
+   bsg_round_robin_2_to_2 #(.width_p(width_p))
+   ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-260" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:260</a>:9: error: unknown module &#39;bsg_two_fifo&#39;
+        bsg_two_fifo #(.width_p(width_p)) little
+        ^~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-274" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:274</a>:3: error: unknown module &#39;bsg_round_robin_n_to_1&#39;
+  bsg_round_robin_n_to_1 #(.width_p(width_p)
+  ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-295" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:295</a>:20: error: use of undeclared identifier &#39;big1p&#39;
+               = 2*big1p.num_elements_debug
+                   ^~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-297" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:297</a>:18: error: use of undeclared identifier &#39;sipo&#39;
+               + sipo.valid_r[0] + sipo.valid_r[1]
+                 ^~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html#l-297" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v:297</a>:36: error: use of undeclared identifier &#39;sipo&#39;
+               + sipo.valid_r[0] + sipo.valid_r[1]
+                                   ^~~~
+
+</pre>
+</body>

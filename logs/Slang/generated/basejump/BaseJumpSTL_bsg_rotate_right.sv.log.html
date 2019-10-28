@@ -1,0 +1,32 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.0029679999999999997
+ram_usage: 8468
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html#l-3" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v:3</a>:14: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    , input [`BSG_SAFE_CLOG2(width_p)-1:0] rot_i
+             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html#l-8" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v:8</a>:23: error: value must be positive
+   assign o = temp[0+:width_p];
+                      ^~~~~~~
+
+</pre>
+</body>

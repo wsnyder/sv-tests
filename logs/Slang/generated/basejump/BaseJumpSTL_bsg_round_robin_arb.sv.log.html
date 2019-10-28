@@ -1,0 +1,32 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_round_robin_arb.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_round_robin_arb.v</a>
+time_elapsed: 0.016s
+</pre>
+<pre class="log">
+user_time: 0.009663
+system_time: 0.006442
+ram_usage: 8448
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_round_robin_arb.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_round_robin_arb.v:17</a>:54: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+                                     ,lg_inputs_p   =`BSG_SAFE_CLOG2(inputs_p)
+                                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_round_robin_arb.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_round_robin_arb.v:18</a>:38: error: expected expression
+                                     ,reset_on_sr_p = 1&#39;b0
+                                     ^
+
+</pre>
+</body>

@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.0036
+system_time: 0.0
+ram_usage: 8328
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v:19</a>:54: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+                           ,parameter tag_width_lp = `BSG_SAFE_CLOG2(num_out_p)
+                                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v:20</a>:28: error: expected expression
+                           )
+                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html#l-47" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v:47</a>:9: error: unknown module &#39;bsg_decode_with_v&#39;
+        bsg_decode_with_v #(.num_out_p(num_out_p)) bdv
+        ^~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

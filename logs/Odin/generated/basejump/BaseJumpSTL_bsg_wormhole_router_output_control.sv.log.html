@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a>
+time_elapsed: 26.725s
+</pre>
+<pre class="log">
+user_time: 24.496894
+system_time: 2.228442
+ram_usage: 3028704
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a>::25 error in parsing: (syntax error, unexpected &#39;,&#39;, expecting &#39;(&#39;)
+   bsg_dff_reset #(.width_p(input_dirs_p)) scheduled_reg (.clk_i, .reset_i, .data_i(scheduled_n), .data_o(scheduled_r));
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a>::34 error in parsing: (syntax error, unexpected &#39;,&#39;, expecting &#39;(&#39;)
+    ,.reset_i
+WARNING (4)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a>::29 Could not resolve initial assignment to a constant value, skipping
+
+   wire                     free_to_schedule = !scheduled_with_release;
+terminate called after throwing an instance of &#39;std::bad_alloc&#39;
+  what():  std::bad_alloc
+
+</pre>
+</body>

@@ -1,0 +1,56 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.004987
+system_time: 0.0
+ram_usage: 8436
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-1" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:1</a>:10: error: could not find or open include file
+`include &#34;bsg_defines.v&#34;
+         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-6" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:6</a>:13: error: unknown package &#39;bsg_wormhole_router_pkg&#39;
+     import bsg_wormhole_router_pkg::StrictXY;
+            ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:7</a>:13: error: unknown package &#39;bsg_wormhole_router_pkg&#39;
+     import bsg_wormhole_router_pkg::StrictX;
+            ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:40</a>:5: error: unknown module &#39;bsg_transpose&#39;
+    bsg_transpose #(.width_p(dirs_lp),.els_p(dirs_lp)) tr (.i(routing_matrix_p[0])
+    ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:73</a>:42: error: unknown macro or compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+      localparam output_dirs_sparse_lp = `BSG_COUNTONES_SYNTH(routing_matrix_p[0][i]);
+                                         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:73</a>:86: error: expected expression
+      localparam output_dirs_sparse_lp = `BSG_COUNTONES_SYNTH(routing_matrix_p[0][i]);
+                                                                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-181" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:181</a>:4: error: unknown module &#39;bsg_transpose&#39;
+   bsg_transpose #(.width_p(dirs_lp),.els_p(dirs_lp)) reqs_trans
+   ^~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-189" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:189</a>:41: error: unknown macro or compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+      localparam input_dirs_sparse_lp = `BSG_COUNTONES_SYNTH(routing_matrix_p[1][i]);
+                                        ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-189" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:189</a>:85: error: expected expression
+      localparam input_dirs_sparse_lp = `BSG_COUNTONES_SYNTH(routing_matrix_p[1][i]);
+                                                                                    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v.html#l-248" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_generalized.v:248</a>:4: error: unknown module &#39;bsg_transpose&#39;
+   bsg_transpose #(.width_p(dirs_lp),.els_p(dirs_lp)) yumis_trans
+   ^~~~~~~~~~~~~
+
+</pre>
+</body>

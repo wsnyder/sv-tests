@@ -1,0 +1,57 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v</a>
+time_elapsed: 0.021s
+</pre>
+<pre class="log">
+user_time: 0.009323999999999999
+system_time: 0.011557
+ram_usage: 9740
+
+module bsg_nonsynth_val_watcher_1p (
+	clk_i,
+	reset_i,
+	val_i,
+	p1_i
+);
+	parameter string_p = &#34;unknown&#34;;
+	parameter trigger_val_p = -1;
+	parameter val_size_p = 32;
+	parameter one_time_trigger_p = 1&#39;b1;
+	parameter p1_width_p = 32;
+	parameter extra_p = 1;
+	input clk_i;
+	input reset_i;
+	input [(val_size_p - 1):0] val_i;
+	input [(p1_width_p - 1):0] p1_i;
+	reg triggered_r;
+	wire triggered_n;
+	always @(posedge clk_i) begin
+		if (triggered_n)
+			if (extra_p)
+				$display(&#34;// %m: %s %x.\n&#34;, string_p, p1_i);
+			else
+				$display(&#34;// %m: %s.\n&#34;, string_p);
+		if (reset_i)
+			triggered_r &lt;= 0;
+		else
+			triggered_r &lt;= (triggered_r | triggered_n);
+	end
+	assign triggered_n = ((val_i == trigger_val_p) &amp; (~triggered_r | ~one_time_trigger_p));
+endmodule
+
+</pre>
+</body>

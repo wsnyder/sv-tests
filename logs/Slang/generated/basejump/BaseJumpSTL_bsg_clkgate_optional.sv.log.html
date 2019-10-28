@@ -1,0 +1,29 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_clkgate_optional.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_clkgate_optional.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.00295
+system_time: 0.0
+ram_usage: 8464
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_clkgate_optional.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_clkgate_optional.v:21</a>:3: error: unknown module &#39;bsg_dlatch&#39;
+  bsg_dlatch #(.width_p(1), .i_know_this_is_a_bad_idea_p(1))
+  ^~~~~~~~~~
+
+</pre>
+</body>

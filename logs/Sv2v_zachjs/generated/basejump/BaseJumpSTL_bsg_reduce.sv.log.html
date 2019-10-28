@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_reduce.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_reduce.v</a>
+time_elapsed: 0.017s
+</pre>
+<pre class="log">
+user_time: 0.0069689999999999995
+system_time: 0.010454
+ram_usage: 9600
+
+module bsg_reduce (
+	i,
+	o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter xor_p = 0;
+	parameter and_p = 0;
+	parameter or_p = 0;
+	parameter harden_p = 0;
+	input [(width_p - 1):0] i;
+	output o;
+	initial ;
+	generate
+		if (xor_p) assign o = ^i;
+		else if (and_p) assign o = &amp;i;
+		else if (or_p) assign o = |i;
+	endgenerate
+endmodule
+
+</pre>
+</body>

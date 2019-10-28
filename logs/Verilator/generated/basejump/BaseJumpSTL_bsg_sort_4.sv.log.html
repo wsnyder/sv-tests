@@ -1,0 +1,43 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>
+time_elapsed: 0.084s
+</pre>
+<pre class="log">
+user_time: 0.065279
+system_time: 0.019195999999999998
+ram_usage: 11688
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html#l-39" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v:39</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
+   (.data_i({s0[1], s0[0]}), .data_o({s1[1], s1[0]}));
+    ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v:42</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
+   (.data_i({s0[3], s0[2]}), .data_o({s1[3], s1[2]}));
+    ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html#l-47" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v:47</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
+   (.data_i({s1[2], s1[0]}), .data_o({s2[2], s2[0]}));
+    ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html#l-50" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v:50</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
+   (.data_i({s1[3], s1[1]}), .data_o({s2[3], s2[1]}), .swapped_o(swapped_3_1));
+    ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html#l-60" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v:60</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
+   (.data_i({s2[2], s2[1]})
+    ^
+%Error: Exiting due to 5 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>
+
+</pre>
+</body>

@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v</a>
+time_elapsed: 0.083s
+</pre>
+<pre class="log">
+user_time: 0.079487
+system_time: 0.0037489999999999997
+ram_usage: 11908
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:21</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+  import bsg_fpu_pkg::*;
+         ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:23</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    , parameter m_p=&#34;inv&#34;
+      ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:25</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam width_lp=(e_p+m_p+1)
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:26</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+    , localparam bias_lp={1&#39;b0, {(e_p-1){1&#39;b1}}}
+      ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:27</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+  )
+  ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:33</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic invalid_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:46</a>: syntax error, unexpected IDENTIFIER
+  bsg_fpu_preprocess #(
+  ^~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-68" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:68</a>: syntax error, unexpected assign
+  assign exp_too_big = signed_i
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-81" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:81</a>: syntax error, unexpected assign
+  assign preshift = signed_i
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:89</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+  assign shifted = preshift &gt;&gt; shamt[`BSG_SAFE_CLOG2(width_lp):0];
+                                     ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:97</a>: syntax error, unexpected assign
+  assign inverted = {width_lp{signed_i &amp; sign}} ^ {shifted};
+  ^~~~~~
+%Error: Exiting due to 11 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v</a>
+
+</pre>
+</body>

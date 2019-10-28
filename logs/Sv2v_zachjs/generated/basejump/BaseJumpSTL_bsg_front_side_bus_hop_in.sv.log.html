@@ -1,0 +1,82 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in.v</a>
+time_elapsed: 0.036s
+</pre>
+<pre class="log">
+user_time: 0.019423
+system_time: 0.016436
+ram_usage: 10336
+
+module bsg_front_side_bus_hop_in (
+	clk_i,
+	reset_i,
+	ready_o,
+	v_i,
+	data_i,
+	v_o,
+	data_o,
+	ready_i
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter fan_out_p = 2;
+	input clk_i;
+	input reset_i;
+	output ready_o;
+	input v_i;
+	input [(width_p - 1):0] data_i;
+	output [(fan_out_p - 1):0] v_o;
+	output [(((fan_out_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? (((((fan_out_p - 1) &gt;= 0) ? fan_out_p : (2 - fan_out_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : (((((fan_out_p - 1) &gt;= 0) ? fan_out_p : (2 - fan_out_p)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))) : (((width_p - 1) &gt;= 0) ? ((((0 &gt;= (fan_out_p - 1)) ? (2 - fan_out_p) : fan_out_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((fan_out_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) - 1)) : ((((0 &gt;= (fan_out_p - 1)) ? (2 - fan_out_p) : fan_out_p) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + (((width_p - 1) + ((fan_out_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p))) - 1)))):(((fan_out_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) : (((width_p - 1) &gt;= 0) ? ((fan_out_p - 1) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) : ((width_p - 1) + ((fan_out_p - 1) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)))))] data_o;
+	input [(fan_out_p - 1):0] ready_i;
+	reg [(fan_out_p - 1):0] sent_r;
+	reg [(fan_out_p - 1):0] sent_n;
+	genvar i;
+	wire [(fan_out_p - 1):0] v_o_tmp;
+	wire [(width_p - 1):0] data_o_tmp;
+	wire fifo_v;
+	wire fifo_yumi;
+	bsg_two_fifo #(.width_p(width_p)) fifo(
+		.clk_i(clk_i),
+		.reset_i(reset_i),
+		.data_i(data_i),
+		.data_o(data_o_tmp),
+		.v_o(fifo_v),
+		.yumi_i(fifo_yumi),
+		.ready_o(ready_o),
+		.v_i(v_i)
+	);
+	generate
+		for (i = 0; (i &lt; fan_out_p); i = (i + 1)) begin
+			assign data_o[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((((fan_out_p - 1) &gt;= 0) ? i : (0 - (i - (fan_out_p - 1)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = data_o_tmp;
+			assign v_o[i] = v_o_tmp[i];
+			assign v_o_tmp[i] = (fifo_v &amp; ~sent_r[i]);
+			always @(posedge clk_i)
+				if (reset_i)
+					sent_r[i] &lt;= 1&#39;b0;
+				else
+					sent_r[i] &lt;= (sent_n[i] &amp; ~fifo_yumi);
+			always @(*) begin
+				sent_n[i] = sent_r[i];
+				if ((v_o_tmp[i] &amp; ready_i[i]))
+					sent_n[i] = 1&#39;b1;
+			end
+		end
+	endgenerate
+	assign fifo_yumi = &amp;sent_n;
+endmodule
+
+</pre>
+</body>

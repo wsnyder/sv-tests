@@ -1,0 +1,79 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_chip
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v</a>
+time_elapsed: 0.093s
+</pre>
+<pre class="log">
+user_time: 0.07721499999999999
+system_time: 0.015444999999999999
+ram_usage: 11720
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:22</a>: syntax error, unexpected IDENTIFIER
+ERROR in bsg_nonsynth_mixin_motherboard.v: BSG_NONSYNTH_MIXIN_MOTHERBOARD_module_name must be defined
+^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-39" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:39</a>: Define or directive not defined: &#39;`BSG_NONSYNTH_MOTHERBOARD_MIXIN_module_name&#39;
+module `BSG_NONSYNTH_MOTHERBOARD_MIXIN_module_name
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-41" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:41</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+  , parameter tile_y_max_p    = &#34;inv&#34;
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:42</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+  , parameter asic_core_period_p         = 5ns
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-42" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:42</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+  , parameter asic_core_period_p         = 5ns
+                                           ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-43" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:43</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+  , parameter chipset_core_period_p      = 6ns
+                                           ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:44</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+  , parameter asic_io_master_period_p    = 7ns
+                                           ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:45</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+  , parameter chipset_io_master_period_p = 8ns
+                                           ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:46</a>: syntax error, unexpected TIME NUMBER, expecting TYPE-IDENTIFIER
+  , parameter tline_delay_p              = 5ns  
+                                           ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-49" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:49</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+  , parameter channel_width_p = 8
+    ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-50" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:50</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+  )
+  ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-52" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:52</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+     , output    logic asic_core_reset_o
+       ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-63" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:63</a>: syntax error, unexpected assign
+   assign asic_core_clock_o = asic_core_clk_i;
+   ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-79" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:79</a>: syntax error, unexpected IDENTIFIER
+   bsg_nonsynth_reset_gen
+   ^~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-125" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:125</a>: Define or directive not defined: &#39;`BSG_NONSYNTH_MIXIN_MOTHERBOARD_chipset_sig&#39;
+   `BSG_NONSYNTH_MIXIN_MOTHERBOARD_chipset_sig
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-127" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:127</a>: syntax error, unexpected IDENTIFIER
+   chipset
+   ^~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html#l-204" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v:204</a>: Define or directive not defined: &#39;`BSG_NONSYNTH_MIXIN_MOTHERBOARD_chip_sig&#39;
+   `BSG_NONSYNTH_MIXIN_MOTHERBOARD_chip_sig
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 17 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_chip <a href="../../../../third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_chip/bsg_nonsynth_mixin_motherboard.v</a>
+
+</pre>
+</body>

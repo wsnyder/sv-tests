@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v</a>
+time_elapsed: 0.087s
+</pre>
+<pre class="log">
+user_time: 0.066728
+system_time: 0.019976
+ram_usage: 11648
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-4" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:4</a>: Define or directive not defined: &#39;`BSG_COUNTONES_SYNTH&#39;
+                                  , width_lp=`BSG_COUNTONES_SYNTH(pattern_els_p)
+                                             ^~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:14</a>: Define or directive not defined: &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+     assign o[0] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:19</a>: Define or directive not defined: &#39;`BSG_COUNTONES_SYNTH&#39;
+               assign o[j] = i[`BSG_COUNTONES_SYNTH(pattern_els_p[j-1:0])];
+                               ^~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:21</a>: Define or directive not defined: &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+               assign o[j] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+                             ^~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v</a>
+
+</pre>
+</body>

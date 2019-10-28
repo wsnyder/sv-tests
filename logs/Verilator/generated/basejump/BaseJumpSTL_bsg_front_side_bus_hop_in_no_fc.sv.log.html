@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v</a>
+time_elapsed: 0.086s
+</pre>
+<pre class="log">
+user_time: 0.07606099999999999
+system_time: 0.009583
+ram_usage: 11612
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v.html#l-38" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v:38</a>: Cannot find file containing module: &#39;bsg_dff_reset&#39;
+  bsg_dff_reset #( .width_p($bits(v_r)) )
+  ^~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_dff_reset
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_dff_reset.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_dff_reset.sv
+             bsg_dff_reset
+             bsg_dff_reset.v
+             bsg_dff_reset.sv
+             obj_dir/bsg_dff_reset
+             obj_dir/bsg_dff_reset.v
+             obj_dir/bsg_dff_reset.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v:46</a>: Cannot find file containing module: &#39;bsg_dff&#39;
+  bsg_dff #( .width_p($bits(data_r)) )
+  ^~~~~~~
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_in_no_fc.v</a>
+
+</pre>
+</body>

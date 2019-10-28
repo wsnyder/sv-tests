@@ -1,0 +1,36 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_shift_reg.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.0046619999999999995
+ram_usage: 8396
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_shift_reg.v</a>::18 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+   logic [stages_p-1:0][width_p+1-1:0] shift_r;
+ERROR (3)::PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_shift_reg.v</a>::26 BSG_MIN define cannot be found
+	  shift_r[stages_p-1:`BSG_MIN(stages_p-1,1)] &lt;= shift_r[`BSG_MAX(stages_p-2,0):0];
+Assertion failed()@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/verilog_flex.l]load_define::736 
+
+</pre>
+</body>

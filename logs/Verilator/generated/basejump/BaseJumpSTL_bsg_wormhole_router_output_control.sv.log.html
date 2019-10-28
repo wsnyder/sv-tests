@@ -1,0 +1,67 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a>
+time_elapsed: 0.089s
+</pre>
+<pre class="log">
+user_time: 0.08499899999999999
+system_time: 0.004029
+ram_usage: 11712
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:7</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input  [input_dirs_p-1:0] reqs_i
+             ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:11</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input  [input_dirs_p-1:0] release_i
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:14</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input [input_dirs_p-1:0] valid_i
+            ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:15</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [input_dirs_p-1:0] yumi_o
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:20</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [input_dirs_p-1:0] data_sel_o
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:23</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   wire [input_dirs_p-1:0] scheduled_r, scheduled_with_release, scheduled_n, grants_lo;
+        ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:25</a>: Cannot find file containing module: &#39;bsg_dff_reset&#39;
+   bsg_dff_reset #(.width_p(input_dirs_p)) scheduled_reg (.clk_i, .reset_i, .data_i(scheduled_n), .data_o(scheduled_r));
+   ^~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_dff_reset
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_dff_reset.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc/bsg_dff_reset.sv
+             bsg_dff_reset
+             bsg_dff_reset.v
+             bsg_dff_reset.sv
+             obj_dir/bsg_dff_reset
+             obj_dir/bsg_dff_reset.v
+             obj_dir/bsg_dff_reset.sv
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-29" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:29</a>: Logical Operator LOGNOT expects 1 bit on the LHS, but LHS&#39;s VARREF &#39;scheduled_with_release&#39; generates 3 bits.
+                                                                                                                                    : ... In instance bsg_wormhole_router_output_control
+   wire                     free_to_schedule = !scheduled_with_release;
+                                               ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v:31</a>: Cannot find file containing module: &#39;bsg_round_robin_arb&#39;
+   bsg_round_robin_arb
+   ^~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a>
+
+</pre>
+</body>

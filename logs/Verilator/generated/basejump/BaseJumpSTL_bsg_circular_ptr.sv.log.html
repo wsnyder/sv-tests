@@ -1,0 +1,42 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v</a>
+time_elapsed: 0.090s
+</pre>
+<pre class="log">
+user_time: 0.07464599999999999
+system_time: 0.015524
+ram_usage: 11652
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v:18</a>: Little bit endian vector: MSB &lt; LSB of bit range: -1:0
+    , input  [$clog2(max_add_p+1)-1:0] add_i
+             ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v.html#l-63" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v:63</a>: Operator ADD expects 33 bits on the RHS, but RHS&#39;s VARREF &#39;add_i&#39; generates 2 bits.
+                                                                                                                   : ... In instance bsg_circular_ptr
+               ptr_wrap = { 1&#39;b0, ptr_r } - slots_p + add_i;
+                                                    ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v.html#l-64" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v:64</a>: Operator ADD expects 32 bits on the RHS, but RHS&#39;s VARREF &#39;add_i&#39; generates 2 bits.
+                                                                                                                   : ... In instance bsg_circular_ptr
+               ptr_n = ptr_r + add_i;
+                             ^
+%Warning-CMPCONST: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v:73</a>: Comparison is constant due to limited range
+                                                                                                                      : ... In instance bsg_circular_ptr
+               assert( (ptr_n &lt; slots_p) || (|ptr_n === &#39;X) || reset_i || (add_i &gt; slots_p))
+                                                                                 ^
+
+</pre>
+</body>

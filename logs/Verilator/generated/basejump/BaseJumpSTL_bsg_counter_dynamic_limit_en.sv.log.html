@@ -1,0 +1,42 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v</a>
+time_elapsed: 0.089s
+</pre>
+<pre class="log">
+user_time: 0.07246
+system_time: 0.016059
+ram_usage: 11584
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v.html#l-16" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v:16</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+            , input        [width_p-1:0] limit_i
+                           ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v:17</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+            , output logic [width_p-1:0] counter_o
+                           ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v:22</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+wire [width_p-1:0] counter_plus_1 = counter_o + width_p&#39;(1);
+     ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v:22</a>: Size-changing cast to zero or negative size
+                                                                                                                       : ... In instance bsg_counter_dynamic_limit_en
+wire [width_p-1:0] counter_plus_1 = counter_o + width_p&#39;(1);
+                                                       ^
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_dynamic_limit_en.v</a>
+
+</pre>
+</body>

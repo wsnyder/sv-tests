@@ -1,0 +1,67 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v</a>
+time_elapsed: 0.039s
+</pre>
+<pre class="log">
+user_time: 0.026393
+system_time: 0.012499
+ram_usage: 10436
+
+module bsg_lfsr (
+	clk,
+	reset_i,
+	yumi_i,
+	o
+);
+	parameter width_p = -1;
+	parameter init_val_p = 1;
+	parameter xor_mask_p = 0;
+	input clk;
+	input reset_i;
+	input yumi_i;
+	output wire [(width_p - 1):0] o;
+	reg [(width_p - 1):0] o_r;
+	wire [(width_p - 1):0] o_n;
+	wire [(width_p - 1):0] xor_mask;
+	assign o = o_r;
+	generate
+		if ((xor_mask_p == 0)) begin : automask
+			case (width_p)
+				32: assign xor_mask = ((((1 &lt;&lt; 31) | (1 &lt;&lt; 29)) | (1 &lt;&lt; 26)) | (1 &lt;&lt; 25));
+				60: assign xor_mask = ((1 &lt;&lt; 59) | (1 &lt;&lt; 58));
+				64: assign xor_mask = ((((1 &lt;&lt; 63) | (1 &lt;&lt; 62)) | (1 &lt;&lt; 60)) | (1 &lt;&lt; 59));
+				default: initial ;
+			endcase
+		end
+		else begin : fi
+			assign xor_mask = xor_mask_p;
+		end
+	endgenerate
+	always @(posedge clk)
+		if (reset_i)
+			o_r &lt;= sv2v_cast_89401(init_val_p);
+		else if (yumi_i)
+			o_r &lt;= o_n;
+	assign o_n = ((o_r &gt;&gt; 1) ^ ({width_p {o_r[0]}} &amp; xor_mask));
+	function automatic [(width_p - 1):0] sv2v_cast_89401;
+		input reg [(width_p - 1):0] inp;
+		sv2v_cast_89401 = inp;
+	endfunction
+endmodule
+
+</pre>
+</body>

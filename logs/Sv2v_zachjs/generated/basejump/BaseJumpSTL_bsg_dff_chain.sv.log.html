@@ -1,0 +1,55 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v</a>
+time_elapsed: 0.031s
+</pre>
+<pre class="log">
+user_time: 0.019407
+system_time: 0.011529
+ram_usage: 10196
+
+module bsg_dff_chain (
+	clk_i,
+	data_i,
+	data_o
+);
+	parameter width_p = -1;
+	parameter num_stages_p = 1;
+	input clk_i;
+	input [(width_p - 1):0] data_i;
+	output [(width_p - 1):0] data_o;
+	generate
+		if ((num_stages_p == 0)) begin : pass_through
+			assign data_o = data_i;
+		end
+		else begin : chained
+			wire [((num_stages_p &gt;= 0) ? (((width_p - 1) &gt;= 0) ? ((((num_stages_p &gt;= 0) ? (num_stages_p + 1) : (1 - num_stages_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : ((((num_stages_p &gt;= 0) ? (num_stages_p + 1) : (1 - num_stages_p)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))) : (((width_p - 1) &gt;= 0) ? ((((0 &gt;= num_stages_p) ? (1 - num_stages_p) : (num_stages_p + 1)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + ((num_stages_p * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) - 1)) : ((((0 &gt;= num_stages_p) ? (1 - num_stages_p) : (num_stages_p + 1)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + (((width_p - 1) + (num_stages_p * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p))) - 1)))):((num_stages_p &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) : (((width_p - 1) &gt;= 0) ? (num_stages_p * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) : ((width_p - 1) + (num_stages_p * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)))))] data_delayed;
+			assign data_delayed[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + (((num_stages_p &gt;= 0) ? 0 : num_stages_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = data_i;
+			assign data_o = data_delayed[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + (((num_stages_p &gt;= 0) ? num_stages_p : (0 - (num_stages_p - num_stages_p))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))];
+			genvar i;
+			for (i = 1; (i &lt;= num_stages_p); i = (i + 1)) begin
+				bsg_dff #(.width_p(width_p)) ch_reg(
+					.clk_i(clk_i),
+					.data_i(data_delayed[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + (((num_stages_p &gt;= 0) ? (i - 1) : (0 - ((i - 1) - num_stages_p))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))]),
+					.data_o(data_delayed[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + (((num_stages_p &gt;= 0) ? i : (0 - (i - num_stages_p))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))])
+				);
+			end
+		end
+	endgenerate
+endmodule
+
+</pre>
+</body>

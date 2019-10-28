@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v</a>
+time_elapsed: 0.091s
+</pre>
+<pre class="log">
+user_time: 0.060663999999999996
+system_time: 0.030448999999999997
+ram_usage: 11800
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html#l-8" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v:8</a>: Little bit endian vector: MSB &lt; LSB of bit range: -3:0
+    , input [width_p*2-1:0] data_i
+            ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html#l-12" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v:12</a>: Little bit endian vector: MSB &lt; LSB of bit range: -3:0
+    , output [width_p*2-1:0] data_o
+             ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v:26</a>: Width of :+ or :- is &lt; 0: 32&#39;hffffffff
+                                                                                                                     : ... In instance bsg_round_robin_2_to_2
+   assign data_o  = head_r ? { data_i[0+:width_p], data_i[width_p+:width_p] } : data_i;
+                                     ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v:26</a>: Width of :+ or :- is &lt; 0: 32&#39;hffffffff
+                                                                                                                     : ... In instance bsg_round_robin_2_to_2
+   assign data_o  = head_r ? { data_i[0+:width_p], data_i[width_p+:width_p] } : data_i;
+                                                         ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v:26</a>: Operator COND expects 4 bits on the Conditional True, but Conditional True&#39;s REPLICATE generates -2 bits.
+                                                                                                                             : ... In instance bsg_round_robin_2_to_2
+   assign data_o  = head_r ? { data_i[0+:width_p], data_i[width_p+:width_p] } : data_i;
+                           ^
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v</a>
+
+</pre>
+</body>

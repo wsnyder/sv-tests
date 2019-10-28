@@ -1,0 +1,56 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>
+time_elapsed: 0.090s
+</pre>
+<pre class="log">
+user_time: 0.064954
+system_time: 0.025255
+ram_usage: 11596
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html#l-157" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v:157</a>: Cannot find file containing module: &#39;bsg_sync_sync&#39;
+   bsg_sync_sync #(.width_p(1)) bssv
+   ^~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_sync_sync
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_sync_sync.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_sync_sync.sv
+             bsg_sync_sync
+             bsg_sync_sync.v
+             bsg_sync_sync.sv
+             obj_dir/bsg_sync_sync
+             obj_dir/bsg_sync_sync.v
+             obj_dir/bsg_sync_sync.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html#l-165" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v:165</a>: Cannot find file containing module: &#39;bsg_sync_sync&#39;
+   bsg_sync_sync #(.width_p(1)) bssd
+   ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html#l-227" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v:227</a>: Cannot find file containing module: &#39;bsg_async_fifo&#39;
+   bsg_async_fifo #(.lg_size_p(lg_fifo_depth_p)   
+   ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html#l-278" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v:278</a>: Cannot find file containing module: &#39;bsg_two_fifo&#39;
+   bsg_two_fifo #(.width_p(channel_width_p)) twofer
+   ^~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html#l-334" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v:334</a>: Cannot find file containing module: &#39;bsg_async_ptr_gray&#39;
+   bsg_async_ptr_gray #(.lg_size_p(lg_fifo_depth_p+1)) bapg
+   ^~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html#l-388" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v:388</a>: Cannot find file containing module: &#39;bsg_binary_plus_one_to_gray&#39;
+   bsg_binary_plus_one_to_gray #(.width_p(lg_fifo_depth_p+1)) bsg_bp1_2g
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 6 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_input.v</a>
+
+</pre>
+</body>

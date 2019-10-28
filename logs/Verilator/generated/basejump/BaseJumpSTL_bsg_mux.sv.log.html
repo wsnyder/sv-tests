@@ -1,0 +1,30 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mux.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mux.v</a>
+time_elapsed: 42.528s
+</pre>
+<pre class="log">
+user_time: 39.437114
+system_time: 3.091011
+ram_usage: 3804852
+
+terminate called after throwing an instance of &#39;std::bad_alloc&#39;
+  what():  std::bad_alloc
+%Error: Verilator aborted.  Consider trying --debug --gdbbt
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mux.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mux.v</a>
+
+</pre>
+</body>

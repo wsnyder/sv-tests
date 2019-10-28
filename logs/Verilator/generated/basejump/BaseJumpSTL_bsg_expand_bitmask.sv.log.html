@@ -1,0 +1,39 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v</a>
+time_elapsed: 0.074s
+</pre>
+<pre class="log">
+user_time: 0.057443999999999995
+system_time: 0.016384
+ram_usage: 11712
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v:25</a>: Width of bit range is huge; vector of over 1billion bits: 0x338a619e
+  , output logic [(in_width_p*expand_p)-1:0] o
+                 ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v:25</a>: Little bit endian vector: MSB &lt; LSB of bit range: cc759e63:0
+  , output logic [(in_width_p*expand_p)-1:0] o
+                 ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v:30</a>: Operator LT expects 20 bits on the RHS, but RHS&#39;s VARREF &#39;in_width_p&#39; generates 18 bits.
+                                                                                                                     : ... In instance bsg_expand_bitmask
+    for (integer k = 0; k &lt; in_width_p; k++)
+                          ^
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_expand_bitmask.v</a>
+
+</pre>
+</body>

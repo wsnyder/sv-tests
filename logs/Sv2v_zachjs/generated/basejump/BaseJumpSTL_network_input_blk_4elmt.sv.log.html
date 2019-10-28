@@ -1,0 +1,174 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v</a>
+time_elapsed: 0.032s
+</pre>
+<pre class="log">
+user_time: 0.01891
+system_time: 0.012737
+ram_usage: 10828
+
+module network_input_blk_4elmt (
+	clk,
+	reset,
+	dataIn,
+	validIn,
+	yummyOut,
+	thanksIn,
+	dataVal,
+	dataAvail,
+	dataCount,
+	full
+);
+	input clk;
+	input reset;
+	input [31:0] dataIn;
+	input validIn;
+	input thanksIn;
+	output yummyOut;
+	output dataAvail;
+	output [31:0] dataVal;
+	output [2:0] dataCount;
+	output full;
+	wire [31:0] elmt3_value;
+	wire [31:0] elmt2_value;
+	wire [31:0] elmt1_value;
+	wire [31:0] elmt0_value;
+	wire [31:0] dataIn_r;
+	wire elmt3_full;
+	wire elmt2_full;
+	wire elmt1_full;
+	wire elmt0_full;
+	wire elmt0_full_buf;
+	wire enqueue;
+	wire validIn_r;
+	wire validIn_r_buf;
+	wire dataAvail_l;
+	wire yummyOut_internal;
+	fifo_counter #(3) cnt(
+		.up_count(validIn_r_buf),
+		.down_count(yummyOut_internal),
+		.num_entries(dataCount),
+		.reset(reset),
+		.clk(clk)
+	);
+	rDFF_clear #(1) yumreg(
+		thanksIn,
+		yummyOut_internal,
+		reset,
+		clk
+	);
+	assign yummyOut = yummyOut_internal;
+	rDFF #(32) datareg(
+		dataIn,
+		dataIn_r,
+		clk
+	);
+	rDFF_clear #(1) valreg(
+		validIn,
+		validIn_r,
+		reset,
+		clk
+	);
+	rBuffer #(
+		1,
+		10
+	) valreg_buf(
+		validIn_r,
+		validIn_r_buf
+	);
+	fifo_elmt elmt3(
+		.enqueue(validIn_r_buf),
+		.dequeue(thanksIn),
+		.new_value(dataIn_r),
+		.prop_value(32&#39;d0),
+		.prev_full(1&#39;b0),
+		.next_full(elmt2_full),
+		.clk(clk),
+		.reset(reset),
+		.full(elmt3_full),
+		.value(elmt3_value)
+	);
+	fifo_elmt elmt2(
+		.enqueue(validIn_r_buf),
+		.dequeue(thanksIn),
+		.new_value(dataIn_r),
+		.prop_value(elmt3_value),
+		.prev_full(elmt3_full),
+		.next_full(elmt1_full),
+		.clk(clk),
+		.reset(reset),
+		.full(elmt2_full),
+		.value(elmt2_value)
+	);
+	fifo_elmt elmt1(
+		.enqueue(validIn_r_buf),
+		.dequeue(thanksIn),
+		.new_value(dataIn_r),
+		.prop_value(elmt2_value),
+		.prev_full(elmt2_full),
+		.next_full(elmt0_full_buf),
+		.clk(clk),
+		.reset(reset),
+		.full(elmt1_full),
+		.value(elmt1_value)
+	);
+	fifo_elmt elmt0(
+		.enqueue(validIn_r_buf),
+		.dequeue(thanksIn),
+		.new_value(dataIn_r),
+		.prop_value(elmt1_value),
+		.prev_full(elmt1_full),
+		.next_full(enqueue),
+		.clk(clk),
+		.reset(reset),
+		.full(elmt0_full),
+		.value(elmt0_value)
+	);
+	rBuffer #(
+		1,
+		10
+	) full_buf(
+		elmt0_full,
+		elmt0_full_buf
+	);
+	assign enqueue = !(!elmt0_full_buf &amp; thanksIn);
+	rMux2 #(32) bypassmux(
+		dataIn_r,
+		elmt0_value,
+		elmt0_full,
+		dataVal
+	);
+	rNOR2 #(
+		1,
+		10
+	) dataAvail_nor(
+		validIn_r,
+		elmt0_full,
+		dataAvail_l
+	);
+	rInvert #(
+		1,
+		10
+	) dataAvail_not(
+		dataAvail_l,
+		dataAvail
+	);
+	assign full = elmt0_full;
+endmodule
+
+</pre>
+</body>

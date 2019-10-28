@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mux_bitwise.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mux_bitwise.v</a>
+time_elapsed: 0.018s
+</pre>
+<pre class="log">
+user_time: 0.004576
+system_time: 0.01373
+ram_usage: 9568
+
+module bsg_mux_bitwise (
+	data0_i,
+	data1_i,
+	sel_i,
+	data_o
+);
+	parameter width_p = &#34;inv&#34;;
+	input [(width_p - 1):0] data0_i;
+	input [(width_p - 1):0] data1_i;
+	input [(width_p - 1):0] sel_i;
+	output wire [(width_p - 1):0] data_o;
+	bsg_mux_segmented #(
+		.segments_p(width_p),
+		.segment_width_p(1)
+	) mux_segmented(
+		.data0_i(data0_i),
+		.data1_i(data1_i),
+		.sel_i(sel_i),
+		.data_o(data_o)
+	);
+endmodule
+
+</pre>
+</body>

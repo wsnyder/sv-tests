@@ -1,0 +1,48 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v</a>
+time_elapsed: 0.091s
+</pre>
+<pre class="log">
+user_time: 0.079678
+system_time: 0.01129
+ram_usage: 11772
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff.v:7</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    ,input  [width_p-1:0] data_i
+            ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v:40</a>: ... note: In file included from bsg_dff_chain.v
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff.v.html#l-8" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff.v:8</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    ,output [width_p-1:0] data_o
+            ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v:40</a>: ... note: In file included from bsg_dff_chain.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff.v:11</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   reg [width_p-1:0] data_r;
+       ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v:40</a>: ... note: In file included from bsg_dff_chain.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v:18</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+                ,input [width_p-1:0]             data_i
+                       ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v:19</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+                ,output[width_p-1:0]             data_o
+                       ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_dff_chain.v:30</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+                logic [num_stages_p:0][width_p-1:0] data_delayed;
+                                      ^
+
+</pre>
+</body>

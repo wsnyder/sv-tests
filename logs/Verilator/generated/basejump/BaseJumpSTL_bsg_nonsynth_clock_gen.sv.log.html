@@ -1,0 +1,36 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v</a>
+time_elapsed: 0.078s
+</pre>
+<pre class="log">
+user_time: 0.070841
+system_time: 0.006781
+ram_usage: 11848
+
+%Warning-STMTDLY: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v:15</a>: Unsupported: Ignoring delay on this delayed statement.
+  always #(cycle_time_p/2.0) begin
+         ^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Warning-UNOPT: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v:7</a>: Signal unoptimizable: Feedback to public clock or circular logic: &#39;o&#39;
+   (output bit o);
+               ^
+                <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v:7</a>:      Example path: o
+                <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v:15</a>:      Example path: ALWAYS
+                <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v:7</a>:      Example path: o
+
+</pre>
+</body>

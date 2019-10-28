@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_clock_downsample.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_clock_downsample.v</a>
+time_elapsed: 0.016s
+</pre>
+<pre class="log">
+user_time: 0.003916
+system_time: 0.011748
+ram_usage: 9632
+
+module bsg_counter_clock_downsample (
+	clk_i,
+	reset_i,
+	val_i,
+	clk_r_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter harden_p = 0;
+	input clk_i;
+	input reset_i;
+	input [(width_p - 1):0] val_i;
+	output reg clk_r_o;
+	wire strobe_r;
+	bsg_strobe #(
+		.width_p(width_p),
+		.harden_p(harden_p)
+	) strobe(
+		.clk_i(clk_i),
+		.reset_r_i(reset_i),
+		.init_val_r_i(val_i),
+		.strobe_r_o(strobe_r)
+	);
+	always @(posedge clk_i)
+		if (reset_i)
+			clk_r_o &lt;= 1&#39;b0;
+		else if (strobe_r)
+			clk_r_o &lt;= ~clk_r_o;
+endmodule
+
+</pre>
+</body>

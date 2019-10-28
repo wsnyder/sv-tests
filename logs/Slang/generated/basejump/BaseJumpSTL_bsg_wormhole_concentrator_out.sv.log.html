@@ -1,0 +1,50 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v</a>
+time_elapsed: 0.006s
+</pre>
+<pre class="log">
+user_time: 0.005667999999999999
+system_time: 0.0
+ram_usage: 8440
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:19</a>:10: error: could not find or open include file
+`include &#34;bsg_defines.v&#34;
+         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-85" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:85</a>:3: error: unknown module &#39;bsg_two_fifo&#39;
+  bsg_two_fifo #(.width_p(flit_width_p)) concentrated_twofer
+  ^~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:97</a>:55: error: cannot select range of 13819117:0 from array of type &#39;logic[6909557:0]&#39;
+  assign concentrated_hdr = concentrated_fifo_data_lo[$bits(bsg_wormhole_concentrator_header_s)-1:0];
+                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-100" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:100</a>:3: error: unknown module &#39;bsg_decode&#39;
+  bsg_decode #(.num_out_p(num_in_p)) concentrated_decoder
+  ^~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-101" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:101</a>:33: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    (.i(concentrated_hdr.cid[0+:`BSG_SAFE_CLOG2(num_in_p)])
+                                ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-101" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:101</a>:58: error: expected expression
+    (.i(concentrated_hdr.cid[0+:`BSG_SAFE_CLOG2(num_in_p)])
+                                                         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-105" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:105</a>:3: error: unknown module &#39;bsg_wormhole_router_input_control&#39;
+  bsg_wormhole_router_input_control #(.output_dirs_p(num_in_p), .payload_len_bits_p($bits(concentrated_hdr.len))) concentrated_wic
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v.html#l-121" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_concentrator_out.v:121</a>:7: error: unknown module &#39;bsg_wormhole_router_output_control&#39;
+      bsg_wormhole_router_output_control #(.input_dirs_p(1)) concentrated_woc
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

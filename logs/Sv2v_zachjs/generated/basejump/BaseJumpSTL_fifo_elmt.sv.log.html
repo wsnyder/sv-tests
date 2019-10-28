@@ -1,0 +1,98 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/common/fifo_elmt.v.html" target="file-frame">third_party/cores/basejump_stl/common/fifo_elmt.v</a>
+time_elapsed: 0.033s
+</pre>
+<pre class="log">
+user_time: 0.022786
+system_time: 0.00972
+ram_usage: 10052
+
+module fifo_elmt (
+	enqueue,
+	dequeue,
+	new_value,
+	prop_value,
+	prev_full,
+	next_full,
+	clk,
+	reset,
+	full,
+	value
+);
+	parameter width_p = 32;
+	input enqueue;
+	input dequeue;
+	input [(width_p - 1):0] new_value;
+	input [(width_p - 1):0] prop_value;
+	input prev_full;
+	input next_full;
+	input clk;
+	input reset;
+	output full;
+	output [(width_p - 1):0] value;
+	wire [1:0] full_sel;
+	wire full_preg;
+	wire [1:0] val_sel;
+	wire [(width_p - 1):0] value_preg;
+	wire full_internal;
+	wire full_internal_buf;
+	wire [(width_p - 1):0] value_internal;
+	rMux3 #(1) fullmux(
+		full_internal_buf,
+		prev_full,
+		1&#39;b1,
+		full_sel,
+		full_preg
+	);
+	rDFF_clear #(1) fullreg(
+		full_preg,
+		full_internal,
+		reset,
+		clk
+	);
+	rMux3 #(width_p) valmux(
+		value_internal,
+		prop_value,
+		new_value,
+		val_sel,
+		value_preg
+	);
+	rDFF #(width_p) valuereg(
+		value_preg,
+		value_internal,
+		clk
+	);
+	rBuffer #(
+		1,
+		10
+	) full_buf(
+		full_internal,
+		full_internal_buf
+	);
+	wire enqueue_b = !enqueue;
+	wire dequeue_b = !dequeue;
+	wire full_b = !full_internal_buf;
+	assign full_sel[1] = (((enqueue &amp; dequeue_b) &amp; next_full) &amp; full_b);
+	assign full_sel[0] = (enqueue_b &amp; dequeue);
+	assign val_sel[1] = ((((enqueue &amp; dequeue) &amp; !prev_full) &amp; full_internal_buf) | full_sel[1]);
+	assign val_sel[0] = ((dequeue &amp; full_internal_buf) &amp; prev_full);
+	assign full = full_internal;
+	assign value = value_internal;
+endmodule
+
+</pre>
+</body>

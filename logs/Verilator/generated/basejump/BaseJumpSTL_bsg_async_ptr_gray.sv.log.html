@@ -1,0 +1,57 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_async
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v</a>
+time_elapsed: 0.143s
+</pre>
+<pre class="log">
+user_time: 0.12706
+system_time: 0.015797
+ram_usage: 13040
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html#l-227" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_launch_sync_sync.v:227</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , input  [width_p-1:0] iclk_data_i
+             ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-148" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:148</a>: ... note: In file included from bsg_async_ptr_gray.v
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html#l-228" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_launch_sync_sync.v:228</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [width_p-1:0] iclk_data_o  
+             ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-148" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:148</a>: ... note: In file included from bsg_async_ptr_gray.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html#l-229" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_launch_sync_sync.v:229</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [width_p-1:0] oclk_data_o  
+             ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-148" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:148</a>: ... note: In file included from bsg_async_ptr_gray.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:26</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [lg_size_p-1:0] w_ptr_binary_r_o      
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:27</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [lg_size_p-1:0] w_ptr_gray_r_o        
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-28" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:28</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [lg_size_p-1:0] w_ptr_gray_r_rsync_o  
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:31</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   logic [lg_size_p-1:0] w_ptr_r,      w_ptr_n;
+         ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:32</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   logic [lg_size_p-1:0] w_ptr_p1_r,   w_ptr_p1_n, w_ptr_p2;
+         ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_async/bsg_async_ptr_gray.v:33</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   logic [lg_size_p-1:0] w_ptr_gray_n, w_ptr_gray_r, w_ptr_gray_r_rsync;
+         ^
+
+</pre>
+</body>

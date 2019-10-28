@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v</a>
+time_elapsed: 0.089s
+</pre>
+<pre class="log">
+user_time: 0.064751
+system_time: 0.023798999999999997
+ram_usage: 11884
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v:10</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output logic [width_p-1:0] o
+                   ^
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-13" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v:13</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   logic [width_p-1:0] o_r, o_n, xor_mask;
+         ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v:45</a>: Size-changing cast to zero or negative size
+                                                                                                   : ... In instance bsg_lfsr
+          o_r &lt;= (width_p) &#39; (init_val_p);
+                           ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v:45</a>: Operator ASSIGNDLY expects 3 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 1 bits.
+                                                                                                           : ... In instance bsg_lfsr
+          o_r &lt;= (width_p) &#39; (init_val_p);
+              ^~
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-50" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v:50</a>: Operator AND expects 3 bits on the LHS, but LHS&#39;s REPLICATE generates -1 bits.
+                                                                                                           : ... In instance bsg_lfsr
+   assign o_n = (o_r &gt;&gt; 1) ^ ({width_p {o_r[0]}} &amp; xor_mask);
+                                                 ^
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v</a>
+
+</pre>
+</body>

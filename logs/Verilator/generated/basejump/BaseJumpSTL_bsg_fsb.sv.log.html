@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v</a>
+time_elapsed: 0.087s
+</pre>
+<pre class="log">
+user_time: 0.071709
+system_time: 0.015491
+ram_usage: 11700
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v:27</a>: Cannot find include file: bsg_defines.v
+`include &#34;bsg_defines.v&#34;
+         ^~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_defines.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_defines.v.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_defines.v.sv
+             bsg_defines.v
+             bsg_defines.v.v
+             bsg_defines.v.sv
+             obj_dir/bsg_defines.v
+             obj_dir/bsg_defines.v.v
+             obj_dir/bsg_defines.v.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v.html#l-35" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v:35</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+                 , parameter id_width_p             = `BSG_SAFE_CLOG2(nodes_p)
+                                                      ^~~~~~~~~~~~~~~
+%Error: Exiting due to 2 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb.v</a>
+
+</pre>
+</body>

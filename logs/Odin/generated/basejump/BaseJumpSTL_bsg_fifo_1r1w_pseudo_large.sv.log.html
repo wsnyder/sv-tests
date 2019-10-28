@@ -1,0 +1,51 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>
+time_elapsed: 0.006s
+</pre>
+<pre class="log">
+user_time: 0.004176
+system_time: 0.002258
+ram_usage: 8412
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::133 error in parsing: (syntax error, unexpected &#39;,&#39;, expecting &#39;(&#39;)
+   logic               big_enq, big_deq, big_deq_r;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::137 error in parsing: (syntax error, unexpected &#39;,&#39;, expecting &#39;(&#39;)
+   logic              little_valid, big_valid;
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::146 error in parsing: (syntax error, unexpected &#39;@&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+   always_ff @(posedge clk_i)
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::165 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   logic big_enq_r;
+WARNING (6)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::153 Could not resolve initial assignment to a constant value, skipping
+
+   wire ready_o_int = ~big_full_lo;
+WARNING (7)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::160 Could not resolve initial assignment to a constant value, skipping
+
+   wire bypass_mode = v_i &amp; ~ big_enq;
+WARNING (8)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::163 Could not resolve initial assignment to a constant value, skipping
+
+   wire [31:0] num_elements_debug = big1p.num_elements_debug + big_deq_r + little2p.num_elements_debug;
+ERROR (9)::NETLIST_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a>::247 Can&#39;t find module name bsg_fifo_1rw_large
+      );
+Assertion failed()@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/ast_elaborate.cpp]build_hierarchy::988 
+
+</pre>
+</body>

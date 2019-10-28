@@ -1,0 +1,98 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_link/bsg_link_source_sync_downstream.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_link/bsg_link_source_sync_downstream.v</a>
+time_elapsed: 0.044s
+</pre>
+<pre class="log">
+user_time: 0.025932
+system_time: 0.018522999999999998
+ram_usage: 10300
+
+module bsg_link_source_sync_downstream (
+	core_clk_i,
+	core_link_reset_i,
+	io_link_reset_i,
+	io_clk_i,
+	io_data_i,
+	io_valid_i,
+	core_token_r_o,
+	core_data_o,
+	core_valid_o,
+	core_yumi_i
+);
+	parameter channel_width_p = 16;
+	parameter lg_fifo_depth_p = 6;
+	parameter lg_credit_to_token_decimation_p = 3;
+	input core_clk_i;
+	input core_link_reset_i;
+	input io_link_reset_i;
+	input io_clk_i;
+	input [(channel_width_p - 1):0] io_data_i;
+	input io_valid_i;
+	output core_token_r_o;
+	output [(channel_width_p - 1):0] core_data_o;
+	output core_valid_o;
+	input core_yumi_i;
+	wire io_async_fifo_full;
+	always @(negedge io_clk_i)
+		;
+	wire core_async_fifo_deque;
+	wire core_async_fifo_valid_lo;
+	wire [(channel_width_p - 1):0] core_async_fifo_data_lo;
+	bsg_async_fifo #(
+		.lg_size_p(lg_fifo_depth_p),
+		.width_p(channel_width_p)
+	) baf(
+		.w_clk_i(io_clk_i),
+		.w_reset_i(io_link_reset_i),
+		.w_enq_i(io_valid_i),
+		.w_data_i(io_data_i),
+		.w_full_o(io_async_fifo_full),
+		.r_clk_i(core_clk_i),
+		.r_reset_i(core_link_reset_i),
+		.r_deq_i(core_async_fifo_deque),
+		.r_data_o(core_async_fifo_data_lo),
+		.r_valid_o(core_async_fifo_valid_lo)
+	);
+	wire core_async_fifo_ready_li;
+	bsg_two_fifo #(.width_p(channel_width_p)) twofer(
+		.clk_i(core_clk_i),
+		.reset_i(core_link_reset_i),
+		.ready_o(core_async_fifo_ready_li),
+		.data_i(core_async_fifo_data_lo),
+		.v_i(core_async_fifo_valid_lo),
+		.v_o(core_valid_o),
+		.data_o(core_data_o),
+		.yumi_i(core_yumi_i)
+	);
+	assign core_async_fifo_deque = (core_async_fifo_valid_lo &amp; core_async_fifo_ready_li);
+	wire [((lg_credit_to_token_decimation_p + 1) - 1):0] core_credits_sent_r;
+	assign core_token_r_o = core_credits_sent_r[lg_credit_to_token_decimation_p];
+	bsg_counter_clear_up #(
+		.max_val_p({(lg_credit_to_token_decimation_p + 1) {1&#39;b1}}),
+		.init_val_p(0),
+		.disable_overflow_warning_p(1)
+	) token_counter(
+		.clk_i(core_clk_i),
+		.reset_i(core_link_reset_i),
+		.clear_i(1&#39;b0),
+		.up_i(core_async_fifo_deque),
+		.count_o(core_credits_sent_r)
+	);
+endmodule
+
+</pre>
+</body>

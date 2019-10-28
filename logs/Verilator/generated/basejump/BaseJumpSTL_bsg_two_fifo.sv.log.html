@@ -1,0 +1,50 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v</a>
+time_elapsed: 0.097s
+</pre>
+<pre class="log">
+user_time: 0.088959
+system_time: 0.008009
+ram_usage: 11592
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html#l-51" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v:51</a>: Cannot find file containing module: &#39;bsg_mem_1r1w&#39;
+   bsg_mem_1r1w #(.width_p(width_p)
+   ^~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_mem_1r1w
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_mem_1r1w.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_mem_1r1w.sv
+             bsg_mem_1r1w
+             bsg_mem_1r1w.v
+             bsg_mem_1r1w.sv
+             obj_dir/bsg_mem_1r1w
+             obj_dir/bsg_mem_1r1w.v
+             obj_dir/bsg_mem_1r1w.sv
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html#l-136" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v:136</a>: Operator ADD expects 32 bits on the LHS, but LHS&#39;s VARREF &#39;full_r&#39; generates 1 bits.
+                                                                                                                    : ... In instance bsg_two_fifo
+   wire [31:0] num_elements_debug = full_r + (empty_r==0);
+                                           ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html#l-136" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v:136</a>: Operator ADD expects 32 bits on the RHS, but RHS&#39;s EQ generates 1 bits.
+                                                                                                                    : ... In instance bsg_two_fifo
+   wire [31:0] num_elements_debug = full_r + (empty_r==0);
+                                           ^
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v</a>
+
+</pre>
+</body>

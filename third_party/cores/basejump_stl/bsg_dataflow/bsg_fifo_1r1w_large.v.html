@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../../../code.css">
+  </head>
+  <body>
+    third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#l-1">  1</a>
+<a href="#l-2">  2</a>
+<a href="#l-3">  3</a>
+<a href="#l-4">  4</a>
+<a href="#l-5">  5</a>
+<a href="#l-6">  6</a>
+<a href="#l-7">  7</a>
+<a href="#l-8">  8</a>
+<a href="#l-9">  9</a>
+<a href="#l-10"> 10</a>
+<a href="#l-11"> 11</a>
+<a href="#l-12"> 12</a>
+<a href="#l-13"> 13</a>
+<a href="#l-14"> 14</a>
+<a href="#l-15"> 15</a>
+<a href="#l-16"> 16</a>
+<a href="#l-17"> 17</a>
+<a href="#l-18"> 18</a>
+<a href="#l-19"> 19</a>
+<a href="#l-20"> 20</a>
+<a href="#l-21"> 21</a>
+<a href="#l-22"> 22</a>
+<a href="#l-23"> 23</a>
+<a href="#l-24"> 24</a>
+<a href="#l-25"> 25</a>
+<a href="#l-26"> 26</a>
+<a href="#l-27"> 27</a>
+<a href="#l-28"> 28</a>
+<a href="#l-29"> 29</a>
+<a href="#l-30"> 30</a>
+<a href="#l-31"> 31</a>
+<a href="#l-32"> 32</a>
+<a href="#l-33"> 33</a>
+<a href="#l-34"> 34</a>
+<a href="#l-35"> 35</a>
+<a href="#l-36"> 36</a>
+<a href="#l-37"> 37</a>
+<a href="#l-38"> 38</a>
+<a href="#l-39"> 39</a>
+<a href="#l-40"> 40</a>
+<a href="#l-41"> 41</a>
+<a href="#l-42"> 42</a>
+<a href="#l-43"> 43</a>
+<a href="#l-44"> 44</a>
+<a href="#l-45"> 45</a>
+<a href="#l-46"> 46</a>
+<a href="#l-47"> 47</a>
+<a href="#l-48"> 48</a>
+<a href="#l-49"> 49</a>
+<a href="#l-50"> 50</a>
+<a href="#l-51"> 51</a>
+<a href="#l-52"> 52</a>
+<a href="#l-53"> 53</a>
+<a href="#l-54"> 54</a>
+<a href="#l-55"> 55</a>
+<a href="#l-56"> 56</a>
+<a href="#l-57"> 57</a>
+<a href="#l-58"> 58</a>
+<a href="#l-59"> 59</a>
+<a href="#l-60"> 60</a>
+<a href="#l-61"> 61</a>
+<a href="#l-62"> 62</a>
+<a href="#l-63"> 63</a>
+<a href="#l-64"> 64</a>
+<a href="#l-65"> 65</a>
+<a href="#l-66"> 66</a>
+<a href="#l-67"> 67</a>
+<a href="#l-68"> 68</a>
+<a href="#l-69"> 69</a>
+<a href="#l-70"> 70</a>
+<a href="#l-71"> 71</a>
+<a href="#l-72"> 72</a>
+<a href="#l-73"> 73</a>
+<a href="#l-74"> 74</a>
+<a href="#l-75"> 75</a>
+<a href="#l-76"> 76</a>
+<a href="#l-77"> 77</a>
+<a href="#l-78"> 78</a>
+<a href="#l-79"> 79</a>
+<a href="#l-80"> 80</a>
+<a href="#l-81"> 81</a>
+<a href="#l-82"> 82</a>
+<a href="#l-83"> 83</a>
+<a href="#l-84"> 84</a>
+<a href="#l-85"> 85</a>
+<a href="#l-86"> 86</a>
+<a href="#l-87"> 87</a>
+<a href="#l-88"> 88</a>
+<a href="#l-89"> 89</a>
+<a href="#l-90"> 90</a>
+<a href="#l-91"> 91</a>
+<a href="#l-92"> 92</a>
+<a href="#l-93"> 93</a>
+<a href="#l-94"> 94</a>
+<a href="#l-95"> 95</a>
+<a href="#l-96"> 96</a>
+<a href="#l-97"> 97</a>
+<a href="#l-98"> 98</a>
+<a href="#l-99"> 99</a>
+<a href="#l-100">100</a>
+<a href="#l-101">101</a>
+<a href="#l-102">102</a>
+<a href="#l-103">103</a>
+<a href="#l-104">104</a>
+<a href="#l-105">105</a>
+<a href="#l-106">106</a>
+<a href="#l-107">107</a>
+<a href="#l-108">108</a>
+<a href="#l-109">109</a>
+<a href="#l-110">110</a>
+<a href="#l-111">111</a>
+<a href="#l-112">112</a>
+<a href="#l-113">113</a>
+<a href="#l-114">114</a>
+<a href="#l-115">115</a>
+<a href="#l-116">116</a>
+<a href="#l-117">117</a>
+<a href="#l-118">118</a>
+<a href="#l-119">119</a>
+<a href="#l-120">120</a>
+<a href="#l-121">121</a>
+<a href="#l-122">122</a>
+<a href="#l-123">123</a>
+<a href="#l-124">124</a>
+<a href="#l-125">125</a>
+<a href="#l-126">126</a>
+<a href="#l-127">127</a>
+<a href="#l-128">128</a>
+<a href="#l-129">129</a>
+<a href="#l-130">130</a>
+<a href="#l-131">131</a>
+<a href="#l-132">132</a>
+<a href="#l-133">133</a>
+<a href="#l-134">134</a>
+<a href="#l-135">135</a>
+<a href="#l-136">136</a>
+<a href="#l-137">137</a>
+<a href="#l-138">138</a>
+<a href="#l-139">139</a>
+<a href="#l-140">140</a>
+<a href="#l-141">141</a>
+<a href="#l-142">142</a>
+<a href="#l-143">143</a>
+<a href="#l-144">144</a>
+<a href="#l-145">145</a>
+<a href="#l-146">146</a>
+<a href="#l-147">147</a>
+<a href="#l-148">148</a>
+<a href="#l-149">149</a>
+<a href="#l-150">150</a>
+<a href="#l-151">151</a>
+<a href="#l-152">152</a>
+<a href="#l-153">153</a>
+<a href="#l-154">154</a>
+<a href="#l-155">155</a>
+<a href="#l-156">156</a>
+<a href="#l-157">157</a>
+<a href="#l-158">158</a>
+<a href="#l-159">159</a>
+<a href="#l-160">160</a>
+<a href="#l-161">161</a>
+<a href="#l-162">162</a>
+<a href="#l-163">163</a>
+<a href="#l-164">164</a>
+<a href="#l-165">165</a>
+<a href="#l-166">166</a>
+<a href="#l-167">167</a>
+<a href="#l-168">168</a>
+<a href="#l-169">169</a>
+<a href="#l-170">170</a>
+<a href="#l-171">171</a>
+<a href="#l-172">172</a>
+<a href="#l-173">173</a>
+<a href="#l-174">174</a>
+<a href="#l-175">175</a>
+<a href="#l-176">176</a>
+<a href="#l-177">177</a>
+<a href="#l-178">178</a>
+<a href="#l-179">179</a>
+<a href="#l-180">180</a>
+<a href="#l-181">181</a>
+<a href="#l-182">182</a>
+<a href="#l-183">183</a>
+<a href="#l-184">184</a>
+<a href="#l-185">185</a>
+<a href="#l-186">186</a>
+<a href="#l-187">187</a>
+<a href="#l-188">188</a>
+<a href="#l-189">189</a>
+<a href="#l-190">190</a>
+<a href="#l-191">191</a>
+<a href="#l-192">192</a>
+<a href="#l-193">193</a>
+<a href="#l-194">194</a>
+<a href="#l-195">195</a>
+<a href="#l-196">196</a>
+<a href="#l-197">197</a>
+<a href="#l-198">198</a>
+<a href="#l-199">199</a>
+<a href="#l-200">200</a>
+<a href="#l-201">201</a>
+<a href="#l-202">202</a>
+<a href="#l-203">203</a>
+<a href="#l-204">204</a>
+<a href="#l-205">205</a>
+<a href="#l-206">206</a>
+<a href="#l-207">207</a>
+<a href="#l-208">208</a>
+<a href="#l-209">209</a>
+<a href="#l-210">210</a>
+<a href="#l-211">211</a>
+<a href="#l-212">212</a>
+<a href="#l-213">213</a>
+<a href="#l-214">214</a>
+<a href="#l-215">215</a>
+<a href="#l-216">216</a>
+<a href="#l-217">217</a>
+<a href="#l-218">218</a>
+<a href="#l-219">219</a>
+<a href="#l-220">220</a>
+<a href="#l-221">221</a>
+<a href="#l-222">222</a>
+<a href="#l-223">223</a>
+<a href="#l-224">224</a>
+<a href="#l-225">225</a>
+<a href="#l-226">226</a>
+<a href="#l-227">227</a>
+<a href="#l-228">228</a>
+<a href="#l-229">229</a>
+<a href="#l-230">230</a>
+<a href="#l-231">231</a>
+<a href="#l-232">232</a>
+<a href="#l-233">233</a>
+<a href="#l-234">234</a>
+<a href="#l-235">235</a>
+<a href="#l-236">236</a>
+<a href="#l-237">237</a>
+<a href="#l-238">238</a>
+<a href="#l-239">239</a>
+<a href="#l-240">240</a>
+<a href="#l-241">241</a>
+<a href="#l-242">242</a>
+<a href="#l-243">243</a>
+<a href="#l-244">244</a>
+<a href="#l-245">245</a>
+<a href="#l-246">246</a>
+<a href="#l-247">247</a>
+<a href="#l-248">248</a>
+<a href="#l-249">249</a>
+<a href="#l-250">250</a>
+<a href="#l-251">251</a>
+<a href="#l-252">252</a>
+<a href="#l-253">253</a>
+<a href="#l-254">254</a>
+<a href="#l-255">255</a>
+<a href="#l-256">256</a>
+<a href="#l-257">257</a>
+<a href="#l-258">258</a>
+<a href="#l-259">259</a>
+<a href="#l-260">260</a>
+<a href="#l-261">261</a>
+<a href="#l-262">262</a>
+<a href="#l-263">263</a>
+<a href="#l-264">264</a>
+<a href="#l-265">265</a>
+<a href="#l-266">266</a>
+<a href="#l-267">267</a>
+<a href="#l-268">268</a>
+<a href="#l-269">269</a>
+<a href="#l-270">270</a>
+<a href="#l-271">271</a>
+<a href="#l-272">272</a>
+<a href="#l-273">273</a>
+<a href="#l-274">274</a>
+<a href="#l-275">275</a>
+<a href="#l-276">276</a>
+<a href="#l-277">277</a>
+<a href="#l-278">278</a>
+<a href="#l-279">279</a>
+<a href="#l-280">280</a>
+<a href="#l-281">281</a>
+<a href="#l-282">282</a>
+<a href="#l-283">283</a>
+<a href="#l-284">284</a>
+<a href="#l-285">285</a>
+<a href="#l-286">286</a>
+<a href="#l-287">287</a>
+<a href="#l-288">288</a>
+<a href="#l-289">289</a>
+<a href="#l-290">290</a>
+<a href="#l-291">291</a>
+<a href="#l-292">292</a>
+<a href="#l-293">293</a>
+<a href="#l-294">294</a>
+<a href="#l-295">295</a>
+<a href="#l-296">296</a>
+<a href="#l-297">297</a>
+<a href="#l-298">298</a>
+<a href="#l-299">299</a>
+<a href="#l-300">300</a>
+<a href="#l-301">301</a>
+<a href="#l-302">302</a>
+<a href="#l-303">303</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="c1">// MBT 11/10/14</span>
+<a name="l-2"></a><span class="c1">//</span>
+<a name="l-3"></a><span class="c1">//</span>
+<a name="l-4"></a><span class="c1">// bsg_fifo_1r1w_large</span>
+<a name="l-5"></a><span class="c1">//</span>
+<a name="l-6"></a><span class="c1">// This implementation is specifically</span>
+<a name="l-7"></a><span class="c1">// intended for processes where 1RW rams</span>
+<a name="l-8"></a><span class="c1">// are much cheaper than 1R1W rams, like</span>
+<a name="l-9"></a><span class="c1">// most ASIC processes, or where 1R1W rams</span>
+<a name="l-10"></a><span class="c1">// are not available.</span>
+<a name="l-11"></a><span class="c1">//</span>
+<a name="l-12"></a><span class="c1">// The idea is that a 1R1W ram is often 1.7X</span>
+<a name="l-13"></a><span class="c1">// or more of the size of a 1RW, so we can</span>
+<a name="l-14"></a><span class="c1">// save area.</span>
+<a name="l-15"></a><span class="c1">//</span>
+<a name="l-16"></a><span class="c1">// There are five+ possible implementations</span>
+<a name="l-17"></a><span class="c1">// of a FIFO using 1RW rams:</span>
+<a name="l-18"></a><span class="c1">//</span>
+<a name="l-19"></a><span class="c1">// a. (bsg_fifo_1r1w_small) synthesize 1R1W RF from DFFs. Area per bit</span>
+<a name="l-20"></a><span class="c1">//    of storage is often 10x larger than 1RW SRAM. But the SRAM</span>
+<a name="l-21"></a><span class="c1">//    needs a sense-amp for every bit that is accessed per cycle, which is</span>
+<a name="l-22"></a><span class="c1">//    about the size of 7 DFF-bits. So, for instance, if you need</span>
+<a name="l-23"></a><span class="c1">//    to access 64 bits per cycle, then that incurs ~450 DFF bits of overhead,</span>
+<a name="l-24"></a><span class="c1">//    so the DFF-RF will be cheaper up until to 512 bits. If you only need</span>
+<a name="l-25"></a><span class="c1">//    to access 32 bits in parallel, then the breakeven would be closer to 256 bits.</span>
+<a name="l-26"></a><span class="c1">//</span>
+<a name="l-27"></a><span class="c1">// b. Use a true 1R1W ram; about 2X larger than 1RW SRAM. Maybe available for FPGA</span>
+<a name="l-28"></a><span class="c1">//    but often not available, or not a good deal for ASIC.</span>
+<a name="l-29"></a><span class="c1">//</span>
+<a name="l-30"></a><span class="c1">// c. (not implemented) To get more ports, use two rams of half size, and then round</span>
+<a name="l-31"></a><span class="c1">//    robin odd/even elements. We can favor the</span>
+<a name="l-32"></a><span class="c1">//    writer, and then use a two-element fifo</span>
+<a name="l-33"></a><span class="c1">//    with bypass after each 1RW, and select between</span>
+<a name="l-34"></a><span class="c1">//    the two. Net cost is 4 words of DFF plus two 1RW SRAMs of size 1/2 but same width.</span>
+<a name="l-35"></a><span class="c1">//    A draft of this code is at the end of this file, but it is incomplete/untested Caveat emptor.</span>
+<a name="l-36"></a><span class="c1">//</span>
+<a name="l-37"></a><span class="c1">// d. (bsg_fifo_1r1w_large) To get &quot;more ports&quot;, use a single 1RW of double width</span>
+<a name="l-38"></a><span class="c1">//    and read/write two elements at a time, as described in this module.</span>
+<a name="l-39"></a><span class="c1">//    The cost is 7 DFF elements for staging plus 1 RW of double width and half words. So for</span>
+<a name="l-40"></a><span class="c1">//    a 64-bit wide ram, the overhead is almost 3*450 = 1400 DFF bits; slightly more than</span>
+<a name="l-41"></a><span class="c1">//    case c), but since there is only one RAM there are savings.</span>
+<a name="l-42"></a><span class="c1">//</span>
+<a name="l-43"></a><span class="c1">//    A single 1RW versus two 1RW&#39;s can be a win, but not always. The RAM</span>
+<a name="l-44"></a><span class="c1">//    is larger, so there is potential for there is to be more amortization of</span>
+<a name="l-45"></a><span class="c1">//    overhead. But on the other hand, # of sense amps is the same, so some of the</span>
+<a name="l-46"></a><span class="c1">//    overheads are the same. One problem with this design for smaller RAMs is </span>
+<a name="l-47"></a><span class="c1">//    that it doubles the number of sense amps in a single ram, which can make</span>
+<a name="l-48"></a><span class="c1">//    the aspect ratio undesirable or even impossible.</span>
+<a name="l-49"></a><span class="c1">//</span>
+<a name="l-50"></a><span class="c1">// e. (bsg_fifo_1r1w_pseudo_large) Use a pseudo 1RW fifo, where it looks like it is 1r1w, but actually</span>
+<a name="l-51"></a><span class="c1">//    it is a 1RW that favors writes. Unlike &quot;large&quot;, it has the same bandwidth, so we save space</span>
+<a name="l-52"></a><span class="c1">//    on sense amps. This only applies when you know data is coming in at 1/2 rate or slower.</span>
+<a name="l-53"></a><span class="c1">//</span>
+<a name="l-54"></a><span class="c1">// Generally speaking, an SRAM&#39;s area is proportional to the number of bits, the number of</span>
+<a name="l-55"></a><span class="c1">// sense amps, and the amount of decoder. If we take a wide ram and break it into two rams</span>
+<a name="l-56"></a><span class="c1">// of half the width, but the same total bits, we have the same number of total bits and</span>
+<a name="l-57"></a><span class="c1">// the same number of sense amps, but more decoder area, so there is a slight increase. </span>
+<a name="l-58"></a><span class="c1">//</span>
+<a name="l-59"></a><span class="c1">// The 7 elements overhead coud potentially be significant,</span>
+<a name="l-60"></a><span class="c1">// since they are implemented with ordinary flops, probably 4X per bit versus the</span>
+<a name="l-61"></a><span class="c1">// So we have an equation,  area improvement = 1.7 W / (W + 4*7);</span>
+<a name="l-62"></a><span class="c1">//</span>
+<a name="l-63"></a><span class="c1">//       64 --&gt; 20% (probably less than this)</span>
+<a name="l-64"></a><span class="c1">//      128 --&gt; 40%</span>
+<a name="l-65"></a><span class="c1">//      256 --&gt; 53%</span>
+<a name="l-66"></a><span class="c1">//      512 --&gt; 62%</span>
+<a name="l-67"></a>
+<a name="l-68"></a><span class="c1">//</span>
+<a name="l-69"></a><span class="c1">// Rather than use two 1RW and alternate</span>
+<a name="l-70"></a><span class="c1">// between them, we use one 1RW of double</span>
+<a name="l-71"></a><span class="c1">// width. This saves area especially for</span>
+<a name="l-72"></a><span class="c1">// medium size fifos (e.g. 64x64 = 4096 bits).</span>
+<a name="l-73"></a><span class="c1">//</span>
+<a name="l-74"></a><span class="c1">// Since data is bunched in pairs, we create</span>
+<a name="l-75"></a><span class="c1">// a free slot from which we can fetch data from</span>
+<a name="l-76"></a><span class="c1">// the big fifo every other cycle.</span>
+<a name="l-77"></a>
+<a name="l-78"></a><span class="c1">// When there is little data in the FIFO</span>
+<a name="l-79"></a><span class="c1">// data is round robin dispatched to a pair of</span>
+<a name="l-80"></a><span class="c1">// two element fifos (little fifos). If the</span>
+<a name="l-81"></a><span class="c1">// little fifos fill up, then the data is bunched up into</span>
+<a name="l-82"></a><span class="c1">// pairs and written into a double width single</span>
+<a name="l-83"></a><span class="c1">// ported 1RW FIFO (big fifos). Priority is given to</span>
+<a name="l-84"></a><span class="c1">// writing to the big fifos; except if the little fifo</span>
+<a name="l-85"></a><span class="c1">// only has two elements left; then reads are given</span>
+<a name="l-86"></a><span class="c1">// priority so that the data arrives in time.</span>
+<a name="l-87"></a><span class="c1">//</span>
+<a name="l-88"></a><span class="c1">// This policies allows us to guarantee the invariants of</span>
+<a name="l-89"></a><span class="c1">// a FIFO: it will never say it&#39;s full if it has less than</span>
+<a name="l-90"></a><span class="c1">// N elements in it; and it will never say it&#39;s empty</span>
+<a name="l-91"></a><span class="c1">// if it has more than 0 elements in it. This is not</span>
+<a name="l-92"></a><span class="c1">// that straightforward with this kind of fifo because</span>
+<a name="l-93"></a><span class="c1">// the data could actually be in three different places:</span>
+<a name="l-94"></a><span class="c1">// the buncher, the little FIFO, and the big FIFO.</span>
+<a name="l-95"></a><span class="c1">//</span>
+<a name="l-96"></a><span class="c1">// Note that the FIFO does not guarantee an upper bound</span>
+<a name="l-97"></a><span class="c1">// on how many elements it will accept. This may actually</span>
+<a name="l-98"></a><span class="c1">// be as high as N+4+3.</span>
+<a name="l-99"></a><span class="c1">//</span>
+<a name="l-100"></a><span class="c1">//</span>
+<a name="l-101"></a><span class="c1">//                                |\   ___   _______</span>
+<a name="l-102"></a><span class="c1">//                 _______________| |  |R|__/ 2 fifo\    ___</span>
+<a name="l-103"></a><span class="c1">// /------------\_/               | |  |R|  \_______/ \ | N \</span>
+<a name="l-104"></a><span class="c1">// |ser2parallel|_    ________    | |__|2|              | to |___</span>
+<a name="l-105"></a><span class="c1">// \------------/ \  / big    \   | |  |t|    ______    | 1  |</span>
+<a name="l-106"></a><span class="c1">//                 \/ 1RW FIFO \__| |  |2|__/ 2 fifo\_/ |___/</span>
+<a name="l-107"></a><span class="c1">//                  \__________/  |/   |_|  \_______/</span>
+<a name="l-108"></a><span class="c1">//</span>
+<a name="l-109"></a><span class="c1">//</span>
+<a name="l-110"></a>
+<a name="l-111"></a><span class="k">module</span> <span class="n">bsg_fifo_1r1w_large</span> <span class="p">#(</span><span class="k">parameter</span> <span class="n">width_p</span>           <span class="o">=</span> <span class="o">-</span><span class="mh">1</span>
+<a name="l-112"></a>                             <span class="p">,</span> <span class="k">parameter</span> <span class="n">els_p</span>           <span class="o">=</span> <span class="o">-</span><span class="mh">1</span>
+<a name="l-113"></a>                             <span class="p">)</span>
+<a name="l-114"></a>   <span class="p">(</span><span class="k">input</span>                  <span class="n">clk_i</span>
+<a name="l-115"></a>    <span class="p">,</span> <span class="k">input</span>                <span class="n">reset_i</span>
+<a name="l-116"></a>
+<a name="l-117"></a>    <span class="p">,</span> <span class="k">input</span> <span class="p">[</span><span class="n">width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>  <span class="n">data_i</span>
+<a name="l-118"></a>    <span class="p">,</span> <span class="k">input</span>                <span class="n">v_i</span>
+<a name="l-119"></a>    <span class="p">,</span> <span class="k">output</span>               <span class="n">ready_o</span>
+<a name="l-120"></a>
+<a name="l-121"></a>    <span class="p">,</span> <span class="k">output</span>               <span class="n">v_o</span>
+<a name="l-122"></a>    <span class="p">,</span> <span class="k">output</span> <span class="p">[</span><span class="n">width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">data_o</span>
+<a name="l-123"></a>    <span class="p">,</span> <span class="k">input</span>                <span class="n">yumi_i</span>
+<a name="l-124"></a>    <span class="p">);</span>
+<a name="l-125"></a>
+<a name="l-126"></a>   <span class="k">initial</span> <span class="k">assert</span> <span class="p">((</span><span class="n">els_p</span> <span class="o">&amp;</span> <span class="mh">1</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0</span><span class="p">)</span> <span class="k">else</span>
+<a name="l-127"></a>     <span class="n">$error</span><span class="p">(</span><span class="s">&quot;odd number of elements for two port fifo not handled.&quot;</span><span class="p">);</span>
+<a name="l-128"></a>
+<a name="l-129"></a>   <span class="k">wire</span> <span class="p">[</span><span class="n">width_p</span><span class="o">*</span><span class="mh">2</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">data_sipo</span><span class="p">;</span>
+<a name="l-130"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>          <span class="n">valid_sipo</span><span class="p">;</span>
+<a name="l-131"></a>
+<a name="l-132"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>          <span class="n">yumi_cnt_sipo</span><span class="p">;</span>
+<a name="l-133"></a>
+<a name="l-134"></a>   <span class="c1">// we had to bump els_p to 3 because of the case</span>
+<a name="l-135"></a>   <span class="c1">// where the little fifos have 3 elements (blocking</span>
+<a name="l-136"></a>   <span class="c1">// us from restoring from the 1RW FIFO), and where</span>
+<a name="l-137"></a>   <span class="c1">// the sipo has only one element (blocking us from</span>
+<a name="l-138"></a>   <span class="c1">// spooling to the 1RW fifo.) If we simultaneously</span>
+<a name="l-139"></a>   <span class="c1">// have enque and deque requests, then the sipo will</span>
+<a name="l-140"></a>   <span class="c1">// need to spool at the same time that we need to</span>
+<a name="l-141"></a>   <span class="c1">// access the 1RW fifo to prevent empty. the solution</span>
+<a name="l-142"></a>   <span class="c1">// is to add one extra element to the sipo so that it</span>
+<a name="l-143"></a>   <span class="c1">// can hold off one more cycle before spooling. then</span>
+<a name="l-144"></a>   <span class="c1">// we can restore 2 words from the fifo, and spool</span>
+<a name="l-145"></a>   <span class="c1">// on the next cycle.</span>
+<a name="l-146"></a>
+<a name="l-147"></a>   <span class="n">bsg_serial_in_parallel_out</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="p">)</span>
+<a name="l-148"></a>                                <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="mh">3</span><span class="p">)</span>
+<a name="l-149"></a>                                <span class="p">,.</span><span class="n">out_els_p</span><span class="p">(</span><span class="mh">2</span><span class="p">)</span>
+<a name="l-150"></a>                                <span class="p">)</span> <span class="n">sipo</span>
+<a name="l-151"></a>   <span class="p">(.</span><span class="n">clk_i</span>      <span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
+<a name="l-152"></a>    <span class="p">,.</span><span class="n">reset_i</span>   <span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
+<a name="l-153"></a>    <span class="p">,.</span><span class="n">valid_i</span>   <span class="p">(</span><span class="n">v_i</span><span class="p">)</span>
+<a name="l-154"></a>    <span class="p">,.</span><span class="n">data_i</span>    <span class="p">(</span><span class="n">data_i</span><span class="p">)</span>
+<a name="l-155"></a>    <span class="p">,.</span><span class="n">ready_o</span>   <span class="p">(</span><span class="n">ready_o</span><span class="p">)</span>
+<a name="l-156"></a>    <span class="p">,.</span><span class="n">valid_o</span>   <span class="p">(</span><span class="n">valid_sipo</span><span class="p">)</span>
+<a name="l-157"></a>    <span class="p">,.</span><span class="n">data_o</span>    <span class="p">(</span><span class="n">data_sipo</span><span class="p">)</span>
+<a name="l-158"></a>
+<a name="l-159"></a>    <span class="p">,.</span><span class="n">yumi_cnt_i</span><span class="p">(</span><span class="n">yumi_cnt_sipo</span><span class="p">)</span>
+<a name="l-160"></a>    <span class="p">);</span>
+<a name="l-161"></a>
+<a name="l-162"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">2</span><span class="o">*</span><span class="n">width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">big_data_lo</span><span class="p">;</span>
+<a name="l-163"></a>   <span class="k">wire</span>                 <span class="n">big_valid</span><span class="p">,</span> <span class="n">big_full_lo</span><span class="p">,</span> <span class="n">big_empty_lo</span><span class="p">;</span>
+<a name="l-164"></a>   <span class="k">logic</span>                <span class="n">big_enq</span><span class="p">,</span> <span class="n">big_deq</span><span class="p">,</span>   <span class="n">big_deq_r</span><span class="p">;</span>
+<a name="l-165"></a>
+<a name="l-166"></a>   <span class="k">always_ff</span> <span class="p">@(</span><span class="k">posedge</span> <span class="n">clk_i</span><span class="p">)</span>
+<a name="l-167"></a>     <span class="n">big_deq_r</span> <span class="o">&lt;=</span> <span class="n">big_deq</span><span class="p">;</span>
+<a name="l-168"></a>
+<a name="l-169"></a>   <span class="n">bsg_fifo_1rw_large</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="o">*</span><span class="mh">2</span><span class="p">)</span>
+<a name="l-170"></a>                        <span class="p">,.</span><span class="n">els_p</span> <span class="p">(</span><span class="n">els_p</span> <span class="o">&gt;&gt;</span> <span class="mh">1</span><span class="p">)</span>
+<a name="l-171"></a>                        <span class="p">)</span> <span class="n">big1p</span>
+<a name="l-172"></a>     <span class="p">(.</span><span class="n">clk_i</span>         <span class="p">(</span><span class="n">clk_i</span>       <span class="p">)</span>
+<a name="l-173"></a>      <span class="p">,.</span><span class="n">reset_i</span>      <span class="p">(</span><span class="n">reset_i</span>     <span class="p">)</span>
+<a name="l-174"></a>
+<a name="l-175"></a>      <span class="c1">// low bits are older element</span>
+<a name="l-176"></a>      <span class="p">,.</span><span class="n">data_i</span>       <span class="p">(</span><span class="n">data_sipo</span> <span class="p">)</span>
+<a name="l-177"></a>
+<a name="l-178"></a>      <span class="p">,.</span><span class="n">v_i</span>          <span class="p">(</span><span class="n">big_valid</span><span class="p">)</span>
+<a name="l-179"></a>      <span class="p">,.</span><span class="n">enq_not_deq_i</span><span class="p">(</span><span class="n">big_enq</span><span class="p">)</span>
+<a name="l-180"></a>
+<a name="l-181"></a>      <span class="p">,.</span><span class="n">full_o</span>   <span class="p">(</span><span class="n">big_full_lo</span> <span class="p">)</span>
+<a name="l-182"></a>      <span class="p">,.</span><span class="n">empty_o</span>  <span class="p">(</span><span class="n">big_empty_lo</span><span class="p">)</span>
+<a name="l-183"></a>      <span class="p">,.</span><span class="n">data_o</span>   <span class="p">(</span><span class="n">big_data_lo</span> <span class="p">)</span>
+<a name="l-184"></a>      <span class="p">);</span>
+<a name="l-185"></a>
+<a name="l-186"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">2</span><span class="o">*</span><span class="n">width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">little_data_rot</span><span class="p">;</span>
+<a name="l-187"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>           <span class="n">little_valid</span><span class="p">,</span> <span class="n">little_ready</span><span class="p">;</span>
+<a name="l-188"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>           <span class="n">little_ready_rot</span><span class="p">,</span> <span class="n">little_valid_rot</span><span class="p">;</span>
+<a name="l-189"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>           <span class="n">valid_int</span><span class="p">;</span>
+<a name="l-190"></a>
+<a name="l-191"></a>   <span class="c1">// we are in bypass mode if we can directly bypass</span>
+<a name="l-192"></a>   <span class="c1">// to the small fifos.</span>
+<a name="l-193"></a>   <span class="c1">// - we cannot have on the previous cycle loaded</span>
+<a name="l-194"></a>   <span class="c1">// data from the big fifo; the small fifo we would like</span>
+<a name="l-195"></a>   <span class="c1">// to use cannot be full, and the big fifo must be empty.</span>
+<a name="l-196"></a>
+<a name="l-197"></a>   <span class="k">wire</span> <span class="n">bypass_mode</span>    <span class="o">=</span> <span class="o">~</span><span class="n">big_deq_r</span> <span class="o">&amp;</span> <span class="n">little_ready</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">big_empty_lo</span><span class="p">;</span>
+<a name="l-198"></a>
+<a name="l-199"></a>   <span class="k">wire</span> <span class="n">can_spill</span>     <span class="o">=</span> <span class="o">~</span><span class="n">big_full_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">bypass_mode</span><span class="p">;</span>
+<a name="l-200"></a>
+<a name="l-201"></a>   <span class="c1">// we have an emergency if both little fifos can receive data</span>
+<a name="l-202"></a>   <span class="c1">// (i.e. &lt;= 2 elements) and we did not just fetch from the big fifo</span>
+<a name="l-203"></a>   <span class="c1">// and we have data in the big fifo. if we don&#39;t transfer now, we</span>
+<a name="l-204"></a>   <span class="c1">// will have a bubble.</span>
+<a name="l-205"></a>
+<a name="l-206"></a>   <span class="k">wire</span> <span class="n">emergency</span>     <span class="o">=</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">little_ready_rot</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">big_empty_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">big_deq_r</span><span class="p">;</span>
+<a name="l-207"></a>
+<a name="l-208"></a>   <span class="c1">// we will spill if we are in spill mode; and we have two elements</span>
+<a name="l-209"></a>   <span class="c1">// to spill, and the big fifo is not full.</span>
+<a name="l-210"></a>
+<a name="l-211"></a>   <span class="k">wire</span> <span class="n">will_spill</span>    <span class="o">=</span> <span class="n">can_spill</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">valid_sipo</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">emergency</span><span class="p">;</span>
+<a name="l-212"></a>
+<a name="l-213"></a>   <span class="c1">// we deque if we are not spilling, big fifo has data available</span>
+<a name="l-214"></a>   <span class="c1">// and the small fifos has two elements free with an enque pending</span>
+<a name="l-215"></a>   <span class="c1">// or one element free with no enque pending</span>
+<a name="l-216"></a>
+<a name="l-217"></a>   <span class="k">assign</span> <span class="n">big_deq</span>     <span class="o">=</span> <span class="o">~</span><span class="n">will_spill</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">big_empty_lo</span>
+<a name="l-218"></a>                        <span class="o">&amp;</span> <span class="p">(</span><span class="n">big_deq_r</span>
+<a name="l-219"></a>                           <span class="o">?</span> <span class="p">(</span><span class="o">~|</span><span class="n">valid_int</span><span class="p">)</span>         <span class="c1">// small fifos are empty</span>
+<a name="l-220"></a>                           <span class="o">:</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">little_ready_rot</span><span class="p">));</span> <span class="c1">// both fifos &gt; 1 el free, no enq pending</span>
+<a name="l-221"></a>
+<a name="l-222"></a>   <span class="k">assign</span> <span class="n">big_valid</span> <span class="o">=</span> <span class="n">will_spill</span> <span class="o">|</span> <span class="n">big_deq</span><span class="p">;</span>
+<a name="l-223"></a>   <span class="k">assign</span> <span class="n">big_enq</span>   <span class="o">=</span> <span class="n">will_spill</span><span class="p">;</span>
+<a name="l-224"></a>
+<a name="l-225"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">2</span><span class="o">*</span><span class="n">width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">little_data</span>  <span class="o">=</span> <span class="n">big_deq_r</span> <span class="o">?</span> <span class="n">big_data_lo</span> <span class="o">:</span> <span class="n">data_sipo</span><span class="p">;</span>
+<a name="l-226"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_vector</span> <span class="o">=</span> <span class="n">valid_sipo</span> <span class="o">&amp;</span> <span class="p">{</span> <span class="n">bypass_mode</span><span class="p">,</span> <span class="n">bypass_mode</span> <span class="p">};</span>
+<a name="l-227"></a>   <span class="k">assign</span>               <span class="n">little_valid</span> <span class="o">=</span> <span class="n">big_deq_r</span> <span class="o">?</span> <span class="mh">2</span><span class="mb">&#39;b11</span>       <span class="o">:</span> <span class="n">bypass_vector</span><span class="p">;</span>
+<a name="l-228"></a>
+<a name="l-229"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>           <span class="n">cnt</span><span class="p">;</span>
+<a name="l-230"></a>
+<a name="l-231"></a>   <span class="n">bsg_thermometer_count</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="mh">2</span><span class="p">))</span> <span class="n">thermo</span><span class="p">(.</span><span class="n">i</span><span class="p">(</span><span class="n">little_ready</span> <span class="o">&amp;</span> <span class="n">bypass_vector</span><span class="p">)</span>
+<a name="l-232"></a>                                               <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">cnt</span><span class="p">));</span>
+<a name="l-233"></a>
+<a name="l-234"></a>   <span class="k">assign</span> <span class="n">yumi_cnt_sipo</span> <span class="o">=</span> <span class="n">will_spill</span>
+<a name="l-235"></a>                          <span class="o">?</span> <span class="mh">2</span><span class="mb">&#39;b10</span>
+<a name="l-236"></a>                          <span class="o">:</span> <span class="n">cnt</span><span class="p">;</span>
+<a name="l-237"></a>
+<a name="l-238"></a>   <span class="n">bsg_round_robin_2_to_2</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="p">))</span>
+<a name="l-239"></a>     <span class="n">rr222</span>
+<a name="l-240"></a>       <span class="p">(.</span><span class="n">clk_i</span><span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
+<a name="l-241"></a>        <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
+<a name="l-242"></a>
+<a name="l-243"></a>        <span class="p">,.</span><span class="n">data_i</span><span class="p">(</span><span class="n">little_data</span><span class="p">)</span>
+<a name="l-244"></a>        <span class="p">,.</span><span class="n">v_i</span>    <span class="p">(</span><span class="n">little_valid</span><span class="p">)</span>
+<a name="l-245"></a>        <span class="p">,.</span><span class="n">ready_o</span><span class="p">(</span><span class="n">little_ready</span><span class="p">)</span>
+<a name="l-246"></a>
+<a name="l-247"></a>        <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">little_data_rot</span><span class="p">)</span>
+<a name="l-248"></a>        <span class="p">,.</span><span class="n">v_o</span>   <span class="p">(</span><span class="n">little_valid_rot</span><span class="p">)</span>
+<a name="l-249"></a>        <span class="p">,.</span><span class="n">ready_i</span><span class="p">(</span><span class="n">little_ready_rot</span><span class="p">)</span>
+<a name="l-250"></a>        <span class="p">);</span>
+<a name="l-251"></a>
+<a name="l-252"></a>
+<a name="l-253"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">data_int</span><span class="p">;</span>
+<a name="l-254"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>           <span class="n">yumi_int</span><span class="p">;</span>
+<a name="l-255"></a>
+<a name="l-256"></a>   <span class="k">genvar</span>               <span class="n">i</span><span class="p">;</span>
+<a name="l-257"></a>
+<a name="l-258"></a>   <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mh">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a name="l-259"></a>     <span class="k">begin</span> <span class="o">:</span> <span class="n">twofer</span>
+<a name="l-260"></a>        <span class="n">bsg_two_fifo</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="p">))</span> <span class="n">little</span>
+<a name="l-261"></a>            <span class="p">(.</span><span class="n">clk_i</span>   <span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
+<a name="l-262"></a>             <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
+<a name="l-263"></a>
+<a name="l-264"></a>             <span class="p">,.</span><span class="n">ready_o</span><span class="p">(</span><span class="n">little_ready_rot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                 <span class="p">)</span>
+<a name="l-265"></a>             <span class="p">,.</span><span class="n">data_i</span> <span class="p">(</span><span class="n">little_data_rot</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">width_p</span><span class="o">+:</span><span class="n">width_p</span><span class="p">])</span>
+<a name="l-266"></a>             <span class="p">,.</span><span class="n">v_i</span>    <span class="p">(</span><span class="n">little_valid_rot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                 <span class="p">)</span>
+<a name="l-267"></a>
+<a name="l-268"></a>             <span class="p">,.</span><span class="n">v_o</span>    <span class="p">(</span><span class="n">valid_int</span> <span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a name="l-269"></a>             <span class="p">,.</span><span class="n">data_o</span> <span class="p">(</span><span class="n">data_int</span>  <span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a name="l-270"></a>             <span class="p">,.</span><span class="n">yumi_i</span> <span class="p">(</span><span class="n">yumi_int</span>  <span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a name="l-271"></a>             <span class="p">);</span>
+<a name="l-272"></a>     <span class="k">end</span>
+<a name="l-273"></a>
+<a name="l-274"></a>  <span class="n">bsg_round_robin_n_to_1</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="p">)</span>
+<a name="l-275"></a>                            <span class="p">,.</span><span class="n">num_in_p</span><span class="p">(</span><span class="mh">2</span><span class="p">)</span>
+<a name="l-276"></a>			    <span class="p">,.</span><span class="n">strict_p</span><span class="p">(</span><span class="mh">1</span><span class="p">)</span>
+<a name="l-277"></a>                            <span class="p">)</span> <span class="n">round_robin_n_to_1</span>
+<a name="l-278"></a>     <span class="p">(.</span><span class="n">clk_i</span>   <span class="p">(</span><span class="n">clk_i</span>     <span class="p">)</span>
+<a name="l-279"></a>      <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span>   <span class="p">)</span>
+<a name="l-280"></a>
+<a name="l-281"></a>      <span class="p">,.</span><span class="n">data_i</span> <span class="p">(</span><span class="n">data_int</span> <span class="p">)</span>
+<a name="l-282"></a>      <span class="p">,.</span><span class="n">v_i</span><span class="p">(</span><span class="n">valid_int</span><span class="p">)</span>
+<a name="l-283"></a>      <span class="p">,.</span><span class="n">yumi_o</span> <span class="p">(</span><span class="n">yumi_int</span> <span class="p">)</span>
+<a name="l-284"></a>
+<a name="l-285"></a>      <span class="p">,.</span><span class="n">data_o</span> <span class="p">(</span><span class="n">data_o</span>    <span class="p">)</span>
+<a name="l-286"></a>      <span class="p">,.</span><span class="n">v_o</span><span class="p">(</span><span class="n">v_o</span>       <span class="p">)</span>
+<a name="l-287"></a>      <span class="p">,.</span><span class="n">tag_o</span>  <span class="p">()</span>
+<a name="l-288"></a>      <span class="p">,.</span><span class="n">yumi_i</span> <span class="p">(</span><span class="n">yumi_i</span>    <span class="p">)</span>
+<a name="l-289"></a>      <span class="p">);</span>
+<a name="l-290"></a>
+<a name="l-291"></a>   <span class="c1">// synopsys translate_off</span>
+<a name="l-292"></a>
+<a name="l-293"></a>   <span class="c1">// this sums up all of the storage in this fifo</span>
+<a name="l-294"></a>   <span class="k">wire</span> <span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">num_elements_debug</span>
+<a name="l-295"></a>               <span class="o">=</span> <span class="mh">2</span><span class="o">*</span><span class="n">big1p</span><span class="p">.</span><span class="n">num_elements_debug</span>
+<a name="l-296"></a>               <span class="o">+</span> <span class="n">valid_int</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">valid_int</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span>
+<a name="l-297"></a>               <span class="o">+</span> <span class="n">sipo</span><span class="p">.</span><span class="n">valid_r</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">sipo</span><span class="p">.</span><span class="n">valid_r</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span>
+<a name="l-298"></a>               <span class="o">+</span> <span class="o">!</span><span class="n">little_ready_rot</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">+</span> <span class="o">!</span><span class="n">little_ready_rot</span><span class="p">[</span><span class="mh">1</span><span class="p">];</span>
+<a name="l-299"></a>
+<a name="l-300"></a>   <span class="c1">// synopsys translate_on</span>
+<a name="l-301"></a>
+<a name="l-302"></a>
+<a name="l-303"></a><span class="k">endmodule</span>
+</pre></div>
+</td></tr></table>
+  </body>
+</html>

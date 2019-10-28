@@ -1,0 +1,151 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_nonsynth_fsb_node_trace_replay.v</a>
+time_elapsed: 0.055s
+</pre>
+<pre class="log">
+user_time: 0.050270999999999996
+system_time: 0.004955
+ram_usage: 10712
+
+module bsg_nonsynth_fsb_node_trace_replay (
+	clk_i,
+	reset_i,
+	en_i,
+	v_i,
+	data_i,
+	ready_o,
+	v_o,
+	data_o,
+	yumi_i,
+	done_o
+);
+	parameter ring_width_p = 80;
+	parameter master_id_p = &#34;inv&#34;;
+	parameter slave_id_p = &#34;inv&#34;;
+	parameter filename_p = &#34;trace.in&#34;;
+	input clk_i;
+	input reset_i;
+	input en_i;
+	input v_i;
+	input [(ring_width_p - 1):0] data_i;
+	output ready_o;
+	output v_o;
+	output [(ring_width_p - 1):0] data_o;
+	input yumi_i;
+	output reg done_o;
+	integer data_file;
+	integer result_code;
+	string read_line;
+	wire [(ring_width_p - 1):0] data_r;
+	reg [3:0] op_r;
+	reg eof;
+	reg next_line_r;
+	wire [7999:0] filename_string;
+	string filename_path = filename_p;
+	initial begin
+		if ($test$plusargs(&#34;fsb_trace&#34;))
+			if ($value$plusargs(&#34;fsb_trace=%s&#34;, filename_string)) begin
+				filename_path = string&#39;(filename_string);
+				$display(&#34;### %m using filename %s&#34;, filename_path);
+			end
+		data_file = $fopen(filename_path, &#34;r&#34;);
+		if ((data_file == 0)) begin
+			$display(&#34;############################################################################&#34;);
+			$display(&#34;### %m Failed to open file %s&#34;, filename_path);
+			$display(&#34;############################################################################&#34;);
+			$finish;
+		end
+		else begin
+			$display(&#34;############################################################################&#34;);
+			$display(&#34;### %m OPENED FILE %s&#34;, filename_path);
+			$display(&#34;############################################################################&#34;);
+		end
+		next_line_r = 1;
+		eof = 0;
+		op_r = 0;
+		done_o = 0;
+	end
+	assign v_o = (((~reset_i &amp; ~eof) &amp; (op_r == 1)) &amp; en_i);
+	assign data_o = data_r;
+	wire receive_op = (op_r == 2);
+	assign ready_o = (receive_op | done_o);
+	always @(posedge clk_i)
+		if (!done_o) begin
+			case (op_r)
+				0: next_line_r = 1;
+				1:
+					if ((v_o &amp; yumi_i)) begin
+						next_line_r = 1;
+						$display(&#34;### trace %s sent %h&#34;, filename_p, data_r);
+					end
+				2:
+					if (v_i)
+						if ((data_i != data_r)) begin
+							$display(&#34;############################################################################&#34;);
+							$display(&#34;### %m &#34;);
+							$display(&#34;###    &#34;);
+							$display(&#34;### FAIL (trace mismatch) = %h&#34;, data_i);
+							$display(&#34;###              expected = %h\n&#34;, data_r);
+							$display(&#34;############################################################################&#34;);
+							$finish;
+						end
+						else begin
+							$display(&#34;### %m trace %s matched %h&#34;, filename_p, data_r);
+							next_line_r = 1;
+						end
+				3: begin
+					$display(&#34;############################################################################&#34;);
+					$display(&#34;###### done_o=1 (trace %s finished) (%m)&#34;, filename_p);
+					$display(&#34;############################################################################&#34;);
+					done_o = 1;
+				end
+				4: begin
+					$display(&#34;############################################################################&#34;);
+					$display(&#34;###### DONE (trace %s finished; CALLING $finish) (%m)&#34;, filename_p);
+					$display(&#34;############################################################################&#34;);
+					$finish;
+				end
+				default: $display(&#34;%m unknown op %x\n&#34;, op_r);
+			endcase
+			if (next_line_r) begin
+				next_line_r = 0;
+				result_code = $fgets(read_line, data_file);
+				if ((result_code == 0))
+					eof = 1;
+				while ((!eof &amp; ((((read_line[0] == &#34;\n&#34;) || (read_line[0] == &#34; &#34;)) || (read_line[0] == &#34;&#34;)) || (read_line[0] == &#34;#&#34;)))) begin
+					result_code = $fgets(read_line, data_file);
+					if ((result_code == 0))
+						eof = 1;
+				end
+				if (eof) begin
+					$display(&#34;############################################################################&#34;);
+					$display(&#34;###### End of Trace (trace %s finished) (%m)&#34;, filename_p);
+					$display(&#34;############################################################################&#34;);
+				end
+				else begin
+					result_code = $sscanf(read_line, &#34;%b\n&#34;, {op_r, data_r});
+					if ((result_code == 0)) begin
+						$display(&#34;### error reading file %s:\n&#34;, read_line);
+						$finish;
+					end
+				end
+			end
+		end
+endmodule
+
+</pre>
+</body>

@@ -1,0 +1,97 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_legacy
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_legacy/bsg_murn_converter.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_legacy/bsg_murn_converter.v</a>
+time_elapsed: 0.066s
+</pre>
+<pre class="log">
+user_time: 0.061964
+system_time: 0.004143
+ram_usage: 10912
+
+module bsg_murn_converter (
+	clk_i,
+	reset_i,
+	v_i,
+	ready_o,
+	data_i,
+	switch_2_blockValid,
+	switch_2_blockRetry,
+	switch_2_blockData,
+	block_2_switchValid,
+	block_2_switchRetry,
+	block_2_switchData,
+	v_o,
+	yumi_i,
+	data_o
+);
+	parameter nodes_p = &#34;inv&#34;;
+	parameter ring_width_p = &#34;inv&#34;;
+	input clk_i;
+	input [(nodes_p - 1):0] reset_i;
+	input [(nodes_p - 1):0] v_i;
+	output [(nodes_p - 1):0] ready_o;
+	input [(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + -1) : (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + ((ring_width_p - 1) - 1))) : (((ring_width_p - 1) &gt;= 0) ? ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + (((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) - 1)) : ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + (((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p))) - 1)))):(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? 0 : (ring_width_p - 1)) : (((ring_width_p - 1) &gt;= 0) ? ((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) : ((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)))))] data_i;
+	output [(nodes_p - 1):0] switch_2_blockValid;
+	input [(nodes_p - 1):0] switch_2_blockRetry;
+	output [(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + -1) : (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + ((ring_width_p - 1) - 1))) : (((ring_width_p - 1) &gt;= 0) ? ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + (((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) - 1)) : ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + (((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p))) - 1)))):(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? 0 : (ring_width_p - 1)) : (((ring_width_p - 1) &gt;= 0) ? ((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) : ((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)))))] switch_2_blockData;
+	input [(nodes_p - 1):0] block_2_switchValid;
+	output [(nodes_p - 1):0] block_2_switchRetry;
+	input [(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + -1) : (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + ((ring_width_p - 1) - 1))) : (((ring_width_p - 1) &gt;= 0) ? ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + (((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) - 1)) : ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + (((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p))) - 1)))):(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? 0 : (ring_width_p - 1)) : (((ring_width_p - 1) &gt;= 0) ? ((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) : ((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)))))] block_2_switchData;
+	output [(nodes_p - 1):0] v_o;
+	input [(nodes_p - 1):0] yumi_i;
+	output [(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + -1) : (((((nodes_p - 1) &gt;= 0) ? nodes_p : (2 - nodes_p)) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + ((ring_width_p - 1) - 1))) : (((ring_width_p - 1) &gt;= 0) ? ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) + (((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) - 1)) : ((((0 &gt;= (nodes_p - 1)) ? (2 - nodes_p) : nodes_p) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)) + (((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p))) - 1)))):(((nodes_p - 1) &gt;= 0) ? (((ring_width_p - 1) &gt;= 0) ? 0 : (ring_width_p - 1)) : (((ring_width_p - 1) &gt;= 0) ? ((nodes_p - 1) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))) : ((ring_width_p - 1) + ((nodes_p - 1) * ((0 &gt;= (ring_width_p - 1)) ? (2 - ring_width_p) : ring_width_p)))))] data_o;
+	bsg_flow_convert #(
+		.width_p(nodes_p),
+		.send_v_and_ready_p(1),
+		.recv_v_and_retry_p(1)
+	) s2b(
+		.v_i(v_i),
+		.fc_o(ready_o),
+		.v_o(switch_2_blockValid),
+		.fc_i(switch_2_blockRetry)
+	);
+	assign switch_2_blockData = data_i;
+	wire [(nodes_p - 1):0] block_2_switchValid_2;
+	wire [(nodes_p - 1):0] block_2_switchReady;
+	bsg_flow_convert #(
+		.width_p(nodes_p),
+		.send_retry_then_v_p(1),
+		.recv_v_and_ready_p(1)
+	) b2s(
+		.v_i(block_2_switchValid),
+		.fc_o(block_2_switchRetry),
+		.v_o(block_2_switchValid_2),
+		.fc_i(block_2_switchReady)
+	);
+	genvar i;
+	generate
+		for (i = 0; (i &lt; nodes_p); i = (i + 1)) begin : n
+			bsg_two_fifo #(.width_p(ring_width_p)) twofer(
+				.clk_i(clk_i),
+				.reset_i(reset_i[i]),
+				.ready_o(block_2_switchReady[i]),
+				.data_i(block_2_switchData[((((ring_width_p - 1) &gt;= 0) ? 0 : (ring_width_p - 1)) + ((((nodes_p - 1) &gt;= 0) ? i : (0 - (i - (nodes_p - 1)))) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))))+:(((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))]),
+				.v_i(block_2_switchValid[i]),
+				.v_o(v_o[i]),
+				.data_o(data_o[((((ring_width_p - 1) &gt;= 0) ? 0 : (ring_width_p - 1)) + ((((nodes_p - 1) &gt;= 0) ? i : (0 - (i - (nodes_p - 1)))) * (((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))))+:(((ring_width_p - 1) &gt;= 0) ? ring_width_p : (2 - ring_width_p))]),
+				.yumi_i(yumi_i[i])
+			);
+		end
+	endgenerate
+endmodule
+
+</pre>
+</body>

@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.002365
+system_time: 0.002365
+ram_usage: 8504
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-72" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:72</a>:37: error: unknown macro or compiler directive &#39;`BSG_MAX&#39;
+   localparam     counter_bits_lp = `BSG_MAX(counter_min_bits_lp,(width_p+1)*2+1);
+                                    ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-72" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:72</a>:82: error: expected expression
+   localparam     counter_bits_lp = `BSG_MAX(counter_min_bits_lp,(width_p+1)*2+1);
+                                                                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-85" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:85</a>:42: error: replication constant can only be zero inside of a concatenation
+                                    = { ((width_p+1) &gt;&gt; 1) { (2&#39;b01) } };
+                                         ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-141" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:141</a>:80: error: value must be positive
+     assign out_calib_code_padded = out_calib_code[($bits(out_calib_code)-1)-:(1+width_p)];
+                                                                               ^~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-195" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:195</a>:46: error: value must be positive
+        out_override_valid_data_n = { 1&#39;b0, (width_p) &#39; (0) };
+                                             ^~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-297" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:297</a>:4: error: unknown module &#39;bsg_launch_sync_sync&#39;
+   bsg_launch_sync_sync #(.width_p(tests_lp+1)) in_to_out
+   ^~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v.html#l-315" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v:315</a>:4: error: unknown module &#39;bsg_launch_sync_sync&#39;
+   bsg_launch_sync_sync #(.width_p(tests_lp)) out_to_in
+   ^~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

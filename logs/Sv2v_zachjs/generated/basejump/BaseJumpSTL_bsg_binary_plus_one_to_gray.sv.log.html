@@ -1,0 +1,46 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v</a>
+time_elapsed: 0.022s
+</pre>
+<pre class="log">
+user_time: 0.01659
+system_time: 0.005162
+ram_usage: 9680
+
+module bsg_binary_plus_one_to_gray (
+	binary_i,
+	gray_o
+);
+	parameter width_p = -1;
+	input [(width_p - 1):0] binary_i;
+	output [(width_p - 1):0] gray_o;
+	wire [(width_p - 1):0] binary_scan;
+	bsg_scan #(
+		.width_p(width_p),
+		.and_p(1),
+		.lo_to_hi_p(1)
+	) scan_and(
+		.i(binary_i),
+		.o(binary_scan)
+	);
+	wire [width_p:0] temp = {1&#39;b0, binary_scan[(width_p - 2):0], 1&#39;b1};
+	wire [(width_p - 1):0] edge_detect = (~temp[width_p:1] &amp; temp[(width_p - 1):0]);
+	assign gray_o = (((binary_i &gt;&gt; 1) ^ binary_i) ^ edge_detect);
+endmodule
+
+</pre>
+</body>

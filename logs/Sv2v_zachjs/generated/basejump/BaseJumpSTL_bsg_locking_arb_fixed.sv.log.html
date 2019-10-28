@@ -1,0 +1,59 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v</a>
+time_elapsed: 0.018s
+</pre>
+<pre class="log">
+user_time: 0.0072959999999999995
+system_time: 0.010943999999999999
+ram_usage: 9820
+
+module bsg_locking_arb_fixed (
+	clk_i,
+	ready_i,
+	unlock_i,
+	reqs_i,
+	grants_o
+);
+	parameter inputs_p = &#34;inv&#34;;
+	parameter lo_to_hi_p = 0;
+	input clk_i;
+	input ready_i;
+	input unlock_i;
+	input [(inputs_p - 1):0] reqs_i;
+	output wire [(inputs_p - 1):0] grants_o;
+	wire [(inputs_p - 1):0] not_req_mask_r;
+	wire [(inputs_p - 1):0] req_mask_r;
+	bsg_dff_reset_en #(.width_p(inputs_p)) req_words_reg(
+		.clk_i(clk_i),
+		.reset_i(unlock_i),
+		.en_i((&amp;req_mask_r &amp; |grants_o)),
+		.data_i(~grants_o),
+		.data_o(not_req_mask_r)
+	);
+	assign req_mask_r = ~not_req_mask_r;
+	bsg_arb_fixed #(
+		.inputs_p(inputs_p),
+		.lo_to_hi_p(lo_to_hi_p)
+	) fixed_arb(
+		.ready_i(ready_i),
+		.reqs_i((reqs_i &amp; req_mask_r)),
+		.grants_o(grants_o)
+	);
+endmodule
+
+</pre>
+</body>

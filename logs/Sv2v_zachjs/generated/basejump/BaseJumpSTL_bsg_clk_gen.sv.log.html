@@ -1,0 +1,93 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_clk_gen
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_clk_gen/bsg_clk_gen.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_clk_gen/bsg_clk_gen.v</a>
+time_elapsed: 0.033s
+</pre>
+<pre class="log">
+user_time: 0.026643999999999998
+system_time: 0.006357
+ram_usage: 10312
+
+module bsg_clk_gen (
+	bsg_osc_tag_i,
+	bsg_osc_trigger_tag_i,
+	bsg_ds_tag_i,
+	async_osc_reset_i,
+	ext_clk_i,
+	select_i,
+	clk_o
+);
+	import bsg_tag_pkg::bsg_tag_s;
+	parameter downsample_width_p = &#34;inv&#34;;
+	parameter num_adgs_p = 2;
+	parameter version_p = 1;
+	input bsg_tag_s bsg_osc_tag_i;
+	input bsg_tag_s bsg_osc_trigger_tag_i;
+	input bsg_tag_s bsg_ds_tag_i;
+	input async_osc_reset_i;
+	input ext_clk_i;
+	input [1:0] select_i;
+	output wire clk_o;
+	localparam debug_level_lp = 0;
+	wire osc_clk_out;
+	wire ds_clk_out;
+	bsg_clk_gen_osc #(.num_adgs_p(num_adgs_p)) clk_gen_osc_inst(
+		.bsg_tag_i(bsg_osc_tag_i),
+		.bsg_tag_trigger_i(bsg_osc_trigger_tag_i),
+		.async_reset_i(async_osc_reset_i),
+		.clk_o(osc_clk_out)
+	);
+	wire [(((((downsample_width_p - 1) &gt;= 0) ? downsample_width_p : (2 - downsample_width_p)) + 1) - 1):0] ds_tag_payload_r;
+	wire ds_tag_payload_new_r;
+	bsg_tag_client #(
+		.width_p((((((((downsample_width_p - 1) &gt;= 0) ? downsample_width_p : (2 - downsample_width_p)) + 1) - 1) &gt;= 0) ? ((((downsample_width_p - 1) &gt;= 0) ? downsample_width_p : (2 - downsample_width_p)) + 1) : (2 - ((((downsample_width_p - 1) &gt;= 0) ? downsample_width_p : (2 - downsample_width_p)) + 1)))),
+		.default_p(0),
+		.harden_p(1)
+	) btc_ds(
+		.bsg_tag_i(bsg_ds_tag_i),
+		.recv_clk_i(osc_clk_out),
+		.recv_reset_i(1&#39;b0),
+		.recv_new_r_o(ds_tag_payload_new_r),
+		.recv_data_r_o(ds_tag_payload_r)
+	);
+	generate
+		if ((debug_level_lp &gt; 1)) always @(negedge osc_clk_out)
+			if (ds_tag_payload_new_r)
+				$display(&#34;## bsg_clk_gen downsampler received configuration state: %b&#34;, ds_tag_payload_r);
+	endgenerate
+	bsg_counter_clock_downsample #(
+		.width_p(downsample_width_p),
+		.harden_p(1)
+	) clk_gen_ds_inst(
+		.clk_i(osc_clk_out),
+		.reset_i(ds_tag_payload_r[0:0]),
+		.val_i(ds_tag_payload_r[(((downsample_width_p - 1) &gt;= 0) ? downsample_width_p : (2 - downsample_width_p)):1]),
+		.clk_r_o(ds_clk_out)
+	);
+	bsg_mux #(
+		.width_p(1),
+		.els_p(4),
+		.balanced_p(1),
+		.harden_p(1)
+	) mux_inst(
+		.data_i({1&#39;b0, ext_clk_i, ds_clk_out, osc_clk_out}),
+		.sel_i(select_i),
+		.data_o(clk_o)
+	);
+endmodule
+
+</pre>
+</body>

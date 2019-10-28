@@ -1,0 +1,105 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_fifo.v</a>
+time_elapsed: 0.056s
+</pre>
+<pre class="log">
+user_time: 0.037469999999999996
+system_time: 0.018734999999999998
+ram_usage: 10904
+
+module bsg_two_fifo (
+	clk_i,
+	reset_i,
+	ready_o,
+	data_i,
+	v_i,
+	v_o,
+	data_o,
+	yumi_i
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter verbose_p = 0;
+	parameter allow_enq_deq_on_full_p = 0;
+	parameter ready_THEN_valid_p = allow_enq_deq_on_full_p;
+	input clk_i;
+	input reset_i;
+	output ready_o;
+	input [(width_p - 1):0] data_i;
+	input v_i;
+	output v_o;
+	output [(width_p - 1):0] data_o;
+	input yumi_i;
+	wire deq_i = yumi_i;
+	wire enq_i;
+	reg head_r;
+	reg tail_r;
+	reg empty_r;
+	reg full_r;
+	bsg_mem_1r1w #(
+		.width_p(width_p),
+		.els_p(2),
+		.read_write_same_addr_p(allow_enq_deq_on_full_p)
+	) mem_1r1w(
+		.w_clk_i(clk_i),
+		.w_reset_i(reset_i),
+		.w_v_i(enq_i),
+		.w_addr_i(tail_r),
+		.w_data_i(data_i),
+		.r_v_i(~empty_r),
+		.r_addr_i(head_r),
+		.r_data_o(data_o)
+	);
+	assign v_o = ~empty_r;
+	assign ready_o = ~full_r;
+	generate
+		if (ready_THEN_valid_p) assign enq_i = v_i;
+		else assign enq_i = (v_i &amp; ~full_r);
+	endgenerate
+	always @(posedge clk_i)
+		if (reset_i) begin
+			tail_r &lt;= 1&#39;b0;
+			head_r &lt;= 1&#39;b0;
+			empty_r &lt;= 1&#39;b1;
+			full_r &lt;= 1&#39;b0;
+		end
+		else begin
+			if (enq_i)
+				tail_r &lt;= ~tail_r;
+			if (deq_i)
+				head_r &lt;= ~head_r;
+			empty_r &lt;= ((empty_r &amp; ~enq_i) | ((~full_r &amp; deq_i) &amp; ~enq_i));
+			if (allow_enq_deq_on_full_p)
+				full_r &lt;= (((~empty_r &amp; enq_i) &amp; ~deq_i) | (full_r &amp; ~(deq_i ^ enq_i)));
+			else
+				full_r &lt;= (((~empty_r &amp; enq_i) &amp; ~deq_i) | (full_r &amp; ~deq_i));
+		end
+	always @(posedge clk_i)
+		if (~reset_i)
+			if (allow_enq_deq_on_full_p)
+				;
+	always @(posedge clk_i)
+		if (verbose_p) begin
+			if (v_i)
+				$display(&#34;### %m enq %x onto fifo&#34;, data_i);
+			if (deq_i)
+				$display(&#34;### %m deq %x from fifo&#34;, data_o);
+		end
+	wire [31:0] num_elements_debug = (full_r + (empty_r == 0));
+endmodule
+
+</pre>
+</body>

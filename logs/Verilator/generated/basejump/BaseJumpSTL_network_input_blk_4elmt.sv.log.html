@@ -1,0 +1,90 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v</a>
+time_elapsed: 0.089s
+</pre>
+<pre class="log">
+user_time: 0.07443899999999999
+system_time: 0.014620999999999999
+ram_usage: 11612
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_elmt.v.html#l-54" target="file-frame">third_party/cores/basejump_stl/common/fifo_elmt.v:54</a>: Cannot find file containing module: &#39;rMux3&#39;
+   rMux3 #(1) fullmux (full_internal_buf, prev_full, 1&#39;b1, full_sel, full_preg);
+   ^~~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-92" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:92</a>: ... note: In file included from network_input_blk_4elmt.v
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common/rMux3
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common/rMux3.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common/rMux3.sv
+             rMux3
+             rMux3.v
+             rMux3.sv
+             obj_dir/rMux3
+             obj_dir/rMux3.v
+             obj_dir/rMux3.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_elmt.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/common/fifo_elmt.v:55</a>: Cannot find file containing module: &#39;rDFF_clear&#39;
+   rDFF_clear #(1) fullreg (full_preg, full_internal, reset, clk);
+   ^~~~~~~~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-92" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:92</a>: ... note: In file included from network_input_blk_4elmt.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_elmt.v.html#l-57" target="file-frame">third_party/cores/basejump_stl/common/fifo_elmt.v:57</a>: Cannot find file containing module: &#39;rMux3&#39;
+   rMux3 #(width_p) valmux (value_internal, prop_value, new_value, val_sel, value_preg);
+   ^~~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-92" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:92</a>: ... note: In file included from network_input_blk_4elmt.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_elmt.v.html#l-58" target="file-frame">third_party/cores/basejump_stl/common/fifo_elmt.v:58</a>: Cannot find file containing module: &#39;rDFF&#39;
+   rDFF  #(width_p) valuereg (value_preg, value_internal, clk);
+   ^~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-92" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:92</a>: ... note: In file included from network_input_blk_4elmt.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_elmt.v.html#l-62" target="file-frame">third_party/cores/basejump_stl/common/fifo_elmt.v:62</a>: Cannot find file containing module: &#39;rBuffer&#39;
+   rBuffer #(1,10) full_buf (full_internal, full_internal_buf);
+   ^~~~~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-92" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:92</a>: ... note: In file included from network_input_blk_4elmt.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_counter.v.html#l-35" target="file-frame">third_party/cores/basejump_stl/common/fifo_counter.v:35</a>: Cannot find file containing module: &#39;rDFF_en_clear&#39;
+   rDFF_en_clear #(pLogBufSize) cntreg (r_num_entries, 
+   ^~~~~~~~~~~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:71</a>: ... note: In file included from network_input_blk_4elmt.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/fifo_counter.v.html#l-41" target="file-frame">third_party/cores/basejump_stl/common/fifo_counter.v:41</a>: Cannot find file containing module: &#39;rAddSub&#39;
+   rAddSub #(pLogBufSize) counter (num_entries_internal,
+   ^~~~~~~
+        <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:71</a>: ... note: In file included from network_input_blk_4elmt.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-76" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:76</a>: Cannot find file containing module: &#39;rDFF_clear&#39;
+   rDFF_clear #(1) yumreg (thanksIn, yummyOut_internal, reset, clk);
+   ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:80</a>: Cannot find file containing module: &#39;rDFF&#39;
+   rDFF #(32) datareg (dataIn, dataIn_r, clk);
+   ^~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-81" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:81</a>: Cannot find file containing module: &#39;rDFF_clear&#39;
+   rDFF_clear #(1) valreg (validIn, validIn_r, reset, clk);
+   ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-86" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:86</a>: Cannot find file containing module: &#39;rBuffer&#39;
+   rBuffer #(1,10) valreg_buf (validIn_r, validIn_r_buf);
+   ^~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-135" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:135</a>: Cannot find file containing module: &#39;rBuffer&#39;
+   rBuffer #(1,10) full_buf (elmt0_full, elmt0_full_buf);
+   ^~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-143" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:143</a>: Cannot find file containing module: &#39;rMux2&#39;
+   rMux2 #(32) bypassmux (dataIn_r, elmt0_value, elmt0_full, dataVal);
+   ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-146" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:146</a>: Cannot find file containing module: &#39;rNOR2&#39;
+   rNOR2 #(1,10)    dataAvail_nor(validIn_r, elmt0_full, dataAvail_l);
+   ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html#l-149" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v:149</a>: Cannot find file containing module: &#39;rInvert&#39;
+   rInvert #(1,10) dataAvail_not(dataAvail_l, dataAvail);
+   ^~~~~~~
+%Error: Exiting due to 15 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/common <a href="../../../../third_party/cores/basejump_stl/common/network_input_blk_4elmt.v.html" target="file-frame">third_party/cores/basejump_stl/common/network_input_blk_4elmt.v</a>
+
+</pre>
+</body>

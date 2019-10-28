@@ -1,0 +1,87 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v</a>
+time_elapsed: 0.164s
+</pre>
+<pre class="log">
+user_time: 0.12336
+system_time: 0.041117
+ram_usage: 11348
+
+module bsg_scan (
+	i,
+	o
+);
+	parameter width_p = -1;
+	parameter xor_p = 0;
+	parameter and_p = 0;
+	parameter or_p = 0;
+	parameter lo_to_hi_p = 0;
+	input [(width_p - 1):0] i;
+	output wire [(width_p - 1):0] o;
+	initial ;
+	genvar j;
+	wire [(($clog2(width_p) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? (((($clog2(width_p) &gt;= 0) ? ($clog2(width_p) + 1) : (1 - $clog2(width_p))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : (((($clog2(width_p) &gt;= 0) ? ($clog2(width_p) + 1) : (1 - $clog2(width_p))) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))) : (((width_p - 1) &gt;= 0) ? ((((0 &gt;= $clog2(width_p)) ? (1 - $clog2(width_p)) : ($clog2(width_p) + 1)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (($clog2(width_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) - 1)) : ((((0 &gt;= $clog2(width_p)) ? (1 - $clog2(width_p)) : ($clog2(width_p) + 1)) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + (((width_p - 1) + ($clog2(width_p) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p))) - 1)))):(($clog2(width_p) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) : (((width_p - 1) &gt;= 0) ? ($clog2(width_p) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) : ((width_p - 1) + ($clog2(width_p) * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)))))] t;
+	wire [(width_p - 1):0] fill;
+	generate
+		if (lo_to_hi_p) assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = {&lt;&lt; 1{i}};
+		else assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = i;
+	endgenerate
+	generate
+		if (((width_p == 4) &amp; and_p)) begin : scand4
+			assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? $clog2(width_p) : (0 - ($clog2(width_p) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = {t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? 3 : (-3 + (width_p - 1))))], &amp;t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 2 : 3) : (0 - ((((width_p - 1) &gt;= 0) ? 2 : 3) - (width_p - 1)))))+:2], &amp;t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 1 : 3) : (0 - ((((width_p - 1) &gt;= 0) ? 1 : 3) - (width_p - 1)))))+:3], &amp;t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : 3) : (0 - ((((width_p - 1) &gt;= 0) ? 0 : 3) - (width_p - 1)))))+:4]};
+		end
+		else if (((width_p == 3) &amp; and_p)) begin : scand3
+			assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? $clog2(width_p) : (0 - ($clog2(width_p) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = {t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? 2 : (-2 + (width_p - 1))))], &amp;t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 1 : 2) : (0 - ((((width_p - 1) &gt;= 0) ? 1 : 2) - (width_p - 1)))))+:2], &amp;t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : 2) : (0 - ((((width_p - 1) &gt;= 0) ? 0 : 2) - (width_p - 1)))))+:3]};
+		end
+		else if (((width_p == 2) &amp; and_p)) begin : scand3
+			assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? $clog2(width_p) : (0 - ($clog2(width_p) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = {t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? 1 : (-1 + (width_p - 1))))], &amp;t[(((($clog2(width_p) &gt;= 0) ? 0 : $clog2(width_p)) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? 0 : 1) : (0 - ((((width_p - 1) &gt;= 0) ? 0 : 1) - (width_p - 1)))))+:2]};
+		end
+		else begin : scanN
+			for (j = 0; (j &lt; $clog2(width_p)); j = (j + 1)) begin : row
+				wire [(width_p - 1):0] shifted = sv2v_cast_89401(({fill, t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? j : (0 - (j - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))]} &gt;&gt; (1 &lt;&lt; j)));
+				if (xor_p) begin
+					assign fill = {width_p {1&#39;b0}};
+					assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? (j + 1) : (0 - ((j + 1) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = (t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? j : (0 - (j - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] ^ shifted);
+				end
+				else if (and_p) begin
+					assign fill = {width_p {1&#39;b1}};
+					assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? (j + 1) : (0 - ((j + 1) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = (t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? j : (0 - (j - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] &amp; shifted);
+				end
+				else if (or_p) begin
+					assign fill = {width_p {1&#39;b0}};
+					assign t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? (j + 1) : (0 - ((j + 1) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] = (t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? j : (0 - (j - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))] | shifted);
+				end
+			end
+		end
+	endgenerate
+	generate
+		if (lo_to_hi_p) begin
+			genvar j;
+			for (j = 0; (j &lt; width_p); j = (j + 1)) begin
+				assign o[j] = t[(((($clog2(width_p) &gt;= 0) ? $clog2(width_p) : (0 - ($clog2(width_p) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? ((width_p - 1) - j) : (0 - (((width_p - 1) - j) - (width_p - 1)))))];
+			end
+		end
+		else assign o = t[((((width_p - 1) &gt;= 0) ? 0 : (width_p - 1)) + ((($clog2(width_p) &gt;= 0) ? $clog2(width_p) : (0 - ($clog2(width_p) - $clog2(width_p)))) * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))))+:(((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))];
+	endgenerate
+	function automatic [(width_p - 1):0] sv2v_cast_89401;
+		input reg [(width_p - 1):0] inp;
+		sv2v_cast_89401 = inp;
+	endfunction
+endmodule
+
+</pre>
+</body>

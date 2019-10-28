@@ -1,0 +1,49 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v</a>
+time_elapsed: 0.088s
+</pre>
+<pre class="log">
+user_time: 0.07367599999999999
+system_time: 0.014497
+ram_usage: 11868
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:40</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+                                         ,parameter tag_width_lp        = `BSG_SAFE_CLOG2(num_out_p)
+                                                                          ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-58" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:58</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+   localparam ptr_width_lp = `BSG_SAFE_CLOG2(els_p);
+                             ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-66" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:66</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+   logic [num_out_p-1:0][`BSG_SAFE_CLOG2(buffering_p)] els;
+                         ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-66" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:66</a>: syntax error, unexpected &#39;]&#39;, expecting &#39;:&#39;
+   logic [num_out_p-1:0][`BSG_SAFE_CLOG2(buffering_p)] els;
+                                                     ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-112" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:112</a>: syntax error, unexpected buf, expecting IDENTIFIER or PACKAGE-IDENTIFIER or TYPE-IDENTIFIER
+          begin : buf
+                  ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-204" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:204</a>: syntax error, unexpected &#39;(&#39;, expecting IDENTIFIER
+   (.clk_i,.reset_i,
+    ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-239" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:239</a>: syntax error, unexpected int, expecting IDENTIFIER or genvar
+   for (int i = 0; i &lt; num_out_p; i=i+1)
+        ^~~
+%Error: Exiting due to 7 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v</a>
+
+</pre>
+</body>

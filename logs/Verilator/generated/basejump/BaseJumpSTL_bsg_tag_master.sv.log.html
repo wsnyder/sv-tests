@@ -1,0 +1,58 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v</a>
+time_elapsed: 0.090s
+</pre>
+<pre class="log">
+user_time: 0.078231
+system_time: 0.01162
+ram_usage: 11640
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:23</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+  import bsg_tag_pkg::bsg_tag_s;
+         ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-37" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:37</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+      logic [`BSG_SAFE_CLOG2((els_p))-1:0]       nodeID;                
+             ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-41" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:41</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+   localparam reset_len_lp = ((1 &lt;&lt; `BSG_SAFE_CLOG2(((1 &lt;&lt; ((lg_width_p))) - 1 + $bits(bsg_tag_header_s))+1))+1);
+                                    ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:44</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+   localparam lg_max_packet_len_lp = `BSG_SAFE_CLOG2(max_packet_len_lp+1);
+                                     ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-47" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:47</a>: syntax error, unexpected if
+   if (debug_level_lp &gt; 2)
+   ^~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-54" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:54</a>: syntax error, unexpected always
+   always @(posedge clk_i)
+   ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-72" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:72</a>: syntax error, unexpected IDENTIFIER
+   bsg_counter_clear_up #(.max_val_p((1 &lt;&lt; ctr_width_lp)-1)
+   ^~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-100" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:100</a>: syntax error, unexpected IDENTIFIER
+   bsg_tag_s bsg_tag_n;
+   ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-108" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:108</a>: syntax error, unexpected always_ff
+   always_ff @(posedge clk_i)
+   ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-240" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:240</a>: syntax error, unexpected for
+   for (i = 0; i &lt; els_p; i=i+1)
+   ^~~
+%Error: Exiting due to 10 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v</a>
+
+</pre>
+</body>

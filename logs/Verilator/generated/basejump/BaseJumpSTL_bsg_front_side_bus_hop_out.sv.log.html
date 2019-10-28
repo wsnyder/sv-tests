@@ -1,0 +1,41 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_out.v</a>
+time_elapsed: 0.088s
+</pre>
+<pre class="log">
+user_time: 0.074253
+system_time: 0.014069
+ram_usage: 11680
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_out.v.html#l-57" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_out.v:57</a>: Cannot find file containing module: &#39;bsg_two_fifo&#39;
+   bsg_two_fifo #(.width_p(width_p)) fifo
+   ^~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_two_fifo
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_two_fifo.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_two_fifo.sv
+             bsg_two_fifo
+             bsg_two_fifo.v
+             bsg_two_fifo.sv
+             obj_dir/bsg_two_fifo
+             obj_dir/bsg_two_fifo.v
+             obj_dir/bsg_two_fifo.sv
+%Error: Exiting due to 1 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_front_side_bus_hop_out.v</a>
+
+</pre>
+</body>

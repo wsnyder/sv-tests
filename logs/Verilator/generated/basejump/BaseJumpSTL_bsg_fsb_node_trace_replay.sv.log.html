@@ -1,0 +1,68 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v</a>
+time_elapsed: 0.087s
+</pre>
+<pre class="log">
+user_time: 0.058608
+system_time: 0.028603
+ram_usage: 11864
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-1" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:1</a>: Cannot find include file: bsg_defines.v
+`include &#34;bsg_defines.v&#34;
+         ^~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_defines.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_defines.v.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb/bsg_defines.v.sv
+             bsg_defines.v
+             bsg_defines.v.v
+             bsg_defines.v.sv
+             obj_dir/bsg_defines.v
+             obj_dir/bsg_defines.v.v
+             obj_dir/bsg_defines.v.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:19</a>: Define or directive not defined: &#39;`BSG_MIN&#39;
+    , parameter counter_width_p=`BSG_MIN(ring_width_p,16)
+                                ^~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:19</a>: syntax error, unexpected &#39;,&#39;
+    , parameter counter_width_p=`BSG_MIN(ring_width_p,16)
+                                                     ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:31</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic v_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:32</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic [ring_width_p-1:0] data_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:33</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    , input yumi_i
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-43" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:43</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic error_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-73" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:73</a>: syntax error, unexpected assign
+   assign rom_addr_o = addr_r;
+   ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:97</a>: syntax error, unexpected assign
+   assign op = rom_data_i[ring_width_p+:4];
+   ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html#l-101" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v:101</a>: syntax error, unexpected assign
+   assign addr_n =  instr_completed ? (addr_r+1&#39;b1) : addr_r;
+   ^~~~~~
+%Error: Exiting due to 10 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v</a>
+
+</pre>
+</body>

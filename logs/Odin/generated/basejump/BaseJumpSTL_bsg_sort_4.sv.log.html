@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.0
+system_time: 0.005247
+ram_usage: 8364
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>::25 error in parsing: (syntax error, unexpected vELSE, expecting &#39;;&#39;)
+     assert (items_p==4) else $error(&#34;unhandled case&#34;);
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>::39 error in parsing: (syntax error, unexpected &#39;(&#39;, expecting vSYMBOL_ID)
+   (.data_i({s0[1], s0[0]}), .data_o({s1[1], s1[0]}));
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>::42 error in parsing: (syntax error, unexpected &#39;(&#39;, expecting vSYMBOL_ID)
+   (.data_i({s0[3], s0[2]}), .data_o({s1[3], s1[2]}));
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>::47 error in parsing: (syntax error, unexpected &#39;(&#39;, expecting vSYMBOL_ID)
+   (.data_i({s1[2], s1[0]}), .data_o({s2[2], s2[0]}));
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>::50 error in parsing: (syntax error, unexpected &#39;(&#39;, expecting vSYMBOL_ID)
+   (.data_i({s1[3], s1[1]}), .data_o({s2[3], s2[1]}), .swapped_o(swapped_3_1));
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sort_4.v</a>::60 error in parsing: (syntax error, unexpected &#39;(&#39;, expecting vSYMBOL_ID)
+   (.data_i({s2[2], s2[1]})
+Assertion failed(false)@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/ast_util.cpp]get_name_of_pins::779 
+
+</pre>
+</body>

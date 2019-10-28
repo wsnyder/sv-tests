@@ -1,0 +1,128 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v</a>
+time_elapsed: 0.091s
+</pre>
+<pre class="log">
+user_time: 0.087062
+system_time: 0.004134
+ram_usage: 11672
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-68" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:68</a>: Cannot find include file: bsg_noc_links.vh
+`include &#34;bsg_noc_links.vh&#34;
+         ^~~~~~~~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_noc_links.vh
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_noc_links.vh.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_noc_links.vh.sv
+             bsg_noc_links.vh
+             bsg_noc_links.vh.v
+             bsg_noc_links.vh.sv
+             obj_dir/bsg_noc_links.vh
+             obj_dir/bsg_noc_links.vh.v
+             obj_dir/bsg_noc_links.vh.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:97</a>: Define or directive not defined: &#39;`BSG_MIN&#39;
+  ,parameter lg_credit_decimation_p = `BSG_MIN($clog2(remote_credits_p+1),4)
+                                      ^~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:97</a>: syntax error, unexpected &#39;,&#39;
+  ,parameter lg_credit_decimation_p = `BSG_MIN($clog2(remote_credits_p+1),4)
+                                                                         ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-109" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:109</a>: syntax error, unexpected localparam, expecting IDENTIFIER
+  ,localparam bsg_ready_and_link_sif_width_lp = `bsg_ready_and_link_sif_width(width_p)
+   ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-109" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:109</a>: Define or directive not defined: &#39;`bsg_ready_and_link_sif_width&#39;
+  ,localparam bsg_ready_and_link_sif_width_lp = `bsg_ready_and_link_sif_width(width_p)
+                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-110" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:110</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+  )
+  ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-139" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:139</a>: Define or directive not defined: &#39;`declare_bsg_header_flit_s&#39;
+  `declare_bsg_header_flit_s(width_p, reserved_width_p, x_cord_width_p, y_cord_width_p, len_width_p, header_flit_s);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-139" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:139</a>: syntax error, unexpected &#39;(&#39;
+  `declare_bsg_header_flit_s(width_p, reserved_width_p, x_cord_width_p, y_cord_width_p, len_width_p, header_flit_s);
+                             ^~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-141" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:141</a>: Define or directive not defined: &#39;`declare_bsg_channel_tunnel_header_flit_s&#39;
+  `declare_bsg_channel_tunnel_header_flit_s(width_p, reserved_width_p, x_cord_width_p, y_cord_width_p, len_width_p, channel_tunnel_header_flit_s);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-146" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:146</a>: syntax error, unexpected IDENTIFIER
+  channel_tunnel_header_flit_s outside_data_li;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-149" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:149</a>: syntax error, unexpected IDENTIFIER
+  channel_tunnel_header_flit_s outside_data_lo;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-157" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:157</a>: syntax error, unexpected IDENTIFIER
+  bsg_channel_tunnel
+  ^~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-218" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:218</a>: syntax error, unexpected IDENTIFIER
+  header_flit_s [num_in_p-1:0] data_lo;
+  ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-221" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:221</a>: syntax error, unexpected IDENTIFIER
+  header_flit_s [num_in_p-1:0] data_li;
+  ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-223" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:223</a>: Define or directive not defined: &#39;`declare_bsg_ready_and_link_sif_s&#39;
+  `declare_bsg_ready_and_link_sif_s(width_p,bsg_ready_and_link_sif_s);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-253" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:253</a>: syntax error, unexpected for
+  for (i = 0; i &lt; num_in_p; i++) 
+  ^~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-262" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:262</a>: syntax error, unexpected assign
+    assign ocount_set_lo      = v_li[i] &amp; ready_lo[i] &amp; ocount_r_is_min_lo; 
+    ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-288" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:288</a>: syntax error, unexpected IDENTIFIER
+    bsg_fifo_1r1w_small 
+    ^~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-307" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:307</a>: syntax error, unexpected IDENTIFIER
+    bsg_two_fifo
+    ^~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-334" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:334</a>: syntax error, unexpected assign
+  assign outside_yumi_li = o_headerout_ready_lo &amp; outside_valid_lo;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-364" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:364</a>: syntax error, unexpected assign
+  assign multi_data_o_tag       =  multi_data_o_cast[raw_width_lp+:tag_width_lp];
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-374" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:374</a>: syntax error, unexpected assign
+  assign ostate_down_lo     = multi_yumi_i &amp; ~ostate_r_is_min_lo;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-395" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:395</a>: syntax error, unexpected IDENTIFIER
+  bsg_dff_reset_en 
+  ^~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-409" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:409</a>: syntax error, unexpected assign
+  assign omux_sel_lo = (ostate_r_is_min_lo)? num_in_p : ofifo_sel_r;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-457" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:457</a>: syntax error, unexpected assign
+  assign multi_data_i_tag       =  multi_data_i_cast[raw_width_lp+:tag_width_lp];
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-467" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:467</a>: syntax error, unexpected assign
+  assign istate_down_lo     = multi_v_i &amp; multi_ready_o &amp; ~istate_r_is_min_lo;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-489" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:489</a>: syntax error, unexpected IDENTIFIER
+  bsg_dff_reset_en 
+  ^~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-503" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:503</a>: syntax error, unexpected assign
+  assign imux_sel_lo = (istate_r_is_min_lo)? num_in_p : ififo_sel_r;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-557" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:557</a>: syntax error, unexpected if
+    if (use_pseudo_large_fifo_p == 0)
+    ^~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-599" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:599</a>: syntax error, unexpected assign
+    assign icount_set_lo      = yumi_li[i] &amp; icount_r_is_min_lo;
+    ^~~~~~
+%Error: Exiting due to 30 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v</a>
+
+</pre>
+</body>

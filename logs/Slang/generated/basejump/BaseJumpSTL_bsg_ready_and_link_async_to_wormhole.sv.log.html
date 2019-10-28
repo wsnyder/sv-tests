@@ -1,0 +1,50 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v</a>
+time_elapsed: 0.005s
+</pre>
+<pre class="log">
+user_time: 0.0017319999999999998
+system_time: 0.0034639999999999996
+ram_usage: 8376
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-70" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:70</a>:34: error: unknown macro or compiler directive &#39;`BSG_CDIV&#39;
+  localparam wormhole_ratio_lp = `BSG_CDIV(wormhole_width_lp, flit_width_p);
+                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-70" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:70</a>:76: error: expected expression
+  localparam wormhole_ratio_lp = `BSG_CDIV(wormhole_width_lp, flit_width_p);
+                                                                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-75" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:75</a>:28: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+    assert (len_width_p &gt;= `BSG_SAFE_CLOG2(wormhole_ratio_lp))
+                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-75" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:75</a>:62: error: expected expression
+    assert (len_width_p &gt;= `BSG_SAFE_CLOG2(wormhole_ratio_lp))
+                                                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-121" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:121</a>:3: error: unknown module &#39;bsg_parallel_in_serial_out&#39;
+  bsg_parallel_in_serial_out 
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-140" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:140</a>:3: error: unknown module &#39;bsg_async_fifo&#39;
+  bsg_async_fifo
+  ^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-173" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:173</a>:3: error: unknown module &#39;bsg_async_fifo&#39;
+  bsg_async_fifo
+  ^~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-195" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:195</a>:3: error: unknown module &#39;bsg_serial_in_parallel_out_full&#39;
+  bsg_serial_in_parallel_out_full
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

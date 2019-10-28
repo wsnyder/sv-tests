@@ -1,0 +1,96 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_adapter.v</a>
+time_elapsed: 0.065s
+</pre>
+<pre class="log">
+user_time: 0.059738
+system_time: 0.005644
+ram_usage: 10768
+
+module bsg_wormhole_router_adapter (
+	clk_i,
+	reset_i,
+	packet_i,
+	v_i,
+	ready_o,
+	link_i,
+	link_o,
+	packet_o,
+	v_o,
+	yumi_i
+);
+	parameter max_payload_width_p = &#34;inv&#34;;
+	parameter len_width_p = &#34;inv&#34;;
+	parameter cord_width_p = &#34;inv&#34;;
+	parameter flit_width_p = &#34;inv&#34;;
+	localparam bsg_ready_and_link_sif_width_lp = (flit_width_p + 2);
+	localparam bsg_wormhole_packet_width_lp = ((cord_width_p + len_width_p) + max_payload_width_p);
+	input clk_i;
+	input reset_i;
+	input [(bsg_wormhole_packet_width_lp - 1):0] packet_i;
+	input v_i;
+	output ready_o;
+	input [(bsg_ready_and_link_sif_width_lp - 1):0] link_i;
+	output [(bsg_ready_and_link_sif_width_lp - 1):0] link_o;
+	output [(bsg_wormhole_packet_width_lp - 1):0] packet_o;
+	output v_o;
+	input yumi_i;
+	wire [((2 + (((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p))) - 1):0] link_cast_i;
+	wire [((2 + (((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p))) - 1):0] link_cast_o;
+	wire [((2 + (((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p))) - 1):0] link_o_stubbed_v;
+	wire [((2 + (((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p))) - 1):0] link_o_stubbed_ready;
+	assign link_cast_i = link_i;
+	assign link_o = link_cast_o;
+	assign link_cast_o[((((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)) + -1):0] = link_o_stubbed_ready[((((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)) + -1):0];
+	assign link_cast_o[(1 + (1 + ((((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)) + -1))):(1 + (((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)))] = link_o_stubbed_ready[(1 + (1 + ((((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)) + -1))):(1 + (((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)))];
+	assign link_cast_o[(1 + ((((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)) + -1)):(((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p))] = link_o_stubbed_v[(1 + ((((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p)) + -1)):(((flit_width_p - 1) &gt;= 0) ? flit_width_p : (2 - flit_width_p))];
+	wire [((((((max_payload_width_p - 1) &gt;= 0) ? max_payload_width_p : (2 - max_payload_width_p)) + (((len_width_p - 1) &gt;= 0) ? len_width_p : (2 - len_width_p))) + (((cord_width_p - 1) &gt;= 0) ? cord_width_p : (2 - cord_width_p))) - 1):0] packet_li;
+	wire [((((((max_payload_width_p - 1) &gt;= 0) ? max_payload_width_p : (2 - max_payload_width_p)) + (((len_width_p - 1) &gt;= 0) ? len_width_p : (2 - len_width_p))) + (((cord_width_p - 1) &gt;= 0) ? cord_width_p : (2 - cord_width_p))) - 1):0] packet_lo;
+	assign packet_li = packet_i;
+	bsg_wormhole_router_adapter_in #(
+		.max_payload_width_p(max_payload_width_p),
+		.len_width_p(len_width_p),
+		.cord_width_p(cord_width_p),
+		.flit_width_p(flit_width_p)
+	) adapter_in(
+		.clk_i(clk_i),
+		.reset_i(reset_i),
+		.packet_i(packet_li),
+		.v_i(v_i),
+		.ready_o(ready_o),
+		.link_i(link_i),
+		.link_o(link_o_stubbed_ready)
+	);
+	bsg_wormhole_router_adapter_out #(
+		.max_payload_width_p(max_payload_width_p),
+		.len_width_p(len_width_p),
+		.cord_width_p(cord_width_p),
+		.flit_width_p(flit_width_p)
+	) adapter_out(
+		.clk_i(clk_i),
+		.reset_i(reset_i),
+		.link_i(link_i),
+		.link_o(link_o_stubbed_v),
+		.packet_o(packet_lo),
+		.v_o(v_o),
+		.yumi_i(yumi_i)
+	);
+	assign packet_o = packet_lo;
+endmodule
+
+</pre>
+</body>

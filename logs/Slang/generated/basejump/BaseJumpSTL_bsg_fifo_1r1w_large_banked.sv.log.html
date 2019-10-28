@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.003787
+system_time: 0.0
+ram_usage: 8516
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v.html#l-87" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v:87</a>:4: error: expected member
+   bsg_round_robin_1_to_n #(.width_p(width_p)
+   ^~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v.html#l-115" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v:115</a>:9: error: unknown module &#39;bsg_fifo_1r1w_pseudo_large&#39;
+        bsg_fifo_1r1w_pseudo_large #(.width(width_p)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v.html#l-133" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large_banked.v:133</a>:4: error: unknown module &#39;bsg_round_robin_n_to_1&#39;
+   bsg_round_robin_n_to_1 #(.width(width_p)
+   ^~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

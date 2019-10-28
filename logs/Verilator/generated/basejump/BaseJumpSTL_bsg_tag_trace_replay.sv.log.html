@@ -1,0 +1,46 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v</a>
+time_elapsed: 0.088s
+</pre>
+<pre class="log">
+user_time: 0.079178
+system_time: 0.009276999999999999
+ram_usage: 11672
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:55</a>: Define or directive not defined: &#39;`BSG_MAX&#39;
+    , output [`BSG_MAX(1,num_masters_p)-1:0] en_r_o
+              ^~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:55</a>: syntax error, unexpected &#39;,&#39;
+    , output [`BSG_MAX(1,num_masters_p)-1:0] en_r_o
+                        ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:71</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+    localparam lg_max_payload_width_lp = `BSG_SAFE_CLOG2(max_payload_width_p + 1);
+                                         ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-74" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:74</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+      logic [`BSG_SAFE_CLOG2((num_clients_p))-1:0]       nodeID;                
+             ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-83" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:83</a>: syntax error, unexpected IDENTIFIER
+    bsg_fsb_node_trace_replay #( .ring_width_p(trace_ring_width_lp)
+    ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html#l-118" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v:118</a>: syntax error, unexpected assign
+   assign tr_yumi_li = piso_ready_lo &amp; tr_valid_lo;
+   ^~~~~~
+%Error: Exiting due to 6 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_trace_replay.v</a>
+
+</pre>
+</body>

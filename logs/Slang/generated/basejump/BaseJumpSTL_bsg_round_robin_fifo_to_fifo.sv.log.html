@@ -1,0 +1,119 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v</a>
+time_elapsed: 0.013s
+</pre>
+<pre class="log">
+user_time: 0.013113999999999999
+system_time: 0.0
+ram_usage: 10224
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:33</a>:62: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                          , parameter min_in_middle_meet_p = `BSG_MIN(num_in_p,middle_meet_p)
+                                                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-34" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:34</a>:27: error: expected expression
+                          )
+                          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-59" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:59</a>:11: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+   logic [`BSG_SAFE_CLOG2(num_in_p)-1:0] iptr_r, iptr_r_data;
+          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-61" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:61</a>:52: error: language feature not yet supported
+   wire [width_p*num_in_p-1:0]      data_i_flat = ({ &gt;&gt; {data_i} });
+                                                   ^~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-68" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:68</a>:4: error: unknown module &#39;bsg_make_2D_array&#39;
+   bsg_make_2D_array    #(.width_p(width_p), .items_p(middle_meet_p))
+   ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-74" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:74</a>:4: error: unknown module &#39;bsg_rotate_right&#39;
+   bsg_rotate_right #(.width_p(num_in_p)) valid_rr (.data_i(valid_i), .rot_i(iptr_r), .o(valid_head_o_pretrunc));
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-97" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:97</a>:4: error: unknown module &#39;bsg_circular_ptr&#39;
+   bsg_circular_ptr #(.slots_p(num_in_p)
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-106" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:106</a>:4: error: unknown module &#39;bsg_circular_ptr&#39;
+   bsg_circular_ptr #(.slots_p(num_in_p)
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-134" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:134</a>:64: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                           ,parameter min_out_middle_meet_lp = `BSG_MIN(num_out_p,middle_meet_p)
+                                                               ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-135" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:135</a>:28: error: expected expression
+                           )
+                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-155" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:155</a>:11: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+   logic [`BSG_SAFE_CLOG2(num_out_p)-1:0] optr_r, optr_r_data;
+          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-161" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:161</a>:4: error: unknown module &#39;bsg_rotate_right&#39;
+   bsg_rotate_right #(.width_p(num_out_p)) ready_rr (.data_i(ready_i), .rot_i(optr_r), .o(ready_head_o_pretr));
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-196" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:196</a>:4: error: unknown module &#39;bsg_circular_ptr&#39;
+   bsg_circular_ptr #(.slots_p(num_out_p)
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-206" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:206</a>:4: error: unknown module &#39;bsg_circular_ptr&#39;
+   bsg_circular_ptr #(.slots_p(num_out_p)
+   ^~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-238" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:238</a>:4: error: unknown module &#39;bsg_scan&#39;
+   bsg_scan #(.width_p(middle_meet_p)
+   ^~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-265" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:265</a>:4: error: unknown module &#39;bsg_thermometer_count&#39;
+	  bsg_thermometer_count #(.width_p(middle_meet_p)) thermo (.i(go_channels_int), .o(go_cnt_o));
+	  ^~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-307" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:307</a>:15: error: unknown macro or compiler directive &#39;`BSG_MAX&#39;
+    , input  [`BSG_MAX($clog2(num_in_p)-1,0):0]  in_top_channel_i
+              ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-307" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:307</a>:45: error: expected expression
+    , input  [`BSG_MAX($clog2(num_in_p)-1,0):0]  in_top_channel_i
+                                            ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-308" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:308</a>:15: error: unknown macro or compiler directive &#39;`BSG_MAX&#39;
+    , input  [`BSG_MAX($clog2(num_out_p)-1,0):0] out_top_channel_i
+              ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-308" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:308</a>:46: error: expected expression
+    , input  [`BSG_MAX($clog2(num_out_p)-1,0):0] out_top_channel_i
+                                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-316" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:316</a>:31: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+   localparam middle_meet_lp= `BSG_MIN(num_in_p,num_out_p);
+                              ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-316" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:316</a>:59: error: expected expression
+   localparam middle_meet_lp= `BSG_MIN(num_in_p,num_out_p);
+                                                          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-346" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:346</a>:4: error: unknown module &#39;bsg_make_2D_array&#39;
+   bsg_make_2D_array #(.width_p(width_p), .items_p(num_out_p))
+   ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-376" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:376</a>:46: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                , .go_channels_i(go_channels[`BSG_MIN(i+1,middle_meet_lp)-1:0])     // back to them
+                                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-377" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:377</a>:43: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                , .go_cnt_i(go_cnt[$clog2(`BSG_MIN(i+1,middle_meet_lp)+1)-1:0])
+                                          ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-415" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:415</a>:54: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                 wire [width_p-1:0] data_head_array [`BSG_MIN(i+1,middle_meet_lp)-1:0];
+                                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-418" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:418</a>:66: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                 bsg_make_2D_array #(.width_p(width_p), .items_p(`BSG_MIN(i+1,middle_meet_lp)))
+                                                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-419" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:419</a>:60: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                 bm2Da (.i( data_head[in_top_channel_i][0+:`BSG_MIN(i+1,middle_meet_lp)*width_p])
+                                                           ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-419" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:419</a>:88: error: expected expression
+                 bm2Da (.i( data_head[in_top_channel_i][0+:`BSG_MIN(i+1,middle_meet_lp)*width_p])
+                                                                                       ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-435" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:435</a>:50: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                    , .go_channels_i(go_channels[`BSG_MIN(i+1,middle_meet_lp)-1:0]) // back to them
+                                                 ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v.html#l-436" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_fifo_to_fifo.v:436</a>:47: error: unknown macro or compiler directive &#39;`BSG_MIN&#39;
+                    , .go_cnt_i(go_cnt[$clog2(`BSG_MIN(i+1,middle_meet_lp)+1)-1:0])
+                                              ^
+
+</pre>
+</body>

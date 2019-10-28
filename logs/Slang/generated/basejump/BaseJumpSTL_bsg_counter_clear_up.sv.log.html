@@ -1,0 +1,38 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v</a>
+time_elapsed: 0.003s
+</pre>
+<pre class="log">
+user_time: 0.0031179999999999997
+system_time: 0.0
+ram_usage: 8540
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-9" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v:9</a>:35: error: unknown macro or compiler directive &#39;`BSG_UNDEFINED_IN_SIM&#39;
+			     ,parameter init_val_p   = `BSG_UNDEFINED_IN_SIM(&#39;0)
+			                               ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v:10</a>:30: error: expected expression
+                             ,parameter ptr_width_lp =
+                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v:11</a>:30: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+                             `BSG_SAFE_CLOG2(max_val_p+1)
+                             ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-12" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_counter_clear_up.v:12</a>:9: error: expected expression
+			     ,parameter disable_overflow_warning_p = 0
+			     ^
+
+</pre>
+</body>

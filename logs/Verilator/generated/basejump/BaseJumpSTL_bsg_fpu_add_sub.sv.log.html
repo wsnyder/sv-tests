@@ -1,0 +1,172 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v</a>
+time_elapsed: 0.093s
+</pre>
+<pre class="log">
+user_time: 0.082537
+system_time: 0.010321
+ram_usage: 11756
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:11</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
+  import bsg_fpu_pkg::*;
+         ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-13" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:13</a>: syntax error, unexpected parameter, expecting IDENTIFIER
+    , parameter m_p=&#34;inv&#34;    
+      ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:14</a>: syntax error, unexpected &#39;)&#39;, expecting &#39;;&#39;
+  )
+  ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:26</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic v_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:27</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic [e_p+m_p:0] z_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-28" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:28</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic unimplemented_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-29" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:29</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic invalid_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:30</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic overflow_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:31</a>: syntax error, unexpected output, expecting IDENTIFIER or do or final
+    , output logic underflow_o
+      ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:32</a>: syntax error, unexpected input, expecting IDENTIFIER or do or final
+    , input yumi_i  
+      ^~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-39" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:39</a>: syntax error, unexpected assign
+  assign stall = v_3_r &amp; ~yumi_i;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-50" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:50</a>: syntax error, unexpected IDENTIFIER
+  bsg_fpu_preprocess #(
+  ^~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:89</a>: syntax error, unexpected IDENTIFIER
+  bsg_less_than #(
+  ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-106" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:106</a>: syntax error, unexpected assign
+  assign diff_ab = exp_a - exp_b;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-114" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:114</a>: syntax error, unexpected assign
+  assign man_a_norm = {1&#39;b1, man_a};
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-119" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:119</a>: syntax error, unexpected assign
+  assign larger_exp_man = exp_a_less
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-128" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:128</a>: syntax error, unexpected IDENTIFIER
+  bsg_fpu_sticky #(
+  ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-132" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:132</a>: Define or directive not defined: &#39;`BSG_WIDTH&#39;
+    ,.shamt_i(exp_diff[`BSG_WIDTH(m_p+3)-1:0])
+                       ^~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-140" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:140</a>: syntax error, unexpected IDENTIFIER
+  bsg_less_than #(
+  ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-154" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:154</a>: syntax error, unexpected assign
+  assign do_sub = sub_i ^ sign_a ^ sign_b;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-157" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:157</a>: syntax error, unexpected assign
+  assign larger_exp_man_padded = {larger_exp_man, 3&#39;b0};
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-160" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:160</a>: syntax error, unexpected assign
+  assign smaller_exp_man_shifted = {
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-176" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:176</a>: syntax error, unexpected always_ff
+  always_ff @ (posedge clk_i) begin
+  ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-205" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:205</a>: syntax error, unexpected IDENTIFIER
+  bsg_less_than #(
+  ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-215" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:215</a>: syntax error, unexpected assign
+  assign larger_mag_man = larger_exp_man_less
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-227" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:227</a>: syntax error, unexpected assign
+  assign adder_output = {1&#39;b0, larger_mag_man}
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-242" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:242</a>: syntax error, unexpected always_ff
+  always_ff @ (posedge clk_i) begin
+  ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-268" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:268</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+  logic [`BSG_SAFE_CLOG2(m_p+5)-1:0] num_zero;
+         ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-272" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:272</a>: syntax error, unexpected IDENTIFIER
+  bsg_fpu_clz #(
+  ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-291" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:291</a>: syntax error, unexpected assign
+  assign shifted_adder_output = all_zero
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-298" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:298</a>: syntax error, unexpected assign
+  assign {adjusted_exp_cout, adjusted_exp} = larger_exp_2_r - num_zero; 
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-302" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:302</a>: syntax error, unexpected assign
+  assign pre_roundup = {adjusted_exp, shifted_adder_output[4+:m_p]};
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-306" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:306</a>: syntax error, unexpected assign
+  assign round_up = shifted_adder_output[3]
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-332" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:332</a>: syntax error, unexpected always_ff
+  always_ff @ (posedge clk_i) begin
+  ^~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-362" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:362</a>: syntax error, unexpected assign
+  assign carry_into_exp = &amp;{round_up_3_r, pre_roundup_3_r[m_p-1:0]};
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-366" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:366</a>: syntax error, unexpected assign
+  assign rounded = pre_roundup_3_r + round_up_3_r;
+  ^~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-370" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:370</a>: syntax error, unexpected always_comb
+  always_comb begin
+  ^~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-378" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:378</a>: Define or directive not defined: &#39;`BSG_FPU_SIGNAN&#39;
+      z_o = `BSG_FPU_SIGNAN(e_p,m_p);
+            ^~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-385" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:385</a>: Define or directive not defined: &#39;`BSG_FPU_QUIETNAN&#39;
+      z_o = `BSG_FPU_QUIETNAN(e_p,m_p);
+            ^~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-393" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:393</a>: Define or directive not defined: &#39;`BSG_FPU_QUIETNAN&#39;
+        ? `BSG_FPU_QUIETNAN(e_p,m_p)
+          ^~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-394" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:394</a>: Define or directive not defined: &#39;`BSG_FPU_INFTY&#39;
+        : `BSG_FPU_INFTY(sgn,e_p,m_p);
+          ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-401" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:401</a>: Define or directive not defined: &#39;`BSG_FPU_INFTY&#39;
+      z_o = `BSG_FPU_INFTY(sgn,e_p,m_p);
+            ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-408" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:408</a>: Define or directive not defined: &#39;`BSG_FPU_INFTY&#39;
+      z_o = `BSG_FPU_INFTY(sgn,e_p,m_p);
+            ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-415" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:415</a>: Define or directive not defined: &#39;`BSG_FPU_QUIETNAN&#39;
+      z_o =`BSG_FPU_QUIETNAN(e_p,m_p);
+           ^~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-422" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:422</a>: Define or directive not defined: &#39;`BSG_FPU_ZERO&#39;
+      z_o = `BSG_FPU_ZERO(sgn,e_p,m_p);
+            ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-429" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:429</a>: Define or directive not defined: &#39;`BSG_FPU_ZERO&#39;
+      z_o = `BSG_FPU_ZERO(sgn,e_p,m_p);
+            ^~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-437" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:437</a>: Define or directive not defined: &#39;`BSG_FPU_INFTY&#39;
+        z_o =`BSG_FPU_INFTY(sgn,e_p,m_p);
+             ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-444" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:444</a>: Define or directive not defined: &#39;`BSG_FPU_ZERO&#39;
+        z_o = `BSG_FPU_ZERO(sgn,e_p,m_p);
+              ^~~~~~~~~~~~~
+%Error: Exiting due to 48 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v</a>
+
+</pre>
+</body>

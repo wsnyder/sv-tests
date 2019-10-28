@@ -1,0 +1,34 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v</a>
+time_elapsed: 0.011s
+</pre>
+<pre class="log">
+user_time: 0.010619
+system_time: 0.0
+ram_usage: 10316
+
+
+-- Executing script file `scr.ys&#39; --
+
+1. Executing Verilog-2005 frontend: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v</a>
+Parsing SystemVerilog input from `<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v</a>&#39; to AST representation.
+Warning: Found one of those horrible `(synopsys|synthesis) translate_off&#39; comments.
+Yosys does support them but it is recommended to use `ifdef constructs instead!
+<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_two_buncher.v:26</a>: ERROR: Signal `\data_i&#39; with invalid width range -1!
+
+</pre>
+</body>

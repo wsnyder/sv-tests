@@ -1,0 +1,119 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_upstream.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_upstream.v</a>
+time_elapsed: 0.100s
+</pre>
+<pre class="log">
+user_time: 0.09039499999999999
+system_time: 0.009512999999999999
+ram_usage: 10768
+
+module bsg_link_ddr_upstream (
+	core_clk_i,
+	core_link_reset_i,
+	core_data_i,
+	core_valid_i,
+	core_ready_o,
+	io_clk_i,
+	io_link_reset_i,
+	async_token_reset_i,
+	io_clk_r_o,
+	io_data_r_o,
+	io_valid_r_o,
+	token_clk_i
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter channel_width_p = 8;
+	parameter num_channels_p = 1;
+	parameter lg_fifo_depth_p = 6;
+	parameter lg_credit_to_token_decimation_p = 3;
+	parameter use_extra_data_bit_p = 0;
+	localparam ddr_width_lp = ((channel_width_p * 2) + use_extra_data_bit_p);
+	localparam piso_ratio_lp = (width_p / (ddr_width_lp * num_channels_p));
+	input core_clk_i;
+	input core_link_reset_i;
+	input [(width_p - 1):0] core_data_i;
+	input core_valid_i;
+	output core_ready_o;
+	input io_clk_i;
+	input io_link_reset_i;
+	input async_token_reset_i;
+	output wire [(num_channels_p - 1):0] io_clk_r_o;
+	output wire [(((num_channels_p - 1) &gt;= 0) ? (((channel_width_p - 1) &gt;= 0) ? (((((num_channels_p - 1) &gt;= 0) ? num_channels_p : (2 - num_channels_p)) * (((channel_width_p - 1) &gt;= 0) ? channel_width_p : (2 - channel_width_p))) + -1) : (((((num_channels_p - 1) &gt;= 0) ? num_channels_p : (2 - num_channels_p)) * ((0 &gt;= (channel_width_p - 1)) ? (2 - channel_width_p) : channel_width_p)) + ((channel_width_p - 1) - 1))) : (((channel_width_p - 1) &gt;= 0) ? ((((0 &gt;= (num_channels_p - 1)) ? (2 - num_channels_p) : num_channels_p) * (((channel_width_p - 1) &gt;= 0) ? channel_width_p : (2 - channel_width_p))) + (((num_channels_p - 1) * (((channel_width_p - 1) &gt;= 0) ? channel_width_p : (2 - channel_width_p))) - 1)) : ((((0 &gt;= (num_channels_p - 1)) ? (2 - num_channels_p) : num_channels_p) * ((0 &gt;= (channel_width_p - 1)) ? (2 - channel_width_p) : channel_width_p)) + (((channel_width_p - 1) + ((num_channels_p - 1) * ((0 &gt;= (channel_width_p - 1)) ? (2 - channel_width_p) : channel_width_p))) - 1)))):(((num_channels_p - 1) &gt;= 0) ? (((channel_width_p - 1) &gt;= 0) ? 0 : (channel_width_p - 1)) : (((channel_width_p - 1) &gt;= 0) ? ((num_channels_p - 1) * (((channel_width_p - 1) &gt;= 0) ? channel_width_p : (2 - channel_width_p))) : ((channel_width_p - 1) + ((num_channels_p - 1) * ((0 &gt;= (channel_width_p - 1)) ? (2 - channel_width_p) : channel_width_p)))))] io_data_r_o;
+	output wire [(num_channels_p - 1):0] io_valid_r_o;
+	input [(num_channels_p - 1):0] token_clk_i;
+	wire core_piso_valid_lo;
+	wire core_piso_yumi_li;
+	wire [(((num_channels_p - 1) &gt;= 0) ? (((ddr_width_lp - 1) &gt;= 0) ? (((((num_channels_p - 1) &gt;= 0) ? num_channels_p : (2 - num_channels_p)) * (((ddr_width_lp - 1) &gt;= 0) ? ddr_width_lp : (2 - ddr_width_lp))) + -1) : (((((num_channels_p - 1) &gt;= 0) ? num_channels_p : (2 - num_channels_p)) * ((0 &gt;= (ddr_width_lp - 1)) ? (2 - ddr_width_lp) : ddr_width_lp)) + ((ddr_width_lp - 1) - 1))) : (((ddr_width_lp - 1) &gt;= 0) ? ((((0 &gt;= (num_channels_p - 1)) ? (2 - num_channels_p) : num_channels_p) * (((ddr_width_lp - 1) &gt;= 0) ? ddr_width_lp : (2 - ddr_width_lp))) + (((num_channels_p - 1) * (((ddr_width_lp - 1) &gt;= 0) ? ddr_width_lp : (2 - ddr_width_lp))) - 1)) : ((((0 &gt;= (num_channels_p - 1)) ? (2 - num_channels_p) : num_channels_p) * ((0 &gt;= (ddr_width_lp - 1)) ? (2 - ddr_width_lp) : ddr_width_lp)) + (((ddr_width_lp - 1) + ((num_channels_p - 1) * ((0 &gt;= (ddr_width_lp - 1)) ? (2 - ddr_width_lp) : ddr_width_lp))) - 1)))):(((num_channels_p - 1) &gt;= 0) ? (((ddr_width_lp - 1) &gt;= 0) ? 0 : (ddr_width_lp - 1)) : (((ddr_width_lp - 1) &gt;= 0) ? ((num_channels_p - 1) * (((ddr_width_lp - 1) &gt;= 0) ? ddr_width_lp : (2 - ddr_width_lp))) : ((ddr_width_lp - 1) + ((num_channels_p - 1) * ((0 &gt;= (ddr_width_lp - 1)) ? (2 - ddr_width_lp) : ddr_width_lp)))))] core_piso_data_lo;
+	bsg_parallel_in_serial_out #(
+		.width_p((ddr_width_lp * num_channels_p)),
+		.els_p(piso_ratio_lp)
+	) out_piso(
+		.clk_i(core_clk_i),
+		.reset_i(core_link_reset_i),
+		.valid_i(core_valid_i),
+		.data_i(core_data_i),
+		.ready_o(core_ready_o),
+		.valid_o(core_piso_valid_lo),
+		.data_o(core_piso_data_lo),
+		.yumi_i(core_piso_yumi_li)
+	);
+	wire [(num_channels_p - 1):0] core_piso_ready_li;
+	assign core_piso_yumi_li = (&amp;core_piso_ready_li &amp; core_piso_valid_lo);
+	genvar i;
+	generate
+		for (i = 0; (i &lt; num_channels_p); i = (i + 1)) begin : ch
+			wire io_oddr_valid_li;
+			wire io_oddr_ready_lo;
+			wire [(channel_width_p - 1):0] io_oddr_data_bottom;
+			wire [(ddr_width_lp - 1):channel_width_p] io_oddr_data_top;
+			bsg_link_source_sync_upstream #(
+				.channel_width_p(ddr_width_lp),
+				.lg_fifo_depth_p(lg_fifo_depth_p),
+				.lg_credit_to_token_decimation_p(lg_credit_to_token_decimation_p)
+			) sso(
+				.core_clk_i(core_clk_i),
+				.core_link_reset_i(core_link_reset_i),
+				.io_clk_i(io_clk_i),
+				.io_link_reset_i(io_link_reset_i),
+				.async_token_reset_i(async_token_reset_i),
+				.core_data_i(core_piso_data_lo[((((ddr_width_lp - 1) &gt;= 0) ? 0 : (ddr_width_lp - 1)) + ((((num_channels_p - 1) &gt;= 0) ? i : (0 - (i - (num_channels_p - 1)))) * (((ddr_width_lp - 1) &gt;= 0) ? ddr_width_lp : (2 - ddr_width_lp))))+:(((ddr_width_lp - 1) &gt;= 0) ? ddr_width_lp : (2 - ddr_width_lp))]),
+				.core_valid_i(core_piso_yumi_li),
+				.core_ready_o(core_piso_ready_li[i]),
+				.io_data_o({io_oddr_data_top, io_oddr_data_bottom}),
+				.io_valid_o(io_oddr_valid_li),
+				.io_ready_i(io_oddr_ready_lo),
+				.token_clk_i(token_clk_i[i])
+			);
+			bsg_link_oddr_phy #(.width_p((channel_width_p + 1))) oddr_phy(
+				.reset_i(io_link_reset_i),
+				.clk_i(io_clk_i),
+				.data_i({sv2v_cast_9B172(io_oddr_data_top), {io_oddr_valid_li, io_oddr_data_bottom}}),
+				.ready_o(io_oddr_ready_lo),
+				.data_r_o({io_valid_r_o[i], io_data_r_o[((((channel_width_p - 1) &gt;= 0) ? 0 : (channel_width_p - 1)) + ((((num_channels_p - 1) &gt;= 0) ? i : (0 - (i - (num_channels_p - 1)))) * (((channel_width_p - 1) &gt;= 0) ? channel_width_p : (2 - channel_width_p))))+:(((channel_width_p - 1) &gt;= 0) ? channel_width_p : (2 - channel_width_p))]}),
+				.clk_r_o(io_clk_r_o[i])
+			);
+		end
+	endgenerate
+	initial ;
+	function automatic [((channel_width_p + 1) - 1):0] sv2v_cast_9B172;
+		input reg [((channel_width_p + 1) - 1):0] inp;
+		sv2v_cast_9B172 = inp;
+	endfunction
+endmodule
+
+</pre>
+</body>

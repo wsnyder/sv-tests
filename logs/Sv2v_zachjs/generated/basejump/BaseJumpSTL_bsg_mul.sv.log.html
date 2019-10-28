@@ -1,0 +1,51 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul.v</a>
+time_elapsed: 0.019s
+</pre>
+<pre class="log">
+user_time: 0.01145
+system_time: 0.007981
+ram_usage: 9512
+
+module bsg_mul (
+	x_i,
+	y_i,
+	signed_i,
+	z_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter harden_p = 1;
+	input [(width_p - 1):0] x_i;
+	input [(width_p - 1):0] y_i;
+	input signed_i;
+	output [((width_p * 2) - 1):0] z_o;
+	bsg_mul_pipelined #(
+		.width_p(width_p),
+		.pipeline_p(0),
+		.harden_p(harden_p)
+	) bmp(
+		.clock_i(1&#39;b0),
+		.en_i(1&#39;b0),
+		.x_i(x_i),
+		.y_i(y_i),
+		.signed_i(signed_i),
+		.z_o(z_o)
+	);
+endmodule
+
+</pre>
+</body>

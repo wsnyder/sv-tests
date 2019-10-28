@@ -1,0 +1,95 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v</a>
+time_elapsed: 0.100s
+</pre>
+<pre class="log">
+user_time: 0.089277
+system_time: 0.010673
+ram_usage: 11672
+
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-13" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:13</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   (input    [width_p-1:0] i
+             ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+                    ... Use &#34;/* verilator lint_off LITENDIAN */&#34; and lint_on around source to disable this message.
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:14</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output logic [width_p-1:0] o
+                   ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-49" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:49</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   wire [$clog2(width_p):0][width_p-1:0] t;
+                           ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-51" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:51</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   wire [width_p-1:0]                      fill;
+        ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:80</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+             wire [width_p-1:0] shifted = width_p &#39; ({fill, t[j]} &gt;&gt; (1 &lt;&lt; j));
+                  ^
+                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:80</a>: Size-changing cast to zero or negative size
+                                                                                                   : ... In instance bsg_binary_plus_one_to_gray.scan_and
+             wire [width_p-1:0] shifted = width_p &#39; ({fill, t[j]} &gt;&gt; (1 &lt;&lt; j));
+                                                  ^
+        <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:80</a>: Operator ASSIGNW expects 3 bits on the Assign RHS, but Assign RHS&#39;s SEL generates 1 bits.
+                                                                                                           : ... In instance bsg_binary_plus_one_to_gray.scan_and
+             wire [width_p-1:0] shifted = width_p &#39; ({fill, t[j]} &gt;&gt; (1 &lt;&lt; j));
+                                        ^
+                <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:89</a>: Operator ASSIGNW expects 3 bits on the Assign RHS, but Assign RHS&#39;s REPLICATE generates -1 bits.
+                                                                                                           : ... In instance bsg_binary_plus_one_to_gray.scan_and
+    assign fill = { width_p {1&#39;b1} };
+                ^
+                <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: ... note: In file included from bsg_binary_plus_one_to_gray.v
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:44</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   (input [width_p-1:0] binary_i
+          ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-45" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:45</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+    , output [width_p-1:0] gray_o
+             ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-48" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:48</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   wire [width_p-1:0] binary_scan;
+        ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: Little bit endian vector: MSB &lt; LSB of bit range: -1:0
+   wire [width_p:0]   temp = { 1&#39;b0, binary_scan[width_p-2:0], 1&#39;b1};
+        ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: Extracting 4 bits from only 3 bit number
+                                                                                                                      : ... In instance bsg_binary_plus_one_to_gray
+   wire [width_p:0]   temp = { 1&#39;b0, binary_scan[width_p-2:0], 1&#39;b1};
+                                                ^
+%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:55</a>: Operator ASSIGNW expects 2 bits on the Assign RHS, but Assign RHS&#39;s REPLICATE generates 6 bits.
+                                                                                                                              : ... In instance bsg_binary_plus_one_to_gray
+   wire [width_p:0]   temp = { 1&#39;b0, binary_scan[width_p-2:0], 1&#39;b1};
+                           ^
+%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-56" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:56</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
+   wire [width_p-1:0] edge_detect = ~temp[width_p:1] &amp; temp[width_p-1:0];
+        ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-56" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:56</a>: Extracting 3 bits from only 2 bit number
+                                                                                                                      : ... In instance bsg_binary_plus_one_to_gray
+   wire [width_p-1:0] edge_detect = ~temp[width_p:1] &amp; temp[width_p-1:0];
+                                         ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html#l-56" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v:56</a>: Extracting 3 bits from only 2 bit number
+                                                                                                                      : ... In instance bsg_binary_plus_one_to_gray
+   wire [width_p-1:0] edge_detect = ~temp[width_p:1] &amp; temp[width_p-1:0];
+                                                           ^
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_binary_plus_one_to_gray.v</a>
+
+</pre>
+</body>

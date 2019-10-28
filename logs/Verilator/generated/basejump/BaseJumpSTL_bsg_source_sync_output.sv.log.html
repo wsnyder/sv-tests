@@ -1,0 +1,50 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v</a>
+time_elapsed: 0.085s
+</pre>
+<pre class="log">
+user_time: 0.069699
+system_time: 0.015719999999999998
+ram_usage: 11840
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v.html#l-110" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v:110</a>: Cannot find file containing module: &#39;bsg_two_fifo&#39;
+   bsg_two_fifo #(.width_p(channel_width_p)) twofer
+   ^~~~~~~~~~~~
+        ... Looked in:
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_two_fifo
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_two_fifo.v
+             /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_two_fifo.sv
+             bsg_two_fifo
+             bsg_two_fifo.v
+             bsg_two_fifo.sv
+             obj_dir/bsg_two_fifo
+             obj_dir/bsg_two_fifo.v
+             obj_dir/bsg_two_fifo.sv
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v.html#l-240" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v:240</a>: Cannot find file containing module: &#39;bsg_async_fifo&#39;
+   bsg_async_fifo #(.lg_size_p(3)
+   ^~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v.html#l-319" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v:319</a>: Cannot find file containing module: &#39;bsg_async_credit_counter&#39;
+   bsg_async_credit_counter
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v.html#l-341" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v:341</a>: Cannot find file containing module: &#39;bsg_async_credit_counter&#39;
+   bsg_async_credit_counter
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_output.v</a>
+
+</pre>
+</body>

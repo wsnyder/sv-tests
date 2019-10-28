@@ -1,0 +1,756 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_pipelined.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_pipelined.v</a>
+time_elapsed: 0.494s
+</pre>
+<pre class="log">
+user_time: 0.42229999999999995
+system_time: 0.071893
+ram_usage: 13376
+
+module bsg_mul_pipelined (
+	clock_i,
+	en_i,
+	x_i,
+	y_i,
+	signed_i,
+	z_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter pipeline_p = 1;
+	parameter harden_p = 1;
+	input clock_i;
+	input en_i;
+	input [(width_p - 1):0] x_i;
+	input [(width_p - 1):0] y_i;
+	input signed_i;
+	output [((width_p * 2) - 1):0] z_o;
+	generate
+		if ((width_p == 32)) begin : fi32
+			bsg_mul_32_32 #(
+				.harden_p(harden_p),
+				.pipeline_p(pipeline_p)
+			) m32(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.x_i(x_i),
+				.y_i(y_i),
+				.signed_i(signed_i),
+				.z_o(z_o)
+			);
+		end
+		else if ((width_p == 16)) begin : fi16
+			bsg_mul_16_16 #(.harden_p(harden_p)) m16(
+				.x_i(x_i),
+				.y_i(y_i),
+				.signed_i(signed_i),
+				.z_o(z_o)
+			);
+		end
+		else initial ;
+	endgenerate
+endmodule
+module bsg_mul_32_32 (
+	clock_i,
+	en_i,
+	x_i,
+	y_i,
+	signed_i,
+	z_o
+);
+	parameter harden_p = 0;
+	parameter pipeline_p = 0;
+	input clock_i;
+	input en_i;
+	input [31:0] x_i;
+	input [31:0] y_i;
+	input signed_i;
+	output [63:0] z_o;
+	localparam width_lp = 32;
+	localparam pp_lp = ((width_lp / 2) + 1);
+	wire [((pp_lp * 3) + -1):0] SDN;
+	bsg_mul_SDN #(.width_p(width_lp)) sdn(
+		.x_i(x_i),
+		.signed_i(signed_i),
+		.SDN_o(SDN)
+	);
+	wire [40:0] c30;
+	wire [40:0] s30;
+	wire [43:0] c42_01c;
+	wire [43:0] c42_01s;
+	wire [42:0] c74;
+	wire [42:0] s74;
+	wire [49:0] c42_03c;
+	wire [49:0] c42_03s;
+	wire [42:0] cB8;
+	wire [42:0] sB8;
+	wire [41:0] c42_23c;
+	wire [41:0] c42_23s;
+	wire [41:0] cFC;
+	wire [41:0] sFC;
+	wire [15:0] cl;
+	wire [2:0] verify_zero;
+	always @(verify_zero)
+		;
+	bsg_mul_B4B_rep_rep #(
+		.blocks_p(6),
+		.width_p(41),
+		.group_vec_p(56&#39;h29_23_1e_16_0e_06_00),
+		.y_p(0),
+		.y_size_p(32),
+		.S_above_vec_p(164&#39;b0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_1000_0000_0100_0000_0010),
+		.dot_bar_vec_p(164&#39;b0000_1000_0000_0100_0000____0011_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000),
+		.B_vec_p(164&#39;b0111_0111_0011_0011_0001____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____1000_0000_1100_1000_1110_1100),
+		.one_vec_p(164&#39;b1000_0000_0100_0000_0010____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000),
+		.harden_p(harden_p)
+	) brr0(
+		.SDN_i({SDN[11:0], 3&#39;b000}),
+		.y_i(y_i),
+		.cr_i(1&#39;b0),
+		.cl_o(verify_zero[0]),
+		.c_o(c30[40:0]),
+		.s_o(s30[40:0]),
+		.signed_i(signed_i)
+	);
+	wire [33:0] gb_c;
+	wire [33:0] gb_s;
+	wire [33:0] gb_dot;
+	bsg_mul_green_booth_dots #(
+		.width_p(32),
+		.blocks_p(5),
+		.group_vec_p(48&#39;h22_1B_13_0B_05_00),
+		.harden_p(harden_p)
+	) gbd(
+		.SDN_i(SDN[50:45]),
+		.y_i(y_i),
+		.dot_o(gb_dot)
+	);
+	wire crr01_cl_o_tmp;
+	bsg_mul_comp42_rep_rep #(
+		.blocks_p(6),
+		.group_vec_p(56&#39;h2b_23_1D_18_10_08_00),
+		.width_p(43)
+	) crr01(
+		.i({{c74[41:0], 1&#39;b0}, s74[42:0], {7&#39;b0, c30[40:5]}, {gb_dot[18:11], s30[40:6]}}),
+		.cr_i(1&#39;b0),
+		.cl_o(crr01_cl_o_tmp),
+		.c_o(c42_01c[42:0]),
+		.s_o(c42_01s[42:0])
+	);
+	assign c42_01c[43] = (gb_dot[19] &amp; crr01_cl_o_tmp);
+	assign c42_01s[43] = (gb_dot[19] ^ crr01_cl_o_tmp);
+	bsg_mul_B4B_rep_rep #(
+		.blocks_p(6),
+		.width_p(43),
+		.group_vec_p(56&#39;h2b_23_1D_18_10_08_00),
+		.y_p(-2),
+		.y_size_p(32),
+		.S_above_vec_p(172&#39;b0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000__0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_1000_0000_0100_0000_0010_0000_0001),
+		.dot_bar_vec_p(172&#39;b0000_1000_0000_0100_0000_0010_0000_0001____0000_0000_0000_0000_0000_0000__0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.B_vec_p(172&#39;b0111_0111_0011_0011_0001_0001_0000_0000____0000_0000_0000_0000_0000_0000__0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____1000_0000_1100_1000_1110_1100_1111_1110),
+		.one_vec_p(172&#39;b1000_0000_0100_0000_0010_0000_0001_0000____0000_0000_0000_0000_0000_0000__0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.harden_p(harden_p)
+	) brr1(
+		.SDN_i(SDN[23:9]),
+		.y_i(y_i),
+		.cr_i(1&#39;b0),
+		.cl_o(verify_zero[1]),
+		.c_o(c74[42:0]),
+		.s_o(s74[42:0]),
+		.signed_i(signed_i)
+	);
+	bsg_mul_comp42_rep_rep #(
+		.blocks_p(7),
+		.group_vec_p(64&#39;h32_2b_23_1b_15_10_08_00),
+		.width_p(50)
+	) crr03(
+		.i({{c42_23c[40:0], 1&#39;b0, cB8[6:0], 1&#39;b0}, {c42_23s[41:0], sB8[7:0]}, {13&#39;b0, c42_01c[43:7]}, {gb_dot[33:20], c42_01s[43:8]}}),
+		.cr_i(1&#39;b0),
+		.cl_o(),
+		.c_o(c42_03c[49:0]),
+		.s_o(c42_03s[49:0])
+	);
+	wire [49:0] c42_03c_r;
+	wire [49:0] c42_03s_r;
+	generate
+		if (pipeline_p) begin : pipe
+			wire [99:0] c42_03_trans;
+			wire [99:0] c42_03_trans_r;
+			bsg_transpose #(
+				.width_p(50),
+				.els_p(2)
+			) bt(
+				.i({c42_03c, c42_03s}),
+				.o(c42_03_trans)
+			);
+			bsg_dff_en_rep_rep #(
+				.blocks_p(7),
+				.width_p(100),
+				.group_vec_p((64&#39;h32_2b_23_1b_15_10_08_00 &lt;&lt; 1)),
+				.harden_p(harden_p)
+			) dffe_c42_03_r(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(c42_03_trans),
+				.data_o(c42_03_trans_r)
+			);
+			bsg_transpose #(
+				.width_p(2),
+				.els_p(50)
+			) bt2(
+				.i(c42_03_trans_r),
+				.o({c42_03c_r, c42_03s_r})
+			);
+		end
+		else begin : unpipe
+			assign c42_03c_r = c42_03c;
+			assign c42_03s_r = c42_03s;
+		end
+	endgenerate
+	bsg_mul_B4B_rep_rep #(
+		.blocks_p(6),
+		.width_p(43),
+		.group_vec_p(56&#39;h2b_23_1B_15_10_08_00),
+		.y_p(-2),
+		.y_size_p(32),
+		.S_above_vec_p(172&#39;b0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_1000_0000_0100_0000_0010_0000_0001),
+		.dot_bar_vec_p(172&#39;b0000_1000_0000_0100_0000_0010_0000_0001____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.B_vec_p(172&#39;b0111_0111_0011_0011_0001_0001_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____1000_0000_1100_1000_1110_1100_1111_1110),
+		.one_vec_p(172&#39;b1000_0000_0100_0000_0010_0000_0001_0000____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.harden_p(harden_p)
+	) brr2(
+		.SDN_i(SDN[35:21]),
+		.y_i(y_i),
+		.cr_i(1&#39;b0),
+		.cl_o(verify_zero[2]),
+		.c_o(cB8[42:0]),
+		.s_o(sB8[42:0]),
+		.signed_i(signed_i)
+	);
+	bsg_mul_comp42_rep_rep #(
+		.blocks_p(6),
+		.group_vec_p(56&#39;h2a_23_1b_13_0d_08_00),
+		.width_p(42)
+	) crr23(
+		.i({{cFC[40:0], 1&#39;b0}, sFC[41:0], {6&#39;b0, cB8[42:7]}, {7&#39;b0, sB8[42:8]}}),
+		.cr_i(1&#39;b0),
+		.cl_o(),
+		.c_o(c42_23c[41:0]),
+		.s_o(c42_23s[41:0])
+	);
+	bsg_mul_B4B_rep_rep #(
+		.blocks_p(6),
+		.width_p(42),
+		.group_vec_p(56&#39;h2a_23_1B_13_0D_08_00),
+		.y_p(-2),
+		.y_size_p(32),
+		.S_above_vec_p(168&#39;b0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_1000_0000_0100_0000_0010_0000_0001),
+		.dot_bar_vec_p(168&#39;b1000_0000_0100_0000_0010_0000_0001____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.B_vec_p(168&#39;b0111_0011_0011_0001_0001_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____1000_0000_1100_1000_1110_1100_1111_1110),
+		.one_vec_p(168&#39;b0000_0100_0000_0010_0000_0001_0000____0000_0000_0000_0000_0000_0000_0000_0000___0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.harden_p(harden_p)
+	) brr3(
+		.SDN_i(SDN[47:33]),
+		.y_i(y_i),
+		.cr_i(1&#39;b0),
+		.cl_o(),
+		.c_o(cFC[41:0]),
+		.s_o(sFC[41:0]),
+		.signed_i(signed_i)
+	);
+	wire [10:0] gb_dot_r;
+	wire [7:0] c42_01s_r;
+	wire [6:0] c42_01c_r;
+	wire [5:0] s30_r;
+	wire [4:0] c30_r;
+	generate
+		if (pipeline_p) begin : pipe0
+			bsg_dff_en #(
+				.width_p(11),
+				.harden_p(harden_p)
+			) dffe_gb_dot_r(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(gb_dot[10:0]),
+				.data_o(gb_dot_r)
+			);
+			bsg_dff_en #(
+				.width_p(8),
+				.harden_p(harden_p)
+			) dffe_c42_01s_r(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(c42_01s[7:0]),
+				.data_o(c42_01s_r)
+			);
+			bsg_dff_en #(
+				.width_p(7),
+				.harden_p(harden_p)
+			) dffe_c42_01c_r(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(c42_01c[6:0]),
+				.data_o(c42_01c_r)
+			);
+			bsg_dff_en #(
+				.width_p(6),
+				.harden_p(harden_p)
+			) dffe_s30_r(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(s30[5:0]),
+				.data_o(s30_r)
+			);
+			bsg_dff_en #(
+				.width_p(5),
+				.harden_p(harden_p)
+			) dffe_c30_r(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(c30[4:0]),
+				.data_o(c30_r)
+			);
+		end
+		else begin : unpipe0
+			assign gb_dot_r = gb_dot[10:0];
+			assign c42_01s_r = c42_01s[7:0];
+			assign c42_01c_r = c42_01c[6:0];
+			assign s30_r = s30[5:0];
+			assign c30_r = c30[4:0];
+		end
+	endgenerate
+	bsg_mul_csa_rep #(
+		.width_p(34),
+		.blocks_p(5),
+		.group_vec_p(48&#39;h22_1B_13_0B_05_00),
+		.harden_p(harden_p)
+	) gb(
+		.a_i({23&#39;b0, gb_dot_r[10:0]}),
+		.b_i(c42_03s_r[49:16]),
+		.c_i(c42_03c_r[48:15]),
+		.c_o(gb_c),
+		.s_o(gb_s)
+	);
+	wire [63:0] sum_a = {gb_s[33:0], c42_03s_r[15:0], c42_01s_r[7:0], s30_r[5:0]};
+	wire [63:0] sum_b = {gb_c[32:0], 1&#39;b0, c42_03c_r[14:0], 1&#39;b0, c42_01c_r[6:0], 1&#39;b0, c30_r[4:0], 1&#39;b0};
+	assign z_o = (sum_a + sum_b);
+endmodule
+module bsg_mul_SDN (
+	x_i,
+	signed_i,
+	SDN_o
+);
+	parameter width_p = 16;
+	parameter rows_lp = ((width_p / 2) + 1);
+	input [(width_p - 1):0] x_i;
+	input signed_i;
+	output [(((rows_lp - 1) &gt;= 0) ? (((((rows_lp - 1) &gt;= 0) ? rows_lp : (2 - rows_lp)) * 3) + -1) : ((((0 &gt;= (rows_lp - 1)) ? (2 - rows_lp) : rows_lp) * 3) + (((rows_lp - 1) * 3) - 1))):(((rows_lp - 1) &gt;= 0) ? 0 : ((rows_lp - 1) * 3))] SDN_o;
+	wire [((width_p + 3) - 1):0] temp_x = {2&#39;b0, x_i, 1&#39;b0};
+	genvar i;
+	generate
+		for (i = 0; (i &lt; rows_lp); i = (i + 1)) begin : rof
+			wire [2:0] trip;
+			if ((i != (rows_lp - 1))) begin : fi
+				assign trip = temp_x[((2 * i) + 2):(2 * i)];
+			end
+			else begin : fi
+				assign trip = (temp_x[((2 * i) + 2):(2 * i)] &amp; ~{3 {signed_i}});
+			end
+			assign SDN_o[((((rows_lp - 1) &gt;= 0) ? i : (0 - (i - (rows_lp - 1)))) * 3)] = trip[2];
+			assign SDN_o[(((((rows_lp - 1) &gt;= 0) ? i : (0 - (i - (rows_lp - 1)))) * 3) + 1)] = ((&amp;trip[1:0] &amp; ~trip[2]) | (~|trip[1:0] &amp; trip[2]));
+			assign SDN_o[(((((rows_lp - 1) &gt;= 0) ? i : (0 - (i - (rows_lp - 1)))) * 3) + 2)] = (trip[0] ^ trip[1]);
+		end
+	endgenerate
+endmodule
+module bsg_mul_16_16 (
+	x_i,
+	y_i,
+	signed_i,
+	z_o
+);
+	parameter harden_p = 0;
+	input [15:0] x_i;
+	input [15:0] y_i;
+	input signed_i;
+	output [31:0] z_o;
+	wire [26:0] SDN;
+	bsg_mul_SDN #(.width_p(16)) sdn(
+		.x_i(x_i),
+		.signed_i(signed_i),
+		.SDN_o(SDN)
+	);
+	wire [24:0] c30;
+	wire [24:0] s30;
+	wire [25:0] c74;
+	wire [25:0] s74;
+	wire [7:0] cl;
+	wire [2:0] verify_zero;
+	bsg_mul_B4B_rep_rep #(
+		.blocks_p(4),
+		.width_p(25),
+		.group_vec_p(40&#39;h19_14_0e_06_00),
+		.y_p(0),
+		.y_size_p(16),
+		.S_above_vec_p(100&#39;b0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_1000_0000_0100_0000_0010),
+		.dot_bar_vec_p(100&#39;b0000_1000_0000_0100_0000____0011_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000),
+		.B_vec_p(100&#39;b0111_0111_0011_0011_0001____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____1000_0000_1100_1000_1110_1100),
+		.one_vec_p(100&#39;b1000_0000_0100_0000_0010____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000),
+		.harden_p(harden_p)
+	) brr0(
+		.SDN_i({SDN[11:0], 3&#39;b000}),
+		.y_i(y_i),
+		.cr_i(1&#39;b0),
+		.cl_o(verify_zero[0]),
+		.c_o(c30[24:0]),
+		.s_o(s30[24:0]),
+		.signed_i(signed_i)
+	);
+	bsg_mul_B4B_rep_rep #(
+		.blocks_p(4),
+		.width_p(26),
+		.group_vec_p(40&#39;h1a_14_0e_08_00),
+		.y_p(-2),
+		.y_size_p(16),
+		.S_above_vec_p(104&#39;b0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____0000_1000_0000_0100_0000_0010_0000_0001),
+		.dot_bar_vec_p(104&#39;b1000_0000_0100_0000_0010_0000____0001_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.B_vec_p(104&#39;b0111_0011_0011_0001_0001_0000____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____1000_0000_1100_1000_1110_1100_1111_1110),
+		.one_vec_p(104&#39;b0000_0100_0000_0010_0000_0001____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000____0000_0000_0000_0000_0000_0000_0000_0000),
+		.harden_p(harden_p)
+	) brr1(
+		.SDN_i(SDN[23:9]),
+		.y_i(y_i),
+		.cr_i(1&#39;b0),
+		.cl_o(verify_zero[1]),
+		.c_o(c74[25:0]),
+		.s_o(s74[25:0]),
+		.signed_i(signed_i)
+	);
+	wire [3:0] ci_local;
+	wire [25:0] c42_c;
+	wire [25:0] c42_s;
+	bsg_mul_comp42_rep_rep #(
+		.blocks_p(4),
+		.group_vec_p(40&#39;h1a_14_0e_08_00),
+		.width_p(26)
+	) crr(
+		.i({{c74[24:0], 1&#39;b0}, s74[25:0], {6&#39;b0, c30[24:5]}, {7&#39;b0, s30[24:6]}}),
+		.cr_i(1&#39;b0),
+		.cl_o(verify_zero[2]),
+		.c_o(c42_c[25:0]),
+		.s_o(c42_s[25:0])
+	);
+	wire [17:0] gb_c;
+	wire [17:0] gb_s;
+	bsg_mul_green_block #(
+		.width_p(16),
+		.harden_p(harden_p)
+	) gb(
+		.SDN_i(SDN[26:21]),
+		.y_i(y_i),
+		.s_i(c42_s[25:8]),
+		.s2_i(c42_c[24:7]),
+		.c_o(gb_c),
+		.s_o(gb_s)
+	);
+	wire [31:0] sum_a = {gb_s[17:0], c42_s[7:0], s30[5:0]};
+	wire [31:0] sum_b = {gb_c[16:0], 1&#39;b0, c42_c[6:0], 1&#39;b0, c30[4:0], 1&#39;b0};
+	assign z_o = (sum_a + sum_b);
+endmodule
+module bsg_mul_csa (
+	x_i,
+	y_i,
+	z_i,
+	c_o,
+	s_o
+);
+	input x_i;
+	input y_i;
+	input z_i;
+	output c_o;
+	output s_o;
+	assign {c_o, s_o} = ((x_i + y_i) + z_i);
+endmodule
+module bsg_dff_en_rep_rep (
+	clock_i,
+	en_i,
+	data_i,
+	data_o
+);
+	parameter blocks_p = 0;
+	parameter width_p = 0;
+	parameter group_vec_p = 0;
+	parameter harden_p = 1;
+	input clock_i;
+	input en_i;
+	input [(width_p - 1):0] data_i;
+	output [(width_p - 1):0] data_o;
+	genvar j;
+	generate
+		for (j = 0; (j &lt; blocks_p); j = (j + 1)) begin : rof
+			localparam group_end_lp = ((group_vec_p &gt;&gt; ((j + 1) &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam group_start_lp = ((group_vec_p &gt;&gt; (j &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam [31:0] blocks_lp = (group_end_lp - group_start_lp);
+			bsg_dff_en #(
+				.width_p(blocks_lp),
+				.harden_p(harden_p)
+			) bde(
+				.clock_i(clock_i),
+				.en_i(en_i),
+				.data_i(data_i[(group_end_lp - 1):group_start_lp]),
+				.data_o(data_o[(group_end_lp - 1):group_start_lp])
+			);
+		end
+	endgenerate
+endmodule
+module bsg_mul_comp42_rep_rep (
+	i,
+	cr_i,
+	cl_o,
+	c_o,
+	s_o
+);
+	parameter blocks_p = 0;
+	parameter width_p = 0;
+	parameter group_vec_p = 0;
+	parameter harden_p = 1;
+	input [(((width_p - 1) &gt;= 0) ? ((4 * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + -1) : ((4 * ((0 &gt;= (width_p - 1)) ? (2 - width_p) : width_p)) + ((width_p - 1) - 1))):(((width_p - 1) &gt;= 0) ? 0 : (width_p - 1))] i;
+	input cr_i;
+	output cl_o;
+	output [(width_p - 1):0] c_o;
+	output [(width_p - 1):0] s_o;
+	genvar j;
+	wire [blocks_p:0] carries;
+	generate
+		for (j = 0; (j &lt; blocks_p); j = (j + 1)) begin : rof
+			localparam group_end_lp = ((group_vec_p &gt;&gt; ((j + 1) &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam group_start_lp = ((group_vec_p &gt;&gt; (j &lt;&lt; 3)) &amp; 8&#39;hFF);
+			wire [((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? ((4 * ((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))) + -1) : ((4 * ((0 &gt;= ((group_end_lp - group_start_lp) - 1)) ? (2 - (group_end_lp - group_start_lp)) : (group_end_lp - group_start_lp))) + (((group_end_lp - group_start_lp) - 1) - 1))):((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? 0 : ((group_end_lp - group_start_lp) - 1))] t;
+			assign t[((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? 0 : ((group_end_lp - group_start_lp) - 1))+:((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))] = i[(((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) : (0 - ((((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) - (width_p - 1))))+:(((group_end_lp - 1) &gt;= group_start_lp) ? (((group_end_lp - 1) - group_start_lp) + 1) : ((group_start_lp - (group_end_lp - 1)) + 1))];
+			assign t[(((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? 0 : ((group_end_lp - group_start_lp) - 1)) + ((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp))))+:((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))] = i[((((width_p - 1) &gt;= 0) ? width_p : (2 - width_p)) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) : (0 - ((((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) - (width_p - 1)))))+:(((group_end_lp - 1) &gt;= group_start_lp) ? (((group_end_lp - 1) - group_start_lp) + 1) : ((group_start_lp - (group_end_lp - 1)) + 1))];
+			assign t[(((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? 0 : ((group_end_lp - group_start_lp) - 1)) + (2 * ((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))))+:((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))] = i[((2 * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) : (0 - ((((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) - (width_p - 1)))))+:(((group_end_lp - 1) &gt;= group_start_lp) ? (((group_end_lp - 1) - group_start_lp) + 1) : ((group_start_lp - (group_end_lp - 1)) + 1))];
+			assign t[(((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? 0 : ((group_end_lp - group_start_lp) - 1)) + (3 * ((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))))+:((((group_end_lp - group_start_lp) - 1) &gt;= 0) ? (group_end_lp - group_start_lp) : (2 - (group_end_lp - group_start_lp)))] = i[((3 * (((width_p - 1) &gt;= 0) ? width_p : (2 - width_p))) + (((width_p - 1) &gt;= 0) ? (((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) : (0 - ((((width_p - 1) &gt;= 0) ? group_start_lp : (group_end_lp - 1)) - (width_p - 1)))))+:(((group_end_lp - 1) &gt;= group_start_lp) ? (((group_end_lp - 1) - group_start_lp) + 1) : ((group_start_lp - (group_end_lp - 1)) + 1))];
+			bsg_mul_comp42_rep #(.blocks_p((group_end_lp - group_start_lp))) cr(
+				.i(t),
+				.cr_i(carries[j]),
+				.cl_o(carries[(j + 1)]),
+				.c_o(c_o[(group_end_lp - 1):group_start_lp]),
+				.s_o(s_o[(group_end_lp - 1):group_start_lp])
+			);
+		end
+	endgenerate
+	assign cl_o = carries[blocks_p];
+	assign carries[0] = cr_i;
+endmodule
+module bsg_mul_B4B_rep_rep (
+	SDN_i,
+	cr_i,
+	y_i,
+	signed_i,
+	cl_o,
+	c_o,
+	s_o
+);
+	parameter blocks_p = 1;
+	parameter width_p = 0;
+	parameter group_vec_p = 0;
+	parameter y_p = &#34;inv&#34;;
+	parameter y_size_p = 16;
+	parameter S_above_vec_p = 0;
+	parameter dot_bar_vec_p = 0;
+	parameter B_vec_p = 0;
+	parameter one_vec_p = 0;
+	parameter harden_p = 1&#39;b0;
+	input [14:0] SDN_i;
+	input cr_i;
+	input [(y_size_p - 1):0] y_i;
+	input signed_i;
+	output cl_o;
+	output [(width_p - 1):0] c_o;
+	output [(width_p - 1):0] s_o;
+	genvar j;
+	wire [blocks_p:0] carries;
+	generate
+		for (j = 0; (j &lt; blocks_p); j = (j + 1)) begin : rof
+			localparam group_end_lp = ((group_vec_p &gt;&gt; ((j + 1) &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam group_start_lp = ((group_vec_p &gt;&gt; (j &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam [31:0] blocks_lp = (group_end_lp - group_start_lp);
+			bsg_mul_B4B_rep #(
+				.blocks_p(blocks_lp),
+				.y_p((y_p + group_start_lp)),
+				.y_size_p(y_size_p),
+				.S_above_vec_p(S_above_vec_p[((4 * group_end_lp) - 1):(4 * group_start_lp)]),
+				.dot_bar_vec_p(dot_bar_vec_p[((4 * group_end_lp) - 1):(4 * group_start_lp)]),
+				.B_vec_p(B_vec_p[((4 * group_end_lp) - 1):(4 * group_start_lp)]),
+				.one_vec_p(one_vec_p[((4 * group_end_lp) - 1):(4 * group_start_lp)]),
+				.harden_p(harden_p)
+			) br(
+				.SDN_i(SDN_i),
+				.cr_i(carries[j]),
+				.y_i(y_i),
+				.signed_i(signed_i),
+				.cl_o(carries[(j + 1)]),
+				.c_o(c_o[(group_end_lp - 1):group_start_lp]),
+				.s_o(s_o[(group_end_lp - 1):group_start_lp])
+			);
+		end
+	endgenerate
+	assign carries[0] = cr_i;
+	assign cl_o = carries[blocks_p];
+endmodule
+module bsg_mul_B4B_rep (
+	SDN_i,
+	cr_i,
+	y_i,
+	signed_i,
+	cl_o,
+	c_o,
+	s_o
+);
+	parameter [31:0] blocks_p = 1;
+	parameter y_p = &#34;inv&#34;;
+	parameter [31:0] y_size_p = 16;
+	parameter S_above_vec_p = 0;
+	parameter dot_bar_vec_p = 0;
+	parameter B_vec_p = 0;
+	parameter one_vec_p = 0;
+	parameter harden_p = 0;
+	input [14:0] SDN_i;
+	input cr_i;
+	input [(y_size_p - 1):0] y_i;
+	input signed_i;
+	output cl_o;
+	output [(blocks_p - 1):0] c_o;
+	output [(blocks_p - 1):0] s_o;
+	genvar i;
+	initial ;
+	localparam y_shift_p = 9;
+	wire [((y_size_p + 8) + y_shift_p):0] y_pad = {{8 {(y_i[(y_size_p - 1)] &amp; signed_i)}}, y_i, 9&#39;b0};
+	wire [(((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? (((((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? (((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) - (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) + 1) : (((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) - (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))) + 1)) * 2) + (((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) * 2) - 1)) : (((((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) &gt;= (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))) ? (((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) - (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))) + 1) : (((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) - (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) + 1)) * 2) + (((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) * 2) - 1))):(((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? ((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) * 2) : ((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) * 2))] y_in;
+	generate
+		for (i = 0; (i &lt; blocks_p); i = (i + 1)) begin : wiring
+			localparam [31:0] x7 = (((y_shift_p + y_p) + i) - 6);
+			localparam [31:0] x6 = ((((y_shift_p + y_p) + i) - 6) - 1);
+			localparam [31:0] x5 = (((y_shift_p + y_p) + i) - 4);
+			localparam [31:0] x4 = ((((y_shift_p + y_p) + i) - 4) - 1);
+			localparam [31:0] x3 = (((y_shift_p + y_p) + i) - 2);
+			localparam [31:0] x2 = ((((y_shift_p + y_p) + i) - 2) - 1);
+			localparam [31:0] x1 = ((y_shift_p + y_p) + i);
+			localparam [31:0] x0 = (((y_shift_p + y_p) + i) - 1);
+			assign y_in[((((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? ((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) : ((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) - (((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) - (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))))) * 2)+:2] = {y_pad[x1], y_pad[x0]};
+			assign y_in[((((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? (((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) + 1) : ((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) - ((((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) + 1) - (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))))) * 2)+:2] = {y_pad[x3], y_pad[x2]};
+			assign y_in[((((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? (((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) + 2) : ((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) - ((((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) + 2) - (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))))) * 2)+:2] = {y_pad[x5], y_pad[x4]};
+			assign y_in[((((((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1))) &gt;= (((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4))) ? (((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) + 3) : ((((blocks_p - 1) &gt;= 0) ? 0 : ((blocks_p - 1) * 4)) - ((((((blocks_p - 1) &gt;= 0) ? i : (0 - (i - (blocks_p - 1)))) * 4) + 3) - (((blocks_p - 1) &gt;= 0) ? (((((blocks_p - 1) &gt;= 0) ? blocks_p : (2 - blocks_p)) * 4) + -1) : ((((0 &gt;= (blocks_p - 1)) ? (2 - blocks_p) : blocks_p) * 4) + (((blocks_p - 1) * 4) - 1)))))) * 2)+:2] = {y_pad[x7], y_pad[x6]};
+		end
+	endgenerate
+	bsg_mul_booth_4_block_rep #(
+		.blocks_p(blocks_p),
+		.S_above_vec_p(S_above_vec_p),
+		.dot_bar_vec_p(dot_bar_vec_p),
+		.B_vec_p(B_vec_p),
+		.one_vec_p(one_vec_p)
+	) bb4bh(
+		.SDN_i(SDN_i),
+		.cr_i(cr_i),
+		.y_vec_i(y_in),
+		.cl_o(cl_o),
+		.c_o(c_o),
+		.s_o(s_o)
+	);
+endmodule
+module bsg_mul_csa_rep (
+	a_i,
+	b_i,
+	c_i,
+	c_o,
+	s_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter blocks_p = &#34;inv&#34;;
+	parameter group_vec_p = &#34;inv&#34;;
+	parameter harden_p = 0;
+	input [(width_p - 1):0] a_i;
+	input [(width_p - 1):0] b_i;
+	input [(width_p - 1):0] c_i;
+	output [(width_p - 1):0] c_o;
+	output [(width_p - 1):0] s_o;
+	genvar i;
+	genvar j;
+	generate
+		for (j = 0; (j &lt; blocks_p); j = (j + 1)) begin : rof
+			localparam group_end_lp = ((group_vec_p &gt;&gt; ((j + 1) &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam group_start_lp = ((group_vec_p &gt;&gt; (j &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam [31:0] blocks_lp = (group_end_lp - group_start_lp);
+			for (i = 0; (i &lt; blocks_lp); i = (i + 1)) begin : rof
+				bsg_mul_csa csa(
+					.x_i(a_i[(group_start_lp + i)]),
+					.y_i(b_i[(group_start_lp + i)]),
+					.z_i(c_i[(group_start_lp + i)]),
+					.c_o(c_o[(group_start_lp + i)]),
+					.s_o(s_o[(group_start_lp + i)])
+				);
+			end
+		end
+	endgenerate
+endmodule
+module bsg_mul_green_booth_dots (
+	SDN_i,
+	y_i,
+	dot_o
+);
+	parameter width_p = &#34;inv&#34;;
+	parameter harden_p = 0;
+	parameter blocks_p = &#34;inv&#34;;
+	parameter group_vec_p = &#34;inv&#34;;
+	input [5:0] SDN_i;
+	input [(width_p - 1):0] y_i;
+	output [((width_p + 2) - 1):0] dot_o;
+	wire [((width_p + 2) - 1):0] y_pad = {y_i, 2&#39;b00};
+	genvar i;
+	genvar j;
+	generate
+		for (j = 0; (j &lt; blocks_p); j = (j + 1)) begin : blk
+			localparam group_end_lp = ((group_vec_p &gt;&gt; ((j + 1) &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam group_start_lp = ((group_vec_p &gt;&gt; (j &lt;&lt; 3)) &amp; 8&#39;hFF);
+			localparam [31:0] blocks_lp = (group_end_lp - group_start_lp);
+			if (((j != 0) &amp;&amp; harden_p)) begin : macro
+				bsg_and #(
+					.width_p(blocks_lp),
+					.harden_p(harden_p)
+				) ba(
+					.a_i({blocks_lp {SDN_i[5]}}),
+					.b_i(y_pad[group_start_lp+:blocks_lp]),
+					.o(dot_o[group_start_lp+:blocks_lp])
+				);
+			end
+			else begin : notmacro
+				for (i = 0; (i &lt; blocks_lp); i = (i + 1)) begin : b
+					if (((j == 0) &amp;&amp; (i == 0))) begin : fi
+						assign dot_o[0] = SDN_i[0];
+					end
+					else if (((j == 0) &amp;&amp; (i == 1))) begin : fi
+						assign dot_o[1] = 1&#39;b0;
+					end
+					else begin : fi
+						assign dot_o[(group_start_lp + i)] = (SDN_i[5] &amp; y_pad[(group_start_lp + i)]);
+					end
+				end
+			end
+		end
+	endgenerate
+endmodule
+
+</pre>
+</body>

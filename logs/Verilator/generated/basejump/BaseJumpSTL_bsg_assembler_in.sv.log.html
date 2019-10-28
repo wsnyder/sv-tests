@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v</a>
+time_elapsed: 0.074s
+</pre>
+<pre class="log">
+user_time: 0.06756999999999999
+system_time: 0.0063
+ram_usage: 11812
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v:32</a>: Define or directive not defined: &#39;`BSG_MAX&#39;
+    , input         [`BSG_MAX(0,$clog2(num_in_p)-1):0]  in_top_channel_i
+                     ^~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v:32</a>: syntax error, unexpected &#39;,&#39;
+    , input         [`BSG_MAX(0,$clog2(num_in_p)-1):0]  in_top_channel_i
+                               ^
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v.html#l-33" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v:33</a>: Define or directive not defined: &#39;`BSG_MAX&#39;
+    , input         [`BSG_MAX(0,$clog2(num_out_p)-1):0] out_top_channel_i
+                     ^~~~~~~~
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v:44</a>: syntax error, unexpected IDENTIFIER
+   bsg_round_robin_fifo_to_fifo #(.width_p(width_p)
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 4 error(s)
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_in.v</a>
+
+</pre>
+</body>

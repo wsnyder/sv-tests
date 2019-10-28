@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_link
+top_module: 
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v</a>
+time_elapsed: 0.004s
+</pre>
+<pre class="log">
+user_time: 0.0038309999999999998
+system_time: 0.0
+ram_usage: 8304
+
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v.html#l-91" target="file-frame">third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v:91</a>:5: error: unknown module &#39;bsg_link_iddr_phy&#39;
+    bsg_link_iddr_phy
+    ^~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v.html#l-100" target="file-frame">third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v:100</a>:5: error: unknown module &#39;bsg_link_source_sync_downstream&#39;
+    bsg_link_source_sync_downstream
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v.html#l-124" target="file-frame">third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v:124</a>:3: error: unknown module &#39;bsg_serial_in_parallel_out_full&#39;
+  bsg_serial_in_parallel_out_full
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>
