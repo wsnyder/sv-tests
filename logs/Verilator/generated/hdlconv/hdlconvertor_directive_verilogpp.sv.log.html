@@ -14,18 +14,21 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/directive_verilogpp.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/directive_verilogpp.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.101s
 </pre>
 <pre class="log">
-user_time: 0.074532
-system_time: 0.015662
-ram_usage: 11624
+user_time: 0.080701
+system_time: 0.019962999999999998
+ram_usage: 11572
 
 %Error: noexistingfile.v:17: Define or directive not defined: &#39;`unconnected_drive&#39;
                            : ... Suggested alternative: &#39;`nounconnected_drive&#39;
-`unconnected_drive
+`unconnected_drive pull1
 ^~~~~~~~~~~~~~~~~~
-%Error: Exiting due to 1 error(s)
+%Error: noexistingfile.v:17: syntax error, unexpected STRENGTH keyword (strong1/etc)
+`unconnected_drive pull1
+                   ^~~~~
+%Error: Exiting due to 2 error(s)
 
 </pre>
 </body>
