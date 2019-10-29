@@ -14,12 +14,12 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.090s
 </pre>
 <pre class="log">
-user_time: 0.074804
-system_time: 0.01079
-ram_usage: 11856
+user_time: 0.078904
+system_time: 0.010726999999999999
+ram_usage: 11840
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv:2</a>: Unsupported: SystemVerilog 2009 reserved word not implemented: &#39;let&#39;
 let valid_arb(request, valid, override) = |(request &amp; valid) || override;
@@ -29,7 +29,6 @@ let valid_arb(request, valid, override) = |(request &amp; valid) || override;
     ^~~~~~~~~
 %Error: Exiting due to 2 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv</a>
 
 </pre>
 </body>

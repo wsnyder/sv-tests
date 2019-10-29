@@ -14,12 +14,12 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v</a>
-time_elapsed: 0.092s
+time_elapsed: 0.091s
 </pre>
 <pre class="log">
-user_time: 0.06537
-system_time: 0.026747
-ram_usage: 11732
+user_time: 0.081062
+system_time: 0.010306
+ram_usage: 11828
 
 %Error: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-9" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:9</a>: syntax error, unexpected IDENTIFIER, expecting PACKAGE-IDENTIFIER
   import bsg_cache_pkg::*;
@@ -115,7 +115,6 @@ ram_usage: 11732
           ? addr_r + (1 &lt;&lt; `BSG_SAFE_CLOG2(dram_ctrl_burst_len_p*data_width_p/8))
                            ^~~~~~~~~~~~~~~
 %Error: Exiting due to 31 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v</a>
 
 </pre>
 </body>

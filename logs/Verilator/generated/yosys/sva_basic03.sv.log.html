@@ -17,9 +17,9 @@ files: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" t
 time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.074403
-system_time: 0.011212999999999999
-ram_usage: 11916
+user_time: 0.075644
+system_time: 0.010572999999999999
+ram_usage: 11672
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
  check_selA: assert property ( @(posedge clk) selA |=&gt; Q == $past(QA) );
@@ -31,7 +31,6 @@ ram_usage: 11916
  assume_not_11: assume property ( @(posedge clk) !(selA &amp; selB) );
                        ^~~~~~~~
 %Error: Exiting due to 3 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv</a>
 
 </pre>
 </body>

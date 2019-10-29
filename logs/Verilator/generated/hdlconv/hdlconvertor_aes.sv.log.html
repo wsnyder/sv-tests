@@ -14,12 +14,12 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v</a>
-time_elapsed: 0.092s
+time_elapsed: 0.097s
 </pre>
 <pre class="log">
-user_time: 0.083727
-system_time: 0.008152999999999999
-ram_usage: 11620
+user_time: 0.08666
+system_time: 0.010235
+ram_usage: 11616
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html#l-226" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v:226</a>: Cannot find file containing module: &#39;aes_key_expand_128&#39;
 aes_key_expand_128 u0(
@@ -83,7 +83,6 @@ aes_sbox us32( .a( sa32 ), .d( sa32_sub ));
 aes_sbox us33( .a( sa33 ), .d( sa33_sub ));
 ^~~~~~~~
 %Error: Exiting due to 17 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/aes.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/aes.v</a>
 
 </pre>
 </body>

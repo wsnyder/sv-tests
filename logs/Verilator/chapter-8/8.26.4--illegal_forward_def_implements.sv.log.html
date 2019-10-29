@@ -14,12 +14,12 @@ tags: 8.26.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
 files: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>
-time_elapsed: 0.083s
+time_elapsed: 0.088s
 </pre>
 <pre class="log">
-user_time: 0.064085
-system_time: 0.018963999999999998
-ram_usage: 11904
+user_time: 0.077039
+system_time: 0.011377
+ram_usage: 11820
 
 %Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:8</a>: syntax error, unexpected interface, expecting TYPE-IDENTIFIER
  typedef interface class ihello;
@@ -64,7 +64,6 @@ ram_usage: 11904
 %Error: Internal Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-7" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:7</a>: ../V3ParseSym.h:115: Symbols suggest ending TASK &#39;hello&#39; but parser thinks ending MODULE &#39;class_tb&#39;
 module class_tb ();
        ^~~~~~~~
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8 <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>
 
 </pre>
 </body>

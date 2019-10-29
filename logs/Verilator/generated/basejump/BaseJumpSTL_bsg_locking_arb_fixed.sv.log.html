@@ -14,36 +14,13 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v</a>
-time_elapsed: 135.187s
+time_elapsed: 0.081s
 </pre>
 <pre class="log">
-user_time: 132.656943
-system_time: 2.529924
-ram_usage: 3333512
+user_time: 0.06486
+system_time: 0.016614
+ram_usage: 11576
 
-%Warning-WIDTHCONCAT: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-94" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:94</a>: More than a 8k bit replication is probably wrong: 6909558
-                                                                                                                 : ... In instance bsg_locking_arb_fixed.fixed_arb.enc.genblk2.scan
-    assign fill = { width_p {1&#39;b0} };
-                            ^
-                      <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v.html#l-29" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v:29</a>: ... note: In file included from bsg_priority_encode_one_hot_out.v
-                      <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_arb_fixed.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_arb_fixed.v:19</a>: ... note: In file included from bsg_arb_fixed.v
-                      <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v:31</a>: ... note: In file included from bsg_locking_arb_fixed.v
-                      ... Use &#34;/* verilator lint_off WIDTHCONCAT */&#34; and lint_on around source to disable this message.
-%Warning-UNOPTFLAT: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-49" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:49</a>: Signal unoptimizable: Feedback to clock or circular logic: &#39;bsg_locking_arb_fixed.fixed_arb.enc.genblk2.scan.t&#39;
-   wire [$clog2(width_p):0][width_p-1:0] t;
-                                         ^
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v.html#l-29" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v:29</a>: ... note: In file included from bsg_priority_encode_one_hot_out.v
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_arb_fixed.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_arb_fixed.v:19</a>: ... note: In file included from bsg_arb_fixed.v
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v:31</a>: ... note: In file included from bsg_locking_arb_fixed.v
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-49" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:49</a>:      Example path: bsg_locking_arb_fixed.fixed_arb.enc.genblk2.scan.t
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:80</a>:      Example path: ASSIGNW
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-80" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:80</a>:      Example path: bsg_locking_arb_fixed.fixed_arb.enc.genblk2.scan.genblk3.genblk1.scanN.row[0].shifted
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-95" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:95</a>:      Example path: ASSIGNW
-                    <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_scan.v.html#l-49" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_scan.v:49</a>:      Example path: bsg_locking_arb_fixed.fixed_arb.enc.genblk2.scan.t
-terminate called after throwing an instance of &#39;std::bad_alloc&#39;
-  what():  std::bad_alloc
-%Error: Verilator aborted.  Consider trying --debug --gdbbt
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_locking_arb_fixed.v</a>
-
+Timeout
 </pre>
 </body>

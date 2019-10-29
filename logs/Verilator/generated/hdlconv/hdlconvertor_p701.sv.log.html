@@ -14,12 +14,12 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv</a>
-time_elapsed: 0.085s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.072852
-system_time: 0.012253
-ram_usage: 11604
+user_time: 0.07643599999999999
+system_time: 0.010572999999999999
+ram_usage: 11524
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv:1</a>: syntax error, unexpected &#39;.&#39;, expecting &#39;[&#39;
 module renamed_concat (.a({b,c}), f, .g(h[1]));
@@ -28,7 +28,6 @@ module renamed_concat (.a({b,c}), f, .g(h[1]));
 module mixed_direction (.p({a, e}));
                         ^
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p701.sv</a>
 
 </pre>
 </body>

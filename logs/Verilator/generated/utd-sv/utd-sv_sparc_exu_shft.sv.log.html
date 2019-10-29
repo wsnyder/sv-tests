@@ -14,12 +14,12 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v</a>
-time_elapsed: 0.090s
+time_elapsed: 0.092s
 </pre>
 <pre class="log">
-user_time: 0.08255499999999999
-system_time: 0.007928
-ram_usage: 11680
+user_time: 0.07571499999999999
+system_time: 0.016767999999999998
+ram_usage: 11696
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html#l-79" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v:79</a>: Cannot find file containing module: &#39;dp_mux2es&#39;
    dp_mux2es #(64) mux_shiftout(.dout(shft_alu_shift_out_e[63:0]), .in0(lshift1[63:0]),
@@ -74,7 +74,6 @@ ram_usage: 11680
    dp_buffer #(64) buf_lshift4(.dout(lshift4_b1[63:0]), .in(lshift4[63:0]));
    ^~~~~~~~~
 %Error: Exiting due to 14 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sparc_exu_shft.v.html" target="file-frame">third_party/tests/utd-sv/sparc_exu_shft.v</a>
 
 </pre>
 </body>

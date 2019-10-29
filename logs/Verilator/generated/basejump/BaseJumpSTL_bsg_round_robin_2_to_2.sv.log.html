@@ -14,12 +14,12 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v</a>
-time_elapsed: 0.091s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.060663999999999996
-system_time: 0.030448999999999997
-ram_usage: 11800
+user_time: 0.080603
+system_time: 0.006717
+ram_usage: 11828
 
 %Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html#l-8" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v:8</a>: Little bit endian vector: MSB &lt; LSB of bit range: -3:0
     , input [width_p*2-1:0] data_i
@@ -41,7 +41,6 @@ ram_usage: 11800
    assign data_o  = head_r ? { data_i[0+:width_p], data_i[width_p+:width_p] } : data_i;
                            ^
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v</a>
 
 </pre>
 </body>

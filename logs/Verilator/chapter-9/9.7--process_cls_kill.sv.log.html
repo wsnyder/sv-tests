@@ -14,12 +14,12 @@ tags: 9.7
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
 files: <a href="../../../tests/chapter-9/9.7--process_cls_kill.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_kill.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.061237
-system_time: 0.026615999999999997
-ram_usage: 11708
+user_time: 0.082407
+system_time: 0.003985
+ram_usage: 11896
 
 %Error: <a href="../../../tests/chapter-9/9.7--process_cls_kill.sv.html#l-9" target="file-frame">tests/chapter-9/9.7--process_cls_kill.sv:9</a>: syntax error, unexpected IDENTIFIER
   process job[] = new [N];
@@ -47,7 +47,6 @@ ram_usage: 11708
    if(job[i].status != process::FINISHED)
                               ^~
 %Error: Cannot continue
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9 <a href="../../../tests/chapter-9/9.7--process_cls_kill.sv.html" target="file-frame">tests/chapter-9/9.7--process_cls_kill.sv</a>
 
 </pre>
 </body>

@@ -14,18 +14,17 @@ tags: 6.18
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef
 top_module: 
 files: <a href="../../../../tests/generic/typedef/typedef_test_7.sv.html" target="file-frame">tests/generic/typedef/typedef_test_7.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.094s
 </pre>
 <pre class="log">
-user_time: 0.066481
-system_time: 0.022694
-ram_usage: 11588
+user_time: 0.07314
+system_time: 0.020755
+ram_usage: 11584
 
 %Error: <a href="../../../../tests/generic/typedef/typedef_test_7.sv.html#l-7" target="file-frame">tests/generic/typedef/typedef_test_7.sv:7</a>: syntax error, unexpected IDENTIFIER, expecting TYPE-IDENTIFIER
 typedef struct { int i, j, k; bool b, c, d; } mystruct;
                               ^~~~
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef <a href="../../../../tests/generic/typedef/typedef_test_7.sv.html" target="file-frame">tests/generic/typedef/typedef_test_7.sv</a>
 
 </pre>
 </body>

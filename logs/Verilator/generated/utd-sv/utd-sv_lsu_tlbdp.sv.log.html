@@ -17,9 +17,9 @@ files: <a href="../../../../third_party/tests/utd-sv/lsu_tlbdp.v.html" target="f
 time_elapsed: 0.093s
 </pre>
 <pre class="log">
-user_time: 0.080826
-system_time: 0.011915
-ram_usage: 11588
+user_time: 0.07824199999999999
+system_time: 0.014685
+ram_usage: 11872
 
 %Warning-IMPLICIT: <a href="../../../../third_party/tests/utd-sv/lsu_tlbdp.v.html#l-134" target="file-frame">third_party/tests/utd-sv/lsu_tlbdp.v:134</a>: Signal definition not found, creating implicitly: &#39;ld_inst_vld_m&#39;
 assign  stb_cam_vld = ld_inst_vld_m &amp; (tlb_cam_hit | dtlb_bypass_m) &amp; 
@@ -42,7 +42,6 @@ dff_s #(1) dtlb_bypass_stgm  (
 dff_s #(1) ld_inst_vld_stgm  (
 ^~~~~
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/lsu_tlbdp.v.html" target="file-frame">third_party/tests/utd-sv/lsu_tlbdp.v</a>
 
 </pre>
 </body>

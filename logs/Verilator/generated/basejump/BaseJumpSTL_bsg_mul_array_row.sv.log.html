@@ -14,29 +14,13 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v</a>
-time_elapsed: 82.234s
+time_elapsed: 0.073s
 </pre>
 <pre class="log">
-user_time: 79.237865
-system_time: 2.996353
-ram_usage: 4203692
+user_time: 0.060916
+system_time: 0.01248
+ram_usage: 11692
 
-%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html#l-58" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v:58</a>: Logical Operator GENIF expects 1 bit on the If, but If&#39;s VARREF &#39;pipeline_p&#39; generates 24 bits.
-                                                                                                                    : ... In instance bsg_mul_array_row
-  if (pipeline_p) begin
-  ^~
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
-%Warning-SELRANGE: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v:32</a>: Selection index out of range: 6909559:6909559 outside 6909557:0
-                                                                                                                       : ... In instance bsg_mul_array_row
-    ,.b_i({width_p{b_i[row_idx_p+1]}})
-                      ^
-%Warning-WIDTHCONCAT: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html#l-32" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v:32</a>: More than a 8k bit replication is probably wrong: 6909558
-    ,.b_i({width_p{b_i[row_idx_p+1]}})
-                  ^
-terminate called after throwing an instance of &#39;std::bad_alloc&#39;
-  what():  std::bad_alloc
-%Error: Verilator aborted.  Consider trying --debug --gdbbt
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v</a>
-
+Timeout
 </pre>
 </body>

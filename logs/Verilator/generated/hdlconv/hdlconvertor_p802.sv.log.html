@@ -17,9 +17,9 @@ files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017
 time_elapsed: 0.090s
 </pre>
 <pre class="log">
-user_time: 0.070794
-system_time: 0.01927
-ram_usage: 11824
+user_time: 0.086723
+system_time: 0.003173
+ram_usage: 11588
 
 %Warning-MULTITOP: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv:13</a>: Multiple top level modules
                                                                                                                         : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
@@ -46,11 +46,10 @@ DFF dff[bits-1:0] (q, d, clk);
              obj_dir/DFF
              obj_dir/DFF.v
              obj_dir/DFF.sv
-%Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html#l-29" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv:29</a>: ../V3Width.cpp:2794: Visit function missing? Widthed expectation for this node: PARSEREF 0x561ef54f8830 &lt;e519&gt; {c29}  bits [TEXT]
+%Error: Internal Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html#l-29" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv:29</a>: ../V3Width.cpp:2794: Visit function missing? Widthed expectation for this node: PARSEREF 0x56163882d830 &lt;e519&gt; {c29}  bits [TEXT]
                                                                                                                              : ... In instance MxN_pipeline.p
 DFF dff[bits-1:0] (q, d, clk);  
         ^~~~
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p802.sv</a>
 
 </pre>
 </body>

@@ -14,12 +14,12 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic00.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic00.sv</a>
-time_elapsed: 0.083s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.07583
-system_time: 0.007639
-ram_usage: 11792
+user_time: 0.07767299999999999
+system_time: 0.007896
+ram_usage: 11568
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic00.sv.html#l-9" target="file-frame">third_party/tools/yosys/tests/sva/basic00.sv:9</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
  test_assert: assert property ( @(posedge clk) disable iff (reset) antecedent |=&gt; consequent )
@@ -28,7 +28,6 @@ ram_usage: 11792
    else $error(&#34;Failed with consequent = &#34;, $sampled(consequent));
                                             ^~~~~~~~
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva <a href="../../../../third_party/tools/yosys/tests/sva/basic00.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic00.sv</a>
 
 </pre>
 </body>

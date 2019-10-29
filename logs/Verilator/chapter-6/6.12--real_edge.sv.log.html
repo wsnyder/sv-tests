@@ -14,12 +14,12 @@ tags: 6.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.12--real_edge.sv.html" target="file-frame">tests/chapter-6/6.12--real_edge.sv</a>
-time_elapsed: 0.085s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.079585
-system_time: 0.005482
-ram_usage: 11900
+user_time: 0.071604
+system_time: 0.017027999999999998
+ram_usage: 11632
 
 %Error: <a href="../../../tests/chapter-6/6.12--real_edge.sv.html#l-9" target="file-frame">tests/chapter-6/6.12--real_edge.sv:9</a>: Unsupported: Non-single bit wide signal pos/negedge sensitivity: &#39;top.a&#39;
  always @(posedge a)
@@ -29,7 +29,6 @@ ram_usage: 11900
       ^
 %Error: Exiting due to 2 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.12--real_edge.sv.html" target="file-frame">tests/chapter-6/6.12--real_edge.sv</a>
 
 </pre>
 </body>

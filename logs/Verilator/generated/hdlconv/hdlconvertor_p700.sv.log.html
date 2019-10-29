@@ -14,12 +14,12 @@ tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv</a>
-time_elapsed: 0.085s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.07216199999999999
-system_time: 0.012782
-ram_usage: 11712
+user_time: 0.08042099999999999
+system_time: 0.0065899999999999995
+ram_usage: 11592
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html#l-17" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv:17</a>: syntax error, unexpected &#39;{&#39;, expecting &#39;[&#39;
 module complex_ports( {c,d}, .e(f) );
@@ -28,7 +28,6 @@ module complex_ports( {c,d}, .e(f) );
 module same_port (.a(i), .b(i));
                   ^
 %Error: Exiting due to 2 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p700.sv</a>
 
 </pre>
 </body>

@@ -14,12 +14,12 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_random_gen.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_random_gen.v</a>
-time_elapsed: 0.072s
+time_elapsed: 0.076s
 </pre>
 <pre class="log">
-user_time: 0.063133
-system_time: 0.008667
-ram_usage: 11740
+user_time: 0.055496
+system_time: 0.020354
+ram_usage: 11628
 
 %Error: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_random_gen.v.html#l-28" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_random_gen.v:28</a>: Unsupported: Seeding $random doesn&#39;t map to C++, use $c(&#34;srand&#34;)
       data_o &lt;= $random(seed_p);
@@ -28,7 +28,6 @@ ram_usage: 11740
       data_o &lt;= $random(seed_p);
              ^~
                         ... See the manual and http://www.veripool.org/verilator for more assistance.
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_random_gen.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_random_gen.v</a>
 
 </pre>
 </body>

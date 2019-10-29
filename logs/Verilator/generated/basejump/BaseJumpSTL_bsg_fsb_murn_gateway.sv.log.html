@@ -14,32 +14,13 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v</a>
-time_elapsed: 158.457s
+time_elapsed: 0.082s
 </pre>
 <pre class="log">
-user_time: 155.055279
-system_time: 3.401439
-ram_usage: 4203692
+user_time: 0.067163
+system_time: 0.014565
+ram_usage: 11880
 
-%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v:44</a>: Operator SUB expects 32 bits on the LHS, but LHS&#39;s VARREF &#39;width_p&#39; generates 24 bits.
-                                                                                                                      : ... In instance bsg_fsb_murn_gateway
-                        width_p - 2* id_width_p - $bits(bsg_fsb_opcode_s) -1; 
-                                ^
-                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
-%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v:44</a>: Little bit endian vector: MSB &lt; LSB of bit range: -6909567:0
-    logic [fsb_pkt_data_width_lp-1:0]     data;                                
-          ^
-%Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html#l-44" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v:44</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
-   typedef logic [width_p - id_width_p-1 -1:0] bsg_fsb_pkt_client_data_t;  
-                 ^
-%Warning-WIDTH: <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html#l-71" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v:71</a>: Operator EQ expects 6909558 bits on the RHS, but RHS&#39;s VARREF &#39;id_p&#39; generates 24 bits.
-                                                                                                                      : ... In instance bsg_fsb_murn_gateway
-        wire  id_match      = data_RPT.destid == id_p;
-                                              ^~
-terminate called after throwing an instance of &#39;std::bad_alloc&#39;
-  what():  std::bad_alloc
-%Error: Verilator aborted.  Consider trying --debug --gdbbt
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fsb <a href="../../../../third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fsb/bsg_fsb_murn_gateway.v</a>
-
+Timeout
 </pre>
 </body>

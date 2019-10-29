@@ -14,12 +14,12 @@ tags: 6.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv</a>
-time_elapsed: 0.084s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.069133
-system_time: 0.014528999999999999
-ram_usage: 11592
+user_time: 0.073373
+system_time: 0.013545
+ram_usage: 11892
 
 %Warning-WIDTH: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html#l-12" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv:12</a>: Bit extraction of var[3:0] requires 2 bit index, not 64 bits.
                                                                                                      : ... In instance top
@@ -31,7 +31,6 @@ ram_usage: 11592
  assign c = b[a];
              ^
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv</a>
 
 </pre>
 </body>

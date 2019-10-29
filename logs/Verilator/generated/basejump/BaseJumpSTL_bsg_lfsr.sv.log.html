@@ -14,12 +14,12 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v</a>
-time_elapsed: 0.089s
+time_elapsed: 0.091s
 </pre>
 <pre class="log">
-user_time: 0.064751
-system_time: 0.023798999999999997
-ram_usage: 11884
+user_time: 0.074701
+system_time: 0.016517999999999998
+ram_usage: 11560
 
 %Warning-LITENDIAN: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v:10</a>: Little bit endian vector: MSB &lt; LSB of bit range: -2:0
     , output logic [width_p-1:0] o
@@ -41,7 +41,6 @@ ram_usage: 11884
    assign o_n = (o_r &gt;&gt; 1) ^ ({width_p {o_r[0]}} &amp; xor_mask);
                                                  ^
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_lfsr.v</a>
 
 </pre>
 </body>

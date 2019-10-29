@@ -14,12 +14,12 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_snpdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_snpdp.v</a>
-time_elapsed: 0.096s
+time_elapsed: 0.093s
 </pre>
 <pre class="log">
-user_time: 0.08534699999999999
-system_time: 0.010690999999999999
-ram_usage: 11872
+user_time: 0.081333
+system_time: 0.011902999999999999
+ram_usage: 11840
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_snpdp.v.html#l-85" target="file-frame">third_party/tests/utd-sv/sctag_snpdp.v:85</a>: Cannot find file containing module: &#39;clken_buf&#39;
 clken_buf  ckbuf_1  (.clk(clk_1), .rclk(rclk), .enb_l(~snp_hdr1_wen0_s0), .tmb_l(~se));
@@ -149,7 +149,6 @@ dff_s     #(1)    ff_snpctl_rd_ptr_d1_3  (.din(snpctl_rd_ptr), .clk(rclk),
 mux2ds  #(32) mux_data_px2_1 (.dout (snpq_arbdp_data_px2[63:32]) ,
 ^~~~~~
 %Error: Exiting due to 39 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sctag_snpdp.v.html" target="file-frame">third_party/tests/utd-sv/sctag_snpdp.v</a>
 
 </pre>
 </body>

@@ -14,12 +14,12 @@ tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
 files: <a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v</a>
-time_elapsed: 0.078s
+time_elapsed: 0.075s
 </pre>
 <pre class="log">
-user_time: 0.062404999999999995
-system_time: 0.015196
-ram_usage: 11844
+user_time: 0.062739
+system_time: 0.012232999999999999
+ram_usage: 11888
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v:13</a>: Duplicate declaration of signal: &#39;Data_o&#39;
                                                                                                 : ... note: ANSI ports must have type declared with the I/O (IEEE 2017 23.2.2.2)
@@ -29,7 +29,6 @@ ram_usage: 11844
   output [DataWidth-1:0] Data_o,
                          ^~~~~~
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple <a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v</a>
 
 </pre>
 </body>

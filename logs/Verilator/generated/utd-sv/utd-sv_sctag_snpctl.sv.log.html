@@ -14,12 +14,12 @@ tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
 files: <a href="../../../../third_party/tests/utd-sv/sctag_snpctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_snpctl.v</a>
-time_elapsed: 0.093s
+time_elapsed: 0.092s
 </pre>
 <pre class="log">
-user_time: 0.070144
-system_time: 0.023264999999999997
-ram_usage: 11756
+user_time: 0.073734
+system_time: 0.017979
+ram_usage: 11880
 
 %Error: <a href="../../../../third_party/tests/utd-sv/sctag_snpctl.v.html#l-88" target="file-frame">third_party/tests/utd-sv/sctag_snpctl.v:88</a>: Cannot find file containing module: &#39;dffrl_async&#39;
  dffrl_async    #(1)    reset_flop      (.q(dbb_rst_l),
@@ -71,7 +71,6 @@ dffrl_s #(2)  ff_snp_valid (.q(snpq_valid[1:0]), .din (snpq_valid_in[1:0]),
 dffrl_s #(1)  ff_rd_ptr (.q(rd_ptr), .din (rd_ptr_in),
 ^~~~~~~
 %Error: Exiting due to 13 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv <a href="../../../../third_party/tests/utd-sv/sctag_snpctl.v.html" target="file-frame">third_party/tests/utd-sv/sctag_snpctl.v</a>
 
 </pre>
 </body>

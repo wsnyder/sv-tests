@@ -14,12 +14,12 @@ tags: 6.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
 files: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
-time_elapsed: 0.084s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.073209
-system_time: 0.010543
-ram_usage: 11756
+user_time: 0.070995
+system_time: 0.016382
+ram_usage: 11848
 
 %Error: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>: Duplicate declaration of signal: &#39;v&#39;
  wire v;
@@ -28,7 +28,6 @@ ram_usage: 11756
  reg v;
      ^
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6 <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
 
 </pre>
 </body>

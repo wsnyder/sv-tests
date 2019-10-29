@@ -14,18 +14,17 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_hash_bank_reverse.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_hash_bank_reverse.v</a>
-time_elapsed: 0.087s
+time_elapsed: 0.074s
 </pre>
 <pre class="log">
-user_time: 0.082926
-system_time: 0.0039109999999999995
-ram_usage: 11732
+user_time: 0.06773699999999999
+system_time: 0.006229999999999999
+ram_usage: 11656
 
 %Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_hash_bank_reverse.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_hash_bank_reverse.v:7</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
 module bsg_hash_bank_reverse #(parameter banks_p=&#34;inv&#34;, width_p=&#34;inv&#34;, index_width_lp=$clog2((2**width_p+banks_p-1)/banks_p), lg_banks_lp=`BSG_SAFE_CLOG2(banks_p), debug_lp=0)
                                                                                                                                           ^~~~~~~~~~~~~~~
 %Error: Exiting due to 1 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_hash_bank_reverse.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_hash_bank_reverse.v</a>
 
 </pre>
 </body>

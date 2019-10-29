@@ -14,12 +14,12 @@ tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
 top_module: 
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v</a>
-time_elapsed: 0.094s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.079369
-system_time: 0.014678
-ram_usage: 11716
+user_time: 0.084538
+system_time: 0.002562
+ram_usage: 11696
 
 %Error: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-339" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:339</a>: Define or directive not defined: &#39;`BSG_MAX&#39;
    logic [`BSG_MAX(0,$clog2(link_channels_p)-1):0] core_top_active_channel_bao_r, core_top_active_channel_bai_r, core_top_active_channel_n;
@@ -58,7 +58,6 @@ ram_usage: 11716
    typedef logic [`BSG_MAX($clog2(core_channels_p),1)-1:0]               bsg_comm_link_active_in_vec_t;
                                                   ^
 %Error: Exiting due to 12 error(s)
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v</a>
 
 </pre>
 </body>
