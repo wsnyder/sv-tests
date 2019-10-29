@@ -13,22 +13,25 @@ should_fail: 0
 tags: 7.12.2 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.08411199999999999
-system_time: 0.003829
-ram_usage: 11624
+user_time: 0.074741
+system_time: 0.011332
+ram_usage: 11908
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:9</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
-                                                                                                           : ... In instance top
+%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:10</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
+                                                                                                            : ... In instance top
 int ia[] = { 1, 2, 3, 4, 5 };
     ^~
-%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:9</a>: ../V3Width.cpp:1344: LHS var should be size complete
-                                                                                                                           : ... In instance top
+%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv:10</a>: ../V3Width.cpp:1344: LHS var should be size complete
+                                                                                                                            : ... In instance top
 int ia[] = { 1, 2, 3, 4, 5 };
            ^
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

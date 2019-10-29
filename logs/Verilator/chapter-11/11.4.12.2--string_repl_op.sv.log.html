@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: string replication operator test
 should_fail: 0
 tags: 11.4.12.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../tests/chapter-11/11.4.12.2--string_repl_op.sv.html" target="file-frame">tests/chapter-11/11.4.12.2--string_repl_op.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.080067
-system_time: 0.010480999999999999
-ram_usage: 11852
+user_time: 0.072542
+system_time: 0.014270999999999999
+ram_usage: 11908
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

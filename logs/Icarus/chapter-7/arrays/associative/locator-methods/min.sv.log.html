@@ -13,19 +13,22 @@ should_fail: 0
 tags: 7.12.1 7.12 7.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.013s
 </pre>
 <pre class="log">
-user_time: 0.0021579999999999998
-system_time: 0.006411
-ram_usage: 9732
+user_time: 0.011778
+system_time: 0.000987
+ram_usage: 9684
 
-<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:9</a>: internal error: I don&#39;t know how to elaborate(ivl_type_t) this expression: {&#39;sd10, &#39;sd20, &#39;sd2, &#39;sd11, &#39;sd5}
-<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:13</a>: error: the type of the variable &#39;s.min&#39; doesn&#39;t match the context type.
-<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:13</a>:      : variable type=dynamic array of bool signed[31:0]
-<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:13</a>:      : context type=bool signed[31:0]
+<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:10</a>: internal error: I don&#39;t know how to elaborate(ivl_type_t) this expression: {&#39;sd10, &#39;sd20, &#39;sd2, &#39;sd11, &#39;sd5}
+<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:14</a>: error: the type of the variable &#39;s.min&#39; doesn&#39;t match the context type.
+<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:14</a>:      : variable type=dynamic array of bool signed[31:0]
+<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/min.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/min.sv:14</a>:      : context type=bool signed[31:0]
 Elaboration failed
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

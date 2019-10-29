@@ -13,13 +13,15 @@ should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.079153
-system_time: 0.010827999999999999
-ram_usage: 11580
+user_time: 0.071889
+system_time: 0.015085
+ram_usage: 11592
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv:5</a>: Found definition of &#39;factorial&#39; as a VAR but expected a task/function
       factorial = factorial (operand - 1) * operand;

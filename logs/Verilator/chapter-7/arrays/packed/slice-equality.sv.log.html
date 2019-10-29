@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test packed arrays operations support (slice equality)
 should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/packed/slice-equality.sv.html" target="file-frame">tests/chapter-7/arrays/packed/slice-equality.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.088s
 </pre>
 <pre class="log">
-user_time: 0.08478
-system_time: 0.004186
-ram_usage: 11824
+user_time: 0.070363
+system_time: 0.017835
+ram_usage: 11756
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

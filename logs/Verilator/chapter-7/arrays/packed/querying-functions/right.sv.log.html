@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test quering functions support on packed arrays
 should_fail: 0
 tags: 7.11 7.4.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/packed/querying-functions/right.sv.html" target="file-frame">tests/chapter-7/arrays/packed/querying-functions/right.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.061581
-system_time: 0.028249999999999997
-ram_usage: 11680
+user_time: 0.084202
+system_time: 0.0032419999999999997
+ram_usage: 11664
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

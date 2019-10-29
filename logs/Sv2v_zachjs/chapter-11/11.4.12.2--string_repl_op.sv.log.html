@@ -13,19 +13,21 @@ should_fail: 0
 tags: 11.4.12.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../tests/chapter-11/11.4.12.2--string_repl_op.sv.html" target="file-frame">tests/chapter-11/11.4.12.2--string_repl_op.sv</a>
-time_elapsed: 0.010s
+time_elapsed: 0.012s
 </pre>
 <pre class="log">
-user_time: 0.005242999999999999
-system_time: 0.005242999999999999
-ram_usage: 9584
+user_time: 0.0030009999999999998
+system_time: 0.009004999999999999
+ram_usage: 9596
 
 module top;
 	string str;
 	initial begin
-		str = {4 {&#34;test &#34;}};
-		$display(str);
+		str = {4 {&#34;test&#34;}};
+		$display(&#34;:assert:(&#39;%s&#39; == &#39;testtesttesttest&#39;)&#34;, str);
 	end
 endmodule
 

@@ -13,13 +13,15 @@ should_fail: 0
 tags: 11.10.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../tests/chapter-11/11.10.1--string_copy.sv.html" target="file-frame">tests/chapter-11/11.10.1--string_copy.sv</a>
-time_elapsed: 0.023s
+time_elapsed: 0.020s
 </pre>
 <pre class="log">
-user_time: 0.011479999999999999
-system_time: 0.011479999999999999
-ram_usage: 9608
+user_time: 0.011401999999999999
+system_time: 0.008324999999999999
+ram_usage: 9576
 
 module top;
 	reg [112:1] a;
@@ -27,7 +29,7 @@ module top;
 	initial begin
 		a = &#34;Test&#34;;
 		b = a;
-		$display(b);
+		$display(&#34;:assert:(&#39;%s&#39; == &#39;%s&#39;)&#34;, a, b);
 	end
 endmodule
 

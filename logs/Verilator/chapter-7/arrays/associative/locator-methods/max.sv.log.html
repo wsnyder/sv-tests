@@ -13,19 +13,22 @@ should_fail: 0
 tags: 7.12.1 7.12 7.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/max.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/max.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.094s
 </pre>
 <pre class="log">
-user_time: 0.07578399999999999
-system_time: 0.012263
-ram_usage: 11500
+user_time: 0.074696
+system_time: 0.019117
+ram_usage: 11864
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/max.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/max.sv:10</a>: Unsupported: $ expression
+%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/max.sv.html#l-11" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/max.sv:11</a>: Unsupported: $ expression
 int qi[$];
        ^
 %Error: Exiting due to 1 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

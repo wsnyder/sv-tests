@@ -13,13 +13,15 @@ should_fail: 0
 tags: 11.3.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../tests/chapter-11/11.3.5--expr_short_circuit.sv.html" target="file-frame">tests/chapter-11/11.3.5--expr_short_circuit.sv</a>
-time_elapsed: 0.025s
+time_elapsed: 0.019s
 </pre>
 <pre class="log">
-user_time: 0.00989
-system_time: 0.015439
-ram_usage: 9564
+user_time: 0.004657
+system_time: 0.013973
+ram_usage: 9684
 
 module top;
 	wire signed [31:0] a = 1;

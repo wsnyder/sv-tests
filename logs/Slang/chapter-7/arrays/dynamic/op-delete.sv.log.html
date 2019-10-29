@@ -13,18 +13,20 @@ should_fail: 0
 tags: 7.5.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv</a>
 time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.0
-system_time: 0.003038
-ram_usage: 9724
+user_time: 0.002963
+system_time: 0.0
+ram_usage: 9600
 
-../..<a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv:9</a>:14: error: dimension requires a constant range
+../..<a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv:10</a>:14: error: dimension requires a constant range
 bit [7:0] arr[];
              ^~
-../..<a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv:12</a>:11: error: language feature not yet supported
+../..<a href="../../../../../tests/chapter-7/arrays/dynamic/op-delete.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/dynamic/op-delete.sv:13</a>:11: error: language feature not yet supported
     arr = new [ 16 ];
           ^~~~~~~~~~
 

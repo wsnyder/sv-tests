@@ -25,26 +25,28 @@
 <a href="#l-17">17</a>
 <a href="#l-18">18</a>
 <a href="#l-19">19</a>
-<a href="#l-20">20</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a href="#l-20">20</a>
+<a href="#l-21">21</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
 <a name="l-2"></a><span class="cm">:name: constructor</span>
 <a name="l-3"></a><span class="cm">:description: class constructor test</span>
 <a name="l-4"></a><span class="cm">:should_fail: 0</span>
 <a name="l-5"></a><span class="cm">:tags: 8.7</span>
-<a name="l-6"></a><span class="cm">*/</span>
-<a name="l-7"></a><span class="k">module</span> <span class="n">class_tb</span> <span class="p">();</span>
-<a name="l-8"></a>	<span class="k">class</span> <span class="n">test_cls</span><span class="p">;</span>
-<a name="l-9"></a>		<span class="k">int</span> <span class="n">a</span><span class="p">;</span>
-<a name="l-10"></a>		<span class="k">function</span> <span class="k">new</span><span class="p">();</span>
-<a name="l-11"></a>			<span class="n">a</span> <span class="o">=</span> <span class="mh">42</span><span class="p">;</span>
-<a name="l-12"></a>		<span class="k">endfunction</span>
-<a name="l-13"></a>	<span class="k">endclass</span>
-<a name="l-14"></a>
-<a name="l-15"></a>	<span class="k">initial</span> <span class="k">begin</span>
-<a name="l-16"></a>		<span class="n">test_cls</span> <span class="n">test_obj</span> <span class="o">=</span> <span class="k">new</span><span class="p">;</span>
-<a name="l-17"></a>
-<a name="l-18"></a>		<span class="nb">$display</span><span class="p">(</span><span class="n">test_obj</span><span class="p">.</span><span class="n">a</span><span class="p">);</span>
-<a name="l-19"></a>	<span class="k">end</span>
-<a name="l-20"></a><span class="k">endmodule</span>
+<a name="l-6"></a><span class="cm">:type: simulation parsing</span>
+<a name="l-7"></a><span class="cm">*/</span>
+<a name="l-8"></a><span class="k">module</span> <span class="n">class_tb</span> <span class="p">();</span>
+<a name="l-9"></a>	<span class="k">class</span> <span class="n">test_cls</span><span class="p">;</span>
+<a name="l-10"></a>		<span class="k">int</span> <span class="n">a</span><span class="p">;</span>
+<a name="l-11"></a>		<span class="k">function</span> <span class="k">new</span><span class="p">();</span>
+<a name="l-12"></a>			<span class="n">a</span> <span class="o">=</span> <span class="mh">42</span><span class="p">;</span>
+<a name="l-13"></a>		<span class="k">endfunction</span>
+<a name="l-14"></a>	<span class="k">endclass</span>
+<a name="l-15"></a>
+<a name="l-16"></a>	<span class="k">initial</span> <span class="k">begin</span>
+<a name="l-17"></a>		<span class="n">test_cls</span> <span class="n">test_obj</span> <span class="o">=</span> <span class="k">new</span><span class="p">;</span>
+<a name="l-18"></a>
+<a name="l-19"></a>		<span class="nb">$display</span><span class="p">(</span><span class="s">&quot;:assert:(%d == 42)&quot;</span><span class="p">,</span> <span class="n">test_obj</span><span class="p">.</span><span class="n">a</span><span class="p">);</span>
+<a name="l-20"></a>	<span class="k">end</span>
+<a name="l-21"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table>
   </body>

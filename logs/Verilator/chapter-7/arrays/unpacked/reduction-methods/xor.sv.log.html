@@ -13,22 +13,25 @@ should_fail: 0
 tags: 7.12.3 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.088s
 </pre>
 <pre class="log">
-user_time: 0.07477099999999999
-system_time: 0.010824
-ram_usage: 11644
+user_time: 0.068906
+system_time: 0.019122999999999998
+ram_usage: 11680
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv:9</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
-                                                                                                        : ... In instance top
+%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv:10</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
+                                                                                                         : ... In instance top
 byte b[] = { 1, 2, 3, 4 };
      ^
-%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv:9</a>: ../V3Width.cpp:1344: LHS var should be size complete
-                                                                                                                        : ... In instance top
+%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv:10</a>: ../V3Width.cpp:1344: LHS var should be size complete
+                                                                                                                         : ... In instance top
 byte b[] = { 1, 2, 3, 4 };
            ^
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

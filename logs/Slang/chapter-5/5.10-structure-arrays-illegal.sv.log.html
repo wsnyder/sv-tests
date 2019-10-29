@@ -13,13 +13,15 @@ should_fail: 1
 tags: 5.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>
 time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.0030369999999999998
-system_time: 0.0
-ram_usage: 9616
+user_time: 0.0
+system_time: 0.003028
+ram_usage: 9572
 
 ../..<a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html#l-14" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv:14</a>:18: error: assignment pattern for type &#39;unpacked array [1:0] of &#39;ms_t&#39;&#39; requires 2 elements but 4 were provided
   ms_t ms[1:0] = &#39;{0, 0, 1, 1};

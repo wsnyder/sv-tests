@@ -13,16 +13,19 @@ should_fail: 0
 tags: 7.10.2.2 7.10.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/queues/insert.sv.html" target="file-frame">tests/chapter-7/queues/insert.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.013s
 </pre>
 <pre class="log">
-user_time: 0.005202
-system_time: 0.003529
-ram_usage: 9624
+user_time: 0.002193
+system_time: 0.010945
+ram_usage: 9564
 
-<a href="../../../../tests/chapter-7/queues/insert.sv.html#l-12" target="file-frame">tests/chapter-7/queues/insert.sv:12</a>: error: Enable of unknown task ``q.insert&#39;&#39;.
+<a href="../../../../tests/chapter-7/queues/insert.sv.html#l-13" target="file-frame">tests/chapter-7/queues/insert.sv:13</a>: error: Enable of unknown task ``q.insert&#39;&#39;.
 1 error(s) during elaboration.
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

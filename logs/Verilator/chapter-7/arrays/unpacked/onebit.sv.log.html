@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test unpacked arrays operations support (one bit)
 should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/onebit.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/onebit.sv</a>
 time_elapsed: 0.091s
 </pre>
 <pre class="log">
-user_time: 0.080716
-system_time: 0.010595
-ram_usage: 11524
+user_time: 0.084394
+system_time: 0.006983
+ram_usage: 11864
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

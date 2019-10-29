@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test unpacked arrays operations support (equality)
 should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/equality.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/equality.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.094s
 </pre>
 <pre class="log">
-user_time: 0.066741
-system_time: 0.022942
-ram_usage: 11560
+user_time: 0.070516
+system_time: 0.023305
+ram_usage: 11544
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

@@ -13,25 +13,28 @@ should_fail: 0
 tags: 7.10.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html" target="file-frame">tests/chapter-7/queues/delete_assign.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.07586799999999999
-system_time: 0.010501
-ram_usage: 11712
+user_time: 0.072909
+system_time: 0.015848
+ram_usage: 11900
 
-%Error: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-9" target="file-frame">tests/chapter-7/queues/delete_assign.sv:9</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-10" target="file-frame">tests/chapter-7/queues/delete_assign.sv:10</a>: Unsupported: $ expression
 int q[$];
       ^
-%Error: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-17" target="file-frame">tests/chapter-7/queues/delete_assign.sv:17</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-18" target="file-frame">tests/chapter-7/queues/delete_assign.sv:18</a>: Unsupported: $ expression
  q = q[1:$];  
          ^
-%Error: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-19" target="file-frame">tests/chapter-7/queues/delete_assign.sv:19</a>: Unsupported: empty queues (&#34;{ }&#34;)
+%Error: <a href="../../../../tests/chapter-7/queues/delete_assign.sv.html#l-20" target="file-frame">tests/chapter-7/queues/delete_assign.sv:20</a>: Unsupported: empty queues (&#34;{ }&#34;)
  q = {};  
      ^
 %Error: Exiting due to 3 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

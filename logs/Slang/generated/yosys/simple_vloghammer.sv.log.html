@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v</a>
 time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.003243
-system_time: 0.0
-ram_usage: 9644
+user_time: 0.0
+system_time: 0.003303
+ram_usage: 9580
 
 ../..<a href="../../../../third_party/tools/yosys/tests/simple/vloghammer.v.html#l-57" target="file-frame">third_party/tools/yosys/tests/simple/vloghammer.v:57</a>:20: error: unknown system name &#39;$signed&#39;
   assign y = a == ($signed(b) &gt;&gt;&gt; 1);

@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic00.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic00.sv</a>
 time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.0029779999999999997
-system_time: 0.0
-ram_usage: 9672
+user_time: 0.0
+system_time: 0.002812
+ram_usage: 9680
 
 ../..<a href="../../../../third_party/tools/yosys/tests/sva/basic00.sv.html#l-9" target="file-frame">third_party/tools/yosys/tests/sva/basic00.sv:9</a>:2: error: language feature not yet supported
 	test_assert: assert property ( @(posedge clk) disable iff (reset) antecedent |=&gt; consequent )

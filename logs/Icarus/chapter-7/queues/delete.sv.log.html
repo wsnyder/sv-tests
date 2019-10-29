@@ -7,20 +7,25 @@
 </head>
 <body>
 <h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test queues delete function support
 should_fail: 0
 tags: 7.10.2.3 7.10.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/queues/delete.sv.html" target="file-frame">tests/chapter-7/queues/delete.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.015s
 </pre>
 <pre class="log">
-user_time: 0.008952
-system_time: 0.0
-ram_usage: 9584
+user_time: 0.004602
+system_time: 0.010421999999999999
+ram_usage: 9704
 
+:assert: (         3 == 3)
+:assert: (         0 == 2)
+:assert: (         0 == 0)
 
 </pre>
 </body>

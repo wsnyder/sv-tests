@@ -13,13 +13,15 @@ should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p335.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p335.sv</a>
 time_elapsed: 0.085s
 </pre>
 <pre class="log">
-user_time: 0.071352
-system_time: 0.01377
-ram_usage: 11620
+user_time: 0.07801999999999999
+system_time: 0.007409
+ram_usage: 11852
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p335.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p335.sv:12</a>: syntax error, unexpected &#39;#&#39;, expecting &#39;,&#39; or &#39;;&#39;
   assign encoder_out = C#(8)::ENCODER_f(encoder_in);

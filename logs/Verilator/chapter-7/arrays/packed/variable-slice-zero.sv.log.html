@@ -7,30 +7,33 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test packed arrays operations support (Variable slice)
 should_fail: 1
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.08821799999999999
-system_time: 0.0
-ram_usage: 11668
+user_time: 0.06966699999999999
+system_time: 0.017238
+ram_usage: 11636
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>: Unsupported: MSB &lt; LSB of bit extract: 3&lt;4
+%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>: Unsupported: MSB &lt; LSB of bit extract: 3&lt;4
                                                                                                      : ... In instance top
  arr_b[4+:c] = arr_a[1+:c];
       ^
-%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>: Unsupported: MSB &lt; LSB of bit extract: 0&lt;1
+%Error: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>: Unsupported: MSB &lt; LSB of bit extract: 0&lt;1
                                                                                                      : ... In instance top
  arr_b[4+:c] = arr_a[1+:c];
                     ^
 %Error: Exiting due to 2 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

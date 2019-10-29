@@ -13,22 +13,25 @@ should_fail: 0
 tags: 7.12.2 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv</a>
-time_elapsed: 0.087s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.070588
-system_time: 0.016089
-ram_usage: 11624
+user_time: 0.07177499999999999
+system_time: 0.016808999999999998
+ram_usage: 11632
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv:9</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
-                                                                                                        : ... In instance top
+%Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv:10</a>: Unsized/open arrays (&#39;[]&#39;) are only supported in DPI imports
+                                                                                                         : ... In instance top
 int ia[] = { 4, 5, 3, 1 };
     ^~
-%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv:9</a>: ../V3Width.cpp:1344: LHS var should be size complete
-                                                                                                                        : ... In instance top
+%Error: Internal Error: <a href="../../../../../../tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/ordering-methods/sort.sv:10</a>: ../V3Width.cpp:1344: LHS var should be size complete
+                                                                                                                         : ... In instance top
 int ia[] = { 4, 5, 3, 1 };
            ^
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

@@ -13,14 +13,18 @@ should_fail: 0
 tags: 7.2.1 7.2 7.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/structures/packed/basic.sv.html" target="file-frame">tests/chapter-7/structures/packed/basic.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.015s
 </pre>
 <pre class="log">
-user_time: 0.001977
-system_time: 0.006693999999999999
-ram_usage: 9688
+user_time: 0.005833
+system_time: 0.009349
+ram_usage: 9604
 
+:assert: (&#39;5a&#39; == &#39;5a&#39;)
+:assert: ((&#39;a&#39; == &#39;a&#39;) and (&#39;5&#39; == &#39;5&#39;))
 
 </pre>
 </body>

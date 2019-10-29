@@ -13,13 +13,15 @@ should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv</a>
 time_elapsed: 0.088s
 </pre>
 <pre class="log">
-user_time: 0.07306599999999999
-system_time: 0.014771
-ram_usage: 11852
+user_time: 0.06164
+system_time: 0.02608
+ram_usage: 11876
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p292.sv:2</a>: Unsupported: SystemVerilog 2009 reserved word not implemented: &#39;let&#39;
 let valid_arb(request, valid, override) = |(request &amp; valid) || override;

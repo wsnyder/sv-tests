@@ -13,22 +13,25 @@ should_fail: 0
 tags: 7.12.1 7.12 7.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.092s
 </pre>
 <pre class="log">
-user_time: 0.07792099999999999
-system_time: 0.008418
-ram_usage: 11548
+user_time: 0.071911
+system_time: 0.020267
+ram_usage: 11600
 
-%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:10</a>: Unsupported: $ expression
+%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv.html#l-11" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:11</a>: Unsupported: $ expression
 int qi[$];
        ^
-%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;with&#39;
+%Error: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first-index.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;with&#39;
  qi = s.find_first_index with ( item == &#34;hello&#34; );
                          ^~~~
 %Error: Exiting due to 2 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

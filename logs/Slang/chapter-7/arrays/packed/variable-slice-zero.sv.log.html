@@ -13,18 +13,20 @@ should_fail: 1
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
 time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.002888
-system_time: 0.0
-ram_usage: 9532
+user_time: 0.0
+system_time: 0.003
+ram_usage: 9656
 
-../..<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>:11: error: value must be positive
+../..<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>:11: error: value must be positive
 	arr_b[4+:c] = arr_a[1+:c];
 	         ^
-../..<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>:25: error: value must be positive
+../..<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>:25: error: value must be positive
 	arr_b[4+:c] = arr_a[1+:c];
 	                       ^
 

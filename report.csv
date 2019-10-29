@@ -1437,7 +1437,7 @@ string_getc,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.3--string
 event,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.17--event.sv,6.17,True,True,False,False,False,True,True,True
 parameter_type,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.20.3--parameter_type.sv,6.20.3,True,True,True,False,False,True,False,True
 real_idx,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.12--real_bit_select.sv,6.12,True,False,True,True,True,False,True,False
-void,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv,6.13,True,True,True,False,False,True,False,True
+void,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.13--void.sv,6.13,True,True,False,False,False,True,False,True
 enum_first,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.1--enum_first.sv,6.19.5.1,True,True,True,False,False,True,True,False
 string_realtoa,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.15--string_realtoa.sv,6.16.15,True,True,True,False,False,True,False,False
 string_icompare,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.16.7--string_icompare.sv,6.16.7,True,True,False,False,False,True,False,False
@@ -1505,16 +1505,16 @@ scope_resolution,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.23--sco
 inheritance,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.13--inheritance.sv,8.13,False,True,False,False,False,True,False,False
 partial_implementation,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.7--partial_implementation.sv,8.26.7,False,True,False,False,False,True,False,False
 name_conflict_resolved,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-8/8.26.6.1--name_conflict_resolved.sv,8.26.6.1,False,True,False,False,False,True,False,False
-basic-union,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/basic.sv,7.3,True,False,True,False,False,True,False,True
+basic-union,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/basic.sv,7.3,True,False,False,False,False,True,False,True
 basic-tagged-packed-union,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/packed.sv,7.3.2,False,True,False,False,False,True,False,False
 basic-tagged-union,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged/basic.sv,7.3.2,False,True,False,False,False,True,False,False
-basic-packed-unions,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/packed/basic.sv,7.3.1,True,False,True,False,False,True,True,True
+basic-packed-unions,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/packed/basic.sv,7.3.1,True,False,False,False,False,True,True,True
 packed-structures-default-members-value,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/default-value.sv,7.2.2,True,False,False,True,True,False,False,True
-basic-packed-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/basic.sv,7.2.1 7.2 7.1,True,True,True,False,False,True,True,True
-packed-and-signed-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/signed.sv,7.2.1 7.2,True,True,True,False,False,True,False,True
-packed-and-unsigned-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv,7.2.1 7.2,True,True,True,False,False,True,False,True
+basic-packed-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/basic.sv,7.2.1 7.2 7.1,True,True,False,False,False,True,True,True
+packed-and-signed-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/signed.sv,7.2.1 7.2,True,True,False,False,False,True,False,True
+packed-and-unsigned-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed/unsigned.sv,7.2.1 7.2,True,True,False,False,False,True,False,True
 unpacked-structures-members-default-value,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked/default-value.sv,7.2.2,True,False,False,False,False,True,False,False
-basic-unpacked-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked/basic.sv,7.2 7.1,True,False,True,False,False,True,False,True
+basic-unpacked-structures,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked/basic.sv,7.2 7.1,True,False,False,False,False,True,False,True
 associative-arrays-wildcard,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/wildcard.sv,7.8.1 7.8,False,True,False,False,False,True,False,False
 associative-arrays-as-arguments,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/arguments.sv,7.9.10 7.8,False,True,False,False,False,True,False,False
 associative-arrays-access-nonexistent,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/nonexistent.sv,7.8.6 7.9.1,False,True,False,False,False,True,False,False
@@ -1548,36 +1548,36 @@ dynamic-arrays-op-new,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arra
 dynamic-arrays-op-size,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-size.sv,7.5.2,False,True,False,False,False,True,True,False
 dyn-arr-basic,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/basic.sv,7.5,False,True,False,False,False,True,True,False
 dynamic-arrays-op-delete,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic/op-delete.sv,7.5.3,False,True,False,False,False,True,True,False
-operations-on-packed-arrays-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/slice.sv,7.4.3,True,True,True,False,False,True,True,True
-operations-on-arrays-treat-as-integer,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/treat-as-integer.sv,7.4.3,True,True,True,False,False,True,True,True
-operations-on-packed-arrays-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/equality.sv,7.4.3,True,True,True,False,False,True,True,True
-operations-on-arrays-variable-slice-zero-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/variable-slice-zero.sv,7.4.3,True,False,True,True,True,False,True,False
-operations-on-packed-arrays-slice-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/slice-equality.sv,7.4.3,True,True,True,False,False,True,True,True
+operations-on-packed-arrays-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/slice.sv,7.4.3,True,True,False,False,False,True,True,True
+operations-on-arrays-treat-as-integer,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/treat-as-integer.sv,7.4.3,True,True,False,False,False,True,True,True
+operations-on-packed-arrays-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/equality.sv,7.4.3,True,True,False,False,False,True,True,True
+operations-on-arrays-variable-slice-zero-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/variable-slice-zero.sv,7.4.3,True,False,False,True,True,False,False,False
+operations-on-packed-arrays-slice-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/slice-equality.sv,7.4.3,True,True,False,False,False,True,False,True
 basic-packed,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/basic.sv,7.4.1 7.4,True,True,True,True,False,True,True,True
-operations-on-packed-arrays-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/operations.sv,7.4.3,True,True,True,False,False,True,True,True
-operations-on-packed-arrays-one-bit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/onebit.sv,7.4.3,True,True,True,False,False,True,True,True
-operations-on-packed-arrays-variable-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/variable-slice.sv,7.4.3 7.4.6,True,True,True,False,False,True,True,True
-arrays-packed-quering-functions-high,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/high.sv,7.11 7.4.1,True,True,True,False,False,True,True,True
-arrays-packed-quering-functions-low,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/low.sv,7.11 7.4.1,True,True,True,False,False,True,True,True
-arrays-packed-quering-functions-increment,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/increment.sv,7.11 7.4.1,True,True,True,False,False,True,True,True
-arrays-packed-quering-functions-size,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/size.sv,7.11 7.4.1,True,True,True,True,False,True,True,True
-arrays-packed-quering-functions-unpacked-dimensions,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/unpacked-dimensions.sv,7.11 7.4.1,False,True,True,False,False,True,True,True
-arrays-packed-quering-functions-right,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/right.sv,7.11 7.4.1,True,True,True,False,False,True,True,True
-arrays-packed-quering-functions-dimensions,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/dimensions.sv,7.11 7.4.1,False,True,True,False,False,True,True,True
-arrays-packed-quering-functions-left,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/left.sv,7.11 7.4.1,True,True,True,False,False,True,True,True
+operations-on-packed-arrays-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/operations.sv,7.4.3,True,True,False,False,False,True,True,True
+operations-on-packed-arrays-one-bit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/onebit.sv,7.4.3,True,True,False,False,False,True,True,True
+operations-on-packed-arrays-variable-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/variable-slice.sv,7.4.3 7.4.6,True,True,False,False,False,True,True,True
+arrays-packed-quering-functions-high,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/high.sv,7.11 7.4.1,True,True,False,False,False,True,True,True
+arrays-packed-quering-functions-low,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/low.sv,7.11 7.4.1,True,True,False,False,False,True,True,True
+arrays-packed-quering-functions-increment,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/increment.sv,7.11 7.4.1,True,True,False,False,False,True,True,True
+arrays-packed-quering-functions-size,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/size.sv,7.11 7.4.1,True,True,False,True,False,True,True,True
+arrays-packed-quering-functions-unpacked-dimensions,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/unpacked-dimensions.sv,7.11 7.4.1,False,True,False,False,False,True,True,True
+arrays-packed-quering-functions-right,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/right.sv,7.11 7.4.1,True,True,False,False,False,True,True,True
+arrays-packed-quering-functions-dimensions,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/dimensions.sv,7.11 7.4.1,False,True,False,False,False,True,True,True
+arrays-packed-quering-functions-left,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed/querying-functions/left.sv,7.11 7.4.1,True,True,False,False,False,True,True,True
 multi-declaration,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/multi.sv,7.4.5,True,True,True,False,False,True,True,True
-copy,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/copy.sv,7.4.5,True,True,True,False,False,True,True,True
+copy,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/copy.sv,7.4.5,True,True,False,False,False,True,True,True
 multi-dim-basic,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/basic.sv,7.4.5,True,True,True,False,False,True,True,True
-subarrays,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/subarrays.sv,7.4.5,True,True,True,False,False,True,False,True
-operations-on-unpacked-arrays-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice.sv,7.4.3,True,True,True,False,False,True,False,True
-array-unpacked-assignments,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/assignments.sv,7.6 7.4.2,True,True,True,False,False,True,False,True
-operations-on-unpacked-arrays-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/equality.sv,7.4.3,True,True,True,False,False,True,False,True
-unpacked-arrays-as-arguments-to-subroutines,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/subroutines.sv,7.7 7.4.2,True,True,True,False,False,True,False,True
+subarrays,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional/subarrays.sv,7.4.5,True,True,False,False,False,True,False,True
+operations-on-unpacked-arrays-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice.sv,7.4.3,True,True,False,False,False,True,False,True
+array-unpacked-assignments,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/assignments.sv,7.6 7.4.2,True,True,False,False,False,True,False,True
+operations-on-unpacked-arrays-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/equality.sv,7.4.3,True,True,False,False,False,True,False,True
+unpacked-arrays-as-arguments-to-subroutines,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/subroutines.sv,7.7 7.4.2,True,True,False,False,False,True,False,True
 operations-on-unpacked-arrays-slice-equality,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/slice-equality.sv,7.4.3,True,True,False,False,False,True,False,True
 unpacked-array-iterator-index-querying,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/index.sv,7.12.4 7.4.2 7.10 7.12.1,False,True,False,False,False,True,False,False
 basic-unpacked,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/basic.sv,7.4.2 7.4,True,True,True,True,False,True,True,True
-operations-on-unpacked-arrays-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/operations.sv,7.4.3,True,True,True,False,False,True,False,True
-operations-on-unpacked-arrays-one-bit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/onebit.sv,7.4.3,True,True,True,False,False,True,False,True
+operations-on-unpacked-arrays-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/operations.sv,7.4.3,True,True,False,False,False,True,False,True
+operations-on-unpacked-arrays-one-bit,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/onebit.sv,7.4.3,True,True,False,False,False,True,False,True
 operations-on-unpacked-arrays-variable-slice-rw,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/variable-slice.sv,7.4.3 7.4.6,True,True,False,False,False,True,False,True
 unpacked-array-reduction-method-or,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/or.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
 unpacked-array-reduction-method-xor,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods/xor.sv,7.12.3 7.4.2,False,True,False,False,False,True,False,False
@@ -1589,11 +1589,11 @@ ordering-methods-reverse,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/a
 ordering-methods-shuffle,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/shuffle.sv,7.12.2 7.4.2,False,True,False,False,False,True,False,False
 ordering-methods-rsort,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/ordering-methods/rsort.sv,7.12.2 7.4.2,False,True,False,False,False,True,False,False
 memories-basic,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/memories/basic.sv,7.4.4,True,True,True,True,False,True,True,True
-memories-read-write,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/memories/read-write.sv,7.4.4,True,True,True,False,False,True,True,True
+memories-read-write,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/memories/read-write.sv,7.4.4,True,True,False,False,False,True,True,True
 slice,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/slice.sv,7.10.1 7.10.2,False,True,False,False,False,True,False,False
 insert-assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/insert_assign.sv,7.10.4,False,False,False,False,False,False,False,False
-delete,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/delete.sv,7.10.2.3 7.10.2,False,True,False,False,False,True,True,False
-push_back_assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_back_assign.sv,7.10.4,False,True,False,False,False,True,True,False
+delete,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/delete.sv,7.10.2.3 7.10.2,False,True,False,False,False,True,False,False
+push_back_assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_back_assign.sv,7.10.4,False,True,False,False,False,True,False,False
 pop_back-assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_back_assing.sv,7.10.4,False,False,False,False,False,False,False,False
 pop_front-assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front_assign.sv,7.10.4,False,False,False,False,False,False,False,False
 bounded-queues,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/bounded.sv,7.10.5 7.10 7.10.2.7 7.10.2.1,False,True,False,False,False,True,False,False
@@ -1607,7 +1607,7 @@ pop_back,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_back.s
 max-size,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/max-size.sv,7.10.1 7.10.2,False,True,False,False,False,True,False,False
 pop_front,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/pop_front.sv,7.10.2.4 7.10.2,False,True,False,False,False,True,False,False
 push_front,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front.sv,7.10.2.6 7.10.2,False,True,False,False,False,True,True,False
-push_front_assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front_assign.sv,7.10.4,False,True,False,False,False,True,True,False
+push_front_assign,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues/push_front_assign.sv,7.10.4,False,True,False,False,False,True,False,False
 process_control,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.7--process_cls_suspend_resume.sv,9.7,False,True,False,False,False,True,False,False
 fork_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--fork_return.sv,9.3.3,True,False,True,True,True,False,True,True
 event_sequence,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.4.2.4--event_sequence.sv,9.4.2.4,False,True,False,False,False,True,False,False
@@ -1653,7 +1653,7 @@ event_blocking_assignment_delay,/home/travis/build/SymbiFlow/sv-tests/tests/chap
 tagged_union_member_access_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv,11.9,True,False,True,True,True,False,True,True
 tagged_union_member_access,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access.sv,11.9,False,True,False,False,False,True,False,False
 assign_in_expr_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.3.6--assign_in_expr_inv.sv,11.3.6,True,True,True,True,True,True,True,True
-string_concat_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_concat_op.sv,11.4.12.2,True,True,True,False,False,True,True,True
+string_concat_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_concat_op.sv,11.4.12.2,True,True,False,False,False,True,True,True
 string_bit_array,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10--string_bit_array.sv,11.10,True,True,True,True,False,True,True,True
 dynamic_array_unpack_stream,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.4--dynamic_array_stream.sv,11.4.14.4,False,True,False,False,False,True,False,False
 idx_neg_part_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--idx_neg_part_select.sv,11.5.1,True,True,True,True,False,True,True,True
@@ -1670,14 +1670,14 @@ signed_func,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.7--signed_
 tagged_union,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union.sv,11.9,False,True,False,False,False,True,False,False
 string_concat,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_concat.sv,11.10.1,True,True,True,False,False,True,True,True
 unary_op_dec,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.2--unary_op_dec.sv,11.4.2,True,True,True,False,False,True,True,True
-string_repl_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_repl_op.sv,11.4.12.2,True,True,True,False,False,True,True,True
-string_compare,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_compare.sv,11.10.1,True,True,True,False,False,True,True,True
+string_repl_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.2--string_repl_op.sv,11.4.12.2,True,True,False,False,False,True,True,True
+string_compare,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_compare.sv,11.10.1,True,True,False,False,False,True,True,True
 non_idx_part_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--non_idx_part_select.sv,11.5.1,True,True,True,True,False,True,True,True
 idx_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--idx_select.sv,11.5.1,True,True,True,True,False,True,True,True
 stream_concat,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.1--stream_concat.sv,11.4.14.1,False,True,True,False,False,True,False,True
 array_addressing,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.2--array_addressing.sv,11.5.2,True,True,True,True,False,True,True,True
 nested_repl_op,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.12.1--nested_repl_op.sv,11.4.12.1,True,True,True,True,False,True,True,True
-string_copy,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_copy.sv,11.10.1,True,True,True,False,False,True,True,True
+string_copy,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.10.1--string_copy.sv,11.10.1,True,True,False,False,False,True,True,True
 idx_pos_part_select,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.1--idx_pos_part_select.sv,11.5.1,True,True,True,True,False,True,True,True
 multi_dim_array_addressing,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.5.2--multi_dim_array_addressing.sv,11.5.2,True,True,True,True,False,True,True,True
 reorder_stream,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.2--reorder_stream.sv,11.4.14.2,False,True,True,False,False,True,False,True
@@ -1904,19 +1904,19 @@ class_member_test_43,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/
 class_member_test_41,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_41.sv,8.3,False,True,False,False,False,True,True,False
 class_member_test_30,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_30.sv,8.3,False,True,False,False,False,True,False,False
 class_member_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/member/class_member_test_5.sv,8.3,False,True,False,False,False,True,False,False
-preproc_test_8,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_8.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_10,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_10.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_11.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_7,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_7.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_4,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_4.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_0.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_1.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv,5.6.4,True,False,False,True,False,True,True,True
-preproc_test_6,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_6.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_5.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_13.sv,5.6.4,True,False,False,True,False,True,False,True
-preproc_test_12,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_12.sv,5.6.4,True,True,False,True,False,True,True,True
-preproc_test_9,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_9.sv,5.6.4,True,True,False,True,False,True,True,True
+preproc_test_8,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_8.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_10,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_10.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_11.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_7,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_7.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_4,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_4.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_0.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_1.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_2,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_2.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_6,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_6.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_5,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_5.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_13,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_13.sv,5.6.4,True,,True,True,False,True,False,True
+preproc_test_12,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_12.sv,5.6.4,True,,True,True,False,True,True,True
+preproc_test_9,/home/travis/build/SymbiFlow/sv-tests/tests/generic/preproc/preproc_test_9.sv,5.6.4,True,,True,True,False,True,True,True
 iface_class_test_3,/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_3.sv,8.3 8.26,False,True,False,False,False,True,False,False
 iface_class_test_1,/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_1.sv,8.3 8.26,False,True,False,False,False,True,False,False
 iface_class_test_11,/home/travis/build/SymbiFlow/sv-tests/tests/generic/iface/iface_class_test_11.sv,8.3 8.26,False,True,False,False,False,True,False,False
@@ -1997,7 +1997,7 @@ jump_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--return.
 unique_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--unique_if.sv,12.4.2,True,True,True,False,False,True,False,True
 case,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5--case.sv,12.5,True,True,True,True,False,True,False,True
 case_constant,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.2--case_const.sv,12.5.2,True,True,True,True,False,True,False,True
-jump_break,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--break.sv,12.8,True,True,True,False,False,True,False,True
+jump_break,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--break.sv,12.8,True,True,False,False,False,True,False,True
 repeat_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.2--repeat.sv,12.7.2,True,True,True,False,False,True,True,True
 unique0_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--unique0_if.sv,12.4.2,True,True,True,False,False,True,False,True
 case_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--case_pattern.sv,12.6.1,False,True,False,False,False,True,False,False
@@ -2005,7 +2005,7 @@ while_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.4--while.
 if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4--if.sv,12.4,True,True,True,True,False,True,False,True
 casex_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.1--casex_pattern.sv,12.6.1,False,True,False,False,False,True,False,False
 for_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.1--for.sv,12.7.1,True,True,True,False,False,True,True,True
-jump_continue,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--continue.sv,12.8,True,True,True,False,False,True,False,True
+jump_continue,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.8--continue.sv,12.8,True,True,False,False,False,True,False,True
 if_else_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.1--if_else_if.sv,12.4.1,True,True,True,True,False,True,False,True
 foreach_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.3--foreach.sv,12.7.3,False,True,True,False,False,True,False,False
 priority_if,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4.2--priority_if.sv,12.4.2,True,True,True,False,False,True,False,True

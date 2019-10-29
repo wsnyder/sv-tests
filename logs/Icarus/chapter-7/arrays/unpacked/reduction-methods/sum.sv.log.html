@@ -13,17 +13,20 @@ should_fail: 0
 tags: 7.12.3 7.4.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked/reduction-methods
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv</a>
-time_elapsed: 0.011s
+time_elapsed: 0.013s
 </pre>
 <pre class="log">
-user_time: 0.006108
-system_time: 0.004515
-ram_usage: 9656
+user_time: 0.004510999999999999
+system_time: 0.008409999999999999
+ram_usage: 9636
 
-<a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv:9</a>: internal error: I don&#39;t know how to elaborate(ivl_type_t) this expression: {&#39;sd1, &#39;sd2, &#39;sd3, &#39;sd4}
-<a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html#l-15" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv:15</a>: assert: elab_expr.cc:4134: failed assertion member_path.size() == 0
+<a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv:10</a>: internal error: I don&#39;t know how to elaborate(ivl_type_t) this expression: {&#39;sd1, &#39;sd2, &#39;sd3, &#39;sd4}
+<a href="../../../../../../tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv.html#l-16" target="file-frame">tests/chapter-7/arrays/unpacked/reduction-methods/sum.sv:16</a>: assert: elab_expr.cc:4134: failed assertion member_path.size() == 0
 Aborted (core dumped)
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

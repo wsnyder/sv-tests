@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/simple/memory.v.html" target="file-frame">third_party/tools/yosys/tests/simple/memory.v</a>
-time_elapsed: 0.091s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.071975
-system_time: 0.019242
-ram_usage: 11748
+user_time: 0.070439
+system_time: 0.018411999999999998
+ram_usage: 11604
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/simple/memory.v.html#l-39" target="file-frame">third_party/tools/yosys/tests/simple/memory.v:39</a>: syntax error, unexpected &#39;,&#39;, expecting IDENTIFIER or do or final
 module memtest02(clk, setA, setB, addr, bit, y1, y2, y3, y4);

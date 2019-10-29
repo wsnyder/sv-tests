@@ -13,17 +13,20 @@ should_fail: 0
 tags: 6.13
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../tests/chapter-6/6.13--void.sv.html" target="file-frame">tests/chapter-6/6.13--void.sv</a>
-time_elapsed: 0.008s
+time_elapsed: 0.014s
 </pre>
 <pre class="log">
-user_time: 0.0055309999999999995
-system_time: 0.0027919999999999998
-ram_usage: 9652
+user_time: 0.011183
+system_time: 0.0025529999999999997
+ram_usage: 9620
 
-<a href="../../../tests/chapter-6/6.13--void.sv.html#l-13" target="file-frame">tests/chapter-6/6.13--void.sv:13</a>: warning: User function &#39;fun&#39; is being called as a task.
-<a href="../../../tests/chapter-6/6.13--void.sv.html#l-13" target="file-frame">tests/chapter-6/6.13--void.sv:13</a>: assert: elab_expr.cc:1272: failed assertion 0
+<a href="../../../tests/chapter-6/6.13--void.sv.html#l-14" target="file-frame">tests/chapter-6/6.13--void.sv:14</a>: warning: User function &#39;fun&#39; is being called as a task.
+<a href="../../../tests/chapter-6/6.13--void.sv.html#l-14" target="file-frame">tests/chapter-6/6.13--void.sv:14</a>: assert: elab_expr.cc:1272: failed assertion 0
 Aborted (core dumped)
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

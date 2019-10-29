@@ -13,19 +13,22 @@ should_fail: 0
 tags: 7.10.2.1 7.10.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/queues/size.sv.html" target="file-frame">tests/chapter-7/queues/size.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.068101
-system_time: 0.019854
-ram_usage: 11824
+user_time: 0.064556
+system_time: 0.022437
+ram_usage: 11680
 
-%Error: <a href="../../../../tests/chapter-7/queues/size.sv.html#l-9" target="file-frame">tests/chapter-7/queues/size.sv:9</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/size.sv.html#l-10" target="file-frame">tests/chapter-7/queues/size.sv:10</a>: Unsupported: $ expression
 int q[$];
       ^
 %Error: Exiting due to 1 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

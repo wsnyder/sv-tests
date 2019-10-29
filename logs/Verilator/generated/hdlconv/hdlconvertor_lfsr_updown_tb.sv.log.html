@@ -13,13 +13,15 @@ should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/verilog
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/lfsr_updown_tb.v.html" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/lfsr_updown_tb.v</a>
-time_elapsed: 0.086s
+time_elapsed: 0.084s
 </pre>
 <pre class="log">
-user_time: 0.074892
-system_time: 0.011216
-ram_usage: 11792
+user_time: 0.072068
+system_time: 0.01213
+ram_usage: 11580
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/verilog/lfsr_updown_tb.v.html#l-13" target="file-frame">third_party/tests/hdlconvertor/tests/verilog/lfsr_updown_tb.v:13</a>: Unsupported or unknown PLI call: $monitor
   $monitor(&#34;rst %b en %b updown %b cnt %b overflow %b&#34;,

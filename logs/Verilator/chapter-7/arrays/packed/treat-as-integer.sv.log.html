@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test packed arrays operations support (treat array as integer)
 should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/packed/treat-as-integer.sv.html" target="file-frame">tests/chapter-7/arrays/packed/treat-as-integer.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.091s
 </pre>
 <pre class="log">
-user_time: 0.078224
-system_time: 0.010223
-ram_usage: 11608
+user_time: 0.06534999999999999
+system_time: 0.025421
+ram_usage: 11620
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

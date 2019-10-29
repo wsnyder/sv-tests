@@ -13,18 +13,21 @@ should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv</a>
-time_elapsed: 0.008s
+time_elapsed: 0.012s
 </pre>
 <pre class="log">
-user_time: 0.005601999999999999
-system_time: 0.002791
-ram_usage: 9708
+user_time: 0.005441
+system_time: 0.006859
+ram_usage: 9688
 
-<a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv:13</a>: error: Cannot assign to array arr_a. Did you forget a word index?
-<a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv:14</a>: error: Cannot assign to array arr_b. Did you forget a word index?
-<a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv:20</a>: error: cannot perform a part select on array arr_b.
+<a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv:14</a>: error: Cannot assign to array arr_a. Did you forget a word index?
+<a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html#l-15" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv:15</a>: error: Cannot assign to array arr_b. Did you forget a word index?
+<a href="../../../../../tests/chapter-7/arrays/unpacked/slice.sv.html#l-21" target="file-frame">tests/chapter-7/arrays/unpacked/slice.sv:21</a>: error: cannot perform a part select on array arr_b.
 3 error(s) during elaboration.
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

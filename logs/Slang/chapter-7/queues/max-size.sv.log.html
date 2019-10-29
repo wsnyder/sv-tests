@@ -13,15 +13,17 @@ should_fail: 0
 tags: 7.10.1 7.10.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../../tests/chapter-7/queues/max-size.sv.html" target="file-frame">tests/chapter-7/queues/max-size.sv</a>
-time_elapsed: 0.004s
+time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.0038209999999999997
-system_time: 0.0
-ram_usage: 9560
+user_time: 0.0
+system_time: 0.002878
+ram_usage: 9604
 
-../..<a href="../../../../tests/chapter-7/queues/max-size.sv.html#l-9" target="file-frame">tests/chapter-7/queues/max-size.sv:9</a>:6: error: dimension requires a constant range
+../..<a href="../../../../tests/chapter-7/queues/max-size.sv.html#l-10" target="file-frame">tests/chapter-7/queues/max-size.sv:10</a>:6: error: dimension requires a constant range
 int q[$:5];
      ^~~~~
 

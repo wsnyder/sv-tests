@@ -13,13 +13,15 @@ should_fail: 0
 tags: 5.11
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../tests/chapter-5/5.11-arrays.sv.html" target="file-frame">tests/chapter-5/5.11-arrays.sv</a>
-time_elapsed: 0.023s
+time_elapsed: 0.016s
 </pre>
 <pre class="log">
-user_time: 0.012388
-system_time: 0.010954
-ram_usage: 9628
+user_time: 0.016018
+system_time: 0.0
+ram_usage: 9516
 
 module top;
 	wire signed [319:128] n = {{0, 1, 2}, {3 {4}}};

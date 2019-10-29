@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v</a>
-time_elapsed: 0.078s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.058469
-system_time: 0.019177
-ram_usage: 11588
+user_time: 0.067975
+system_time: 0.0183
+ram_usage: 11844
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/simple/mem_arst.v.html#l-13" target="file-frame">third_party/tools/yosys/tests/simple/mem_arst.v:13</a>: Duplicate declaration of signal: &#39;Data_o&#39;
                                                                                                 : ... note: ANSI ports must have type declared with the I/O (IEEE 2017 23.2.2.2)

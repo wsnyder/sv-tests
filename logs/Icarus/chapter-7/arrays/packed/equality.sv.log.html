@@ -13,14 +13,19 @@ should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/packed/equality.sv.html" target="file-frame">tests/chapter-7/arrays/packed/equality.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.016s
 </pre>
 <pre class="log">
-user_time: 0.002008
-system_time: 0.006928999999999999
-ram_usage: 9680
+user_time: 0.014039
+system_time: 0.002051
+ram_usage: 9556
 
+:assert: ((&#39;ff&#39; == &#39;ff&#39;) and (&#39;ff&#39; == &#39;ff&#39;))
+:assert: (1 == 1)
+:assert: (0 == 0)
 
 </pre>
 </body>

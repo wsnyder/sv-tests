@@ -13,31 +13,34 @@ should_fail: 0
 tags: 8.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../tests/chapter-8/8.5--properties.sv.html" target="file-frame">tests/chapter-8/8.5--properties.sv</a>
-time_elapsed: 0.087s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.077151
-system_time: 0.010298999999999999
-ram_usage: 11596
+user_time: 0.070477
+system_time: 0.015411
+ram_usage: 11780
 
-%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-8" target="file-frame">tests/chapter-8/8.5--properties.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-9" target="file-frame">tests/chapter-8/8.5--properties.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  class test_cls;
  ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-8" target="file-frame">tests/chapter-8/8.5--properties.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-9" target="file-frame">tests/chapter-8/8.5--properties.sv:9</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
  class test_cls;
                ^
-%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-10" target="file-frame">tests/chapter-8/8.5--properties.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-11" target="file-frame">tests/chapter-8/8.5--properties.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-15" target="file-frame">tests/chapter-8/8.5--properties.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-16" target="file-frame">tests/chapter-8/8.5--properties.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
   test_obj = new;
              ^~~
-%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-15" target="file-frame">tests/chapter-8/8.5--properties.sv:15</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.5--properties.sv.html#l-16" target="file-frame">tests/chapter-8/8.5--properties.sv:16</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
   test_obj = new;
                 ^
 %Error: Exiting due to 5 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

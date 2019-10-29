@@ -13,18 +13,21 @@ should_fail: 0
 tags: 7.9.11 7.8
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/associative/literals.sv.html" target="file-frame">tests/chapter-7/arrays/associative/literals.sv</a>
-time_elapsed: 0.090s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.08952399999999999
-system_time: 0.0
-ram_usage: 11664
+user_time: 0.077166
+system_time: 0.012173999999999999
+ram_usage: 11784
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/associative/literals.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/literals.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
+%Error: <a href="../../../../../tests/chapter-7/arrays/associative/literals.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/literals.sv:10</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
 string words [int] = &#39;{default: &#34;hello&#34;};
                  ^
 %Error: Exiting due to 1 error(s)
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

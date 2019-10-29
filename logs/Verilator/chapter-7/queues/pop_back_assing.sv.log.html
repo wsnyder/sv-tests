@@ -13,25 +13,28 @@ should_fail: 0
 tags: 7.10.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.092s
 </pre>
 <pre class="log">
-user_time: 0.069312
-system_time: 0.016272
-ram_usage: 11548
+user_time: 0.080805
+system_time: 0.010721999999999999
+ram_usage: 11688
 
-%Error: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html#l-9" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv:9</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html#l-10" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv:10</a>: Unsupported: $ expression
 int q[$];
       ^
-%Error: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html#l-14" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv:14</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html#l-15" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv:15</a>: Unsupported: $ expression
  r = q[$-1];
        ^
-%Error: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html#l-15" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv:15</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/pop_back_assing.sv.html#l-16" target="file-frame">tests/chapter-7/queues/pop_back_assing.sv:16</a>: Unsupported: $ expression
  q = q[0:$-1];  
          ^
 %Error: Exiting due to 3 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

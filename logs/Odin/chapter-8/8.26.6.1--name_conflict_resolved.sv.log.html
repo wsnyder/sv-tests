@@ -13,13 +13,15 @@ should_fail: 0
 tags: 8.26.6.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>
 time_elapsed: 0.005s
 </pre>
 <pre class="log">
-user_time: 0.0
-system_time: 0.005327999999999999
-ram_usage: 9580
+user_time: 0.005118
+system_time: 0.0
+ram_usage: 9564
 
 --------------
 Odin has decided you MAY fail ... :
@@ -28,17 +30,17 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::1 File (<a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::8 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
+PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::9 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
 	interface class ihello;
-PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::9 error in parsing: (syntax error, unexpected vFUNCTION, expecting &#39;(&#39;)
+PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::10 error in parsing: (syntax error, unexpected vFUNCTION, expecting &#39;(&#39;)
 		pure virtual function void hello();
-PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::12 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
+PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::13 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
 	interface class itest;
-PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::13 error in parsing: (syntax error, unexpected vFUNCTION, expecting &#39;(&#39;)
+PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::14 error in parsing: (syntax error, unexpected vFUNCTION, expecting &#39;(&#39;)
 		pure virtual function void hello();
-PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::16 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
+PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::17 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
 	class Hello implements ihello, itest;
-PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::19 error in parsing: (syntax error, unexpected vENDFUNCTION)
+PARSE_ERROR <a href="../../../tests/chapter-8/8.26.6.1--name_conflict_resolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.1--name_conflict_resolved.sv</a>::20 error in parsing: (syntax error, unexpected vENDFUNCTION)
 		endfunction
 
 </pre>

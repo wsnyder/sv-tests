@@ -13,13 +13,15 @@ should_fail: 0
 tags: 7.12.1 7.12 7.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>
-time_elapsed: 0.006s
+time_elapsed: 0.005s
 </pre>
 <pre class="log">
-user_time: 0.005545
-system_time: 0.0
-ram_usage: 9520
+user_time: 0.0
+system_time: 0.00466
+ram_usage: 9636
 
 --------------
 Odin has decided you MAY fail ... :
@@ -28,13 +30,13 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::1 File (<a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::9 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting &#39;(&#39;)
-string s[] = { &#34;hello&#34;, &#34;sad&#34;, &#34;hello&#34;, &#34;world&#34; };
 PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::10 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting &#39;(&#39;)
+string s[] = { &#34;hello&#34;, &#34;sad&#34;, &#34;hello&#34;, &#34;world&#34; };
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::11 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting &#39;(&#39;)
 string qs[$];
-PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::13 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;;&#39;)
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::14 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;;&#39;)
 	qs = s.find_first with ( item == &#34;hello&#34; );
-PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::16 error in parsing: (syntax error, unexpected vEND)
+PARSE_ERROR <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-first.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-first.sv</a>::17 error in parsing: (syntax error, unexpected vEND)
 end
 ERROR (7)::NETLIST_ERROR Could not find a top level module
 

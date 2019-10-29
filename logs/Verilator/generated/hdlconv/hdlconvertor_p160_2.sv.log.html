@@ -13,13 +13,15 @@ should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_2.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_2.sv</a>
-time_elapsed: 0.085s
+time_elapsed: 0.084s
 </pre>
 <pre class="log">
-user_time: 0.06981699999999999
-system_time: 0.01474
-ram_usage: 11636
+user_time: 0.065466
+system_time: 0.01859
+ram_usage: 11908
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_2.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p160_2.sv:1</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
 virtual class XFifo#(type T_in = logic, type T_out = logic, int DEPTH = 1) extends MyQueue#(T_out)

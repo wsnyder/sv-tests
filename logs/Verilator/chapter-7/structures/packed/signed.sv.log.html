@@ -7,20 +7,23 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test packed and signed structures support
 should_fail: 0
 tags: 7.2.1 7.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/structures/packed/signed.sv.html" target="file-frame">tests/chapter-7/structures/packed/signed.sv</a>
-time_elapsed: 0.089s
+time_elapsed: 0.098s
 </pre>
 <pre class="log">
-user_time: 0.078303
-system_time: 0.010699
-ram_usage: 11516
+user_time: 0.065181
+system_time: 0.033053
+ram_usage: 11872
 
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

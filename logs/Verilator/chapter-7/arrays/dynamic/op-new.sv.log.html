@@ -13,22 +13,25 @@ should_fail: 0
 tags: 7.5.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv</a>
-time_elapsed: 0.092s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.071154
-system_time: 0.020555
-ram_usage: 11784
+user_time: 0.06946
+system_time: 0.019594
+ram_usage: 11644
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
     arr = new [ 4 ];
           ^~~
-%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-12" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:12</a>: syntax error, unexpected &#39;[&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../../../tests/chapter-7/arrays/dynamic/op-new.sv.html#l-13" target="file-frame">tests/chapter-7/arrays/dynamic/op-new.sv:13</a>: syntax error, unexpected &#39;[&#39;, expecting TYPE-IDENTIFIER
     arr = new [ 4 ];
               ^
 %Error: Exiting due to 2 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

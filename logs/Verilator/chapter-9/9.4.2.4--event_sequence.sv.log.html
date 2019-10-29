@@ -13,50 +13,53 @@ should_fail: 0
 tags: 9.4.2.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv</a>
-time_elapsed: 0.097s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.075551
-system_time: 0.021263
-ram_usage: 11688
+user_time: 0.08115699999999999
+system_time: 0.007607
+ram_usage: 11628
 
-%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-14" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;sequence&#39;
+%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-15" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;sequence&#39;
  sequence seq;
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-14" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:14</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-15" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:15</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
  sequence seq;
              ^
-%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-16" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endsequence&#39;
+%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-17" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endsequence&#39;
  endsequence
  ^~~~~~~~~~~
-%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-19" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:19</a>: Unsupported: fork statements
+%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-20" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:20</a>: Unsupported: fork statements
   fork
   ^~~~
-%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-21" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:21</a>: syntax error, unexpected &#39;@&#39;
+%Error: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-22" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:22</a>: syntax error, unexpected &#39;@&#39;
     @seq y = 1;
     ^
-%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-26" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:26</a>: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-27" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:27</a>: Unsupported: Ignoring delay on this delayed statement.
     #10 clk = 1;
     ^
                   ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
-%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-27" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:27</a>: Unsupported: Ignoring delay on this delayed statement.
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-28" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:28</a>: Unsupported: Ignoring delay on this delayed statement.
     #10 clk = 0;
-    ^
-%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-29" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:29</a>: Unsupported: Ignoring delay on this delayed statement.
-    #10 clk = 1;
     ^
 %Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-30" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:30</a>: Unsupported: Ignoring delay on this delayed statement.
-    #10 clk = 0;
-    ^
-%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-32" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:32</a>: Unsupported: Ignoring delay on this delayed statement.
     #10 clk = 1;
     ^
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-31" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:31</a>: Unsupported: Ignoring delay on this delayed statement.
+    #10 clk = 0;
+    ^
 %Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-33" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:33</a>: Unsupported: Ignoring delay on this delayed statement.
+    #10 clk = 1;
+    ^
+%Warning-STMTDLY: <a href="../../../tests/chapter-9/9.4.2.4--event_sequence.sv.html#l-34" target="file-frame">tests/chapter-9/9.4.2.4--event_sequence.sv:34</a>: Unsupported: Ignoring delay on this delayed statement.
     #10 clk = 0;
     ^
 %Error: Exiting due to 5 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

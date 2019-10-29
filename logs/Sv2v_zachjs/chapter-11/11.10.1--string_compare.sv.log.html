@@ -13,13 +13,15 @@ should_fail: 0
 tags: 11.10.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../tests/chapter-11/11.10.1--string_compare.sv.html" target="file-frame">tests/chapter-11/11.10.1--string_compare.sv</a>
-time_elapsed: 0.018s
+time_elapsed: 0.016s
 </pre>
 <pre class="log">
-user_time: 0.012411
-system_time: 0.005654
-ram_usage: 9744
+user_time: 0.0053289999999999995
+system_time: 0.010657999999999999
+ram_usage: 9584
 
 module top;
 	reg [112:1] a;
@@ -27,7 +29,7 @@ module top;
 	initial begin
 		a = &#34;Test&#34;;
 		b = &#34;Test&#34;;
-		$display((a == b));
+		$display(&#34;:assert:(&#39;%s&#39; == &#39;%s&#39;)&#34;, a, b);
 	end
 endmodule
 

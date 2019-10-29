@@ -13,11 +13,13 @@ should_fail: 0
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../../../tests/chapter-7/arrays/packed/treat-as-integer.sv.html" target="file-frame">tests/chapter-7/arrays/packed/treat-as-integer.sv</a>
 time_elapsed: 0.005s
 </pre>
 <pre class="log">
-user_time: 0.004973
+user_time: 0.0049559999999999995
 system_time: 0.0
 ram_usage: 9616
 
@@ -28,7 +30,7 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 
 WARNING (2)::ARG_ERROR <a href="../../../../../tests/chapter-7/arrays/packed/treat-as-integer.sv.html" target="file-frame">tests/chapter-7/arrays/packed/treat-as-integer.sv</a>::1 File (<a href="../../../../../tests/chapter-7/arrays/packed/treat-as-integer.sv.html" target="file-frame">tests/chapter-7/arrays/packed/treat-as-integer.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
-PARSE_ERROR <a href="../../../../../tests/chapter-7/arrays/packed/treat-as-integer.sv.html" target="file-frame">tests/chapter-7/arrays/packed/treat-as-integer.sv</a>::9 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
+PARSE_ERROR <a href="../../../../../tests/chapter-7/arrays/packed/treat-as-integer.sv.html" target="file-frame">tests/chapter-7/arrays/packed/treat-as-integer.sv</a>::10 error in parsing: (syntax error, unexpected &#39;[&#39;, expecting vSYMBOL_ID or &#39;#&#39;)
 bit [7:0] arr_a;
 
 </pre>

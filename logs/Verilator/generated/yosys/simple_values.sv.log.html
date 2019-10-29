@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/simple/values.v.html" target="file-frame">third_party/tools/yosys/tests/simple/values.v</a>
 time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.066403
-system_time: 0.019920999999999998
-ram_usage: 11488
+user_time: 0.058163
+system_time: 0.027634
+ram_usage: 11768
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/simple/values.v.html#l-33" target="file-frame">third_party/tools/yosys/tests/simple/values.v:33</a>: Too many digits for 16 bit number: 16&#39;h123abc
   4&#39;b1001: y = 16&#39;h123abc;

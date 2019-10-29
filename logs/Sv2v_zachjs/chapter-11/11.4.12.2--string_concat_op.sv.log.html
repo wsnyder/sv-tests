@@ -13,19 +13,21 @@ should_fail: 0
 tags: 11.4.12.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../tests/chapter-11/11.4.12.2--string_concat_op.sv.html" target="file-frame">tests/chapter-11/11.4.12.2--string_concat_op.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.021s
 </pre>
 <pre class="log">
-user_time: 0.008215
-system_time: 0.000714
-ram_usage: 9576
+user_time: 0.016432
+system_time: 0.004108
+ram_usage: 9628
 
 module top;
 	string str;
 	initial begin
-		str = {&#34;Hello&#34;, &#34; &#34;, &#34;World&#34;, &#34;!&#34;};
-		$display(str);
+		str = {&#34;Hello&#34;, &#34;_&#34;, &#34;World&#34;, &#34;!&#34;};
+		$display(&#34;:assert:(&#39;%s&#39; == &#39;Hello_World!&#39;)&#34;, str);
 	end
 endmodule
 

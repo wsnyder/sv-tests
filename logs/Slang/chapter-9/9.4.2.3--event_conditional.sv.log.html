@@ -13,13 +13,15 @@ should_fail: 0
 tags: 9.4.2.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-9
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../tests/chapter-9/9.4.2.3--event_conditional.sv.html" target="file-frame">tests/chapter-9/9.4.2.3--event_conditional.sv</a>
 time_elapsed: 0.003s
 </pre>
 <pre class="log">
-user_time: 0.0
-system_time: 0.003038
-ram_usage: 9732
+user_time: 0.0031149999999999997
+system_time: 0.0
+ram_usage: 9748
 
 ../..<a href="../../../tests/chapter-9/9.4.2.3--event_conditional.sv.html#l-12" target="file-frame">tests/chapter-9/9.4.2.3--event_conditional.sv:12</a>:19: error: language feature not yet supported
 	always @(posedge clk iff en == 1)

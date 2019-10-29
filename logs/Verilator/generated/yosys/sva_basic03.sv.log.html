@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv</a>
-time_elapsed: 0.087s
+time_elapsed: 0.084s
 </pre>
 <pre class="log">
-user_time: 0.078591
-system_time: 0.007970999999999999
-ram_usage: 11836
+user_time: 0.081672
+system_time: 0.002562
+ram_usage: 11716
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic03.sv.html#l-7" target="file-frame">third_party/tools/yosys/tests/sva/basic03.sv:7</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
  check_selA: assert property ( @(posedge clk) selA |=&gt; Q == $past(QA) );

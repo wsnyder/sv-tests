@@ -7,25 +7,28 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test basic union support
 should_fail: 0
 tags: 7.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/unions/basic.sv.html" target="file-frame">tests/chapter-7/unions/basic.sv</a>
-time_elapsed: 0.091s
+time_elapsed: 0.089s
 </pre>
 <pre class="log">
-user_time: 0.07951699999999999
-system_time: 0.011531999999999999
-ram_usage: 11580
+user_time: 0.073768
+system_time: 0.015623
+ram_usage: 11588
 
-%Warning-UNPACKED: <a href="../../../../tests/chapter-7/unions/basic.sv.html#l-9" target="file-frame">tests/chapter-7/unions/basic.sv:9</a>: Unsupported: Unpacked struct/union
-                                                                                          : ... In instance top
+%Warning-UNPACKED: <a href="../../../../tests/chapter-7/unions/basic.sv.html#l-10" target="file-frame">tests/chapter-7/unions/basic.sv:10</a>: Unsupported: Unpacked struct/union
+                                                                                           : ... In instance top
 union {
 ^~~~~
                    ... Use &#34;/* verilator lint_off UNPACKED */&#34; and lint_on around source to disable this message.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

@@ -13,13 +13,15 @@ should_fail: 1
 tags: 6.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../tests/chapter-6/6.12--real_edge.sv.html" target="file-frame">tests/chapter-6/6.12--real_edge.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.087s
 </pre>
 <pre class="log">
-user_time: 0.067122
-system_time: 0.021016999999999997
-ram_usage: 11576
+user_time: 0.079706
+system_time: 0.006932
+ram_usage: 11640
 
 %Error: <a href="../../../tests/chapter-6/6.12--real_edge.sv.html#l-9" target="file-frame">tests/chapter-6/6.12--real_edge.sv:9</a>: Unsupported: Non-single bit wide signal pos/negedge sensitivity: &#39;top.a&#39;
  always @(posedge a)

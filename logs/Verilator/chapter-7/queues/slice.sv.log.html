@@ -13,22 +13,25 @@ should_fail: 0
 tags: 7.10.1 7.10.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../tests/chapter-7/queues/slice.sv.html" target="file-frame">tests/chapter-7/queues/slice.sv</a>
-time_elapsed: 0.085s
+time_elapsed: 0.094s
 </pre>
 <pre class="log">
-user_time: 0.072686
-system_time: 0.012303
-ram_usage: 11548
+user_time: 0.08963
+system_time: 0.004228
+ram_usage: 11804
 
-%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-9" target="file-frame">tests/chapter-7/queues/slice.sv:9</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-10" target="file-frame">tests/chapter-7/queues/slice.sv:10</a>: Unsupported: $ expression
 int q[$:5];
       ^
-%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-10" target="file-frame">tests/chapter-7/queues/slice.sv:10</a>: Unsupported: $ expression
+%Error: <a href="../../../../tests/chapter-7/queues/slice.sv.html#l-11" target="file-frame">tests/chapter-7/queues/slice.sv:11</a>: Unsupported: $ expression
 int r[$];
       ^
 %Error: Exiting due to 2 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

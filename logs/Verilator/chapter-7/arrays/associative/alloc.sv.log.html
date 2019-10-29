@@ -13,18 +13,21 @@ should_fail: 0
 tags: 7.8.7 7.8 7.9.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/associative/alloc.sv.html" target="file-frame">tests/chapter-7/arrays/associative/alloc.sv</a>
-time_elapsed: 0.084s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.060002
-system_time: 0.024474
-ram_usage: 11612
+user_time: 0.074372
+system_time: 0.011528
+ram_usage: 11548
 
-%Error: <a href="../../../../../tests/chapter-7/arrays/associative/alloc.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/associative/alloc.sv:9</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
+%Error: <a href="../../../../../tests/chapter-7/arrays/associative/alloc.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/alloc.sv:10</a>: syntax error, unexpected &#39;]&#39;, expecting &#34;&#39;{&#34;
 int arr [ int ];
               ^
 %Error: Exiting due to 1 error(s)
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

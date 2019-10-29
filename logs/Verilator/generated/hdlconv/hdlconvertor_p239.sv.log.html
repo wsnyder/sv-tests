@@ -13,13 +13,15 @@ should_fail: 0
 tags: hdlconv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p239.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p239.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.073831
-system_time: 0.014072999999999999
-ram_usage: 11680
+user_time: 0.073946
+system_time: 0.011741
+ram_usage: 11620
 
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p239.sv.html#l-26" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p239.sv:26</a>: Unsupported or unknown PLI call: $monitor
 $monitor ($time, ,&#34;a = %b b = %b&#34;, a, b);

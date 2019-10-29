@@ -13,19 +13,22 @@ should_fail: 0
 tags: 7.2.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv</a>
-time_elapsed: 0.086s
+time_elapsed: 0.088s
 </pre>
 <pre class="log">
-user_time: 0.06719699999999999
-system_time: 0.018820999999999997
-ram_usage: 11828
+user_time: 0.08261199999999999
+system_time: 0.005619
+ram_usage: 11652
 
-%Error: <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html#l-12" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv:12</a>: Unsupported: Initial values in struct/union members.
+%Error: <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html#l-13" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv:13</a>: Unsupported: Initial values in struct/union members.
  bit [3:0] lo = c;
                 ^
 %Error: Verilator internal fault, sorry.  Consider trying --debug --gdbbt
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv</a>
+%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked --Mdir vbuild --exe -o vmain vmain.cpp <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv</a>
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

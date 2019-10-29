@@ -7,25 +7,28 @@
 </head>
 <body>
 <h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Test packed arrays operations support (Variable slice)
 should_fail: 1
 tags: 7.4.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv</a>
-time_elapsed: 0.008s
+time_elapsed: 0.012s
 </pre>
 <pre class="log">
-user_time: 0.006833
-system_time: 0.001019
-ram_usage: 9640
+user_time: 0.007705
+system_time: 0.00406
+ram_usage: 9684
 
-<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>: error: Indexed part widths must be constant and greater than zero.
-<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>:      : This part width expression violates the rule: c
-<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>: error: Indexed part widths must be constant and greater than zero.
-<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-27" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:27</a>:      : This part width expression violates the rule: c
+<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>: error: Indexed part widths must be constant and greater than zero.
+<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>:      : This part width expression violates the rule: c
+<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>: error: Indexed part widths must be constant and greater than zero.
+<a href="../../../../../tests/chapter-7/arrays/packed/variable-slice-zero.sv.html#l-28" target="file-frame">tests/chapter-7/arrays/packed/variable-slice-zero.sv:28</a>:      : This part width expression violates the rule: c
 2 error(s) during elaboration.
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

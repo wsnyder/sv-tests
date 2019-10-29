@@ -13,13 +13,15 @@ should_fail: 0
 tags: 6.15 8.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../tests/generic/class/class_test_52.sv.html" target="file-frame">tests/generic/class/class_test_52.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.086s
 </pre>
 <pre class="log">
-user_time: 0.076264
-system_time: 0.011517
-ram_usage: 11560
+user_time: 0.073516
+system_time: 0.012312
+ram_usage: 11888
 
 %Error: <a href="../../../../tests/generic/class/class_test_52.sv.html#l-7" target="file-frame">tests/generic/class/class_test_52.sv:7</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
 class how_wide #(type DT=int) extends uvm_sequence_item;

@@ -13,13 +13,15 @@ should_fail: 0
 tags: yosys
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/sva
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tools/yosys/tests/sva/basic04.sv.html" target="file-frame">third_party/tools/yosys/tests/sva/basic04.sv</a>
-time_elapsed: 0.088s
+time_elapsed: 0.085s
 </pre>
 <pre class="log">
-user_time: 0.08103199999999999
-system_time: 0.006723
-ram_usage: 11880
+user_time: 0.070829
+system_time: 0.014221999999999999
+ram_usage: 11852
 
 %Error: <a href="../../../../third_party/tools/yosys/tests/sva/basic04.sv.html#l-6" target="file-frame">third_party/tools/yosys/tests/sva/basic04.sv:6</a>: syntax error, unexpected |=&gt;, expecting &#39;)&#39;
  a_wr: assert property ( @(posedge clock) write |=&gt; ready );

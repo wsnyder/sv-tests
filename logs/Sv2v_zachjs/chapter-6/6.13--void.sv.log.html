@@ -13,18 +13,20 @@ should_fail: 0
 tags: 6.13
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
+type: simulation parsing
+mode: parsing
 files: <a href="../../../tests/chapter-6/6.13--void.sv.html" target="file-frame">tests/chapter-6/6.13--void.sv</a>
 time_elapsed: 0.009s
 </pre>
 <pre class="log">
-user_time: 0.004389
-system_time: 0.004389
-ram_usage: 9696
+user_time: 0.00852
+system_time: 0.0
+ram_usage: 9652
 
 module top;
 	task fun;
 		
-		$display(&#34;void fun&#34;);
+		$display(&#34;:assert:(True)&#34;);
 	endtask
 	initial fun;
 endmodule

@@ -13,14 +13,18 @@ should_fail: 0
 tags: 7.4.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional
 top_module: 
+type: simulation parsing
+mode: simulation
 files: <a href="../../../../../tests/chapter-7/arrays/multidimensional/copy.sv.html" target="file-frame">tests/chapter-7/arrays/multidimensional/copy.sv</a>
-time_elapsed: 0.009s
+time_elapsed: 0.013s
 </pre>
 <pre class="log">
-user_time: 0.005810999999999999
-system_time: 0.002763
-ram_usage: 9556
+user_time: 0.007555
+system_time: 0.005592
+ram_usage: 9620
 
+:assert: (&#39;deadbeef&#39; == &#39;deadbeef&#39;)
+:assert: (&#39;deadbeef&#39; == &#39;deadbeef&#39;)
 
 </pre>
 </body>

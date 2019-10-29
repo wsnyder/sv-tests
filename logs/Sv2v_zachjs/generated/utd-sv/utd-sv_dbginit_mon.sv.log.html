@@ -13,13 +13,15 @@ should_fail: 0
 tags: utd-sv
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/tests/utd-sv/dbginit_mon.v.html" target="file-frame">third_party/tests/utd-sv/dbginit_mon.v</a>
-time_elapsed: 0.332s
+time_elapsed: 0.205s
 </pre>
 <pre class="log">
-user_time: 0.287369
-system_time: 0.044192999999999996
-ram_usage: 14620
+user_time: 0.157159
+system_time: 0.047885
+ram_usage: 14356
 
 module dbginit_mon;
 	wire cmp_clk = cmp_top.iop.cmp_gclk;

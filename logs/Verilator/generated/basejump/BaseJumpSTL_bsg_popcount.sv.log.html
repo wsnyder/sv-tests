@@ -13,13 +13,15 @@ should_fail: 0
 tags: basejump
 incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
 top_module: 
+type: parsing
+mode: parsing
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_popcount.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_popcount.v</a>
-time_elapsed: 0.074s
+time_elapsed: 0.080s
 </pre>
 <pre class="log">
-user_time: 0.055524
-system_time: 0.017994
-ram_usage: 11612
+user_time: 0.06557199999999999
+system_time: 0.014596999999999999
+ram_usage: 11844
 
 %Error: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_popcount.v.html#l-24" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_popcount.v:24</a>: Define or directive not defined: &#39;`BSG_MAX&#39;
    localparam first_half_lp  = `BSG_MAX(4,width_p - (width_p &gt;&gt; 1));
