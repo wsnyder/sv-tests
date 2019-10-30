@@ -7,55 +7,56 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: instantiating abstract class
 should_fail: 1
 tags: 8.21
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv</a>
-time_elapsed: 0.085s
-ram usage: 11560 KB
+time_elapsed: 0.089s
+ram usage: 11808 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-9" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
  virtual class base_cls;
  ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-9" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  virtual class base_cls;
          ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-8" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:8</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-9" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:9</a>: syntax error, unexpected &#39;;&#39;, expecting IDENTIFIER
  virtual class base_cls;
                        ^
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-9" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-10" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   pure virtual function void print();
        ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-10" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-11" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-12" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-13" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  class test_cls extends base_cls;
  ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-12" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-13" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
  class test_cls extends base_cls;
                 ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-14" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-15" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   virtual function void print();
   ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-17" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-18" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-22" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:22</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-23" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:23</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
   test_obj = new;
              ^~~
-%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-22" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:22</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.21--abstract_class_inst.sv.html#l-23" target="file-frame">tests/chapter-8/8.21--abstract_class_inst.sv:23</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
   test_obj = new;
                 ^
 %Error: Exiting due to 11 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

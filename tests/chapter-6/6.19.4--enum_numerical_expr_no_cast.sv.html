@@ -20,21 +20,23 @@
 <a href="#l-12">12</a>
 <a href="#l-13">13</a>
 <a href="#l-14">14</a>
-<a href="#l-15">15</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
+<a href="#l-15">15</a>
+<a href="#l-16">16</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/*</span>
 <a name="l-2"></a><span class="cm">:name: enum_numerical_expr_no_cast</span>
 <a name="l-3"></a><span class="cm">:description: enum numerical expression without casting</span>
 <a name="l-4"></a><span class="cm">:should_fail: 1</span>
 <a name="l-5"></a><span class="cm">:tags: 6.19.4</span>
-<a name="l-6"></a><span class="cm">*/</span>
-<a name="l-7"></a><span class="k">module</span> <span class="n">top</span><span class="p">();</span>
-<a name="l-8"></a>	<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">}</span> <span class="n">e</span><span class="p">;</span>
-<a name="l-9"></a>
-<a name="l-10"></a>	<span class="k">initial</span> <span class="k">begin</span>
-<a name="l-11"></a>		<span class="n">e</span> <span class="n">val</span><span class="p">;</span>
-<a name="l-12"></a>		<span class="n">val</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-<a name="l-13"></a>		<span class="n">val</span> <span class="o">+=</span> <span class="mh">1</span><span class="p">;</span>
-<a name="l-14"></a>	<span class="k">end</span>
-<a name="l-15"></a><span class="k">endmodule</span>
+<a name="l-6"></a><span class="cm">:type: simulation</span>
+<a name="l-7"></a><span class="cm">*/</span>
+<a name="l-8"></a><span class="k">module</span> <span class="n">top</span><span class="p">();</span>
+<a name="l-9"></a>	<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">}</span> <span class="n">e</span><span class="p">;</span>
+<a name="l-10"></a>
+<a name="l-11"></a>	<span class="k">initial</span> <span class="k">begin</span>
+<a name="l-12"></a>		<span class="n">e</span> <span class="n">val</span><span class="p">;</span>
+<a name="l-13"></a>		<span class="n">val</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+<a name="l-14"></a>		<span class="n">val</span> <span class="o">+=</span> <span class="mh">1</span><span class="p">;</span>
+<a name="l-15"></a>	<span class="k">end</span>
+<a name="l-16"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table>
   </body>

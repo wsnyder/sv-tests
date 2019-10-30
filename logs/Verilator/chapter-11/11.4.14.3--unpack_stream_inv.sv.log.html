@@ -13,19 +13,20 @@ should_fail: 1
 tags: 11.4.14.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv.html" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_inv.sv</a>
-time_elapsed: 0.086s
-ram usage: 11840 KB
+time_elapsed: 0.091s
+ram usage: 11832 KB
 </pre>
 <pre class="log">
 
-%Warning-WIDTH: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv.html#l-14" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_inv.sv:14</a>: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS&#39;s STREAML generates 96 bits.
+%Warning-WIDTH: <a href="../../../tests/chapter-11/11.4.14.3--unpack_stream_inv.sv.html#l-15" target="file-frame">tests/chapter-11/11.4.14.3--unpack_stream_inv.sv:15</a>: Operator ASSIGN expects 32 bits on the Assign RHS, but Assign RHS&#39;s STREAML generates 96 bits.
                                                                                                          : ... In instance top
  int d = {&lt;&lt;{a, b, c}};
           ^~
                 ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

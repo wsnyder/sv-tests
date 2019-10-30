@@ -7,39 +7,40 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: invalid tagged union member access test
 should_fail: 1
 tags: 11.9
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv</a>
-time_elapsed: 0.085s
-ram usage: 11648 KB
+time_elapsed: 0.089s
+ram usage: 11672 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-9" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-10" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
 typedef union tagged {
               ^~~~~~
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-10" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:10</a>: syntax error, unexpected void, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-11" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:11</a>: syntax error, unexpected void, expecting TYPE-IDENTIFIER
  void Invalid;
  ^~~~
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-12" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:12</a>: syntax error, unexpected &#39;}&#39;
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-13" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:13</a>: syntax error, unexpected &#39;}&#39;
 } u_int;
 ^
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-19" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-20" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
  a = tagged Invalid;
      ^~~~~~
-%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-20" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
+%Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-21" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:21</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;tagged&#39;
  b = tagged Valid(42);
      ^~~~~~
-%Error: Internal Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-7" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:7</a>: ../V3ParseSym.h:115: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE &#39;top&#39;
+%Error: Internal Error: <a href="../../../tests/chapter-11/11.9--tagged_union_member_access_inv.sv.html#l-8" target="file-frame">tests/chapter-11/11.9--tagged_union_member_access_inv.sv:8</a>: ../V3ParseSym.h:115: Symbols suggest ending UNIONDTYPE but parser thinks ending MODULE &#39;top&#39;
 module top();
        ^~~
                         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

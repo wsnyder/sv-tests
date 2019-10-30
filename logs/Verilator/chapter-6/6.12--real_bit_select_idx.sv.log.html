@@ -7,30 +7,31 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: real bit select tests
 should_fail: 1
 tags: 6.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv</a>
-time_elapsed: 0.083s
-ram usage: 11796 KB
+time_elapsed: 0.091s
+ram usage: 11820 KB
 </pre>
 <pre class="log">
 
-%Warning-WIDTH: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html#l-12" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv:12</a>: Bit extraction of var[3:0] requires 2 bit index, not 64 bits.
+%Warning-WIDTH: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html#l-13" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv:13</a>: Bit extraction of var[3:0] requires 2 bit index, not 64 bits.
                                                                                                      : ... In instance top
  assign c = b[a];
              ^
                 ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
-%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html#l-12" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv:12</a>: Operator SEL expected non-complex non-double Extract Range in width check
+%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select_idx.sv.html#l-13" target="file-frame">tests/chapter-6/6.12--real_bit_select_idx.sv:13</a>: Operator SEL expected non-complex non-double Extract Range in width check
                                                                                              : ... In instance top
  assign c = b[a];
              ^
 %Error: Exiting due to 1 error(s)
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

@@ -7,22 +7,23 @@
 </head>
 <body>
 <h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: unassigned name following enum with x tests
 should_fail: 1
 tags: 6.19
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-6/6.19--enum_xx_inv_order.sv.html" target="file-frame">tests/chapter-6/6.19--enum_xx_inv_order.sv</a>
-time_elapsed: 0.008s
-ram usage: 9624 KB
+time_elapsed: 0.013s
+ram usage: 9692 KB
 </pre>
 <pre class="log">
 
-<a href="../../../tests/chapter-6/6.19--enum_xx_inv_order.sv.html#l-8" target="file-frame">tests/chapter-6/6.19--enum_xx_inv_order.sv:8</a>: error: Enumeration name c has an undefined inferred value.
+<a href="../../../tests/chapter-6/6.19--enum_xx_inv_order.sv.html#l-9" target="file-frame">tests/chapter-6/6.19--enum_xx_inv_order.sv:9</a>: error: Enumeration name c has an undefined inferred value.
 2 error(s) during elaboration.
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

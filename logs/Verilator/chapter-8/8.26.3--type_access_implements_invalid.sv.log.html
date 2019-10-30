@@ -7,55 +7,56 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: access types from implemented class
 should_fail: 1
 tags: 8.26.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv</a>
-time_elapsed: 0.083s
-ram usage: 11688 KB
+time_elapsed: 0.091s
+ram usage: 11824 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  interface class ihello;
            ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:10</a>: syntax error, unexpected pure
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:11</a>: syntax error, unexpected pure
   pure virtual function void hello(int_t val);
   ^~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   pure virtual function void hello(int_t val);
        ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  class Hello implements ihello;
  ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:13</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:14</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
  class Hello implements ihello;
              ^~~~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   virtual function void hello(int_t val);
   ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:22</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-23" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:23</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
   obj = new;
         ^~~
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-22" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:22</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-23" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:23</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
   obj = new;
            ^
-%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-25" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:25</a>: syntax error, unexpected endmodule
+%Error: <a href="../../../tests/chapter-8/8.26.3--type_access_implements_invalid.sv.html#l-26" target="file-frame">tests/chapter-8/8.26.3--type_access_implements_invalid.sv:26</a>: syntax error, unexpected endmodule
 endmodule
 ^~~~~~~~~
 %Error: Cannot continue
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

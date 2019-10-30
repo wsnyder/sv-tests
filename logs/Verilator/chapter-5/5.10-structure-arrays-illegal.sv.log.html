@@ -7,30 +7,31 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Structure array assignment tests
 should_fail: 1
 tags: 5.10
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv</a>
-time_elapsed: 0.085s
-ram usage: 11836 KB
+time_elapsed: 0.090s
+ram usage: 11804 KB
 </pre>
 <pre class="log">
 
-%Warning-UNPACKED: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html#l-8" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv:8</a>: Unsupported: Unpacked struct/union
+%Warning-UNPACKED: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html#l-9" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv:9</a>: Unsupported: Unpacked struct/union
   typedef struct {
           ^~~~~~
                    ... Use &#34;/* verilator lint_off UNPACKED */&#34; and lint_on around source to disable this message.
-%Error: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html#l-14" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv:14</a>: Assignment pattern with too many elements
+%Error: <a href="../../../tests/chapter-5/5.10-structure-arrays-illegal.sv.html#l-15" target="file-frame">tests/chapter-5/5.10-structure-arrays-illegal.sv:15</a>: Assignment pattern with too many elements
                                                                                                  : ... In instance top
   ms_t ms[1:0] = &#39;{0, 0, 1, 1};
                  ^~
 %Error: Exiting due to 1 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

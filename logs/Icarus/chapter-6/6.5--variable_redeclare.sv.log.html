@@ -7,22 +7,23 @@
 </head>
 <body>
 <h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: Variable redeclaration tests
 should_fail: 1
 tags: 6.5
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv</a>
-time_elapsed: 0.008s
-ram usage: 9656 KB
+time_elapsed: 0.013s
+ram usage: 9660 KB
 </pre>
 <pre class="log">
 
-<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>: error: &#39;v&#39; has already been declared in this scope.
-<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-8" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:8</a>:      : It was declared here as a variable.
+<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-10" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:10</a>: error: &#39;v&#39; has already been declared in this scope.
+<a href="../../../tests/chapter-6/6.5--variable_redeclare.sv.html#l-9" target="file-frame">tests/chapter-6/6.5--variable_redeclare.sv:9</a>:      : It was declared here as a variable.
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

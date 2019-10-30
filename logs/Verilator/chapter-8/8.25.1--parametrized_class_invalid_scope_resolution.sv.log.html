@@ -7,41 +7,42 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: parametrized class invalid scope resolution
 should_fail: 1
 tags: 8.25.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv</a>
-time_elapsed: 0.084s
-ram usage: 11652 KB
+time_elapsed: 0.090s
+ram usage: 11712 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-10" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  class par_cls #(int a = 25);
  ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-9" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:9</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-10" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:10</a>: syntax error, unexpected IDENTIFIER, expecting &#39;)&#39;
  class par_cls #(int a = 25);
                      ^
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-11" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-12" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-16" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-17" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
   inst = new;
          ^~~
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-16" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:16</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-17" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:17</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
   inst = new;
             ^
-%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-18" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:18</a>: syntax error, unexpected ::, expecting &#39;)&#39; or &#39;,&#39;
+%Error: <a href="../../../tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv.html#l-19" target="file-frame">tests/chapter-8/8.25.1--parametrized_class_invalid_scope_resolution.sv:19</a>: syntax error, unexpected ::, expecting &#39;)&#39; or &#39;,&#39;
   $display(par_cls::b);
                   ^~
                                                                                                                        : ... Perhaps &#39;par_cls&#39; is a package which needs to be predeclared? (IEEE 2017 26.3)
 %Error: Exiting due to 6 error(s)
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

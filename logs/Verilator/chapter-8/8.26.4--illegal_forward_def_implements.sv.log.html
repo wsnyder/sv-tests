@@ -7,63 +7,64 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: implementing forward typedef for an interface class should fail
 should_fail: 1
 tags: 8.26.4
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv</a>
-time_elapsed: 0.082s
-ram usage: 11740 KB
+time_elapsed: 0.089s
+ram usage: 11864 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:8</a>: syntax error, unexpected interface, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:9</a>: syntax error, unexpected interface, expecting TYPE-IDENTIFIER
  typedef interface class ihello;
          ^~~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  typedef interface class ihello;
                    ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  class Hello implements ihello;
  ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:10</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:11</a>: Unsupported: SystemVerilog 2012 reserved word not implemented: &#39;implements&#39;
  class Hello implements ihello;
              ^~~~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   virtual function void hello(ihello::int_t val);
   ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:11</a>: syntax error, unexpected ::, expecting &#39;)&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:12</a>: syntax error, unexpected ::, expecting &#39;)&#39;
   virtual function void hello(ihello::int_t val);
                                     ^~
                                                                                                           : ... Perhaps &#39;ihello&#39; is a package which needs to be predeclared? (IEEE 2017 26.3)
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  interface class ihello;
            ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:18</a>: syntax error, unexpected pure
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-19" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:19</a>: syntax error, unexpected pure
   pure virtual function void hello(int_t val);
   ^~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-19" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   pure virtual function void hello(int_t val);
        ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-19" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:19</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-20" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:20</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-24" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:24</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-25" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:25</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
   obj = new;
         ^~~
-%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-24" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:24</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-25" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:25</a>: syntax error, unexpected &#39;;&#39;, expecting TYPE-IDENTIFIER
   obj = new;
            ^
-%Error: Internal Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-7" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:7</a>: ../V3ParseSym.h:115: Symbols suggest ending TASK &#39;hello&#39; but parser thinks ending MODULE &#39;class_tb&#39;
+%Error: Internal Error: <a href="../../../tests/chapter-8/8.26.4--illegal_forward_def_implements.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.4--illegal_forward_def_implements.sv:8</a>: ../V3ParseSym.h:115: Symbols suggest ending TASK &#39;hello&#39; but parser thinks ending MODULE &#39;class_tb&#39;
 module class_tb ();
        ^~~~~~~~
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

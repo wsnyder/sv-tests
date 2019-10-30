@@ -7,33 +7,34 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: real indexing tests
 should_fail: 1
 tags: 6.12
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv</a>
-time_elapsed: 0.084s
-ram usage: 11580 KB
+time_elapsed: 0.090s
+ram usage: 11840 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Illegal bit or array select; type does not have a bit range, or bad dimension: type is real
+%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-12" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:12</a>: Illegal bit or array select; type does not have a bit range, or bad dimension: type is real
                                                                                          : ... In instance top
  assign b = a[2];
              ^
-%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Expected integral (non-real) input to SEL
+%Error: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-12" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:12</a>: Expected integral (non-real) input to SEL
                                                                                          : ... In instance top
  assign b = a[2];
             ^
-%Warning-REALCVT: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-11" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:11</a>: Implicit conversion of real to integer
+%Warning-REALCVT: <a href="../../../tests/chapter-6/6.12--real_bit_select.sv.html#l-12" target="file-frame">tests/chapter-6/6.12--real_bit_select.sv:12</a>: Implicit conversion of real to integer
  assign b = a[2];
             ^
                   ... Use &#34;/* verilator lint_off REALCVT */&#34; and lint_on around source to disable this message.
 %Error: Exiting due to 2 error(s)
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>

@@ -7,22 +7,23 @@
 </head>
 <body>
 <h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: invalid enum assignment tests
 should_fail: 1
 tags: 6.19.3
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-6/6.19.3--enum_type_checking_inv.sv.html" target="file-frame">tests/chapter-6/6.19.3--enum_type_checking_inv.sv</a>
-time_elapsed: 0.009s
-ram usage: 9624 KB
+time_elapsed: 0.014s
+ram usage: 9596 KB
 </pre>
 <pre class="log">
 
-<a href="../../../tests/chapter-6/6.19.3--enum_type_checking_inv.sv.html#l-12" target="file-frame">tests/chapter-6/6.19.3--enum_type_checking_inv.sv:12</a>: error: This assignment requires an explicit cast.
+<a href="../../../tests/chapter-6/6.19.3--enum_type_checking_inv.sv.html#l-13" target="file-frame">tests/chapter-6/6.19.3--enum_type_checking_inv.sv:13</a>: error: This assignment requires an explicit cast.
 1 error(s) during elaboration.
+iverilog.out: Unable to open input file.
 
 </pre>
 </body>

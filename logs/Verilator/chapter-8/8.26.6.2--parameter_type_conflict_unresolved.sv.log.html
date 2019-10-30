@@ -7,58 +7,59 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: superclass type declaration conflicts must be resolved in subclass
 should_fail: 1
 tags: 8.26.6.2
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv</a>
-time_elapsed: 0.085s
-ram usage: 11804 KB
+time_elapsed: 0.091s
+ram usage: 11612 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-8" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  interface class ic1#(type T = logic);
            ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:9</a>: syntax error, unexpected pure
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:10</a>: syntax error, unexpected pure
   pure virtual function void fn1(T a);
   ^~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-9" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:9</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   pure virtual function void fn1(T a);
        ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-10" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:10</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-11" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:11</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  interface class ic2#(type T = logic);
            ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-12" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:12</a>: syntax error, unexpected TYPE-IDENTIFIER, expecting IDENTIFIER
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:13</a>: syntax error, unexpected TYPE-IDENTIFIER, expecting IDENTIFIER
  interface class ic2#(type T = logic);
                            ^
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-13" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:13</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;virtual&#39;
   pure virtual function void fn2(T a);
        ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-14" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:14</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-15" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:15</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;class&#39;
  interface class ic3#(type TYPE = logic) extends ic1#(TYPE), ic2#(TYPE);
            ^~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:16</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;extends&#39;
  interface class ic3#(type TYPE = logic) extends ic1#(TYPE), ic2#(TYPE);
                                          ^~~~~~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-16" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:16</a>: syntax error, unexpected IDENTIFIER, expecting &#39;;&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:17</a>: syntax error, unexpected IDENTIFIER, expecting &#39;;&#39;
  interface class ic3#(type TYPE = logic) extends ic1#(TYPE), ic2#(TYPE);
                                                  ^~~
-%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-17" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:17</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+%Error: <a href="../../../tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv.html#l-18" target="file-frame">tests/chapter-8/8.26.6.2--parameter_type_conflict_unresolved.sv:18</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
  endclass
  ^~~~~~~~
 %Error: Cannot continue
         ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>
