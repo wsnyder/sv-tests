@@ -1,0 +1,36 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: blocking assignment test
+should_fail: 0
+tags: 10.4.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-10
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-10/10.4.1--blocking-assignment.sv.html" target="file-frame">tests/chapter-10/10.4.1--blocking-assignment.sv</a>
+time_elapsed: 0.093s
+ram usage: 11512 KB
+</pre>
+<pre class="log">
+
+%Warning-WIDTH: <a href="../../../tests/chapter-10/10.4.1--blocking-assignment.sv.html#l-10" target="file-frame">tests/chapter-10/10.4.1--blocking-assignment.sv:10</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?sh3&#39; generates 32 or 2 bits.
+                                                                                                        : ... In instance top
+logic a = 3;
+          ^
+                ... Use &#34;/* verilator lint_off WIDTH */&#34; and lint_on around source to disable this message.
+%Warning-WIDTH: <a href="../../../tests/chapter-10/10.4.1--blocking-assignment.sv.html#l-11" target="file-frame">tests/chapter-10/10.4.1--blocking-assignment.sv:11</a>: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS&#39;s CONST &#39;?32?sh2&#39; generates 32 or 2 bits.
+                                                                                                        : ... In instance top
+logic b = 2;
+          ^
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
+
+</pre>
+</body>

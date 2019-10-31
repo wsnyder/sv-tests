@@ -1,0 +1,53 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: clocking block with signals test
+should_fail: 0
+tags: 14.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-14
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv</a>
+time_elapsed: 0.003s
+ram usage: 9636 KB
+</pre>
+<pre class="log">
+
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-7" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:7</a>:18: error: redefinition of &#39;clk&#39;
+module top(input clk, input a, output b, output c);
+                 ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-9" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:9</a>:6: note: previous definition here
+wire clk;
+     ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-7" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:7</a>:29: error: redefinition of &#39;a&#39;
+module top(input clk, input a, output b, output c);
+                            ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-10" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:10</a>:6: note: previous definition here
+wire a;
+     ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-7" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:7</a>:39: error: redefinition of &#39;b&#39;
+module top(input clk, input a, output b, output c);
+                                      ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-11" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:11</a>:6: note: previous definition here
+wire b;
+     ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-7" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:7</a>:49: error: redefinition of &#39;c&#39;
+module top(input clk, input a, output b, output c);
+                                                ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-12" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:12</a>:6: note: previous definition here
+wire c;
+     ^
+../..<a href="../../../tests/chapter-14/14.3--clocking-block-signals.sv.html#l-14" target="file-frame">tests/chapter-14/14.3--clocking-block-signals.sv:14</a>:1: error: language feature not yet supported
+clocking ck1 @(posedge clk);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+</pre>
+</body>

@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: blocking assignment test
+should_fail: 0
+tags: 10.4.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-10
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-10/10.4.1--blocking-assignment.sv.html" target="file-frame">tests/chapter-10/10.4.1--blocking-assignment.sv</a>
+time_elapsed: 0.015s
+ram usage: 9648 KB
+</pre>
+<pre class="log">
+
+module top;
+	reg a = 3;
+	reg b = 2;
+	initial begin
+		a = 1;
+		b = a;
+		$display(&#34;:assert: (%d == %d)&#34;, a, b);
+	end
+endmodule
+
+</pre>
+</body>
