@@ -1,0 +1,31 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-passed">
+description: static task test
+should_fail: 0
+tags: 13.3.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-13/13.3.1--task-static.sv.html" target="file-frame">tests/chapter-13/13.3.1--task-static.sv</a>
+time_elapsed: 0.017s
+ram usage: 9588 KB
+</pre>
+<pre class="log">
+
+<a href="../../../tests/chapter-13/13.3.1--task-static.sv.html#l-11" target="file-frame">tests/chapter-13/13.3.1--task-static.sv:11</a>: warning: Static variable initialization requires explicit lifetime in this context.
+:assert:(          1 == 1)
+:assert:(          2 != 1)
+:assert:(          3 != 1)
+:assert:(          4 != 1)
+
+</pre>
+</body>

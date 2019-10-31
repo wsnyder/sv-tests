@@ -1,0 +1,62 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: static function test
+should_fail: 0
+tags: 13.4.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-13/13.4.2--function-static.sv.html" target="file-frame">tests/chapter-13/13.4.2--function-static.sv</a>
+time_elapsed: 0.006s
+ram usage: 9612 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-13/13.4.2--function-static.sv.html#l-17" target="file-frame">tests/chapter-13/13.4.2--function-static.sv:17</a>:3-41:
+   | 
+   |         $display(&#34;:assert: (%d == 5)&#34;, add(5));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-13/13.4.2--function-static.sv.html#l-18" target="file-frame">tests/chapter-13/13.4.2--function-static.sv:18</a>:3-42:
+   | 
+   |         $display(&#34;:assert: (%d == 10)&#34;, add(5));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-13/13.4.2--function-static.sv.html#l-19" target="file-frame">tests/chapter-13/13.4.2--function-static.sv:19</a>:3-42:
+   | 
+   |         $display(&#34;:assert: (%d == 15)&#34;, add(5));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-13/13.4.2--function-static.sv.html#l-20" target="file-frame">tests/chapter-13/13.4.2--function-static.sv:20</a>:3-42:
+   | 
+   |         $display(&#34;:assert: (%d == 20)&#34;, add(5));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.221.0 () -&gt; () {
+0:
+    %1 = const i32 0
+    %2 = const i32 0
+    %3 = const i32 0
+    %4 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    inst %top.initial.221.0 () -&gt; ()
+}
+
+</pre>
+</body>

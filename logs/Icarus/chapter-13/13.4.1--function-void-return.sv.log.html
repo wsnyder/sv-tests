@@ -1,0 +1,27 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-failed">
+description: void function return value test
+should_fail: 1
+tags: 13.4.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-13/13.4.1--function-void-return.sv.html" target="file-frame">tests/chapter-13/13.4.1--function-void-return.sv</a>
+time_elapsed: 0.010s
+ram usage: 9740 KB
+</pre>
+<pre class="log">
+
+Segmentation fault (core dumped)
+
+</pre>
+</body>

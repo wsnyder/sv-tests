@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-passed">
+description: function invalid fork test
+should_fail: 1
+tags: 13.4.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-13/13.4.4--fork-invalid.sv.html" target="file-frame">tests/chapter-13/13.4.4--fork-invalid.sv</a>
+time_elapsed: 0.005s
+ram usage: 9556 KB
+</pre>
+<pre class="log">
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-13/13.4.4--fork-invalid.sv.html" target="file-frame">tests/chapter-13/13.4.4--fork-invalid.sv</a>::1 File (<a href="../../../tests/chapter-13/13.4.4--fork-invalid.sv.html" target="file-frame">tests/chapter-13/13.4.4--fork-invalid.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../tests/chapter-13/13.4.4--fork-invalid.sv.html" target="file-frame">tests/chapter-13/13.4.4--fork-invalid.sv</a>::10 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39; or &#39;;&#39;)
+function int fun(int val);
+PARSE_ERROR <a href="../../../tests/chapter-13/13.4.4--fork-invalid.sv.html" target="file-frame">tests/chapter-13/13.4.4--fork-invalid.sv</a>::11 Unsuported token
+	fork
+	^~~~
+PARSE_ERROR <a href="../../../tests/chapter-13/13.4.4--fork-invalid.sv.html" target="file-frame">tests/chapter-13/13.4.4--fork-invalid.sv</a>::15 error in parsing: (syntax error, unexpected vSYMBOL_ID, expecting &#39;(&#39;)
+	return val + 2;
+
+</pre>
+</body>

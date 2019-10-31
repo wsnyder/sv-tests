@@ -1,0 +1,34 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-passed">
+description: task test
+should_fail: 0
+tags: 13.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-13/13.3--task.sv.html" target="file-frame">tests/chapter-13/13.3--task.sv</a>
+time_elapsed: 0.009s
+ram usage: 9844 KB
+</pre>
+<pre class="log">
+
+
+-- Executing script file `scr.ys&#39; --
+
+1. Executing Verilog-2005 frontend: <a href="../../../tests/chapter-13/13.3--task.sv.html" target="file-frame">tests/chapter-13/13.3--task.sv</a>
+Parsing SystemVerilog input from `<a href="../../../tests/chapter-13/13.3--task.sv.html" target="file-frame">tests/chapter-13/13.3--task.sv</a>&#39; to AST representation.
+Generating RTLIL representation for module `\top&#39;.
+:assert: True
+Successfully finished Verilog frontend.
+
+</pre>
+</body>

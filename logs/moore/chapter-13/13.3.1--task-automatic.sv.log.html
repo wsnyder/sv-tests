@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: automatic task test
+should_fail: 0
+tags: 13.3.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-13/13.3.1--task-automatic.sv.html" target="file-frame">tests/chapter-13/13.3.1--task-automatic.sv</a>
+time_elapsed: 0.005s
+ram usage: 9640 KB
+</pre>
+<pre class="log">
+
+compiler bug: lowering of statement not implemented
+  --&gt; <a href="../../../tests/chapter-13/13.3.1--task-automatic.sv.html#l-17" target="file-frame">tests/chapter-13/13.3.1--task-automatic.sv:17</a>:2-52:
+   | 
+   |     fork
+   |     ^^^^
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+
+</pre>
+</body>
