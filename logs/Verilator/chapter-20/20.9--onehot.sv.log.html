@@ -1,0 +1,27 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: $onehot test
+should_fail: 0
+tags: 20.9
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-20
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-20/20.9--onehot.sv.html" target="file-frame">tests/chapter-20/20.9--onehot.sv</a>
+time_elapsed: 0.093s
+ram usage: 11684 KB
+</pre>
+<pre class="log">
+
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
+
+</pre>
+</body>

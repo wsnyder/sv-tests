@@ -1,0 +1,57 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: $fell test
+should_fail: 0
+tags: 20.13 16.9
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/sampled_functions
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../tests/generated/sampled_functions/20.13--fell.sv.html" target="file-frame">tests/generated/sampled_functions/20.13--fell.sv</a>
+time_elapsed: 0.005s
+ram usage: 9600 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../tests/generated/sampled_functions/20.13--fell.sv.html#l-11" target="file-frame">tests/generated/sampled_functions/20.13--fell.sv:11</a>:1-25:
+   | 
+   | $display(&#34;%d&#34;, $fell(a));
+   | ^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.always.224.0 (i1$ %clk) -&gt; () {
+0:
+    br %init
+init:
+    %clk1 = prb i1$ %clk
+    wait %check, %clk
+check:
+    %clk2 = prb i1$ %clk
+    %1 = const i1 0
+    %2 = eq i1 %clk1, %1
+    %3 = neq i1 %clk2, %1
+    %posedge = and i1 %2, %3
+    br %posedge, %init, %event
+event:
+    %4 = const i32 0
+    br %0
+}
+
+entity @top () -&gt; () {
+    %0 = const i1 0
+    %a = sig i1 %0
+    %1 = const i1 0
+    %clk = sig i1 %1
+    inst %top.always.224.0 (i1$ %clk) -&gt; ()
+}
+
+</pre>
+</body>

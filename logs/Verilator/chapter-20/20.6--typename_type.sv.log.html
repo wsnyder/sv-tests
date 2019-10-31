@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: $typename with type as an argument
+should_fail: 0
+tags: 20.6
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-20
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-20/20.6--typename_type.sv.html" target="file-frame">tests/chapter-20/20.6--typename_type.sv</a>
+time_elapsed: 0.089s
+ram usage: 11912 KB
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../tests/chapter-20/20.6--typename_type.sv.html#l-12" target="file-frame">tests/chapter-20/20.6--typename_type.sv:12</a>: Unsupported or unknown PLI call: $typename
+ $display(&#34;:assert: (&#39;%s&#39; == &#39;logic&#39;)&#34;, $typename(logic));
+                                        ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-20/20.6--typename_type.sv.html#l-12" target="file-frame">tests/chapter-20/20.6--typename_type.sv:12</a>: syntax error, unexpected &#39;)&#39;, expecting &#34;&#39;{&#34;
+ $display(&#34;:assert: (&#39;%s&#39; == &#39;logic&#39;)&#34;, $typename(logic));
+                                                       ^
+%Error: Exiting due to 2 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
+
+</pre>
+</body>

@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: $dist_t test
+should_fail: 0
+tags: 20.15
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-20
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-20/20.15--dist_t.sv.html" target="file-frame">tests/chapter-20/20.15--dist_t.sv</a>
+time_elapsed: 0.017s
+ram usage: 9592 KB
+</pre>
+<pre class="log">
+
+module top;
+	initial begin : sv2v_autoblock_1
+		integer seed;
+		seed = 1234;
+		$display(&#34;%d&#34;, $dist_t(seed, 3));
+	end
+endmodule
+
+</pre>
+</body>

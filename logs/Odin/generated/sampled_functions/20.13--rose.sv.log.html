@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: $rose test
+should_fail: 0
+tags: 20.13 16.9
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/sampled_functions
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../tests/generated/sampled_functions/20.13--rose.sv.html" target="file-frame">tests/generated/sampled_functions/20.13--rose.sv</a>
+time_elapsed: 0.005s
+ram usage: 9568 KB
+</pre>
+<pre class="log">
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../../tests/generated/sampled_functions/20.13--rose.sv.html" target="file-frame">tests/generated/sampled_functions/20.13--rose.sv</a>::1 File (<a href="../../../../tests/generated/sampled_functions/20.13--rose.sv.html" target="file-frame">tests/generated/sampled_functions/20.13--rose.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../../tests/generated/sampled_functions/20.13--rose.sv.html" target="file-frame">tests/generated/sampled_functions/20.13--rose.sv</a>::9 error in parsing: (syntax error, unexpected &#39;,&#39;, expecting &#39;(&#39;)
+logic a, clk;
+
+</pre>
+</body>

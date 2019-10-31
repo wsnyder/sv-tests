@@ -1,0 +1,32 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: $changing_gclk test
+should_fail: 0
+tags: 20.13 16.9
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/sampled_functions
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../tests/generated/sampled_functions/20.13--changing_gclk.sv.html" target="file-frame">tests/generated/sampled_functions/20.13--changing_gclk.sv</a>
+time_elapsed: 0.013s
+ram usage: 9612 KB
+</pre>
+<pre class="log">
+
+module top;
+	wire a;
+	wire clk;
+	always @(posedge clk)
+		$display(&#34;%d&#34;, $changing_gclk(a));
+endmodule
+
+</pre>
+</body>

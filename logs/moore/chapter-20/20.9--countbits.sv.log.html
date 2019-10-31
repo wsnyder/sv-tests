@@ -1,0 +1,71 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: $countbits test
+should_fail: 0
+tags: 20.9
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-20
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-20/20.9--countbits.sv.html" target="file-frame">tests/chapter-20/20.9--countbits.sv</a>
+time_elapsed: 0.006s
+ram usage: 9680 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-20/20.9--countbits.sv.html#l-13" target="file-frame">tests/chapter-20/20.9--countbits.sv:13</a>:2-53:
+   | 
+   |     $display(&#34;:assert: (%d == 7)&#34;, $countbits(val, &#39;1));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-20/20.9--countbits.sv.html#l-14" target="file-frame">tests/chapter-20/20.9--countbits.sv:14</a>:2-49:
+   | 
+   |     $display(&#34;:assert: (%d == 7)&#34;, $countones(val));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-20/20.9--countbits.sv.html#l-15" target="file-frame">tests/chapter-20/20.9--countbits.sv:15</a>:2-54:
+   | 
+   |     $display(&#34;:assert: (%d == 25)&#34;, $countbits(val, &#39;0));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-20/20.9--countbits.sv.html#l-16" target="file-frame">tests/chapter-20/20.9--countbits.sv:16</a>:2-58:
+   | 
+   |     $display(&#34;:assert: (%d == 32)&#34;, $countbits(val, &#39;0, &#39;1));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-20/20.9--countbits.sv.html#l-17" target="file-frame">tests/chapter-20/20.9--countbits.sv:17</a>:2-57:
+   | 
+   |     $display(&#34;:assert: (%d == 0)&#34;, $countbits(val, &#39;x, &#39;z));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.221.0 () -&gt; () {
+0:
+    %1 = const i32 1879082017
+    %val = var i32 %1
+    %2 = const i32 0
+    %3 = const i32 0
+    %4 = const i32 0
+    %5 = const i32 0
+    %6 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    inst %top.initial.221.0 () -&gt; ()
+}
+
+</pre>
+</body>

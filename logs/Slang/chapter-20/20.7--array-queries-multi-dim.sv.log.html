@@ -1,0 +1,53 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: multi-dimensional array query function tests
+should_fail: 0
+tags: 20.7
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-20
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv</a>
+time_elapsed: 0.003s
+ram usage: 9800 KB
+</pre>
+<pre class="log">
+
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-14" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:14</a>:33: error: unknown system name &#39;$dimensions&#39;
+	$display(&#34;:assert: (%d == 2)&#34;, $dimensions(arr));
+	                               ^~~~~~~~~~~
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-15" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:15</a>:49: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 1)&#34;, $increment(arr, 2));
+	                                               ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-16" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:16</a>:45: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 0)&#34;, $right(arr, 2));
+	                                           ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-17" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:17</a>:45: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 31)&#34;, $left(arr, 2));
+	                                           ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-18" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:18</a>:45: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 0)&#34;, $right(arr, 1));
+	                                           ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-19" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:19</a>:45: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 15)&#34;, $left(arr, 1));
+	                                           ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-20" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:20</a>:43: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 0)&#34;, $low(arr, 2));
+	                                         ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-21" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:21</a>:45: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 31)&#34;, $high(arr, 2));
+	                                           ^
+../..<a href="../../../tests/chapter-20/20.7--array-queries-multi-dim.sv.html#l-22" target="file-frame">tests/chapter-20/20.7--array-queries-multi-dim.sv:22</a>:45: error: too many arguments to subroutine call; expected 1 but 2 were provided
+	$display(&#34;:assert: (%d == 32)&#34;, $size(arr, 2));
+	                                           ^
+
+</pre>
+</body>

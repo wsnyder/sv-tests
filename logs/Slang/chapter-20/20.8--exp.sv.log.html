@@ -1,0 +1,32 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: $exp test
+should_fail: 0
+tags: 20.8
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-20
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-20/20.8--exp.sv.html" target="file-frame">tests/chapter-20/20.8--exp.sv</a>
+time_elapsed: 0.003s
+ram usage: 9696 KB
+</pre>
+<pre class="log">
+
+../..<a href="../../../tests/chapter-20/20.8--exp.sv.html#l-12" target="file-frame">tests/chapter-20/20.8--exp.sv:12</a>:53: error: unknown system name &#39;$exp&#39;
+	$display(&#34;:assert: (%f &gt; 2.718) and (%f &lt; 2.719)&#34;, $exp(1), $exp(1));
+	                                                   ^~~~
+../..<a href="../../../tests/chapter-20/20.8--exp.sv.html#l-12" target="file-frame">tests/chapter-20/20.8--exp.sv:12</a>:62: error: unknown system name &#39;$exp&#39;
+	$display(&#34;:assert: (%f &gt; 2.718) and (%f &lt; 2.719)&#34;, $exp(1), $exp(1));
+	                                                            ^~~~
+
+</pre>
+</body>
