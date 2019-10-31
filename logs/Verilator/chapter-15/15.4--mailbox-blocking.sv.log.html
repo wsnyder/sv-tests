@@ -1,0 +1,34 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: blocking mailbox test
+should_fail: 0
+tags: 15.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-15
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-15/15.4--mailbox-blocking.sv.html" target="file-frame">tests/chapter-15/15.4--mailbox-blocking.sv</a>
+time_elapsed: 0.089s
+ram usage: 11724 KB
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../tests/chapter-15/15.4--mailbox-blocking.sv.html#l-12" target="file-frame">tests/chapter-15/15.4--mailbox-blocking.sv:12</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;new&#39;
+ m = new();
+     ^~~
+%Error: <a href="../../../tests/chapter-15/15.4--mailbox-blocking.sv.html#l-12" target="file-frame">tests/chapter-15/15.4--mailbox-blocking.sv:12</a>: syntax error, unexpected &#39;)&#39;, expecting TYPE-IDENTIFIER
+ m = new();
+         ^
+%Error: Exiting due to 2 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+
+</pre>
+</body>

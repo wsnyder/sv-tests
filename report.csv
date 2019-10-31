@@ -837,7 +837,7 @@ BaseJumpSTL_fifo_counter,/home/travis/build/SymbiFlow/sv-tests/third_party/cores
 BaseJumpSTL_bsg_wait_cycles,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_wait_cycles.v,basejump,True,True,True,True,False,False,True,True,True
 BaseJumpSTL_bsg_one_fifo,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_one_fifo.v,basejump,False,True,False,True,False,False,True,True,True
 BaseJumpSTL_bsg_nonsynth_mem_1rw_sync_mask_write_byte_assoc,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_mem/bsg_nonsynth_mem_1rw_sync_mask_write_byte_assoc.v,basejump,True,False,False,False,False,False,True,False,True
-BaseJumpSTL_bsg_dff_en_bypass,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_dff_en_bypass.v,basejump,False,True,True,True,False,False,True,True,True
+BaseJumpSTL_bsg_dff_en_bypass,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_dff_en_bypass.v,basejump,False,True,False,True,False,False,True,True,True
 BaseJumpSTL_bsg_link_ddr_downstream,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v,basejump,False,False,False,False,False,False,True,False,True
 BaseJumpSTL_bsg_source_sync_channel_control_master,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v,basejump,False,False,False,False,False,False,False,False,False
 BaseJumpSTL_bsg_relay_fifo,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_relay_fifo.v,basejump,False,True,False,True,False,False,True,True,True
@@ -1465,6 +1465,8 @@ hdlconvertor_p193_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlc
 hdlconvertor_p517,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p517.sv,hdlconv,False,True,False,False,False,False,True,False,False
 hdlconvertor_p550,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p550.sv,hdlconv,False,False,False,False,False,False,True,False,False
 hdlconvertor_p200_2,/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017/p200_2.sv,hdlconv,False,True,False,False,False,False,True,False,False
+package_decl,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-26/26.2--package-decl.sv,26.2,True,True,True,False,False,False,True,True,True
+package_ref,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-26/26.3--package-ref.sv,26.3,True,False,False,False,False,False,True,True,True
 enum_next,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.5.3--enum_next.sv,6.19.5.3,True,True,True,False,False,False,True,True,False
 enum_sequence_range,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.2--enum_sequence_range.sv,6.19.2,True,True,True,False,False,False,True,True,False
 enum_typedef,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-6/6.19.1--enum_typedef.sv,6.19.1,True,True,True,False,True,False,True,True,True
@@ -1810,6 +1812,8 @@ clocking_block,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-14/14.3--cloc
 clocking_block_signals,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-14/14.3--clocking-block-signals.sv,14.3,False,True,False,False,False,False,True,False,False
 global_clocking_block,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-14/14.3--global-clocking-block.sv,14.3,False,True,False,False,False,False,True,False,False
 default_clocking_block,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-14/14.3--default-clocking-block.sv,14.3,False,True,False,False,False,False,True,False,False
+mailbox_non_blocking,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-15/15.4--mailbox-non-blocking.sv,15.4,False,False,False,False,False,False,True,False,False
+mailbox_blocking,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-15/15.4--mailbox-blocking.sv,15.4,False,False,False,False,False,False,True,False,False
 enum_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/enum/enum_test_0.sv,6.19,False,True,True,False,False,False,True,False,True
 union_test_0,/home/travis/build/SymbiFlow/sv-tests/tests/generic/union/union_test_0.sv,7.3,False,True,True,False,False,False,True,False,True
 typedef_test_24,/home/travis/build/SymbiFlow/sv-tests/tests/generic/typedef/typedef_test_24.sv,6.18,True,True,True,False,True,False,True,False,True
