@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://www.clifford.at/yosys/" target="_blank">yosys</a></h3>
+<pre class="test-failed">
+description: vcd dump tests
+should_fail: 0
+tags: 21.7
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html" target="file-frame">tests/chapter-21/21.7--dumpfile.sv</a>
+time_elapsed: 0.009s
+ram usage: 10132 KB
+</pre>
+<pre class="log">
+
+
+-- Executing script file `scr.ys&#39; --
+
+1. Executing Verilog-2005 frontend: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html" target="file-frame">tests/chapter-21/21.7--dumpfile.sv</a>
+Parsing SystemVerilog input from `<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html" target="file-frame">tests/chapter-21/21.7--dumpfile.sv</a>&#39; to AST representation.
+Generating RTLIL representation for module `\top&#39;.
+<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-13" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:13</a>: Warning: Ignoring call to system task $dumpfile.
+<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-14" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:14</a>: Warning: Ignoring call to system task $dumpvars.
+<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-15" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:15</a>: ERROR: Can&#39;t resolve task name `\$dumplimit&#39;.
+
+</pre>
+</body>

@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: vcd dump ports tests
+should_fail: 0
+tags: 21.7
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.7--dumpports.sv.html" target="file-frame">tests/chapter-21/21.7--dumpports.sv</a>
+time_elapsed: 0.003s
+ram usage: 9652 KB
+</pre>
+<pre class="log">
+
+../..<a href="../../../tests/chapter-21/21.7--dumpports.sv.html#l-14" target="file-frame">tests/chapter-21/21.7--dumpports.sv:14</a>:2: error: unknown system name &#39;$dumpports&#39;
+	$dumpports(top, fname);
+	^~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpports.sv.html#l-15" target="file-frame">tests/chapter-21/21.7--dumpports.sv:15</a>:2: error: unknown system name &#39;$dumpportslimit&#39;
+	$dumpportslimit(1024*1024, fname);
+	^~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpports.sv.html#l-19" target="file-frame">tests/chapter-21/21.7--dumpports.sv:19</a>:7: error: unknown system name &#39;$dumpportsoff&#39;
+	#200 $dumpportsoff(fname);
+	     ^~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpports.sv.html#l-21" target="file-frame">tests/chapter-21/21.7--dumpports.sv:21</a>:7: error: unknown system name &#39;$dumpportson&#39;
+	#800 $dumpportson(fname);
+	     ^~~~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpports.sv.html#l-23" target="file-frame">tests/chapter-21/21.7--dumpports.sv:23</a>:7: error: unknown system name &#39;$dumpportsflush&#39;
+	#100 $dumpportsflush(fname);
+	     ^~~~~~~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpports.sv.html#l-25" target="file-frame">tests/chapter-21/21.7--dumpports.sv:25</a>:7: error: unknown system name &#39;$dumpportsall&#39;
+	#300 $dumpportsall(fname);
+	     ^~~~~~~~~~~~~
+
+</pre>
+</body>

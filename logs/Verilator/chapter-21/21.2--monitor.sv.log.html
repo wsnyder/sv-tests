@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: $monitor test
+should_fail: 0
+tags: 21.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-21/21.2--monitor.sv.html" target="file-frame">tests/chapter-21/21.2--monitor.sv</a>
+time_elapsed: 0.092s
+ram usage: 11720 KB
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../tests/chapter-21/21.2--monitor.sv.html#l-13" target="file-frame">tests/chapter-21/21.2--monitor.sv:13</a>: Unsupported or unknown PLI call: $monitoron
+ $monitoron;
+ ^~~~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.2--monitor.sv.html#l-14" target="file-frame">tests/chapter-21/21.2--monitor.sv:14</a>: Unsupported or unknown PLI call: $monitor
+ $monitor(a);
+ ^~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.2--monitor.sv.html#l-15" target="file-frame">tests/chapter-21/21.2--monitor.sv:15</a>: Unsupported or unknown PLI call: $monitorb
+ $monitorb(a);
+ ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.2--monitor.sv.html#l-16" target="file-frame">tests/chapter-21/21.2--monitor.sv:16</a>: Unsupported or unknown PLI call: $monitoro
+ $monitoro(a);
+ ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.2--monitor.sv.html#l-17" target="file-frame">tests/chapter-21/21.2--monitor.sv:17</a>: Unsupported or unknown PLI call: $monitorh
+ $monitorh(a);
+ ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.2--monitor.sv.html#l-18" target="file-frame">tests/chapter-21/21.2--monitor.sv:18</a>: Unsupported or unknown PLI call: $monitoroff
+ $monitoroff;
+ ^~~~~~~~~~~
+%Error: Exiting due to 6 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
+
+</pre>
+</body>

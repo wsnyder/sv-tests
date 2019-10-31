@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: $fstrobe test
+should_fail: 0
+tags: 21.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.3--fstrobe.sv.html" target="file-frame">tests/chapter-21/21.3--fstrobe.sv</a>
+time_elapsed: 0.003s
+ram usage: 9756 KB
+</pre>
+<pre class="log">
+
+../..<a href="../../../tests/chapter-21/21.3--fstrobe.sv.html#l-16" target="file-frame">tests/chapter-21/21.3--fstrobe.sv:16</a>:2: error: unknown system name &#39;$fstrobe&#39;
+	$fstrobe(fd, a);
+	^~~~~~~~
+../..<a href="../../../tests/chapter-21/21.3--fstrobe.sv.html#l-17" target="file-frame">tests/chapter-21/21.3--fstrobe.sv:17</a>:2: error: unknown system name &#39;$fstrobe&#39;
+	$fstrobe(fd, a);
+	^~~~~~~~
+../..<a href="../../../tests/chapter-21/21.3--fstrobe.sv.html#l-18" target="file-frame">tests/chapter-21/21.3--fstrobe.sv:18</a>:2: error: unknown system name &#39;$fstrobe&#39;
+	$fstrobe(fd, a);
+	^~~~~~~~
+../..<a href="../../../tests/chapter-21/21.3--fstrobe.sv.html#l-19" target="file-frame">tests/chapter-21/21.3--fstrobe.sv:19</a>:2: error: unknown system name &#39;$fstrobe&#39;
+	$fstrobe(fd, a);
+	^~~~~~~~
+../..<a href="../../../tests/chapter-21/21.3--fstrobe.sv.html#l-23" target="file-frame">tests/chapter-21/21.3--fstrobe.sv:23</a>:7: error: unknown system name &#39;$fopen&#39;
+	fd = $fopen(&#34;tmp.txt&#34;, &#34;w&#34;);
+	     ^~~~~~
+../..<a href="../../../tests/chapter-21/21.3--fstrobe.sv.html#l-27" target="file-frame">tests/chapter-21/21.3--fstrobe.sv:27</a>:2: error: unknown system name &#39;$fclose&#39;
+	$fclose(fd);
+	^~~~~~~
+
+</pre>
+</body>

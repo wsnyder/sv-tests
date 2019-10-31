@@ -1,0 +1,72 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: $fscanf test
+should_fail: 0
+tags: 21.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.3--fscanf.sv.html" target="file-frame">tests/chapter-21/21.3--fscanf.sv</a>
+time_elapsed: 0.006s
+ram usage: 9684 KB
+</pre>
+<pre class="log">
+
+warning: `$fopen` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fscanf.sv.html#l-14" target="file-frame">tests/chapter-21/21.3--fscanf.sv:14</a>:7-29:
+   | 
+   |     fd = $fopen(&#34;tmp.txt&#34;, &#34;w&#34;);
+   |          ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$fscanf` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fscanf.sv.html#l-15" target="file-frame">tests/chapter-21/21.3--fscanf.sv:15</a>:2-22:
+   | 
+   |     $fscanf(fd, &#34;%d&#34;, c);
+   |     ^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$fclose` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fscanf.sv.html#l-19" target="file-frame">tests/chapter-21/21.3--fscanf.sv:19</a>:2-13:
+   | 
+   |     $fclose(fd);
+   |     ^^^^^^^^^^^ 
+
+proc %top.initial.225.0 () -&gt; (i32$ %fd) {
+0:
+    %1 = const i32 0
+    %2 = const time 0s 1e
+    drv i32$ %fd, %1, %2
+    wait %3 for %2
+3:
+    %4 = const i32 0
+    halt
+}
+
+proc %top.final.226.0 () -&gt; () {
+0:
+    %endtimes = const time 9001s
+    wait %body for %endtimes
+body:
+    %1 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i32 0
+    %fd = sig i32 %0
+    %1 = const i32 0
+    %c = sig i32 %1
+    inst %top.initial.225.0 () -&gt; (i32$ %fd)
+    inst %top.final.226.0 () -&gt; ()
+}
+
+</pre>
+</body>

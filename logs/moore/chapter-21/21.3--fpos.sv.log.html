@@ -1,0 +1,86 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: $fseek, $ftell and $rewind test
+should_fail: 0
+tags: 21.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.3--fpos.sv.html" target="file-frame">tests/chapter-21/21.3--fpos.sv</a>
+time_elapsed: 0.007s
+ram usage: 9748 KB
+</pre>
+<pre class="log">
+
+warning: `$fopen` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-12" target="file-frame">tests/chapter-21/21.3--fpos.sv:12</a>:7-29:
+   | 
+   |     fd = $fopen(&#34;tmp.txt&#34;, &#34;w&#34;);
+   |          ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-13" target="file-frame">tests/chapter-21/21.3--fpos.sv:13</a>:2-44:
+   | 
+   |     $display(&#34;:assert: (%d == 0)&#34;, $ftell(fd));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$fseek` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-14" target="file-frame">tests/chapter-21/21.3--fpos.sv:14</a>:2-19:
+   | 
+   |     $fseek(fd, 12, 0);
+   |     ^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-15" target="file-frame">tests/chapter-21/21.3--fpos.sv:15</a>:2-45:
+   | 
+   |     $display(&#34;:assert: (%d == 12)&#34;, $ftell(fd));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$rewind` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-16" target="file-frame">tests/chapter-21/21.3--fpos.sv:16</a>:2-13:
+   | 
+   |     $rewind(fd);
+   |     ^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-17" target="file-frame">tests/chapter-21/21.3--fpos.sv:17</a>:2-44:
+   | 
+   |     $display(&#34;:assert: (%d == 0)&#34;, $ftell(fd));
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$fclose` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-18" target="file-frame">tests/chapter-21/21.3--fpos.sv:18</a>:2-13:
+   | 
+   |     $fclose(fd);
+   |     ^^^^^^^^^^^ 
+
+proc %top.initial.221.0 () -&gt; () {
+0:
+    %1 = const i32 0
+    %fd = var i32 %1
+    %2 = const i32 0
+    st i32* %fd, %2
+    %3 = const i32 0
+    %4 = const i32 0
+    %5 = const i32 0
+    %6 = const i32 0
+    %7 = const i32 0
+    %8 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    inst %top.initial.221.0 () -&gt; ()
+}
+
+</pre>
+</body>

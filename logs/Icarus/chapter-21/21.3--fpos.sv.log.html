@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-passed">
+description: $fseek, $ftell and $rewind test
+should_fail: 0
+tags: 21.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-21/21.3--fpos.sv.html" target="file-frame">tests/chapter-21/21.3--fpos.sv</a>
+time_elapsed: 0.018s
+ram usage: 9644 KB
+</pre>
+<pre class="log">
+
+<a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-14" target="file-frame">tests/chapter-21/21.3--fpos.sv:14</a>: Warning: Calling system function $fseek() as a task.
+<a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-14" target="file-frame">tests/chapter-21/21.3--fpos.sv:14</a>:          The functions return value will be ignored.
+<a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-16" target="file-frame">tests/chapter-21/21.3--fpos.sv:16</a>: Warning: Calling system function $rewind() as a task.
+<a href="../../../tests/chapter-21/21.3--fpos.sv.html#l-16" target="file-frame">tests/chapter-21/21.3--fpos.sv:16</a>:          The functions return value will be ignored.
+:assert: (         0 == 0)
+:assert: (        12 == 12)
+:assert: (         0 == 0)
+
+</pre>
+</body>

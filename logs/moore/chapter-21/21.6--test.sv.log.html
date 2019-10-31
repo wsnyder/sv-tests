@@ -1,0 +1,63 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: $test$plusargs test
+should_fail: 0
+tags: 21.6
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.6--test.sv.html" target="file-frame">tests/chapter-21/21.6--test.sv</a>
+time_elapsed: 0.005s
+ram usage: 9648 KB
+</pre>
+<pre class="log">
+
+warning: `$test$plusargs` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.6--test.sv.html#l-11" target="file-frame">tests/chapter-21/21.6--test.sv:11</a>:6-28:
+   | 
+   |     if ($test$plusargs(&#34;TEST&#34;)) $display(&#34;TEST argument found&#34;);
+   |         ^^^^^^^^^^^^^^^^^^^^^^                                  
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.6--test.sv.html#l-11" target="file-frame">tests/chapter-21/21.6--test.sv:11</a>:30-61:
+   | 
+   |     if ($test$plusargs(&#34;TEST&#34;)) $display(&#34;TEST argument found&#34;);
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.6--test.sv.html#l-12" target="file-frame">tests/chapter-21/21.6--test.sv:12</a>:7-42:
+   | 
+   |     else $display(&#34;TEST argument not found&#34;);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.221.0 () -&gt; () {
+0:
+    %1 = const i32 0
+    %2 = const i32 0
+    %3 = neq i32 %1, %2
+    br %3, %if_false, %if_true
+if_true:
+    %4 = const i32 0
+    br %if_exit
+if_false:
+    %5 = const i32 0
+    br %if_exit
+if_exit:
+    halt
+}
+
+entity @top () -&gt; () {
+    inst %top.initial.221.0 () -&gt; ()
+}
+
+</pre>
+</body>

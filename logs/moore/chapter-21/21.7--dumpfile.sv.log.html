@@ -1,0 +1,83 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: vcd dump tests
+should_fail: 0
+tags: 21.7
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html" target="file-frame">tests/chapter-21/21.7--dumpfile.sv</a>
+time_elapsed: 0.007s
+ram usage: 9680 KB
+</pre>
+<pre class="log">
+
+warning: `$dumpfile` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-13" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:13</a>:2-22:
+   | 
+   |     $dumpfile(&#34;out.vcd&#34;);
+   |     ^^^^^^^^^^^^^^^^^^^^ 
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-14" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:14</a>:2-11:
+   | 
+   |     $dumpvars;
+   |     ^^^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+warning: `$dumplimit` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-15" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:15</a>:2-23:
+   | 
+   |     $dumplimit(1024*1024);
+   |     ^^^^^^^^^^^^^^^^^^^^^ 
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-19" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:19</a>:7-15:
+   | 
+   |     #200 $dumpoff;
+   |          ^^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-21" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:21</a>:7-14:
+   | 
+   |     #800 $dumpon;
+   |          ^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-23" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:23</a>:7-17:
+   | 
+   |     #100 $dumpflush;
+   |          ^^^^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-25" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:25</a>:7-15:
+   | 
+   |     #300 $dumpall;
+   |          ^^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+
+</pre>
+</body>

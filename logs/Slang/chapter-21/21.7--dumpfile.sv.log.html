@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/MikePopoloski/slang" target="_blank">slang</a></h3>
+<pre class="test-failed">
+description: vcd dump tests
+should_fail: 0
+tags: 21.7
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html" target="file-frame">tests/chapter-21/21.7--dumpfile.sv</a>
+time_elapsed: 0.003s
+ram usage: 9636 KB
+</pre>
+<pre class="log">
+
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-13" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:13</a>:2: error: unknown system name &#39;$dumpfile&#39;
+	$dumpfile(&#34;out.vcd&#34;);
+	^~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-14" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:14</a>:2: error: unknown system name &#39;$dumpvars&#39;
+	$dumpvars;
+	^~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-15" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:15</a>:2: error: unknown system name &#39;$dumplimit&#39;
+	$dumplimit(1024*1024);
+	^~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-19" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:19</a>:7: error: unknown system name &#39;$dumpoff&#39;
+	#200 $dumpoff;
+	     ^~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-21" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:21</a>:7: error: unknown system name &#39;$dumpon&#39;
+	#800 $dumpon;
+	     ^~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-23" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:23</a>:7: error: unknown system name &#39;$dumpflush&#39;
+	#100 $dumpflush;
+	     ^~~~~~~~~~
+../..<a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-25" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:25</a>:7: error: unknown system name &#39;$dumpall&#39;
+	#300 $dumpall;
+	     ^~~~~~~~
+
+</pre>
+</body>

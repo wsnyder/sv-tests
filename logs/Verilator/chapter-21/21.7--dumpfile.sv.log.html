@@ -1,0 +1,66 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: vcd dump tests
+should_fail: 0
+tags: 21.7
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-21
+top_module: 
+type: simulation parsing
+mode: simulation
+files: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html" target="file-frame">tests/chapter-21/21.7--dumpfile.sv</a>
+time_elapsed: 0.091s
+ram usage: 11592 KB
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-13" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:13</a>: Unsupported or unknown PLI call: $dumpfile
+ $dumpfile(&#34;out.vcd&#34;);
+ ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-14" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:14</a>: Unsupported or unknown PLI call: $dumpvars
+ $dumpvars;
+ ^~~~~~~~~
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-15" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:15</a>: Unsupported or unknown PLI call: $dumplimit
+ $dumplimit(1024*1024);
+ ^~~~~~~~~~
+%Warning-STMTDLY: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-18" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:18</a>: Unsupported: Ignoring delay on this delayed statement.
+ #100 i = 2;
+ ^
+                  ... Use &#34;/* verilator lint_off STMTDLY */&#34; and lint_on around source to disable this message.
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-19" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:19</a>: Unsupported or unknown PLI call: $dumpoff
+ #200 $dumpoff;
+      ^~~~~~~~
+%Warning-STMTDLY: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-19" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:19</a>: Unsupported: Ignoring delay on this delayed statement.
+ #200 $dumpoff;
+ ^
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-21" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:21</a>: Unsupported or unknown PLI call: $dumpon
+ #800 $dumpon;
+      ^~~~~~~
+%Warning-STMTDLY: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-21" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:21</a>: Unsupported: Ignoring delay on this delayed statement.
+ #800 $dumpon;
+ ^
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-23" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:23</a>: Unsupported or unknown PLI call: $dumpflush
+ #100 $dumpflush;
+      ^~~~~~~~~~
+%Warning-STMTDLY: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-23" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:23</a>: Unsupported: Ignoring delay on this delayed statement.
+ #100 $dumpflush;
+ ^
+%Error: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-25" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:25</a>: Unsupported or unknown PLI call: $dumpall
+ #300 $dumpall;
+      ^~~~~~~~
+%Warning-STMTDLY: <a href="../../../tests/chapter-21/21.7--dumpfile.sv.html#l-25" target="file-frame">tests/chapter-21/21.7--dumpfile.sv:25</a>: Unsupported: Ignoring delay on this delayed statement.
+ #300 $dumpall;
+ ^
+%Error: Exiting due to 7 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
+
+</pre>
+</body>
