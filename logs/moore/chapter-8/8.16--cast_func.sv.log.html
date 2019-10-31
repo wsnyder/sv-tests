@@ -1,0 +1,66 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: $cast function test
+should_fail: 0
+tags: 8.16
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-8/8.16--cast_func.sv.html" target="file-frame">tests/chapter-8/8.16--cast_func.sv</a>
+time_elapsed: 0.006s
+ram usage: 9604 KB
+</pre>
+<pre class="log">
+
+warning: `$cast` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-8/8.16--cast_func.sv.html#l-11" target="file-frame">tests/chapter-8/8.16--cast_func.sv:11</a>:7-20:
+   | 
+   |         if(!$cast(val, 5))
+   |             ^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-8/8.16--cast_func.sv.html#l-12" target="file-frame">tests/chapter-8/8.16--cast_func.sv:12</a>:4-28:
+   | 
+   |             $display(&#34;$cast failed&#34;);
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-8/8.16--cast_func.sv.html#l-13" target="file-frame">tests/chapter-8/8.16--cast_func.sv:13</a>:3-16:
+   | 
+   |         $display(val);
+   |         ^^^^^^^^^^^^^ 
+
+proc %class_tb.initial.222.0 () -&gt; () {
+0:
+    %1 = const i3 0
+    %val = var i3 %1
+    %2 = const i32 0
+    %3 = const i32 0
+    %4 = neq i32 %2, %3
+    %5 = not i1 %4
+    br %5, %if_false, %if_true
+if_true:
+    %6 = const i32 0
+    br %if_exit
+if_false:
+    br %if_exit
+if_exit:
+    %7 = const i32 0
+    halt
+}
+
+entity @class_tb () -&gt; () {
+    inst %class_tb.initial.222.0 () -&gt; ()
+}
+
+</pre>
+</body>

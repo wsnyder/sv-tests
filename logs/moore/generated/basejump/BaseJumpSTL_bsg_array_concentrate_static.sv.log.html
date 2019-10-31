@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v</a>
+time_elapsed: 0.005s
+ram usage: 9636 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-5" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:5</a>:21-41:
+   | 
+   |     , sparse_els_lp=`BSG_COUNTONES_SYNTH(pattern_els_p))
+   |                     ^^^^^^^^^^^^^^^^^^^^                
+
+
+error: Expected [Comma, CloseDelim(Paren)], but found Ident(sparse_els_lp(15)) instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-5" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:5</a>:7-20:
+   | 
+   |     , sparse_els_lp=`BSG_COUNTONES_SYNTH(pattern_els_p))
+   |       ^^^^^^^^^^^^^                                     
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:17</a>:19-39:
+   | 
+   |          assign o[`BSG_COUNTONES_SYNTH(pattern_els_p[j-1:0])] = i[j];
+   |                   ^^^^^^^^^^^^^^^^^^^^                               
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:18</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+error: Expected `endmodule`, but found `end` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:18</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+</pre>
+</body>

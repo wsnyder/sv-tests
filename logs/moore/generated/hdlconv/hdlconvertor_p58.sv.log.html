@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2012
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv</a>
+time_elapsed: 0.005s
+ram usage: 9640 KB
+</pre>
+<pre class="log">
+
+
+error: Expected class item, found typedef instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv.html#l-2" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv:2</a>:3-10:
+   | 
+   |   typedef struct {
+   |   ^^^^^^^         
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `identifier`
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv.html#l-18" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv:18</a>:1-8:
+   | 
+   | nettype MyBaseT::T narrowTsum with MyBaseT::Tsum;
+   | ^^^^^^^                                          
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `identifier`
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv.html#l-22" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2012/p58.sv:22</a>:1-8:
+   | 
+   | nettype MyBaseType::T wideTsum with MyBaseType::Tsum;
+   | ^^^^^^^                                              
+
+
+</pre>
+</body>

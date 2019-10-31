@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_decoder_dor.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_decoder_dor.v</a>
+time_elapsed: 0.006s
+ram usage: 9536 KB
+</pre>
+<pre class="log">
+
+compiler bug: constant value computation of expression `cord_markers_pos_p[dims_p]` not implemented
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_decoder_dor.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_wormhole_router_decoder_dor.v:17</a>:14-40:
+   | 
+   |    (input   [cord_markers_pos_p[dims_p]-1:0]    target_cord_i
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^                      
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+
+</pre>
+</body>

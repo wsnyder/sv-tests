@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v</a>
+time_elapsed: 0.004s
+ram usage: 9824 KB
+</pre>
+<pre class="log">
+
+
+fatal: cannot open included file &#34;bsg_noc_links.vh&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-68" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:68</a>:11-27:
+   | 
+   | `include &#34;bsg_noc_links.vh&#34;
+   |           ^^^^^^^^^^^^^^^^ 
+
+
+fatal: String literals cannot contain unescaped newlines
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v.html#l-68" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_channel_tunnel_wormhole.v:68</a>:28-29:
+   | 
+   | `include &#34;bsg_noc_links.vh&#34;
+   |                            
+
+
+</pre>
+</body>

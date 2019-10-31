@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generic/class/class_test_40.sv.html" target="file-frame">tests/generic/class/class_test_40.sv</a>
+time_elapsed: 0.004s
+ram usage: 9624 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`uvm_object_registry&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_40.sv.html#l-8" target="file-frame">tests/generic/class/class_test_40.sv:8</a>:2-22:
+   | 
+   |  `uvm_object_registry(myclass, &#34;class_name&#34;)
+   |  ^^^^^^^^^^^^^^^^^^^^                       
+
+
+error: expected class name, but found ; instead
+  --&gt; <a href="../../../../tests/generic/class/class_test_40.sv.html#l-7" target="file-frame">tests/generic/class/class_test_40.sv:7</a>:27-28:
+   | 
+   | class macros_as_class_item;
+   |                           ^
+
+
+</pre>
+</body>

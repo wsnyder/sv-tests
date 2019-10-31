@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv</a>
+time_elapsed: 0.005s
+ram usage: 9640 KB
+</pre>
+<pre class="log">
+
+
+error: Expected hierarchy item, found let instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv:3</a>:3-6:
+   | 
+   |   let x = a || b;
+   |   ^^^            
+
+
+error: Expected hierarchy item, found sequence instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv:12</a>:3-11:
+   | 
+   |   sequence s;
+   |   ^^^^^^^^   
+
+
+error: Expected hierarchy item, found let instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv.html#l-25" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv:25</a>:7-10:
+   | 
+   |       let my_let(x) = !x || b &amp;&amp; c[i];
+   |       ^^^                             
+
+
+error: Expected hierarchy item, found let instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv.html#l-36" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p295.sv:36</a>:3-6:
+   | 
+   |   let ones_match(bits x, y) = x == y;
+   |   ^^^                                
+
+
+</pre>
+</body>

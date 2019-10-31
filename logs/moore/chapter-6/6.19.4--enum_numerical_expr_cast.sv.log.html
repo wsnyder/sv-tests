@@ -1,0 +1,38 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: enum numerical expression with casting
+should_fail: 0
+tags: 6.19.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv.html" target="file-frame">tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv</a>
+time_elapsed: 0.006s
+ram usage: 9556 KB
+</pre>
+<pre class="log">
+
+error: type `logic [1:0]` required, but expression has type `integer&lt;2&gt;`
+  --&gt; <a href="../../../tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv.html#l-13" target="file-frame">tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv:13</a>:12-15:
+   | 
+   |         val = e&#39;(val+1);
+   |                  ^^^    
+
+error: type `e` required, but expression has type `bit [1:0]`
+  --&gt; <a href="../../../tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv.html#l-13" target="file-frame">tests/chapter-6/6.19.4--enum_numerical_expr_cast.sv:13</a>:12-17:
+   | 
+   |         val = e&#39;(val+1);
+   |                  ^^^^^  
+
+
+</pre>
+</body>

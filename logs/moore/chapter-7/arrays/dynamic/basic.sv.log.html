@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test dynamic arrays support
+should_fail: 0
+tags: 7.5
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/dynamic
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/arrays/dynamic/basic.sv.html" target="file-frame">tests/chapter-7/arrays/dynamic/basic.sv</a>
+time_elapsed: 0.004s
+ram usage: 9556 KB
+</pre>
+<pre class="log">
+
+
+error: Expected hierarchy item, found bit instead
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/dynamic/basic.sv.html#l-9" target="file-frame">tests/chapter-7/arrays/dynamic/basic.sv:9</a>:1-4:
+   | 
+   | bit [7:0] arr[];
+   | ^^^             
+
+
+</pre>
+</body>

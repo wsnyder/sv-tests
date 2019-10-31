@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from yosys
+should_fail: 0
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v</a>
+time_elapsed: 0.005s
+ram usage: 9684 KB
+</pre>
+<pre class="log">
+
+
+fatal: Ambiguous code, could be explicit type or implicit type
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-48" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:48</a>:10-16:
+   | 
+   |    input signed      wire4;
+   |          ^^^^^^            
+
+
+note: explicit type would be this part
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-48" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:48</a>:10-28:
+   | 
+   |    input signed      wire4;
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+note: implicit type would be this part
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/simple/dff_init.v.html#l-48" target="file-frame">third_party/tools/yosys/tests/simple/dff_init.v:48</a>:10-28:
+   | 
+   |    input signed      wire4;
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+</pre>
+</body>

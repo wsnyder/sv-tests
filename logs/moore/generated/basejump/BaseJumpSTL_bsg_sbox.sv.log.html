@@ -1,0 +1,117 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v</a>
+time_elapsed: 0.009s
+ram usage: 9616 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-52" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:52</a>:11-26:
+   | 
+   |    logic [`BSG_SAFE_CLOG2(num_channels_p)*num_channels_p-1:0]   fwd_sel  , fwd_dpath_sel
+   |           ^^^^^^^^^^^^^^^                                                               
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-55" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:55</a>:11-26:
+   | 
+   |    logic [`BSG_SAFE_CLOG2(num_channels_p)*num_channels_p-1:0]   bk_sel  ,  bk_dpath_sel
+   |           ^^^^^^^^^^^^^^^                                                              
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-95" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:95</a>:56-71:
+   | 
+   |                fwd_sel_one_hot_r[i] &lt;= (1 &lt;&lt; fwd_sel[i*`BSG_SAFE_CLOG2(num_channels_p)+:`BSG_SAFE_CLOG2(num_channels_p)]);
+   |                                                        ^^^^^^^^^^^^^^^                                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-95" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:95</a>:89-104:
+   | 
+   |                fwd_sel_one_hot_r[i] &lt;= (1 &lt;&lt; fwd_sel[i*`BSG_SAFE_CLOG2(num_channels_p)+:`BSG_SAFE_CLOG2(num_channels_p)]);
+   |                                                                                         ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-101" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:101</a>:38-53:
+   | 
+   |                = in_v_i [fwd_sel_r[i*`BSG_SAFE_CLOG2(num_channels_p)+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                      ^^^^^^^^^^^^^^^                                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-101" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:101</a>:71-86:
+   | 
+   |                = in_v_i [fwd_sel_r[i*`BSG_SAFE_CLOG2(num_channels_p)+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                                                       ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-104" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:104</a>:38-53:
+   | 
+   |           = in_yumi_i_int[bk_sel_r[i*`BSG_SAFE_CLOG2(num_channels_p)+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                      ^^^^^^^^^^^^^^^                                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-104" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:104</a>:71-86:
+   | 
+   |           = in_yumi_i_int[bk_sel_r[i*`BSG_SAFE_CLOG2(num_channels_p)+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                                                       ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-115" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:115</a>:40-55:
+   | 
+   |           = forward[fwd_dpath_sel_r[(i*`BSG_SAFE_CLOG2(num_channels_p))+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                        ^^^^^^^^^^^^^^^                                                     
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-115" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:115</a>:74-89:
+   | 
+   |           = forward[fwd_dpath_sel_r[(i*`BSG_SAFE_CLOG2(num_channels_p))+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                                                          ^^^^^^^^^^^^^^^                   
+
+
+error: Expected hierarchy item, found logic instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-52" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:52</a>:4-9:
+   | 
+   |    logic [`BSG_SAFE_CLOG2(num_channels_p)*num_channels_p-1:0]   fwd_sel  , fwd_dpath_sel
+   |    ^^^^^                                                                                
+
+
+fatal: Found closing `]` which is not the complement to the previous opening `(`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-115" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:115</a>:105-106:
+   | 
+   |           = forward[fwd_dpath_sel_r[(i*`BSG_SAFE_CLOG2(num_channels_p))+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                                                                                         ^  
+
+
+error: Expected `endmodule`, but found `]` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v.html#l-115" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_sbox.v:115</a>:105-106:
+   | 
+   |           = forward[fwd_dpath_sel_r[(i*`BSG_SAFE_CLOG2(num_channels_p))+:`BSG_SAFE_CLOG2(num_channels_p)]];
+   |                                                                                                         ^  
+
+
+</pre>
+</body>

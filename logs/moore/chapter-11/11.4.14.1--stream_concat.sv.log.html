@@ -1,0 +1,67 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: stream concatenation test
+should_fail: 0
+tags: 11.4.14.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv</a>
+time_elapsed: 0.007s
+ram usage: 9648 KB
+</pre>
+<pre class="log">
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html#l-9" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv:9</a>:10-13:
+   | 
+   | int a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
+   |          ^^^                 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html#l-9" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv:9</a>:15-18:
+   | 
+   | int a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
+   |               ^^^            
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html#l-9" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv:9</a>:20-23:
+   | 
+   | int a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
+   |                    ^^^       
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../tests/chapter-11/11.4.14.1--stream_concat.sv.html#l-9" target="file-frame">tests/chapter-11/11.4.14.1--stream_concat.sv:9</a>:25-28:
+   | 
+   | int a = {&#34;A&#34;, &#34;B&#34;, &#34;C&#34;, &#34;D&#34;};
+   |                         ^^^  
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+thread &#39;main&#39; panicked at &#39;Internal error, cycle detected:
+- __SalsaQueryDescriptor { kind: constant_value_of((n228, ParamEnv(0))) }
+
+&#39;, src/svlog/salsa/src/runtime.rs:328:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace.
+
+</pre>
+</body>

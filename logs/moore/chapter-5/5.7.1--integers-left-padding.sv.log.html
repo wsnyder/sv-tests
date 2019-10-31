@@ -1,0 +1,125 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Automatic left padding of literal constant numbers
+should_fail: 0
+tags: 5.7.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-5/5.7.1--integers-left-padding.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-left-padding.sv</a>
+time_elapsed: 0.005s
+ram usage: 9648 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.230.0 () -&gt; (i12$ %a, i12$ %b, i12$ %c, i12$ %d, i85$ %e, i85$ %f, i85$ %g) {
+0:
+    %1 = const i0 0
+    %2 = exts i1, i0 %1, 18446744073709551615, 1
+    %3 = const i12 0
+    %4 = not i12 %3
+    %5 = [i12 %3, %4]
+    %6 = mux [2 x i12] %5, i1 %2
+    %7 = inss i12 %6, i0 %1, 0, 0
+    %8 = const time 0s 1e
+    drv i12$ %a, %7, %8
+    wait %9 for %8
+9:
+    %10 = const i6 48
+    %11 = exts i1, i6 %10, 5, 1
+    %12 = const i12 0
+    %13 = not i12 %12
+    %14 = [i12 %12, %13]
+    %15 = mux [2 x i12] %14, i1 %11
+    %16 = inss i12 %15, i6 %10, 0, 6
+    %17 = const time 0s 1e
+    drv i12$ %b, %16, %17
+    wait %18 for %17
+18:
+    %19 = const i2 3
+    %20 = exts i1, i2 %19, 1, 1
+    %21 = const i12 0
+    %22 = not i12 %21
+    %23 = [i12 %21, %22]
+    %24 = mux [2 x i12] %23, i1 %20
+    %25 = inss i12 %24, i2 %19, 0, 2
+    %26 = const time 0s 1e
+    drv i12$ %c, %25, %26
+    wait %27 for %26
+27:
+    %28 = const i2 3
+    %29 = exts i1, i2 %28, 1, 1
+    %30 = const i12 0
+    %31 = not i12 %30
+    %32 = [i12 %30, %31]
+    %33 = mux [2 x i12] %32, i1 %29
+    %34 = inss i12 %33, i2 %28, 0, 2
+    %35 = const time 0s 1e
+    drv i12$ %d, %34, %35
+    wait %36 for %35
+36:
+    %37 = const i3 5
+    %38 = exts i1, i3 %37, 2, 1
+    %39 = const i85 0
+    %40 = not i85 %39
+    %41 = [i85 %39, %40]
+    %42 = mux [2 x i85] %41, i1 %38
+    %43 = inss i85 %42, i3 %37, 0, 3
+    %44 = const time 0s 1e
+    drv i85$ %e, %43, %44
+    wait %45 for %44
+45:
+    %46 = const i0 0
+    %47 = exts i1, i0 %46, 18446744073709551615, 1
+    %48 = const i85 0
+    %49 = not i85 %48
+    %50 = [i85 %48, %49]
+    %51 = mux [2 x i85] %50, i1 %47
+    %52 = inss i85 %51, i0 %46, 0, 0
+    %53 = const time 0s 1e
+    drv i85$ %f, %52, %53
+    wait %54 for %53
+54:
+    %55 = const i0 0
+    %56 = exts i1, i0 %55, 18446744073709551615, 1
+    %57 = const i85 0
+    %58 = not i85 %57
+    %59 = [i85 %57, %58]
+    %60 = mux [2 x i85] %59, i1 %56
+    %61 = inss i85 %60, i0 %55, 0, 0
+    %62 = const time 0s 1e
+    drv i85$ %g, %61, %62
+    wait %63 for %62
+63:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i12 0
+    %a = sig i12 %0
+    %1 = const i12 0
+    %b = sig i12 %1
+    %2 = const i12 0
+    %c = sig i12 %2
+    %3 = const i12 0
+    %d = sig i12 %3
+    %4 = const i85 0
+    %e = sig i85 %4
+    %5 = const i85 0
+    %f = sig i85 %5
+    %6 = const i85 0
+    %g = sig i85 %6
+    inst %top.initial.230.0 () -&gt; (i12$ %a, i12$ %b, i12$ %c, i12$ %d, i85$ %e, i85$ %f, i85$ %g)
+}
+
+</pre>
+</body>

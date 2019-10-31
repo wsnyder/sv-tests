@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from yosys
+should_fail: 0
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/simple
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/simple/constmuldivmod.v.html" target="file-frame">third_party/tools/yosys/tests/simple/constmuldivmod.v</a>
+time_elapsed: 0.006s
+ram usage: 9644 KB
+</pre>
+<pre class="log">
+
+compiler bug: lowering of type `reg [7:0]` not implemented
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/simple/constmuldivmod.v.html#l-1" target="file-frame">third_party/tools/yosys/tests/simple/constmuldivmod.v:1</a>:63-72:
+   | 
+   | module constmuldivmod(input [7:0] A, input [2:0] mode, output reg [7:0] Y);
+   |                                                               ^^^^^^^^^    
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+
+</pre>
+</body>

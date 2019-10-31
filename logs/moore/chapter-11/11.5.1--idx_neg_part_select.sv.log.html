@@ -1,0 +1,49 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: indexed negative part-select bit test
+should_fail: 0
+tags: 11.5.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-11/11.5.1--idx_neg_part_select.sv.html" target="file-frame">tests/chapter-11/11.5.1--idx_neg_part_select.sv</a>
+time_elapsed: 0.005s
+ram usage: 9604 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.225.0 (i16$ %a) -&gt; (i4$ %b) {
+0:
+    %a1 = prb i16$ %a
+    %1 = const i32 11
+    %2 = const i32 4
+    %3 = sub i32 %1, %2
+    %4 = const i16 0
+    %5 = shr i16 %a1, i16 %4, i32 %3
+    %6 = exts i4, i16 %5, 0, 4
+    %7 = const time 0s 1e
+    drv i4$ %b, %6, %7
+    wait %8 for %7
+8:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i16 0
+    %a = sig i16 %0
+    %1 = const i4 0
+    %b = sig i4 %1
+    inst %top.initial.225.0 (i16$ %a) -&gt; (i4$ %b)
+}
+
+</pre>
+</body>

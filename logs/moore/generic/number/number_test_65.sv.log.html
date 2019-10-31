@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 5.6.4 5.7.1 5.7.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/number
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generic/number/number_test_65.sv.html" target="file-frame">tests/generic/number/number_test_65.sv</a>
+time_elapsed: 0.004s
+ram usage: 9628 KB
+</pre>
+<pre class="log">
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `parameter`
+  --&gt; <a href="../../../../tests/generic/number/number_test_65.sv.html#l-7" target="file-frame">tests/generic/number/number_test_65.sv:7</a>:1-10:
+   | 
+   | parameter int foo = 32&#39;hFEEDFACE;
+   | ^^^^^^^^^                        
+
+
+</pre>
+</body>

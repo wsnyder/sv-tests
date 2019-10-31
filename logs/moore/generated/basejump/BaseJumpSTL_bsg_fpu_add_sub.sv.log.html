@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v</a>
+time_elapsed: 0.006s
+ram usage: 9644 KB
+</pre>
+<pre class="log">
+
+
+error: Missing ; after header of module &#34;bsg_fpu_add_sub&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:11</a>:9-9:
+   | 
+   |   import bsg_fpu_pkg::*;
+   |         ^               
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-12" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:12</a>:3-4:
+   | 
+   |   #(parameter e_p=&#34;inv&#34;     // exponent width
+   |   ^                                          
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-132" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:132</a>:24-34:
+   | 
+   |     ,.shamt_i(exp_diff[`BSG_WIDTH(m_p+3)-1:0])
+   |                        ^^^^^^^^^^             
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-132" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:132</a>:46-47:
+   | 
+   |     ,.shamt_i(exp_diff[`BSG_WIDTH(m_p+3)-1:0])
+   |                                              ^
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v.html#l-132" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_add_sub.v:132</a>:46-47:
+   | 
+   |     ,.shamt_i(exp_diff[`BSG_WIDTH(m_p+3)-1:0])
+   |                                              ^
+
+
+</pre>
+</body>

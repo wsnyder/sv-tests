@@ -1,0 +1,110 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generic/class/class_test_44.sv.html" target="file-frame">tests/generic/class/class_test_44.sv</a>
+time_elapsed: 0.006s
+ram usage: 9636 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`uvm_field_utils_begin&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-8" target="file-frame">tests/generic/class/class_test_44.sv:8</a>:2-24:
+   | 
+   |  `uvm_field_utils_begin(my_class)
+   |  ^^^^^^^^^^^^^^^^^^^^^^          
+
+
+error: expected class name, but found ; instead
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-7" target="file-frame">tests/generic/class/class_test_44.sv:7</a>:27-28:
+   | 
+   | class macros_as_class_item;
+   |                           ^
+
+
+fatal: unknown compiler directive &#39;`uvm_field_int&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-9" target="file-frame">tests/generic/class/class_test_44.sv:9</a>:4-18:
+   | 
+   |    `uvm_field_int(blah1, flag1)
+   |    ^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_real&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-10" target="file-frame">tests/generic/class/class_test_44.sv:10</a>:4-19:
+   | 
+   |    `uvm_field_real(blah2, flag2)
+   |    ^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_enum&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-11" target="file-frame">tests/generic/class/class_test_44.sv:11</a>:4-19:
+   | 
+   |    `uvm_field_enum(blah3, flag3)
+   |    ^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_object&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-12" target="file-frame">tests/generic/class/class_test_44.sv:12</a>:4-21:
+   | 
+   |    `uvm_field_object(blah4, flag4)
+   |    ^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_event&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-13" target="file-frame">tests/generic/class/class_test_44.sv:13</a>:4-20:
+   | 
+   |    `uvm_field_event(blah5, flag5)
+   |    ^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_string&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-14" target="file-frame">tests/generic/class/class_test_44.sv:14</a>:4-21:
+   | 
+   |    `uvm_field_string(blah6, flag6)
+   |    ^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_array_int&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-15" target="file-frame">tests/generic/class/class_test_44.sv:15</a>:4-24:
+   | 
+   |    `uvm_field_array_int(blah7, flag7)
+   |    ^^^^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_sarray_int&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-16" target="file-frame">tests/generic/class/class_test_44.sv:16</a>:4-25:
+   | 
+   |    `uvm_field_sarray_int(blah8, flag8)
+   |    ^^^^^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_aa_int_string&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-17" target="file-frame">tests/generic/class/class_test_44.sv:17</a>:4-28:
+   | 
+   |    `uvm_field_aa_int_string(blah9, flag9)
+   |    ^^^^^^^^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`uvm_field_utils_end&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_44.sv.html#l-18" target="file-frame">tests/generic/class/class_test_44.sv:18</a>:2-22:
+   | 
+   |  `uvm_field_utils_end
+   |  ^^^^^^^^^^^^^^^^^^^^
+
+
+</pre>
+</body>

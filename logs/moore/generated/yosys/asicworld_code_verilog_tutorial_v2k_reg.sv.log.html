@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from yosys
+should_fail: 0
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v</a>
+time_elapsed: 0.005s
+ram usage: 9528 KB
+</pre>
+<pre class="log">
+
+
+fatal: Ambiguous code, could be implicit function return type or explicit function return type
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v:14</a>:10-16:
+   | 
+   | function signed [7:0] adder;
+   |          ^^^^^^             
+
+
+note: implicit function return type would be this part
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v:14</a>:10-29:
+   | 
+   | function signed [7:0] adder;
+   |          ^^^^^^^^^^^^^^^^^^^
+
+
+note: explicit function return type would be this part
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v.html#l-14" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_v2k_reg.v:14</a>:10-29:
+   | 
+   | function signed [7:0] adder;
+   |          ^^^^^^^^^^^^^^^^^^^
+
+
+</pre>
+</body>

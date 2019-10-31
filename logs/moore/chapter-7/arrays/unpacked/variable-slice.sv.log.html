@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test packed arrays operations support (Variable slice)
+should_fail: 0
+tags: 7.4.3 7.4.6
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/unpacked
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv</a>
+time_elapsed: 0.007s
+ram usage: 9740 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-18" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:18</a>:2-141:
+   | 
+   |     $display(&#34;:assert: (&#39;%b%b%b%b_%b%b%b%b&#39; == &#39;1111_1111&#39;)&#34;,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:20</a>:2-141:
+   | 
+   |     $display(&#34;:assert: (&#39;%b%b%b%b_%b%b%b%b&#39; == &#39;0000_0000&#39;)&#34;,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-24" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:24</a>:2-141:
+   | 
+   |     $display(&#34;:assert: (&#39;%b%b%b%b_%b%b%b%b&#39; == &#39;0111_0000&#39;)&#34;,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: type of expression cannot be inferred from context
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-16" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:16</a>:10-35:
+   | 
+   |     arr_a = &#39;{1, 1, 1, 1, 1, 1, 1, 1};
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^ 
+   = note: The type of expression must be inferred from context, but the location where you used it does not provide such information.
+   = note: Try a cast: `T&#39;(&#39;{1, 1, 1, 1, 1, 1, 1, 1})`
+
+compiler bug: lowering to mir rvalue of positional pattern not implemented
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/unpacked/variable-slice.sv.html#l-16" target="file-frame">tests/chapter-7/arrays/unpacked/variable-slice.sv:16</a>:10-35:
+   | 
+   |     arr_a = &#39;{1, 1, 1, 1, 1, 1, 1, 1};
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+
+</pre>
+</body>

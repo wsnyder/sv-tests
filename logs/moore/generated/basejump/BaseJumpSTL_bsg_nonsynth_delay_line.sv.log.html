@@ -1,0 +1,46 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_delay_line.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_delay_line.v</a>
+time_elapsed: 0.005s
+ram usage: 9628 KB
+</pre>
+<pre class="log">
+
+proc %bsg_nonsynth_delay_line.always.225.0 (i1$ %i) -&gt; (i1$ %o) {
+0:
+    br %init
+init:
+    %i1 = prb i1$ %i
+    wait %check, %i
+check:
+    %i2 = prb i1$ %i
+    %impledge = neq i1 %i1, %i2
+    br %impledge, %init, %event
+event:
+    %i3 = prb i1$ %i
+    %1 = const i32 -1
+    drv i1$ %o, %i3, %1
+    br %0
+}
+
+entity @bsg_nonsynth_delay_line (i1$ %i) -&gt; (i1$ %o) {
+    inst %bsg_nonsynth_delay_line.always.225.0 (i1$ %i) -&gt; (i1$ %o)
+}
+
+</pre>
+</body>

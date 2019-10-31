@@ -1,0 +1,34 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: enum numerical expression tests
+should_fail: 0
+tags: 6.19.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-6/6.19.4--enum_numerical_expr.sv.html" target="file-frame">tests/chapter-6/6.19.4--enum_numerical_expr.sv</a>
+time_elapsed: 0.006s
+ram usage: 9680 KB
+</pre>
+<pre class="log">
+
+error: type `logic [1:0]` required, but expression has type `integer&lt;2&gt;`
+  --&gt; <a href="../../../tests/chapter-6/6.19.4--enum_numerical_expr.sv.html#l-14" target="file-frame">tests/chapter-6/6.19.4--enum_numerical_expr.sv:14</a>:7-10:
+   | 
+   |         i = val * 4;
+   |             ^^^     
+
+thread &#39;main&#39; panicked at &#39;Error has no width&#39;, src/svlog/ty.rs:159:18
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace.
+
+</pre>
+</body>

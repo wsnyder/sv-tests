@@ -1,0 +1,80 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Update queue by assignment (push_back)
+should_fail: 0
+tags: 7.10.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/queues
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../tests/chapter-7/queues/push_back_assign.sv.html" target="file-frame">tests/chapter-7/queues/push_back_assign.sv</a>
+time_elapsed: 0.007s
+ram usage: 9600 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../tests/chapter-7/queues/push_back_assign.sv.html#l-16" target="file-frame">tests/chapter-7/queues/push_back_assign.sv:16</a>:2-40:
+   | 
+   |     $display(&#34;:assert: (%d == 3)&#34;, q.size);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../tests/chapter-7/queues/push_back_assign.sv.html#l-17" target="file-frame">tests/chapter-7/queues/push_back_assign.sv:17</a>:2-38:
+   | 
+   |     $display(&#34;:assert: (%d == 4)&#34;, q[0]);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.223.0 (i32$ %q) -&gt; (i32$ %q1) {
+0:
+    %1 = const i64 0
+    %q2 = prb i32$ %q1
+    %2 = inss i64 %1, i32 %q2, 0, 32
+    %3 = const i32 4
+    %4 = inss i64 %2, i32 %3, 32, 32
+    %5 = exts i32, i64 %4, 0, 32
+    %6 = const time 0s 1e
+    drv i32$ %q1, %5, %6
+    wait %7 for %6
+7:
+    %8 = const i64 0
+    %q3 = prb i32$ %q1
+    %9 = inss i64 %8, i32 %q3, 0, 32
+    %10 = const i32 3
+    %11 = inss i64 %9, i32 %10, 32, 32
+    %12 = exts i32, i64 %11, 0, 32
+    %13 = const time 0s 1e
+    drv i32$ %q1, %12, %13
+    wait %14 for %13
+14:
+    %15 = const i64 0
+    %q4 = prb i32$ %q1
+    %16 = inss i64 %15, i32 %q4, 0, 32
+    %17 = const i32 2
+    %18 = inss i64 %16, i32 %17, 32, 32
+    %19 = exts i32, i64 %18, 0, 32
+    %20 = const time 0s 1e
+    drv i32$ %q1, %19, %20
+    wait %21 for %20
+21:
+    %22 = const i32 0
+    %23 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i32 0
+    %q = sig i32 %0
+    inst %top.initial.223.0 (i32$ %q) -&gt; (i32$ %q)
+}
+
+</pre>
+</body>

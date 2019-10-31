@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: indexed select bit test
+should_fail: 0
+tags: 11.5.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-11/11.5.1--idx_select.sv.html" target="file-frame">tests/chapter-11/11.5.1--idx_select.sv</a>
+time_elapsed: 0.005s
+ram usage: 9452 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.225.0 (i16$ %a) -&gt; (i1$ %b) {
+0:
+    %a1 = prb i16$ %a
+    %1 = const i32 11
+    %2 = const i16 0
+    %3 = shr i16 %a1, i16 %2, i32 %1
+    %4 = exts i1, i16 %3, 0, 1
+    %5 = const time 0s 1e
+    drv i1$ %b, %4, %5
+    wait %6 for %5
+6:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i16 0
+    %a = sig i16 %0
+    %1 = const i1 0
+    %b = sig i1 %1
+    inst %top.initial.225.0 (i16$ %a) -&gt; (i1$ %b)
+}
+
+</pre>
+</body>

@@ -1,0 +1,34 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Tests imported from yosys
+should_fail: 0
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/yosys_hana
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_shifter.v.html" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_shifter.v</a> <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v</a>
+time_elapsed: 0.015s
+ram usage: 9724 KB
+</pre>
+<pre class="log">
+
+entity @f1_test (i16$ %IN, i5$ %SHIFT) -&gt; (i16$ %OUT) {
+    %IN1 = prb i16$ %IN
+    %SHIFT1 = prb i5$ %SHIFT
+    %0 = const i16 0
+    %1 = shl i16 %IN1, i16 %0, i5 %SHIFT1
+    %2 = const time 0s 1e
+    drv i16$ %OUT, %1, %2
+}
+
+</pre>
+</body>

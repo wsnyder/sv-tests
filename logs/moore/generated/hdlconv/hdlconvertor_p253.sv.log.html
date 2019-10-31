@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv</a>
+time_elapsed: 0.004s
+ram usage: 9620 KB
+</pre>
+<pre class="log">
+
+
+error: Expected hierarchy item, found alias instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:4</a>:1-6:
+   | 
+   | alias bus16[11:0] = low12;
+   | ^^^^^                     
+
+
+error: Expected hierarchy item, found alias instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:8</a>:1-6:
+   | 
+   | alias bus16 = {high12, low12[3:0]};
+   | ^^^^^                              
+
+
+error: Expected hierarchy item, found alias instead
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p253.sv:15</a>:1-6:
+   | 
+   | alias rst = Reset = reset = RST;
+   | ^^^^^                           
+
+
+</pre>
+</body>

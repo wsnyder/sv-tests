@@ -1,0 +1,49 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: array addressing test
+should_fail: 0
+tags: 11.5.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-11/11.5.2--array_addressing.sv.html" target="file-frame">tests/chapter-11/11.5.2--array_addressing.sv</a>
+time_elapsed: 0.005s
+ram usage: 9628 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.225.0 (i8$ %mem) -&gt; (i8$ %a) {
+0:
+    %1 = const i8 0
+    %mem1 = prb i8$ %mem
+    %2 = const i32 123
+    %3 = const i8 0
+    %4 = shr i8 %mem1, i8 %3, i32 %2
+    %5 = exts i1, i8 %4, 0, 1
+    %6 = inss i8 %1, i1 %5, 0, 1
+    %7 = const time 0s 1e
+    drv i8$ %a, %6, %7
+    wait %8 for %7
+8:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i8 0
+    %mem = sig i8 %0
+    %1 = const i8 0
+    %a = sig i8 %1
+    inst %top.initial.225.0 (i8$ %mem) -&gt; (i8$ %a)
+}
+
+</pre>
+</body>

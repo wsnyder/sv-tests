@@ -1,0 +1,56 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv</a>
+time_elapsed: 0.005s
+ram usage: 9724 KB
+</pre>
+<pre class="log">
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv.html#l-4" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv:4</a>:17-30:
+   | 
+   |     stringvar = &#34;Hello world&#34;;
+   |                 ^^^^^^^^^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv:5</a>:5-57:
+   | 
+   |     $display(&#34;%s is stored as %h&#34;, stringvar, stringvar);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv.html#l-6" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv:6</a>:28-33:
+   | 
+   |     stringvar = {stringvar,&#34;!!!&#34;};
+   |                            ^^^^^  
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p289.sv:7</a>:5-57:
+   | 
+   |     $display(&#34;%s is stored as %h&#34;, stringvar, stringvar);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+</pre>
+</body>

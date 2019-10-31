@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: enum defined inside class
+should_fail: 0
+tags: 8.5
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-8/8.5--properties_enum.sv.html" target="file-frame">tests/chapter-8/8.5--properties_enum.sv</a>
+time_elapsed: 0.005s
+ram usage: 9668 KB
+</pre>
+<pre class="log">
+
+
+error: Expected class item, found typedef instead
+  --&gt; <a href="../../../tests/chapter-8/8.5--properties_enum.sv.html#l-9" target="file-frame">tests/chapter-8/8.5--properties_enum.sv:9</a>:3-10:
+   | 
+   |         typedef enum {A = 10, B = 20, C = 30, D = 1} e_type;
+   |         ^^^^^^^                                             
+
+
+error: Expected expression, found ; instead
+  --&gt; <a href="../../../tests/chapter-8/8.5--properties_enum.sv.html#l-15" target="file-frame">tests/chapter-8/8.5--properties_enum.sv:15</a>:17-18:
+   | 
+   |         test_obj = new;
+   |                       ^
+
+
+</pre>
+</body>

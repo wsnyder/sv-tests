@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from yosys
+should_fail: 0
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/yosys_hana
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v</a> <a href="../../../../third_party/tools/yosys/tests/hana/hana_vlib.v.html" target="file-frame">third_party/tools/yosys/tests/hana/hana_vlib.v</a>
+time_elapsed: 0.016s
+ram usage: 9556 KB
+</pre>
+<pre class="log">
+
+
+error: Expected hierarchy item, found and instead
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/hana/test_simulation_and.v.html#l-34" target="file-frame">third_party/tools/yosys/tests/hana/test_simulation_and.v:34</a>:1-4:
+   | 
+   | and myand(out, in[0], in[1], in[2], in[3]);
+   | ^^^                                        
+
+
+</pre>
+</body>

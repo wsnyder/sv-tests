@@ -1,0 +1,82 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generic/class/class_test_41.sv.html" target="file-frame">tests/generic/class/class_test_41.sv</a>
+time_elapsed: 0.006s
+ram usage: 9728 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`uvm_object_utils&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-8" target="file-frame">tests/generic/class/class_test_41.sv:8</a>:2-19:
+   | 
+   |  `uvm_object_utils(stress_seq)
+   |  ^^^^^^^^^^^^^^^^^            
+
+
+error: expected class name, but found ; instead
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-7" target="file-frame">tests/generic/class/class_test_41.sv:7</a>:27-28:
+   | 
+   | class macros_as_class_item;
+   |                           ^
+
+
+fatal: unknown compiler directive &#39;`uvm_object_registry&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-9" target="file-frame">tests/generic/class/class_test_41.sv:9</a>:2-22:
+   | 
+   |  `uvm_object_registry(myclass, &#34;class_name&#34;)
+   |  ^^^^^^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`uvm_sweets&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-10" target="file-frame">tests/generic/class/class_test_41.sv:10</a>:2-13:
+   | 
+   |  `uvm_sweets(dessert)
+   |  ^^^^^^^^^^^         
+
+
+fatal: unknown compiler directive &#39;`non_uvm_macro&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-11" target="file-frame">tests/generic/class/class_test_41.sv:11</a>:2-16:
+   | 
+   |  `non_uvm_macro(apple, `banana, &#34;cherry&#34;)
+   |  ^^^^^^^^^^^^^^                          
+
+
+fatal: unknown compiler directive &#39;`banana&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-11" target="file-frame">tests/generic/class/class_test_41.sv:11</a>:24-31:
+   | 
+   |  `non_uvm_macro(apple, `banana, &#34;cherry&#34;)
+   |                        ^^^^^^^           
+
+
+fatal: Found closing `)` without an earlier opening `(`
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-11" target="file-frame">tests/generic/class/class_test_41.sv:11</a>:41-42:
+   | 
+   |  `non_uvm_macro(apple, `banana, &#34;cherry&#34;)
+   |                                         ^
+
+
+error: Expected `endclass`, but found `)` instead
+  --&gt; <a href="../../../../tests/generic/class/class_test_41.sv.html#l-11" target="file-frame">tests/generic/class/class_test_41.sv:11</a>:41-42:
+   | 
+   |  `non_uvm_macro(apple, `banana, &#34;cherry&#34;)
+   |                                         ^
+
+
+</pre>
+</body>

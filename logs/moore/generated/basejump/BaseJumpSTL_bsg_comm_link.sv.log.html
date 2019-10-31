@@ -1,0 +1,82 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v</a>
+time_elapsed: 0.010s
+ram usage: 9752 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-339" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:339</a>:11-19:
+   | 
+   |    logic [`BSG_MAX(0,$clog2(link_channels_p)-1):0] core_top_active_channel_bao_r, core_top_active_channel_bai_r, core_top_active_channel_n;
+   |           ^^^^^^^^                                                                                                                         
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-340" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:340</a>:11-19:
+   | 
+   |    logic [`BSG_MAX(0,$clog2(link_channels_p+1)-1):0] active_channel_count;
+   |           ^^^^^^^^                                                        
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-353" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:353</a>:24-32:
+   | 
+   |              ,.width_p(`BSG_MAX(1,$clog2(link_channels_p)))
+   |                        ^^^^^^^^                            
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-362" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:362</a>:24-32:
+   | 
+   |              ,.width_p(`BSG_MAX(1,$clog2(link_channels_p)))
+   |                        ^^^^^^^^                            
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-791" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:791</a>:19-27:
+   | 
+   |    typedef logic [`BSG_MAX($clog2(core_channels_p/bao_narrow_lp),1)-1:0] bsg_comm_link_active_out_vec_t;
+   |                   ^^^^^^^^                                                                              
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-792" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:792</a>:19-27:
+   | 
+   |    typedef logic [`BSG_MAX($clog2(core_channels_p),1)-1:0]               bsg_comm_link_active_in_vec_t;
+   |                   ^^^^^^^^                                                                             
+
+
+error: Expected hierarchy item, found logic instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-339" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:339</a>:4-9:
+   | 
+   |    logic [`BSG_MAX(0,$clog2(link_channels_p)-1):0] core_top_active_channel_bao_r, core_top_active_channel_bai_r, core_top_active_channel_n;
+   |    ^^^^^                                                                                                                                   
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v.html#l-905" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_comm_link.v:905</a>:10-11:
+   | 
+   | endmodule
+   |          
+
+
+</pre>
+</body>

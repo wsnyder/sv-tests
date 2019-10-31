@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_noc
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v</a>
+time_elapsed: 0.006s
+ram usage: 9632 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-70" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:70</a>:34-43:
+   | 
+   |   localparam wormhole_ratio_lp = `BSG_CDIV(wormhole_width_lp, flit_width_p);
+   |                                  ^^^^^^^^^                                  
+
+
+error: Expected at least one parameter name
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-70" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:70</a>:32-33:
+   | 
+   |   localparam wormhole_ratio_lp = `BSG_CDIV(wormhole_width_lp, flit_width_p);
+   |                                ^                                            
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v.html#l-75" target="file-frame">third_party/cores/basejump_stl/bsg_noc/bsg_ready_and_link_async_to_wormhole.v:75</a>:28-43:
+   | 
+   |     assert (len_width_p &gt;= `BSG_SAFE_CLOG2(wormhole_ratio_lp))
+   |                            ^^^^^^^^^^^^^^^                    
+
+
+</pre>
+</body>

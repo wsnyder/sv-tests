@@ -1,0 +1,62 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v</a>
+time_elapsed: 0.007s
+ram usage: 9616 KB
+</pre>
+<pre class="log">
+
+warning: `$value$plusargs` not supported; ignored
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-28" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:28</a>:5-53:
+   | 
+   |     $value$plusargs(&#34;clock-period=%d&#34;, clock_period);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-29" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:29</a>:5-61:
+   | 
+   |     $display(&#34;[INFO - %L]: Clock Period = %d&#34;, clock_period);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:30</a>:28-31:
+   | 
+   |     forever #(clock_period/2.0) clk_lo = ~clk_lo;
+   |                            ^^^                   
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:14</a>:70-75:
+   | 
+   | module bsg_nonsynth_clock_gen_plusarg #( parameter default_clk_per_p=&#34;inv&#34; )
+   |                                                                      ^^^^^  
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+note: constant value of parameter `default_clk_per_p` needed here
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v.html#l-27" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_clock_gen_plusarg.v:27</a>:28-45:
+   | 
+   |     integer clock_period = default_clk_per_p;
+   |                            ^^^^^^^^^^^^^^^^^ 
+
+
+</pre>
+</body>

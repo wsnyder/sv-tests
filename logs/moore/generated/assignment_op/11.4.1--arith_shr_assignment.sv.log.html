@@ -1,0 +1,50 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: &gt;&gt;&gt;= assignment test
+should_fail: 0
+tags: 11.4.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/assignment_op
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generated/assignment_op/11.4.1--arith_shr_assignment.sv.html" target="file-frame">tests/generated/assignment_op/11.4.1--arith_shr_assignment.sv</a>
+time_elapsed: 0.006s
+ram usage: 9688 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.225.0 (i32$ %b) -&gt; (i32$ %a) {
+0:
+    %b1 = prb i32$ %b
+    %a1 = prb i32$ %a
+    %1 = const i32 0
+    %2 = not i32 %1
+    %3 = exts i1, i32 %a1, 31, 1
+    %4 = [i32 %1, %2]
+    %5 = mux [2 x i32] %4, i1 %3
+    %6 = shr i32 %a1, i32 %5, i32 %b1
+    %7 = const time 0s 1e
+    drv i32$ %a, %6, %7
+    wait %8 for %7
+8:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i32 12
+    %a = sig i32 %0
+    %1 = const i32 5
+    %b = sig i32 %1
+    inst %top.initial.225.0 (i32$ %b) -&gt; (i32$ %a)
+}
+
+</pre>
+</body>

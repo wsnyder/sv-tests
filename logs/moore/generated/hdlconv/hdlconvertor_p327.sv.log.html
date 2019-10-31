@@ -1,0 +1,41 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv</a>
+time_elapsed: 0.006s
+ram usage: 9624 KB
+</pre>
+<pre class="log">
+
+compiler bug: lowering of call to expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv.html#l-15" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv:15</a>:16-25:
+   | 
+   |       result = factorial(n);
+   |                ^^^^^^^^^    
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p327.sv:16</a>:7-47:
+   | 
+   |       $display(&#34;%0d factorial=%0d&#34;, n, result);
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+</pre>
+</body>

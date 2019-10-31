@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from yosys
+should_fail: 0
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/asicworld
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_parity.v.html" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_parity.v</a>
+time_elapsed: 0.004s
+ram usage: 9572 KB
+</pre>
+<pre class="log">
+
+
+error: Expected hierarchy item, found xor instead
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_parity.v.html#l-35" target="file-frame">third_party/tools/yosys/tests/asicworld/code_verilog_tutorial_parity.v:35</a>:1-4:
+   | 
+   | xor u0 (out_0,a,b);
+   | ^^^                
+
+
+</pre>
+</body>

@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: A module testing pattern matching in conditional expressions
+should_fail: 0
+tags: 12.6.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-12
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-12/12.6.3--conditional_pattern.sv.html" target="file-frame">tests/chapter-12/12.6.3--conditional_pattern.sv</a>
+time_elapsed: 0.005s
+ram usage: 9640 KB
+</pre>
+<pre class="log">
+
+
+error: Expected `;`, but found `matches` instead
+  --&gt; <a href="../../../tests/chapter-12/12.6.3--conditional_pattern.sv.html#l-26" target="file-frame">tests/chapter-12/12.6.3--conditional_pattern.sv:26</a>:21-28:
+   | 
+   |           val = tmp matches tagged a &#39;{4&#39;b01zx, .v} ? 1 : 2;
+   |                     ^^^^^^^                                 
+
+
+</pre>
+</body>

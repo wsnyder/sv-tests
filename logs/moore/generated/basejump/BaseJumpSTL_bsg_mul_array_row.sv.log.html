@@ -1,0 +1,36 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v</a>
+time_elapsed: 0.006s
+ram usage: 9608 KB
+</pre>
+<pre class="log">
+
+thread &#39;main&#39; panicked at &#39;internal error: entered unreachable code: compiler bug: implicit type not resolved
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_mul_array_row.v:11</a>:5-11:
+   | 
+   |     input clk_i
+   |     ^^^^^^     
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+&#39;, src/svlog/typeck.rs:377:13
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace.
+
+</pre>
+</body>

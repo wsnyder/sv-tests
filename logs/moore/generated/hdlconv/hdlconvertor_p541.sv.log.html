@@ -1,0 +1,86 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from hdlconv
+should_fail: 0
+tags: hdlconv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv</a>
+time_elapsed: 0.006s
+ram usage: 9640 KB
+</pre>
+<pre class="log">
+
+compiler bug: class declaration not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-1" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:1</a>:1-36:
+   | 
+   | class C1;
+   | ^^^^^^^^^
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: class declaration not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:5</a>:1-36:
+   | 
+   | class C2;
+   | ^^^^^^^^^
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:11</a>:10-15:
+   | 
+   |     C1 c1 = new();
+   |             ^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-12" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:12</a>:10-15:
+   | 
+   |     C2 c2 = new();
+   |             ^^^^^ 
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of call to expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-14" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:14</a>:8-20:
+   | 
+   |     void&#39;(c1.randomize());
+   |           ^^^^^^^^^^^^    
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+compiler bug: lowering of call to expression not implemented
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-16" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:16</a>:8-20:
+   | 
+   |     void&#39;(c2.randomize());
+   |           ^^^^^^^^^^^^    
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+error: `C1` not found
+  --&gt; <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv.html#l-11" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p541.sv:11</a>:2-4:
+   | 
+   |     C1 c1 = new();
+   |     ^^            
+
+
+</pre>
+</body>

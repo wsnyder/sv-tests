@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Full fx68k core test
+should_fail: 0
+tags: fx68k
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/fx68k
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/fx68k/fx68k.sv.html" target="file-frame">third_party/cores/fx68k/fx68k.sv</a> <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv</a> <a href="../../../../third_party/cores/fx68k/uaddrPla.sv.html" target="file-frame">third_party/cores/fx68k/uaddrPla.sv</a>
+time_elapsed: 0.124s
+ram usage: 11880 KB
+</pre>
+<pre class="log">
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `localparam`
+  --&gt; <a href="../../../../third_party/cores/fx68k/fx68k.sv.html#l-15" target="file-frame">third_party/cores/fx68k/fx68k.sv:15</a>:1-11:
+   | 
+   | localparam CF = 0, VF = 1, ZF = 2, NF = 3, XF = 4, SF = 13;
+   | ^^^^^^^^^^                                                 
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `localparam`
+  --&gt; <a href="../../../../third_party/cores/fx68k/fx68kAlu.sv.html#l-12" target="file-frame">third_party/cores/fx68k/fx68kAlu.sv:12</a>:1-11:
+   | 
+   | localparam MASK_NBITS = 5;
+   | ^^^^^^^^^^                
+
+
+</pre>
+</body>

@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v</a>
+time_elapsed: 0.006s
+ram usage: 9668 KB
+</pre>
+<pre class="log">
+
+
+error: Missing ; after header of module &#34;bsg_cache_to_axi&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v.html#l-8" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v:8</a>:9-9:
+   | 
+   |   import bsg_cache_pkg::*;
+   |         ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v.html#l-9" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v:9</a>:3-4:
+   | 
+   |   #(parameter addr_width_p=&#34;inv&#34;
+   |   ^                             
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v:19</a>:32-47:
+   | 
+   |     ,parameter lg_num_cache_lp=`BSG_SAFE_CLOG2(num_cache_p)
+   |                                ^^^^^^^^^^^^^^^             
+
+
+fatal: unknown compiler directive &#39;`bsg_cache_dma_pkt_width&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v:20</a>:33-57:
+   | 
+   |     ,parameter dma_pkt_width_lp=`bsg_cache_dma_pkt_width(addr_width_p)
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`declare_bsg_cache_dma_pkt_s&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_axi.v:89</a>:3-31:
+   | 
+   |   `declare_bsg_cache_dma_pkt_s(addr_width_p);
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^               
+
+
+</pre>
+</body>

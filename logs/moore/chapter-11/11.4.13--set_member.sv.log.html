@@ -1,0 +1,57 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: inside operator test
+should_fail: 0
+tags: 11.4.13
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-11
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-11/11.4.13--set_member.sv.html" target="file-frame">tests/chapter-11/11.4.13--set_member.sv</a>
+time_elapsed: 0.005s
+ram usage: 9672 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.229.0 (i32$ %b, i32$ %c, i32$ %d) -&gt; (i32$ %a) {
+0:
+    %1 = const i32 0
+    %2 = const i1 0
+    %b1 = prb i32$ %b
+    %c1 = prb i32$ %c
+    %3 = eq i32 %b1, %c1
+    %4 = or i1 %2, %3
+    %b2 = prb i32$ %b
+    %d1 = prb i32$ %d
+    %5 = eq i32 %b2, %d1
+    %6 = or i1 %4, %5
+    %7 = inss i32 %1, i1 %6, 0, 1
+    %8 = const time 0s 1e
+    drv i32$ %a, %7, %8
+    wait %9 for %8
+9:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i32 0
+    %a = sig i32 %0
+    %1 = const i32 12
+    %b = sig i32 %1
+    %2 = const i32 5
+    %c = sig i32 %2
+    %3 = const i32 7
+    %d = sig i32 %3
+    inst %top.initial.229.0 (i32$ %b, i32$ %c, i32$ %d) -&gt; (i32$ %a)
+}
+
+</pre>
+</body>

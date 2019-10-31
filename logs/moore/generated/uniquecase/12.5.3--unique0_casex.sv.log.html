@@ -1,0 +1,35 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: casex statement with unique0
+should_fail: 0
+tags: 12.5.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/uniquecase
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generated/uniquecase/12.5.3--unique0_casex.sv.html" target="file-frame">tests/generated/uniquecase/12.5.3--unique0_casex.sv</a>
+time_elapsed: 0.005s
+ram usage: 9508 KB
+</pre>
+<pre class="log">
+
+compiler bug: lowering of type `reg [3:0]` not implemented
+  --&gt; <a href="../../../../tests/generated/uniquecase/12.5.3--unique0_casex.sv.html#l-9" target="file-frame">tests/generated/uniquecase/12.5.3--unique0_casex.sv:9</a>:1-10:
+   | 
+   | reg [3:0] b = 0;
+   | ^^^^^^^^^       
+
+You have encountered a compiler bug. Sorry about that! We would appreciate if you open an issue [1] and describe how you triggered the bug, together with a minimal snippet of code to reproduce it. Thanks!
+[1]: https://github.com/fabianschuiki/moore
+
+
+</pre>
+</body>

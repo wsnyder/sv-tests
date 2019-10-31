@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: out-of-body method declaration
+should_fail: 0
+tags: 8.24
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-8
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv</a>
+time_elapsed: 0.004s
+ram usage: 9548 KB
+</pre>
+<pre class="log">
+
+
+error: Expected `;`, but found `::` instead
+  --&gt; <a href="../../../tests/chapter-8/8.24--out_of_block_methods.sv.html#l-13" target="file-frame">tests/chapter-8/8.24--out_of_block_methods.sv:13</a>:24-26:
+   | 
+   |     function void test_cls::test_method(int val);
+   |                           ^^                     
+
+
+</pre>
+</body>

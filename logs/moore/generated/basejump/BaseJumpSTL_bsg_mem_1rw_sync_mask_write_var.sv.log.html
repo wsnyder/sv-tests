@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_mem
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_var.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_var.v</a>
+time_elapsed: 0.005s
+ram usage: 9732 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_var.v.html#l-6" target="file-frame">third_party/cores/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_var.v:6</a>:28-43:
+   | 
+   |   ,parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p))
+   |                            ^^^^^^^^^^^^^^^        
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_var.v.html#l-6" target="file-frame">third_party/cores/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_var.v:6</a>:14-27:
+   | 
+   |   ,parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p))
+   |              ^^^^^^^^^^^^^                        
+
+
+</pre>
+</body>

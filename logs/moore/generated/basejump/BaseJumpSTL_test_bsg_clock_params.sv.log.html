@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v</a>
+time_elapsed: 0.004s
+ram usage: 9636 KB
+</pre>
+<pre class="log">
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `localparam`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_test/test_bsg_clock_params.v:21</a>:4-14:
+   | 
+   |    localparam core_0_period_lp      = `CORE_0_PERIOD;
+   |    ^^^^^^^^^^                                        
+
+
+</pre>
+</body>

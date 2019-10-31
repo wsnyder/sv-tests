@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Special characters in strings
+should_fail: 0
+tags: 5.9.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-5/5.9.1-string-special-chars.sv.html" target="file-frame">tests/chapter-5/5.9.1-string-special-chars.sv</a>
+time_elapsed: 0.005s
+ram usage: 9684 KB
+</pre>
+<pre class="log">
+
+
+fatal: Unknown escape sequence in string
+  --&gt; <a href="../../../tests/chapter-5/5.9.1-string-special-chars.sv.html#l-17" target="file-frame">tests/chapter-5/5.9.1-string-special-chars.sv:17</a>:14-22:
+   | 
+   |     $display(&#34;octal \123&#34;);
+   |              ^^^^^^^^      
+
+
+fatal: String literals cannot contain unescaped newlines
+  --&gt; <a href="../../../tests/chapter-5/5.9.1-string-special-chars.sv.html#l-17" target="file-frame">tests/chapter-5/5.9.1-string-special-chars.sv:17</a>:28-29:
+   | 
+   |     $display(&#34;octal \123&#34;);
+   |                            
+
+
+error: Expected statement, found system identifier instead
+  --&gt; <a href="../../../tests/chapter-5/5.9.1-string-special-chars.sv.html#l-17" target="file-frame">tests/chapter-5/5.9.1-string-special-chars.sv:17</a>:5-13:
+   | 
+   |     $display(&#34;octal \123&#34;);
+   |     ^^^^^^^^               
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `(`
+  --&gt; <a href="../../../tests/chapter-5/5.9.1-string-special-chars.sv.html#l-19" target="file-frame">tests/chapter-5/5.9.1-string-special-chars.sv:19</a>:3-6:
+   | 
+   |   end
+   |   ^^^
+
+
+</pre>
+</body>

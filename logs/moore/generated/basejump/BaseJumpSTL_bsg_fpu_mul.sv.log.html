@@ -1,0 +1,131 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v</a>
+time_elapsed: 0.008s
+ram usage: 9692 KB
+</pre>
+<pre class="log">
+
+
+error: Missing ; after header of module &#34;bsg_fpu_mul&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:10</a>:9-9:
+   | 
+   |   import bsg_fpu_pkg::*;
+   |         ^               
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-11" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:11</a>:3-4:
+   | 
+   |   #(parameter e_p=&#34;inv&#34;   // exponent width
+   |   ^                                        
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_SIGNAN&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-282" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:282</a>:13-28:
+   | 
+   |       z_o = `BSG_FPU_SIGNAN(e_p,m_p); // sig nan
+   |             ^^^^^^^^^^^^^^^                     
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_QUIETNAN&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-289" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:289</a>:13-30:
+   | 
+   |       z_o = `BSG_FPU_QUIETNAN(e_p,m_p); // quiet nan
+   |             ^^^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_QUIETNAN&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-297" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:297</a>:15-32:
+   | 
+   |         z_o = `BSG_FPU_QUIETNAN(e_p,m_p); // quiet nan
+   |               ^^^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_INFTY&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-304" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:304</a>:15-29:
+   | 
+   |         z_o = `BSG_FPU_INFTY(sgn,e_p,m_p); // infty 
+   |               ^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_QUIETNAN&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-313" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:313</a>:15-32:
+   | 
+   |         z_o = `BSG_FPU_QUIETNAN(e_p,m_p); // quiet nan
+   |               ^^^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_INFTY&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-320" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:320</a>:15-29:
+   | 
+   |         z_o = `BSG_FPU_INFTY(sgn,e_p,m_p); // infty 
+   |               ^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_ZERO&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-328" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:328</a>:13-26:
+   | 
+   |       z_o = `BSG_FPU_ZERO(sgn,e_p,m_p); // zero
+   |             ^^^^^^^^^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_ZERO&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-335" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:335</a>:13-26:
+   | 
+   |       z_o = `BSG_FPU_ZERO(sgn,e_p,m_p); // zero
+   |             ^^^^^^^^^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_QUIETNAN&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-342" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:342</a>:13-30:
+   | 
+   |       z_o = `BSG_FPU_QUIETNAN(e_p,m_p); // quiet nan
+   |             ^^^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_ZERO&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-349" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:349</a>:13-26:
+   | 
+   |       z_o = `BSG_FPU_ZERO(sgn,e_p,m_p); // zero
+   |             ^^^^^^^^^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_INFTY&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-356" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:356</a>:13-27:
+   | 
+   |       z_o = `BSG_FPU_INFTY(sgn,e_p,m_p); // infty 
+   |             ^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_INFTY&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-364" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:364</a>:15-29:
+   | 
+   |         z_o = `BSG_FPU_INFTY(sgn,e_p,m_p); // infty 
+   |               ^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_FPU_ZERO&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v.html#l-371" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_mul.v:371</a>:15-28:
+   | 
+   |         z_o = `BSG_FPU_ZERO(sgn,e_p,m_p); // zero
+   |               ^^^^^^^^^^^^^                      
+
+
+</pre>
+</body>

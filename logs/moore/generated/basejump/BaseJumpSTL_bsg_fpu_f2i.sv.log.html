@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_fpu
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v</a>
+time_elapsed: 0.005s
+ram usage: 9572 KB
+</pre>
+<pre class="log">
+
+
+error: Missing ; after header of module &#34;bsg_fpu_f2i&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:21</a>:9-9:
+   | 
+   |   import bsg_fpu_pkg::*;
+   |         ^               
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:22</a>:3-4:
+   | 
+   |   #(parameter e_p=&#34;inv&#34;
+   |   ^                    
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:89</a>:38-53:
+   | 
+   |   assign shifted = preshift &gt;&gt; shamt[`BSG_SAFE_CLOG2(width_lp):0];
+   |                                      ^^^^^^^^^^^^^^^              
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-144" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:144</a>:10-11:
+   | 
+   | endmodule
+   |          
+
+
+</pre>
+</body>

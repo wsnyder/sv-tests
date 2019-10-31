@@ -1,0 +1,82 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_cache
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v</a>
+time_elapsed: 0.006s
+ram usage: 9644 KB
+</pre>
+<pre class="log">
+
+
+error: Missing ; after header of module &#34;bsg_cache_to_dram_ctrl&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-9" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:9</a>:9-9:
+   | 
+   |   import bsg_cache_pkg::*;
+   |         ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:10</a>:3-4:
+   | 
+   |   #(parameter num_cache_p=&#34;inv&#34;
+   |   ^                            
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:18</a>:34-49:
+   | 
+   |     , localparam lg_num_cache_lp=`BSG_SAFE_CLOG2(num_cache_p)
+   |                                  ^^^^^^^^^^^^^^^             
+
+
+fatal: unknown compiler directive &#39;`bsg_cache_dma_pkt_width&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-20" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:20</a>:35-59:
+   | 
+   |     , localparam dma_pkt_width_lp=`bsg_cache_dma_pkt_width(addr_width_p)
+   |                                   ^^^^^^^^^^^^^^^^^^^^^^^^              
+
+
+fatal: unknown compiler directive &#39;`declare_bsg_cache_dma_pkt_s&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-59" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:59</a>:3-31:
+   | 
+   |   `declare_bsg_cache_dma_pkt_s(addr_width_p);
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^               
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-146" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:146</a>:10-25:
+   | 
+   |   logic [`BSG_SAFE_CLOG2(num_req_lp)-1:0] req_cnt_r, req_cnt_n;
+   |          ^^^^^^^^^^^^^^^                                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-183" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:183</a>:28-43:
+   | 
+   |           ? addr_r + (1 &lt;&lt; `BSG_SAFE_CLOG2(dram_ctrl_burst_len_p*data_width_p/8))
+   |                            ^^^^^^^^^^^^^^^                                       
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v.html#l-217" target="file-frame">third_party/cores/basejump_stl/bsg_cache/bsg_cache_to_dram_ctrl.v:217</a>:10-11:
+   | 
+   | endmodule
+   |          
+
+
+</pre>
+</body>

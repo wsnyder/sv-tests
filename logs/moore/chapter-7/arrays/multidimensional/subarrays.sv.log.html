@@ -1,0 +1,152 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Test multidimensional subarrays assignments
+should_fail: 0
+tags: 7.4.5
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/arrays/multidimensional/subarrays.sv.html" target="file-frame">tests/chapter-7/arrays/multidimensional/subarrays.sv</a>
+time_elapsed: 0.007s
+ram usage: 9732 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/multidimensional/subarrays.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/multidimensional/subarrays.sv:20</a>:2-126:
+   | 
+   |     $display(&#34;:assert: ((%d == 5) and (%d == 6) and (%d == 7) and (%d == 8))&#34;,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+proc %top.initial.224.0 (i32$ %A) -&gt; (i32$ %A1, i32$ %B) {
+0:
+    %1 = const i32 0
+    %2 = const i32 0
+    %3 = sig i32 %2
+    %4 = shr i32$ %A1, i32$ %3, i32 %1
+    %5 = exts i1$, i32$ %4, 0, 1
+    %6 = const i32 2
+    %7 = const i1 0
+    %8 = sig i1 %7
+    %9 = shr i1$ %5, i1$ %8, i32 %6
+    %10 = exts i1$, i1$ %9, 0, 1
+    %11 = const i32 0
+    %12 = const i1 0
+    %13 = sig i1 %12
+    %14 = shr i1$ %10, i1$ %13, i32 %11
+    %15 = exts i1$, i1$ %14, 0, 1
+    %16 = const i32 5
+    %17 = exts i1, i32 %16, 0, 1
+    %18 = const time 0s 1e
+    drv i1$ %15, %17, %18
+    wait %19 for %18
+19:
+    %20 = const i32 0
+    %21 = const i32 0
+    %22 = sig i32 %21
+    %23 = shr i32$ %A1, i32$ %22, i32 %20
+    %24 = exts i1$, i32$ %23, 0, 1
+    %25 = const i32 2
+    %26 = const i1 0
+    %27 = sig i1 %26
+    %28 = shr i1$ %24, i1$ %27, i32 %25
+    %29 = exts i1$, i1$ %28, 0, 1
+    %30 = const i32 1
+    %31 = const i1 0
+    %32 = sig i1 %31
+    %33 = shr i1$ %29, i1$ %32, i32 %30
+    %34 = exts i1$, i1$ %33, 0, 1
+    %35 = const i32 6
+    %36 = exts i1, i32 %35, 0, 1
+    %37 = const time 0s 1e
+    drv i1$ %34, %36, %37
+    wait %38 for %37
+38:
+    %39 = const i32 0
+    %40 = const i32 0
+    %41 = sig i32 %40
+    %42 = shr i32$ %A1, i32$ %41, i32 %39
+    %43 = exts i1$, i32$ %42, 0, 1
+    %44 = const i32 2
+    %45 = const i1 0
+    %46 = sig i1 %45
+    %47 = shr i1$ %43, i1$ %46, i32 %44
+    %48 = exts i1$, i1$ %47, 0, 1
+    %49 = const i32 2
+    %50 = const i1 0
+    %51 = sig i1 %50
+    %52 = shr i1$ %48, i1$ %51, i32 %49
+    %53 = exts i1$, i1$ %52, 0, 1
+    %54 = const i32 7
+    %55 = exts i1, i32 %54, 0, 1
+    %56 = const time 0s 1e
+    drv i1$ %53, %55, %56
+    wait %57 for %56
+57:
+    %58 = const i32 0
+    %59 = const i32 0
+    %60 = sig i32 %59
+    %61 = shr i32$ %A1, i32$ %60, i32 %58
+    %62 = exts i1$, i32$ %61, 0, 1
+    %63 = const i32 2
+    %64 = const i1 0
+    %65 = sig i1 %64
+    %66 = shr i1$ %62, i1$ %65, i32 %63
+    %67 = exts i1$, i1$ %66, 0, 1
+    %68 = const i32 3
+    %69 = const i1 0
+    %70 = sig i1 %69
+    %71 = shr i1$ %67, i1$ %70, i32 %68
+    %72 = exts i1$, i1$ %71, 0, 1
+    %73 = const i32 8
+    %74 = exts i1, i32 %73, 0, 1
+    %75 = const time 0s 1e
+    drv i1$ %72, %74, %75
+    wait %76 for %75
+76:
+    %77 = const i32 1
+    %78 = const i32 0
+    %79 = sig i32 %78
+    %80 = shr i32$ %B, i32$ %79, i32 %77
+    %81 = exts i1$, i32$ %80, 0, 1
+    %82 = const i32 1
+    %83 = const i1 0
+    %84 = sig i1 %83
+    %85 = shr i1$ %81, i1$ %84, i32 %82
+    %86 = exts i1$, i1$ %85, 0, 1
+    %A2 = prb i32$ %A1
+    %87 = const i32 0
+    %88 = const i32 0
+    %89 = shr i32 %A2, i32 %88, i32 %87
+    %90 = exts i1, i32 %89, 0, 1
+    %91 = const i32 2
+    %92 = const i1 0
+    %93 = shr i1 %90, i1 %92, i32 %91
+    %94 = exts i1, i1 %93, 0, 1
+    %95 = const time 0s 1e
+    drv i1$ %86, %94, %95
+    wait %96 for %95
+96:
+    %97 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i32 0
+    %A = sig i32 %0
+    %1 = const i32 0
+    %B = sig i32 %1
+    inst %top.initial.224.0 (i32$ %A) -&gt; (i32$ %A, i32$ %B)
+}
+
+</pre>
+</body>

@@ -1,0 +1,88 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Test multidimensional word copy
+should_fail: 0
+tags: 7.4.5
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/multidimensional
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/arrays/multidimensional/copy.sv.html" target="file-frame">tests/chapter-7/arrays/multidimensional/copy.sv</a>
+time_elapsed: 0.006s
+ram usage: 9576 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/multidimensional/copy.sv.html#l-16" target="file-frame">tests/chapter-7/arrays/multidimensional/copy.sv:16</a>:2-53:
+   | 
+   |     $display(&#34;:assert: (&#39;%h&#39; == &#39;deadbeef&#39;)&#34;, arr_a[1]);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/multidimensional/copy.sv.html#l-19" target="file-frame">tests/chapter-7/arrays/multidimensional/copy.sv:19</a>:2-53:
+   | 
+   |     $display(&#34;:assert: (&#39;%h&#39; == &#39;deadbeef&#39;)&#34;, arr_b[2]);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.225.0 ([4 x i8]$ %arr_a) -&gt; ([4 x i8]$ %arr_a1, [4 x i8]$ %arr_b) {
+0:
+    %1 = const i32 1
+    %2 = const i8 0
+    %3 = [4 x i8 %2]
+    %4 = sig [4 x i8] %3
+    %5 = shr [4 x i8]$ %arr_a1, [4 x i8]$ %4, i32 %1
+    %6 = extf i8$, [4 x i8]$ %5, 0
+    %7 = const i32 3735928559
+    %8 = exts i8, i32 %7, 0, 8
+    %9 = const time 0s 1e
+    drv i8$ %6, %8, %9
+    wait %10 for %9
+10:
+    %11 = const i32 0
+    %12 = const i32 2
+    %13 = const i8 0
+    %14 = [4 x i8 %13]
+    %15 = sig [4 x i8] %14
+    %16 = shr [4 x i8]$ %arr_b, [4 x i8]$ %15, i32 %12
+    %17 = extf i8$, [4 x i8]$ %16, 0
+    %arr_a2 = prb [4 x i8]$ %arr_a1
+    %18 = const i32 1
+    %19 = const i8 0
+    %20 = [4 x i8 %19]
+    %21 = shr [4 x i8] %arr_a2, [4 x i8] %20, i32 %18
+    %22 = extf i8, [4 x i8] %21, 0
+    %23 = const time 0s 1e
+    drv i8$ %17, %22, %23
+    wait %24 for %23
+24:
+    %25 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i8 0
+    %1 = const i8 0
+    %2 = const i8 0
+    %3 = const i8 0
+    %4 = [i8 %0, %1, %2, %3]
+    %arr_a = sig [4 x i8] %4
+    %5 = const i8 0
+    %6 = const i8 0
+    %7 = const i8 0
+    %8 = const i8 0
+    %9 = [i8 %5, %6, %7, %8]
+    %arr_b = sig [4 x i8] %9
+    inst %top.initial.225.0 ([4 x i8]$ %arr_a) -&gt; ([4 x i8]$ %arr_a, [4 x i8]$ %arr_b)
+}
+
+</pre>
+</body>

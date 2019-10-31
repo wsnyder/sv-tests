@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v</a>
+time_elapsed: 0.006s
+ram usage: 9664 KB
+</pre>
+<pre class="log">
+
+
+error: Missing ; after header of module &#34;bsg_tag_master&#34;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-23" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:23</a>:9-9:
+   | 
+   |   import bsg_tag_pkg::bsg_tag_s;
+   |         ^                       
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v.html#l-28" target="file-frame">third_party/cores/basejump_stl/bsg_tag/bsg_tag_master.v:28</a>:4-5:
+   | 
+   |    #(els_p=&#34;inv&#34;, lg_width_p=&#34;inv&#34;, debug_level_lp=2)
+   |    ^                                                 
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag/bsg_tag.vh:50:14-29:
+   | 
+   |       logic [`BSG_SAFE_CLOG2((PARAM_els))-1:0]       nodeID;                \
+   |              ^^^^^^^^^^^^^^^                                                 
+
+
+fatal: Found closing `}` which is not the complement to the previous opening `[`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag/bsg_tag.vh:53:7-8:
+   | 
+   |       } bsg_tag_header_s;
+   |       ^                  
+
+
+error: Expected `endmodule`, but found `}` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_tag/bsg_tag.vh:53:7-8:
+   | 
+   |       } bsg_tag_header_s;
+   |       ^                  
+
+
+</pre>
+</body>

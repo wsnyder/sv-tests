@@ -1,0 +1,47 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v</a>
+time_elapsed: 0.006s
+ram usage: 9688 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-10" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:10</a>:48-58:
+   | 
+   |                                                `BSG_WIDTH(credit_max_val_p)
+   |                                                ^^^^^^^^^^                  
+
+
+error: Expected explicit or implicit type, found identifier instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-9" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:9</a>:56-68:
+   | 
+   |                                            , parameter ptr_width_lp = 
+   |                                                        ^^^^^^^^^^^^   
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v.html#l-25" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_ready_to_credit_flow_converter.v:25</a>:28-38:
+   | 
+   | localparam step_width_lp = `BSG_WIDTH(decimation_p);
+   |                            ^^^^^^^^^^               
+
+
+</pre>
+</body>

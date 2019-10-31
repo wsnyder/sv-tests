@@ -1,0 +1,40 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Basic arrays test
+should_fail: 0
+tags: 5.11
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-5/5.11-arrays-replication.sv.html" target="file-frame">tests/chapter-5/5.11-arrays-replication.sv</a>
+time_elapsed: 0.006s
+ram usage: 9608 KB
+</pre>
+<pre class="log">
+
+error: type of expression cannot be inferred from context
+  --&gt; <a href="../../../tests/chapter-5/5.11-arrays-replication.sv.html#l-8" target="file-frame">tests/chapter-5/5.11-arrays-replication.sv:8</a>:21-37:
+   | 
+   |   int n[1:2][1:6] = &#39;{2{&#39;{3{4, 5}}}};
+   |                     ^^^^^^^^^^^^^^^^ 
+   = note: The type of expression must be inferred from context, but the location where you used it does not provide such information.
+   = note: Try a cast: `T&#39;(&#39;{2{&#39;{3{4, 5}}}})`
+
+error: type `&lt;error&gt;` cannot be used with a pattern
+  --&gt; <a href="../../../tests/chapter-5/5.11-arrays-replication.sv.html#l-8" target="file-frame">tests/chapter-5/5.11-arrays-replication.sv:8</a>:21-37:
+   | 
+   |   int n[1:2][1:6] = &#39;{2{&#39;{3{4, 5}}}};
+   |                     ^^^^^^^^^^^^^^^^ 
+
+
+</pre>
+</body>

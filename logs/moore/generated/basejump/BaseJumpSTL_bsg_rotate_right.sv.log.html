@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v</a>
+time_elapsed: 0.005s
+ram usage: 9732 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html#l-3" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v:3</a>:14-29:
+   | 
+   |     , input [`BSG_SAFE_CLOG2(width_p)-1:0] rot_i
+   |              ^^^^^^^^^^^^^^^                    
+
+
+error: Expected port, found input instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html#l-3" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v:3</a>:7-12:
+   | 
+   |     , input [`BSG_SAFE_CLOG2(width_p)-1:0] rot_i
+   |       ^^^^^                                     
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html#l-5" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v:5</a>:5-6:
+   | 
+   |     );
+   |     ^ 
+
+
+error: Expected `endmodule`, but found `wire` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v.html#l-7" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_rotate_right.v:7</a>:4-8:
+   | 
+   |    wire [width_p*2-1:0] temp = { 2 { data_i } } &gt;&gt; rot_i;
+   |    ^^^^                                                  
+
+
+</pre>
+</body>

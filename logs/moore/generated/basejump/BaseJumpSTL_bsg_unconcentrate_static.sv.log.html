@@ -1,0 +1,75 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v</a>
+time_elapsed: 0.004s
+ram usage: 9616 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-4" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:4</a>:46-66:
+   | 
+   |                                   , width_lp=`BSG_COUNTONES_SYNTH(pattern_els_p)
+   |                                              ^^^^^^^^^^^^^^^^^^^^               
+
+
+error: Expected [Comma, CloseDelim(Paren)], but found Ident(width_lp(9)) instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-4" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:4</a>:37-45:
+   | 
+   |                                   , width_lp=`BSG_COUNTONES_SYNTH(pattern_els_p)
+   |                                     ^^^^^^^^                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-14" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:14</a>:20-44:
+   | 
+   |      assign o[0] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+   |                    ^^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-19" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:19</a>:32-52:
+   | 
+   |                assign o[j] = i[`BSG_COUNTONES_SYNTH(pattern_els_p[j-1:0])];
+   |                                ^^^^^^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:21</a>:30-54:
+   | 
+   |                assign o[j] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+   |                              ^^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:22</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+error: Expected `endmodule`, but found `end` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-22" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:22</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+</pre>
+</body>

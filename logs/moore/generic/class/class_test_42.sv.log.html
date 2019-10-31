@@ -1,0 +1,54 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 6.15 8.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generic/class
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generic/class/class_test_42.sv.html" target="file-frame">tests/generic/class/class_test_42.sv</a>
+time_elapsed: 0.005s
+ram usage: 9716 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`uvm_object_utils_begin&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_42.sv.html#l-8" target="file-frame">tests/generic/class/class_test_42.sv:8</a>:2-25:
+   | 
+   |  `uvm_object_utils_begin(foobar)
+   |  ^^^^^^^^^^^^^^^^^^^^^^^        
+
+
+error: expected class name, but found ; instead
+  --&gt; <a href="../../../../tests/generic/class/class_test_42.sv.html#l-7" target="file-frame">tests/generic/class/class_test_42.sv:7</a>:27-28:
+   | 
+   | class macros_as_class_item;
+   |                           ^
+
+
+fatal: unknown compiler directive &#39;`uvm_object_utils&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_42.sv.html#l-9" target="file-frame">tests/generic/class/class_test_42.sv:9</a>:2-19:
+   | 
+   |  `uvm_object_utils(blah)
+   |  ^^^^^^^^^^^^^^^^^      
+
+
+fatal: unknown compiler directive &#39;`uvm_object_utils_end&#39;
+  --&gt; <a href="../../../../tests/generic/class/class_test_42.sv.html#l-10" target="file-frame">tests/generic/class/class_test_42.sv:10</a>:2-23:
+   | 
+   |  `uvm_object_utils_end
+   |  ^^^^^^^^^^^^^^^^^^^^^
+
+
+</pre>
+</body>

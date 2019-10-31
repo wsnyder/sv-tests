@@ -1,0 +1,51 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Test unpacked structures members default value support
+should_fail: 0
+tags: 7.2.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/structures/unpacked
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv</a>
+time_elapsed: 0.006s
+ram usage: 9516 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/structures/unpacked/default-value.sv.html#l-19" target="file-frame">tests/chapter-7/structures/unpacked/default-value.sv:19</a>:2-70:
+   | 
+   |     $display(&#34;:assert: ((&#39;%h&#39; == &#39;a&#39;) and (&#39;%h&#39; == &#39;5&#39;))&#34;, p1.hi, p1.lo);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.224.0 () -&gt; ({i4, i4}$ %p1) {
+0:
+    %1 = extf i4$, {i4, i4}$ %p1, 1
+    %2 = const i4 10
+    %3 = const time 0s 1e
+    drv i4$ %1, %2, %3
+    wait %4 for %3
+4:
+    %5 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i4 0
+    %1 = const i4 0
+    %2 = {i4 %0, i4 %1}
+    %p1 = sig {i4, i4} %2
+    inst %top.initial.224.0 () -&gt; ({i4, i4}$ %p1)
+}
+
+</pre>
+</body>

@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Automatic left padding of literal numbers using single-bit value
+should_fail: 0
+tags: 5.7.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-5/5.7.1--integers-underscores.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-underscores.sv</a>
+time_elapsed: 0.005s
+ram usage: 9620 KB
+</pre>
+<pre class="log">
+
+
+fatal: number literal `27` may not directly be followed by letters `_195_000`
+  --&gt; <a href="../../../tests/chapter-5/5.7.1--integers-underscores.sv.html#l-13" target="file-frame">tests/chapter-5/5.7.1--integers-underscores.sv:13</a>:9-11:
+   | 
+   |     a = 27_195_000;              // unsized decimal 27195000
+   |         ^^                                                  
+
+
+</pre>
+</body>

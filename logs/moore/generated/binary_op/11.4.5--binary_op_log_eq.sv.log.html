@@ -1,0 +1,49 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: == operator test
+should_fail: 0
+tags: 11.4.5
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../tests/generated/binary_op/11.4.5--binary_op_log_eq.sv.html" target="file-frame">tests/generated/binary_op/11.4.5--binary_op_log_eq.sv</a>
+time_elapsed: 0.005s
+ram usage: 9600 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.227.0 (i32$ %a, i32$ %b) -&gt; (i32$ %c) {
+0:
+    %1 = const i32 0
+    %a1 = prb i32$ %a
+    %b1 = prb i32$ %b
+    %2 = eq i32 %a1, %b1
+    %3 = inss i32 %1, i1 %2, 0, 1
+    %4 = const time 0s 1e
+    drv i32$ %c, %3, %4
+    wait %5 for %4
+5:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i32 12
+    %a = sig i32 %0
+    %1 = const i32 5
+    %b = sig i32 %1
+    %2 = const i32 0
+    %c = sig i32 %2
+    inst %top.initial.227.0 (i32$ %a, i32$ %b) -&gt; (i32$ %c)
+}
+
+</pre>
+</body>

@@ -1,0 +1,58 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Test basic union support
+should_fail: 0
+tags: 7.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../tests/chapter-7/unions/basic.sv.html" target="file-frame">tests/chapter-7/unions/basic.sv</a>
+time_elapsed: 0.006s
+ram usage: 9716 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../tests/chapter-7/unions/basic.sv.html#l-17" target="file-frame">tests/chapter-7/unions/basic.sv:17</a>:2-41:
+   | 
+   |     $display(&#34;:assert: (%d == 140)&#34;, un.v1);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../tests/chapter-7/unions/basic.sv.html#l-18" target="file-frame">tests/chapter-7/unions/basic.sv:18</a>:2-40:
+   | 
+   |     $display(&#34;:assert: (%d == 12)&#34;, un.v2);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.223.0 () -&gt; ({i8, i4}$ %un) {
+0:
+    %1 = extf i8$, {i8, i4}$ %un, 0
+    %2 = const i8 140
+    %3 = const time 0s 1e
+    drv i8$ %1, %2, %3
+    wait %4 for %3
+4:
+    %5 = const i32 0
+    %6 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i8 0
+    %1 = const i4 0
+    %2 = {i8 %0, i4 %1}
+    %un = sig {i8, i4} %2
+    inst %top.initial.223.0 () -&gt; ({i8, i4}$ %un)
+}
+
+</pre>
+</body>

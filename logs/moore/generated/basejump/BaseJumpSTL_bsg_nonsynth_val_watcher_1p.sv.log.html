@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_test
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v</a>
+time_elapsed: 0.006s
+ram usage: 9684 KB
+</pre>
+<pre class="log">
+
+
+fatal: String literals cannot contain unescaped newlines
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v:15</a>:60-61:
+   | 
+   |                $display(&#34;// %m: %s %x.\n&#34;, string_p, p1_i);
+   |                                                            
+
+
+fatal: String literals cannot contain unescaped newlines
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html#l-17" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v:17</a>:51-52:
+   | 
+   |                $display(&#34;// %m: %s.\n&#34;, string_p);
+   |                                                   
+
+
+error: Expected statement, found system identifier instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html#l-15" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v:15</a>:16-24:
+   | 
+   |                $display(&#34;// %m: %s %x.\n&#34;, string_p, p1_i);
+   |                ^^^^^^^^                                    
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `(`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html#l-18" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v:18</a>:11-14:
+   | 
+   |           end
+   |           ^^^
+
+
+error: Expected `endmodule`, but found `assign` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v.html#l-26" target="file-frame">third_party/cores/basejump_stl/bsg_test/bsg_nonsynth_val_watcher_1p.v:26</a>:4-10:
+   | 
+   |    assign triggered_n = (val_i == trigger_val_p) &amp; (~triggered_r | ~one_time_trigger_p);
+   |    ^^^^^^                                                                               
+
+
+</pre>
+</body>

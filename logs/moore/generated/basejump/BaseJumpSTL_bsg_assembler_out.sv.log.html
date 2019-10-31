@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v</a>
+time_elapsed: 0.006s
+ram usage: 9604 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v:30</a>:22-30:
+   | 
+   |     , input         [`BSG_MAX($clog2(num_in_p)-1,0):0]  in_top_channel_i
+   |                      ^^^^^^^^                                           
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v.html#l-31" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v:31</a>:22-30:
+   | 
+   |     , input         [`BSG_MAX($clog2(num_out_p)-1,0):0] out_top_channel_i
+   |                      ^^^^^^^^                                            
+
+
+error: Expected port, found input instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v.html#l-30" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v:30</a>:7-12:
+   | 
+   |     , input         [`BSG_MAX($clog2(num_in_p)-1,0):0]  in_top_channel_i
+   |       ^^^^^                                                             
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v.html#l-36" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v:36</a>:5-6:
+   | 
+   |     );
+   |     ^ 
+
+
+error: Expected `endmodule`, but found `wire` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v.html#l-38" target="file-frame">third_party/cores/basejump_stl/bsg_comm_link/bsg_assembler_out.v:38</a>:4-8:
+   | 
+   |    wire [num_in_p-1:0]  fifo_valid_vec, fifo_not_full_vec, fifo_deq_vec;
+   |    ^^^^                                                                 
+
+
+</pre>
+</body>

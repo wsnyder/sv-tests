@@ -1,0 +1,2720 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Full swerv core test
+should_fail: 0
+tags: swerv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/include /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/lib /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/design/dmi /home/travis/build/SymbiFlow/sv-tests/third_party/cores/swerv/configs/snapshots/default
+top_module: swerv_wrapper
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/swerv/configs/snapshots/default/common_defines.vh.html" target="file-frame">third_party/cores/swerv/configs/snapshots/default/common_defines.vh</a> <a href="../../../../third_party/cores/swerv/design/include/build.h.html" target="file-frame">third_party/cores/swerv/design/include/build.h</a> <a href="../../../../third_party/cores/swerv/design/include/global.h.html" target="file-frame">third_party/cores/swerv/design/include/global.h</a> <a href="../../../../third_party/cores/swerv/design/include/swerv_types.sv.html" target="file-frame">third_party/cores/swerv/design/include/swerv_types.sv</a> <a href="../../../../third_party/cores/swerv/design/swerv_wrapper.sv.html" target="file-frame">third_party/cores/swerv/design/swerv_wrapper.sv</a> <a href="../../../../third_party/cores/swerv/design/mem.sv.html" target="file-frame">third_party/cores/swerv/design/mem.sv</a> <a href="../../../../third_party/cores/swerv/design/pic_ctrl.sv.html" target="file-frame">third_party/cores/swerv/design/pic_ctrl.sv</a> <a href="../../../../third_party/cores/swerv/design/swerv.sv.html" target="file-frame">third_party/cores/swerv/design/swerv.sv</a> <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_compress_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_ifc_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_ic_mem.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_ic_mem.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv</a> <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv</a> <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/dec/dec_gpr_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/dec/dec_gpr_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/dec/dec_ib_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/dec/dec_ib_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/dec/dec_trigger.sv.html" target="file-frame">third_party/cores/swerv/design/dec/dec_trigger.sv</a> <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html" target="file-frame">third_party/cores/swerv/design/dec/dec.sv</a> <a href="../../../../third_party/cores/swerv/design/exu/exu_alu_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/exu/exu_alu_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/exu/exu_mul_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/exu/exu_mul_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/exu/exu_div_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/exu/exu_div_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html" target="file-frame">third_party/cores/swerv/design/exu/exu.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_clkdomain.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_clkdomain.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv</a> <a href="../../../../third_party/cores/swerv/design/lsu/lsu_trigger.sv.html" target="file-frame">third_party/cores/swerv/design/lsu/lsu_trigger.sv</a> <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv</a> <a href="../../../../third_party/cores/swerv/design/dmi/dmi_wrapper.v.html" target="file-frame">third_party/cores/swerv/design/dmi/dmi_wrapper.v</a> <a href="../../../../third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v.html" target="file-frame">third_party/cores/swerv/design/dmi/dmi_jtag_to_core_sync.v</a> <a href="../../../../third_party/cores/swerv/design/dmi/rvjtag_tap.sv.html" target="file-frame">third_party/cores/swerv/design/dmi/rvjtag_tap.sv</a> <a href="../../../../third_party/cores/swerv/design/lib/beh_lib.sv.html" target="file-frame">third_party/cores/swerv/design/lib/beh_lib.sv</a> <a href="../../../../third_party/cores/swerv/design/lib/mem_lib.sv.html" target="file-frame">third_party/cores/swerv/design/lib/mem_lib.sv</a> <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv</a> <a href="../../../../third_party/cores/swerv/design/lib/axi4_to_ahb.sv.html" target="file-frame">third_party/cores/swerv/design/lib/axi4_to_ahb.sv</a>
+time_elapsed: 0.125s
+ram usage: 9572 KB
+</pre>
+<pre class="log">
+
+warning: ignoring `<a href="../../../../third_party/cores/swerv/design/include/build.h.html" target="file-frame">third_party/cores/swerv/design/include/build.h</a>`
+   = note: Cannot determine language from extension `.h`
+
+warning: ignoring `<a href="../../../../third_party/cores/swerv/design/include/global.h.html" target="file-frame">third_party/cores/swerv/design/include/global.h</a>`
+   = note: Cannot determine language from extension `.h`
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/swerv_types.sv.html#l-58" target="file-frame">third_party/cores/swerv/design/include/swerv_types.sv:58</a>:31-55:
+   | 
+   |                        logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] tag;
+   |                               ^^^^^^^^^^^^^^^^^^^^^^^^          
+
+
+error: Expected at least one member name
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/swerv_types.sv.html#l-58" target="file-frame">third_party/cores/swerv/design/include/swerv_types.sv:58</a>:24-29:
+   | 
+   |                        logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] tag;
+   |                        ^^^^^                                    
+
+
+fatal: Found closing `}` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/swerv_types.sv.html#l-60" target="file-frame">third_party/cores/swerv/design/include/swerv_types.sv:60</a>:24-25:
+   | 
+   |                        } load_cam_pkt_t;
+   |                        ^                
+
+
+error: Expected `endpackage`, but found `typedef` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/swerv_types.sv.html#l-62" target="file-frame">third_party/cores/swerv/design/include/swerv_types.sv:62</a>:1-8:
+   | 
+   | typedef struct packed {
+   | ^^^^^^^                
+
+
+error: Missing ; after header of module &#34;swerv_wrapper&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv_wrapper.sv.html#l-26" target="file-frame">third_party/cores/swerv/design/swerv_wrapper.sv:26</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv_wrapper.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/swerv_wrapper.sv:27</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv_wrapper.sv.html#l-299" target="file-frame">third_party/cores/swerv/design/swerv_wrapper.sv:299</a>:17-34:
+   | 
+   |    input logic [`RV_PIC_TOTAL_INT:1] extintsrc_req,
+   |                 ^^^^^^^^^^^^^^^^^                  
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv_wrapper.sv.html#l-328" target="file-frame">third_party/cores/swerv/design/swerv_wrapper.sv:328</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv_wrapper.sv.html#l-328" target="file-frame">third_party/cores/swerv/design/swerv_wrapper.sv:328</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Missing ; after header of module &#34;mem&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-19" target="file-frame">third_party/cores/swerv/design/mem.sv:19</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-20" target="file-frame">third_party/cores/swerv/design/mem.sv:20</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/mem.sv:31</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]  dccm_wr_addr,
+   |                 ^^^^^^^^^^^^^                    
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-32" target="file-frame">third_party/cores/swerv/design/mem.sv:32</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]  dccm_rd_addr_lo,
+   |                 ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-33" target="file-frame">third_party/cores/swerv/design/mem.sv:33</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]  dccm_rd_addr_hi,
+   |                 ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-34" target="file-frame">third_party/cores/swerv/design/mem.sv:34</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_wr_data,
+   |                 ^^^^^^^^^^^^^^^^^^^^                    
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-37" target="file-frame">third_party/cores/swerv/design/mem.sv:37</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_rd_data_lo,
+   |                  ^^^^^^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-38" target="file-frame">third_party/cores/swerv/design/mem.sv:38</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_rd_data_hi,
+   |                  ^^^^^^^^^^^^^^^^^^^^                       
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-92" target="file-frame">third_party/cores/swerv/design/mem.sv:92</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/mem.sv.html#l-92" target="file-frame">third_party/cores/swerv/design/mem.sv:92</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT_PLUS1&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/pic_ctrl.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/pic_ctrl.sv:31</a>:36-59:
+   | 
+   |                      input  logic [`RV_PIC_TOTAL_INT_PLUS1-1:0]   extintsrc_req,        // Interrupt requests
+   |                                    ^^^^^^^^^^^^^^^^^^^^^^^                                                   
+
+
+error: Expected port, found input instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/pic_ctrl.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/pic_ctrl.sv:31</a>:22-27:
+   | 
+   |                      input  logic [`RV_PIC_TOTAL_INT_PLUS1-1:0]   extintsrc_req,        // Interrupt requests
+   |                      ^^^^^                                                                                   
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/pic_ctrl.sv.html#l-47" target="file-frame">third_party/cores/swerv/design/pic_ctrl.sv:47</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `localparam` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:1-11:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   | ^^^^^^^^^^                                            
+
+
+error: Missing ; after header of module &#34;swerv&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-24" target="file-frame">third_party/cores/swerv/design/swerv.sv:24</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-25" target="file-frame">third_party/cores/swerv/design/swerv.sv:25</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-71" target="file-frame">third_party/cores/swerv/design/swerv.sv:71</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]          dccm_wr_addr,
+   |                  ^^^^^^^^^^^^^                            
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-72" target="file-frame">third_party/cores/swerv/design/swerv.sv:72</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]          dccm_rd_addr_lo,
+   |                  ^^^^^^^^^^^^^                               
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-73" target="file-frame">third_party/cores/swerv/design/swerv.sv:73</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]          dccm_rd_addr_hi,
+   |                  ^^^^^^^^^^^^^                               
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-74" target="file-frame">third_party/cores/swerv/design/swerv.sv:74</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0]   dccm_wr_data,
+   |                  ^^^^^^^^^^^^^^^^^^^^                     
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-76" target="file-frame">third_party/cores/swerv/design/swerv.sv:76</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]    dccm_rd_data_lo,
+   |                 ^^^^^^^^^^^^^^^^^^^^                         
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-77" target="file-frame">third_party/cores/swerv/design/swerv.sv:77</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]    dccm_rd_data_hi,
+   |                 ^^^^^^^^^^^^^^^^^^^^                         
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-380" target="file-frame">third_party/cores/swerv/design/swerv.sv:380</a>:17-34:
+   | 
+   |    input logic [`RV_PIC_TOTAL_INT:1]           extintsrc_req,
+   |                 ^^^^^^^^^^^^^^^^^                            
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-383" target="file-frame">third_party/cores/swerv/design/swerv.sv:383</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/swerv.sv.html#l-383" target="file-frame">third_party/cores/swerv/design/swerv.sv:383</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html#l-35" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv:35</a>:18-33:
+   | 
+   |    input  logic [`RV_DMA_BUS_TAG-1:0]   dma_axi_awid,
+   |                  ^^^^^^^^^^^^^^^                     
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html#l-51" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv:51</a>:18-33:
+   | 
+   |    output logic [`RV_DMA_BUS_TAG-1:0]   dma_axi_bid,
+   |                  ^^^^^^^^^^^^^^^                    
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html#l-56" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv:56</a>:18-33:
+   | 
+   |    input  logic [`RV_DMA_BUS_TAG-1:0]   dma_axi_arid,
+   |                  ^^^^^^^^^^^^^^^                     
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html#l-65" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv:65</a>:18-33:
+   | 
+   |    output logic [`RV_DMA_BUS_TAG-1:0]   dma_axi_rid,
+   |                  ^^^^^^^^^^^^^^^                    
+
+
+error: Expected port, found input instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html#l-35" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv:35</a>:4-9:
+   | 
+   |    input  logic [`RV_DMA_BUS_TAG-1:0]   dma_axi_awid,
+   |    ^^^^^                                             
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dma_ctrl.sv.html#l-109" target="file-frame">third_party/cores/swerv/design/dma_ctrl.sv:109</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `localparam` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:1-11:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   | ^^^^^^^^^^                                            
+
+
+error: Missing ; after header of module &#34;ifu_aln_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv.html#l-22" target="file-frame">third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:22</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv.html#l-23" target="file-frame">third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:23</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv.html#l-34" target="file-frame">third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:34</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE]  ifu_bp_fghr_f2,   // fetch GHR
+   |                 ^^^^^^^^^^^^^^^^^                                 
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv.html#l-110" target="file-frame">third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:110</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv.html#l-110" target="file-frame">third_party/cores/swerv/design/ifu/ifu_aln_ctl.sv:110</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;ifu_bp_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html#l-28" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:28</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html#l-29" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:29</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html#l-68" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:68</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE] exu_mp_eghr, // execute ghr (for patching fghr)
+   |                 ^^^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html#l-77" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:77</a>:18-35:
+   | 
+   |    output logic [`RV_BHT_GHR_RANGE] ifu_bp_fghr_f2, // fetch ghr
+   |                  ^^^^^^^^^^^^^^^^^                              
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html#l-92" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:92</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv.html#l-92" target="file-frame">third_party/cores/swerv/design/ifu/ifu_bp_ctl.sv:92</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT_PLUS1&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:31-54:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   |                               ^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+error: Expected at least one parameter name
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:29-30:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   |                             ^                         
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-18" target="file-frame">third_party/cores/swerv/design/include/global.h:18</a>:31-44:
+   | 
+   | localparam DCCM_BITS        = `RV_DCCM_BITS;
+   |                               ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-19" target="file-frame">third_party/cores/swerv/design/include/global.h:19</a>:31-49:
+   | 
+   | localparam DCCM_BANK_BITS   = `RV_DCCM_BANK_BITS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-20" target="file-frame">third_party/cores/swerv/design/include/global.h:20</a>:31-49:
+   | 
+   | localparam DCCM_NUM_BANKS   = `RV_DCCM_NUM_BANKS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-21" target="file-frame">third_party/cores/swerv/design/include/global.h:21</a>:31-50:
+   | 
+   | localparam DCCM_DATA_WIDTH  = `RV_DCCM_DATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-22" target="file-frame">third_party/cores/swerv/design/include/global.h:22</a>:31-51:
+   | 
+   | localparam DCCM_FDATA_WIDTH = `RV_DCCM_FDATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-23" target="file-frame">third_party/cores/swerv/design/include/global.h:23</a>:31-50:
+   | 
+   | localparam DCCM_BYTE_WIDTH  = `RV_DCCM_BYTE_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-24" target="file-frame">third_party/cores/swerv/design/include/global.h:24</a>:31-49:
+   | 
+   | localparam DCCM_ECC_WIDTH   = `RV_DCCM_ECC_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-26" target="file-frame">third_party/cores/swerv/design/include/global.h:26</a>:31-49:
+   | 
+   | localparam LSU_RDBUF_DEPTH  = `RV_LSU_NUM_NBLOAD;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-27" target="file-frame">third_party/cores/swerv/design/include/global.h:27</a>:31-48:
+   | 
+   | localparam DMA_BUF_DEPTH    = `RV_DMA_BUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_STBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-28" target="file-frame">third_party/cores/swerv/design/include/global.h:28</a>:31-50:
+   | 
+   | localparam LSU_STBUF_DEPTH  = `RV_LSU_STBUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-29" target="file-frame">third_party/cores/swerv/design/include/global.h:29</a>:31-46:
+   | 
+   | localparam LSU_SB_BITS      = `RV_LSU_SB_BITS;
+   |                               ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DEC_INSTBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-31" target="file-frame">third_party/cores/swerv/design/include/global.h:31</a>:32-53:
+   | 
+   | localparam DEC_INSTBUF_DEPTH = `RV_DEC_INSTBUF_DEPTH;
+   |                                ^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-33" target="file-frame">third_party/cores/swerv/design/include/global.h:33</a>:32-45:
+   | 
+   | localparam ICCM_SIZE         = `RV_ICCM_SIZE;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-34" target="file-frame">third_party/cores/swerv/design/include/global.h:34</a>:32-45:
+   | 
+   | localparam ICCM_BITS         = `RV_ICCM_BITS;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-35" target="file-frame">third_party/cores/swerv/design/include/global.h:35</a>:32-50:
+   | 
+   | localparam ICCM_NUM_BANKS    = `RV_ICCM_NUM_BANKS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-36" target="file-frame">third_party/cores/swerv/design/include/global.h:36</a>:32-50:
+   | 
+   | localparam ICCM_BANK_BITS    = `RV_ICCM_BANK_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_INDEX_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-37" target="file-frame">third_party/cores/swerv/design/include/global.h:37</a>:32-51:
+   | 
+   | localparam ICCM_INDEX_BITS   = `RV_ICCM_INDEX_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-38" target="file-frame">third_party/cores/swerv/design/include/global.h:38</a>:37-55:
+   | 
+   | localparam ICCM_BANK_HI      = 4 + (`RV_ICCM_BANK_BITS/4);
+   |                                     ^^^^^^^^^^^^^^^^^^    
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_HIGH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-40" target="file-frame">third_party/cores/swerv/design/include/global.h:40</a>:31-50:
+   | 
+   | localparam ICACHE_TAG_HIGH  = `RV_ICACHE_TAG_HIGH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_LOW&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-41" target="file-frame">third_party/cores/swerv/design/include/global.h:41</a>:31-49:
+   | 
+   | localparam ICACHE_TAG_LOW   = `RV_ICACHE_TAG_LOW; 
+   |                               ^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_IC_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-42" target="file-frame">third_party/cores/swerv/design/include/global.h:42</a>:31-50:
+   | 
+   | localparam ICACHE_IC_DEPTH  = `RV_ICACHE_IC_DEPTH; 
+   |                               ^^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-43" target="file-frame">third_party/cores/swerv/design/include/global.h:43</a>:31-51:
+   | 
+   | localparam ICACHE_TAG_DEPTH = `RV_ICACHE_TAG_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-45" target="file-frame">third_party/cores/swerv/design/include/global.h:45</a>:30-45:
+   | 
+   | localparam LSU_BUS_TAG     = `RV_LSU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-46" target="file-frame">third_party/cores/swerv/design/include/global.h:46</a>:30-45:
+   | 
+   | localparam DMA_BUS_TAG     = `RV_DMA_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-47" target="file-frame">third_party/cores/swerv/design/include/global.h:47</a>:30-44:
+   | 
+   | localparam SB_BUS_TAG      = `RV_SB_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-49" target="file-frame">third_party/cores/swerv/design/include/global.h:49</a>:30-45:
+   | 
+   | localparam IFU_BUS_TAG     = `RV_IFU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_DATA_CELL&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_ic_mem.sv.html#l-241" target="file-frame">third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:241</a>:10-30:
+   | 
+   |          `RV_ICACHE_DATA_CELL  ic_bank_sb_way_data (                                 
+   |          ^^^^^^^^^^^^^^^^^^^^                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_CELL&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_ic_mem.sv.html#l-517" target="file-frame">third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:517</a>:9-28:
+   | 
+   |         `RV_ICACHE_TAG_CELL  ic_way_tag (
+   |         ^^^^^^^^^^^^^^^^^^^              
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_ic_mem.sv.html#l-559" target="file-frame">third_party/cores/swerv/design/ifu/ifu_ic_mem.sv:559</a>:1-2:
+   | 
+   | 
+   | 
+
+
+error: Missing ; after header of module &#34;ifu_mem_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-25" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:25</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-26" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:26</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-65" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:65</a>:18-33:
+   | 
+   |    output logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_awid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-85" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:85</a>:18-33:
+   | 
+   |    input  logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_bid,
+   |                  ^^^^^^^^^^^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-90" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:90</a>:18-33:
+   | 
+   |    output logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_arid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-103" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:103</a>:18-33:
+   | 
+   |    input  logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_rid,
+   |                  ^^^^^^^^^^^^^^^                      
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-189" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:189</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv.html#l-189" target="file-frame">third_party/cores/swerv/design/ifu/ifu_mem_ctl.sv:189</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;ifu_iccm_mem&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv.html#l-23" target="file-frame">third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:23</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv.html#l-25" target="file-frame">third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:25</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv.html#l-32" target="file-frame">third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:32</a>:17-30:
+   | 
+   |    input logic [`RV_ICCM_BITS-1:2]   iccm_rw_addr,  
+   |                 ^^^^^^^^^^^^^                       
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv.html#l-41" target="file-frame">third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:41</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv.html#l-41" target="file-frame">third_party/cores/swerv/design/ifu/ifu_iccm_mem.sv:41</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Missing ; after header of module &#34;ifu&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-23" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:23</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-24" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:24</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-59" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:59</a>:18-33:
+   | 
+   |    output logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_awid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-79" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:79</a>:18-33:
+   | 
+   |    input  logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_bid,
+   |                  ^^^^^^^^^^^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-84" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:84</a>:18-33:
+   | 
+   |    output logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_arid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-97" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:97</a>:18-33:
+   | 
+   |    input  logic [`RV_IFU_BUS_TAG-1:0]     ifu_axi_rid,
+   |                  ^^^^^^^^^^^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-207" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:207</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE] exu_mp_eghr, // execute ghr
+   |                 ^^^^^^^^^^^^^^^^^                             
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-235" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:235</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/ifu/ifu.sv.html#l-235" target="file-frame">third_party/cores/swerv/design/ifu/ifu.sv:235</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;dec_decode_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-18" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:18</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-19" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:19</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:31</a>:17-41:
+   | 
+   |    input logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_tag_dc3,       // -&gt; corresponding tag                          
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-33" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:33</a>:17-41:
+   | 
+   |    input logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_inv_tag_dc5,   // -&gt; corresponding tag                          
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-36" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:36</a>:17-41:
+   | 
+   |    input logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_data_tag,      // -&gt; corresponding tag                           
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                         
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-280" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:280</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_decode_ctl.sv.html#l-280" target="file-frame">third_party/cores/swerv/design/dec/dec_decode_ctl.sv:280</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;dec_ib_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_ib_ctl.sv.html#l-17" target="file-frame">third_party/cores/swerv/design/dec/dec_ib_ctl.sv:17</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_ib_ctl.sv.html#l-18" target="file-frame">third_party/cores/swerv/design/dec/dec_ib_ctl.sv:18</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT_PLUS1&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:31-54:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   |                               ^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-18" target="file-frame">third_party/cores/swerv/design/include/global.h:18</a>:31-44:
+   | 
+   | localparam DCCM_BITS        = `RV_DCCM_BITS;
+   |                               ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-19" target="file-frame">third_party/cores/swerv/design/include/global.h:19</a>:31-49:
+   | 
+   | localparam DCCM_BANK_BITS   = `RV_DCCM_BANK_BITS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-20" target="file-frame">third_party/cores/swerv/design/include/global.h:20</a>:31-49:
+   | 
+   | localparam DCCM_NUM_BANKS   = `RV_DCCM_NUM_BANKS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-21" target="file-frame">third_party/cores/swerv/design/include/global.h:21</a>:31-50:
+   | 
+   | localparam DCCM_DATA_WIDTH  = `RV_DCCM_DATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-22" target="file-frame">third_party/cores/swerv/design/include/global.h:22</a>:31-51:
+   | 
+   | localparam DCCM_FDATA_WIDTH = `RV_DCCM_FDATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-23" target="file-frame">third_party/cores/swerv/design/include/global.h:23</a>:31-50:
+   | 
+   | localparam DCCM_BYTE_WIDTH  = `RV_DCCM_BYTE_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-24" target="file-frame">third_party/cores/swerv/design/include/global.h:24</a>:31-49:
+   | 
+   | localparam DCCM_ECC_WIDTH   = `RV_DCCM_ECC_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-26" target="file-frame">third_party/cores/swerv/design/include/global.h:26</a>:31-49:
+   | 
+   | localparam LSU_RDBUF_DEPTH  = `RV_LSU_NUM_NBLOAD;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-27" target="file-frame">third_party/cores/swerv/design/include/global.h:27</a>:31-48:
+   | 
+   | localparam DMA_BUF_DEPTH    = `RV_DMA_BUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_STBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-28" target="file-frame">third_party/cores/swerv/design/include/global.h:28</a>:31-50:
+   | 
+   | localparam LSU_STBUF_DEPTH  = `RV_LSU_STBUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-29" target="file-frame">third_party/cores/swerv/design/include/global.h:29</a>:31-46:
+   | 
+   | localparam LSU_SB_BITS      = `RV_LSU_SB_BITS;
+   |                               ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DEC_INSTBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-31" target="file-frame">third_party/cores/swerv/design/include/global.h:31</a>:32-53:
+   | 
+   | localparam DEC_INSTBUF_DEPTH = `RV_DEC_INSTBUF_DEPTH;
+   |                                ^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-33" target="file-frame">third_party/cores/swerv/design/include/global.h:33</a>:32-45:
+   | 
+   | localparam ICCM_SIZE         = `RV_ICCM_SIZE;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-34" target="file-frame">third_party/cores/swerv/design/include/global.h:34</a>:32-45:
+   | 
+   | localparam ICCM_BITS         = `RV_ICCM_BITS;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-35" target="file-frame">third_party/cores/swerv/design/include/global.h:35</a>:32-50:
+   | 
+   | localparam ICCM_NUM_BANKS    = `RV_ICCM_NUM_BANKS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-36" target="file-frame">third_party/cores/swerv/design/include/global.h:36</a>:32-50:
+   | 
+   | localparam ICCM_BANK_BITS    = `RV_ICCM_BANK_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_INDEX_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-37" target="file-frame">third_party/cores/swerv/design/include/global.h:37</a>:32-51:
+   | 
+   | localparam ICCM_INDEX_BITS   = `RV_ICCM_INDEX_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-38" target="file-frame">third_party/cores/swerv/design/include/global.h:38</a>:37-55:
+   | 
+   | localparam ICCM_BANK_HI      = 4 + (`RV_ICCM_BANK_BITS/4);
+   |                                     ^^^^^^^^^^^^^^^^^^    
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_HIGH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-40" target="file-frame">third_party/cores/swerv/design/include/global.h:40</a>:31-50:
+   | 
+   | localparam ICACHE_TAG_HIGH  = `RV_ICACHE_TAG_HIGH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_LOW&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-41" target="file-frame">third_party/cores/swerv/design/include/global.h:41</a>:31-49:
+   | 
+   | localparam ICACHE_TAG_LOW   = `RV_ICACHE_TAG_LOW; 
+   |                               ^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_IC_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-42" target="file-frame">third_party/cores/swerv/design/include/global.h:42</a>:31-50:
+   | 
+   | localparam ICACHE_IC_DEPTH  = `RV_ICACHE_IC_DEPTH; 
+   |                               ^^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-43" target="file-frame">third_party/cores/swerv/design/include/global.h:43</a>:31-51:
+   | 
+   | localparam ICACHE_TAG_DEPTH = `RV_ICACHE_TAG_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-45" target="file-frame">third_party/cores/swerv/design/include/global.h:45</a>:30-45:
+   | 
+   | localparam LSU_BUS_TAG     = `RV_LSU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-46" target="file-frame">third_party/cores/swerv/design/include/global.h:46</a>:30-45:
+   | 
+   | localparam DMA_BUS_TAG     = `RV_DMA_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-47" target="file-frame">third_party/cores/swerv/design/include/global.h:47</a>:30-44:
+   | 
+   | localparam SB_BUS_TAG      = `RV_SB_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-49" target="file-frame">third_party/cores/swerv/design/include/global.h:49</a>:30-45:
+   | 
+   | localparam IFU_BUS_TAG     = `RV_IFU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_ib_ctl.sv.html#l-463" target="file-frame">third_party/cores/swerv/design/dec/dec_ib_ctl.sv:463</a>:10-11:
+   | 
+   | endmodule
+   |          
+
+
+error: Missing ; after header of module &#34;dec_tlu_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:27</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-28" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:28</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_HI&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-114" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:114</a>:17-32:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i0_br_index_e4, // index
+   |                 ^^^^^^^^^^^^^^^                                              
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_LO&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-114" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:114</a>:33-48:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i0_br_index_e4, // index
+   |                                 ^^^^^^^^^^^^^^^                              
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-122" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:122</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE]  exu_i0_br_fghr_e4, // FGHR when predicted 
+   |                 ^^^^^^^^^^^^^^^^^                                             
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_HI&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-125" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:125</a>:17-32:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i1_br_index_e4, // index
+   |                 ^^^^^^^^^^^^^^^                                              
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_LO&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-125" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:125</a>:33-48:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i1_br_index_e4, // index
+   |                                 ^^^^^^^^^^^^^^^                              
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-133" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:133</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE]  exu_i1_br_fghr_e4, // FGHR when predicted
+   |                 ^^^^^^^^^^^^^^^^^                                            
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-251" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:251</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_tlu_ctl.sv.html#l-251" target="file-frame">third_party/cores/swerv/design/dec/dec_tlu_ctl.sv:251</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;dec_trigger&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_trigger.sv.html#l-26" target="file-frame">third_party/cores/swerv/design/dec/dec_trigger.sv:26</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec_trigger.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/dec/dec_trigger.sv:27</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+error: Missing ; after header of module &#34;dec&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:31</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-32" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:32</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-75" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:75</a>:17-41:
+   | 
+   |    input logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0]  lsu_nonblock_load_tag_dc3,        // -&gt; corresponding tag                                
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-77" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:77</a>:17-41:
+   | 
+   |    input logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0]  lsu_nonblock_load_inv_tag_dc5,    // -&gt; corresponding tag                                
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-80" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:80</a>:17-41:
+   | 
+   |    input logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0]  lsu_nonblock_load_data_tag,       // -&gt; corresponding tag                           
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_HI&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-223" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:223</a>:17-32:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i0_br_index_e4, // index
+   |                 ^^^^^^^^^^^^^^^                                              
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_LO&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-223" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:223</a>:33-48:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i0_br_index_e4, // index
+   |                                 ^^^^^^^^^^^^^^^                              
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-231" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:231</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE]  exu_i0_br_fghr_e4,               // FGHR when predicted 
+   |                 ^^^^^^^^^^^^^^^^^                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_HI&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-234" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:234</a>:17-32:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i1_br_index_e4, // index
+   |                 ^^^^^^^^^^^^^^^                                              
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_LO&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-234" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:234</a>:33-48:
+   | 
+   |    input logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i1_br_index_e4, // index
+   |                                 ^^^^^^^^^^^^^^^                              
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-242" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:242</a>:17-34:
+   | 
+   |    input logic [`RV_BHT_GHR_RANGE]  exu_i1_br_fghr_e4,               // FGHR when predicted
+   |                 ^^^^^^^^^^^^^^^^^                                                          
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-397" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:397</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dec/dec.sv.html#l-397" target="file-frame">third_party/cores/swerv/design/dec/dec.sv:397</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;exu_alu_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu_alu_ctl.sv.html#l-18" target="file-frame">third_party/cores/swerv/design/exu/exu_alu_ctl.sv:18</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu_alu_ctl.sv.html#l-19" target="file-frame">third_party/cores/swerv/design/exu/exu_alu_ctl.sv:19</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+error: Missing ; after header of module &#34;exu_mul_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu_mul_ctl.sv.html#l-18" target="file-frame">third_party/cores/swerv/design/exu/exu_mul_ctl.sv:18</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu_mul_ctl.sv.html#l-19" target="file-frame">third_party/cores/swerv/design/exu/exu_mul_ctl.sv:19</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+error: Missing ; after header of module &#34;exu_div_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu_div_ctl.sv.html#l-18" target="file-frame">third_party/cores/swerv/design/exu/exu_div_ctl.sv:18</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu_div_ctl.sv.html#l-19" target="file-frame">third_party/cores/swerv/design/exu/exu_div_ctl.sv:19</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+error: Missing ; after header of module &#34;exu&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-18" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:18</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-19" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:19</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-161" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:161</a>:18-35:
+   | 
+   |    output logic [`RV_BHT_GHR_RANGE]  exu_mp_eghr,                      // Mispredict global history
+   |                  ^^^^^^^^^^^^^^^^^                                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_HI&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-167" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:167</a>:18-33:
+   | 
+   |    output logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i0_br_index_e4,  // to DEC  I0 branch index
+   |                  ^^^^^^^^^^^^^^^                                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_LO&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-167" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:167</a>:34-49:
+   | 
+   |    output logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i0_br_index_e4,  // to DEC  I0 branch index
+   |                                  ^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-176" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:176</a>:18-35:
+   | 
+   |    output logic [`RV_BHT_GHR_RANGE]  exu_i0_br_fghr_e4,                // to DEC  I0 branch fghr
+   |                  ^^^^^^^^^^^^^^^^^                                                              
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_HI&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-184" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:184</a>:18-33:
+   | 
+   |    output logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i1_br_index_e4,  // to DEC  I1 branch index
+   |                  ^^^^^^^^^^^^^^^                                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_BTB_ADDR_LO&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-184" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:184</a>:34-49:
+   | 
+   |    output logic [`RV_BTB_ADDR_HI:`RV_BTB_ADDR_LO] exu_i1_br_index_e4,  // to DEC  I1 branch index
+   |                                  ^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_BHT_GHR_RANGE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-193" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:193</a>:18-35:
+   | 
+   |    output logic [`RV_BHT_GHR_RANGE]  exu_i1_br_fghr_e4,                // to DEC  I1 branch fghr
+   |                  ^^^^^^^^^^^^^^^^^                                                              
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-208" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:208</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/exu/exu.sv.html#l-208" target="file-frame">third_party/cores/swerv/design/exu/exu.sv:208</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;lsu&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-29" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:29</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-30" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:30</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-75" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:75</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0]  lsu_nonblock_load_tag_dc3,      // the tag of the external non block load
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-77" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:77</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0]  lsu_nonblock_load_inv_tag_dc5,  // tag of the enrty which needs to be invalidated
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-80" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:80</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0]  lsu_nonblock_load_data_tag,     // the tag of the non block load sending the data/error                                             
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-96" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:96</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]        dccm_wr_addr,    // DCCM write address (write can happen to one bank only)
+   |                  ^^^^^^^^^^^^^                                                                                       
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-97" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:97</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]        dccm_rd_addr_lo, // DCCM read address low bank
+   |                  ^^^^^^^^^^^^^                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-98" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:98</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]        dccm_rd_addr_hi, // DCCM read address hi bank (hi and low same if aligned read)
+   |                  ^^^^^^^^^^^^^                                                                                            
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-99" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:99</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0] dccm_wr_data,    // DCCM write data (this is always aligned)
+   |                  ^^^^^^^^^^^^^^^^^^^^                                                                  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-101" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:101</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_rd_data_lo, // DCCM read data low bank
+   |                 ^^^^^^^^^^^^^^^^^^^^                                                  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-102" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:102</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_rd_data_hi, // DCCM read data hi bank
+   |                 ^^^^^^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-115" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:115</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_awid,
+   |                  ^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-135" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:135</a>:18-33:
+   | 
+   |    input  logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_bid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-140" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:140</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_arid,
+   |                  ^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-153" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:153</a>:18-33:
+   | 
+   |    input  logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_rid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-178" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:178</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu.sv.html#l-178" target="file-frame">third_party/cores/swerv/design/lsu/lsu.sv:178</a>:4-5:
+   | 
+   |    );
+   |    ^ 
+
+
+error: Missing ; after header of module &#34;lsu_clkdomain&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_clkdomain.sv.html#l-28" target="file-frame">third_party/cores/swerv/design/lsu/lsu_clkdomain.sv:28</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_clkdomain.sv.html#l-29" target="file-frame">third_party/cores/swerv/design/lsu/lsu_clkdomain.sv:29</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+error: Missing ; after header of module &#34;lsu_addrcheck&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-26" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:26</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:27</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT_PLUS1&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:31-54:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   |                               ^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-18" target="file-frame">third_party/cores/swerv/design/include/global.h:18</a>:31-44:
+   | 
+   | localparam DCCM_BITS        = `RV_DCCM_BITS;
+   |                               ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-19" target="file-frame">third_party/cores/swerv/design/include/global.h:19</a>:31-49:
+   | 
+   | localparam DCCM_BANK_BITS   = `RV_DCCM_BANK_BITS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-20" target="file-frame">third_party/cores/swerv/design/include/global.h:20</a>:31-49:
+   | 
+   | localparam DCCM_NUM_BANKS   = `RV_DCCM_NUM_BANKS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-21" target="file-frame">third_party/cores/swerv/design/include/global.h:21</a>:31-50:
+   | 
+   | localparam DCCM_DATA_WIDTH  = `RV_DCCM_DATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-22" target="file-frame">third_party/cores/swerv/design/include/global.h:22</a>:31-51:
+   | 
+   | localparam DCCM_FDATA_WIDTH = `RV_DCCM_FDATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-23" target="file-frame">third_party/cores/swerv/design/include/global.h:23</a>:31-50:
+   | 
+   | localparam DCCM_BYTE_WIDTH  = `RV_DCCM_BYTE_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-24" target="file-frame">third_party/cores/swerv/design/include/global.h:24</a>:31-49:
+   | 
+   | localparam DCCM_ECC_WIDTH   = `RV_DCCM_ECC_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-26" target="file-frame">third_party/cores/swerv/design/include/global.h:26</a>:31-49:
+   | 
+   | localparam LSU_RDBUF_DEPTH  = `RV_LSU_NUM_NBLOAD;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-27" target="file-frame">third_party/cores/swerv/design/include/global.h:27</a>:31-48:
+   | 
+   | localparam DMA_BUF_DEPTH    = `RV_DMA_BUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_STBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-28" target="file-frame">third_party/cores/swerv/design/include/global.h:28</a>:31-50:
+   | 
+   | localparam LSU_STBUF_DEPTH  = `RV_LSU_STBUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-29" target="file-frame">third_party/cores/swerv/design/include/global.h:29</a>:31-46:
+   | 
+   | localparam LSU_SB_BITS      = `RV_LSU_SB_BITS;
+   |                               ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DEC_INSTBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-31" target="file-frame">third_party/cores/swerv/design/include/global.h:31</a>:32-53:
+   | 
+   | localparam DEC_INSTBUF_DEPTH = `RV_DEC_INSTBUF_DEPTH;
+   |                                ^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-33" target="file-frame">third_party/cores/swerv/design/include/global.h:33</a>:32-45:
+   | 
+   | localparam ICCM_SIZE         = `RV_ICCM_SIZE;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-34" target="file-frame">third_party/cores/swerv/design/include/global.h:34</a>:32-45:
+   | 
+   | localparam ICCM_BITS         = `RV_ICCM_BITS;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-35" target="file-frame">third_party/cores/swerv/design/include/global.h:35</a>:32-50:
+   | 
+   | localparam ICCM_NUM_BANKS    = `RV_ICCM_NUM_BANKS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-36" target="file-frame">third_party/cores/swerv/design/include/global.h:36</a>:32-50:
+   | 
+   | localparam ICCM_BANK_BITS    = `RV_ICCM_BANK_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_INDEX_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-37" target="file-frame">third_party/cores/swerv/design/include/global.h:37</a>:32-51:
+   | 
+   | localparam ICCM_INDEX_BITS   = `RV_ICCM_INDEX_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-38" target="file-frame">third_party/cores/swerv/design/include/global.h:38</a>:37-55:
+   | 
+   | localparam ICCM_BANK_HI      = 4 + (`RV_ICCM_BANK_BITS/4);
+   |                                     ^^^^^^^^^^^^^^^^^^    
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_HIGH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-40" target="file-frame">third_party/cores/swerv/design/include/global.h:40</a>:31-50:
+   | 
+   | localparam ICACHE_TAG_HIGH  = `RV_ICACHE_TAG_HIGH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_LOW&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-41" target="file-frame">third_party/cores/swerv/design/include/global.h:41</a>:31-49:
+   | 
+   | localparam ICACHE_TAG_LOW   = `RV_ICACHE_TAG_LOW; 
+   |                               ^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_IC_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-42" target="file-frame">third_party/cores/swerv/design/include/global.h:42</a>:31-50:
+   | 
+   | localparam ICACHE_IC_DEPTH  = `RV_ICACHE_IC_DEPTH; 
+   |                               ^^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-43" target="file-frame">third_party/cores/swerv/design/include/global.h:43</a>:31-51:
+   | 
+   | localparam ICACHE_TAG_DEPTH = `RV_ICACHE_TAG_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-45" target="file-frame">third_party/cores/swerv/design/include/global.h:45</a>:30-45:
+   | 
+   | localparam LSU_BUS_TAG     = `RV_LSU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-46" target="file-frame">third_party/cores/swerv/design/include/global.h:46</a>:30-45:
+   | 
+   | localparam DMA_BUS_TAG     = `RV_DMA_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-47" target="file-frame">third_party/cores/swerv/design/include/global.h:47</a>:30-44:
+   | 
+   | localparam SB_BUS_TAG      = `RV_SB_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-49" target="file-frame">third_party/cores/swerv/design/include/global.h:49</a>:30-45:
+   | 
+   | localparam IFU_BUS_TAG     = `RV_IFU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_REGION&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-52" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:52</a>:29-44:
+   | 
+   |    localparam DCCM_REGION = `RV_DCCM_REGION;
+   |                             ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_REGION&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-53" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:53</a>:29-43:
+   | 
+   |    localparam PIC_REGION  = `RV_PIC_REGION;
+   |                             ^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_REGION&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-54" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:54</a>:29-44:
+   | 
+   |    localparam ICCM_REGION = `RV_ICCM_REGION;
+   |                             ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_SADR&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-79" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:79</a>:32-45:
+   | 
+   |       rvrangecheck #(.CCM_SADR(`RV_DCCM_SADR),
+   |                                ^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-80" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:80</a>:32-45:
+   | 
+   |                      .CCM_SIZE(`RV_DCCM_SIZE)) start_addr_dccm_rangecheck (
+   |                                ^^^^^^^^^^^^^                               
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_SADR&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-87" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:87</a>:32-45:
+   | 
+   |       rvrangecheck #(.CCM_SADR(`RV_DCCM_SADR),
+   |                                ^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-88" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:88</a>:32-45:
+   | 
+   |                      .CCM_SIZE(`RV_DCCM_SIZE)) end_addr_dccm_rangecheck (
+   |                                ^^^^^^^^^^^^^                             
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `(`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-93" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:93</a>:4-7:
+   | 
+   |    end else begin: Gen_dccm_disable // block: Gen_dccm_enable
+   |    ^^^                                                       
+
+
+error: Expected `endmodule`, but found `end` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_addrcheck.sv.html#l-93" target="file-frame">third_party/cores/swerv/design/lsu/lsu_addrcheck.sv:93</a>:4-7:
+   | 
+   |    end else begin: Gen_dccm_disable // block: Gen_dccm_enable
+   |    ^^^                                                       
+
+
+error: Missing ; after header of module &#34;lsu_lsc_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv.html#l-29" target="file-frame">third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:29</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv.html#l-30" target="file-frame">third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:30</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_TOTAL_INT_PLUS1&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:31-54:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   |                               ^^^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-18" target="file-frame">third_party/cores/swerv/design/include/global.h:18</a>:31-44:
+   | 
+   | localparam DCCM_BITS        = `RV_DCCM_BITS;
+   |                               ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-19" target="file-frame">third_party/cores/swerv/design/include/global.h:19</a>:31-49:
+   | 
+   | localparam DCCM_BANK_BITS   = `RV_DCCM_BANK_BITS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-20" target="file-frame">third_party/cores/swerv/design/include/global.h:20</a>:31-49:
+   | 
+   | localparam DCCM_NUM_BANKS   = `RV_DCCM_NUM_BANKS;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-21" target="file-frame">third_party/cores/swerv/design/include/global.h:21</a>:31-50:
+   | 
+   | localparam DCCM_DATA_WIDTH  = `RV_DCCM_DATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-22" target="file-frame">third_party/cores/swerv/design/include/global.h:22</a>:31-51:
+   | 
+   | localparam DCCM_FDATA_WIDTH = `RV_DCCM_FDATA_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-23" target="file-frame">third_party/cores/swerv/design/include/global.h:23</a>:31-50:
+   | 
+   | localparam DCCM_BYTE_WIDTH  = `RV_DCCM_BYTE_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-24" target="file-frame">third_party/cores/swerv/design/include/global.h:24</a>:31-49:
+   | 
+   | localparam DCCM_ECC_WIDTH   = `RV_DCCM_ECC_WIDTH;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-26" target="file-frame">third_party/cores/swerv/design/include/global.h:26</a>:31-49:
+   | 
+   | localparam LSU_RDBUF_DEPTH  = `RV_LSU_NUM_NBLOAD;
+   |                               ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-27" target="file-frame">third_party/cores/swerv/design/include/global.h:27</a>:31-48:
+   | 
+   | localparam DMA_BUF_DEPTH    = `RV_DMA_BUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_STBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-28" target="file-frame">third_party/cores/swerv/design/include/global.h:28</a>:31-50:
+   | 
+   | localparam LSU_STBUF_DEPTH  = `RV_LSU_STBUF_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-29" target="file-frame">third_party/cores/swerv/design/include/global.h:29</a>:31-46:
+   | 
+   | localparam LSU_SB_BITS      = `RV_LSU_SB_BITS;
+   |                               ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DEC_INSTBUF_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-31" target="file-frame">third_party/cores/swerv/design/include/global.h:31</a>:32-53:
+   | 
+   | localparam DEC_INSTBUF_DEPTH = `RV_DEC_INSTBUF_DEPTH;
+   |                                ^^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-33" target="file-frame">third_party/cores/swerv/design/include/global.h:33</a>:32-45:
+   | 
+   | localparam ICCM_SIZE         = `RV_ICCM_SIZE;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-34" target="file-frame">third_party/cores/swerv/design/include/global.h:34</a>:32-45:
+   | 
+   | localparam ICCM_BITS         = `RV_ICCM_BITS;
+   |                                ^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_NUM_BANKS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-35" target="file-frame">third_party/cores/swerv/design/include/global.h:35</a>:32-50:
+   | 
+   | localparam ICCM_NUM_BANKS    = `RV_ICCM_NUM_BANKS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-36" target="file-frame">third_party/cores/swerv/design/include/global.h:36</a>:32-50:
+   | 
+   | localparam ICCM_BANK_BITS    = `RV_ICCM_BANK_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_INDEX_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-37" target="file-frame">third_party/cores/swerv/design/include/global.h:37</a>:32-51:
+   | 
+   | localparam ICCM_INDEX_BITS   = `RV_ICCM_INDEX_BITS;
+   |                                ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICCM_BANK_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-38" target="file-frame">third_party/cores/swerv/design/include/global.h:38</a>:37-55:
+   | 
+   | localparam ICCM_BANK_HI      = 4 + (`RV_ICCM_BANK_BITS/4);
+   |                                     ^^^^^^^^^^^^^^^^^^    
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_HIGH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-40" target="file-frame">third_party/cores/swerv/design/include/global.h:40</a>:31-50:
+   | 
+   | localparam ICACHE_TAG_HIGH  = `RV_ICACHE_TAG_HIGH;
+   |                               ^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_LOW&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-41" target="file-frame">third_party/cores/swerv/design/include/global.h:41</a>:31-49:
+   | 
+   | localparam ICACHE_TAG_LOW   = `RV_ICACHE_TAG_LOW; 
+   |                               ^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_IC_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-42" target="file-frame">third_party/cores/swerv/design/include/global.h:42</a>:31-50:
+   | 
+   | localparam ICACHE_IC_DEPTH  = `RV_ICACHE_IC_DEPTH; 
+   |                               ^^^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_ICACHE_TAG_DEPTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-43" target="file-frame">third_party/cores/swerv/design/include/global.h:43</a>:31-51:
+   | 
+   | localparam ICACHE_TAG_DEPTH = `RV_ICACHE_TAG_DEPTH;
+   |                               ^^^^^^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-45" target="file-frame">third_party/cores/swerv/design/include/global.h:45</a>:30-45:
+   | 
+   | localparam LSU_BUS_TAG     = `RV_LSU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_DMA_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-46" target="file-frame">third_party/cores/swerv/design/include/global.h:46</a>:30-45:
+   | 
+   | localparam DMA_BUS_TAG     = `RV_DMA_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-47" target="file-frame">third_party/cores/swerv/design/include/global.h:47</a>:30-44:
+   | 
+   | localparam SB_BUS_TAG      = `RV_SB_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^ 
+
+
+fatal: unknown compiler directive &#39;`RV_IFU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-49" target="file-frame">third_party/cores/swerv/design/include/global.h:49</a>:30-45:
+   | 
+   | localparam IFU_BUS_TAG     = `RV_IFU_BUS_TAG;
+   |                              ^^^^^^^^^^^^^^^ 
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv.html#l-334" target="file-frame">third_party/cores/swerv/design/lsu/lsu_lsc_ctl.sv:334</a>:10-11:
+   | 
+   | endmodule
+   |          
+
+
+error: Missing ; after header of module &#34;lsu_stbuf&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:31</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-32" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:32</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-58" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:58</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] store_ecc_datafn_hi_dc3,   // data to write
+   |                 ^^^^^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-59" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:59</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] store_ecc_datafn_lo_dc3,   // data to write
+   |                 ^^^^^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-76" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:76</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_BYTE_WIDTH-1:0] stbuf_byteen_any, // which bytes are active
+   |                  ^^^^^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-77" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:77</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_SB_BITS-1:0]  stbuf_addr_any,        // address
+   |                  ^^^^^^^^^^^^^^^                                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-78" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:78</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0] stbuf_data_any,   // stbuf data
+   |                  ^^^^^^^^^^^^^^^^^^^                                     
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-85" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:85</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0] lsu_addr_dc1,            // lsu address
+   |                 ^^^^^^^^^^^^^^^                                             
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-86" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:86</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0] lsu_addr_dc2,
+   |                 ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-87" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:87</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0] lsu_addr_dc3,
+   |                 ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-89" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:89</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0] end_addr_dc1,            // lsu end addrress - needed to check unaligned
+   |                 ^^^^^^^^^^^^^^^                                                                              
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-90" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:90</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0] end_addr_dc2,
+   |                 ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-91" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:91</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0] end_addr_dc3,
+   |                 ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-99" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:99</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0] stbuf_fwddata_hi_dc3,     // stbuf data
+   |                  ^^^^^^^^^^^^^^^^^^^                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-100" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:100</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0] stbuf_fwddata_lo_dc3,
+   |                  ^^^^^^^^^^^^^^^^^^^                           
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-101" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:101</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_BYTE_WIDTH-1:0] stbuf_fwdbyteen_hi_dc3,
+   |                  ^^^^^^^^^^^^^^^^^^^                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-102" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:102</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_BYTE_WIDTH-1:0] stbuf_fwdbyteen_lo_dc3,
+   |                  ^^^^^^^^^^^^^^^^^^^                             
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-106" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:106</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_stbuf.sv.html#l-106" target="file-frame">third_party/cores/swerv/design/lsu/lsu_stbuf.sv:106</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected module, interface, package, program, class, import, or typedef, instead got `function`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:27</a>:1-9:
+   | 
+   | function automatic logic [2:0] f_Enc8to3;
+   | ^^^^^^^^                                 
+
+
+error: Missing ; after header of module &#34;lsu_bus_buffer&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-40" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:40</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-41" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:41</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-123" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:123</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_tag_dc3,       // the tag of the external non block load
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-125" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:125</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_inv_tag_dc5,   // tag of the enrty which needs to be invalidated
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-128" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:128</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_data_tag,      // the tag of the non block load sending the data/error                                             
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-140" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:140</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_awid,
+   |                  ^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-160" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:160</a>:18-33:
+   | 
+   |    input  logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_bid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-165" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:165</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_arid,
+   |                  ^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-178" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:178</a>:18-33:
+   | 
+   |    input  logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_rid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-186" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:186</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv.html#l-186" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_buffer.sv:186</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Missing ; after header of module &#34;lsu_bus_intf&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-26" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:26</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:27</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-110" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:110</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_tag_dc3,       // the tag of the external non block load
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-112" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:112</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_inv_tag_dc5,   // tag of the enrty which needs to be invalidated
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_NUM_NBLOAD_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-115" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:115</a>:18-42:
+   | 
+   |    output logic [`RV_LSU_NUM_NBLOAD_WIDTH-1:0] lsu_nonblock_load_data_tag,      // the tag of the non block load sending the data/error                                             
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-127" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:127</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_awid,
+   |                  ^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-147" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:147</a>:18-33:
+   | 
+   |    input  logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_bid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-152" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:152</a>:18-33:
+   | 
+   |    output logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_arid,
+   |                  ^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-165" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:165</a>:18-33:
+   | 
+   |    input  logic [`RV_LSU_BUS_TAG-1:0]      lsu_axi_rid,
+   |                  ^^^^^^^^^^^^^^^                       
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-172" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:172</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_bus_intf.sv.html#l-172" target="file-frame">third_party/cores/swerv/design/lsu/lsu_bus_intf.sv:172</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Missing ; after header of module &#34;lsu_ecc&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-29" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:29</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-30" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:30</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-41" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:41</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]       lsu_addr_dc3,    // start address
+   |                 ^^^^^^^^^^^^^                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-42" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:42</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]       end_addr_dc3,    // end address
+   |                 ^^^^^^^^^^^^^                                           
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-44" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:44</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] stbuf_data_any,   
+   |                 ^^^^^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-46" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:46</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] stbuf_fwddata_hi_dc3,  // data forward from the store buffer
+   |                 ^^^^^^^^^^^^^^^^^^^                                                                  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-47" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:47</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] stbuf_fwddata_lo_dc3,  // data forward from the store buffer
+   |                 ^^^^^^^^^^^^^^^^^^^                                                                  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-48" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:48</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_BYTE_WIDTH-1:0] stbuf_fwdbyteen_hi_dc3,// which bytes from the store buffer are on
+   |                 ^^^^^^^^^^^^^^^^^^^                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-49" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:49</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_BYTE_WIDTH-1:0] stbuf_fwdbyteen_lo_dc3,// which bytes from the store buffer are on
+   |                 ^^^^^^^^^^^^^^^^^^^                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-51" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:51</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] dccm_data_hi_dc3,     // raw data from mem
+   |                 ^^^^^^^^^^^^^^^^^^^                                                
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-52" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:52</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0] dccm_data_lo_dc3,     // raw data from mem
+   |                 ^^^^^^^^^^^^^^^^^^^                                                
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-53" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:53</a>:17-35:
+   | 
+   |    input logic [`RV_DCCM_ECC_WIDTH-1:0]  dccm_data_ecc_hi_dc3, // ecc read out from mem
+   |                 ^^^^^^^^^^^^^^^^^^                                                     
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-54" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:54</a>:17-35:
+   | 
+   |    input logic [`RV_DCCM_ECC_WIDTH-1:0]  dccm_data_ecc_lo_dc3, // ecc read out from mem
+   |                 ^^^^^^^^^^^^^^^^^^                                                     
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-58" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:58</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0] store_ecc_datafn_hi_dc3,  // final store data either from stbuf or SEC DCCM readout 
+   |                  ^^^^^^^^^^^^^^^^^^^                                                                                          
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-59" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:59</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0] store_ecc_datafn_lo_dc3,
+   |                  ^^^^^^^^^^^^^^^^^^^                              
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-61" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:61</a>:18-36:
+   | 
+   |    output logic [`RV_DCCM_ECC_WIDTH-1:0] stbuf_ecc_any, 
+   |                  ^^^^^^^^^^^^^^^^^^                     
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-68" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:68</a>:2-3:
+   | 
+   |  );
+   |  ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_ecc.sv.html#l-68" target="file-frame">third_party/cores/swerv/design/lsu/lsu_ecc.sv:68</a>:2-3:
+   | 
+   |  );
+   |  ^ 
+
+
+error: Missing ; after header of module &#34;lsu_dccm_mem&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-30" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:30</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:31</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-39" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:39</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]  dccm_wr_addr,                        // write address
+   |                 ^^^^^^^^^^^^^                                                            
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-40" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:40</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]  dccm_rd_addr_lo,                     // read address
+   |                 ^^^^^^^^^^^^^                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-41" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:41</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]  dccm_rd_addr_hi,                     // read address for the upper bank in case of a misaligned access
+   |                 ^^^^^^^^^^^^^                                                                                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-42" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:42</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_wr_data,                 // write data
+   |                 ^^^^^^^^^^^^^^^^^^^^                                                  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-44" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:44</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0] dccm_rd_data_lo,              // read data from the lo bank
+   |                  ^^^^^^^^^^^^^^^^^^^^                                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-45" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:45</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0] dccm_rd_data_hi,              // read data from the hi bank
+   |                  ^^^^^^^^^^^^^^^^^^^^                                                                 
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-48" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:48</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv.html#l-48" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_mem.sv:48</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Missing ; after header of module &#34;lsu_dccm_ctl&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-30" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:30</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-31" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:31</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-47" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:47</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]         end_addr_dc1,              // last address used to calculate unaligned
+   |                 ^^^^^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-48" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:48</a>:17-30:
+   | 
+   |    input logic [`RV_DCCM_BITS-1:0]         lsu_addr_dc3,              // starting byte address for loads
+   |                 ^^^^^^^^^^^^^                                                                           
+
+
+fatal: unknown compiler directive &#39;`RV_LSU_SB_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-52" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:52</a>:17-32:
+   | 
+   |    input logic [`RV_LSU_SB_BITS-1:0]       stbuf_addr_any,            // stbuf address (aligned)
+   |                 ^^^^^^^^^^^^^^^                                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-54" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:54</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0]   stbuf_data_any,            // the read out from stbuf
+   |                 ^^^^^^^^^^^^^^^^^^^                                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-55" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:55</a>:17-35:
+   | 
+   |    input logic [`RV_DCCM_ECC_WIDTH-1:0]    stbuf_ecc_any,             // the encoded data with ECC bits          
+   |                 ^^^^^^^^^^^^^^^^^^                                                                               
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-56" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:56</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0]   stbuf_fwddata_hi_dc3,      // stbuf fowarding to load
+   |                 ^^^^^^^^^^^^^^^^^^^                                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-57" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:57</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0]   stbuf_fwddata_lo_dc3,      // stbuf fowarding to load
+   |                 ^^^^^^^^^^^^^^^^^^^                                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-58" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:58</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_BYTE_WIDTH-1:0]   stbuf_fwdbyteen_hi_dc3,    // stbuf fowarding to load
+   |                 ^^^^^^^^^^^^^^^^^^^                                                             
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BYTE_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-59" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:59</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_BYTE_WIDTH-1:0]   stbuf_fwdbyteen_lo_dc3,    // stbuf fowarding to load 
+   |                 ^^^^^^^^^^^^^^^^^^^                                                              
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-62" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:62</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0]   store_ecc_datafn_hi_dc3,   // store data
+   |                 ^^^^^^^^^^^^^^^^^^^                                                
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-63" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:63</a>:17-36:
+   | 
+   |    input logic [`RV_DCCM_DATA_WIDTH-1:0]   store_ecc_datafn_lo_dc3,   // store data 
+   |                 ^^^^^^^^^^^^^^^^^^^                                                 
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-65" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:65</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0]  dccm_data_hi_dc3,          // data from the dccm
+   |                  ^^^^^^^^^^^^^^^^^^^                                                       
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-66" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:66</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0]  dccm_data_lo_dc3,          // data from the dccm
+   |                  ^^^^^^^^^^^^^^^^^^^                                                       
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-67" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:67</a>:18-36:
+   | 
+   |    output logic [`RV_DCCM_ECC_WIDTH-1:0]   dccm_data_ecc_hi_dc3,      // data from the dccm + ecc
+   |                  ^^^^^^^^^^^^^^^^^^                                                              
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_ECC_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-68" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:68</a>:18-36:
+   | 
+   |    output logic [`RV_DCCM_ECC_WIDTH-1:0]   dccm_data_ecc_lo_dc3,      
+   |                  ^^^^^^^^^^^^^^^^^^                                   
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-69" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:69</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0]  lsu_ld_data_dc3,           // right justified, ie load byte will have data at 7:0
+   |                  ^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_DATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-70" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:70</a>:18-37:
+   | 
+   |    output logic [`RV_DCCM_DATA_WIDTH-1:0]  lsu_ld_data_corr_dc3,      // right justified, ie load byte will have data at 7:0
+   |                  ^^^^^^^^^^^^^^^^^^^                                                                                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-82" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:82</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]        dccm_wr_addr,             // dccm interface -- wr addr
+   |                  ^^^^^^^^^^^^^                                                                   
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-83" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:83</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]        dccm_rd_addr_lo,          // dccm interface -- read address for lo bank
+   |                  ^^^^^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_BITS&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-84" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:84</a>:18-31:
+   | 
+   |    output logic [`RV_DCCM_BITS-1:0]        dccm_rd_addr_hi,          // dccm interface -- read address for hi bank
+   |                  ^^^^^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-85" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:85</a>:18-38:
+   | 
+   |    output logic [`RV_DCCM_FDATA_WIDTH-1:0] dccm_wr_data,             // dccm write data
+   |                  ^^^^^^^^^^^^^^^^^^^^                                                  
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-87" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:87</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_rd_data_lo,          // dccm read data back from the dccm
+   |                 ^^^^^^^^^^^^^^^^^^^^                                                                     
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_FDATA_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-88" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:88</a>:17-37:
+   | 
+   |    input logic [`RV_DCCM_FDATA_WIDTH-1:0]  dccm_rd_data_hi,          // dccm read data back from the dccm
+   |                 ^^^^^^^^^^^^^^^^^^^^                                                                     
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-99" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:99</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `)` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv.html#l-99" target="file-frame">third_party/cores/swerv/design/lsu/lsu_dccm_ctl.sv:99</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Missing ; after header of module &#34;lsu_trigger&#34;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_trigger.sv.html#l-26" target="file-frame">third_party/cores/swerv/design/lsu/lsu_trigger.sv:26</a>:10-10:
+   | 
+   |    import swerv_types::*;
+   |          ^               
+
+
+error: Expected hierarchy item, found ( instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lsu/lsu_trigger.sv.html#l-27" target="file-frame">third_party/cores/swerv/design/lsu/lsu_trigger.sv:27</a>:1-2:
+   | 
+   | (
+   | ^
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html#l-64" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv:64</a>:18-32:
+   | 
+   |    output logic [`RV_SB_BUS_TAG-1:0]   sb_axi_awid,
+   |                  ^^^^^^^^^^^^^^                    
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html#l-84" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv:84</a>:18-32:
+   | 
+   |    input  logic [`RV_SB_BUS_TAG-1:0]   sb_axi_bid,
+   |                  ^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html#l-89" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv:89</a>:18-32:
+   | 
+   |    output logic [`RV_SB_BUS_TAG-1:0]   sb_axi_arid,
+   |                  ^^^^^^^^^^^^^^                    
+
+
+fatal: unknown compiler directive &#39;`RV_SB_BUS_TAG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html#l-102" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv:102</a>:18-32:
+   | 
+   |    input  logic [`RV_SB_BUS_TAG-1:0]   sb_axi_rid,
+   |                  ^^^^^^^^^^^^^^                   
+
+
+error: Expected port, found output instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html#l-64" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv:64</a>:4-10:
+   | 
+   |    output logic [`RV_SB_BUS_TAG-1:0]   sb_axi_awid,
+   |    ^^^^^^                                          
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/swerv/design/dbg/dbg.sv.html#l-115" target="file-frame">third_party/cores/swerv/design/dbg/dbg.sv:115</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `localparam` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/include/global.h.html#l-16" target="file-frame">third_party/cores/swerv/design/include/global.h:16</a>:1-11:
+   | 
+   | localparam TOTAL_INT        = `RV_PIC_TOTAL_INT_PLUS1;
+   | ^^^^^^^^^^                                            
+
+
+fatal: unknown compiler directive &#39;`TEC_RV_ICG&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/beh_lib.sv.html#l-75" target="file-frame">third_party/cores/swerv/design/lib/beh_lib.sv:75</a>:8-19:
+   | 
+   | module `TEC_RV_ICG
+   |        ^^^^^^^^^^^
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_SADR&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html#l-204" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv:204</a>:29-42:
+   | 
+   |    rvrangecheck #(.CCM_SADR(`RV_DCCM_SADR),
+   |                             ^^^^^^^^^^^^^  
+
+
+error: Expected `(`, but found `.` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html#l-204" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv:204</a>:19-20:
+   | 
+   |    rvrangecheck #(.CCM_SADR(`RV_DCCM_SADR),
+   |                   ^                        
+
+
+fatal: unknown compiler directive &#39;`RV_DCCM_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html#l-205" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv:205</a>:29-42:
+   | 
+   |                   .CCM_SIZE(`RV_DCCM_SIZE)) addr_dccm_rangecheck (
+   |                             ^^^^^^^^^^^^^                         
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_BASE_ADDR&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html#l-225" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv:225</a>:29-46:
+   | 
+   |    rvrangecheck #(.CCM_SADR(`RV_PIC_BASE_ADDR),
+   |                             ^^^^^^^^^^^^^^^^^  
+
+
+fatal: unknown compiler directive &#39;`RV_PIC_SIZE&#39;
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html#l-226" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv:226</a>:29-41:
+   | 
+   |                   .CCM_SIZE(`RV_PIC_SIZE)) addr_pic_rangecheck (
+   |                             ^^^^^^^^^^^^                        
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/swerv/design/lib/ahb_to_axi4.sv.html#l-281" target="file-frame">third_party/cores/swerv/design/lib/ahb_to_axi4.sv:281</a>:11-25:
+   | 
+   | endmodule // ahb_to_axi4
+   |           ^^^^^^^^^^^^^^
+
+
+</pre>
+</body>

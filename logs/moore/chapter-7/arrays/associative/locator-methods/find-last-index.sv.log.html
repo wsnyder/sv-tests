@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test support of array locator methods
+should_fail: 0
+tags: 7.12.1 7.12 7.10
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/associative/locator-methods
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-last-index.sv.html" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-last-index.sv</a>
+time_elapsed: 0.004s
+ram usage: 9608 KB
+</pre>
+<pre class="log">
+
+
+error: Expected hierarchy item, found string instead
+  --&gt; <a href="../../../../../../tests/chapter-7/arrays/associative/locator-methods/find-last-index.sv.html#l-10" target="file-frame">tests/chapter-7/arrays/associative/locator-methods/find-last-index.sv:10</a>:1-7:
+   | 
+   | string s[] = { &#34;hello&#34;, &#34;sad&#34;, &#34;hello&#34;, &#34;world&#34; };
+   | ^^^^^^                                            
+
+
+</pre>
+</body>

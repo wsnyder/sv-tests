@@ -1,0 +1,38 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: implicit port connection tests
+should_fail: 0
+tags: 6.10
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-6/6.10--implicit_port_connection.sv.html" target="file-frame">tests/chapter-6/6.10--implicit_port_connection.sv</a>
+time_elapsed: 0.005s
+ram usage: 9684 KB
+</pre>
+<pre class="log">
+
+error: `d` not found
+  --&gt; <a href="../../../tests/chapter-6/6.10--implicit_port_connection.sv.html#l-14" target="file-frame">tests/chapter-6/6.10--implicit_port_connection.sv:14</a>:9-10:
+   | 
+   |     assign d = c;
+   |            ^     
+
+error: `c` not found
+  --&gt; <a href="../../../tests/chapter-6/6.10--implicit_port_connection.sv.html#l-14" target="file-frame">tests/chapter-6/6.10--implicit_port_connection.sv:14</a>:13-14:
+   | 
+   |     assign d = c;
+   |                ^ 
+
+
+</pre>
+</body>

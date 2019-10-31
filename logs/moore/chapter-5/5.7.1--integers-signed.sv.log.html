@@ -1,0 +1,64 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Integer literal constants
+should_fail: 0
+tags: 5.7.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-5
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-5/5.7.1--integers-signed.sv.html" target="file-frame">tests/chapter-5/5.7.1--integers-signed.sv</a>
+time_elapsed: 0.006s
+ram usage: 9688 KB
+</pre>
+<pre class="log">
+
+proc %top.initial.229.0 () -&gt; (i8$ %a, i4$ %b, i4$ %c, i16$ %d) {
+0:
+    %1 = const i8 6
+    %2 = neg i8 %1
+    %3 = const time 0s 1e
+    drv i8$ %a, %2, %3
+    wait %4 for %3
+4:
+    %5 = const i4 15
+    %6 = const time 0s 1e
+    drv i4$ %b, %5, %6
+    wait %7 for %6
+7:
+    %8 = const i4 15
+    %9 = neg i4 %8
+    %10 = const time 0s 1e
+    drv i4$ %c, %9, %10
+    wait %11 for %10
+11:
+    %12 = const i16 0
+    %13 = const time 0s 1e
+    drv i16$ %d, %12, %13
+    wait %14 for %13
+14:
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i8 0
+    %a = sig i8 %0
+    %1 = const i4 0
+    %b = sig i4 %1
+    %2 = const i4 0
+    %c = sig i4 %2
+    %3 = const i16 0
+    %d = sig i16 %3
+    inst %top.initial.229.0 () -&gt; (i8$ %a, i4$ %b, i4$ %c, i16$ %d)
+}
+
+</pre>
+</body>

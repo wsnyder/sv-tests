@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Tests imported from yosys
+should_fail: 1
+tags: yosys
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tools/yosys/tests/errors
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err08.v.html" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err08.v</a>
+time_elapsed: 0.004s
+ram usage: 9592 KB
+</pre>
+<pre class="log">
+
+
+error: Expected , or ; after continuous assignment
+  --&gt; <a href="../../../../third_party/tools/yosys/tests/errors/syntax_err08.v.html#l-4" target="file-frame">third_party/tools/yosys/tests/errors/syntax_err08.v:4</a>:14-16:
+   | 
+   | assign y = x 55;
+   |              ^^ 
+
+
+</pre>
+</body>

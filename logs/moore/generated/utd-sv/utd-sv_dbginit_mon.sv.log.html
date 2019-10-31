@@ -1,0 +1,32 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from utd-sv
+should_fail: 0
+tags: utd-sv
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/tests/utd-sv
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/tests/utd-sv/dbginit_mon.v.html" target="file-frame">third_party/tests/utd-sv/dbginit_mon.v</a>
+time_elapsed: 0.014s
+ram usage: 9704 KB
+</pre>
+<pre class="log">
+
+error: unknown module or interface `dbginit_inst`
+  --&gt; <a href="../../../../third_party/tests/utd-sv/dbginit_mon.v.html#l-232" target="file-frame">third_party/tests/utd-sv/dbginit_mon.v:232</a>:4-16:
+   | 
+   |    dbginit_inst  #(1) cmp_dbginit1 ( .rst (cmp_rst), .clk  (cmp_clk), .dbginit (cmp_dbginit), .actual (pcx_arb0_dir), .expected (1&#39;b1),.cnt_val(cmp_cnt), .mon_num(1) );
+   |    ^^^^^^^^^^^^                                                                                                                                                         
+
+
+</pre>
+</body>

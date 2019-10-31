@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test tagged packed union support
+should_fail: 0
+tags: 7.3.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/unions/tagged
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html" target="file-frame">tests/chapter-7/unions/tagged/packed.sv</a>
+time_elapsed: 0.004s
+ram usage: 9660 KB
+</pre>
+<pre class="log">
+
+
+error: Tagged union expressions not implemented
+  --&gt; <a href="../../../../../tests/chapter-7/unions/tagged/packed.sv.html#l-16" target="file-frame">tests/chapter-7/unions/tagged/packed.sv:16</a>:10-16:
+   | 
+   |     un = tagged v2 (10);
+   |          ^^^^^^         
+
+
+</pre>
+</body>

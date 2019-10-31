@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: type operator tests
+should_fail: 0
+tags: 6.23
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-6
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-6/6.23--type_op.sv.html" target="file-frame">tests/chapter-6/6.23--type_op.sv</a>
+time_elapsed: 0.004s
+ram usage: 9572 KB
+</pre>
+<pre class="log">
+
+
+error: Expected explicit or implicit type, found type instead
+  --&gt; <a href="../../../tests/chapter-6/6.23--type_op.sv.html#l-10" target="file-frame">tests/chapter-6/6.23--type_op.sv:10</a>:6-10:
+   | 
+   |     var type(a+b) c;
+   |         ^^^^        
+
+
+</pre>
+</body>

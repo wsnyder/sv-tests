@@ -1,0 +1,61 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v</a>
+time_elapsed: 0.007s
+ram usage: 9636 KB
+</pre>
+<pre class="log">
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:40</a>:75-90:
+   | 
+   |                                          ,parameter tag_width_lp        = `BSG_SAFE_CLOG2(num_out_p)
+   |                                                                           ^^^^^^^^^^^^^^^           
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-40" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:40</a>:73-74:
+   | 
+   |                                          ,parameter tag_width_lp        = `BSG_SAFE_CLOG2(num_out_p)
+   |                                                                         ^                           
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-58" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:58</a>:30-45:
+   | 
+   |    localparam ptr_width_lp = `BSG_SAFE_CLOG2(els_p);
+   |                              ^^^^^^^^^^^^^^^        
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-66" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:66</a>:26-41:
+   | 
+   |    logic [num_out_p-1:0][`BSG_SAFE_CLOG2(buffering_p)] els;
+   |                          ^^^^^^^^^^^^^^^                   
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v.html#l-248" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo_shared.v:248</a>:10-11:
+   | 
+   | endmodule
+   |          
+
+
+</pre>
+</body>

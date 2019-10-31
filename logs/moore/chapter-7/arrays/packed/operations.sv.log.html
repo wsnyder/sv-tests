@@ -1,0 +1,72 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Test packed arrays operations support (R &amp; W)
+should_fail: 0
+tags: 7.4.3
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-7/arrays/packed
+top_module: 
+type: simulation parsing
+mode: parsing
+files: <a href="../../../../../tests/chapter-7/arrays/packed/operations.sv.html" target="file-frame">tests/chapter-7/arrays/packed/operations.sv</a>
+time_elapsed: 0.006s
+ram usage: 9552 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/packed/operations.sv.html#l-14" target="file-frame">tests/chapter-7/arrays/packed/operations.sv:14</a>:2-42:
+   | 
+   |     $display(&#34;:assert: (&#39;%h&#39; == &#39;00&#39;)&#34;, arr);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/packed/operations.sv.html#l-17" target="file-frame">tests/chapter-7/arrays/packed/operations.sv:17</a>:2-42:
+   | 
+   |     $display(&#34;:assert: (&#39;%h&#39; == &#39;de&#39;)&#34;, arr);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../../../tests/chapter-7/arrays/packed/operations.sv.html#l-20" target="file-frame">tests/chapter-7/arrays/packed/operations.sv:20</a>:2-42:
+   | 
+   |     $display(&#34;:assert: (&#39;%h&#39; == &#39;ad&#39;)&#34;, arr);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.223.0 () -&gt; (i8$ %arr) {
+0:
+    %1 = const i8 0
+    %2 = const time 0s 1e
+    drv i8$ %arr, %1, %2
+    wait %3 for %2
+3:
+    %4 = const i32 0
+    %5 = const i8 222
+    %6 = const time 0s 1e
+    drv i8$ %arr, %5, %6
+    wait %7 for %6
+7:
+    %8 = const i32 0
+    %9 = const i8 173
+    %10 = const time 0s 1e
+    drv i8$ %arr, %9, %10
+    wait %11 for %10
+11:
+    %12 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    %0 = const i8 0
+    %arr = sig i8 %0
+    inst %top.initial.223.0 () -&gt; (i8$ %arr)
+}
+
+</pre>
+</body>
