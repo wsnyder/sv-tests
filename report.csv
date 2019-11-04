@@ -46,6 +46,7 @@ printtimescale_task,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-20/20.4-
 sqrt_function,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-20/20.8--sqrt.sv,20.8,False,True,False,False,True,False,True,True,True
 isunknown_function,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-20/20.9--isunknown.sv,20.9,False,True,False,False,True,False,True,True,True
 typename_function,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-20/20.6--typename.sv,20.6,False,True,False,False,True,False,True,False,True
+interface,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-25/25.3-interface.sv,25.3,True,True,False,False,False,False,True,False,True
 binary_op_minus,/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.3--binary_op_minus.sv,11.4.3,True,True,True,False,True,False,True,True,True
 binary_op_ge,/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.4--binary_op_ge.sv,11.4.4,True,True,True,False,True,False,True,True,True
 binary_op_case_eq,/home/travis/build/SymbiFlow/sv-tests/tests/generated/binary_op/11.4.5--binary_op_case_eq.sv,11.4.5,True,True,True,False,False,False,True,True,True
