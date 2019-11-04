@@ -64,7 +64,8 @@
 <a href="#l-56">56</a>
 <a href="#l-57">57</a>
 <a href="#l-58">58</a>
-<a href="#l-59">59</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="c1">// MBT 11/10/14</span>
+<a href="#l-59">59</a>
+<a href="#l-60">60</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="c1">// MBT 11/10/14</span>
 <a name="l-2"></a><span class="c1">//</span>
 <a name="l-3"></a><span class="c1">// bsg_round_robin_1_to_n</span>
 <a name="l-4"></a><span class="c1">//</span>
@@ -111,18 +112,19 @@
 <a name="l-45"></a>          <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
 <a name="l-46"></a>          <span class="p">,.</span><span class="n">add_i</span>  <span class="p">(</span><span class="n">yumi_i</span> <span class="p">)</span>
 <a name="l-47"></a>          <span class="p">,.</span><span class="n">o</span>      <span class="p">(</span><span class="n">ptr_r</span>  <span class="p">)</span>
-<a name="l-48"></a>          <span class="p">);</span>
-<a name="l-49"></a>
-<a name="l-50"></a>       <span class="c1">// bsg_decode_with_v could potentially be used to optimize this critical path </span>
-<a name="l-51"></a>       <span class="c1">// at the cost of area</span>
-<a name="l-52"></a>       <span class="k">assign</span> <span class="n">valid_o</span> <span class="o">=</span> <span class="p">(</span><span class="n">valid_i</span> <span class="o">&lt;&lt;</span> <span class="n">ptr_r</span><span class="p">);</span>
-<a name="l-53"></a>
-<a name="l-54"></a>       <span class="c1">// binary to one hot</span>
-<a name="l-55"></a>       <span class="k">assign</span> <span class="n">ready_o</span> <span class="o">=</span> <span class="n">ready_i</span><span class="p">[</span><span class="n">ptr_r</span><span class="p">];</span>
-<a name="l-56"></a>       
-<a name="l-57"></a>     <span class="k">end</span>
-<a name="l-58"></a>
-<a name="l-59"></a><span class="k">endmodule</span>
+<a name="l-48"></a>          <span class="p">,.</span><span class="n">n_o</span>    <span class="p">()</span>
+<a name="l-49"></a>          <span class="p">);</span>
+<a name="l-50"></a>
+<a name="l-51"></a>       <span class="c1">// bsg_decode_with_v could potentially be used to optimize this critical path </span>
+<a name="l-52"></a>       <span class="c1">// at the cost of area</span>
+<a name="l-53"></a>       <span class="k">assign</span> <span class="n">valid_o</span> <span class="o">=</span> <span class="p">(</span><span class="n">valid_i</span> <span class="o">&lt;&lt;</span> <span class="n">ptr_r</span><span class="p">);</span>
+<a name="l-54"></a>
+<a name="l-55"></a>       <span class="c1">// binary to one hot</span>
+<a name="l-56"></a>       <span class="k">assign</span> <span class="n">ready_o</span> <span class="o">=</span> <span class="n">ready_i</span><span class="p">[</span><span class="n">ptr_r</span><span class="p">];</span>
+<a name="l-57"></a>       
+<a name="l-58"></a>     <span class="k">end</span>
+<a name="l-59"></a>
+<a name="l-60"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table>
   </body>

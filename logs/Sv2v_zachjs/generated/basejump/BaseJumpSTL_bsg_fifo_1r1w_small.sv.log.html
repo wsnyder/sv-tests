@@ -7,7 +7,7 @@
 </head>
 <body>
 <h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
-<pre class="test-failed">
+<pre class="test-passed">
 description: Tests imported from basejump
 should_fail: 0
 tags: basejump
@@ -16,12 +16,50 @@ top_module:
 type: parsing
 mode: parsing
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v</a>
-time_elapsed: 0.012s
-ram usage: 9996 KB
+time_elapsed: 0.034s
+ram usage: 9648 KB
 </pre>
 <pre class="log">
 
-<a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html#l-51" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v:51</a>:45: Lexical error: Undefined macro: BSG_SAFE_CLOG2
+module bsg_fifo_1r1w_small (
+	clk_i,
+	reset_i,
+	v_i,
+	ready_o,
+	data_i,
+	v_o,
+	data_o,
+	yumi_i
+);
+	parameter width_p = -1;
+	parameter els_p = -1;
+	parameter harden_p = 0;
+	parameter ready_THEN_valid_p = 0;
+	input clk_i;
+	input reset_i;
+	input v_i;
+	output ready_o;
+	input [(width_p - 1):0] data_i;
+	output v_o;
+	output [(width_p - 1):0] data_o;
+	input yumi_i;
+	generate
+		if ((harden_p == 0)) begin : unhardened
+			bsg_fifo_1r1w_small_unhardened #(
+				.width_p(width_p),
+				.els_p(els_p),
+				.ready_THEN_valid_p(ready_THEN_valid_p)
+			) fifo(.*);
+		end
+		else begin : hardened
+			bsg_fifo_1r1w_small_hardened #(
+				.width_p(width_p),
+				.els_p(els_p),
+				.ready_THEN_valid_p(ready_THEN_valid_p)
+			) fifo(.*);
+		end
+	endgenerate
+endmodule
 
 </pre>
 </body>

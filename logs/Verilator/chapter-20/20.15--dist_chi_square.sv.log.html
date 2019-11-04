@@ -16,18 +16,16 @@ top_module:
 type: simulation parsing
 mode: simulation
 files: <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv</a>
-time_elapsed: 0.089s
-ram usage: 11584 KB
+time_elapsed: 0.098s
+ram usage: 11668 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html#l-13" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv:13</a>: syntax error, unexpected $display, expecting &#39;,&#39; or &#39;;&#39;
- $display(&#34;%d&#34;, $dist_chi_square(seed, 3));
- ^~~~~~~~
 %Error: <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html#l-13" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv:13</a>: Unsupported or unknown PLI call: $dist_chi_square
  $display(&#34;%d&#34;, $dist_chi_square(seed, 3));
                 ^~~~~~~~~~~~~~~~
-%Error: Exiting due to 2 error(s)
+%Error: Exiting due to 1 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
 scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>

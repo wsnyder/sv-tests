@@ -1,0 +1,36 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_hardened.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_hardened.v</a>
+time_elapsed: 0.006s
+ram usage: 9604 KB
+</pre>
+<pre class="log">
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_hardened.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_hardened.v</a>::44 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+   logic ready_lo;
+ERROR (3)::PARSE_ERROR <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_hardened.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_hardened.v</a>::55 BSG_SAFE_CLOG2 define cannot be found
+   localparam ptr_width_lp = `BSG_SAFE_CLOG2(els_p);
+Assertion failed()@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/verilog_flex.l]load_define::736 
+
+</pre>
+</body>

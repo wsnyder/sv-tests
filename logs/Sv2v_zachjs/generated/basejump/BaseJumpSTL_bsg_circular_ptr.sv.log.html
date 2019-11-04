@@ -16,8 +16,8 @@ top_module:
 type: parsing
 mode: parsing
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_misc/bsg_circular_ptr.v</a>
-time_elapsed: 0.044s
-ram usage: 10668 KB
+time_elapsed: 0.054s
+ram usage: 10544 KB
 </pre>
 <pre class="log">
 
@@ -25,7 +25,8 @@ module bsg_circular_ptr (
 	clk,
 	reset_i,
 	add_i,
-	o
+	o,
+	n_o
 );
 	parameter slots_p = -1;
 	parameter max_add_p = -1;
@@ -34,10 +35,12 @@ module bsg_circular_ptr (
 	input reset_i;
 	input [($clog2((max_add_p + 1)) - 1):0] add_i;
 	output [(ptr_width_lp - 1):0] o;
+	output [(ptr_width_lp - 1):0] n_o;
 	reg [(ptr_width_lp - 1):0] ptr_r;
 	reg [(ptr_width_lp - 1):0] ptr_n;
 	reg [ptr_width_lp:0] ptr_wrap;
 	assign o = ptr_r;
+	assign n_o = ptr_n;
 	always @(posedge clk)
 		if (reset_i)
 			ptr_r &lt;= 0;

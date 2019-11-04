@@ -885,7 +885,10 @@
 <a href="#l-877">877</a>
 <a href="#l-878">878</a>
 <a href="#l-879">879</a>
-<a href="#l-880">880</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/**</span>
+<a href="#l-880">880</a>
+<a href="#l-881">881</a>
+<a href="#l-882">882</a>
+<a href="#l-883">883</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="cm">/**</span>
 <a name="l-2"></a><span class="cm"> *  bsg_cache.v</span>
 <a name="l-3"></a><span class="cm"> *</span>
 <a name="l-4"></a><span class="cm"> *  - two-stage pipelined.</span>
@@ -1289,482 +1292,485 @@
 <a name="l-402"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">lg_sets_lp</span><span class="o">+</span><span class="n">lg_block_size_in_words_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">dma_data_mem_addr_lo</span><span class="p">;</span>
 <a name="l-403"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">dma_data_mem_w_mask_lo</span><span class="p">;</span>
 <a name="l-404"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">dma_data_mem_data_lo</span><span class="p">;</span>
-<a name="l-405"></a>
-<a name="l-406"></a>  <span class="n">bsg_cache_dma</span> <span class="p">#(</span>
-<a name="l-407"></a>    <span class="p">.</span><span class="n">addr_width_p</span><span class="p">(</span><span class="n">addr_width_p</span><span class="p">)</span>
-<a name="l-408"></a>    <span class="p">,.</span><span class="n">data_width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
-<a name="l-409"></a>    <span class="p">,.</span><span class="n">block_size_in_words_p</span><span class="p">(</span><span class="n">block_size_in_words_p</span><span class="p">)</span>
-<a name="l-410"></a>    <span class="p">,.</span><span class="n">sets_p</span><span class="p">(</span><span class="n">sets_p</span><span class="p">)</span>
-<a name="l-411"></a>    <span class="p">,.</span><span class="n">ways_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
-<a name="l-412"></a>    <span class="p">,.</span><span class="n">debug_p</span><span class="p">(</span><span class="n">debug_p</span><span class="p">)</span>
-<a name="l-413"></a>  <span class="p">)</span> <span class="n">dma</span> <span class="p">(</span>
-<a name="l-414"></a>    <span class="p">.</span><span class="n">clk_i</span><span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
-<a name="l-415"></a>    <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
-<a name="l-416"></a>   
-<a name="l-417"></a>    <span class="p">,.</span><span class="n">dma_cmd_i</span><span class="p">(</span><span class="n">dma_cmd_lo</span><span class="p">)</span>
-<a name="l-418"></a>    <span class="p">,.</span><span class="n">dma_way_i</span><span class="p">(</span><span class="n">dma_way_lo</span><span class="p">)</span>
-<a name="l-419"></a>    <span class="p">,.</span><span class="n">dma_addr_i</span><span class="p">(</span><span class="n">dma_addr_lo</span><span class="p">)</span>
-<a name="l-420"></a>    <span class="p">,.</span><span class="n">done_o</span><span class="p">(</span><span class="n">dma_done_li</span><span class="p">)</span>
-<a name="l-421"></a>
-<a name="l-422"></a>    <span class="p">,.</span><span class="n">snoop_word_o</span><span class="p">(</span><span class="n">snoop_word_lo</span><span class="p">)</span>
-<a name="l-423"></a>    
-<a name="l-424"></a>    <span class="p">,.</span><span class="n">dma_pkt_o</span><span class="p">(</span><span class="n">dma_pkt_o</span><span class="p">)</span>
-<a name="l-425"></a>    <span class="p">,.</span><span class="n">dma_pkt_v_o</span><span class="p">(</span><span class="n">dma_pkt_v_o</span><span class="p">)</span>
-<a name="l-426"></a>    <span class="p">,.</span><span class="n">dma_pkt_yumi_i</span><span class="p">(</span><span class="n">dma_pkt_yumi_i</span><span class="p">)</span>
-<a name="l-427"></a>
-<a name="l-428"></a>    <span class="p">,.</span><span class="n">dma_data_i</span><span class="p">(</span><span class="n">dma_data_i</span><span class="p">)</span>
-<a name="l-429"></a>    <span class="p">,.</span><span class="n">dma_data_v_i</span><span class="p">(</span><span class="n">dma_data_v_i</span><span class="p">)</span>
-<a name="l-430"></a>    <span class="p">,.</span><span class="n">dma_data_ready_o</span><span class="p">(</span><span class="n">dma_data_ready_o</span><span class="p">)</span>
-<a name="l-431"></a>    
-<a name="l-432"></a>    <span class="p">,.</span><span class="n">dma_data_o</span><span class="p">(</span><span class="n">dma_data_o</span><span class="p">)</span>
-<a name="l-433"></a>    <span class="p">,.</span><span class="n">dma_data_v_o</span><span class="p">(</span><span class="n">dma_data_v_o</span><span class="p">)</span>
-<a name="l-434"></a>    <span class="p">,.</span><span class="n">dma_data_yumi_i</span><span class="p">(</span><span class="n">dma_data_yumi_i</span><span class="p">)</span>
-<a name="l-435"></a>
-<a name="l-436"></a>    <span class="p">,.</span><span class="n">data_mem_v_o</span><span class="p">(</span><span class="n">dma_data_mem_v_lo</span><span class="p">)</span>
-<a name="l-437"></a>    <span class="p">,.</span><span class="n">data_mem_w_o</span><span class="p">(</span><span class="n">dma_data_mem_w_lo</span><span class="p">)</span>
-<a name="l-438"></a>    <span class="p">,.</span><span class="n">data_mem_addr_o</span><span class="p">(</span><span class="n">dma_data_mem_addr_lo</span><span class="p">)</span>
-<a name="l-439"></a>    <span class="p">,.</span><span class="n">data_mem_w_mask_o</span><span class="p">(</span><span class="n">dma_data_mem_w_mask_lo</span><span class="p">)</span>
-<a name="l-440"></a>    <span class="p">,.</span><span class="n">data_mem_data_o</span><span class="p">(</span><span class="n">dma_data_mem_data_lo</span><span class="p">)</span>
-<a name="l-441"></a>    <span class="p">,.</span><span class="n">data_mem_data_i</span><span class="p">(</span><span class="n">data_mem_data_lo</span><span class="p">)</span>
-<a name="l-442"></a>  <span class="p">);</span> 
-<a name="l-443"></a>
-<a name="l-444"></a>  <span class="c1">// store buffer</span>
-<a name="l-445"></a>  <span class="c1">//</span>
-<a name="l-446"></a>  <span class="no">`declare_bsg_cache_sbuf_entry_s</span><span class="p">(</span><span class="n">addr_width_p</span><span class="p">,</span> <span class="n">data_width_p</span><span class="p">,</span> <span class="n">ways_p</span><span class="p">);</span>
-<a name="l-447"></a>
-<a name="l-448"></a>  <span class="k">logic</span> <span class="n">sbuf_v_li</span><span class="p">;</span>
-<a name="l-449"></a>  <span class="n">bsg_cache_sbuf_entry_s</span> <span class="n">sbuf_entry_li</span><span class="p">;</span>
+<a name="l-405"></a>  <span class="k">logic</span> <span class="n">dma_evict_lo</span><span class="p">;</span>
+<a name="l-406"></a>
+<a name="l-407"></a>  <span class="n">bsg_cache_dma</span> <span class="p">#(</span>
+<a name="l-408"></a>    <span class="p">.</span><span class="n">addr_width_p</span><span class="p">(</span><span class="n">addr_width_p</span><span class="p">)</span>
+<a name="l-409"></a>    <span class="p">,.</span><span class="n">data_width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
+<a name="l-410"></a>    <span class="p">,.</span><span class="n">block_size_in_words_p</span><span class="p">(</span><span class="n">block_size_in_words_p</span><span class="p">)</span>
+<a name="l-411"></a>    <span class="p">,.</span><span class="n">sets_p</span><span class="p">(</span><span class="n">sets_p</span><span class="p">)</span>
+<a name="l-412"></a>    <span class="p">,.</span><span class="n">ways_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
+<a name="l-413"></a>    <span class="p">,.</span><span class="n">debug_p</span><span class="p">(</span><span class="n">debug_p</span><span class="p">)</span>
+<a name="l-414"></a>  <span class="p">)</span> <span class="n">dma</span> <span class="p">(</span>
+<a name="l-415"></a>    <span class="p">.</span><span class="n">clk_i</span><span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
+<a name="l-416"></a>    <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
+<a name="l-417"></a>   
+<a name="l-418"></a>    <span class="p">,.</span><span class="n">dma_cmd_i</span><span class="p">(</span><span class="n">dma_cmd_lo</span><span class="p">)</span>
+<a name="l-419"></a>    <span class="p">,.</span><span class="n">dma_way_i</span><span class="p">(</span><span class="n">dma_way_lo</span><span class="p">)</span>
+<a name="l-420"></a>    <span class="p">,.</span><span class="n">dma_addr_i</span><span class="p">(</span><span class="n">dma_addr_lo</span><span class="p">)</span>
+<a name="l-421"></a>    <span class="p">,.</span><span class="n">done_o</span><span class="p">(</span><span class="n">dma_done_li</span><span class="p">)</span>
+<a name="l-422"></a>
+<a name="l-423"></a>    <span class="p">,.</span><span class="n">snoop_word_o</span><span class="p">(</span><span class="n">snoop_word_lo</span><span class="p">)</span>
+<a name="l-424"></a>    
+<a name="l-425"></a>    <span class="p">,.</span><span class="n">dma_pkt_o</span><span class="p">(</span><span class="n">dma_pkt_o</span><span class="p">)</span>
+<a name="l-426"></a>    <span class="p">,.</span><span class="n">dma_pkt_v_o</span><span class="p">(</span><span class="n">dma_pkt_v_o</span><span class="p">)</span>
+<a name="l-427"></a>    <span class="p">,.</span><span class="n">dma_pkt_yumi_i</span><span class="p">(</span><span class="n">dma_pkt_yumi_i</span><span class="p">)</span>
+<a name="l-428"></a>
+<a name="l-429"></a>    <span class="p">,.</span><span class="n">dma_data_i</span><span class="p">(</span><span class="n">dma_data_i</span><span class="p">)</span>
+<a name="l-430"></a>    <span class="p">,.</span><span class="n">dma_data_v_i</span><span class="p">(</span><span class="n">dma_data_v_i</span><span class="p">)</span>
+<a name="l-431"></a>    <span class="p">,.</span><span class="n">dma_data_ready_o</span><span class="p">(</span><span class="n">dma_data_ready_o</span><span class="p">)</span>
+<a name="l-432"></a>    
+<a name="l-433"></a>    <span class="p">,.</span><span class="n">dma_data_o</span><span class="p">(</span><span class="n">dma_data_o</span><span class="p">)</span>
+<a name="l-434"></a>    <span class="p">,.</span><span class="n">dma_data_v_o</span><span class="p">(</span><span class="n">dma_data_v_o</span><span class="p">)</span>
+<a name="l-435"></a>    <span class="p">,.</span><span class="n">dma_data_yumi_i</span><span class="p">(</span><span class="n">dma_data_yumi_i</span><span class="p">)</span>
+<a name="l-436"></a>
+<a name="l-437"></a>    <span class="p">,.</span><span class="n">data_mem_v_o</span><span class="p">(</span><span class="n">dma_data_mem_v_lo</span><span class="p">)</span>
+<a name="l-438"></a>    <span class="p">,.</span><span class="n">data_mem_w_o</span><span class="p">(</span><span class="n">dma_data_mem_w_lo</span><span class="p">)</span>
+<a name="l-439"></a>    <span class="p">,.</span><span class="n">data_mem_addr_o</span><span class="p">(</span><span class="n">dma_data_mem_addr_lo</span><span class="p">)</span>
+<a name="l-440"></a>    <span class="p">,.</span><span class="n">data_mem_w_mask_o</span><span class="p">(</span><span class="n">dma_data_mem_w_mask_lo</span><span class="p">)</span>
+<a name="l-441"></a>    <span class="p">,.</span><span class="n">data_mem_data_o</span><span class="p">(</span><span class="n">dma_data_mem_data_lo</span><span class="p">)</span>
+<a name="l-442"></a>    <span class="p">,.</span><span class="n">data_mem_data_i</span><span class="p">(</span><span class="n">data_mem_data_lo</span><span class="p">)</span>
+<a name="l-443"></a>    
+<a name="l-444"></a>    <span class="p">,.</span><span class="n">dma_evict_o</span><span class="p">(</span><span class="n">dma_evict_lo</span><span class="p">)</span>
+<a name="l-445"></a>  <span class="p">);</span> 
+<a name="l-446"></a>
+<a name="l-447"></a>  <span class="c1">// store buffer</span>
+<a name="l-448"></a>  <span class="c1">//</span>
+<a name="l-449"></a>  <span class="no">`declare_bsg_cache_sbuf_entry_s</span><span class="p">(</span><span class="n">addr_width_p</span><span class="p">,</span> <span class="n">data_width_p</span><span class="p">,</span> <span class="n">ways_p</span><span class="p">);</span>
 <a name="l-450"></a>
-<a name="l-451"></a>  <span class="k">logic</span> <span class="n">sbuf_v_lo</span><span class="p">;</span>
-<a name="l-452"></a>  <span class="k">logic</span> <span class="n">sbuf_yumi_li</span><span class="p">;</span>
-<a name="l-453"></a>  <span class="n">bsg_cache_sbuf_entry_s</span> <span class="n">sbuf_entry_lo</span><span class="p">;</span>
-<a name="l-454"></a>
-<a name="l-455"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">addr_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_addr_li</span><span class="p">;</span>
-<a name="l-456"></a>  <span class="k">logic</span> <span class="n">bypass_v_li</span><span class="p">;</span>
-<a name="l-457"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_data_lo</span><span class="p">;</span>
-<a name="l-458"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_mask_lo</span><span class="p">;</span>
-<a name="l-459"></a>
-<a name="l-460"></a>
-<a name="l-461"></a>  <span class="n">bsg_cache_sbuf</span> <span class="p">#(</span>
-<a name="l-462"></a>    <span class="p">.</span><span class="n">data_width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
-<a name="l-463"></a>    <span class="p">,.</span><span class="n">addr_width_p</span><span class="p">(</span><span class="n">addr_width_p</span><span class="p">)</span>
-<a name="l-464"></a>    <span class="p">,.</span><span class="n">ways_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
-<a name="l-465"></a>  <span class="p">)</span> <span class="n">sbuf</span> <span class="p">(</span>
-<a name="l-466"></a>    <span class="p">.</span><span class="n">clk_i</span><span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
-<a name="l-467"></a>    <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
-<a name="l-468"></a>
-<a name="l-469"></a>    <span class="p">,.</span><span class="n">sbuf_entry_i</span><span class="p">(</span><span class="n">sbuf_entry_li</span><span class="p">)</span>
-<a name="l-470"></a>    <span class="p">,.</span><span class="n">v_i</span><span class="p">(</span><span class="n">sbuf_v_li</span><span class="p">)</span>
+<a name="l-451"></a>  <span class="k">logic</span> <span class="n">sbuf_v_li</span><span class="p">;</span>
+<a name="l-452"></a>  <span class="n">bsg_cache_sbuf_entry_s</span> <span class="n">sbuf_entry_li</span><span class="p">;</span>
+<a name="l-453"></a>
+<a name="l-454"></a>  <span class="k">logic</span> <span class="n">sbuf_v_lo</span><span class="p">;</span>
+<a name="l-455"></a>  <span class="k">logic</span> <span class="n">sbuf_yumi_li</span><span class="p">;</span>
+<a name="l-456"></a>  <span class="n">bsg_cache_sbuf_entry_s</span> <span class="n">sbuf_entry_lo</span><span class="p">;</span>
+<a name="l-457"></a>
+<a name="l-458"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">addr_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_addr_li</span><span class="p">;</span>
+<a name="l-459"></a>  <span class="k">logic</span> <span class="n">bypass_v_li</span><span class="p">;</span>
+<a name="l-460"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_data_lo</span><span class="p">;</span>
+<a name="l-461"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_mask_lo</span><span class="p">;</span>
+<a name="l-462"></a>
+<a name="l-463"></a>
+<a name="l-464"></a>  <span class="n">bsg_cache_sbuf</span> <span class="p">#(</span>
+<a name="l-465"></a>    <span class="p">.</span><span class="n">data_width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
+<a name="l-466"></a>    <span class="p">,.</span><span class="n">addr_width_p</span><span class="p">(</span><span class="n">addr_width_p</span><span class="p">)</span>
+<a name="l-467"></a>    <span class="p">,.</span><span class="n">ways_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
+<a name="l-468"></a>  <span class="p">)</span> <span class="n">sbuf</span> <span class="p">(</span>
+<a name="l-469"></a>    <span class="p">.</span><span class="n">clk_i</span><span class="p">(</span><span class="n">clk_i</span><span class="p">)</span>
+<a name="l-470"></a>    <span class="p">,.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
 <a name="l-471"></a>
-<a name="l-472"></a>    <span class="p">,.</span><span class="n">sbuf_entry_o</span><span class="p">(</span><span class="n">sbuf_entry_lo</span><span class="p">)</span>
-<a name="l-473"></a>    <span class="p">,.</span><span class="n">v_o</span><span class="p">(</span><span class="n">sbuf_v_lo</span><span class="p">)</span>
-<a name="l-474"></a>    <span class="p">,.</span><span class="n">yumi_i</span><span class="p">(</span><span class="n">sbuf_yumi_li</span><span class="p">)</span>
-<a name="l-475"></a>
-<a name="l-476"></a>    <span class="p">,.</span><span class="n">empty_o</span><span class="p">(</span><span class="n">sbuf_empty_li</span><span class="p">)</span>
-<a name="l-477"></a>
-<a name="l-478"></a>    <span class="p">,.</span><span class="n">bypass_addr_i</span><span class="p">(</span><span class="n">bypass_addr_li</span><span class="p">)</span>
-<a name="l-479"></a>    <span class="p">,.</span><span class="n">bypass_v_i</span><span class="p">(</span><span class="n">bypass_v_li</span><span class="p">)</span>
-<a name="l-480"></a>    <span class="p">,.</span><span class="n">bypass_data_o</span><span class="p">(</span><span class="n">bypass_data_lo</span><span class="p">)</span>
-<a name="l-481"></a>    <span class="p">,.</span><span class="n">bypass_mask_o</span><span class="p">(</span><span class="n">bypass_mask_lo</span><span class="p">)</span>
-<a name="l-482"></a>  <span class="p">);</span> 
-<a name="l-483"></a>
-<a name="l-484"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_way_decode</span><span class="p">;</span>
-<a name="l-485"></a>
-<a name="l-486"></a>  <span class="n">bsg_decode</span> <span class="p">#(</span>
-<a name="l-487"></a>    <span class="p">.</span><span class="n">num_out_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
-<a name="l-488"></a>  <span class="p">)</span> <span class="n">sbuf_way_demux</span> <span class="p">(</span>
-<a name="l-489"></a>    <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">way_id</span><span class="p">)</span>
-<a name="l-490"></a>    <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">sbuf_way_decode</span><span class="p">)</span>
-<a name="l-491"></a>  <span class="p">);</span>
-<a name="l-492"></a>
-<a name="l-493"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_mem_w_mask</span><span class="p">;</span>
-<a name="l-494"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_mem_data</span><span class="p">;</span>
+<a name="l-472"></a>    <span class="p">,.</span><span class="n">sbuf_entry_i</span><span class="p">(</span><span class="n">sbuf_entry_li</span><span class="p">)</span>
+<a name="l-473"></a>    <span class="p">,.</span><span class="n">v_i</span><span class="p">(</span><span class="n">sbuf_v_li</span><span class="p">)</span>
+<a name="l-474"></a>
+<a name="l-475"></a>    <span class="p">,.</span><span class="n">sbuf_entry_o</span><span class="p">(</span><span class="n">sbuf_entry_lo</span><span class="p">)</span>
+<a name="l-476"></a>    <span class="p">,.</span><span class="n">v_o</span><span class="p">(</span><span class="n">sbuf_v_lo</span><span class="p">)</span>
+<a name="l-477"></a>    <span class="p">,.</span><span class="n">yumi_i</span><span class="p">(</span><span class="n">sbuf_yumi_li</span><span class="p">)</span>
+<a name="l-478"></a>
+<a name="l-479"></a>    <span class="p">,.</span><span class="n">empty_o</span><span class="p">(</span><span class="n">sbuf_empty_li</span><span class="p">)</span>
+<a name="l-480"></a>
+<a name="l-481"></a>    <span class="p">,.</span><span class="n">bypass_addr_i</span><span class="p">(</span><span class="n">bypass_addr_li</span><span class="p">)</span>
+<a name="l-482"></a>    <span class="p">,.</span><span class="n">bypass_v_i</span><span class="p">(</span><span class="n">bypass_v_li</span><span class="p">)</span>
+<a name="l-483"></a>    <span class="p">,.</span><span class="n">bypass_data_o</span><span class="p">(</span><span class="n">bypass_data_lo</span><span class="p">)</span>
+<a name="l-484"></a>    <span class="p">,.</span><span class="n">bypass_mask_o</span><span class="p">(</span><span class="n">bypass_mask_lo</span><span class="p">)</span>
+<a name="l-485"></a>  <span class="p">);</span> 
+<a name="l-486"></a>
+<a name="l-487"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_way_decode</span><span class="p">;</span>
+<a name="l-488"></a>
+<a name="l-489"></a>  <span class="n">bsg_decode</span> <span class="p">#(</span>
+<a name="l-490"></a>    <span class="p">.</span><span class="n">num_out_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
+<a name="l-491"></a>  <span class="p">)</span> <span class="n">sbuf_way_demux</span> <span class="p">(</span>
+<a name="l-492"></a>    <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">way_id</span><span class="p">)</span>
+<a name="l-493"></a>    <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">sbuf_way_decode</span><span class="p">)</span>
+<a name="l-494"></a>  <span class="p">);</span>
 <a name="l-495"></a>
-<a name="l-496"></a>
-<a name="l-497"></a>  <span class="k">for</span> <span class="p">(</span><span class="k">genvar</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ways_p</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-498"></a>    <span class="k">assign</span> <span class="n">sbuf_data_mem_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
-<a name="l-499"></a>    <span class="k">assign</span> <span class="n">sbuf_data_mem_w_mask</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">data_mask_width_lp</span><span class="p">{</span><span class="n">sbuf_way_decode</span><span class="p">[</span><span class="n">i</span><span class="p">]}}</span> <span class="o">&amp;</span> <span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">mask</span><span class="p">;</span>
-<a name="l-500"></a>  <span class="k">end</span>
-<a name="l-501"></a>
-<a name="l-502"></a>
-<a name="l-503"></a>  <span class="c1">// store buffer data/mask input</span>
-<a name="l-504"></a>  <span class="c1">//</span>
-<a name="l-505"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_in_mux_li</span><span class="p">;</span>
-<a name="l-506"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_mask_in_mux_li</span><span class="p">;</span>
-<a name="l-507"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_in</span><span class="p">;</span>
-<a name="l-508"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_mask_in</span><span class="p">;</span>
-<a name="l-509"></a>
-<a name="l-510"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
-<a name="l-511"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
-<a name="l-512"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_sel_mux_els_lp</span><span class="p">)</span>
-<a name="l-513"></a>  <span class="p">)</span> <span class="n">sbuf_data_in_mux</span> <span class="p">(</span>
-<a name="l-514"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">sbuf_data_in_mux_li</span><span class="p">)</span>
-<a name="l-515"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">data_size_op</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">lg_data_sel_mux_els_lp</span><span class="p">])</span>
-<a name="l-516"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">sbuf_data_in</span><span class="p">)</span>
-<a name="l-517"></a>  <span class="p">);</span>
-<a name="l-518"></a>
-<a name="l-519"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
-<a name="l-520"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_mask_width_lp</span><span class="p">)</span>
-<a name="l-521"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_sel_mux_els_lp</span><span class="p">)</span>
-<a name="l-522"></a>  <span class="p">)</span> <span class="n">sbuf_mask_in_mux</span> <span class="p">(</span>
-<a name="l-523"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">sbuf_mask_in_mux_li</span><span class="p">)</span>
-<a name="l-524"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">data_size_op</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">lg_data_sel_mux_els_lp</span><span class="p">])</span>
-<a name="l-525"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">sbuf_mask_in</span><span class="p">)</span>
-<a name="l-526"></a>  <span class="p">);</span>
-<a name="l-527"></a>
-<a name="l-528"></a>  <span class="k">for</span> <span class="p">(</span><span class="k">genvar</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data_sel_mux_els_lp</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">sbuf_in_sel</span>
-<a name="l-529"></a>
-<a name="l-530"></a>    <span class="k">assign</span> <span class="n">sbuf_data_in_mux_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))){</span><span class="n">data_v_r</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))]}};</span>
-<a name="l-531"></a>
+<a name="l-496"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_mem_w_mask</span><span class="p">;</span>
+<a name="l-497"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_mem_data</span><span class="p">;</span>
+<a name="l-498"></a>
+<a name="l-499"></a>
+<a name="l-500"></a>  <span class="k">for</span> <span class="p">(</span><span class="k">genvar</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ways_p</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-501"></a>    <span class="k">assign</span> <span class="n">sbuf_data_mem_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
+<a name="l-502"></a>    <span class="k">assign</span> <span class="n">sbuf_data_mem_w_mask</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">data_mask_width_lp</span><span class="p">{</span><span class="n">sbuf_way_decode</span><span class="p">[</span><span class="n">i</span><span class="p">]}}</span> <span class="o">&amp;</span> <span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">mask</span><span class="p">;</span>
+<a name="l-503"></a>  <span class="k">end</span>
+<a name="l-504"></a>
+<a name="l-505"></a>
+<a name="l-506"></a>  <span class="c1">// store buffer data/mask input</span>
+<a name="l-507"></a>  <span class="c1">//</span>
+<a name="l-508"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_in_mux_li</span><span class="p">;</span>
+<a name="l-509"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_mask_in_mux_li</span><span class="p">;</span>
+<a name="l-510"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_data_in</span><span class="p">;</span>
+<a name="l-511"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_mask_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">sbuf_mask_in</span><span class="p">;</span>
+<a name="l-512"></a>
+<a name="l-513"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
+<a name="l-514"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
+<a name="l-515"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_sel_mux_els_lp</span><span class="p">)</span>
+<a name="l-516"></a>  <span class="p">)</span> <span class="n">sbuf_data_in_mux</span> <span class="p">(</span>
+<a name="l-517"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">sbuf_data_in_mux_li</span><span class="p">)</span>
+<a name="l-518"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">data_size_op</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">lg_data_sel_mux_els_lp</span><span class="p">])</span>
+<a name="l-519"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">sbuf_data_in</span><span class="p">)</span>
+<a name="l-520"></a>  <span class="p">);</span>
+<a name="l-521"></a>
+<a name="l-522"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
+<a name="l-523"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_mask_width_lp</span><span class="p">)</span>
+<a name="l-524"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_sel_mux_els_lp</span><span class="p">)</span>
+<a name="l-525"></a>  <span class="p">)</span> <span class="n">sbuf_mask_in_mux</span> <span class="p">(</span>
+<a name="l-526"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">sbuf_mask_in_mux_li</span><span class="p">)</span>
+<a name="l-527"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">data_size_op</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">lg_data_sel_mux_els_lp</span><span class="p">])</span>
+<a name="l-528"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">sbuf_mask_in</span><span class="p">)</span>
+<a name="l-529"></a>  <span class="p">);</span>
+<a name="l-530"></a>
+<a name="l-531"></a>  <span class="k">for</span> <span class="p">(</span><span class="k">genvar</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data_sel_mux_els_lp</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">sbuf_in_sel</span>
 <a name="l-532"></a>
-<a name="l-533"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">max_size</span>
+<a name="l-533"></a>    <span class="k">assign</span> <span class="n">sbuf_data_in_mux_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))){</span><span class="n">data_v_r</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))]}};</span>
 <a name="l-534"></a>
-<a name="l-535"></a>      <span class="k">assign</span> <span class="n">sbuf_mask_in_mux_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">data_mask_width_lp</span><span class="p">{</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">}};</span>    
-<a name="l-536"></a>
-<a name="l-537"></a>    <span class="k">end</span> 
-<a name="l-538"></a>    <span class="k">else</span> <span class="k">begin</span><span class="o">:</span> <span class="n">non_max_size</span>
+<a name="l-535"></a>
+<a name="l-536"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">max_size</span>
+<a name="l-537"></a>
+<a name="l-538"></a>      <span class="k">assign</span> <span class="n">sbuf_mask_in_mux_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">data_mask_width_lp</span><span class="p">{</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">}};</span>    
 <a name="l-539"></a>
-<a name="l-540"></a>      <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">decode_lo</span><span class="p">;</span>
-<a name="l-541"></a>
-<a name="l-542"></a>      <span class="n">bsg_decode</span> <span class="p">#(</span>
-<a name="l-543"></a>        <span class="p">.</span><span class="n">num_out_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)))</span>
-<a name="l-544"></a>      <span class="p">)</span> <span class="n">dec</span> <span class="p">(</span>
-<a name="l-545"></a>        <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">addr_v_r</span><span class="p">[</span><span class="n">i</span><span class="o">+:</span><span class="no">`BSG_MAX</span><span class="p">(</span><span class="n">lg_data_mask_width_lp</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="mh">1</span><span class="p">)])</span>
-<a name="l-546"></a>        <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">decode_lo</span><span class="p">)</span>
-<a name="l-547"></a>      <span class="p">);</span>
-<a name="l-548"></a>
-<a name="l-549"></a>      <span class="n">bsg_expand_bitmask</span> <span class="p">#(</span>
-<a name="l-550"></a>        <span class="p">.</span><span class="n">in_width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)))</span>
-<a name="l-551"></a>        <span class="p">,.</span><span class="n">expand_p</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span>
-<a name="l-552"></a>      <span class="p">)</span> <span class="n">exp</span> <span class="p">(</span>
-<a name="l-553"></a>        <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">decode_lo</span><span class="p">)</span>
-<a name="l-554"></a>        <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">sbuf_mask_in_mux_li</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<a name="l-555"></a>      <span class="p">);</span>
-<a name="l-556"></a>
-<a name="l-557"></a>    <span class="k">end</span>
-<a name="l-558"></a>  <span class="k">end</span>
+<a name="l-540"></a>    <span class="k">end</span> 
+<a name="l-541"></a>    <span class="k">else</span> <span class="k">begin</span><span class="o">:</span> <span class="n">non_max_size</span>
+<a name="l-542"></a>
+<a name="l-543"></a>      <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">decode_lo</span><span class="p">;</span>
+<a name="l-544"></a>
+<a name="l-545"></a>      <span class="n">bsg_decode</span> <span class="p">#(</span>
+<a name="l-546"></a>        <span class="p">.</span><span class="n">num_out_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)))</span>
+<a name="l-547"></a>      <span class="p">)</span> <span class="n">dec</span> <span class="p">(</span>
+<a name="l-548"></a>        <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">addr_v_r</span><span class="p">[</span><span class="n">i</span><span class="o">+:</span><span class="no">`BSG_MAX</span><span class="p">(</span><span class="n">lg_data_mask_width_lp</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="mh">1</span><span class="p">)])</span>
+<a name="l-549"></a>        <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">decode_lo</span><span class="p">)</span>
+<a name="l-550"></a>      <span class="p">);</span>
+<a name="l-551"></a>
+<a name="l-552"></a>      <span class="n">bsg_expand_bitmask</span> <span class="p">#(</span>
+<a name="l-553"></a>        <span class="p">.</span><span class="n">in_width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)))</span>
+<a name="l-554"></a>        <span class="p">,.</span><span class="n">expand_p</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span>
+<a name="l-555"></a>      <span class="p">)</span> <span class="n">exp</span> <span class="p">(</span>
+<a name="l-556"></a>        <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">decode_lo</span><span class="p">)</span>
+<a name="l-557"></a>        <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">sbuf_mask_in_mux_li</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a name="l-558"></a>      <span class="p">);</span>
 <a name="l-559"></a>
-<a name="l-560"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">mask_op</span>
-<a name="l-561"></a>    <span class="o">?</span> <span class="n">data_v_r</span>
-<a name="l-562"></a>    <span class="o">:</span> <span class="n">sbuf_data_in</span><span class="p">;</span>
-<a name="l-563"></a>
-<a name="l-564"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">mask_op</span>
-<a name="l-565"></a>    <span class="o">?</span> <span class="n">mask_v_r</span>
-<a name="l-566"></a>    <span class="o">:</span> <span class="n">sbuf_mask_in</span><span class="p">;</span>
-<a name="l-567"></a>
-<a name="l-568"></a>
-<a name="l-569"></a>  <span class="c1">// output stage</span>
-<a name="l-570"></a>  <span class="c1">//</span>
-<a name="l-571"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_way_picked</span><span class="p">;</span>
-<a name="l-572"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_data_masked</span><span class="p">;</span>
-<a name="l-573"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">snoop_or_ld_data</span><span class="p">;</span>
-<a name="l-574"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_masked</span><span class="p">;</span>
-<a name="l-575"></a>
-<a name="l-576"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
-<a name="l-577"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
-<a name="l-578"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
-<a name="l-579"></a>  <span class="p">)</span> <span class="n">ld_data_mux</span> <span class="p">(</span>
-<a name="l-580"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">ld_data_v_r</span><span class="p">)</span>
-<a name="l-581"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">tag_hit_way_id</span><span class="p">)</span>
-<a name="l-582"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">ld_data_way_picked</span><span class="p">)</span>
-<a name="l-583"></a>  <span class="p">);</span>
-<a name="l-584"></a>
-<a name="l-585"></a>  <span class="n">bsg_mux_segmented</span> <span class="p">#(</span>
-<a name="l-586"></a>    <span class="p">.</span><span class="n">segments_p</span><span class="p">(</span><span class="n">data_mask_width_lp</span><span class="p">)</span>
-<a name="l-587"></a>    <span class="p">,.</span><span class="n">segment_width_p</span><span class="p">(</span><span class="mh">8</span><span class="p">)</span>
-<a name="l-588"></a>  <span class="p">)</span> <span class="n">bypass_mux_segmented</span> <span class="p">(</span>
-<a name="l-589"></a>    <span class="p">.</span><span class="n">data0_i</span><span class="p">(</span><span class="n">ld_data_way_picked</span><span class="p">)</span>
-<a name="l-590"></a>    <span class="p">,.</span><span class="n">data1_i</span><span class="p">(</span><span class="n">bypass_data_lo</span><span class="p">)</span>
-<a name="l-591"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">bypass_mask_lo</span><span class="p">)</span>
-<a name="l-592"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">bypass_data_masked</span><span class="p">)</span>
-<a name="l-593"></a>  <span class="p">);</span>
-<a name="l-594"></a>  
-<a name="l-595"></a>
-<a name="l-596"></a>  <span class="k">assign</span> <span class="n">snoop_or_ld_data</span> <span class="o">=</span> <span class="n">miss_v</span>
-<a name="l-597"></a>    <span class="o">?</span> <span class="n">snoop_word_lo</span>
-<a name="l-598"></a>    <span class="o">:</span> <span class="n">bypass_data_masked</span><span class="p">;</span>
-<a name="l-599"></a>
-<a name="l-600"></a>
-<a name="l-601"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">expanded_mask_v</span><span class="p">;</span>
+<a name="l-560"></a>    <span class="k">end</span>
+<a name="l-561"></a>  <span class="k">end</span>
+<a name="l-562"></a>
+<a name="l-563"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">mask_op</span>
+<a name="l-564"></a>    <span class="o">?</span> <span class="n">data_v_r</span>
+<a name="l-565"></a>    <span class="o">:</span> <span class="n">sbuf_data_in</span><span class="p">;</span>
+<a name="l-566"></a>
+<a name="l-567"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">mask_op</span>
+<a name="l-568"></a>    <span class="o">?</span> <span class="n">mask_v_r</span>
+<a name="l-569"></a>    <span class="o">:</span> <span class="n">sbuf_mask_in</span><span class="p">;</span>
+<a name="l-570"></a>
+<a name="l-571"></a>
+<a name="l-572"></a>  <span class="c1">// output stage</span>
+<a name="l-573"></a>  <span class="c1">//</span>
+<a name="l-574"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_way_picked</span><span class="p">;</span>
+<a name="l-575"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">bypass_data_masked</span><span class="p">;</span>
+<a name="l-576"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">snoop_or_ld_data</span><span class="p">;</span>
+<a name="l-577"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_masked</span><span class="p">;</span>
+<a name="l-578"></a>
+<a name="l-579"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
+<a name="l-580"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
+<a name="l-581"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
+<a name="l-582"></a>  <span class="p">)</span> <span class="n">ld_data_mux</span> <span class="p">(</span>
+<a name="l-583"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">ld_data_v_r</span><span class="p">)</span>
+<a name="l-584"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">tag_hit_way_id</span><span class="p">)</span>
+<a name="l-585"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">ld_data_way_picked</span><span class="p">)</span>
+<a name="l-586"></a>  <span class="p">);</span>
+<a name="l-587"></a>
+<a name="l-588"></a>  <span class="n">bsg_mux_segmented</span> <span class="p">#(</span>
+<a name="l-589"></a>    <span class="p">.</span><span class="n">segments_p</span><span class="p">(</span><span class="n">data_mask_width_lp</span><span class="p">)</span>
+<a name="l-590"></a>    <span class="p">,.</span><span class="n">segment_width_p</span><span class="p">(</span><span class="mh">8</span><span class="p">)</span>
+<a name="l-591"></a>  <span class="p">)</span> <span class="n">bypass_mux_segmented</span> <span class="p">(</span>
+<a name="l-592"></a>    <span class="p">.</span><span class="n">data0_i</span><span class="p">(</span><span class="n">ld_data_way_picked</span><span class="p">)</span>
+<a name="l-593"></a>    <span class="p">,.</span><span class="n">data1_i</span><span class="p">(</span><span class="n">bypass_data_lo</span><span class="p">)</span>
+<a name="l-594"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">bypass_mask_lo</span><span class="p">)</span>
+<a name="l-595"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">bypass_data_masked</span><span class="p">)</span>
+<a name="l-596"></a>  <span class="p">);</span>
+<a name="l-597"></a>  
+<a name="l-598"></a>
+<a name="l-599"></a>  <span class="k">assign</span> <span class="n">snoop_or_ld_data</span> <span class="o">=</span> <span class="n">miss_v</span>
+<a name="l-600"></a>    <span class="o">?</span> <span class="n">snoop_word_lo</span>
+<a name="l-601"></a>    <span class="o">:</span> <span class="n">bypass_data_masked</span><span class="p">;</span>
 <a name="l-602"></a>
-<a name="l-603"></a>  <span class="n">bsg_expand_bitmask</span> <span class="p">#(</span>
-<a name="l-604"></a>    <span class="p">.</span><span class="n">in_width_p</span><span class="p">(</span><span class="n">data_mask_width_lp</span><span class="p">)</span>
-<a name="l-605"></a>    <span class="p">,.</span><span class="n">expand_p</span><span class="p">(</span><span class="mh">8</span><span class="p">)</span>
-<a name="l-606"></a>  <span class="p">)</span> <span class="n">mask_v_expand</span> <span class="p">(</span>
-<a name="l-607"></a>    <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">mask_v_r</span><span class="p">)</span>
-<a name="l-608"></a>    <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">expanded_mask_v</span><span class="p">)</span>
-<a name="l-609"></a>  <span class="p">);</span>
-<a name="l-610"></a>
-<a name="l-611"></a>  <span class="k">assign</span> <span class="n">ld_data_masked</span> <span class="o">=</span> <span class="n">snoop_or_ld_data</span> <span class="o">&amp;</span> <span class="n">expanded_mask_v</span><span class="p">;</span>
-<a name="l-612"></a>
-<a name="l-613"></a>  <span class="c1">// select double/word/half/byte load data</span>
-<a name="l-614"></a>  <span class="c1">//</span>
-<a name="l-615"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_final_li</span><span class="p">;</span>
-<a name="l-616"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_final_lo</span><span class="p">;</span>
-<a name="l-617"></a>  
-<a name="l-618"></a>
-<a name="l-619"></a>  <span class="k">for</span> <span class="p">(</span><span class="k">genvar</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data_sel_mux_els_lp</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">ld_data_sel</span>
-<a name="l-620"></a>
-<a name="l-621"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">max_size</span>
-<a name="l-622"></a>
-<a name="l-623"></a>      <span class="k">assign</span> <span class="n">ld_data_final_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">snoop_or_ld_data</span><span class="p">;</span>
-<a name="l-624"></a>
-<a name="l-625"></a>    <span class="k">end</span>
-<a name="l-626"></a>    <span class="k">else</span> <span class="k">begin</span><span class="o">:</span> <span class="n">non_max_size</span>
+<a name="l-603"></a>
+<a name="l-604"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">expanded_mask_v</span><span class="p">;</span>
+<a name="l-605"></a>
+<a name="l-606"></a>  <span class="n">bsg_expand_bitmask</span> <span class="p">#(</span>
+<a name="l-607"></a>    <span class="p">.</span><span class="n">in_width_p</span><span class="p">(</span><span class="n">data_mask_width_lp</span><span class="p">)</span>
+<a name="l-608"></a>    <span class="p">,.</span><span class="n">expand_p</span><span class="p">(</span><span class="mh">8</span><span class="p">)</span>
+<a name="l-609"></a>  <span class="p">)</span> <span class="n">mask_v_expand</span> <span class="p">(</span>
+<a name="l-610"></a>    <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">mask_v_r</span><span class="p">)</span>
+<a name="l-611"></a>    <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">expanded_mask_v</span><span class="p">)</span>
+<a name="l-612"></a>  <span class="p">);</span>
+<a name="l-613"></a>
+<a name="l-614"></a>  <span class="k">assign</span> <span class="n">ld_data_masked</span> <span class="o">=</span> <span class="n">snoop_or_ld_data</span> <span class="o">&amp;</span> <span class="n">expanded_mask_v</span><span class="p">;</span>
+<a name="l-615"></a>
+<a name="l-616"></a>  <span class="c1">// select double/word/half/byte load data</span>
+<a name="l-617"></a>  <span class="c1">//</span>
+<a name="l-618"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">][</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_final_li</span><span class="p">;</span>
+<a name="l-619"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">ld_data_final_lo</span><span class="p">;</span>
+<a name="l-620"></a>  
+<a name="l-621"></a>
+<a name="l-622"></a>  <span class="k">for</span> <span class="p">(</span><span class="k">genvar</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data_sel_mux_els_lp</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">ld_data_sel</span>
+<a name="l-623"></a>
+<a name="l-624"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">data_sel_mux_els_lp</span><span class="o">-</span><span class="mh">1</span><span class="p">)</span> <span class="k">begin</span><span class="o">:</span> <span class="n">max_size</span>
+<a name="l-625"></a>
+<a name="l-626"></a>      <span class="k">assign</span> <span class="n">ld_data_final_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">snoop_or_ld_data</span><span class="p">;</span>
 <a name="l-627"></a>
-<a name="l-628"></a>      <span class="k">logic</span> <span class="p">[(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">byte_sel</span><span class="p">;</span>
-<a name="l-629"></a>
-<a name="l-630"></a>      <span class="n">bsg_mux</span> <span class="p">#(</span>
-<a name="l-631"></a>        <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span>
-<a name="l-632"></a>        <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)))</span>
-<a name="l-633"></a>      <span class="p">)</span> <span class="n">byte_mux</span> <span class="p">(</span>
-<a name="l-634"></a>        <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">snoop_or_ld_data</span><span class="p">)</span>
-<a name="l-635"></a>        <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">addr_v_r</span><span class="p">[</span><span class="n">i</span><span class="o">+:</span><span class="no">`BSG_MAX</span><span class="p">(</span><span class="n">lg_data_mask_width_lp</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="mh">1</span><span class="p">)])</span>
-<a name="l-636"></a>        <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">byte_sel</span><span class="p">)</span>
-<a name="l-637"></a>      <span class="p">);</span>
-<a name="l-638"></a>
-<a name="l-639"></a>      <span class="k">assign</span> <span class="n">ld_data_final_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> 
-<a name="l-640"></a>        <span class="p">{{(</span><span class="n">data_width_p</span><span class="o">-</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))){</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">sigext_op</span> <span class="o">&amp;</span> <span class="n">byte_sel</span><span class="p">[(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mh">1</span><span class="p">]}},</span> <span class="n">byte_sel</span><span class="p">};</span>
+<a name="l-628"></a>    <span class="k">end</span>
+<a name="l-629"></a>    <span class="k">else</span> <span class="k">begin</span><span class="o">:</span> <span class="n">non_max_size</span>
+<a name="l-630"></a>
+<a name="l-631"></a>      <span class="k">logic</span> <span class="p">[(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">byte_sel</span><span class="p">;</span>
+<a name="l-632"></a>
+<a name="l-633"></a>      <span class="n">bsg_mux</span> <span class="p">#(</span>
+<a name="l-634"></a>        <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span>
+<a name="l-635"></a>        <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="o">/</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">)))</span>
+<a name="l-636"></a>      <span class="p">)</span> <span class="n">byte_mux</span> <span class="p">(</span>
+<a name="l-637"></a>        <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">snoop_or_ld_data</span><span class="p">)</span>
+<a name="l-638"></a>        <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">addr_v_r</span><span class="p">[</span><span class="n">i</span><span class="o">+:</span><span class="no">`BSG_MAX</span><span class="p">(</span><span class="n">lg_data_mask_width_lp</span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="mh">1</span><span class="p">)])</span>
+<a name="l-639"></a>        <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">byte_sel</span><span class="p">)</span>
+<a name="l-640"></a>      <span class="p">);</span>
 <a name="l-641"></a>
-<a name="l-642"></a>    <span class="k">end</span>
-<a name="l-643"></a>
-<a name="l-644"></a>  <span class="k">end</span>
-<a name="l-645"></a>  
-<a name="l-646"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
-<a name="l-647"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
-<a name="l-648"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_sel_mux_els_lp</span><span class="p">)</span>
-<a name="l-649"></a>  <span class="p">)</span> <span class="n">ld_data_size_mux</span> <span class="p">(</span>
-<a name="l-650"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">ld_data_final_li</span><span class="p">)</span>
-<a name="l-651"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">data_size_op</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">lg_data_sel_mux_els_lp</span><span class="p">])</span>
-<a name="l-652"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">ld_data_final_lo</span><span class="p">)</span>
-<a name="l-653"></a>  <span class="p">);</span>
-<a name="l-654"></a>
-<a name="l-655"></a>  <span class="c1">// final output mux</span>
-<a name="l-656"></a>  <span class="k">always_comb</span> <span class="k">begin</span>
-<a name="l-657"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">retval_op_v</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-658"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">taglv_op</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-659"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="p">{{(</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">2</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}},</span> <span class="n">lock_v_r</span><span class="p">[</span><span class="n">addr_way_v</span><span class="p">],</span> <span class="n">valid_v_r</span><span class="p">[</span><span class="n">addr_way_v</span><span class="p">]};</span>
-<a name="l-660"></a>      <span class="k">end</span>
-<a name="l-661"></a>      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagla_op</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-662"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="p">{</span><span class="n">tag_v_r</span><span class="p">[</span><span class="n">addr_way_v</span><span class="p">],</span> <span class="n">addr_index_v</span><span class="p">,</span>
-<a name="l-663"></a>          <span class="p">{(</span><span class="n">lg_block_size_in_words_lp</span><span class="o">+</span><span class="n">lg_data_mask_width_lp</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}}</span>
-<a name="l-664"></a>        <span class="p">};</span>
-<a name="l-665"></a>      <span class="k">end</span>
-<a name="l-666"></a>      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">mask_op</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-667"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="n">ld_data_masked</span><span class="p">;</span>
+<a name="l-642"></a>      <span class="k">assign</span> <span class="n">ld_data_final_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> 
+<a name="l-643"></a>        <span class="p">{{(</span><span class="n">data_width_p</span><span class="o">-</span><span class="p">(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))){</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">sigext_op</span> <span class="o">&amp;</span> <span class="n">byte_sel</span><span class="p">[(</span><span class="mh">8</span><span class="o">*</span><span class="p">(</span><span class="mh">2</span><span class="o">**</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mh">1</span><span class="p">]}},</span> <span class="n">byte_sel</span><span class="p">};</span>
+<a name="l-644"></a>
+<a name="l-645"></a>    <span class="k">end</span>
+<a name="l-646"></a>
+<a name="l-647"></a>  <span class="k">end</span>
+<a name="l-648"></a>  
+<a name="l-649"></a>  <span class="n">bsg_mux</span> <span class="p">#(</span>
+<a name="l-650"></a>    <span class="p">.</span><span class="n">width_p</span><span class="p">(</span><span class="n">data_width_p</span><span class="p">)</span>
+<a name="l-651"></a>    <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">data_sel_mux_els_lp</span><span class="p">)</span>
+<a name="l-652"></a>  <span class="p">)</span> <span class="n">ld_data_size_mux</span> <span class="p">(</span>
+<a name="l-653"></a>    <span class="p">.</span><span class="n">data_i</span><span class="p">(</span><span class="n">ld_data_final_li</span><span class="p">)</span>
+<a name="l-654"></a>    <span class="p">,.</span><span class="n">sel_i</span><span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">data_size_op</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">lg_data_sel_mux_els_lp</span><span class="p">])</span>
+<a name="l-655"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">ld_data_final_lo</span><span class="p">)</span>
+<a name="l-656"></a>  <span class="p">);</span>
+<a name="l-657"></a>
+<a name="l-658"></a>  <span class="c1">// final output mux</span>
+<a name="l-659"></a>  <span class="k">always_comb</span> <span class="k">begin</span>
+<a name="l-660"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">retval_op_v</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-661"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">taglv_op</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-662"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="p">{{(</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">2</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}},</span> <span class="n">lock_v_r</span><span class="p">[</span><span class="n">addr_way_v</span><span class="p">],</span> <span class="n">valid_v_r</span><span class="p">[</span><span class="n">addr_way_v</span><span class="p">]};</span>
+<a name="l-663"></a>      <span class="k">end</span>
+<a name="l-664"></a>      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagla_op</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-665"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="p">{</span><span class="n">tag_v_r</span><span class="p">[</span><span class="n">addr_way_v</span><span class="p">],</span> <span class="n">addr_index_v</span><span class="p">,</span>
+<a name="l-666"></a>          <span class="p">{(</span><span class="n">lg_block_size_in_words_lp</span><span class="o">+</span><span class="n">lg_data_mask_width_lp</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}}</span>
+<a name="l-667"></a>        <span class="p">};</span>
 <a name="l-668"></a>      <span class="k">end</span>
-<a name="l-669"></a>      <span class="k">else</span> <span class="k">begin</span>
-<a name="l-670"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="n">ld_data_final_lo</span><span class="p">;</span>
+<a name="l-669"></a>      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">mask_op</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-670"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="n">ld_data_masked</span><span class="p">;</span>
 <a name="l-671"></a>      <span class="k">end</span>
-<a name="l-672"></a>    <span class="k">end</span>
-<a name="l-673"></a>    <span class="k">else</span> <span class="k">begin</span>
-<a name="l-674"></a>      <span class="n">data_o</span> <span class="o">=</span> <span class="m">&#39;0</span><span class="p">;</span>
-<a name="l-675"></a>    <span class="k">end</span> 
-<a name="l-676"></a>  <span class="k">end</span> 
-<a name="l-677"></a>
-<a name="l-678"></a>  <span class="c1">// ctrl logic</span>
-<a name="l-679"></a>  <span class="c1">//</span>
-<a name="l-680"></a>  <span class="k">assign</span> <span class="n">v_o</span> <span class="o">=</span> <span class="n">v_v_r</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">miss_v</span>
-<a name="l-681"></a>    <span class="o">?</span> <span class="n">miss_done_lo</span>
-<a name="l-682"></a>    <span class="o">:</span> <span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">);</span> 
-<a name="l-683"></a>
-<a name="l-684"></a>  <span class="k">assign</span> <span class="n">v_we</span> <span class="o">=</span> <span class="n">v_v_r</span>
-<a name="l-685"></a>    <span class="o">?</span> <span class="p">(</span><span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">)</span>
-<a name="l-686"></a>    <span class="o">:</span> <span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
-<a name="l-687"></a>
-<a name="l-688"></a>  <span class="c1">// during miss, tl pipeline cannot take next instruction when</span>
-<a name="l-689"></a>  <span class="c1">// 1) input is tagst</span>
-<a name="l-690"></a>  <span class="c1">// 2) miss handler is writing to tag_mem</span>
-<a name="l-691"></a>  <span class="c1">// 3) dma engine is writing to data_mem</span>
-<a name="l-692"></a>  <span class="c1">// 4) tl_stage is recovering from tag_miss</span>
-<a name="l-693"></a>  <span class="k">logic</span> <span class="n">tl_ready</span><span class="p">;</span>
-<a name="l-694"></a>  <span class="k">assign</span> <span class="n">tl_ready</span> <span class="o">=</span> <span class="n">miss_v</span>
-<a name="l-695"></a>    <span class="o">?</span> <span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">tagst_op</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">miss_tag_mem_v_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">dma_data_mem_v_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">recover_lo</span><span class="p">)</span>
-<a name="l-696"></a>    <span class="o">:</span> <span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
-<a name="l-697"></a>  <span class="k">assign</span> <span class="n">ready_o</span> <span class="o">=</span> <span class="n">v_tl_r</span>
-<a name="l-698"></a>    <span class="o">?</span> <span class="p">(</span><span class="n">v_we</span> <span class="o">&amp;</span> <span class="n">tl_ready</span><span class="p">)</span>
-<a name="l-699"></a>    <span class="o">:</span> <span class="n">tl_ready</span><span class="p">;</span>
-<a name="l-700"></a>
-<a name="l-701"></a>
-<a name="l-702"></a>  <span class="c1">// tag_mem</span>
-<a name="l-703"></a>  <span class="c1">// values written by tagst command</span>
-<a name="l-704"></a> 
-<a name="l-705"></a>  <span class="k">logic</span> <span class="n">tagst_valid</span><span class="p">;</span>
-<a name="l-706"></a>  <span class="k">logic</span> <span class="n">tagst_lock</span><span class="p">;</span>
-<a name="l-707"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">tag_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">tagst_tag</span><span class="p">;</span>
-<a name="l-708"></a>  <span class="k">logic</span> <span class="n">tagst_write_en</span><span class="p">;</span>
-<a name="l-709"></a>
-<a name="l-710"></a>  <span class="k">assign</span> <span class="n">tagst_valid</span> <span class="o">=</span> <span class="n">cache_pkt</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="p">];</span>
-<a name="l-711"></a>  <span class="k">assign</span> <span class="n">tagst_lock</span> <span class="o">=</span> <span class="n">cache_pkt</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">2</span><span class="p">];</span>
-<a name="l-712"></a>  <span class="k">assign</span> <span class="n">tagst_tag</span> <span class="o">=</span> <span class="n">cache_pkt</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">tag_width_lp</span><span class="p">];</span>
-<a name="l-713"></a>  <span class="k">assign</span> <span class="n">tagst_write_en</span> <span class="o">=</span> <span class="n">decode</span><span class="p">.</span><span class="n">tagst_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">;</span>
-<a name="l-714"></a>
-<a name="l-715"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">addr_way_decode</span><span class="p">;</span>
-<a name="l-716"></a>  <span class="n">bsg_decode</span> <span class="p">#(</span>
-<a name="l-717"></a>    <span class="p">.</span><span class="n">num_out_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
-<a name="l-718"></a>  <span class="p">)</span> <span class="n">addr_way_demux</span> <span class="p">(</span>
-<a name="l-719"></a>    <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">addr_way</span><span class="p">)</span>
-<a name="l-720"></a>    <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">addr_way_decode</span><span class="p">)</span>
-<a name="l-721"></a>  <span class="p">);</span>
-<a name="l-722"></a>
-<a name="l-723"></a>  <span class="k">assign</span> <span class="n">tag_mem_v_li</span> <span class="o">=</span> <span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">tag_read_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">)</span>
-<a name="l-724"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">recover_lo</span> <span class="o">&amp;</span> <span class="n">decode_tl_r</span><span class="p">.</span><span class="n">tag_read_op</span> <span class="o">&amp;</span> <span class="n">v_tl_r</span><span class="p">)</span>
-<a name="l-725"></a>    <span class="o">|</span> <span class="n">miss_tag_mem_v_lo</span>
-<a name="l-726"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">tagst_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">);</span> 
-<a name="l-727"></a>  
-<a name="l-728"></a>  <span class="k">assign</span> <span class="n">tag_mem_w_li</span> <span class="o">=</span> <span class="n">miss_v</span>
-<a name="l-729"></a>    <span class="o">?</span> <span class="n">miss_tag_mem_w_lo</span>
-<a name="l-730"></a>    <span class="o">:</span> <span class="n">tagst_write_en</span><span class="p">;</span>
-<a name="l-731"></a>
-<a name="l-732"></a>  <span class="k">always_comb</span> <span class="k">begin</span>
-<a name="l-733"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">miss_v</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-734"></a>      <span class="n">tag_mem_addr_li</span> <span class="o">=</span> <span class="n">recover_lo</span>
-<a name="l-735"></a>        <span class="o">?</span> <span class="n">addr_index_tl</span>
-<a name="l-736"></a>        <span class="o">:</span> <span class="p">(</span><span class="n">miss_tag_mem_v_lo</span> <span class="o">?</span> <span class="n">miss_tag_mem_addr_lo</span> <span class="o">:</span> <span class="n">addr_index</span><span class="p">);</span>
-<a name="l-737"></a>      <span class="n">tag_mem_data_li</span> <span class="o">=</span> <span class="n">miss_tag_mem_data_lo</span><span class="p">;</span>
-<a name="l-738"></a>      <span class="n">tag_mem_w_mask_li</span> <span class="o">=</span> <span class="n">miss_tag_mem_w_mask_lo</span><span class="p">;</span>
-<a name="l-739"></a>    <span class="k">end</span>
-<a name="l-740"></a>    <span class="k">else</span> <span class="k">begin</span>
-<a name="l-741"></a>      <span class="c1">// for TAGST</span>
-<a name="l-742"></a>      <span class="n">tag_mem_addr_li</span> <span class="o">=</span> <span class="n">addr_index</span><span class="p">;</span>
-<a name="l-743"></a>      <span class="k">for</span> <span class="p">(</span><span class="k">integer</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ways_p</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-744"></a>        <span class="n">tag_mem_data_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">tagst_valid</span><span class="p">,</span> <span class="n">tagst_lock</span><span class="p">,</span> <span class="n">tagst_tag</span><span class="p">};</span>
-<a name="l-745"></a>        <span class="n">tag_mem_w_mask_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">tag_info_width_lp</span><span class="p">{</span><span class="n">addr_way_decode</span><span class="p">[</span><span class="n">i</span><span class="p">]}};</span>
-<a name="l-746"></a>      <span class="k">end</span>
-<a name="l-747"></a>    <span class="k">end</span>
-<a name="l-748"></a>  <span class="k">end</span>
-<a name="l-749"></a>
-<a name="l-750"></a>  <span class="c1">// data_mem ctrl logic</span>
-<a name="l-751"></a>  <span class="c1">//</span>
-<a name="l-752"></a>  <span class="k">assign</span> <span class="n">data_mem_v_li</span> <span class="o">=</span> <span class="p">((</span><span class="n">v_i</span> <span class="o">&amp;</span> <span class="n">decode</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span><span class="p">)</span>
-<a name="l-753"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">v_tl_r</span> <span class="o">&amp;</span> <span class="n">recover_lo</span> <span class="o">&amp;</span> <span class="n">decode_tl_r</span><span class="p">.</span><span class="n">ld_op</span><span class="p">)</span>
-<a name="l-754"></a>    <span class="o">|</span> <span class="n">dma_data_mem_v_lo</span>
-<a name="l-755"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">sbuf_v_lo</span> <span class="o">&amp;</span> <span class="n">sbuf_yumi_li</span><span class="p">)</span>
-<a name="l-756"></a>  <span class="p">);</span>
-<a name="l-757"></a>  
-<a name="l-758"></a>  <span class="k">assign</span> <span class="n">data_mem_w_li</span> <span class="o">=</span> <span class="n">dma_data_mem_w_lo</span> <span class="o">|</span> <span class="p">(</span><span class="n">sbuf_v_lo</span> <span class="o">&amp;</span> <span class="n">sbuf_yumi_li</span><span class="p">);</span>
-<a name="l-759"></a>
-<a name="l-760"></a>  <span class="k">assign</span> <span class="n">data_mem_data_li</span> <span class="o">=</span> <span class="n">dma_data_mem_w_lo</span>
-<a name="l-761"></a>    <span class="o">?</span> <span class="n">dma_data_mem_data_lo</span>
-<a name="l-762"></a>    <span class="o">:</span> <span class="n">sbuf_data_mem_data</span><span class="p">;</span>
-<a name="l-763"></a>
-<a name="l-764"></a>  <span class="k">assign</span> <span class="n">data_mem_addr_li</span> <span class="o">=</span> <span class="n">recover_lo</span>
-<a name="l-765"></a>    <span class="o">?</span> <span class="p">{</span><span class="n">addr_index_tl</span><span class="p">,</span> <span class="n">addr_block_offset_tl</span><span class="p">}</span>
-<a name="l-766"></a>    <span class="o">:</span> <span class="p">(</span><span class="n">dma_data_mem_v_lo</span>
-<a name="l-767"></a>      <span class="o">?</span> <span class="n">dma_data_mem_addr_lo</span>
-<a name="l-768"></a>      <span class="o">:</span> <span class="p">((</span><span class="n">decode</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">v_i</span> <span class="o">&amp;</span> <span class="n">ready_o</span><span class="p">)</span> 
-<a name="l-769"></a>        <span class="o">?</span> <span class="p">{</span><span class="n">addr_index</span><span class="p">,</span> <span class="n">addr_block_offset</span><span class="p">}</span>
-<a name="l-770"></a>        <span class="o">:</span> <span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">addr</span><span class="p">[</span><span class="n">lg_data_mask_width_lp</span><span class="o">+:</span><span class="n">lg_block_size_in_words_lp</span><span class="o">+</span><span class="n">lg_sets_lp</span><span class="p">]));</span>
-<a name="l-771"></a>
-<a name="l-772"></a>  <span class="k">assign</span> <span class="n">data_mem_w_mask_li</span> <span class="o">=</span> <span class="n">dma_data_mem_w_lo</span>
-<a name="l-773"></a>    <span class="o">?</span> <span class="n">dma_data_mem_w_mask_lo</span>
-<a name="l-774"></a>    <span class="o">:</span> <span class="n">sbuf_data_mem_w_mask</span><span class="p">;</span>
-<a name="l-775"></a>
-<a name="l-776"></a>
-<a name="l-777"></a>  <span class="c1">// stat_mem ctrl logic</span>
-<a name="l-778"></a>  <span class="c1">// TAGST clears the stat_info as it exits tv stage.</span>
-<a name="l-779"></a>  <span class="c1">// If it&#39;s load or store, and there is a hit, it updates the dirty bits and LRU.</span>
-<a name="l-780"></a>  <span class="c1">// If there is a miss, stat_mem may be modified by the miss handler.</span>
-<a name="l-781"></a>
-<a name="l-782"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">plru_decode_data_lo</span><span class="p">;</span>
-<a name="l-783"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">plru_decode_mask_lo</span><span class="p">;</span>
-<a name="l-784"></a>  
-<a name="l-785"></a>  <span class="n">bsg_lru_pseudo_tree_decode</span> <span class="p">#(</span>
-<a name="l-786"></a>    <span class="p">.</span><span class="n">ways_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
-<a name="l-787"></a>  <span class="p">)</span> <span class="n">plru_decode</span> <span class="p">(</span>
-<a name="l-788"></a>    <span class="p">.</span><span class="n">way_id_i</span><span class="p">(</span><span class="n">tag_hit_way_id</span><span class="p">)</span>
-<a name="l-789"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">plru_decode_data_lo</span><span class="p">)</span>
-<a name="l-790"></a>    <span class="p">,.</span><span class="n">mask_o</span><span class="p">(</span><span class="n">plru_decode_mask_lo</span><span class="p">)</span>
-<a name="l-791"></a>  <span class="p">);</span>
-<a name="l-792"></a>
-<a name="l-793"></a>  <span class="k">always_comb</span> <span class="k">begin</span>
-<a name="l-794"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">miss_v</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-795"></a>      <span class="n">stat_mem_v_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_v_lo</span><span class="p">;</span>
-<a name="l-796"></a>      <span class="n">stat_mem_w_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_w_lo</span><span class="p">;</span>
-<a name="l-797"></a>      <span class="n">stat_mem_addr_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_addr_lo</span><span class="p">;</span> <span class="c1">// essentially same as addr_index_v</span>
-<a name="l-798"></a>      <span class="n">stat_mem_data_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_data_lo</span><span class="p">;</span>
-<a name="l-799"></a>      <span class="n">stat_mem_w_mask_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_w_mask_lo</span><span class="p">;</span>
-<a name="l-800"></a>    <span class="k">end</span>
-<a name="l-801"></a>    <span class="k">else</span> <span class="k">begin</span>
-<a name="l-802"></a>      <span class="n">stat_mem_v_li</span> <span class="o">=</span> <span class="p">((</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">ld_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagst_op</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">);</span>
-<a name="l-803"></a>      <span class="n">stat_mem_w_li</span> <span class="o">=</span> <span class="p">((</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">ld_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagst_op</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">);</span>
-<a name="l-804"></a>      <span class="n">stat_mem_addr_li</span> <span class="o">=</span> <span class="n">addr_index_v</span><span class="p">;</span>
-<a name="l-805"></a>
-<a name="l-806"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagst_op</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-807"></a>        <span class="c1">// for TAGST</span>
-<a name="l-808"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}};</span>
-<a name="l-809"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="p">{(</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}};</span>
-<a name="l-810"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">}};</span>
-<a name="l-811"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="p">{(</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">}};</span>
-<a name="l-812"></a>      <span class="k">end</span>
-<a name="l-813"></a>      <span class="k">else</span> <span class="k">begin</span>
-<a name="l-814"></a>        <span class="c1">// for LD, ST</span>
-<a name="l-815"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="p">}};</span>
-<a name="l-816"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="n">plru_decode_data_lo</span><span class="p">;</span>
-<a name="l-817"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="p">}}</span> <span class="o">&amp;</span> <span class="n">tag_hit_v</span><span class="p">;</span>
-<a name="l-818"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="n">plru_decode_mask_lo</span><span class="p">;</span>
-<a name="l-819"></a>      <span class="k">end</span>
-<a name="l-820"></a>    <span class="k">end</span>
-<a name="l-821"></a>  <span class="k">end</span>
-<a name="l-822"></a>
-<a name="l-823"></a>
-<a name="l-824"></a>  <span class="c1">// store buffer</span>
-<a name="l-825"></a>  <span class="c1">//</span>
-<a name="l-826"></a>  <span class="k">assign</span> <span class="n">sbuf_v_li</span> <span class="o">=</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span> <span class="o">&amp;</span> <span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">;</span>
-<a name="l-827"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">way_id</span> <span class="o">=</span> <span class="n">miss_v</span> <span class="o">?</span> <span class="n">chosen_way_lo</span> <span class="o">:</span> <span class="n">tag_hit_way_id</span><span class="p">;</span>
-<a name="l-828"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="n">addr_v_r</span><span class="p">;</span>
-<a name="l-829"></a>  <span class="k">assign</span> <span class="n">sbuf_yumi_li</span> <span class="o">=</span> <span class="n">sbuf_v_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">v_i</span> <span class="o">&amp;</span> <span class="n">ready_o</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="n">dma_data_mem_v_lo</span><span class="p">);</span> 
-<a name="l-830"></a>
-<a name="l-831"></a>  <span class="k">assign</span> <span class="n">bypass_addr_li</span> <span class="o">=</span> <span class="n">addr_tl_r</span><span class="p">;</span>
-<a name="l-832"></a>  <span class="k">assign</span> <span class="n">bypass_v_li</span> <span class="o">=</span> <span class="n">decode_tl_r</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">v_tl_r</span> <span class="o">&amp;</span> <span class="n">v_we</span><span class="p">;</span>
+<a name="l-672"></a>      <span class="k">else</span> <span class="k">begin</span>
+<a name="l-673"></a>        <span class="n">data_o</span> <span class="o">=</span> <span class="n">ld_data_final_lo</span><span class="p">;</span>
+<a name="l-674"></a>      <span class="k">end</span>
+<a name="l-675"></a>    <span class="k">end</span>
+<a name="l-676"></a>    <span class="k">else</span> <span class="k">begin</span>
+<a name="l-677"></a>      <span class="n">data_o</span> <span class="o">=</span> <span class="m">&#39;0</span><span class="p">;</span>
+<a name="l-678"></a>    <span class="k">end</span> 
+<a name="l-679"></a>  <span class="k">end</span> 
+<a name="l-680"></a>
+<a name="l-681"></a>  <span class="c1">// ctrl logic</span>
+<a name="l-682"></a>  <span class="c1">//</span>
+<a name="l-683"></a>  <span class="k">assign</span> <span class="n">v_o</span> <span class="o">=</span> <span class="n">v_v_r</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">miss_v</span>
+<a name="l-684"></a>    <span class="o">?</span> <span class="n">miss_done_lo</span>
+<a name="l-685"></a>    <span class="o">:</span> <span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">);</span> 
+<a name="l-686"></a>
+<a name="l-687"></a>  <span class="k">assign</span> <span class="n">v_we</span> <span class="o">=</span> <span class="n">v_v_r</span>
+<a name="l-688"></a>    <span class="o">?</span> <span class="p">(</span><span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">)</span>
+<a name="l-689"></a>    <span class="o">:</span> <span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a name="l-690"></a>
+<a name="l-691"></a>  <span class="c1">// during miss, tl pipeline cannot take next instruction when</span>
+<a name="l-692"></a>  <span class="c1">// 1) input is tagst</span>
+<a name="l-693"></a>  <span class="c1">// 2) miss handler is writing to tag_mem</span>
+<a name="l-694"></a>  <span class="c1">// 3) dma engine is writing to data_mem</span>
+<a name="l-695"></a>  <span class="c1">// 4) tl_stage is recovering from tag_miss</span>
+<a name="l-696"></a>  <span class="k">logic</span> <span class="n">tl_ready</span><span class="p">;</span>
+<a name="l-697"></a>  <span class="k">assign</span> <span class="n">tl_ready</span> <span class="o">=</span> <span class="n">miss_v</span>
+<a name="l-698"></a>    <span class="o">?</span> <span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">tagst_op</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">miss_tag_mem_v_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">dma_data_mem_v_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">recover_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">dma_evict_lo</span><span class="p">)</span>
+<a name="l-699"></a>    <span class="o">:</span> <span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<a name="l-700"></a>  <span class="k">assign</span> <span class="n">ready_o</span> <span class="o">=</span> <span class="n">v_tl_r</span>
+<a name="l-701"></a>    <span class="o">?</span> <span class="p">(</span><span class="n">v_we</span> <span class="o">&amp;</span> <span class="n">tl_ready</span><span class="p">)</span>
+<a name="l-702"></a>    <span class="o">:</span> <span class="n">tl_ready</span><span class="p">;</span>
+<a name="l-703"></a>
+<a name="l-704"></a>
+<a name="l-705"></a>  <span class="c1">// tag_mem</span>
+<a name="l-706"></a>  <span class="c1">// values written by tagst command</span>
+<a name="l-707"></a> 
+<a name="l-708"></a>  <span class="k">logic</span> <span class="n">tagst_valid</span><span class="p">;</span>
+<a name="l-709"></a>  <span class="k">logic</span> <span class="n">tagst_lock</span><span class="p">;</span>
+<a name="l-710"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">tag_width_lp</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">tagst_tag</span><span class="p">;</span>
+<a name="l-711"></a>  <span class="k">logic</span> <span class="n">tagst_write_en</span><span class="p">;</span>
+<a name="l-712"></a>
+<a name="l-713"></a>  <span class="k">assign</span> <span class="n">tagst_valid</span> <span class="o">=</span> <span class="n">cache_pkt</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">1</span><span class="p">];</span>
+<a name="l-714"></a>  <span class="k">assign</span> <span class="n">tagst_lock</span> <span class="o">=</span> <span class="n">cache_pkt</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">data_width_p</span><span class="o">-</span><span class="mh">2</span><span class="p">];</span>
+<a name="l-715"></a>  <span class="k">assign</span> <span class="n">tagst_tag</span> <span class="o">=</span> <span class="n">cache_pkt</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="n">tag_width_lp</span><span class="p">];</span>
+<a name="l-716"></a>  <span class="k">assign</span> <span class="n">tagst_write_en</span> <span class="o">=</span> <span class="n">decode</span><span class="p">.</span><span class="n">tagst_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">;</span>
+<a name="l-717"></a>
+<a name="l-718"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">addr_way_decode</span><span class="p">;</span>
+<a name="l-719"></a>  <span class="n">bsg_decode</span> <span class="p">#(</span>
+<a name="l-720"></a>    <span class="p">.</span><span class="n">num_out_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
+<a name="l-721"></a>  <span class="p">)</span> <span class="n">addr_way_demux</span> <span class="p">(</span>
+<a name="l-722"></a>    <span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="n">addr_way</span><span class="p">)</span>
+<a name="l-723"></a>    <span class="p">,.</span><span class="n">o</span><span class="p">(</span><span class="n">addr_way_decode</span><span class="p">)</span>
+<a name="l-724"></a>  <span class="p">);</span>
+<a name="l-725"></a>
+<a name="l-726"></a>  <span class="k">assign</span> <span class="n">tag_mem_v_li</span> <span class="o">=</span> <span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">tag_read_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">)</span>
+<a name="l-727"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">recover_lo</span> <span class="o">&amp;</span> <span class="n">decode_tl_r</span><span class="p">.</span><span class="n">tag_read_op</span> <span class="o">&amp;</span> <span class="n">v_tl_r</span><span class="p">)</span>
+<a name="l-728"></a>    <span class="o">|</span> <span class="n">miss_tag_mem_v_lo</span>
+<a name="l-729"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">tagst_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span> <span class="o">&amp;</span> <span class="n">v_i</span><span class="p">);</span> 
+<a name="l-730"></a>  
+<a name="l-731"></a>  <span class="k">assign</span> <span class="n">tag_mem_w_li</span> <span class="o">=</span> <span class="n">miss_v</span>
+<a name="l-732"></a>    <span class="o">?</span> <span class="n">miss_tag_mem_w_lo</span>
+<a name="l-733"></a>    <span class="o">:</span> <span class="n">tagst_write_en</span><span class="p">;</span>
+<a name="l-734"></a>
+<a name="l-735"></a>  <span class="k">always_comb</span> <span class="k">begin</span>
+<a name="l-736"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">miss_v</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-737"></a>      <span class="n">tag_mem_addr_li</span> <span class="o">=</span> <span class="n">recover_lo</span>
+<a name="l-738"></a>        <span class="o">?</span> <span class="n">addr_index_tl</span>
+<a name="l-739"></a>        <span class="o">:</span> <span class="p">(</span><span class="n">miss_tag_mem_v_lo</span> <span class="o">?</span> <span class="n">miss_tag_mem_addr_lo</span> <span class="o">:</span> <span class="n">addr_index</span><span class="p">);</span>
+<a name="l-740"></a>      <span class="n">tag_mem_data_li</span> <span class="o">=</span> <span class="n">miss_tag_mem_data_lo</span><span class="p">;</span>
+<a name="l-741"></a>      <span class="n">tag_mem_w_mask_li</span> <span class="o">=</span> <span class="n">miss_tag_mem_w_mask_lo</span><span class="p">;</span>
+<a name="l-742"></a>    <span class="k">end</span>
+<a name="l-743"></a>    <span class="k">else</span> <span class="k">begin</span>
+<a name="l-744"></a>      <span class="c1">// for TAGST</span>
+<a name="l-745"></a>      <span class="n">tag_mem_addr_li</span> <span class="o">=</span> <span class="n">addr_index</span><span class="p">;</span>
+<a name="l-746"></a>      <span class="k">for</span> <span class="p">(</span><span class="k">integer</span> <span class="n">i</span> <span class="o">=</span> <span class="mh">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ways_p</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-747"></a>        <span class="n">tag_mem_data_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">tagst_valid</span><span class="p">,</span> <span class="n">tagst_lock</span><span class="p">,</span> <span class="n">tagst_tag</span><span class="p">};</span>
+<a name="l-748"></a>        <span class="n">tag_mem_w_mask_li</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">tag_info_width_lp</span><span class="p">{</span><span class="n">addr_way_decode</span><span class="p">[</span><span class="n">i</span><span class="p">]}};</span>
+<a name="l-749"></a>      <span class="k">end</span>
+<a name="l-750"></a>    <span class="k">end</span>
+<a name="l-751"></a>  <span class="k">end</span>
+<a name="l-752"></a>
+<a name="l-753"></a>  <span class="c1">// data_mem ctrl logic</span>
+<a name="l-754"></a>  <span class="c1">//</span>
+<a name="l-755"></a>  <span class="k">assign</span> <span class="n">data_mem_v_li</span> <span class="o">=</span> <span class="p">((</span><span class="n">v_i</span> <span class="o">&amp;</span> <span class="n">decode</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">ready_o</span><span class="p">)</span>
+<a name="l-756"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">v_tl_r</span> <span class="o">&amp;</span> <span class="n">recover_lo</span> <span class="o">&amp;</span> <span class="n">decode_tl_r</span><span class="p">.</span><span class="n">ld_op</span><span class="p">)</span>
+<a name="l-757"></a>    <span class="o">|</span> <span class="n">dma_data_mem_v_lo</span>
+<a name="l-758"></a>    <span class="o">|</span> <span class="p">(</span><span class="n">sbuf_v_lo</span> <span class="o">&amp;</span> <span class="n">sbuf_yumi_li</span><span class="p">)</span>
+<a name="l-759"></a>  <span class="p">);</span>
+<a name="l-760"></a>  
+<a name="l-761"></a>  <span class="k">assign</span> <span class="n">data_mem_w_li</span> <span class="o">=</span> <span class="n">dma_data_mem_w_lo</span> <span class="o">|</span> <span class="p">(</span><span class="n">sbuf_v_lo</span> <span class="o">&amp;</span> <span class="n">sbuf_yumi_li</span><span class="p">);</span>
+<a name="l-762"></a>
+<a name="l-763"></a>  <span class="k">assign</span> <span class="n">data_mem_data_li</span> <span class="o">=</span> <span class="n">dma_data_mem_w_lo</span>
+<a name="l-764"></a>    <span class="o">?</span> <span class="n">dma_data_mem_data_lo</span>
+<a name="l-765"></a>    <span class="o">:</span> <span class="n">sbuf_data_mem_data</span><span class="p">;</span>
+<a name="l-766"></a>
+<a name="l-767"></a>  <span class="k">assign</span> <span class="n">data_mem_addr_li</span> <span class="o">=</span> <span class="n">recover_lo</span>
+<a name="l-768"></a>    <span class="o">?</span> <span class="p">{</span><span class="n">addr_index_tl</span><span class="p">,</span> <span class="n">addr_block_offset_tl</span><span class="p">}</span>
+<a name="l-769"></a>    <span class="o">:</span> <span class="p">(</span><span class="n">dma_data_mem_v_lo</span>
+<a name="l-770"></a>      <span class="o">?</span> <span class="n">dma_data_mem_addr_lo</span>
+<a name="l-771"></a>      <span class="o">:</span> <span class="p">((</span><span class="n">decode</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">v_i</span> <span class="o">&amp;</span> <span class="n">ready_o</span><span class="p">)</span> 
+<a name="l-772"></a>        <span class="o">?</span> <span class="p">{</span><span class="n">addr_index</span><span class="p">,</span> <span class="n">addr_block_offset</span><span class="p">}</span>
+<a name="l-773"></a>        <span class="o">:</span> <span class="n">sbuf_entry_lo</span><span class="p">.</span><span class="n">addr</span><span class="p">[</span><span class="n">lg_data_mask_width_lp</span><span class="o">+:</span><span class="n">lg_block_size_in_words_lp</span><span class="o">+</span><span class="n">lg_sets_lp</span><span class="p">]));</span>
+<a name="l-774"></a>
+<a name="l-775"></a>  <span class="k">assign</span> <span class="n">data_mem_w_mask_li</span> <span class="o">=</span> <span class="n">dma_data_mem_w_lo</span>
+<a name="l-776"></a>    <span class="o">?</span> <span class="n">dma_data_mem_w_mask_lo</span>
+<a name="l-777"></a>    <span class="o">:</span> <span class="n">sbuf_data_mem_w_mask</span><span class="p">;</span>
+<a name="l-778"></a>
+<a name="l-779"></a>
+<a name="l-780"></a>  <span class="c1">// stat_mem ctrl logic</span>
+<a name="l-781"></a>  <span class="c1">// TAGST clears the stat_info as it exits tv stage.</span>
+<a name="l-782"></a>  <span class="c1">// If it&#39;s load or store, and there is a hit, it updates the dirty bits and LRU.</span>
+<a name="l-783"></a>  <span class="c1">// If there is a miss, stat_mem may be modified by the miss handler.</span>
+<a name="l-784"></a>
+<a name="l-785"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">plru_decode_data_lo</span><span class="p">;</span>
+<a name="l-786"></a>  <span class="k">logic</span> <span class="p">[</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">plru_decode_mask_lo</span><span class="p">;</span>
+<a name="l-787"></a>  
+<a name="l-788"></a>  <span class="n">bsg_lru_pseudo_tree_decode</span> <span class="p">#(</span>
+<a name="l-789"></a>    <span class="p">.</span><span class="n">ways_p</span><span class="p">(</span><span class="n">ways_p</span><span class="p">)</span>
+<a name="l-790"></a>  <span class="p">)</span> <span class="n">plru_decode</span> <span class="p">(</span>
+<a name="l-791"></a>    <span class="p">.</span><span class="n">way_id_i</span><span class="p">(</span><span class="n">tag_hit_way_id</span><span class="p">)</span>
+<a name="l-792"></a>    <span class="p">,.</span><span class="n">data_o</span><span class="p">(</span><span class="n">plru_decode_data_lo</span><span class="p">)</span>
+<a name="l-793"></a>    <span class="p">,.</span><span class="n">mask_o</span><span class="p">(</span><span class="n">plru_decode_mask_lo</span><span class="p">)</span>
+<a name="l-794"></a>  <span class="p">);</span>
+<a name="l-795"></a>
+<a name="l-796"></a>  <span class="k">always_comb</span> <span class="k">begin</span>
+<a name="l-797"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">miss_v</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-798"></a>      <span class="n">stat_mem_v_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_v_lo</span><span class="p">;</span>
+<a name="l-799"></a>      <span class="n">stat_mem_w_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_w_lo</span><span class="p">;</span>
+<a name="l-800"></a>      <span class="n">stat_mem_addr_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_addr_lo</span><span class="p">;</span> <span class="c1">// essentially same as addr_index_v</span>
+<a name="l-801"></a>      <span class="n">stat_mem_data_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_data_lo</span><span class="p">;</span>
+<a name="l-802"></a>      <span class="n">stat_mem_w_mask_li</span> <span class="o">=</span> <span class="n">miss_stat_mem_w_mask_lo</span><span class="p">;</span>
+<a name="l-803"></a>    <span class="k">end</span>
+<a name="l-804"></a>    <span class="k">else</span> <span class="k">begin</span>
+<a name="l-805"></a>      <span class="n">stat_mem_v_li</span> <span class="o">=</span> <span class="p">((</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">ld_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagst_op</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">);</span>
+<a name="l-806"></a>      <span class="n">stat_mem_w_li</span> <span class="o">=</span> <span class="p">((</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">ld_op</span><span class="o">|</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagst_op</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">);</span>
+<a name="l-807"></a>      <span class="n">stat_mem_addr_li</span> <span class="o">=</span> <span class="n">addr_index_v</span><span class="p">;</span>
+<a name="l-808"></a>
+<a name="l-809"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">tagst_op</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-810"></a>        <span class="c1">// for TAGST</span>
+<a name="l-811"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}};</span>
+<a name="l-812"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="p">{(</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">}};</span>
+<a name="l-813"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">}};</span>
+<a name="l-814"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="p">{(</span><span class="n">ways_p</span><span class="o">-</span><span class="mh">1</span><span class="p">){</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">}};</span>
+<a name="l-815"></a>      <span class="k">end</span>
+<a name="l-816"></a>      <span class="k">else</span> <span class="k">begin</span>
+<a name="l-817"></a>        <span class="c1">// for LD, ST</span>
+<a name="l-818"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="p">}};</span>
+<a name="l-819"></a>        <span class="n">stat_mem_data_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="n">plru_decode_data_lo</span><span class="p">;</span>
+<a name="l-820"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">dirty</span> <span class="o">=</span> <span class="p">{</span><span class="n">ways_p</span><span class="p">{</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="p">}}</span> <span class="o">&amp;</span> <span class="n">tag_hit_v</span><span class="p">;</span>
+<a name="l-821"></a>        <span class="n">stat_mem_w_mask_li</span><span class="p">.</span><span class="n">lru_bits</span> <span class="o">=</span> <span class="n">plru_decode_mask_lo</span><span class="p">;</span>
+<a name="l-822"></a>      <span class="k">end</span>
+<a name="l-823"></a>    <span class="k">end</span>
+<a name="l-824"></a>  <span class="k">end</span>
+<a name="l-825"></a>
+<a name="l-826"></a>
+<a name="l-827"></a>  <span class="c1">// store buffer</span>
+<a name="l-828"></a>  <span class="c1">//</span>
+<a name="l-829"></a>  <span class="k">assign</span> <span class="n">sbuf_v_li</span> <span class="o">=</span> <span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span> <span class="o">&amp;</span> <span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">;</span>
+<a name="l-830"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">way_id</span> <span class="o">=</span> <span class="n">miss_v</span> <span class="o">?</span> <span class="n">chosen_way_lo</span> <span class="o">:</span> <span class="n">tag_hit_way_id</span><span class="p">;</span>
+<a name="l-831"></a>  <span class="k">assign</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="n">addr_v_r</span><span class="p">;</span>
+<a name="l-832"></a>  <span class="k">assign</span> <span class="n">sbuf_yumi_li</span> <span class="o">=</span> <span class="n">sbuf_v_lo</span> <span class="o">&amp;</span> <span class="o">~</span><span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">v_i</span> <span class="o">&amp;</span> <span class="n">ready_o</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="n">dma_data_mem_v_lo</span><span class="p">);</span> 
 <a name="l-833"></a>
-<a name="l-834"></a>
-<a name="l-835"></a>  <span class="c1">// synopsys translate_off</span>
+<a name="l-834"></a>  <span class="k">assign</span> <span class="n">bypass_addr_li</span> <span class="o">=</span> <span class="n">addr_tl_r</span><span class="p">;</span>
+<a name="l-835"></a>  <span class="k">assign</span> <span class="n">bypass_v_li</span> <span class="o">=</span> <span class="n">decode_tl_r</span><span class="p">.</span><span class="n">ld_op</span> <span class="o">&amp;</span> <span class="n">v_tl_r</span> <span class="o">&amp;</span> <span class="n">v_we</span><span class="p">;</span>
 <a name="l-836"></a>
-<a name="l-837"></a>  <span class="k">always_ff</span> <span class="p">@</span> <span class="p">(</span><span class="k">negedge</span> <span class="n">clk_i</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-838"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">~</span><span class="n">reset_i</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-839"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">v_v_r</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-840"></a>        <span class="c1">// check that there is no multiple hit.</span>
-<a name="l-841"></a>        <span class="k">assert</span><span class="p">(</span><span class="n">$countones</span><span class="p">(</span><span class="n">tag_hit_v</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mh">1</span><span class="p">)</span>
-<a name="l-842"></a>          <span class="k">else</span> <span class="n">$error</span><span class="p">(</span><span class="s">&quot;[BSG_ERROR][BSG_CACHE] Multiple cache hit detected. %m, T=%t&quot;</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
-<a name="l-843"></a>
-<a name="l-844"></a>        <span class="c1">// check that there is at least one unlocked way in a set.</span>
-<a name="l-845"></a>        <span class="k">assert</span><span class="p">(</span><span class="n">$countones</span><span class="p">(</span><span class="n">lock_v_r</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ways_p</span><span class="p">)</span>
-<a name="l-846"></a>          <span class="k">else</span> <span class="n">$error</span><span class="p">(</span><span class="s">&quot;[BSG_ERROR][BSG_CACHE] There should be at least one unlocked way in a set. %m, T=%t&quot;</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
-<a name="l-847"></a>      <span class="k">end</span>
-<a name="l-848"></a>    <span class="k">end</span>
-<a name="l-849"></a>  <span class="k">end</span>
-<a name="l-850"></a>
-<a name="l-851"></a>
-<a name="l-852"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">debug_p</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-853"></a>    <span class="k">always_ff</span> <span class="p">@</span> <span class="p">(</span><span class="k">posedge</span> <span class="n">clk_i</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-854"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-855"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">ld_op</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-856"></a>          <span class="nb">$display</span><span class="p">(</span><span class="s">&quot;&lt;VCACHE&gt; M[%4h] == %8h // %8t&quot;</span><span class="p">,</span> <span class="n">addr_v_r</span><span class="p">,</span> <span class="n">data_o</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
-<a name="l-857"></a>        <span class="k">end</span>
-<a name="l-858"></a>        
-<a name="l-859"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-860"></a>          <span class="nb">$display</span><span class="p">(</span><span class="s">&quot;&lt;VCACHE&gt; M[%4h] := %8h // %8t&quot;</span><span class="p">,</span> <span class="n">addr_v_r</span><span class="p">,</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">data</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
-<a name="l-861"></a>        <span class="k">end</span>
-<a name="l-862"></a>
-<a name="l-863"></a>      <span class="k">end</span>
-<a name="l-864"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">tag_mem_v_li</span> <span class="o">&amp;</span> <span class="n">tag_mem_w_li</span><span class="p">)</span> <span class="k">begin</span>
-<a name="l-865"></a>        <span class="nb">$display</span><span class="p">(</span><span class="s">&quot;&lt;VCACHE&gt; tag_mem_write. addr=%8h data_1=%8h data_0=%8h mask_1=%8h mask_0=%8h // %8t&quot;</span><span class="p">,</span>
-<a name="l-866"></a>          <span class="n">tag_mem_addr_li</span><span class="p">,</span>
-<a name="l-867"></a>          <span class="n">tag_mem_data_li</span><span class="p">[</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
-<a name="l-868"></a>          <span class="n">tag_mem_data_li</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
-<a name="l-869"></a>          <span class="n">tag_mem_w_mask_li</span><span class="p">[</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
-<a name="l-870"></a>          <span class="n">tag_mem_w_mask_li</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
-<a name="l-871"></a>          <span class="n">$time</span>
-<a name="l-872"></a>        <span class="p">);</span>
-<a name="l-873"></a>      <span class="k">end</span>
-<a name="l-874"></a>    <span class="k">end</span>
-<a name="l-875"></a>  <span class="k">end</span>
-<a name="l-876"></a>
-<a name="l-877"></a>  <span class="c1">// synopsys translate_on</span>
-<a name="l-878"></a>
+<a name="l-837"></a>
+<a name="l-838"></a>  <span class="c1">// synopsys translate_off</span>
+<a name="l-839"></a>
+<a name="l-840"></a>  <span class="k">always_ff</span> <span class="p">@</span> <span class="p">(</span><span class="k">negedge</span> <span class="n">clk_i</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-841"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">~</span><span class="n">reset_i</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-842"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">v_v_r</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-843"></a>        <span class="c1">// check that there is no multiple hit.</span>
+<a name="l-844"></a>        <span class="k">assert</span><span class="p">(</span><span class="n">$countones</span><span class="p">(</span><span class="n">tag_hit_v</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mh">1</span><span class="p">)</span>
+<a name="l-845"></a>          <span class="k">else</span> <span class="n">$error</span><span class="p">(</span><span class="s">&quot;[BSG_ERROR][BSG_CACHE] Multiple cache hit detected. %m, T=%t&quot;</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
+<a name="l-846"></a>
+<a name="l-847"></a>        <span class="c1">// check that there is at least one unlocked way in a set.</span>
+<a name="l-848"></a>        <span class="k">assert</span><span class="p">(</span><span class="n">$countones</span><span class="p">(</span><span class="n">lock_v_r</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ways_p</span><span class="p">)</span>
+<a name="l-849"></a>          <span class="k">else</span> <span class="n">$error</span><span class="p">(</span><span class="s">&quot;[BSG_ERROR][BSG_CACHE] There should be at least one unlocked way in a set. %m, T=%t&quot;</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
+<a name="l-850"></a>      <span class="k">end</span>
+<a name="l-851"></a>    <span class="k">end</span>
+<a name="l-852"></a>  <span class="k">end</span>
+<a name="l-853"></a>
+<a name="l-854"></a>
+<a name="l-855"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">debug_p</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-856"></a>    <span class="k">always_ff</span> <span class="p">@</span> <span class="p">(</span><span class="k">posedge</span> <span class="n">clk_i</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-857"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">v_o</span> <span class="o">&amp;</span> <span class="n">yumi_i</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-858"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">ld_op</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-859"></a>          <span class="nb">$display</span><span class="p">(</span><span class="s">&quot;&lt;VCACHE&gt; M[%4h] == %8h // %8t&quot;</span><span class="p">,</span> <span class="n">addr_v_r</span><span class="p">,</span> <span class="n">data_o</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
+<a name="l-860"></a>        <span class="k">end</span>
+<a name="l-861"></a>        
+<a name="l-862"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">decode_v_r</span><span class="p">.</span><span class="n">st_op</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-863"></a>          <span class="nb">$display</span><span class="p">(</span><span class="s">&quot;&lt;VCACHE&gt; M[%4h] := %8h // %8t&quot;</span><span class="p">,</span> <span class="n">addr_v_r</span><span class="p">,</span> <span class="n">sbuf_entry_li</span><span class="p">.</span><span class="n">data</span><span class="p">,</span> <span class="n">$time</span><span class="p">);</span>
+<a name="l-864"></a>        <span class="k">end</span>
+<a name="l-865"></a>
+<a name="l-866"></a>      <span class="k">end</span>
+<a name="l-867"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">tag_mem_v_li</span> <span class="o">&amp;</span> <span class="n">tag_mem_w_li</span><span class="p">)</span> <span class="k">begin</span>
+<a name="l-868"></a>        <span class="nb">$display</span><span class="p">(</span><span class="s">&quot;&lt;VCACHE&gt; tag_mem_write. addr=%8h data_1=%8h data_0=%8h mask_1=%8h mask_0=%8h // %8t&quot;</span><span class="p">,</span>
+<a name="l-869"></a>          <span class="n">tag_mem_addr_li</span><span class="p">,</span>
+<a name="l-870"></a>          <span class="n">tag_mem_data_li</span><span class="p">[</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
+<a name="l-871"></a>          <span class="n">tag_mem_data_li</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
+<a name="l-872"></a>          <span class="n">tag_mem_w_mask_li</span><span class="p">[</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
+<a name="l-873"></a>          <span class="n">tag_mem_w_mask_li</span><span class="p">[</span><span class="mh">0</span><span class="o">+:</span><span class="mh">1</span><span class="o">+</span><span class="n">tag_width_lp</span><span class="p">],</span>
+<a name="l-874"></a>          <span class="n">$time</span>
+<a name="l-875"></a>        <span class="p">);</span>
+<a name="l-876"></a>      <span class="k">end</span>
+<a name="l-877"></a>    <span class="k">end</span>
+<a name="l-878"></a>  <span class="k">end</span>
 <a name="l-879"></a>
-<a name="l-880"></a><span class="k">endmodule</span>
+<a name="l-880"></a>  <span class="c1">// synopsys translate_on</span>
+<a name="l-881"></a>
+<a name="l-882"></a>
+<a name="l-883"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table>
   </body>

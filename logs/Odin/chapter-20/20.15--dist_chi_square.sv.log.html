@@ -16,8 +16,8 @@ top_module:
 type: simulation parsing
 mode: parsing
 files: <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv</a>
-time_elapsed: 0.005s
-ram usage: 10072 KB
+time_elapsed: 0.006s
+ram usage: 9680 KB
 </pre>
 <pre class="log">
 
@@ -29,8 +29,10 @@ WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
 WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv</a>::1 File (<a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
 
 PARSE_ERROR <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv</a>::12 error in parsing: (syntax error, unexpected vINTEGER)
-	integer seed = 1234
-ERROR (4)::NETLIST_ERROR Could not find a top level module
+	integer seed = 1234;
+PARSE_ERROR <a href="../../../tests/chapter-20/20.15--dist_chi_square.sv.html" target="file-frame">tests/chapter-20/20.15--dist_chi_square.sv</a>::14 error in parsing: (syntax error, unexpected vEND)
+end
+ERROR (5)::NETLIST_ERROR Could not find a top level module
 
 Assertion failed()@[/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/odin_ii_1571849747466/work/ODIN_II/SRC/netlist_create_from_ast.cpp]find_top_module::295 
 

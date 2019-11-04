@@ -128,7 +128,9 @@
 <a href="#l-120">120</a>
 <a href="#l-121">121</a>
 <a href="#l-122">122</a>
-<a href="#l-123">123</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="no">`include</span> <span class="s">&quot;bsg_defines.v&quot;</span>
+<a href="#l-123">123</a>
+<a href="#l-124">124</a>
+<a href="#l-125">125</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="l-1"></a><span class="no">`include</span> <span class="s">&quot;bsg_defines.v&quot;</span>
 <a name="l-2"></a><span class="c1">// MBT</span>
 <a name="l-3"></a><span class="c1">// 11/9/14</span>
 <a name="l-4"></a><span class="c1">//</span>
@@ -225,32 +227,34 @@
 <a name="l-95"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
 <a name="l-96"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">add_i</span>  <span class="p">(</span><span class="n">mem_re</span><span class="p">)</span>
 <a name="l-97"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">o</span>      <span class="p">(</span><span class="n">rd_ptr</span> <span class="p">)</span>
-<a name="l-98"></a>      <span class="p">);</span>
-<a name="l-99"></a>
-<a name="l-100"></a>   <span class="n">bsg_circular_ptr</span> <span class="p">#(.</span><span class="n">slots_p</span><span class="p">(</span><span class="n">els_p</span><span class="p">)</span>
-<a name="l-101"></a>                      <span class="p">,.</span><span class="n">max_add_p</span><span class="p">(</span><span class="mh">1</span><span class="p">)</span>
-<a name="l-102"></a>                      <span class="p">)</span> <span class="n">wr_circ_ptr</span>
-<a name="l-103"></a>     <span class="p">(.</span><span class="n">clk</span>      <span class="p">(</span><span class="n">clk_i</span>  <span class="p">)</span>
-<a name="l-104"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
-<a name="l-105"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">add_i</span>  <span class="p">(</span><span class="n">mem_we</span><span class="p">)</span>
-<a name="l-106"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">o</span>      <span class="p">(</span><span class="n">wr_ptr</span> <span class="p">)</span>
-<a name="l-107"></a>      <span class="p">);</span>
-<a name="l-108"></a>
-<a name="l-109"></a>   <span class="n">bsg_mem_1rw_sync</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="p">)</span>
-<a name="l-110"></a>                      <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">els_p</span><span class="p">)</span>
-<a name="l-111"></a>                      <span class="p">)</span>
-<a name="l-112"></a>   <span class="n">mem_1srw</span> <span class="p">(.</span><span class="n">clk_i</span>
-<a name="l-113"></a>             <span class="p">,.</span><span class="n">reset_i</span>
-<a name="l-114"></a>             <span class="p">,.</span><span class="n">data_i</span> <span class="p">(</span><span class="n">data_i</span>                   <span class="p">)</span>
-<a name="l-115"></a>             <span class="p">,.</span><span class="n">addr_i</span> <span class="p">(</span><span class="n">mem_we</span> <span class="o">?</span> <span class="n">wr_ptr</span> <span class="o">:</span> <span class="n">rd_ptr</span> <span class="p">)</span>
-<a name="l-116"></a>             <span class="p">,.</span><span class="n">v_i</span>    <span class="p">(</span><span class="n">v_i</span>                      <span class="p">)</span>
-<a name="l-117"></a>             <span class="p">,.</span><span class="n">w_i</span>    <span class="p">(</span><span class="n">mem_we</span>                   <span class="p">)</span>
-<a name="l-118"></a>             <span class="p">,.</span><span class="n">data_o</span> <span class="p">(</span><span class="n">data_o</span>                   <span class="p">)</span>
-<a name="l-119"></a>             <span class="p">);</span>
-<a name="l-120"></a>
-<a name="l-121"></a>
+<a name="l-98"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">n_o</span><span class="p">()</span>
+<a name="l-99"></a>      <span class="p">);</span>
+<a name="l-100"></a>
+<a name="l-101"></a>   <span class="n">bsg_circular_ptr</span> <span class="p">#(.</span><span class="n">slots_p</span><span class="p">(</span><span class="n">els_p</span><span class="p">)</span>
+<a name="l-102"></a>                      <span class="p">,.</span><span class="n">max_add_p</span><span class="p">(</span><span class="mh">1</span><span class="p">)</span>
+<a name="l-103"></a>                      <span class="p">)</span> <span class="n">wr_circ_ptr</span>
+<a name="l-104"></a>     <span class="p">(.</span><span class="n">clk</span>      <span class="p">(</span><span class="n">clk_i</span>  <span class="p">)</span>
+<a name="l-105"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">reset_i</span><span class="p">(</span><span class="n">reset_i</span><span class="p">)</span>
+<a name="l-106"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">add_i</span>  <span class="p">(</span><span class="n">mem_we</span><span class="p">)</span>
+<a name="l-107"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">o</span>      <span class="p">(</span><span class="n">wr_ptr</span> <span class="p">)</span>
+<a name="l-108"></a>      <span class="p">,</span> <span class="p">.</span><span class="n">n_o</span><span class="p">()</span>
+<a name="l-109"></a>      <span class="p">);</span>
+<a name="l-110"></a>
+<a name="l-111"></a>   <span class="n">bsg_mem_1rw_sync</span> <span class="p">#(.</span><span class="n">width_p</span><span class="p">(</span><span class="n">width_p</span><span class="p">)</span>
+<a name="l-112"></a>                      <span class="p">,.</span><span class="n">els_p</span><span class="p">(</span><span class="n">els_p</span><span class="p">)</span>
+<a name="l-113"></a>                      <span class="p">)</span>
+<a name="l-114"></a>   <span class="n">mem_1srw</span> <span class="p">(.</span><span class="n">clk_i</span>
+<a name="l-115"></a>             <span class="p">,.</span><span class="n">reset_i</span>
+<a name="l-116"></a>             <span class="p">,.</span><span class="n">data_i</span> <span class="p">(</span><span class="n">data_i</span>                   <span class="p">)</span>
+<a name="l-117"></a>             <span class="p">,.</span><span class="n">addr_i</span> <span class="p">(</span><span class="n">mem_we</span> <span class="o">?</span> <span class="n">wr_ptr</span> <span class="o">:</span> <span class="n">rd_ptr</span> <span class="p">)</span>
+<a name="l-118"></a>             <span class="p">,.</span><span class="n">v_i</span>    <span class="p">(</span><span class="n">v_i</span>                      <span class="p">)</span>
+<a name="l-119"></a>             <span class="p">,.</span><span class="n">w_i</span>    <span class="p">(</span><span class="n">mem_we</span>                   <span class="p">)</span>
+<a name="l-120"></a>             <span class="p">,.</span><span class="n">data_o</span> <span class="p">(</span><span class="n">data_o</span>                   <span class="p">)</span>
+<a name="l-121"></a>             <span class="p">);</span>
 <a name="l-122"></a>
-<a name="l-123"></a><span class="k">endmodule</span>
+<a name="l-123"></a>
+<a name="l-124"></a>
+<a name="l-125"></a><span class="k">endmodule</span>
 </pre></div>
 </td></tr></table>
   </body>

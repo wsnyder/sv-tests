@@ -1,0 +1,30 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
+<pre class="test-failed">
+description: Tests imported from basejump
+should_fail: 0
+tags: basejump
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_unhardened.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_unhardened.v</a>
+time_elapsed: 0.086s
+ram usage: 11632 KB
+</pre>
+<pre class="log">
+
+%Error: <a href="../../../../third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_unhardened.v.html#l-52" target="file-frame">third_party/cores/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small_unhardened.v:52</a>: Define or directive not defined: &#39;`BSG_SAFE_CLOG2&#39;
+   localparam ptr_width_lp = `BSG_SAFE_CLOG2(els_p);
+                             ^~~~~~~~~~~~~~~
+%Error: Exiting due to 1 error(s)
+
+</pre>
+</body>
