@@ -1,0 +1,1692 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: blackparrot core test
+should_fail: 0
+tags: blackparrot
+incdirs: /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/external/basejump_stl/bsg_mem /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/external/basejump_stl/bsg_misc /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/external/basejump_stl/bsg_test /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/external/basejump_stl/bsg_noc /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_fe/src/include /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_be/src/include /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_be/src/include/bp_be_dcache /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_top/src/include
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_noc_pkg.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_noc_pkg.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_pkg.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_pkg.v</a> <a href="../../../../third_party/cores/blackparrot/bp_common/src/include/bp_common_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_common/src/include/bp_common_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_common/src/include/bp_common_rv64_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_common/src/include/bp_common_rv64_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_common/src/include/bp_common_aviary_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_common/src/include/bp_common_aviary_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_fe/src/include/bp_fe_icache_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_fe/src/include/bp_fe_icache_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_fe/src/include/bp_fe_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_fe/src/include/bp_fe_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_be/src/include/bp_be_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_be/src/include/bp_be_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_be/src/include/bp_be_dcache/bp_be_dcache_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_be/src/include/bp_be_dcache/bp_be_dcache_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_pkg.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_pkg.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/include/v/bp_me_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/include/v/bp_me_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/bp_top/src/include/bp_cfg_link_pkg.vh.html" target="file-frame">third_party/cores/blackparrot/bp_top/src/include/bp_cfg_link_pkg.vh</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_async_fifo.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_async_fifo.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_async_ptr_gray.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_async_ptr_gray.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel_in.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel_in.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel_out.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel_out.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_large.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1rw_large.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1rw_large.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_thermometer_count.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_thermometer_count.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_set_down.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_set_down.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_arb_fixed.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_arb_fixed.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_one_fifo.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_one_fifo.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_2_to_2.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_pseudo_large.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_tracker.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_tracker.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_n_to_1.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_n_to_1.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_two_fifo.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_two_fifo.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_cam_1r1w.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_cam_1r1w.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync_synth.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync_synth.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_synth.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_synth.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit_synth.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit_synth.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte_synth.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte_synth.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_synth.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_synth.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync_synth.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync_synth.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_adder_ripple_carry.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_adder_ripple_carry.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_circular_ptr.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_circular_ptr.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_crossbar_o_by_i.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_crossbar_o_by_i.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_cycle_counter.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_cycle_counter.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_chain.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_chain.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_en.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_en.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_reset.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_reset.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_reset_en.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_dff_reset_en.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_one_hot.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_one_hot.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_segmented.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_segmented.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode_one_hot_out.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_round_robin_arb.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_round_robin_arb.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_scan.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_scan.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_encode.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_encode.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_butterfly.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_butterfly.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_swap.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_swap.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router_buffered.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router_buffered.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_flow_counter.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_flow_counter.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out_dynamic.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out_dynamic.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_parallel_in_serial_out_dynamic.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_parallel_in_serial_out_dynamic.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_transpose.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_transpose.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_concentrate_static.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_concentrate_static.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_decoder_dor.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_decoder_dor.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_input_control.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_output_control.v</a> <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lfsr.v.html" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lfsr.v</a> <a href="../../../../third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v.html" target="file-frame">third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_cce_to_wormhole_link_master.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_cce_to_wormhole_link_master.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_cce_to_wormhole_link_client.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_cce_to_wormhole_link_client.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_mem_cmd.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_mem_cmd.v</a> <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_mem_resp.v.html" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_mem_resp.v</a>
+time_elapsed: 0.121s
+ram usage: 9684 KB
+</pre>
+<pre class="log">
+
+
+fatal: expected , or ) after macro argument name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_defines.vh:27:29-30:
+   | 
+   | `define BP_LOG(print_type_mp=0, file_mp=0, str_mp) \
+   |                             ^                       
+
+
+error: Expected expression, found ; instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_defines.vh:25:32-33:
+   | 
+   | localparam bp_log_file_gp   = 2;
+   |                                ^
+
+
+fatal: Found closing `)` without an earlier opening `(`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_defines.vh:27:50-51:
+   | 
+   | `define BP_LOG(print_type_mp=0, file_mp=0, str_mp) \
+   |                                                  ^  
+
+
+error: Expected `endpackage`, but found `)` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_defines.vh:27:50-51:
+   | 
+   | `define BP_LOG(print_type_mp=0, file_mp=0, str_mp) \
+   |                                                  ^  
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_common/src/include/bp_common_aviary_pkg.vh.html#l-7" target="file-frame">third_party/cores/blackparrot/bp_common/src/include/bp_common_aviary_pkg.vh:7</a>:28-43:
+   | 
+   |   localparam lg_max_cfgs = `BSG_SAFE_CLOG2(max_cfgs);
+   |                            ^^^^^^^^^^^^^^^           
+
+
+error: Expected at least one parameter name
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_common/src/include/bp_common_aviary_pkg.vh.html#l-7" target="file-frame">third_party/cores/blackparrot/bp_common/src/include/bp_common_aviary_pkg.vh:7</a>:26-27:
+   | 
+   |   localparam lg_max_cfgs = `BSG_SAFE_CLOG2(max_cfgs);
+   |                          ^                           
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:111:106-107:
+   | 
+   |   typedef struct packed                                                                                  \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:112:106-107:
+   | 
+   |   {                                                                                                      \
+   |                                                                                                          ^
+
+
+fatal: unknown compiler directive &#39;`bp_lce_cmd_pad&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:12-27:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |            ^^^^^^^^^^^^^^^                                                                                
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:106-107:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:114:106-107:
+   | 
+   |                                                  pad;                                                    \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:115:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(lce_assoc_mp)-1:0]    target_way_id;                                          \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:116:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(num_lce_mp)-1:0]      target;                                                 \
+   |                                                                                                          ^
+
+
+fatal: unknown compiler directive &#39;`bp_coh_bits&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:117:12-24:
+   | 
+   |     logic [`bp_coh_bits-1:0]                     state;                                                  \
+   |            ^^^^^^^^^^^^                                                                                   
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:117:106-107:
+   | 
+   |     logic [`bp_coh_bits-1:0]                     state;                                                  \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:118:106-107:
+   | 
+   |     logic [paddr_width_mp-1:0]                   addr;                                                   \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:119:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(num_cce_mp)-1:0]      src_id;                                                 \
+   |                                                                                                          ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:5-10:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |     ^^^^^                                                                                                 
+
+
+fatal: Found closing `}` which is not the complement to the previous opening `[`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:120:3-4:
+   | 
+   |   }  bp_lce_cmd_cmd_s;                                                                                   \
+   |   ^                                                                                                       
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:120:106-107:
+   | 
+   |   }  bp_lce_cmd_cmd_s;                                                                                   \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:121:106-107:
+   | 
+   |                                                                                                          \
+   |                                                                                                          ^
+
+
+error: Expected `endpackage`, but found `typedef` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:124:3-10:
+   | 
+   |   typedef struct packed                                                                                  \
+   |   ^^^^^^^                                                                                                 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:111:106-107:
+   | 
+   |   typedef struct packed                                                                                  \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:112:106-107:
+   | 
+   |   {                                                                                                      \
+   |                                                                                                          ^
+
+
+fatal: unknown compiler directive &#39;`bp_lce_cmd_pad&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:12-27:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |            ^^^^^^^^^^^^^^^                                                                                
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:106-107:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:114:106-107:
+   | 
+   |                                                  pad;                                                    \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:115:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(lce_assoc_mp)-1:0]    target_way_id;                                          \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:116:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(num_lce_mp)-1:0]      target;                                                 \
+   |                                                                                                          ^
+
+
+fatal: unknown compiler directive &#39;`bp_coh_bits&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:117:12-24:
+   | 
+   |     logic [`bp_coh_bits-1:0]                     state;                                                  \
+   |            ^^^^^^^^^^^^                                                                                   
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:117:106-107:
+   | 
+   |     logic [`bp_coh_bits-1:0]                     state;                                                  \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:118:106-107:
+   | 
+   |     logic [paddr_width_mp-1:0]                   addr;                                                   \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:119:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(num_cce_mp)-1:0]      src_id;                                                 \
+   |                                                                                                          ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:5-10:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |     ^^^^^                                                                                                 
+
+
+fatal: Found closing `}` which is not the complement to the previous opening `[`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:120:3-4:
+   | 
+   |   }  bp_lce_cmd_cmd_s;                                                                                   \
+   |   ^                                                                                                       
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:120:106-107:
+   | 
+   |   }  bp_lce_cmd_cmd_s;                                                                                   \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:121:106-107:
+   | 
+   |                                                                                                          \
+   |                                                                                                          ^
+
+
+error: Expected `endpackage`, but found `typedef` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:124:3-10:
+   | 
+   |   typedef struct packed                                                                                  \
+   |   ^^^^^^^                                                                                                 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:111:106-107:
+   | 
+   |   typedef struct packed                                                                                  \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:112:106-107:
+   | 
+   |   {                                                                                                      \
+   |                                                                                                          ^
+
+
+fatal: unknown compiler directive &#39;`bp_lce_cmd_pad&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:12-27:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |            ^^^^^^^^^^^^^^^                                                                                
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:106-107:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:114:106-107:
+   | 
+   |                                                  pad;                                                    \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:115:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(lce_assoc_mp)-1:0]    target_way_id;                                          \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:116:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(num_lce_mp)-1:0]      target;                                                 \
+   |                                                                                                          ^
+
+
+fatal: unknown compiler directive &#39;`bp_coh_bits&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:117:12-24:
+   | 
+   |     logic [`bp_coh_bits-1:0]                     state;                                                  \
+   |            ^^^^^^^^^^^^                                                                                   
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:117:106-107:
+   | 
+   |     logic [`bp_coh_bits-1:0]                     state;                                                  \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:118:106-107:
+   | 
+   |     logic [paddr_width_mp-1:0]                   addr;                                                   \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:119:106-107:
+   | 
+   |     logic [`BSG_SAFE_CLOG2(num_cce_mp)-1:0]      src_id;                                                 \
+   |                                                                                                          ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:113:5-10:
+   | 
+   |     logic [`bp_lce_cmd_pad(num_cce_mp, num_lce_mp, lce_assoc_mp, paddr_width_mp, cce_block_width_mp)-1:0]\
+   |     ^^^^^                                                                                                 
+
+
+fatal: Found closing `}` which is not the complement to the previous opening `[`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:120:3-4:
+   | 
+   |   }  bp_lce_cmd_cmd_s;                                                                                   \
+   |   ^                                                                                                       
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:120:106-107:
+   | 
+   |   }  bp_lce_cmd_cmd_s;                                                                                   \
+   |                                                                                                          ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:121:106-107:
+   | 
+   |                                                                                                          \
+   |                                                                                                          ^
+
+
+error: Expected `endpackage`, but found `typedef` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_common/src/include/bp_common_me_if.vh:124:3-10:
+   | 
+   |   typedef struct packed                                                                                  \
+   |   ^^^^^^^                                                                                                 
+
+
+fatal: unknown compiler directive &#39;`bp_coh_bits&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:795:10-22:
+   | 
+   |   logic [`bp_coh_bits-1:0]               imm;
+   |          ^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`bp_coh_bits&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:786:4-16:
+   | 
+   |   -`bp_coh_bits)
+   |    ^^^^^^^^^^^^ 
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:795:3-8:
+   | 
+   |   logic [`bp_coh_bits-1:0]               imm;
+   |   ^^^^^                                      
+
+
+fatal: Found closing `]` which is not the complement to the previous opening `(`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:796:40-41:
+   | 
+   |   logic [`bp_cce_inst_write_dir_pad-1:0] pad;
+   |                                        ^     
+
+
+error: Expected `}`, but found `]` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:796:40-41:
+   | 
+   |   logic [`bp_cce_inst_write_dir_pad-1:0] pad;
+   |                                        ^     
+
+
+fatal: Found closing `]` without an earlier opening `[`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:796:40-41:
+   | 
+   |   logic [`bp_cce_inst_write_dir_pad-1:0] pad;
+   |                                        ^     
+
+
+fatal: Found closing `]` without an earlier opening `[`
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:796:40-41:
+   | 
+   |   logic [`bp_cce_inst_write_dir_pad-1:0] pad;
+   |                                        ^     
+
+
+error: Expected `endpackage`, but found `]` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_cce_inst.vh:796:40-41:
+   | 
+   |   logic [`bp_cce_inst_write_dir_pad-1:0] pad;
+   |                                        ^     
+
+
+fatal: expected macro parameters in parentheses &#39;(...)&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html#l-44" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v:44</a>:2-11:
+   | 
+   |  `rp_group    (blss_bank)                                               \
+   |  ^^^^^^^^^                                                               
+
+
+error: Missing ; after header of module &#34;bsg_launch_sync_sync_posedge_1_unit&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html#l-44" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v:44</a>:16-16:
+   | 
+   |  `rp_group    (blss_bank)                                               \
+   |                ^                                                         
+
+
+error: Expected `endmodule`, but found `(` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v.html#l-44" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_async/bsg_launch_sync_sync.v:44</a>:15-16:
+   | 
+   |  `rp_group    (blss_bank)                                               \
+   |               ^                                                          
+
+
+fatal: unknown compiler directive &#39;`BSG_MIN&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html#l-67" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v:67</a>:56-64:
+   | 
+   |                             , lg_credit_decimation_p = `BSG_MIN(lg_remote_credits_lp,4)
+   |                                                        ^^^^^^^^                        
+
+
+error: Expected `)`, but found `=` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v.html#l-67" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_channel_tunnel.v:67</a>:54-55:
+   | 
+   |                             , lg_credit_decimation_p = `BSG_MIN(lg_remote_credits_lp,4)
+   |                                                      ^                                 
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo.v:19</a>:68-83:
+   | 
+   |                                   ,parameter tag_width_lp        = `BSG_SAFE_CLOG2(num_out_p)
+   |                                                                    ^^^^^^^^^^^^^^^           
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged_fifo.v:19</a>:66-67:
+   | 
+   |                                   ,parameter tag_width_lp        = `BSG_SAFE_CLOG2(num_out_p)
+   |                                                                  ^                           
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v:19</a>:54-69:
+   | 
+   |                            ,parameter tag_width_lp = `BSG_SAFE_CLOG2(num_out_p)
+   |                                                      ^^^^^^^^^^^^^^^           
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_1_to_n_tagged.v:19</a>:52-53:
+   | 
+   |                            ,parameter tag_width_lp = `BSG_SAFE_CLOG2(num_out_p)
+   |                                                    ^                           
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v:12</a>:41-51:
+   | 
+   |                                         `BSG_WIDTH(max_step_p)
+   |                                         ^^^^^^^^^^            
+
+
+error: Expected `)`, but found `parameter` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v.html#l-13" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v:13</a>:40-49:
+   | 
+   |                                      , parameter ptr_width_lp =
+   |                                        ^^^^^^^^^               
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down_variable.v:14</a>:41-51:
+   | 
+   |                                         `BSG_WIDTH(max_val_p)
+   |                                         ^^^^^^^^^^           
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html#l-51" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v:51</a>:30-45:
+   | 
+   |    localparam ptr_width_lp = `BSG_SAFE_CLOG2(els_p);
+   |                              ^^^^^^^^^^^^^^^        
+
+
+error: Expected at least one parameter name
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v.html#l-51" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_1r1w_small.v:51</a>:28-29:
+   | 
+   |    localparam ptr_width_lp = `BSG_SAFE_CLOG2(els_p);
+   |                            ^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_tracker.v.html#l-7" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_tracker.v:7</a>:44-59:
+   | 
+   |                           , ptr_width_lp = `BSG_SAFE_CLOG2(els_p)
+   |                                            ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `=` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_tracker.v.html#l-7" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_fifo_tracker.v:7</a>:42-43:
+   | 
+   |                           , ptr_width_lp = `BSG_SAFE_CLOG2(els_p)
+   |                                          ^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_n_to_1.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_n_to_1.v:19</a>:59-74:
+   | 
+   |                                 ,parameter tag_width_lp = `BSG_SAFE_CLOG2(num_in_p)
+   |                                                           ^^^^^^^^^^^^^^^          
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_n_to_1.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_round_robin_n_to_1.v:19</a>:57-58:
+   | 
+   |                                 ,parameter tag_width_lp = `BSG_SAFE_CLOG2(num_in_p)
+   |                                                         ^                          
+
+
+fatal: unknown compiler directive &#39;`BSG_MIN&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html#l-26" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v:26</a>:23-31:
+   | 
+   |       shift_r[stages_p-1:`BSG_MIN(stages_p-1,1)] &lt;= shift_r[`BSG_MAX(stages_p-2,0):0];
+   |                          ^^^^^^^^                                                     
+
+
+fatal: unknown compiler directive &#39;`BSG_MAX&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html#l-26" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v:26</a>:58-66:
+   | 
+   |       shift_r[stages_p-1:`BSG_MIN(stages_p-1,1)] &lt;= shift_r[`BSG_MAX(stages_p-2,0):0];
+   |                                                             ^^^^^^^^                  
+
+
+error: Expected statement, found identifier instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html#l-26" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v:26</a>:4-11:
+   | 
+   |       shift_r[stages_p-1:`BSG_MIN(stages_p-1,1)] &lt;= shift_r[`BSG_MAX(stages_p-2,0):0];
+   |       ^^^^^^^                                                                         
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html#l-28" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v:28</a>:8-11:
+   | 
+   |        end
+   |        ^^^
+
+
+error: Expected `endmodule`, but found `assign` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v.html#l-29" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_shift_reg.v:29</a>:4-10:
+   | 
+   |    assign { valid_o, data_o } = shift_r[stages_p-1];
+   |    ^^^^^^                                           
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_cam_1r1w.v.html#l-23" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_cam_1r1w.v:23</a>:34-49:
+   | 
+   |     ,localparam lg_els_lp         = `BSG_SAFE_CLOG2(els_p)
+   |                                     ^^^^^^^^^^^^^^^       
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_cam_1r1w.v.html#l-23" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_cam_1r1w.v:23</a>:32-33:
+   | 
+   |     ,localparam lg_els_lp         = `BSG_SAFE_CLOG2(els_p)
+   |                                   ^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w.v.html#l-11" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w.v:11</a>:49-64:
+   | 
+   |                       , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                                 ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w.v.html#l-11" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w.v:11</a>:35-48:
+   | 
+   |                       , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                   ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync.v.html#l-16" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync.v:16</a>:54-69:
+   | 
+   |                            , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                                      ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync.v.html#l-16" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync.v:16</a>:40-53:
+   | 
+   |                            , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                        ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync_synth.v.html#l-18" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync_synth.v:18</a>:32-47:
+   | 
+   |                  , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                            ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync_synth.v.html#l-18" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_sync_synth.v:18</a>:18-31:
+   | 
+   |                  , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                              ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_synth.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_synth.v:14</a>:33-48:
+   | 
+   |                 ,parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                          ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_synth.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1r1w_synth.v:14</a>:19-32:
+   | 
+   |                 ,parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                            ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync.v.html#l-10" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync.v:10</a>:53-68:
+   | 
+   |                           , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                                     ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync.v.html#l-10" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync.v:10</a>:39-52:
+   | 
+   |                           , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                       ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit.v.html#l-10" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit.v:10</a>:45-60:
+   | 
+   |                            , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                                      ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit.v.html#l-10" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit.v:10</a>:31-44:
+   | 
+   |                            , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                        ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit_synth.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit_synth.v:14</a>:31-46:
+   | 
+   |     , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                               ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit_synth.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_bit_synth.v:14</a>:17-30:
+   | 
+   |     , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                 ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte.v.html#l-2" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte.v:2</a>:70-85:
+   | 
+   |                                           ,parameter addr_width_lp = `BSG_SAFE_CLOG2(els_p)
+   |                                                                      ^^^^^^^^^^^^^^^       
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte.v.html#l-2" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte.v:2</a>:68-69:
+   | 
+   |                                           ,parameter addr_width_lp = `BSG_SAFE_CLOG2(els_p)
+   |                                                                    ^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte_synth.v.html#l-6" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte_synth.v:6</a>:33-48:
+   | 
+   |     , parameter addr_width_lp = `BSG_SAFE_CLOG2(els_p)
+   |                                 ^^^^^^^^^^^^^^^       
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte_synth.v.html#l-6" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_mask_write_byte_synth.v:6</a>:31-32:
+   | 
+   |     , parameter addr_width_lp = `BSG_SAFE_CLOG2(els_p)
+   |                               ^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_synth.v.html#l-13" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_synth.v:13</a>:31-46:
+   | 
+   |     , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                               ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_synth.v.html#l-13" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_1rw_sync_synth.v:13</a>:17-30:
+   | 
+   |     , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                 ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync.v.html#l-16" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync.v:16</a>:54-69:
+   | 
+   |                            , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                                      ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync.v.html#l-16" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync.v:16</a>:40-53:
+   | 
+   |                            , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                        ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync_synth.v.html#l-18" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync_synth.v:18</a>:32-47:
+   | 
+   |                  , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                                            ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync_synth.v.html#l-18" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_mem/bsg_mem_2r1w_sync_synth.v:18</a>:18-31:
+   | 
+   |                  , parameter addr_width_lp=`BSG_SAFE_CLOG2(els_p)
+   |                              ^^^^^^^^^^^^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_UNDEFINED_IN_SIM&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-9" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v:9</a>:35-56:
+   | 
+   |                  ,parameter init_val_p   = `BSG_UNDEFINED_IN_SIM(&#39;0)
+   |                                            ^^^^^^^^^^^^^^^^^^^^^    
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-9" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v:9</a>:33-34:
+   | 
+   |                  ,parameter init_val_p   = `BSG_UNDEFINED_IN_SIM(&#39;0)
+   |                                          ^                          
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v.html#l-11" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_clear_up.v:11</a>:30-45:
+   | 
+   |                              `BSG_SAFE_CLOG2(max_val_p+1)
+   |                              ^^^^^^^^^^^^^^^             
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v.html#l-9" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v:9</a>:10-25:
+   | 
+   |   input [`BSG_SAFE_CLOG2(num_out_p)-1:0] i
+   |          ^^^^^^^^^^^^^^^                  
+
+
+error: Expected port, found input instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v.html#l-9" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v:9</a>:3-8:
+   | 
+   |   input [`BSG_SAFE_CLOG2(num_out_p)-1:0] i
+   |   ^^^^^                                   
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v.html#l-11" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v:11</a>:1-2:
+   | 
+   | );
+   | ^ 
+
+
+error: Expected `endmodule`, but found `if` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v.html#l-13" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode.v:13</a>:3-5:
+   | 
+   |   if (num_out_p == 1) begin
+   |   ^^                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v.html#l-4" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v:4</a>:12-27:
+   | 
+   |     input [`BSG_SAFE_CLOG2(num_out_p)-1:0] i
+   |            ^^^^^^^^^^^^^^^                  
+
+
+error: Expected port, found input instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v.html#l-4" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v:4</a>:5-10:
+   | 
+   |     input [`BSG_SAFE_CLOG2(num_out_p)-1:0] i
+   |     ^^^^^                                   
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v.html#l-7" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v:7</a>:5-6:
+   | 
+   |     );
+   |     ^ 
+
+
+error: Expected `endmodule`, but found `wire` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v.html#l-9" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_decode_with_v.v:9</a>:4-8:
+   | 
+   |    wire [num_out_p-1:0]                    lo;
+   |    ^^^^                                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v.html#l-20" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v:20</a>:15-30:
+   | 
+   |     , output [`BSG_SAFE_CLOG2(width_p)-1:0] addr_o  // feed 32 bits in, requires spots 32 to encode (0..31)
+   |               ^^^^^^^^^^^^^^^                                                                              
+
+
+error: Expected port, found output instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v.html#l-20" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v:20</a>:7-13:
+   | 
+   |     , output [`BSG_SAFE_CLOG2(width_p)-1:0] addr_o  // feed 32 bits in, requires spots 32 to encode (0..31)
+   |       ^^^^^^                                                                                               
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v.html#l-22" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v:22</a>:5-6:
+   | 
+   |     );
+   |     ^ 
+
+
+error: Expected `endmodule`, but found `localparam` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v.html#l-24" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_encode_one_hot.v:24</a>:4-14:
+   | 
+   |    localparam half_width_lp    = width_p &gt;&gt; 1;
+   |    ^^^^^^^^^^                                 
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v.html#l-21" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v:21</a>:15-30:
+   | 
+   |     , output [`BSG_SAFE_CLOG2(width_p)-1:0] addr_o
+   |               ^^^^^^^^^^^^^^^                     
+
+
+error: Expected port, found output instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v.html#l-21" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v:21</a>:7-13:
+   | 
+   |     , output [`BSG_SAFE_CLOG2(width_p)-1:0] addr_o
+   |       ^^^^^^                                      
+
+
+fatal: Found closing `)` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v.html#l-23" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v:23</a>:5-6:
+   | 
+   |     );
+   |     ^ 
+
+
+error: Expected `endmodule`, but found `logic` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v.html#l-25" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_priority_encode.v:25</a>:4-9:
+   | 
+   |    logic [width_p-1:0] enc_lo;
+   |    ^^^^^                      
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_round_robin_arb.v.html#l-17" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_round_robin_arb.v:17</a>:54-69:
+   | 
+   |                                      ,lg_inputs_p   =`BSG_SAFE_CLOG2(inputs_p)
+   |                                                      ^^^^^^^^^^^^^^^          
+
+
+error: Expected [Comma, CloseDelim(Paren)], but found Ident(lg_inputs_p(2875)) instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_round_robin_arb.v.html#l-17" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_round_robin_arb.v:17</a>:39-50:
+   | 
+   |                                      ,lg_inputs_p   =`BSG_SAFE_CLOG2(inputs_p)
+   |                                       ^^^^^^^^^^^                             
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_encode.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_encode.v:12</a>:30-45:
+   | 
+   |     ,localparam lg_ways_lp = `BSG_SAFE_CLOG2(ways_p)
+   |                              ^^^^^^^^^^^^^^^        
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_encode.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_encode.v:12</a>:28-29:
+   | 
+   |     ,localparam lg_ways_lp = `BSG_SAFE_CLOG2(ways_p)
+   |                            ^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-15" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:15</a>:30-45:
+   | 
+   |     ,localparam lg_ways_lp = `BSG_SAFE_CLOG2(ways_p)
+   |                              ^^^^^^^^^^^^^^^        
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-15" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:15</a>:28-29:
+   | 
+   |     ,localparam lg_ways_lp = `BSG_SAFE_CLOG2(ways_p)
+   |                            ^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-30" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:30</a>:64-79:
+   | 
+   |         assign mask_o[i] = mask_o[(i-1)/2] &amp; ~way_id_i[lg_ways_lp-`BSG_SAFE_CLOG2(i+2)+1];
+   |                                                                   ^^^^^^^^^^^^^^^         
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-33" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:33</a>:63-78:
+   | 
+   |         assign mask_o[i] = mask_o[(i-2)/2] &amp; way_id_i[lg_ways_lp-`BSG_SAFE_CLOG2(i+2)+1];
+   |                                                                  ^^^^^^^^^^^^^^^         
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v.html#l-37" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lru_pseudo_tree_decode.v:37</a>:56-71:
+   | 
+   |       assign data_o[i] = mask_o[i] &amp; ~way_id_i[lg_ways_lp-`BSG_SAFE_CLOG2(i+2)];
+   |                                                           ^^^^^^^^^^^^^^^       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_butterfly.v.html#l-35" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_butterfly.v:35</a>:28-43:
+   | 
+   |     , localparam lg_els_lp=`BSG_SAFE_CLOG2(els_p)
+   |                            ^^^^^^^^^^^^^^^       
+
+
+error: Expected `)`, but found `identifier` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_butterfly.v.html#l-35" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_mux_butterfly.v:35</a>:18-27:
+   | 
+   |     , localparam lg_els_lp=`BSG_SAFE_CLOG2(els_p)
+   |                  ^^^^^^^^^                       
+
+
+error: Missing ; after header of module &#34;bsg_mesh_router_dor_decoder&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-10" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v:10</a>:7-7:
+   | 
+   | import bsg_noc_pkg::Dirs
+   |       ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-16" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v:16</a>:2-3:
+   | 
+   |  #( parameter x_cord_width_p  = -1
+   |  ^                                
+
+
+error: Missing ; after header of module &#34;bsg_mesh_router&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-214" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v:214</a>:7-7:
+   | 
+   | import bsg_noc_pkg::Dirs
+   |       ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v.html#l-220" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_mesh_router.v:220</a>:5-6:
+   | 
+   |     #(
+   |     ^ 
+
+
+error: Missing ; after header of module &#34;bsg_wormhole_router&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router.v.html#l-6" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router.v:6</a>:12-12:
+   | 
+   |      import bsg_wormhole_router_pkg::StrictXY;
+   |            ^                                  
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router.v.html#l-8" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router.v:8</a>:3-4:
+   | 
+   |   #(parameter flit_width_p        = &#34;inv&#34;
+   |   ^                                      
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html#l-40" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v:40</a>:33-42:
+   | 
+   |   localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+   |                                 ^^^^^^^^^                                             
+
+
+error: Expected at least one parameter name
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html#l-40" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v:40</a>:31-32:
+   | 
+   |   localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+   |                               ^                                                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v.html#l-41" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_in.v:41</a>:33-48:
+   | 
+   |   localparam protocol_len_lp  = `BSG_SAFE_CLOG2(max_num_flits_lp);
+   |                                 ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-45" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:45</a>:33-42:
+   | 
+   |   localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+   |                                 ^^^^^^^^^                                             
+
+
+error: Expected at least one parameter name
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-45" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:45</a>:31-32:
+   | 
+   |   localparam max_num_flits_lp = `BSG_CDIV($bits(bsg_wormhole_packet_s), flit_width_p);
+   |                               ^                                                       
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v.html#l-46" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_noc/bsg_wormhole_router_adapter_out.v:46</a>:33-48:
+   | 
+   |   localparam protocol_len_lp  = `BSG_SAFE_CLOG2(max_num_flits_lp);
+   |                                 ^^^^^^^^^^^^^^^                   
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_flow_counter.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_flow_counter.v:14</a>:27-37:
+   | 
+   |                           `BSG_WIDTH(els_p)
+   |                           ^^^^^^^^^^       
+
+
+error: Expected explicit or implicit type, found identifier instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_flow_counter.v.html#l-13" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_flow_counter.v:13</a>:37-49:
+   | 
+   |                         , parameter ptr_width_lp = 
+   |                                     ^^^^^^^^^^^^   
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out_dynamic.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out_dynamic.v:12</a>:33-48:
+   | 
+   |   ,parameter lg_max_els_lp    = `BSG_SAFE_CLOG2(max_els_p)
+   |                                 ^^^^^^^^^^^^^^^           
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out_dynamic.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_serial_in_parallel_out_dynamic.v:12</a>:31-32:
+   | 
+   |   ,parameter lg_max_els_lp    = `BSG_SAFE_CLOG2(max_els_p)
+   |                               ^                           
+
+
+fatal: unknown compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_parallel_in_serial_out_dynamic.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_parallel_in_serial_out_dynamic.v:12</a>:33-48:
+   | 
+   |   ,parameter lg_max_els_lp    = `BSG_SAFE_CLOG2(max_els_p)
+   |                                 ^^^^^^^^^^^^^^^           
+
+
+error: Expected explicit or implicit type, found = instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_parallel_in_serial_out_dynamic.v.html#l-12" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_dataflow/bsg_parallel_in_serial_out_dynamic.v:12</a>:31-32:
+   | 
+   |   ,parameter lg_max_els_lp    = `BSG_SAFE_CLOG2(max_els_p)
+   |                               ^                           
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v.html#l-30" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v:30</a>:41-51:
+   | 
+   |                                         `BSG_WIDTH(max_step_p)
+   |                                         ^^^^^^^^^^            
+
+
+error: Expected `)`, but found `parameter` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v.html#l-31" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v:31</a>:40-49:
+   | 
+   |                                      , parameter ptr_width_lp =
+   |                                        ^^^^^^^^^               
+
+
+fatal: unknown compiler directive &#39;`BSG_WIDTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v.html#l-32" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_counter_up_down.v:32</a>:41-51:
+   | 
+   |                                         `BSG_WIDTH(max_val_p))
+   |                                         ^^^^^^^^^^            
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-5" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:5</a>:21-41:
+   | 
+   |     , sparse_els_lp=`BSG_COUNTONES_SYNTH(pattern_els_p))
+   |                     ^^^^^^^^^^^^^^^^^^^^                
+
+
+error: Expected [Comma, CloseDelim(Paren)], but found Ident(sparse_els_lp(4465)) instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-5" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:5</a>:7-20:
+   | 
+   |     , sparse_els_lp=`BSG_COUNTONES_SYNTH(pattern_els_p))
+   |       ^^^^^^^^^^^^^                                     
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-17" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:17</a>:19-39:
+   | 
+   |          assign o[`BSG_COUNTONES_SYNTH(pattern_els_p[j-1:0])] = i[j];
+   |                   ^^^^^^^^^^^^^^^^^^^^                               
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-18" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:18</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+error: Expected `endmodule`, but found `end` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v.html#l-18" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_array_concentrate_static.v:18</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-4" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:4</a>:46-66:
+   | 
+   |                                   , width_lp=`BSG_COUNTONES_SYNTH(pattern_els_p)
+   |                                              ^^^^^^^^^^^^^^^^^^^^               
+
+
+error: Expected [Comma, CloseDelim(Paren)], but found Ident(width_lp(4459)) instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-4" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:4</a>:37-45:
+   | 
+   |                                   , width_lp=`BSG_COUNTONES_SYNTH(pattern_els_p)
+   |                                     ^^^^^^^^                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-14" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:14</a>:20-44:
+   | 
+   |      assign o[0] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+   |                    ^^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: unknown compiler directive &#39;`BSG_COUNTONES_SYNTH&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-19" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:19</a>:32-52:
+   | 
+   |                assign o[j] = i[`BSG_COUNTONES_SYNTH(pattern_els_p[j-1:0])];
+   |                                ^^^^^^^^^^^^^^^^^^^^                        
+
+
+fatal: unknown compiler directive &#39;`BSG_DISCONNECTED_IN_SIM&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-21" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:21</a>:30-54:
+   | 
+   |                assign o[j] = `BSG_DISCONNECTED_IN_SIM(1&#39;b0);
+   |                              ^^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: Found closing `end` which is not the complement to the previous opening `[`
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-22" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:22</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+error: Expected `endmodule`, but found `end` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v.html#l-22" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_unconcentrate_static.v:22</a>:6-9:
+   | 
+   |      end
+   |      ^^^
+
+
+error: Don&#39;t know how to parse case-generate statements
+  --&gt; <a href="../../../../third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lfsr.v.html#l-21" target="file-frame">third_party/cores/blackparrot/external/basejump_stl/bsg_misc/bsg_lfsr.v:21</a>:9-13:
+   | 
+   |         case (width_p)
+   |         ^^^^          
+
+
+error: Missing ; after header of module &#34;bp_addr_map&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v.html#l-3" target="file-frame">third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v:3</a>:8-8:
+   | 
+   |  import bp_common_pkg::*;
+   |        ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v.html#l-5" target="file-frame">third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v:5</a>:2-3:
+   | 
+   |  #(parameter bp_cfg_e cfg_p = e_bp_inv_cfg
+   |  ^                                        
+
+
+fatal: unknown compiler directive &#39;`declare_bp_proc_params&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v.html#l-6" target="file-frame">third_party/cores/blackparrot/bp_common/src/v/bp_addr_map.v:6</a>:4-27:
+   | 
+   |    `declare_bp_proc_params(cfg_p)
+   |    ^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:15:73-74:
+   | 
+   |     typedef struct packed {                                             \
+   |                                                                         ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:37-41:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                     ^^^^                                 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:73-74:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:17:73-74:
+   | 
+   |       logic [cid_width_mp-1:0]      src_cid;                            \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:18:73-74:
+   | 
+   |       logic [cord_width_mp-1:0]     src_cord;                           \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:19:73-74:
+   | 
+   |       logic [reserved_width_mp-1:0] reserved;                           \
+   |                                                                         ^
+
+
+error: Expected `;`, but found `(` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:23:3-4:
+   | 
+   |   (reserved_width_mp+cord_width_mp+cid_width_mp+data_width_mp)
+   |   ^                                                           
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:15:73-74:
+   | 
+   |     typedef struct packed {                                             \
+   |                                                                         ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:37-41:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                     ^^^^                                 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:73-74:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:17:73-74:
+   | 
+   |       logic [cid_width_mp-1:0]      src_cid;                            \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:18:73-74:
+   | 
+   |       logic [cord_width_mp-1:0]     src_cord;                           \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:19:73-74:
+   | 
+   |       logic [reserved_width_mp-1:0] reserved;                           \
+   |                                                                         ^
+
+
+error: Expected `;`, but found `(` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:23:3-4:
+   | 
+   |   (reserved_width_mp+cord_width_mp+cid_width_mp+data_width_mp)
+   |   ^                                                           
+
+
+error: Missing ; after header of module &#34;bp_me_wormhole_packet_encode_lce_cmd&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-14" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:14</a>:9-9:
+   | 
+   |   import bp_common_pkg::*;
+   |         ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-16" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:16</a>:3-4:
+   | 
+   |   #(parameter bp_cfg_e cfg_p = e_bp_inv_cfg
+   |   ^                                        
+
+
+fatal: unknown compiler directive &#39;`declare_bp_proc_params&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-17" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:17</a>:5-28:
+   | 
+   |     `declare_bp_proc_params(cfg_p)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: unknown compiler directive &#39;`declare_bp_lce_cce_if_widths&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-18" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:18</a>:5-34:
+   | 
+   |     `declare_bp_lce_cce_if_widths(num_cce_p, num_lce_p, paddr_width_p, lce_assoc_p, dword_width_p, cce_block_width_p)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`bsg_wormhole_concentrator_packet_width&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-21" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:21</a>:9-48:
+   | 
+   |         `bsg_wormhole_concentrator_packet_width(coh_noc_cord_width_p, coh_noc_len_width_p, coh_noc_cid_width_p, lce_cmd_width_lp)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                  
+
+
+fatal: unknown compiler directive &#39;`declare_bp_lce_cce_if&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-27" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:27</a>:3-25:
+   | 
+   |   `declare_bp_lce_cce_if(num_cce_p, num_lce_p, paddr_width_p, lce_assoc_p, dword_width_p, cce_block_width_p);
+   |   ^^^^^^^^^^^^^^^^^^^^^^                                                                                     
+
+
+fatal: unknown compiler directive &#39;`declare_bsg_wormhole_concentrator_packet_s&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-28" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:28</a>:3-46:
+   | 
+   |   `declare_bsg_wormhole_concentrator_packet_s(coh_noc_cord_width_p, coh_noc_len_width_p, coh_noc_cid_width_p, lce_cmd_width_lp, lce_cmd_packet_s);
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                     
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-36" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:36</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cmd_packet_width_lp-$bits(payload_cast_i.msg.cmd.pad), coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                                                      
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-38" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:38</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cmd_packet_width_lp, coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-40" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:40</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cmd_packet_width_lp-(cce_block_width_p-dword_width_p), coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                                                      
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v.html#l-73" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_cmd.v:73</a>:1-2:
+   | 
+   | 
+   | 
+
+
+error: Missing ; after header of module &#34;bp_me_wormhole_packet_encode_lce_req&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-14" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:14</a>:9-9:
+   | 
+   |   import bp_common_pkg::*;
+   |         ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-16" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:16</a>:3-4:
+   | 
+   |   #(parameter bp_cfg_e cfg_p = e_bp_inv_cfg
+   |   ^                                        
+
+
+fatal: unknown compiler directive &#39;`declare_bp_proc_params&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-17" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:17</a>:5-28:
+   | 
+   |     `declare_bp_proc_params(cfg_p)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: unknown compiler directive &#39;`declare_bp_lce_cce_if_widths&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-18" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:18</a>:5-34:
+   | 
+   |     `declare_bp_lce_cce_if_widths(num_cce_p, num_lce_p, paddr_width_p, lce_assoc_p, dword_width_p, cce_block_width_p)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`bsg_wormhole_concentrator_packet_width&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-21" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:21</a>:9-48:
+   | 
+   |         `bsg_wormhole_concentrator_packet_width(coh_noc_cord_width_p, coh_noc_len_width_p, coh_noc_cid_width_p, lce_cce_req_width_lp)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                      
+
+
+fatal: unknown compiler directive &#39;`declare_bp_lce_cce_if&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-27" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:27</a>:3-25:
+   | 
+   |   `declare_bp_lce_cce_if(num_cce_p, num_lce_p, paddr_width_p, lce_assoc_p, dword_width_p, cce_block_width_p);
+   |   ^^^^^^^^^^^^^^^^^^^^^^                                                                                     
+
+
+fatal: unknown compiler directive &#39;`declare_bsg_wormhole_concentrator_packet_s&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-28" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:28</a>:3-46:
+   | 
+   |   `declare_bsg_wormhole_concentrator_packet_s(coh_noc_cord_width_p, coh_noc_len_width_p, coh_noc_cid_width_p, lce_cce_req_width_lp, lce_cce_req_packet_s);
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                             
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-36" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:36</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cce_req_packet_width_lp-$bits(payload_cast_i.msg.req.pad), coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                                                          
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-38" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:38</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cce_req_packet_width_lp, coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                        
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-40" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:40</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cce_req_packet_width_lp-$bits(payload_cast_i.msg.uc_req.data), coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                                                              
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v.html#l-67" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_req.v:67</a>:1-2:
+   | 
+   | 
+   | 
+
+
+error: Missing ; after header of module &#34;bp_me_wormhole_packet_encode_lce_resp&#34;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-14" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:14</a>:9-9:
+   | 
+   |   import bp_common_pkg::*;
+   |         ^                 
+
+
+error: Expected hierarchy item, found # instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-16" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:16</a>:3-4:
+   | 
+   |   #(parameter bp_cfg_e cfg_p = e_bp_inv_cfg
+   |   ^                                        
+
+
+fatal: unknown compiler directive &#39;`declare_bp_proc_params&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-17" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:17</a>:5-28:
+   | 
+   |     `declare_bp_proc_params(cfg_p)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^       
+
+
+fatal: unknown compiler directive &#39;`declare_bp_lce_cce_if_widths&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-18" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:18</a>:5-34:
+   | 
+   |     `declare_bp_lce_cce_if_widths(num_cce_p, num_lce_p, paddr_width_p, lce_assoc_p, dword_width_p, cce_block_width_p)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`bsg_wormhole_concentrator_packet_width&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-21" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:21</a>:9-48:
+   | 
+   |         `bsg_wormhole_concentrator_packet_width(coh_noc_cord_width_p, coh_noc_len_width_p, coh_noc_cid_width_p, lce_cce_resp_width_lp)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                       
+
+
+fatal: unknown compiler directive &#39;`declare_bp_lce_cce_if&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-27" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:27</a>:3-25:
+   | 
+   |   `declare_bp_lce_cce_if(num_cce_p, num_lce_p, paddr_width_p, lce_assoc_p, dword_width_p, cce_block_width_p);
+   |   ^^^^^^^^^^^^^^^^^^^^^^                                                                                     
+
+
+fatal: unknown compiler directive &#39;`declare_bsg_wormhole_concentrator_packet_s&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-28" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:28</a>:3-46:
+   | 
+   |   `declare_bsg_wormhole_concentrator_packet_s(coh_noc_cord_width_p, coh_noc_len_width_p, coh_noc_cid_width_p, lce_cce_resp_width_lp, lce_cce_resp_packet_s);
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                               
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-36" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:36</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cce_resp_packet_width_lp-$bits(payload_cast_i.data), coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                                                    
+
+
+fatal: unknown compiler directive &#39;`BSG_CDIV&#39;
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-38" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:38</a>:5-14:
+   | 
+   |     `BSG_CDIV(lce_cce_resp_packet_width_lp, coh_noc_flit_width_p) - 1;
+   |     ^^^^^^^^^                                                         
+
+
+error: Expected `endmodule`, but found `end of file` instead
+  --&gt; <a href="../../../../third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v.html#l-66" target="file-frame">third_party/cores/blackparrot/bp_me/src/v/wormhole/bp_me_wormhole_packet_encode_lce_resp.v:66</a>:1-2:
+   | 
+   | 
+   | 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:15:73-74:
+   | 
+   |     typedef struct packed {                                             \
+   |                                                                         ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:37-41:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                     ^^^^                                 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:73-74:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:17:73-74:
+   | 
+   |       logic [cid_width_mp-1:0]      src_cid;                            \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:18:73-74:
+   | 
+   |       logic [cord_width_mp-1:0]     src_cord;                           \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:19:73-74:
+   | 
+   |       logic [reserved_width_mp-1:0] reserved;                           \
+   |                                                                         ^
+
+
+error: Expected `;`, but found `(` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:23:3-4:
+   | 
+   |   (reserved_width_mp+cord_width_mp+cid_width_mp+data_width_mp)
+   |   ^                                                           
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:15:73-74:
+   | 
+   |     typedef struct packed {                                             \
+   |                                                                         ^
+
+
+error: Expected at least one member name
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:37-41:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                     ^^^^                                 
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:16:73-74:
+   | 
+   |       logic [data_width_mp-1:0]     data;                               \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:17:73-74:
+   | 
+   |       logic [cid_width_mp-1:0]      src_cid;                            \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:18:73-74:
+   | 
+   |       logic [cord_width_mp-1:0]     src_cord;                           \
+   |                                                                         ^
+
+
+fatal: Expected escaped identifier after backslash &#39;\&#39;
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:19:73-74:
+   | 
+   |       logic [reserved_width_mp-1:0] reserved;                           \
+   |                                                                         ^
+
+
+error: Expected `;`, but found `(` instead
+  --&gt; /home/travis/build/SymbiFlow/sv-tests/third_party/cores/blackparrot/bp_me/src/include/v/bp_mem_wormhole.vh:23:3-4:
+   | 
+   |   (reserved_width_mp+cord_width_mp+cid_width_mp+data_width_mp)
+   |   ^                                                           
+
+
+</pre>
+</body>
