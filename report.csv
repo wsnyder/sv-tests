@@ -841,7 +841,7 @@ BaseJumpSTL_fifo_counter,/home/travis/build/SymbiFlow/sv-tests/third_party/cores
 BaseJumpSTL_bsg_wait_cycles,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_wait_cycles.v,basejump,True,True,True,True,False,False,True,True,True
 BaseJumpSTL_bsg_one_fifo,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_one_fifo.v,basejump,False,True,False,True,False,False,True,True,True
 BaseJumpSTL_bsg_nonsynth_mem_1rw_sync_mask_write_byte_assoc,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_mem/bsg_nonsynth_mem_1rw_sync_mask_write_byte_assoc.v,basejump,True,False,False,False,False,False,True,False,True
-BaseJumpSTL_bsg_dff_en_bypass,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_dff_en_bypass.v,basejump,False,True,False,True,False,False,True,True,True
+BaseJumpSTL_bsg_dff_en_bypass,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_dff_en_bypass.v,basejump,False,True,True,True,False,False,True,True,True
 BaseJumpSTL_bsg_link_ddr_downstream,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v,basejump,False,False,False,False,False,False,True,False,True
 BaseJumpSTL_bsg_source_sync_channel_control_master,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v,basejump,False,False,False,False,False,False,False,False,False
 BaseJumpSTL_bsg_relay_fifo,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_relay_fifo.v,basejump,False,True,False,True,False,False,True,True,True
@@ -2140,8 +2140,6 @@ if_else,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.4--if_else.sv,
 if_pattern,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.6.2--if_pattern.sv,12.6.2,False,True,False,False,False,False,True,False,False
 forever_loop,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.7.6--forever.sv,12.7.6,False,True,False,False,False,False,True,True,False
 case_set,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-12/12.5.4--case_set.sv,12.5.4,False,True,True,False,False,False,True,False,False
-function_fork_invalid,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.4.4--fork-invalid.sv,13.4.4,True,False,False,True,False,True,False,False,True
-function_void_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.4.1--function-void-return.sv,13.4.1,True,False,True,True,False,True,False,False,True
 task_automatic,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.3.1--task-automatic.sv,13.3.1,False,True,False,False,False,False,True,True,True
 function_return_assignment,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.4.1--function-return-assignment.sv,13.4.1,True,True,False,False,True,False,True,True,True
 const_function,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.4.3--const-function.sv,13.4.3,True,True,False,False,True,False,True,True,True
@@ -2178,3 +2176,5 @@ fork_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-9/9.3.3--fork_re
 tagged_union_member_access_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.9--tagged_union_member_access_inv.sv,11.9,,,False,True,,,,False,
 unpack_stream_inv,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-11/11.4.14.3--unpack_stream_inv.sv,11.4.14.3,,,False,True,,,,False,
 structure-arrays-illegal,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-5/5.10-structure-arrays-illegal.sv,5.10,,,False,True,,,,False,
+function_fork_invalid,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.4.4--fork-invalid.sv,13.4.4,,,False,True,,,,False,
+function_void_return,/home/travis/build/SymbiFlow/sv-tests/tests/chapter-13/13.4.1--function-void-return.sv,13.4.1,,,False,True,,,,False,

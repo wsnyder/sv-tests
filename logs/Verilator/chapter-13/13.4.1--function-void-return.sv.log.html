@@ -7,27 +7,28 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: void function return value test
 should_fail: 1
 tags: 13.4.1
 incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-13
 top_module: 
-type: parsing
-mode: parsing
+type: simulation
+mode: simulation
 files: <a href="../../../tests/chapter-13/13.4.1--function-void-return.sv.html" target="file-frame">tests/chapter-13/13.4.1--function-void-return.sv</a>
 time_elapsed: 0.091s
-ram usage: 11636 KB
+ram usage: 11564 KB
 </pre>
 <pre class="log">
 
-%Error: <a href="../../../tests/chapter-13/13.4.1--function-void-return.sv.html#l-15" target="file-frame">tests/chapter-13/13.4.1--function-void-return.sv:15</a>: Illegal call of a task as a function: &#39;add&#39;
+%Error: <a href="../../../tests/chapter-13/13.4.1--function-void-return.sv.html#l-16" target="file-frame">tests/chapter-13/13.4.1--function-void-return.sv:16</a>: Illegal call of a task as a function: &#39;add&#39;
  $display(&#34;%d&#34;, add(45, 90));
                 ^~~
-%Error: <a href="../../../tests/chapter-13/13.4.1--function-void-return.sv.html#l-11" target="file-frame">tests/chapter-13/13.4.1--function-void-return.sv:11</a>: Return underneath a task shouldn&#39;t have return value
+%Error: <a href="../../../tests/chapter-13/13.4.1--function-void-return.sv.html#l-12" target="file-frame">tests/chapter-13/13.4.1--function-void-return.sv:12</a>: Return underneath a task shouldn&#39;t have return value
  return a + b;
  ^~~~~~
 %Error: Exiting due to 2 error(s)
+scr.sh: 3: scr.sh: ./vbuild/vmain: not found
 
 </pre>
 </body>
