@@ -1,0 +1,58 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://verilogtorouting.org/" target="_blank">odin</a></h3>
+<pre class="test-passed">
+description: assume #0 test
+should_fail: 0
+tags: 16.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-16
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-16/16.2--assume0.sv.html" target="file-frame">tests/chapter-16/16.2--assume0.sv</a>
+time_elapsed: 0.005s
+ram usage: 9980 KB
+</pre>
+<pre class="log">
+
+--------------
+Odin has decided you MAY fail ... :
+
+WARNING (1)::ARG_ERROR Permissive flag is ON. Undefined behaviour may occur
+
+WARNING (2)::ARG_ERROR <a href="../../../tests/chapter-16/16.2--assume0.sv.html" target="file-frame">tests/chapter-16/16.2--assume0.sv</a>::1 File (<a href="../../../tests/chapter-16/16.2--assume0.sv.html" target="file-frame">tests/chapter-16/16.2--assume0.sv</a>) has an unsupported extension (.sv), Odin only supports {  .v .vh }
+
+PARSE_ERROR <a href="../../../tests/chapter-16/16.2--assume0.sv.html" target="file-frame">tests/chapter-16/16.2--assume0.sv</a>::9 error in parsing: (syntax error, unexpected &#39;;&#39;, expecting &#39;(&#39;)
+logic a;
+--------------------------------------------------------------------
+Welcome to ODIN II version 0.1 - the better High level synthesis tools++ targetting FPGAs (mainly VPR)
+Email: jamieson.peter@gmail.com and ken@unb.ca for support issues
+
+--------------------------------------------------------------------
+High-level synthesis Begin
+Parser starting - we&#39;ll create an abstract syntax tree. Note this tree can be viewed using Grap Viz (see documentation)
+Adding file <a href="../../../tests/chapter-16/16.2--assume0.sv.html" target="file-frame">tests/chapter-16/16.2--assume0.sv</a> to parse list
+Optimizing module by AST based optimizations
+Converting AST into a Netlist. Note this netlist can be viewed using GraphViz (see documentation)
+==========================
+Detected Top Level Module: 	top
+==========================
+Performing Optimizations of the Netlist
+Performing Partial Map to target device
+Outputting the netlist to the specified output format
+Successful High-level synthesis by Odin
+	Blif file available at  odin.blif
+	Ran in 0.6ms
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+Odin ran with exit status: 0
+Odin II took 0.00 seconds (max_rss 9.7 MiB)
+
+</pre>
+</body>

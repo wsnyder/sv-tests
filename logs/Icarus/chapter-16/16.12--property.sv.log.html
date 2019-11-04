@@ -1,0 +1,27 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-failed">
+description: property test
+should_fail: 0
+tags: 16.12
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-16
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-16/16.12--property.sv.html" target="file-frame">tests/chapter-16/16.12--property.sv</a>
+time_elapsed: 0.009s
+ram usage: 9988 KB
+</pre>
+<pre class="log">
+
+<a href="../../../tests/chapter-16/16.12--property.sv.html#l-12" target="file-frame">tests/chapter-16/16.12--property.sv:12</a>: sorry: concurrent_assertion_item not supported. Try -gno-assertions or -gsupported-assertions to turn this message off.
+
+</pre>
+</body>

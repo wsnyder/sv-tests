@@ -1,0 +1,28 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://iverilog.icarus.com/" target="_blank">icarus</a></h3>
+<pre class="test-failed">
+description: cover test
+should_fail: 0
+tags: 16.2
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-16
+top_module: 
+type: parsing
+mode: parsing
+files: <a href="../../../tests/chapter-16/16.2--cover.sv.html" target="file-frame">tests/chapter-16/16.2--cover.sv</a>
+time_elapsed: 0.009s
+ram usage: 10120 KB
+</pre>
+<pre class="log">
+
+<a href="../../../tests/chapter-16/16.2--cover.sv.html#l-11" target="file-frame">tests/chapter-16/16.2--cover.sv:11</a>: syntax error
+<a href="../../../tests/chapter-16/16.2--cover.sv.html#l-11" target="file-frame">tests/chapter-16/16.2--cover.sv:11</a>: error: invalid module item.
+
+</pre>
+</body>
