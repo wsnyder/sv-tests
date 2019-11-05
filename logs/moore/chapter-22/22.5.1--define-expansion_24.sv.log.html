@@ -1,0 +1,55 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-passed">
+description: Test
+should_fail: 0
+tags: 22.5.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-22
+top_module: 
+type: preprocessing
+mode: preprocessing
+files: <a href="../../../tests/chapter-22/22.5.1--define-expansion_24.sv.html" target="file-frame">tests/chapter-22/22.5.1--define-expansion_24.sv</a>
+time_elapsed: 0.006s
+ram usage: 9612 KB
+</pre>
+<pre class="log">
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-22/22.5.1--define-expansion_24.sv.html#l-13" target="file-frame">tests/chapter-22/22.5.1--define-expansion_24.sv:13</a>:2-24:
+   | 
+   |     $display(&#34;`HI, world&#34;);
+   |     ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-22/22.5.1--define-expansion_24.sv.html#l-14" target="file-frame">tests/chapter-22/22.5.1--define-expansion_24.sv:14</a>:2-15:
+   | 
+   |     $display(`LO);
+   |     ^^^^^^^^^^^^^ 
+
+warning: `$display` not supported; ignored
+  --&gt; <a href="../../../tests/chapter-22/22.5.1--define-expansion_24.sv.html#l-15" target="file-frame">tests/chapter-22/22.5.1--define-expansion_24.sv:15</a>:2-21:
+   | 
+   |     $display(`H(world));
+   |     ^^^^^^^^^^^^^^^^^^^ 
+
+proc %top.initial.221.0 () -&gt; () {
+0:
+    %1 = const i32 0
+    %2 = const i32 0
+    %3 = const i32 0
+    halt
+}
+
+entity @top () -&gt; () {
+    inst %top.initial.221.0 () -&gt; ()
+}
+
+</pre>
+</body>

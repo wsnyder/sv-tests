@@ -1,0 +1,32 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-passed">
+description: Test
+should_fail: 0
+tags: 22.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-22
+top_module: 
+type: preprocessing parsing
+mode: parsing
+files: <a href="../../../tests/chapter-22/22.4--check_included_definitions.sv.html" target="file-frame">tests/chapter-22/22.4--check_included_definitions.sv</a>
+time_elapsed: 0.015s
+ram usage: 9576 KB
+</pre>
+<pre class="log">
+
+module top;
+	initial begin
+		$display(&#34;:assert:(`TWO_PLUS_TWO == 5)&#34;);
+		$display(&#34;:assert:(&#39;%s&#39; == &#39;%s&#39;)&#34;, define_var, &#34;define_var&#34;);
+	end
+endmodule
+
+</pre>
+</body>

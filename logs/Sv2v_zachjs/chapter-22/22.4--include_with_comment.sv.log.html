@@ -1,0 +1,27 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="https://github.com/zachjs/sv2v" target="_blank">zachjs-sv2v</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 22.4
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-22
+top_module: 
+type: preprocessing parsing
+mode: parsing
+files: <a href="../../../tests/chapter-22/22.4--include_with_comment.sv.html" target="file-frame">tests/chapter-22/22.4--include_with_comment.sv</a>
+time_elapsed: 0.014s
+ram usage: 9580 KB
+</pre>
+<pre class="log">
+
+<a href="../../../tests/chapter-22/22.4--include_with_comment.sv.html#l-8" target="file-frame">tests/chapter-22/22.4--include_with_comment.sv:8</a>:28: Lexical error: library includes are not supported: &lt;dummy_include.sv&gt;
+
+</pre>
+</body>

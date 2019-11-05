@@ -1,0 +1,33 @@
+<head>
+  <style>
+    .log { font-family: "Courier New", Consolas, monospace; font-size: 80%; }
+    .test-failed { background-color: #ffaaaa; }
+    .test-passed { background-color: #aaffaa; }
+  </style>
+</head>
+<body>
+<h3><a href="http://llhd.io/" target="_blank">moore</a></h3>
+<pre class="test-failed">
+description: Test
+should_fail: 0
+tags: 22.5.1
+incdirs: /home/travis/build/SymbiFlow/sv-tests/tests/chapter-22
+top_module: 
+type: preprocessing parsing
+mode: parsing
+files: <a href="../../../tests/chapter-22/22.5.1--include-define-expansion.sv.html" target="file-frame">tests/chapter-22/22.5.1--include-define-expansion.sv</a>
+time_elapsed: 0.003s
+ram usage: 9628 KB
+</pre>
+<pre class="log">
+
+
+fatal: expected filename inside double quotes (&#34;...&#34;) or angular brackets (&lt;...&gt;) after `include
+  --&gt; <a href="../../../tests/chapter-22/22.5.1--include-define-expansion.sv.html#l-9" target="file-frame">tests/chapter-22/22.5.1--include-define-expansion.sv:9</a>:1-9:
+   | 
+   | `include `foo(dummy_include.sv)
+   | ^^^^^^^^                       
+
+
+</pre>
+</body>
