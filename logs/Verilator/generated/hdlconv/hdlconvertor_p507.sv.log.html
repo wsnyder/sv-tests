@@ -16,8 +16,8 @@ top_module:
 type: parsing
 mode: parsing
 files: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv</a>
-time_elapsed: 0.087s
-ram usage: 11548 KB
+time_elapsed: 0.092s
+ram usage: 11868 KB
 </pre>
 <pre class="log">
 
@@ -30,8 +30,17 @@ class packet;
 %Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv.html#l-3" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv:3</a>: Unsupported: Initial values in struct/union members.
 randc int addr = 1 + constant;
                    ^
-%Error: Verilator internal fault, sorry.  Consider trying --debug --gdbbt
-%Error: Command Failed /home/travis/miniconda/envs/sv-test-env/bin/verilator_bin -Wno-fatal --cc -I/home/travis/build/SymbiFlow/sv-tests/third_party/tests/hdlconvertor/tests/sv_test/std2017 <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv.html" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv</a>
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv.html#l-5" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv:5</a>: Unsupported: Initial values in struct/union members.
+rand byte data [] = {1,2,3,4};
+                    ^
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv.html#l-7" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv:7</a>: syntax error, unexpected rand
+rand header h1;
+^~~~
+%Error: <a href="../../../../third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv.html#l-8" target="file-frame">third_party/tests/hdlconvertor/tests/sv_test/std2017/p507.sv:8</a>: Unsupported: SystemVerilog 2005 reserved word not implemented: &#39;endclass&#39;
+endclass
+^~~~~~~~
+%Error: Exiting due to 6 error(s)
+        ... See the manual and http://www.veripool.org/verilator for more assistance.
 
 </pre>
 </body>

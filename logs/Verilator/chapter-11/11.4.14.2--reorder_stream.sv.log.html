@@ -7,7 +7,7 @@
 </head>
 <body>
 <h3><a href="https://www.veripool.org/wiki/verilator" target="_blank">verilator</a></h3>
-<pre class="test-passed">
+<pre class="test-failed">
 description: stream reordering test
 should_fail: 0
 tags: 11.4.14.2
@@ -16,11 +16,16 @@ top_module:
 type: parsing
 mode: parsing
 files: <a href="../../../tests/chapter-11/11.4.14.2--reorder_stream.sv.html" target="file-frame">tests/chapter-11/11.4.14.2--reorder_stream.sv</a>
-time_elapsed: 0.090s
-ram usage: 11840 KB
+time_elapsed: 0.089s
+ram usage: 11644 KB
 </pre>
 <pre class="log">
 
+%Error: <a href="../../../tests/chapter-11/11.4.14.2--reorder_stream.sv.html#l-13" target="file-frame">tests/chapter-11/11.4.14.2--reorder_stream.sv:13</a>: Operator STREAML expected non-datatype RHS but &#39;byte&#39; is a datatype.
+                                                                                              : ... In instance top
+ b = { &lt;&lt; byte {a}};
+          ^~~~
+%Error: Exiting due to 1 error(s)
 
 </pre>
 </body>
