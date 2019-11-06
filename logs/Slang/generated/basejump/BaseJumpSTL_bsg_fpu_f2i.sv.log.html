@@ -16,11 +16,23 @@ top_module:
 type: parsing
 mode: parsing
 files: <a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v</a>
-time_elapsed: 9.991s
-ram usage: 342572 KB
+time_elapsed: 8.846s
+ram usage: 342568 KB
 </pre>
 <pre class="log">
 
-Timeout
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-21" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:21</a>:10: error: unknown package &#39;bsg_fpu_pkg&#39;
+  import bsg_fpu_pkg::*;
+         ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-46" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:46</a>:3: error: unknown module &#39;bsg_fpu_preprocess&#39;
+  bsg_fpu_preprocess #(
+  ^~~~~~~~~~~~~~~~~~
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:89</a>:38: error: unknown macro or compiler directive &#39;`BSG_SAFE_CLOG2&#39;
+  assign shifted = preshift &gt;&gt; shamt[`BSG_SAFE_CLOG2(width_lp):0];
+                                     ^
+../..<a href="../../../../third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v.html#l-89" target="file-frame">third_party/cores/basejump_stl/bsg_fpu/bsg_fpu_f2i.v:89</a>:63: error: expected expression
+  assign shifted = preshift &gt;&gt; shamt[`BSG_SAFE_CLOG2(width_lp):0];
+                                                              ^
+
 </pre>
 </body>
