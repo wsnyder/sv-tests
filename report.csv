@@ -842,7 +842,7 @@ BaseJumpSTL_fifo_counter,/home/travis/build/SymbiFlow/sv-tests/third_party/cores
 BaseJumpSTL_bsg_wait_cycles,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_wait_cycles.v,basejump,True,True,True,True,False,False,True,True,True
 BaseJumpSTL_bsg_one_fifo,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_one_fifo.v,basejump,False,True,False,True,False,False,True,True,True
 BaseJumpSTL_bsg_nonsynth_mem_1rw_sync_mask_write_byte_assoc,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_mem/bsg_nonsynth_mem_1rw_sync_mask_write_byte_assoc.v,basejump,True,False,False,False,False,False,True,False,True
-BaseJumpSTL_bsg_dff_en_bypass,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_dff_en_bypass.v,basejump,False,True,True,True,False,False,True,True,True
+BaseJumpSTL_bsg_dff_en_bypass,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_misc/bsg_dff_en_bypass.v,basejump,False,True,False,True,False,False,True,True,True
 BaseJumpSTL_bsg_link_ddr_downstream,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_link/bsg_link_ddr_downstream.v,basejump,False,False,False,False,False,False,True,False,True
 BaseJumpSTL_bsg_source_sync_channel_control_master,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_comm_link/bsg_source_sync_channel_control_master.v,basejump,False,False,False,False,False,False,False,False,False
 BaseJumpSTL_bsg_relay_fifo,/home/travis/build/SymbiFlow/sv-tests/third_party/cores/basejump_stl/bsg_dataflow/bsg_relay_fifo.v,basejump,False,True,False,True,False,False,True,True,True
