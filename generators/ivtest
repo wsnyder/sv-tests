@@ -298,6 +298,8 @@ ivtest_file_exclude = [
     'sv_deferred_assume2',
     'sv_immediate_assert',
     'sv_immediate_assume',
+    'sv_case_priority',
+    'sv_case_unique',
     # IEEE 22.2 directives must be on same line
     'br_gh782b',
     'br_gh782c',
@@ -315,6 +317,43 @@ ivtest_file_exclude = [
     # (Useful in macros that void-call a passed func/task name without knowing dtype)
     'sv_void_cast_fail1',
     'sv_void_cast_fail2',
+    # IEEE 11.5.1 a tool _may_ issue a warning on out-of-bounds,
+    # also warnings may or may not be fatal, therefore these are unpredictable.
+    'sv_br_gh840a',
+    'sv_br_gh840b',
+    # Test should expect fail: Non-ANSI I/O missing in module port list
+    'sv_module_output_port_sv_var2',
+    'sv_module_output_port_var2',
+    # Wrapper script doesn't pass parameter to non-Icarus tools, so test fails
+    'parameter_no_default_toplvl',
+    # Wrapper script doean't give a top-module and fails as `celldefine's are
+    # assumed part of libraries and not automatically processed otherwise
+    'specify1',
+    # Wrapper script bad - should pass in SystemVerilog, don't check Verilog
+    # (fails even on Icarus)
+    'module_inout_port_type',
+    'module_input_port_list_def',
+    'module_input_port_type',
+    'par_mismatch',
+    'parameter_in_generate1',
+    'parameter_omit1',
+    'parameter_omit2',
+    'parameter_omit3',
+    'unnamed_block_var_decl',
+    'unnamed_fork_var_decl',
+    # Declares "x" twice (Unlike modules, task/func 'dtype x'
+    # must be after 'input x'. All non-Icarus simulators agree.
+    'task_nonansi_enum2',
+    'task_nonansi_int2',
+    'task_nonansi_integer2',
+    'task_nonansi_parray2',
+    'task_nonansi_real2',
+    'task_nonansi_time2',
+    'task_nonansi_vec2',
+    # Properly passes on even Icarus, but predicts fail
+    'br_gh956a',
+    # Test should expect fail: IEEE does not allow .* to connect to empty ports
+    'br_gh530',
 ]
 
 ivtest_long = ['comp1000', 'comp1001']
